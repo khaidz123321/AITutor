@@ -1,0 +1,183 @@
+{
+  "subject": "Triết học Mác - Lênin - PTIT",
+  "chapter_number": 1,
+  "chapter_name": "Khái luận về triết học và triết học Mác - Lênin",
+  "questions": [
+    
+    {
+      "id": "TRIET_C1_1.1_001",
+      "topic": "Khái lược về triết học - Nguồn gốc ra đời",
+      "difficulty": "Easy",
+      "bloom_level": "Understanding",
+      "question_text": "Triết học ra đời từ những nguồn gốc nào? Tại sao nói triết học là một hiện tượng lịch sử?",
+      "full_answer": "Triết học ra đời từ hai nguồn gốc: Nguồn gốc nhận thức (tư duy con người đạt đến trình độ trừu tượng hóa, khái quát hóa) và Nguồn gốc xã hội (xã hội phân chia giai cấp và có sự tách rời giữa lao động trí óc với lao động chân tay). Triết học là một hiện tượng lịch sử vì nó không tồn tại ngay từ khi loài người xuất hiện mà chỉ ra đời khi hội đủ hai điều kiện trên.",
+      "scaffolding_steps": [
+        {
+          "step_number": 1,
+          "hint": "Để triết học ra đời, tư duy của con người cần phải thoát khỏi sự giải thích thế giới bằng thần thoại, tôn giáo. Điều này phản ánh nguồn gốc nào?",
+          "step_detail": "Đây là nguồn gốc nhận thức. Con người đã tích lũy đủ vốn hiểu biết và năng lực tư duy đạt đến trình độ trừu tượng hóa, khái quát hóa cao để hệ thống hóa tri thức."
+        },
+        {
+          "step_number": 2,
+          "hint": "Về mặt xã hội, triết học chỉ xuất hiện khi nền sản xuất phát triển dẫn đến sự phân công lao động cụ thể nào?",
+          "step_detail": "Đó là nguồn gốc xã hội. Nền sản xuất phát triển làm xuất hiện chế độ tư hữu, phân chia giai cấp và đặc biệt là sự phân công lao động dẫn đến sự tách rời giữa lao động trí óc và lao động chân tay."
+        },
+        {
+          "step_number": 3,
+          "hint": "Tổng hợp lại hai yếu tố trên, hãy giải thích tại sao triết học được gọi là 'hiện tượng lịch sử'.",
+          "step_detail": "Bởi vì triết học không xuất hiện cùng lúc với sự xuất hiện của loài người (ví dụ thời nguyên thủy chưa có triết học). Nó chỉ ra đời ở một giai đoạn lịch sử nhất định khi hội đủ cả nguồn gốc nhận thức và nguồn gốc xã hội."
+        }
+      ],
+      "common_mistakes": [
+        "Chỉ nêu một trong hai nguồn gốc (thường quên nguồn gốc nhận thức).",
+        "Không giải thích được vế thứ hai của câu hỏi (hiện tượng lịch sử là gì)."
+      ]
+    },
+    {
+      "id": "TRIET_C1_1.1_002",
+      "topic": "Vấn đề cơ bản của triết học",
+      "difficulty": "Medium",
+      "bloom_level": "Analyzing",
+      "question_text": "Vấn đề cơ bản của triết học là gì? Cách giải quyết hai mặt vấn đề cơ bản của triết học là cơ sở để phân chia các trường phái triết học nào?",
+      "full_answer": "Vấn đề cơ bản của triết học là mối quan hệ giữa tư duy và tồn tại (hay giữa ý thức và vật chất). Việc giải quyết mặt thứ nhất (Cái nào có trước?) chia triết học thành Chủ nghĩa duy vật và Chủ nghĩa duy tâm. Việc giải quyết mặt thứ hai (Con người có nhận thức được thế giới không?) chia triết học thành Thuyết Khả tri (nhận thức được) và Thuyết Bất khả tri (không nhận thức được).",
+      "scaffolding_steps": [
+        {
+          "step_number": 1,
+          "hint": "Khái niệm cốt lõi: Theo Ph.Ăngghen, vấn đề cơ bản lớn nhất của mọi triết học là mối quan hệ giữa hai yếu tố nào?",
+          "step_detail": "Đó là mối quan hệ giữa tư duy và tồn tại (hoặc ý thức và vật chất)."
+        },
+        {
+          "step_number": 2,
+          "hint": "Hãy xét mặt thứ nhất (Bản thể luận). Câu hỏi đặt ra là gì và cách trả lời câu hỏi này tạo ra hai trường phái đối lập nào?",
+          "step_detail": "Câu hỏi là: Giữa vật chất và ý thức, cái nào có trước, cái nào quyết định cái nào? Nếu cho rằng vật chất có trước thì thuộc trường phái Chủ nghĩa duy vật; nếu cho rằng ý thức có trước thì thuộc Chủ nghĩa duy tâm."
+        },
+        {
+          "step_number": 3,
+          "hint": "Hãy xét mặt thứ hai (Nhận thức luận). Câu hỏi đặt ra là gì và cách trả lời tạo ra hai học thuyết nào?",
+          "step_detail": "Câu hỏi là: Con người có khả năng nhận thức được thế giới hay không? Trả lời 'Có' thì thuộc Thuyết Khả tri; trả lời 'Không' (hoặc không nhận thức được bản chất) thì thuộc Thuyết Bất khả tri."
+        }
+      ],
+      "common_mistakes": [
+        "Trình bày sai nội dung của mặt thứ hai (thường hay nhầm lẫn sang vấn đề biện chứng - siêu hình).",
+        "Bỏ sót thuật ngữ chuyên ngành (Khả tri luận, Bất khả tri luận)."
+      ]
+    },
+    {
+      "id": "TRIET_C1_1.1_003",
+      "topic": "Biện chứng và Siêu hình",
+      "difficulty": "Medium",
+      "bloom_level": "Analyzing",
+      "question_text": "So sánh sự khác biệt cơ bản giữa phương pháp tư duy siêu hình và phương pháp tư duy biện chứng.",
+      "full_answer": "Phương pháp siêu hình xem xét sự vật trong trạng thái cô lập, tĩnh tại, không có sự phát triển (hoặc chỉ tăng giảm về lượng); nguồn gốc biến đổi nằm ở bên ngoài sự vật. Phương pháp biện chứng xem xét sự vật trong mối liên hệ phổ biến, luôn vận động, chuyển hóa và phát triển; nguồn gốc của sự phát triển là do mâu thuẫn bên trong chính sự vật.",
+      "scaffolding_steps": [
+        {
+          "step_number": 1,
+          "hint": "Hãy so sánh cách nhìn của hai phương pháp này về 'trạng thái tồn tại' (sự liên hệ) của các sự vật hiện tượng.",
+          "step_detail": "Siêu hình: Coi sự vật tồn tại biệt lập, tách rời nhau. Biện chứng: Coi sự vật tồn tại trong mối liên hệ, ràng buộc và quy định lẫn nhau."
+        },
+        {
+          "step_number": 2,
+          "hint": "Hãy so sánh cách nhìn của hai phương pháp về 'sự vận động và phát triển'.",
+          "step_detail": "Siêu hình: Coi sự vật luôn tĩnh tại, đứng yên, nếu có biến đổi thì chỉ là sự tăng giảm về lượng. Biện chứng: Coi sự vật luôn vận động, phát triển và có sự biến đổi về chất."
+        },
+        {
+          "step_number": 3,
+          "hint": "Điểm khác biệt mấu chốt nhất: Hai phương pháp giải thích 'nguồn gốc của sự vận động' như thế nào?",
+          "step_detail": "Siêu hình cho rằng nguồn gốc vận động là do lực đẩy từ bên ngoài. Biện chứng khẳng định nguồn gốc sự vận động là do giải quyết các mâu thuẫn bên trong chính bản thân sự vật."
+        }
+      ],
+      "common_mistakes": [
+        "Không so sánh theo từng tiêu chí cụ thể (trạng thái tồn tại, sự vận động, nguồn gốc) mà viết lan man.",
+        "Thiếu từ khóa quan trọng 'mâu thuẫn bên trong' khi giải thích phương pháp biện chứng."
+      ]
+    },
+    
+    {
+        "id": "TRIET_C1_1.2_001",
+        "topic": "Sự ra đời của Triết học Mác: Điều kiện và Tiền đề",
+        "difficulty": "Medium",
+        "bloom_level": "Analyzing",
+        "question_text": "Phân tích những điều kiện lịch sử và tiền đề dẫn đến sự ra đời của triết học Mác vào những năm 40 của thế kỷ XIX.",
+        "full_answer": "Triết học Mác ra đời dựa trên 3 yếu tố: 1. Điều kiện kinh tế - xã hội (Sự phát triển của CNTB làm bộc lộ mâu thuẫn giai cấp, phong trào công nhân cần lý luận dẫn đường). 2. Tiền đề lý luận (Kế thừa Triết học cổ điển Đức, Kinh tế chính trị học Anh, CNXH không tưởng Pháp). 3. Tiền đề khoa học tự nhiên (Định luật bảo toàn năng lượng, Thuyết tế bào, Thuyết tiến hóa).",
+        "scaffolding_steps": [
+        {
+          "step_number": 1,
+          "hint": "Đầu tiên, hãy phân tích Điều kiện kinh tế - xã hội. Sự phát triển của phương thức sản xuất tư bản chủ nghĩa đã làm xuất hiện giai cấp mới nào và họ đang cần điều gì?",
+          "step_detail": "Sự phát triển của CNTB làm xuất hiện giai cấp vô sản. Phong trào đấu tranh của họ đang rất cần một hệ thống lý luận khoa học, cách mạng làm vũ khí tư tưởng."
+        },
+        {
+          "step_number": 2,
+          "hint": "Thứ hai là Tiền đề lý luận. C.Mác và Ph.Ăngghen đã kế thừa có chọn lọc 3 nguồn gốc lý luận trực tiếp nào của nhân loại?",
+          "step_detail": "Đó là: Triết học cổ điển Đức (kế thừa phép biện chứng của Hêghen và chủ nghĩa duy vật của Phoiơbách); Kinh tế chính trị học cổ điển Anh; Chủ nghĩa xã hội không tưởng Pháp."
+        },
+        {
+          "step_number": 3,
+          "hint": "Thứ ba là Tiền đề khoa học tự nhiên. Hãy kể tên 3 phát minh vĩ đại của khoa học tự nhiên thế kỷ XIX làm cơ sở bác bỏ tư duy siêu hình và tôn giáo.",
+          "step_detail": "Ba phát minh đó là: Định luật bảo toàn và chuyển hóa năng lượng, Thuyết tế bào, và Thuyết tiến hóa của Đác-uyn. Chúng chứng minh thế giới vật chất có mối liên hệ thống nhất và luôn phát triển."
+        }
+      ],
+      "common_mistakes": [
+        "Nhầm lẫn giữa điều kiện kinh tế - xã hội và tiền đề lý luận.",
+        "Nêu thiếu 1 trong 3 phát minh của tiền đề khoa học tự nhiên."
+      ]
+    },
+    {
+      "id": "TRIET_C1_1.2_002",
+      "topic": "Thực chất cuộc cách mạng trong triết học của Mác và Ăngghen",
+      "difficulty": "Hard",
+      "bloom_level": "Evaluating",
+      "question_text": "C.Mác và Ph.Ăngghen đã thực hiện cuộc cách mạng trong lịch sử triết học như thế nào? Đâu là phát kiến vĩ đại nhất của các ông?",
+      "full_answer": "Cuộc cách mạng thể hiện ở 3 điểm: 1. Khắc phục tính siêu hình của CNDV cũ và tính duy tâm của phép biện chứng Hêghen để sáng tạo ra Chủ nghĩa duy vật biện chứng. 2. Vận dụng CNDV biện chứng vào xã hội để sáng tạo ra Chủ nghĩa duy vật lịch sử (đây là phát kiến vĩ đại nhất). 3. Gắn kết chặt chẽ lý luận triết học với thực tiễn đấu tranh cách mạng của giai cấp công nhân.",
+      "scaffolding_steps": [
+        {
+          "step_number": 1,
+          "hint": "Trước Mác, chủ nghĩa duy vật thì bị mắc bệnh 'siêu hình', còn phép biện chứng lại nằm trong tay lý luận 'duy tâm' của Hêghen. Mác và Ăngghen đã giải quyết mâu thuẫn này thế nào?",
+          "step_detail": "Hai ông đã cải tạo phép biện chứng của Hêghen và chủ nghĩa duy vật của Phoiơbách, từ đó thống nhất hai yếu tố này lại, sáng tạo ra Chủ nghĩa duy vật biện chứng."
+        },
+        {
+          "step_number": 2,
+          "hint": "Về lĩnh vực lịch sử xã hội, trước Mác, các nhà triết học đều nhìn nhận lịch sử bằng lăng kính duy tâm. Phát kiến vĩ đại nhất của Mác để thay đổi điều này là gì?",
+          "step_detail": "Đó là sự sáng tạo ra Chủ nghĩa duy vật lịch sử. Mác đã dùng quan điểm duy vật để giải thích lịch sử, khẳng định sự phát triển của xã hội là một quá trình lịch sử - tự nhiên do các quy luật vật chất (Kinh tế) quyết định."
+        },
+        {
+          "step_number": 3,
+          "hint": "Cuối cùng, về mặt thực tiễn, triết học Mác không chỉ dừng lại ở việc 'giải thích thế giới' mà còn hướng tới mục đích gì? Gắn với giai cấp nào?",
+          "step_detail": "Triết học Mác gắn liền với thực tiễn, trở thành vũ khí lý luận của giai cấp công nhân nhằm mục đích cao nhất là 'cải tạo thế giới', xóa bỏ chế độ áp bức bóc lột."
+        }
+      ],
+      "common_mistakes": [
+        "Không chỉ ra được việc Mác đã 'kết hợp' duy vật và biện chứng như thế nào.",
+        "Không nhớ hoặc xác định sai phát kiến vĩ đại nhất trong triết học của Mác (Chủ nghĩa duy vật lịch sử)."
+      ]
+    },
+    {
+      "id": "TRIET_C1_1.2_003",
+      "topic": "Vai trò và Chức năng của Triết học Mác - Lênin",
+      "difficulty": "Medium",
+      "bloom_level": "Applying",
+      "question_text": "Trình bày các chức năng cơ bản của triết học Mác - Lênin. Vai trò của nó đối với công cuộc đổi mới ở Việt Nam hiện nay là gì?",
+      "full_answer": "Triết học Mác - Lênin có hai chức năng cơ bản: Chức năng thế giới quan (duy vật biện chứng) và chức năng phương pháp luận (biện chứng duy vật). Tại Việt Nam, nó là nền tảng tư tưởng, kim chỉ nam cho hành động của Đảng; cung cấp cơ sở lý luận khoa học để nhận thức quy luật khách quan, chống lại tư duy giáo điều, chủ quan duy ý chí, từ đó hoạch định đường lối đổi mới đúng đắn.",
+      "scaffolding_steps": [
+        {
+          "step_number": 1,
+          "hint": "Hãy nêu tên hai chức năng cơ bản nhất của triết học Mác - Lênin.",
+          "step_detail": "Đó là chức năng thế giới quan (trang bị nhãn quan khoa học) và chức năng phương pháp luận (trang bị phương pháp nhận thức và hành động đúng đắn)."
+        },
+        {
+          "step_number": 2,
+          "hint": "Áp dụng vào Việt Nam: Triết học Mác - Lênin đóng vai trò gì trong hệ tư tưởng của Đảng Cộng sản Việt Nam?",
+          "step_detail": "Nó cùng với tư tưởng Hồ Chí Minh cấu thành nền tảng tư tưởng và kim chỉ nam cho mọi hành động của Đảng và cách mạng Việt Nam."
+        },
+        {
+          "step_number": 3,
+          "hint": "Trong công cuộc đổi mới cụ thể (kinh tế, xã hội), việc nắm vững triết học Mác - Lênin giúp chúng ta phòng tránh được những sai lầm tư duy nào?",
+          "step_detail": "Giúp chúng ta tôn trọng quy luật khách quan, tránh được bệnh chủ quan duy ý chí, tư duy siêu hình giáo điều, hoặc chủ nghĩa kinh nghiệm mù quáng."
+        }
+      ],
+      "common_mistakes": [
+        "Trình bày nhầm chức năng của triết học với chức năng của kinh tế chính trị hoặc chủ nghĩa xã hội khoa học.",
+        "Phần liên hệ Việt Nam viết sáo rỗng, không sử dụng các khái niệm triết học như 'quy luật khách quan', 'giáo điều', 'chủ quan duy ý chí'."
+      ]
+    }
+  ]
+}
