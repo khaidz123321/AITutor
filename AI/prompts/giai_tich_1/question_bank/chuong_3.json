@@ -1,0 +1,109 @@
+{
+  "subject": "Giải tích 1 - PTIT",
+  "chapter_number": 3,
+  "chapter_name": "Phép tính tích phân hàm số một biến số",
+  "questions": [
+    {
+      "id": "GT1_C3_001",
+      "topic": "Tích phân bất định - Phương pháp từng phần",
+      "difficulty": "Medium",
+      "bloom_level": "Applying",
+      "question_text": "Tính tích phân bất định sau: $I = \\int x \\ln x \\, dx$.",
+      "full_answer": "$I = \\frac{x^2}{2} \\ln x - \\frac{x^2}{4} + C$",
+      "scaffolding_steps": [
+        {
+          "step_number": 1,
+          "hint": "Nhận dạng đây là tích phân của tích hai hàm khác loại (đa thức và logarit), ta cần dùng phương pháp tích phân từng phần. Hãy đặt $u$ và $dv$ theo quy tắc 'Nhất log, nhì đa, tam lượng, tứ mũ'.",
+          "step_detail": "Theo quy tắc ưu tiên, ta đặt $u = \\ln x$ và phần còn lại $dv = x \\, dx$."
+        },
+        {
+          "step_number": 2,
+          "hint": "Tính vi phân $du$ và nguyên hàm $v$ từ cách đặt ở bước 1.",
+          "step_detail": "Đạo hàm hai vế ta có $du = \\frac{1}{x} \\, dx$. Nguyên hàm của $dv$ là $v = \\int x \\, dx = \\frac{x^2}{2}$ (chọn hằng số $C=0$ cho đơn giản)."
+        },
+        {
+          "step_number": 3,
+          "hint": "Áp dụng công thức tích phân từng phần $\\int u \\, dv = uv - \\int v \\, du$.",
+          "step_detail": "Thay các thành phần vào công thức: $I = \\left( \\ln x \\cdot \\frac{x^2}{2} \\right) - \\int \\frac{x^2}{2} \\cdot \\frac{1}{x} \\, dx = \\frac{x^2}{2} \\ln x - \\frac{1}{2} \\int x \\, dx$."
+        },
+        {
+          "step_number": 4,
+          "hint": "Tính tích phân cơ bản còn lại và cộng thêm hằng số $C$ để hoàn thành bài toán.",
+          "step_detail": "Ta tính $\\int x \\, dx = \\frac{x^2}{2}$. Kết hợp lại ta được: $I = \\frac{x^2}{2} \\ln x - \\frac{1}{2} \\left( \\frac{x^2}{2} \\right) + C = \\frac{x^2}{2} \\ln x - \\frac{x^2}{4} + C$."
+        }
+      ],
+      "common_mistakes": [
+        "Đặt sai thứ tự ưu tiên: đặt $u = x$ và $dv = \\ln x \\, dx$, dẫn đến việc không thể tìm được nguyên hàm $v$ một cách dễ dàng.",
+        "Quên cộng thêm hằng số $C$ ở đáp án cuối cùng đối với tích phân bất định."
+      ]
+    },
+    {
+      "id": "GT1_C3_002",
+      "topic": "Tích phân xác định - Phương pháp đổi biến số",
+      "difficulty": "Medium",
+      "bloom_level": "Analyzing",
+      "question_text": "Tính tích phân xác định: $J = \\int_0^{\\pi/2} \\frac{\\sin x}{1 + \\cos^2 x} \\, dx$.",
+      "full_answer": "$J = \\frac{\\pi}{4}$",
+      "scaffolding_steps": [
+        {
+          "step_number": 1,
+          "hint": "Quan sát hàm dưới dấu tích phân, ta thấy tử số là đạo hàm (sai khác dấu) của một thành phần dưới mẫu số. Hãy đặt ẩn phụ thích hợp.",
+          "step_detail": "Đặt $t = \\cos x$, suy ra vi phân $dt = -\\sin x \\, dx$, hay $\\sin x \\, dx = -dt$."
+        },
+        {
+          "step_number": 2,
+          "hint": "Đổi cận của tích phân từ biến $x$ sang biến $t$.",
+          "step_detail": "Khi $x = 0 \\Rightarrow t = \\cos(0) = 1$.\nKhi $x = \\frac{\\pi}{2} \\Rightarrow t = \\cos(\\frac{\\pi}{2}) = 0$."
+        },
+        {
+          "step_number": 3,
+          "hint": "Thay thế biến số và cận mới vào tích phân ban đầu.",
+          "step_detail": "$J = \\int_1^0 \\frac{-dt}{1 + t^2}$. Sử dụng tính chất đổi cận để làm mất dấu trừ: $J = \\int_0^1 \\frac{1}{1 + t^2} \\, dt$."
+        },
+        {
+          "step_number": 4,
+          "hint": "Tính nguyên hàm cơ bản và áp dụng công thức Newton-Leibniz để ra kết quả.",
+          "step_detail": "Nguyên hàm của $\\frac{1}{1 + t^2}$ là $\\arctan t$. Áp dụng Newton-Leibniz: $J = \\arctan(1) - \\arctan(0) = \\frac{\\pi}{4} - 0 = \\frac{\\pi}{4}$."
+        }
+      ],
+      "common_mistakes": [
+        "Đổi biến số nhưng quên đổi cận tích phân, dẫn đến thay cận cũ vào hàm số mới.",
+        "Thiếu dấu trừ khi lấy vi phân $dt = -\\sin x \\, dx$ làm kết quả bị âm."
+      ]
+    },
+    {
+      "id": "GT1_C3_003",
+      "topic": "Tích phân suy rộng loại 1 (Cận vô hạn)",
+      "difficulty": "Hard",
+      "bloom_level": "Evaluating",
+      "question_text": "Tính tích phân suy rộng sau (nếu hội tụ): $K = \\int_1^{+\\infty} \\frac{1}{x(x+1)} \\, dx$.",
+      "full_answer": "$K = \\ln 2$",
+      "scaffolding_steps": [
+        {
+          "step_number": 1,
+          "hint": "Dùng định nghĩa tích phân suy rộng loại 1 bằng cách thay cận vô hạn bằng một biến số $b$ và xét qua giới hạn.",
+          "step_detail": "$K = \\lim_{b \\to +\\infty} \\int_1^b \\frac{1}{x(x+1)} \\, dx$."
+        },
+        {
+          "step_number": 2,
+          "hint": "Phân tích biểu thức dưới dấu tích phân thành các phân thức đơn giản để tính nguyên hàm.",
+          "step_detail": "Tách phân thức: $\\frac{1}{x(x+1)} = \\frac{1}{x} - \\frac{1}{x+1}$."
+        },
+        {
+          "step_number": 3,
+          "hint": "Tính tích phân xác định từ $1$ đến $b$ dựa trên các phân thức vừa tách.",
+          "step_detail": "Nguyên hàm: $\\int (\\frac{1}{x} - \\frac{1}{x+1}) \\, dx = \\ln|x| - \\ln|x+1| = \\ln\\left|\\frac{x}{x+1}\\right|$.\nThay cận từ $1$ đến $b$: $F(b) - F(1) = \\ln\\left(\\frac{b}{b+1}\\right) - \\ln\\left(\\frac{1}{2}\\right)$."
+        },
+        {
+          "step_number": 4,
+          "hint": "Tính giới hạn của kết quả bước trên khi $b \\to +\\infty$.",
+          "step_detail": "Xét $\\lim_{b \\to +\\infty} \\ln\\left(\\frac{b}{b+1}\\right) = \\ln(1) = 0$.\nVậy $K = 0 - \\ln\\left(\\frac{1}{2}\\right) = -(\\ln 1 - \\ln 2) = \\ln 2$. Tích phân hội tụ về $\\ln 2$."
+        }
+      ],
+      "common_mistakes": [
+        "Thay trực tiếp vô cùng $(+\\infty)$ vào biểu thức mà không trình bày bước tính giới hạn (có thể bị trừ điểm trình bày).",
+        "Tách sai dấu hệ số khi chuyển thành phân thức đơn giản."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "subject": "Giải tích 1 - PTIT",
+  "chapter_number": 1,
+  "chapter_name": "Số phức và giới hạn của dãy số",
+  "questions": [
+    {
+      "id": "GT1_C1_001",
+      "topic": "Số phức - Lũy thừa số phức (Công thức Moivre)",
+      "difficulty": "Medium",
+      "bloom_level": "Applying",
+      "question_text": "Tính giá trị của biểu thức: $A = (1 + i\\sqrt{3})^{30}$.",
+      "full_answer": "$A = 2^{30}$",
+      "scaffolding_steps": [
+        {
+          "step_number": 1,
+          "hint": "Chuyển số phức $z = 1 + i\\sqrt{3}$ từ dạng đại số sang dạng lượng giác.",
+          "step_detail": "Ta có phần thực $a = 1$, phần ảo $b = \\sqrt{3}$. Môđun $r = \\sqrt{1^2 + (\\sqrt{3})^2} = 2$. Argument $\\varphi$ thỏa mãn $\\cos\\varphi = \\frac{1}{2}$ và $\\sin\\varphi = \\frac{\\sqrt{3}}{2}$, suy ra $\\varphi = \\frac{\\pi}{3}$. Dạng lượng giác: $z = 2\\left(\\cos\\frac{\\pi}{3} + i\\sin\\frac{\\pi}{3}\\right)$."
+        },
+        {
+          "step_number": 2,
+          "hint": "Áp dụng công thức Moivre cho lũy thừa bậc $n$ của số phức dạng lượng giác.",
+          "step_detail": "Công thức Moivre: $z^n = r^n (\\cos(n\\varphi) + i\\sin(n\\varphi))$. Áp dụng với $n = 30$, ta có: $A = 2^{30} \\left(\\cos\\left(30 \\cdot \\frac{\\pi}{3}\\right) + i\\sin\\left(30 \\cdot \\frac{\\pi}{3}\\right)\\right)$."
+        },
+        {
+          "step_number": 3,
+          "hint": "Rút gọn góc bên trong hàm lượng giác và tính kết quả cuối cùng.",
+          "step_detail": "Góc bên trong là $30 \\cdot \\frac{\\pi}{3} = 10\\pi$. Vì chu kỳ của $\\sin$ và $\\cos$ là $2\\pi$, ta có $\\cos(10\\pi) = 1$ và $\\sin(10\\pi) = 0$. Do đó, $A = 2^{30}(1 + i \\cdot 0) = 2^{30}$."
+        }
+      ],
+      "common_mistakes": [
+        "Cố gắng khai triển nhị thức Newton cho số mũ 30 thay vì dùng dạng lượng giác.",
+        "Xác định sai góc $\\varphi$ (ví dụ nhầm thành $\\frac{\\pi}{6}$ do bấm máy tính sai tỷ lệ lượng giác)."
+      ]
+    },
+    {
+      "id": "GT1_C1_002",
+      "topic": "Số phức - Phương trình bậc hai trên tập số phức",
+      "difficulty": "Easy",
+      "bloom_level": "Understanding",
+      "question_text": "Giải phương trình sau trên tập số phức: $z^2 - 4z + 13 = 0$.",
+      "full_answer": "$z_1 = 2 + 3i$, $z_2 = 2 - 3i$",
+      "scaffolding_steps": [
+        {
+          "step_number": 1,
+          "hint": "Tính biệt thức $\\Delta$ (hoặc $\\Delta'$) của phương trình bậc hai.",
+          "step_detail": "Sử dụng $\\Delta' = b'^2 - ac$. Ở đây $a=1, b'=-2, c=13$. Vậy $\\Delta' = (-2)^2 - 1 \\cdot 13 = 4 - 13 = -9$."
+        },
+        {
+          "step_number": 2,
+          "hint": "Viết $\\Delta'$ dưới dạng bình phương của một số phức.",
+          "step_detail": "Vì $\\Delta' = -9 < 0$, trên tập số phức ta viết $-1 = i^2$. Vậy $\\Delta' = 9i^2 = (3i)^2$. Suy ra căn bậc hai của $\\Delta'$ là $\\pm 3i$."
+        },
+        {
+          "step_number": 3,
+          "hint": "Áp dụng công thức nghiệm của phương trình bậc hai để tìm $z_1, z_2$.",
+          "step_detail": "Công thức nghiệm: $z = \\frac{-b' \\pm \\sqrt{\\Delta'}}{a}$. Thay số vào ta được: $z_{1,2} = \\frac{2 \\pm 3i}{1}$. Vậy hai nghiệm là $z_1 = 2 + 3i$ và $z_2 = 2 - 3i$."
+        }
+      ],
+      "common_mistakes": [
+        "Kết luận phương trình vô nghiệm khi thấy $\\Delta < 0$ (quên mất đang giải trên $\\mathbb{C}$).",
+        "Tính sai căn bậc hai của một số âm (ví dụ viết $\\sqrt{-9} = -3$ thay vì $3i$)."
+      ]
+    },
+    {
+      "id": "GT1_C1_003",
+      "topic": "Giới hạn dãy số - Nhân lượng liên hợp",
+      "difficulty": "Medium",
+      "bloom_level": "Analyzing",
+      "question_text": "Tính giới hạn của dãy số: $L = \\lim_{n \\to \\infty} (\\sqrt{n^2 + 4n} - n)$.",
+      "full_answer": "$L = 2$",
+      "scaffolding_steps": [
+        {
+          "step_number": 1,
+          "hint": "Kiểm tra dạng vô định. Nhận thấy khi $n \\to \\infty$, biểu thức có dạng vô định $\\infty - \\infty$.",
+          "step_detail": "Đại lượng $\\sqrt{n^2 + 4n} \\to \\infty$ và $n \\to \\infty$, do hệ số của $n^2$ trong căn và ngoài căn bằng nhau (đều là 1), ta bắt buộc phải nhân lượng liên hợp."
+        },
+        {
+          "step_number": 2,
+          "hint": "Nhân và chia biểu thức với lượng liên hợp $(\\sqrt{n^2 + 4n} + n)$.",
+          "step_detail": "$L = \\lim_{n \\to \\infty} \\frac{(\\sqrt{n^2 + 4n} - n)(\\sqrt{n^2 + 4n} + n)}{\\sqrt{n^2 + 4n} + n}$. Áp dụng hằng đẳng thức $(a-b)(a+b) = a^2 - b^2$, tử số trở thành: $(n^2 + 4n) - n^2 = 4n$."
+        },
+        {
+          "step_number": 3,
+          "hint": "Rút $n$ ở cả tử và mẫu ra ngoài để khử vô định dạng $\\frac{\\infty}{\\infty}$.",
+          "step_detail": "Biểu thức lúc này là $\\lim_{n \\to \\infty} \\frac{4n}{n\\sqrt{1 + \\frac{4}{n}} + n}$. Triệt tiêu $n$ ở cả tử và mẫu, ta còn lại: $\\lim_{n \\to \\infty} \\frac{4}{\\sqrt{1 + \\frac{4}{n}} + 1}$."
+        },
+        {
+          "step_number": 4,
+          "hint": "Tính giới hạn bằng cách cho $n \\to \\infty$.",
+          "step_detail": "Khi $n \\to \\infty$, phân thức $\\frac{4}{n} \\to 0$. Giới hạn trở thành $\\frac{4}{\\sqrt{1 + 0} + 1} = \\frac{4}{2} = 2$."
+        }
+      ],
+      "common_mistakes": [
+        "Rút trực tiếp $n$ ra ngoài ngay từ bước đầu tiên mà không nhân liên hợp, dẫn đến kết quả sai lệch $0 \\cdot \\infty$.",
+        "Bình phương biểu thức lên một cách tùy tiện làm thay đổi giá trị của bài toán."
+      ]
+    },
+    {
+      "id": "GT1_C1_004",
+      "topic": "Giới hạn dãy số - Dạng vô định 1^vô cùng (Số e)",
+      "difficulty": "Hard",
+      "bloom_level": "Evaluating",
+      "question_text": "Tính giới hạn: $K = \\lim_{n \\to \\infty} \\left( \\frac{n^2 + n + 1}{n^2 - n + 1} \\right)^n$.",
+      "full_answer": "$K = e^2$",
+      "scaffolding_steps": [
+        {
+          "step_number": 1,
+          "hint": "Thay $n \\to \\infty$ để nhận diện dạng vô định của bài toán.",
+          "step_detail": "Cơ số $\\frac{n^2+n+1}{n^2-n+1} \\to 1$ và số mũ $n \\to \\infty$. Đây là dạng vô định $1^\\infty$. Ta cần đưa về công thức giới hạn cơ bản của số $e$."
+        },
+        {
+          "step_number": 2,
+          "hint": "Thêm bớt 1 vào cơ số để tạo dạng $(1 + u)$.",
+          "step_detail": "Tách cơ số: $\\frac{n^2+n+1}{n^2-n+1} = 1 + \\left( \\frac{n^2+n+1}{n^2-n+1} - 1 \\right) = 1 + \\frac{2n}{n^2-n+1}$. Lúc này $u_n = \\frac{2n}{n^2-n+1}$ và $u_n \\to 0$ khi $n \\to \\infty$."
+        },
+        {
+          "step_number": 3,
+          "hint": "Biến đổi số mũ để làm xuất hiện dạng $(1 + u_n)^{\\frac{1}{u_n}}$.",
+          "step_detail": "Ta viết lại giới hạn: $K = \\lim_{n \\to \\infty} \\left[ \\left( 1 + \\frac{2n}{n^2-n+1} \\right)^{\\frac{n^2-n+1}{2n}} \\right]^{\\frac{2n}{n^2-n+1} \\cdot n}$. Phần trong ngoặc vuông tiến tới $e$."
+        },
+        {
+          "step_number": 4,
+          "hint": "Tính giới hạn của phần số mũ còn dư để hoàn thành bài toán.",
+          "step_detail": "Phần số mũ dư là: $\\lim_{n \\to \\infty} \\frac{2n^2}{n^2-n+1}$. Chia cả tử và mẫu cho $n^2$, giới hạn này bằng $2$. Vậy kết quả cuối cùng $K = e^2$."
+        }
+      ],
+      "common_mistakes": [
+        "Tính sai bước quy đồng khi lấy cơ số trừ đi 1.",
+        "Nhầm lẫn công thức $\\lim_{n \\to \\infty} \\left(1 + \\frac{1}{n}\\right)^n = e$ dẫn đến quên nhân trả biểu thức ở số mũ."
+      ]
+    }
+  ]
+}
