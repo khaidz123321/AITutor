@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hệ Thống Quản Lý Kho</title>
+    <style>
+        /* CSS Dùng chung - Phong cách WinForms */
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background-color: #5c81a6; 
+            margin: 0; 
+            height: 100vh; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+        }
+        
+        /* CỐ ĐỊNH KÍCH THƯỚC TẤT CẢ CÁC TRANG BẰNG NHAU */
+        .window { 
+            background-color: #f0f0f0; 
+            border: 1px solid #999; 
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.5); 
+            display: none;
+            flex-direction: column; 
+            width: 900px;  /* Chiều rộng cố định cho mọi trang */
+            height: 650px; /* Chiều cao cố định cho mọi trang */
+            max-width: 95vw; 
+            max-height: 95vh; 
+        }
+        .window.active { display: flex; }
+
+        .title-bar { 
+            background-color: #0078d7; 
+            color: white; 
+            padding: 5px 10px; 
+            font-size: 14px; 
+            font-weight: bold; 
+            display: flex; 
+            justify-content: space-between; 
+        }
+        .title-bar-controls span { cursor: pointer; padding: 0 5px; font-weight: normal; }
+        .title-bar-controls span:hover { background-color: red; color: white; }
+        .window-content { padding: 15px; overflow-y: auto; flex-grow: 1; }
+        .group-box { border: 1px solid #ccc; padding: 15px; margin-bottom: 15px; position: relative; margin-top: 10px; }
+        .group-box-title { position: absolute; top: -10px; left: 10px; background: #f0f0f0; padding: 0 5px; font-size: 12px; color: #0078d7; }
+        .form-row { display: flex; gap: 10px; margin-bottom: 10px; align-items: center; }
+        .form-row label { width: 120px; font-size: 13px; }
+        input[type="text"], input[type="password"], input[type="number"], select { 
+            padding: 5px; border: 1px solid #ccc; flex-grow: 1; box-sizing: border-box; 
+        }
+        input[readonly] { background-color: #e9ecef; font-weight: bold; color: #333; }
+        button { 
+            padding: 5px 15px; border: 1px solid #ccc; background-color: #e1e1e1; 
+            cursor: pointer; font-size: 13px; transition: 0.1s; 
+        }
+        button:hover { background-color: #d1e8ff; border-color: #0078d7; }
+        button.primary { background-color: #0078d7; color: white; border-color: #005a9e; }
+        button.primary:hover { background-color: #005a9e; }
+        table.data-grid { width: 100%; border-collapse: collapse; background: white; margin-top: 10px; }
+        table.data-grid th, table.data-grid td { border: 1px solid #ccc; padding: 6px; font-size: 13px; text-align: left; }
+        table.data-grid th { background-color: #e1e1e1; }
+        .text-center { text-align: center; }
+        .text-right { text-align: right; }
+        hr { border: 0; border-top: 1px solid #ccc; margin: 15px 0; }
+        .modal-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.4); display: none;
+            justify-content: center; align-items: center; z-index: 100;
+        }
+        .modal-overlay.active { display: flex; }
+        
+        /* Căn giữa form nhỏ trong khung window lớn */
+        .center-form { width: 400px; margin: 50px auto; }
+    </style>
+</head>
+<body>
+
+    <!-- GIAO DIỆN ĐĂNG NHẬP -->
+    <div id="frmDangNhap" class="window active">
+        <div class="title-bar">Đăng nhập hệ thống</div>
+        <div class="window-content text-center">
+            <div class="center-form">
+                <h2 style="color: #0078d7; margin-top: 0;">HỆ THỐNG QUẢN LÝ</h2>
+                <div class="group-box" style="text-align: left;">
+                    <div class="form-row"><label>Tên đăng nhập:</label><input type="text" value="admin"></div>
+                    <div class="form-row"><label>Mật khẩu:</label><input type="password" value="123456"></div>
+                </div>
+                <button class="primary" onclick="chuyenManHinh('frmTrangChu')" style="width: 100px; padding: 8px;">Đăng nhập</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- GIAO DIỆN TRANG CHỦ -->
+    <div id="frmTrangChu" class="window">
+        <div class="title-bar">
+            <span>Trang Chủ - Hệ Thống Quản Lý</span>
+            <div class="title-bar-controls"><span onclick="chuyenManHinh('frmDangNhap')">Đăng xuất</span></div>
+        </div>
+        <div class="window-content">
+            <h3>Chào mừng bạn quay lại, Nhân Viên Kho!</h3>
+            <p>Chọn chức năng để bắt đầu làm việc:</p>
+            <div style="display: flex; gap: 20px; margin-top: 20px;">
+                <button class="primary" onclick="chuyenManHinh('frmTimKiemNCC')" style="height: 100px; width: 150px; font-size: 15px;">Lập phiếu<br>nhập kho mới</button>
+                <button style="height: 100px; width: 150px; font-size: 14px;">Lập phiếu thuê trang phục</button>
+                <button style="height: 100px; width: 150px; font-size: 14px;">Lập phiếu trả và thanh toán</button>
+                <button style="height: 100px; width: 150px; font-size: 14px;">Báo cáo thống kê trang phục</button>
+            </div>
+        </div>
+    </div>
+
+   <!-- GIAO DIỆN TÌM KIẾM NHÀ CUNG CẤP -->
+    <div id="frmTimKiemNCC" class="window">
+        <div class="title-bar">
+            <span>Chọn Nhà Cung Cấp</span>
+            <div class="title-bar-controls"><span onclick="chuyenManHinh('frmTrangChu')">Đóng</span></div>
+        </div>
+        <div class="window-content">
+            <div class="group-box">
+                <div class="form-row">
+                    <label>Tên/Mã NCC:</label>
+                    <input type="text" placeholder="" id="nhap_tenNCC">
+                    <button id="nut_timKiemNCC">Tìm kiếm</button>
+                    <button onclick="moModal('modalThemNCC')">Thêm nhà cung cấp mới</button>
+                </div>
+            </div>
+            
+            <table class="data-grid" id="xuat_danhSachNCC">
+                <thead>
+                    <tr>
+                        <th>Mã NCC</th>
+                        <th>Tên Nhà Cung Cấp</th>
+                        <th>Số Điện Thoại</th>
+                        <th>Email</th>
+                        <th>Địa Chỉ</th>
+                        <th>Thao Tác</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><button class="primary" onclick="chuyenManHinh('frmTimKiemTrangPhuc')" id="nut_chonNCC">Chọn nhà cung cấp</button></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><button class="primary" onclick="chuyenManHinh('frmTimKiemTrangPhuc')" id="nut_chonNCC">Chọn nhà cung cấp</button></td>
+                    </tr><tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><button class="primary" onclick="chuyenManHinh('frmTimKiemTrangPhuc')" id="nut_chonNCC">Chọn nhà cung cấp</button></td>
+                    </tr><tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><button class="primary" onclick="chuyenManHinh('frmTimKiemTrangPhuc')" id="nut_chonNCC">Chọn nhà cung cấp</button></td>
+                    </tr><tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><button class="primary" onclick="chuyenManHinh('frmTimKiemTrangPhuc')" id="nut_chonNCC">Chọn nhà cung cấp</button></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><button class="primary" onclick="chuyenManHinh('frmTimKiemTrangPhuc')" id="nut_chonNCC">Chọn nhà cung cấp</button></td>
+                    </tr><tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><button class="primary" onclick="chuyenManHinh('frmTimKiemTrangPhuc')" id="nut_chonNCC">Chọn nhà cung cấp</button></td>
+                    </tr><tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><button class="primary" onclick="chuyenManHinh('frmTimKiemTrangPhuc')" id="nut_chonNCC">Chọn nhà cung cấp</button></td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div style="margin-top: 15px; text-align: right;">
+                <button onclick="chuyenManHinh('frmTrangChu')">Hủy bỏ lập phiếu</button>
+            </div>
+        </div>
+    </div>
+
+   <!-- GIAO DIỆN TÌM KIẾM TRANG PHỤC -->
+    <div id="frmTimKiemTrangPhuc" class="window">
+        <div class="title-bar">
+            <span>Tìm Kiếm Trang Phục</span>
+            <div class="title-bar-controls"><span onclick="chuyenManHinh('frmTrangChu')">Đóng</span></div>
+        </div>
+        <div class="window-content">
+            <div class="group-box">
+                <div class="form-row">
+                    <label>Tên/Mã SP:</label>
+                    <input type="text" placeholder="" id="nhap_tenTrangPhuc">
+                    <button id="nut_timKiemTrangPhuc">Tìm kiếm</button>
+                    <button onclick="moModal('modalThemSP')">Thêm sản phẩm mới</button>
+                </div>
+            </div>
+            
+            <table class="data-grid" id="xuat_danhSachTrangPhuc">
+                <thead>
+                    <tr>
+                        <th>Mã SP</th>
+                        <th>Tên Sản Phẩm</th>
+                        <th>Phân Loại</th>
+                        <th>Giá Gốc</th>
+                        <th>Thao Tác</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><button class="primary" onclick="moGiaoDienNhapSP">Chọn SP này</button></td>
+                    </tr>
+                     <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><button class="primary" onclick="moGiaoDienNhapSP">Chọn SP này</button></td>
+                    </tr> <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><button class="primary" onclick="moGiaoDienNhapSP">Chọn SP này</button></td>
+                    </tr> <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><button class="primary" onclick="moGiaoDienNhapSP">Chọn SP này</button></td>
+                    </tr> <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><button class="primary" onclick="moGiaoDienNhapSP">Chọn SP này</button></td>
+                    </tr> <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><button class="primary" onclick="moGiaoDienNhapSP">Chọn SP này</button></td>
+                    </tr> <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><button class="primary" onclick="moGiaoDienNhapSP">Chọn SP này</button></td>
+                    </tr> <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><button class="primary" onclick="moGiaoDienNhapSP">Chọn SP này</button></td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div style="margin-top: 15px; text-align: right;">
+                <button onclick="chuyenManHinh('frmTimKiemNCC')">Quay lại Chọn NCC</button>
+                <button class="primary" onclick="chuyenManHinh('frmNhapTrangPhucVaoPhieu')">Chuyển tới Phiếu Nhập </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- GIAO DIỆN NHẬP TRANG PHỤC VÀO PHIẾU -->
+    <div id="frmNhapTrangPhucVaoPhieu" class="window">
+        <div class="title-bar">
+            <span>Chi Tiết Phiếu Nhập Kho</span>
+            <div class="title-bar-controls"><span onclick="chuyenManHinh('frmTrangChu')">Đóng</span></div>
+        </div>
+        <div class="window-content">
+            <div class="group-box">
+                <div class="form-row">
+                    <label>Sản phẩm đã chọn:</label>
+                    <input type="hidden" id="nhap_MaSPDangChon">
+                    <input type="text" id="nhap_SPDangChon" readonly placeholder="">
+                </div>
+                <div class="form-row">
+                    <label>Số lượng nhập:</label>
+                    <input type="number" value="" placeholder="" id="nhap_soLuong">
+                </div>
+                <div class="form-row">
+                    <label>Đơn giá nhập:</label>
+                    <input type="number" placeholder="" id="nhap_donGiaNhap">
+                </div>
+                <div style="text-align: right; margin-top: 10px;">
+                    <button class="primary" id="nut_themVaoPhieu" onclick="themSPVaoBang()">Thêm vào phiếu</button>
+                </div>
+            </div>
+
+            <!-- Khung mẫu bảng dữ liệu -->
+            <table class="data-grid" id="xuat_danhSachTrangPhucDaChon">
+                <thead>
+                    <tr>
+                        <th style="width: 50px; text-align: center;">STT</th>
+                        <th>Mã sản phẩm</th>
+                        <th>Tên sản phẩm</th>
+                        <th style="width: 80px; text-align: center;">Số lượng</th>
+                        <th>Đơn giá</th>
+                        <th>Thành tiền</th>
+                        <th style="width: 50px; text-align: center;">Xóa</th>
+                    </tr>
+                </thead>
+                <tbody id="tbodyDanhSachSP">
+                    <!-- Dòng kẻ trống mặc định làm mẫu -->
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div style="margin-top: 25px; text-align: right;">
+                <span style="margin-right: 20px; font-size: 22px;">Tổng tạm tính: <strong id="lblTongTienTamTinh" style="color:#222;">0</strong> VNĐ</span>
+                <button onclick="chuyenManHinh('frmTimKiemTrangPhuc')">Tìm thêm SP</button>
+                <button class="primary" onclick="chuyenManHinh('frmXacNhan')">Thanh toán</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- GIAO DIỆN XÁC NHẬN VÀ THANH TOÁN -->
+    <div id="frmXacNhan" class="window">
+        <div class="title-bar">
+            <span>Xác Nhận & Thanh Toán</span>
+            <div class="title-bar-controls"><span onclick="chuyenManHinh('frmTrangChu')">Đóng</span></div>
+        </div>
+        <div class="window-content">
+            <div class="group-box" id="xuat_phieuNhap">
+                <p><strong>Nhà cung cấp:</strong> </p>
+                
+                <!-- BẢNG CHI TIẾT SẢN PHẨM Ở BƯỚC XÁC NHẬN -->
+                <table class="data-grid" style="margin-bottom: 15px;">
+                    <thead>
+                        <tr>
+                            <th style="width: 50px;">STT</th>
+                            <th>Tên sản phẩm</th>
+                            <th style="width: 80px;">Số lượng</th>
+                            <th>Đơn giá</th>
+                            <th>Thành tiền</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbodyXacNhanSP">
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p><strong>Tổng số lượng sản phẩm:</strong> <span id="lblTongSoLuongXacNhan">0</span></p>
+                <p><strong>Tổng tiền hàng:</strong> <span style="color: rgb(0, 0, 0); font-size: 20px; font-weight: bold;" id="lblTongTienXacNhan">0 VNĐ</span></p>
+            </div>
+            
+            <div class="group-box">
+               
+                <div class="form-row">
+                    <label>Thanh toán bằng:</label>
+                   
+                </div>
+                <div class="form-row">
+                    <label>Số tiền thanh toán:</label>
+                    <input type="text" value="" id="nhap_soTienThanhToan" disabled>
+                </div>
+            </div>
+
+            <div style="text-align: right;">
+                <button onclick="chuyenManHinh('frmNhapTrangPhucVaoPhieu')">Quay lại sửa phiếu</button>
+                <button class="primary" onclick="chuyenManHinh('frmInPhieu')" id="nut_xacNhanHoanTat">Xác nhận và lưu kho</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- GIAO DIỆN IN PHIẾU NHẬP -->
+    <div id="frmInPhieu" class="window">
+        <div class="title-bar">
+            <span>Xem Trước Bản In</span>
+            <div class="title-bar-controls"><span onclick="chuyenManHinh('frmTrangChu')">Đóng</span></div>
+        </div>
+        <div class="window-content">
+            <div style="background: white; border: 1px solid #999; padding: 40px; margin: 0 auto; width: 600px; box-shadow: 0 0 5px rgba(0,0,0,0.1);" id="xuat_phieuNhapKho">
+                <h2 style="text-align: center;">PHIẾU NHẬP KHO</h2>
+                <p style="text-align: center;">Ngày: .......... - Số phiếu: .........</p>
+                <p><strong>Nhà cung cấp:</strong> </p>
+                
+                <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
+                    <thead>
+                        <tr><th style="border: 1px solid #000; padding: 5px;">STT</th><th style="border: 1px solid #000; padding: 5px;">Sản phẩm</th><th style="border: 1px solid #000; padding: 5px;">Số lượng</th><th style="border: 1px solid #000; padding: 5px;">Thành tiền</th></tr>
+                    </thead>
+                    <tbody id="tbodyInPhieu">
+                        <!-- JS Render vào đây -->
+                    </tbody>
+                </table>
+                <p style="text-align: right;"><strong>Đã thanh toán: <span id="lblTongTienIn">0</span> VNĐ</strong></p>
+                <div style="display: flex; justify-content: space-around; margin-top: 50px;">
+                    <div style="text-align: center;"><strong>Nhân Viên Kho</strong><br>(Ký tên)</div>
+                    <div style="text-align: center;"><strong>Nhà Cung Cấp</strong><br>(Ký tên)</div>
+                </div>
+            </div>
+            <div style="margin-top: 20px; text-align: center;">
+                <button class="primary" id="nut_inPhieu" onclick="alert('Đã gửi lệnh in')">In bản này</button>
+                <button onclick="chuyenManHinh('frmTrangChu')">Về trang chủ</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ==================== CÁC MODAL POPUP ==================== -->
+
+    <!-- GIAO DIỆN THÊM NHÀ CUNG CẤP (Popup) -->
+    <div class="modal-overlay" id="modalThemNCC">
+        <div class="window active">
+            <div class="title-bar">
+                <span>Thêm Nhà Cung Cấp Mới</span>
+                <div class="title-bar-controls"><span onclick="dongModal('modalThemNCC')">Đóng</span></div>
+            </div>
+            <div class="window-content">
+                <div class="center-form">
+                    <div class="form-row"><label>Mã NCC:</label><input type="text" id="nhap_maNCC"></div>
+                    <div class="form-row"><label>Tên NCC:</label><input type="text" id="nhap_tenNCC"></div>
+                    <div class="form-row"><label>Số điện thoại:</label><input type="text" id="nhap_soDienThoai"></div>
+                    <div class="form-row"><label>Email:</label><input type="text" id="nhap_email"></div>
+                    <div class="form-row"><label>Địa chỉ:</label><input type="text" id="nhap_diaChi"></div>
+                    <div style="text-align: right; margin-top: 15px;">
+                        <button onclick="dongModal('modalThemNCC')">Hủy bỏ</button>
+                        <button class="primary" onclick="dongModal('modalThemNCC')" id="nut_luuNCC">Lưu thông tin</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- GIAO DIỆN THÊM TRANG PHỤC (Popup) -->
+    <div class="modal-overlay" id="modalThemSP">
+        <div class="window active">
+            <div class="title-bar">
+                <span>Thêm Trang Phục Mới</span>
+                <div class="title-bar-controls"><span onclick="dongModal('modalThemSP')">Đóng</span></div>
+            </div>
+            <div class="window-content">
+                <div class="center-form">
+                    <div class="form-row"><label>Tên sản phẩm:</label><input type="text" id="nhap_tenTrangPhuc_Them"></div>
+                    <div class="form-row">
+                        <label>Phân loại:</label>
+                        <input type="text" id="nhap_tenTrangPhuc_Them">
+                    </div>
+                    <div class="form-row"><label>Màu sắc:</label><input type="text" id="nhap_mauSac"></div>
+                    <div class="form-row"><label>Chất liệu:</label><input type="text" id="nhap_chatLieu"></div>
+                    <div class="form-row"><label>Kiểu dáng:</label><input type="text" id="nhap_kieuDang"></div>
+                    <div class="form-row"><label>Giá gốc:</label><input type="text" id="nhap_giaGoc"></div>
+                    <div style="text-align: right; margin-top: 15px;">
+                        <button onclick="dongModal('modalThemSP')">Hủy bỏ</button>
+                        <button class="primary" onclick="dongModal('modalThemSP')" id="nut_luuTrangPhuc">Lưu trang phục</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        // ------------------ PHẦN ĐIỀU KHIỂN GIAO DIỆN ------------------
+        function chuyenManHinh(idManHinh) {
+            var tatCaManHinh = document.querySelectorAll('.window:not(.modal-overlay .window)');
+            for (var i = 0; i < tatCaManHinh.length; i++) {
+                tatCaManHinh[i].classList.remove('active');
+            }
+            document.getElementById(idManHinh).classList.add('active');
+        }
+
+        function moModal(idModal) {
+            document.getElementById(idModal).classList.add('active');
+        }
+
+        function dongModal(idModal) {
+            document.getElementById(idModal).classList.remove('active');
+        }
+
+        // ------------------ LOGIC TÁCH MÀN HÌNH TÌM VÀ NHẬP ------------------
+        let danhSachPhieuNhap = [];
+
+        function moGiaoDienNhapSP(maSP, tenSP) {
+            document.getElementById('nhap_MaSPDangChon').value = maSP;
+            document.getElementById('nhap_SPDangChon').value = tenSP;
+            document.getElementById('nhap_soLuong').value = '1';
+            document.getElementById('nhap_donGiaNhap').value = '';
+            chuyenManHinh('frmNhapTrangPhucVaoPhieu');
+        }
+
+        function themSPVaoBang() {
+            let tenSP = document.getElementById('nhap_SPDangChon').value;
+            let maSP = document.getElementById('nhap_MaSPDangChon').value;
+            let soLuong = parseInt(document.getElementById('nhap_soLuong').value);
+            let donGia = parseInt(document.getElementById('nhap_donGiaNhap').value);
+
+            if (tenSP === "") {
+                alert("Vui lòng quay lại màn hình Tìm kiếm để chọn một sản phẩm!");
+                return;
+            }
+            if (isNaN(soLuong) || isNaN(donGia) || soLuong <= 0 || donGia <= 0) {
+                alert("Vui lòng nhập số lượng và đơn giá hợp lệ!");
+                return;
+            }
+
+            let thanhTien = soLuong * donGia;
+            danhSachPhieuNhap.push({ maSP, tenSP, soLuong, donGia, thanhTien });
+
+            document.getElementById('nhap_SPDangChon').value = '';
+            document.getElementById('nhap_MaSPDangChon').value = '';
+            document.getElementById('nhap_soLuong').value = '1';
+            document.getElementById('nhap_donGiaNhap').value = '';
+            
+            veLaiBang();
+        }
+
+        function xoaSP(index) {
+            danhSachPhieuNhap.splice(index, 1);
+            veLaiBang();
+        }
+
+        function veLaiBang() {
+            let tbodyPhieu = document.getElementById('tbodyDanhSachSP');
+            let tbodyXacNhan = document.getElementById('tbodyXacNhanSP');
+            let tbodyIn = document.getElementById('tbodyInPhieu');
+            
+            tbodyPhieu.innerHTML = "";
+            tbodyXacNhan.innerHTML = "";
+            tbodyIn.innerHTML = "";
+
+            let tongTien = 0;
+            let tongSoLuong = 0;
+
+            for (let i = 0; i < danhSachPhieuNhap.length; i++) {
+                let sp = danhSachPhieuNhap[i];
+                tongTien += sp.thanhTien;
+                tongSoLuong += sp.soLuong;
+
+                // Bảng Nhập Liệu
+                tbodyPhieu.innerHTML += `
+                    <tr>
+                        <td>${i + 1}</td>
+                        <td>${sp.maSP}</td>
+                        <td>${sp.tenSP}</td>
+                        <td>${sp.soLuong}</td>
+                        <td>${sp.donGia.toLocaleString('vi-VN')}</td>
+                        <td>${sp.thanhTien.toLocaleString('vi-VN')}</td>
+                        <td><button onclick="xoaSP(${i})" style="color:red;">X</button></td>
+                    </tr>
+                `;
+
+                // Bảng Xác Nhận
+                tbodyXacNhan.innerHTML += `
+                    <tr>
+                        <td style="text-align:center;">${i + 1}</td>
+                        <td>${sp.tenSP}</td>
+                        <td style="text-align:center;">${sp.soLuong}</td>
+                        <td>${sp.donGia.toLocaleString('vi-VN')}</td>
+                        <td>${sp.thanhTien.toLocaleString('vi-VN')}</td>
+                    </tr>
+                `;
+
+                // Bảng In
+                tbodyIn.innerHTML += `
+                    <tr>
+                        <td style="border: 1px solid #000; padding: 5px; text-align:center;">${i + 1}</td>
+                        <td style="border: 1px solid #000; padding: 5px;">${sp.tenSP}</td>
+                        <td style="border: 1px solid #000; padding: 5px; text-align:center;">${sp.soLuong}</td>
+                        <td style="border: 1px solid #000; padding: 5px;">${sp.thanhTien.toLocaleString('vi-VN')}</td>
+                    </tr>
+                `;
+            }
+
+            // Cập nhật các trường Tổng
+            let tongTienStr = tongTien.toLocaleString('vi-VN');
+            document.getElementById('lblTongTienTamTinh').innerText = tongTienStr;
+            document.getElementById('lblTongSoLuongXacNhan').innerText = tongSoLuong;
+            document.getElementById('lblTongTienXacNhan').innerText = tongTienStr + " VNĐ";
+            document.getElementById('nhap_soTienThanhToan').value = tongTienStr;
+            document.getElementById('lblTongTienIn').innerText = tongTienStr;
+        }
+    </script>
+</body>
+</html>

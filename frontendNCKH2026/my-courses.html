@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khóa học của tôi - PTIT E-Learning</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/courses.css">
+    <style>
+        .my-hero {
+            background: linear-gradient(135deg,#1a0203,#9b181d);
+            color:#fff; padding:48px 0;
+        }
+        .my-hero h1 { font-size:30px; font-weight:900; margin-bottom:6px; }
+        .my-hero p  { font-size:15px; opacity:.8; }
+        .stat-pill {
+            background:var(--bg-white); border:1px solid var(--border);
+            border-radius:var(--radius-lg); padding:20px 28px;
+            text-align:center; flex:1; min-width:140px;
+        }
+        .stat-pill .num { font-size:28px; font-weight:900; color:var(--primary); line-height:1.1; }
+        .stat-pill .lbl { font-size:12px; color:var(--text-3); margin-top:4px; font-weight:500; }
+        .progress-card {
+            background:var(--bg-white); border:1px solid var(--border);
+            border-radius:var(--radius-lg); padding:20px;
+            display:flex; flex-direction:column; gap:12px;
+            transition:all var(--transition);
+        }
+        .progress-card:hover { transform:translateY(-4px); box-shadow:var(--shadow-lg); }
+        .progress-thumb {
+            aspect-ratio:16/9; border-radius:var(--radius);
+            display:flex; align-items:center; justify-content:center;
+            font-size:32px; font-weight:900; color:rgba(255,255,255,.25);
+            letter-spacing:-1px;
+        }
+        .progress-card-title { font-size:15px; font-weight:700; color:var(--text-1); }
+        .progress-card-meta  { font-size:12px; color:var(--text-3); }
+        .continue-btn {
+            display:flex; align-items:center; justify-content:center;
+            padding:10px; background:var(--primary); color:#fff;
+            border-radius:var(--radius); font-size:14px; font-weight:600;
+            text-decoration:none; transition:background var(--transition);
+        }
+        .continue-btn:hover { background:var(--primary-dark); color:#fff; }
+    </style>
+</head>
+<body>
+    <script src="components/header.js"></script>
+
+    <div class="my-hero">
+        <div class="container">
+            <h1>Khóa học của tôi</h1>
+            <p>Tiếp tục hành trình học tập — theo dõi tiến độ từng khóa học</p>
+        </div>
+    </div>
+
+    <div class="container" style="padding-top:40px;padding-bottom:80px;">
+        <!-- Stats -->
+        <div style="display:flex;gap:16px;margin-bottom:40px;flex-wrap:wrap;">
+            <div class="stat-pill"><div class="num" id="enrolledCount">0</div><div class="lbl">Khóa đang học</div></div>
+            <div class="stat-pill"><div class="num" id="completedCount">0</div><div class="lbl">Khóa hoàn thành</div></div>
+            <div class="stat-pill"><div class="num" id="hoursCount">0h</div><div class="lbl">Tổng thời gian học</div></div>
+            <div class="stat-pill"><div class="num" id="aiCount">0</div><div class="lbl">Câu hỏi AI</div></div>
+        </div>
+
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:24px;">
+            <h2 style="font-size:20px;font-weight:800;">Đang học</h2>
+            <a href="courses.html" class="btn btn-secondary btn-sm">Khám phá thêm</a>
+        </div>
+
+        <div class="course-grid" id="myCoursesGrid"></div>
+
+        <div id="emptyState" style="display:none;text-align:center;padding:80px 20px;">
+            <h3 style="font-size:20px;font-weight:700;margin-bottom:8px;">Chưa có khóa học nào</h3>
+            <p style="color:var(--text-3);margin-bottom:20px;">Hãy khám phá và bắt đầu học ngay hôm nay!</p>
+            <a href="courses.html" class="btn btn-primary">Khám phá khóa học</a>
+        </div>
+    </div>
+
+    <script src="components/footer.js"></script>
+    <script src="js/index.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const user = localStorage.getItem('ptit_user');
+        if (!user) { window.location.href = 'login.html'; return; }
+
+        const enrolled   = COURSES.slice(0, 3);
+        const progresses = [73, 45, 20];
+
+        document.getElementById('enrolledCount').textContent = enrolled.length;
+        document.getElementById('completedCount').textContent = 0;
+        document.getElementById('hoursCount').textContent = '14h';
+        document.getElementById('aiCount').textContent = 32;
+
+        if (enrolled.length === 0) {
+            document.getElementById('emptyState').style.display = 'block';
+            return;
+        }
+
+        document.getElementById('myCoursesGrid').innerHTML = enrolled.map((c, i) => `
+            <div class="progress-card">
+                <div class="progress-thumb" style="background:linear-gradient(135deg,${c.color},${c.color}99)">
+                    ${c.thumbLabel}
+                </div>
+                <div class="progress-card-title">${c.title}</div>
+                <div class="progress-card-meta">${c.instructor} &bull; ${c.chapters} chương</div>
+                <div>
+                    <div style="display:flex;justify-content:space-between;font-size:12px;color:var(--text-3);margin-bottom:6px;">
+                        <span>Tiến độ</span>
+                        <span style="color:var(--primary);font-weight:700;">${progresses[i]}%</span>
+                    </div>
+                    <div class="progress-bar-wrap">
+                        <div class="progress-bar-fill" style="width:${progresses[i]}%"></div>
+                    </div>
+                </div>
+                <a href="course-detail.html?id=${c.id}" class="continue-btn">Tiếp tục học</a>
+            </div>`).join('');
+    });
+    </script>
+</body>
+</html>

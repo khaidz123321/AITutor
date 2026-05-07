@@ -1,6 +1,7 @@
 import streamlit as st
 from engine.rag_service import RAGService
-from engine.ai_engine import AItutor # Import bộ não chính thức của bạn
+from engine.ai_engine import AItutor 
+from engine.scaffolding import LearningScaffold # Import thêm Thầy Giáo Vụ
 from langchain_core.messages import HumanMessage, AIMessage
 from core.config import settings
 
@@ -10,85 +11,128 @@ st.set_page_config(page_title="Gia sư AI - PTIT Academic", page_icon="🎓", la
 # 2. Khởi tạo dịch vụ (Dùng cache để giữ trạng thái bộ não)
 @st.cache_resource
 def init_services():
-    # Khởi tạo RAG để tìm tài liệu và AItutor làm bộ não xử lý
     rag = RAGService()
     tutor = AItutor()
-    return rag, tutor
+    # Khởi tạo Scaffolding không cần DB cho bản demo
+    scaffold = LearningScaffold(db=None) 
+    return rag, tutor, scaffold
 
-rag_service, ai_tutor = init_services()
+rag_service, ai_tutor, scaffold_manager = init_services()
 
-# 3. Sidebar quản lý môn học và chương
+# --- KHỞI TẠO STATE MANAGEMENT (BỘ NHỚ TẠM) ---
+if "messages" not in st.session_state:
+    st.session_state.messages = []
+if "current_step" not in st.session_state:
+    st.session_state.current_step = 1
+
+# Hàm tự động reset bộ nhớ khi người dùng đổi Môn học hoặc Chương
+def reset_learning_session():
+    st.session_state.messages = []
+    st.session_state.current_step = 1
+
+# 3. Sidebar quản lý hệ thống
 st.sidebar.title("📚 Kho tri thức PTIT")
 subject = st.sidebar.selectbox(
     "Chọn môn học:",
-    ["giai_tich_1", "triet_hoc_maclenin"]
+    ["giai_tich_1", "triet_hoc_maclenin", "lap_trinh_c++"],
+    on_change=reset_learning_session # Tự động xóa chat khi đổi môn
 )
 
-# Thêm chọn chương vì ai_engine cần biến này để nạp bài tập JSON
 chapter = st.sidebar.selectbox(
     "Chọn chương đang học:",
-    ["chuong_1", "chuong_2", "chuong_3"]
+    ["chuong_1", "chuong_2", "chuong_3"],
+    on_change=reset_learning_session # Tự động xóa chat khi đổi chương
 )
 
-if st.sidebar.button("Xóa lịch sử trò chuyện"):
-    st.session_state.messages = []
+# TỰ ĐỘNG GÁN ID KHỚP VỚI MÔN HỌC
+if subject == "giai_tich_1":
+    # Ổ khóa và Chìa khóa đã khớp nhau 100%
+    st.session_state.current_question_id = "GT1_C1_1.1_001" 
+elif subject == "triet_hoc_maclenin":
+    st.session_state.current_question_id = "TRIET_C3_3.1_001"
+else:
+    st.session_state.current_question_id = "CPP_001"
+
+st.sidebar.markdown("---")
+# Hiển thị tiến độ trực quan trên thanh bên
+st.sidebar.success(f"**📍 Tiến độ hiện tại: Bước {st.session_state.current_step}**")
+st.sidebar.info(f"**📝 Đang giải bài:** {st.session_state.current_question_id}")
+st.sidebar.markdown("---")
+
+# Reset thủ công phiên học
+if st.sidebar.button("🔄 Bắt đầu bài mới / Xóa lịch sử"):
+    reset_learning_session()
     st.rerun()
 
 # 4. Giao diện Chat chính
 st.title(f"🎓 Gia sư AI: {subject.replace('_', ' ').title()}")
-st.info(f"Chào Khải! Tôi là gia sư {subject}. Hãy hỏi tôi bất cứ điều gì về {chapter.replace('_', ' ')}.")
-
-# Khởi tạo bộ nhớ tin nhắn Streamlit
-if "messages" not in st.session_state:
-    st.session_state.messages = []
+st.info(f"Chào Khải! Tôi là gia sư {subject}. Hãy cùng giải quyết bài tập nhé.")
 
 # Hiển thị các tin nhắn cũ
 for message in st.session_state.messages:
     with st.chat_message(message["role"]):
         st.markdown(message["content"])
 
-# 5. Xử lý câu hỏi và kết nối Não bộ
-if prompt := st.chat_input("Nhập câu hỏi hoặc yêu cầu bài tập..."):
+# 5. Xử lý câu hỏi và kết nối Toàn bộ Hệ thống
+if prompt := st.chat_input("Nhập câu trả lời hoặc hỏi gợi ý..."):
     # Hiển thị tin nhắn người dùng
     st.session_state.messages.append({"role": "user", "content": prompt})
     with st.chat_message("user"):
         st.markdown(prompt)
 
     with st.chat_message("assistant"):
-        with st.spinner("Gia sư đang tra cứu giáo trình và chuẩn bị phản hồi..."):
+        with st.spinner("Gia sư đang phân tích câu trả lời..."):
             
-            # BƯỚC 1: Lấy ngữ cảnh từ kho tri thức PDF (RAG)
+            # BƯỚC 1: Lấy ngữ cảnh RAG (Đã có thuật toán lọc rác)
             context = rag_service.query_context(subject=subject, query=prompt)
             
-            # BƯỚC 2: Chuyển đổi lịch sử chat từ Streamlit (dict) sang LangChain (Object)
-            # ĐÂY LÀ CHÌA KHÓA FIX LỖI MẤT TRÍ NHỚ
+            # BƯỚC 2: Load dữ liệu bài tập và lấy Mật thư Scaffolding
+            question_data = ai_tutor.load_question_data(
+                subject=subject, 
+                chapter=chapter, 
+                question_id=st.session_state.current_question_id
+            )
+            scaffold_instruction = scaffold_manager.get_current_instruction(
+                current_step=st.session_state.current_step,
+                question_data=question_data
+            )
+            
+            # BƯỚC 3: Chuyển đổi lịch sử chat
             chat_history_objs = []
-            for m in st.session_state.messages[:-1]: # Lấy các câu trước câu vừa hỏi
+            for m in st.session_state.messages[:-1]: 
                 if m["role"] == "user":
                     chat_history_objs.append(HumanMessage(content=m["content"]))
                 else:
                     chat_history_objs.append(AIMessage(content=m["content"]))
 
-            # BƯỚC 3: Gọi trực tiếp bộ não AItutor của bạn
-            # Không cần gọi llm.invoke ở đây nữa, ai_engine sẽ lo hết
+            # BƯỚC 4: Gọi não bộ AItutor (Đã truyền đủ tham số và xử lý Object)
             try:
-                # Bạn có thể điều chỉnh scaffold_instruction tùy theo mục đích demo
-                scaffold_instruction = (
-                    "Student requires support. Implement SCAFFOLDING rules: For practice problems, offer ONLY a hint for the first step without giving the solution. For conceptual or theoretical queries, provide a comprehensive and detailed explanation."
-                )
-                
-                answer = ai_tutor.get_response(
+                eval_result = ai_tutor.get_response(
                     subject=subject,
                     chapter=chapter,
+                    question_id=st.session_state.current_question_id,
                     user_message=prompt,
                     chat_history=chat_history_objs,
                     scaffold_instruction=scaffold_instruction,
                     rag_context=context
                 )
                 
-                st.markdown(answer)
-                # Lưu câu trả lời vào lịch sử
-                st.session_state.messages.append({"role": "assistant", "content": answer})
+                if eval_result:
+                    ai_reply = eval_result.response
+                    new_step = eval_result.next_step
+                    
+                    st.markdown(ai_reply)
+                    
+                    # Lưu lịch sử chat
+                    st.session_state.messages.append({"role": "assistant", "content": ai_reply})
+                    
+                    # CẬP NHẬT TIẾN ĐỘ: Nếu AI phán qua bước, cập nhật lên giao diện
+                    if new_step != st.session_state.current_step:
+                        st.session_state.current_step = new_step
+                        st.rerun() # Tải lại trang để cập nhật con số bên Sidebar
+                        
+                else:
+                    st.warning("Hệ thống đang bận. Vui lòng thử lại.")
                 
             except Exception as e:
-                st.error(f"Lỗi kết nối bộ não AI: {str(e)}")
+                st.error(f"Lỗi hệ thống: {str(e)}")

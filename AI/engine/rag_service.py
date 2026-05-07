@@ -20,24 +20,28 @@ class RAGService:
     def __init__(self):
         self.embeddings = HuggingFaceEndpointEmbeddings(
             huggingfacehub_api_token=huggingface_token,
-            model="sentence-transformers/all-MiniLM-L6-v2",
+            model="intfloat/multilingual-e5-large",
             task="feature-extraction" # Thêm task để đảm bảo Cloud hiểu đúng việc cần làm
         )
 
         # Thư mục lưu trữ cơ sở dữ liệu vector tại local
         self.persist_directory = os.path.join(settings.BASE_DIR, "data", "vector_db")
         self.text_splitter = RecursiveCharacterTextSplitter(
-            chunk_size=1000, 
-            chunk_overlap = 200,
+            chunk_size=800,
+            chunk_overlap=150,
             separators=[
-                "\n\n## ",         # Ưu tiên cắt mục lớn
-                "\n\n### ",        # Cắt mục nhỏ
-                "\n\n",            # Cắt đoạn văn
-                "$$",              # BẢO VỆ TUYỆT ĐỐI CÔNG THỨC TOÁN
-                "\n",              
-                " ",               
-                ""
-            ]
+                "\n\n## ",    # Cắt tại tiêu đề lớn (ưu tiên cao nhất)
+                "\n\n### ",   # Cắt tại tiêu đề nhỏ
+                "\n\n#### ",
+                "\n\n",       # Cắt tại đoạn văn trống
+                "\n",         # Cắt tại xuống dòng
+                ". ",         # Cắt tại câu
+                " ",
+                "",
+            ],
+            # keep_separator=True giữ lại ký tự separator trong chunk
+            # giúp chunk vẫn có heading để RAG hiểu ngữ cảnh
+            keep_separator=True,
         )
 
     def index_document(self, file_path: str, subject: str):
@@ -57,7 +61,7 @@ class RAGService:
             pages = loader.load()
             chunks = self.text_splitter.split_documents(pages)
 
-            # 3. Lưu vào ChromaDB với metadata là môn học để sau này lọc 
+            # 3. Lưu vào ChromaDB với metadata là môn học 
             vector_db = Chroma.from_documents(
                 documents=chunks,
                 embedding=self.embeddings,
@@ -69,20 +73,37 @@ class RAGService:
             print(f"Lỗi nạp dữ liệu rag")
             return False
 
-    def query_context(self, subject: str, query: str, top_k: int = 3) -> str:
+    def query_context(self, subject: str, query: str, top_k: int = 3, threshold: float = 0.55) -> str:
         """
-        Tìm kiếm những đoạn văn bản liên quan nhất đến câu hỏi của sinh viên.
+        Tìm kiếm chunk liên quan nhất.
+        Dùng similarity_search_with_score để lọc chunk kém liên quan.
+        (score thấp = giống nhau nhiều trong không gian vector Chroma).
         """
-        # Load lại DB của môn học tương ứng
-        vector_db = Chroma(
-            persist_directory=self.persist_directory,
-            embedding_function=self.embeddings,
-            collection_name=f"subject_{subject}"
-        )
+        try:
+            vector_db = Chroma(
+                persist_directory=self.persist_directory,
+                embedding_function=self.embeddings,
+                collection_name=f"subject_{subject}",
+            )
 
-        # Tìm kiếm tương đồng 
-        results = vector_db.similarity_search(query, k=top_k)
-        
-        # Gộp các đoạn văn bản tìm được thành một chuỗi context
-        context_text = "\n\n".join([doc.page_content for doc in results])
-        return context_text
+            # Lấy kết quả kèm điểm similarity
+            results_with_scores = vector_db.similarity_search_with_score(
+                query, k=top_k
+            )
+            filtered = [
+                doc
+                for doc, score in results_with_scores
+                if score < threshold
+            ]
+            if not filtered:
+                return "No relevant theoretical context found for this query in the provided documents."
+
+            # Gộp tài liệu nếu lọt qua Threshold
+            context_text = "\n\n---\n\n".join(
+                [doc.page_content for doc in filtered]
+            )
+            return context_text
+
+        except Exception as e:
+            print(f"[RAG] Query error: {e}")
+            return "Currently unable to retrieve reference materials due to a system error."

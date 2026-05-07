@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gia sư AI - PTIT E-Learning</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/ai-chat.css">
+</head>
+<body class="chat-page">
+    <script src="components/header.js"></script>
+
+    <div class="chat-layout">
+        <!-- Sidebar -->
+        <div class="chat-sidebar">
+            <div class="chat-sidebar-header">
+                <div class="chat-sidebar-title">Đang học</div>
+                <div class="chat-course-name" id="chatCourseName">Khóa học</div>
+            </div>
+            <a href="course-detail.html" class="chat-sidebar-back" id="backBtn">&#8592; Trở lại khóa học</a>
+            <div class="chat-chapters" id="chatChapters"></div>
+        </div>
+
+        <!-- Main Chat -->
+        <div class="chat-main">
+            <div class="chat-header">
+                <div class="chat-header-avatar">AI</div>
+                <div class="chat-header-info">
+                    <div class="chat-header-name">Gia sư AI PTIT</div>
+                    <div class="chat-header-sub"><span class="chat-online-dot"></span>Sẵn sàng hỗ trợ — <span id="chatChapterName">Chương học</span></div>
+                </div>
+            </div>
+
+            <div class="chat-messages" id="chatMessages"></div>
+
+            <div class="quick-suggestions" id="quickSuggestions"></div>
+
+            <div class="chat-input-area">
+                <form class="chat-input-form" id="chatForm">
+                    <textarea class="chat-input-textarea" id="chatInput"
+                        placeholder="Đặt câu hỏi về bài học này..." rows="1"></textarea>
+                    <button type="submit" class="btn-send" id="sendBtn">&#10148;</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!--Start hiển thị markdown + công thức giải tích-->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+        window.MathJax = { 
+            tex: { 
+                inlineMath: [['$', '$'], ['\\(', '\\)']], 
+                displayMath: [['$$', '$$'], ['\\[', '\\]']] 
+            } 
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <!--End hiển thị markdown + công thức giải tích-->
+
+    <script src="js/index.js"></script>
+    <script src="js/ai-chat.js"></script>
+</body>
+</html>

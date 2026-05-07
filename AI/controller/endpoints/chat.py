@@ -1,12 +1,12 @@
 """
-Quản lí luồng chat trong thời gian thực
+Quản lý luồng chat theo kiến trúc Single-Agent AI Tutor
+Tách biệt luồng Khởi tạo (Init) và luồng Hỏi đáp (Chat)
 """
 
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 from core.session import get_db
 from schemas.chat import ChatRequest, ChatResponse
-from models.chat_history import ChatHistory
 from engine.ai_engine import AItutor 
 from engine.session_manager import SessionManager
 from engine.rag_service import RAGService
@@ -15,51 +15,112 @@ from engine.scaffolding import LearningScaffold
 router = APIRouter()
 ai_tutor = AItutor()
 rag_service = RAGService()
-scaffold = LearningScaffold(db=None)
+# ĐÃ XÓA: scaffold = LearningScaffold(db=None) -> AI giờ tự đếm bước và chấm điểm!
 
+# =================================================================
+# ENDPOINT 1: KHỞI TẠO PHIÊN HỌC (AI CHỦ ĐỘNG GIAO BÀI)
+# Gọi bằng phương thức GET khi frontend/HTML vừa load xong
+# =================================================================
+@router.get("/init", response_model=ChatResponse)
+def init_chat_session(subject: str, chapter: str, db: Session = Depends(get_db)):
+    current_user_id = 1 # TODO: Sau này lấy từ Token đăng nhập (JWT)
+    session_manager = SessionManager(db)
+    
+    try:
+        progress = session_manager.get_user_progress(current_user_id, subject, chapter)
+        
+        if progress:
+            # Nếu đã từng học chương này, lấy đúng Question ID đang làm dở
+            current_question_id = progress.get("question_id")
+        else:
+            # Nếu là lần đầu, lấy ID bài tập đầu tiên của chương từ AI Engine
+            current_question_id = ai_tutor.get_first_question_id(subject, chapter)
+            # Tạo bản ghi tiến độ ban đầu (Bước 1)
+            session_manager.update_progress(current_user_id, subject, chapter, current_question_id, step=1)
+        
+        # 2. Gọi AI Engine lấy đề bài bài tập
+        welcome_message = ai_tutor.get_initial_question(subject, chapter, current_question_id)
+        
+        # 3. Lưu câu chào vào lịch sử chat (Trí nhớ dài hạn)
+        session_manager.save_message(current_user_id, subject, chapter, "ai", welcome_message)
+        
+        return ChatResponse(reply=welcome_message, status="success")
+
+    except Exception as e:
+        print(f"Init Session Error: {str(e)}")
+        raise HTTPException(status_code=500, detail="Không thể khởi tạo bài học. Vui lòng thử lại.")
+
+
+# =================================================================
+# ENDPOINT 2: XỬ LÝ CHAT (SINGLE-AGENT EVALUATION & RESPONSE)
+# Gọi bằng phương thức POST mỗi khi sinh viên bấm gửi tin nhắn
+# =================================================================
 @router.post("/", response_model=ChatResponse)
 def chat_with_tutor(request: ChatRequest, db: Session = Depends(get_db)):
-    current_user_id = 1 
+    current_user_id = 1 # TODO: Sau này lấy từ Token đăng nhập
     session_manager = SessionManager(db)
+    
     try:
-        # 1 Truy xuất lịch sử 
+        # 1. Xác định bài tập và bước hiện tại từ Database
+        progress = session_manager.get_user_progress(current_user_id, request.subject, request.chapter)
+        
+        if not progress:
+            # Trường hợp dự phòng nếu Init thất bại
+            current_question_id = ai_tutor.get_first_question_id(request.subject, request.chapter)
+            current_step = 1
+        else:
+            current_question_id = progress.get("question_id")
+            current_step = progress.get("step", 1)
+        
+        # Chỉ load đúng 1 bài tập đang làm (Tiết kiệm Token)
+        question_data = ai_tutor.load_question_data(request.subject, request.chapter, current_question_id)
+
+        # 2. Truy xuất lịch sử chat
         chat_history = session_manager.get_chat_history(
             user_id=current_user_id,
             subject=request.subject,
             chapter=request.chapter
         )
 
-        # Lấy dữ liệu bài tập mẫu (JSON)
-        question_data = ai_tutor.load_question_data(request.subject, request.chapter)
-
-        # 3. Kích hoạt kiểm tra lời giải sinh viên
-        current_step = 1 
-        new_step, scaffold_instruction = scaffold.validate_step(
-            user_id=current_user_id,
-            subject=request.subject,
-            chapter=request.chapter,
-            student_input=request.message,
-            current_step=current_step,
-            question_data=question_data
-        )
-
-        # 4. TRUY XUẤT KIẾN THỨC: Tìm đoạn văn liên quan trong PDF đã upload
+        # 3. RAG: Tìm ngữ cảnh từ PDF nếu có
         rag_context = rag_service.query_context(
             subject=request.subject, 
             query=request.message
         )
+        
+        scaffold_manager = LearningScaffold(db)
+        scaffold_instruction = scaffold_manager.get_current_instruction(
+            current_step=current_step, 
+            question_data=question_data
+        )
 
-        # 2 Gọi aI, truyền đúng môn + chương để AI tìm file + xử lí
-        ai_reply = ai_tutor.get_response(
+        # 4. Gọi Single-Agent AI (Vừa chấm lỗi, vừa sinh câu trả lời)
+        # eval_result giờ đây là một object chứa: response, next_step, cognitive_state
+        eval_result = ai_tutor.get_response(
             subject=request.subject,
             chapter=request.chapter,
             user_message=request.message,
+            question_id=current_question_id,
             chat_history=chat_history,
             scaffold_instruction=scaffold_instruction,
             rag_context=rag_context
         )
 
-        # 3 Lưu cả câu hỏi và câu trả lời vào Database thông qua SessionManager
+        # Bóc tách dữ liệu an toàn (Tránh crash nếu AI API trả về None)
+        if eval_result:
+            ai_reply = eval_result.response
+            
+            # ĐÃ FIX: Điều khiển bước nhảy bằng logic Python thay vì AI tự đếm
+            if eval_result.cognitive_state == "STEP_CORRECT":
+                new_step = current_step + 1
+            else:
+                new_step = current_step 
+        else:
+            ai_reply = "Xin lỗi, hệ thống AI đang gặp sự cố kết nối. Bạn vui lòng thử lại nhé!"
+            new_step = current_step # Giữ nguyên tiến độ nếu lỗi
+
+        # 5. Lưu toàn bộ xuống Database
+        # Lưu tin nhắn User
         session_manager.save_message(
             user_id=current_user_id, 
             subject=request.subject, 
@@ -67,6 +128,8 @@ def chat_with_tutor(request: ChatRequest, db: Session = Depends(get_db)):
             role="user", 
             content=request.message
         )
+        
+        # Lưu phản hồi AI
         session_manager.save_message(
             user_id=current_user_id, 
             subject=request.subject, 
@@ -75,7 +138,17 @@ def chat_with_tutor(request: ChatRequest, db: Session = Depends(get_db)):
             content=ai_reply
         )
 
-        # 4 Trả kết quả về cho Frontend
+        # Nếu AI quyết định cho sinh viên sang bước tiếp theo, cập nhật bảng Activity
+        if new_step != current_step:
+            session_manager.update_progress(
+                user_id=current_user_id, 
+                subject=request.subject, 
+                chapter=request.chapter, 
+                question_id=current_question_id, 
+                step=new_step
+            )
+
+        # 6. Trả về cho giao diện (HTML/JS)
         return ChatResponse(reply=ai_reply, status="success")
 
     except Exception as e:

@@ -5,9 +5,7 @@
   "questions": [
     {
       "id": "TRIET_C3_3.1_001",
-      "lesson_number": "3.1",
-      "lesson_name": "Học thuyết hình thái kinh tế - xã hội",
-      "topic": "Sản xuất vật chất và vai trò của nó",
+      "topic": "3.1 Học thuyết hình thái kinh tế - xã hội: Sản xuất vật chất và vai trò của nó",
       "difficulty": "Medium",
       "bloom_level": "Understanding",
       "question_text": "Sản xuất vật chất là gì? Tại sao nói sản xuất vật chất là cơ sở của sự tồn tại và phát triển của xã hội loài người?",
@@ -36,9 +34,7 @@
     },
     {
       "id": "TRIET_C3_3.1_002",
-      "lesson_number": "3.1",
-      "lesson_name": "Học thuyết hình thái kinh tế - xã hội",
-      "topic": "Quy luật LLSX và QHSX",
+      "topic": "3.1 Học thuyết hình thái kinh tế - xã hội: Quy luật LLSX và QHSX",
       "difficulty": "Hard",
       "bloom_level": "Analyzing",
       "question_text": "Phân tích quy luật quan hệ sản xuất phù hợp với trình độ phát triển của lực lượng sản xuất. Việc Đảng ta chủ trương phát triển nền kinh tế nhiều thành phần có phù hợp với quy luật này không?",
@@ -72,9 +68,7 @@
     },
     {
       "id": "TRIET_C3_3.1_003",
-      "lesson_number": "3.1",
-      "lesson_name": "Học thuyết hình thái kinh tế - xã hội",
-      "topic": "Sự phát triển của các hình thái KT-XH là quá trình lịch sử - tự nhiên",
+      "topic": "3.1 Học thuyết hình thái kinh tế - xã hội: Sự phát triển của các hình thái KT-XH là quá trình lịch sử - tự nhiên",
       "difficulty": "Hard",
       "bloom_level": "Evaluating",
       "question_text": "Thế nào là hình thái kinh tế - xã hội? Tại sao C.Mác khẳng định: 'Sự phát triển của các hình thái kinh tế - xã hội là một quá trình lịch sử - tự nhiên'?",
@@ -101,17 +95,14 @@
         "Hiểu sai khái niệm 'lịch sử - tự nhiên', cho rằng xã hội tự động thay đổi như sự lớn lên của cái cây mà không cần con người đấu tranh cách mạng (rơi vào chủ nghĩa định mệnh)."
       ]
     },
-
     {
-        "id": "TRIET_C3_3.2_001",
-        "lesson_number": "3.2",
-        "lesson_name": "Giai cấp và dân tộc",
-        "topic": "Khái niệm và nguồn gốc giai cấp",
-        "difficulty": "Medium",
-        "bloom_level": "Understanding",
-        "question_text": "Trình bày định nghĩa giai cấp của V.I.Lênin. Phân tích nguồn gốc kinh tế và nguồn gốc xã hội dẫn đến sự ra đời của giai cấp.",
-        "full_answer": "Theo Lênin, giai cấp là những tập đoàn người to lớn khác nhau về địa vị trong một hệ thống sản xuất xã hội nhất định, khác nhau về quan hệ đối với tư liệu sản xuất, về vai trò trong tổ chức lao động và về cách thức, quy mô hưởng thụ của cải. Nguồn gốc của giai cấp: Nguồn gốc trực tiếp (kinh tế) là sự xuất hiện chế độ tư hữu về tư liệu sản xuất; Nguồn gốc sâu xa (xã hội) là sự phát triển của lực lượng sản xuất dẫn đến sự phân công lao động xã hội, tạo ra của cải dư thừa.",
-        "scaffolding_steps": [
+      "id": "TRIET_C3_3.2_001",
+      "topic": "3.2 Giai cấp và dân tộc: Khái niệm và nguồn gốc giai cấp",
+      "difficulty": "Medium",
+      "bloom_level": "Understanding",
+      "question_text": "Trình bày định nghĩa giai cấp của V.I.Lênin. Phân tích nguồn gốc kinh tế và nguồn gốc xã hội dẫn đến sự ra đời của giai cấp.",
+      "full_answer": "Theo Lênin, giai cấp là những tập đoàn người to lớn khác nhau về địa vị trong một hệ thống sản xuất xã hội nhất định, khác nhau về quan hệ đối với tư liệu sản xuất, về vai trò trong tổ chức lao động và về cách thức, quy mô hưởng thụ của cải. Nguồn gốc của giai cấp: Nguồn gốc trực tiếp (kinh tế) là sự xuất hiện chế độ tư hữu về tư liệu sản xuất; Nguồn gốc sâu xa (xã hội) là sự phát triển của lực lượng sản xuất dẫn đến sự phân công lao động xã hội, tạo ra của cải dư thừa.",
+      "scaffolding_steps": [
         {
           "step_number": 1,
           "hint": "Theo định nghĩa của Lênin, sự khác biệt căn bản nhất, mang tính quyết định nhất giữa các giai cấp (ví dụ giữa địa chủ và nông dân) nằm ở yếu tố nào trong nền sản xuất?",
@@ -135,9 +126,7 @@
     },
     {
       "id": "TRIET_C3_3.2_002",
-      "lesson_number": "3.2",
-      "lesson_name": "Giai cấp và dân tộc",
-      "topic": "Đấu tranh giai cấp",
+      "topic": "3.2 Giai cấp và dân tộc: Đấu tranh giai cấp",
       "difficulty": "Medium",
       "bloom_level": "Analyzing",
       "question_text": "Đấu tranh giai cấp là gì? Tại sao nói đấu tranh giai cấp là một trong những động lực phát triển của xã hội có giai cấp đối kháng?",
@@ -166,9 +155,7 @@
     },
     {
       "id": "TRIET_C3_3.2_003",
-      "lesson_number": "3.2",
-      "lesson_name": "Giai cấp và dân tộc",
-      "topic": "Dân tộc và mối quan hệ với giai cấp",
+      "topic": "3.2 Giai cấp và dân tộc: Dân tộc và mối quan hệ với giai cấp",
       "difficulty": "Hard",
       "bloom_level": "Evaluating",
       "question_text": "Phân tích các đặc trưng cơ bản của dân tộc. Sự hình thành dân tộc ở phương Đông (như Việt Nam) có điểm gì khác biệt so với phương Tây?",
@@ -200,12 +187,9 @@
         "Áp dụng rập khuôn lý luận phương Tây (cho rằng dân tộc chỉ ra đời khi có chủ nghĩa tư bản) vào bối cảnh lịch sử đặc thù của Việt Nam."
       ]
     },
-
     {
       "id": "TRIET_C3_3.3_001",
-      "lesson_number": "3.3",
-      "lesson_name": "Nhà nước và cách mạng xã hội",
-      "topic": "Nguồn gốc và bản chất của Nhà nước",
+      "topic": "3.3 Nhà nước và cách mạng xã hội: Nguồn gốc và bản chất của Nhà nước",
       "difficulty": "Medium",
       "bloom_level": "Understanding",
       "question_text": "Phân tích nguồn gốc và bản chất của nhà nước theo quan điểm của chủ nghĩa duy vật lịch sử.",
@@ -234,9 +218,7 @@
     },
     {
       "id": "TRIET_C3_3.3_002",
-      "lesson_number": "3.3",
-      "lesson_name": "Nhà nước và cách mạng xã hội",
-      "topic": "Đặc trưng và Chức năng cơ bản của Nhà nước",
+      "topic": "3.3 Nhà nước và cách mạng xã hội: Đặc trưng và Chức năng cơ bản của Nhà nước",
       "difficulty": "Medium",
       "bloom_level": "Analyzing",
       "question_text": "Trình bày các đặc trưng cơ bản và chức năng của nhà nước.",
@@ -265,9 +247,7 @@
     },
     {
       "id": "TRIET_C3_3.3_003",
-      "lesson_number": "3.3",
-      "lesson_name": "Nhà nước và cách mạng xã hội",
-      "topic": "Cách mạng xã hội",
+      "topic": "3.3 Nhà nước và cách mạng xã hội: Cách mạng xã hội",
       "difficulty": "Hard",
       "bloom_level": "Evaluating",
       "question_text": "Cách mạng xã hội là gì? Phân tích nguyên nhân khách quan và nhân tố chủ quan làm bùng nổ cách mạng xã hội.",
@@ -299,12 +279,9 @@
         "Thiếu nhân tố chủ quan khi phân tích điều kiện bùng nổ, dẫn đến hiểu sai rằng cách mạng sẽ 'tự động' nổ ra khi kinh tế khó khăn."
       ]
     },
-
     {
       "id": "TRIET_C3_3.4_001",
-      "lesson_number": "3.4",
-      "lesson_name": "Tồn tại xã hội và ý thức xã hội",
-      "topic": "Khái niệm và cấu trúc của Tồn tại xã hội",
+      "topic": "3.4 Tồn tại xã hội và ý thức xã hội: Khái niệm và cấu trúc của Tồn tại xã hội",
       "difficulty": "Medium",
       "bloom_level": "Understanding",
       "question_text": "Tồn tại xã hội là gì? Ý thức xã hội là gì? Trình bày các yếu tố cấu thành tồn tại xã hội và cho biết yếu tố nào đóng vai trò quyết định nhất?",
@@ -333,9 +310,7 @@
     },
     {
       "id": "TRIET_C3_3.4_002",
-      "lesson_number": "3.4",
-      "lesson_name": "Tồn tại xã hội và ý thức xã hội",
-      "topic": "Vai trò quyết định của tồn tại xã hội",
+      "topic": "3.4 Tồn tại xã hội và ý thức xã hội: Vai trò quyết định của tồn tại xã hội",
       "difficulty": "Medium",
       "bloom_level": "Analyzing",
       "question_text": "Phân tích vai trò quyết định của tồn tại xã hội đối với ý thức xã hội. Lấy một ví dụ thực tế để minh họa.",
@@ -363,107 +338,7 @@
     },
     {
       "id": "TRIET_C3_3.4_003",
-      "lesson_number": "3.4",
-      "lesson_name": "Tồn tại xã hội và ý thức xã hội",
-      "topic": "Tính độc lập tương đối của Ý thức xã hội",
-      "difficulty": "Hard",
-      "bloom_level": "Evaluating",
-      "question_text": "Trình bày tính độc lập tương đối của ý thức xã hội. Tại sao hiện nay nền kinh tế nước ta đã phát triển nhưng nhiều hủ tục, tư tưởng lạc hậu vẫn còn tồn tại?",
-      "full_answer": "Ý thức xã hội có 5 biểu hiện độc lập tương đối: 1. Thường lạc hậu hơn tồn tại xã hội. 2. Có thể vượt trước tồn tại xã hội (khoa học dự báo). 3. Có tính kế thừa trong sự phát triển. 4. Các hình thái ý thức xã hội (tôn giáo, chính trị, nghệ thuật...) tác động qua lại lẫn nhau. 5. Có khả năng tác động trở lại tồn tại xã hội (thúc đẩy nếu tiến bộ, kìm hãm nếu lạc hậu). Nước ta kinh tế đã đổi mới (TTXH thay đổi) nhưng hủ tục vẫn còn là do biểu hiện 'thường lạc hậu hơn' của ý thức xã hội. Tư tưởng, tâm lý phong kiến đã ăn sâu vào tiềm thức qua nhiều thế hệ nên sức ỳ rất lớn, không thể thay đổi ngay lập tức cùng nhịp với kinh tế. Hơn nữa, có những lực lượng bám víu vào tư tưởng cũ để bảo vệ lợi ích cá nhân.",
-      "scaffolding_steps": [
-        {
-          "step_number": 1,
-          "hint": "Dù bị Tồn tại xã hội quyết định, Ý thức xã hội vẫn có 'tính độc lập tương đối' với 5 biểu hiện. Hãy liệt kê 3 biểu hiện đầu tiên liên quan đến thời gian (trước, sau) và lịch sử (kế thừa).",
-          "step_detail": "1. Ý thức xã hội thường lạc hậu hơn tồn tại xã hội. 2. Ý thức xã hội có thể vượt trước tồn tại xã hội. 3. Ý thức xã hội có tính kế thừa trong sự phát triển."
-        },
-        {
-          "step_number": 2,
-          "hint": "Hãy liệt kê 2 biểu hiện còn lại liên quan đến sự tương tác (giữa các yếu tố bên trong nó) và tác động ngược lại Tồn tại xã hội.",
-          "step_detail": "4. Sự tác động qua lại giữa các hình thái ý thức xã hội (như chính trị tác động đến nghệ thuật). 5. Ý thức xã hội tác động trở lại tồn tại xã hội."
-        },
-        {
-          "step_number": 3,
-          "hint": "Áp dụng vào thực tiễn Việt Nam: Việc kinh tế (Tồn tại xã hội) đã đổi mới nhưng hủ tục phong kiến (Ý thức xã hội) vẫn còn, là do nó rơi vào biểu hiện nào trong 5 biểu hiện trên?",
-          "step_detail": "Đó là do biểu hiện: Ý thức xã hội thường 'lạc hậu hơn' tồn tại xã hội."
-        },
-        {
-          "step_number": 4,
-          "hint": "Tại sao ý thức xã hội lại có sức ỳ lớn, chậm thay đổi như vậy?",
-          "step_detail": "Vì tâm lý, phong tục, tập quán là những thói quen đã ăn sâu vào nhận thức qua hàng trăm năm. Hơn nữa, tồn tại xã hội cũ tuy mất đi nhưng tàn dư của nó vẫn còn, và một số người vẫn duy trì ý thức cũ để bảo vệ lợi ích cá nhân của họ."
-        }
-      ],
-      "common_mistakes": [
-        "Kể thiếu 1 trong 5 biểu hiện của tính độc lập tương đối.",
-        "Không giải thích được sự chênh lệch nhịp độ (độ trễ) giữa sự thay đổi nhanh chóng của kinh tế với sự thay đổi chậm chạp của tâm lý, phong tục."
-      ]
-    },
-
-    {
-      "id": "TRIET_C3_3.4_001",
-      "lesson_number": "3.4",
-      "lesson_name": "Tồn tại xã hội và ý thức xã hội",
-      "topic": "Khái niệm và cấu trúc của Tồn tại xã hội",
-      "difficulty": "Medium",
-      "bloom_level": "Understanding",
-      "question_text": "Tồn tại xã hội là gì? Ý thức xã hội là gì? Trình bày các yếu tố cấu thành tồn tại xã hội và cho biết yếu tố nào đóng vai trò quyết định nhất?",
-      "full_answer": "Tồn tại xã hội là toàn bộ sinh hoạt vật chất và những điều kiện sinh hoạt vật chất của xã hội. Ý thức xã hội là phương diện sinh hoạt tinh thần của xã hội, nảy sinh từ tồn tại xã hội và phản ánh tồn tại xã hội. Tồn tại xã hội gồm 3 yếu tố chính: Điều kiện tự nhiên (địa lý, khí hậu), dân cư (mật độ, sự gia tăng) và phương thức sản xuất vật chất. Trong đó, phương thức sản xuất đóng vai trò quyết định nhất vì nó quyết định tính chất, kết cấu và sự biến đổi của toàn bộ xã hội.",
-      "scaffolding_steps": [
-        {
-          "step_number": 1,
-          "hint": "Hãy áp dụng cặp phạm trù 'vật chất - ý thức' vào xã hội. Tồn tại xã hội tương ứng với mặt nào? Ý thức xã hội tương ứng với mặt nào?",
-          "step_detail": "Tồn tại xã hội tương ứng với mặt 'vật chất' (sinh hoạt vật chất, đời sống vật chất). Ý thức xã hội tương ứng với mặt 'ý thức' (sinh hoạt tinh thần, tư tưởng, tâm lý)."
-        },
-        {
-          "step_number": 2,
-          "hint": "Để duy trì đời sống vật chất (tồn tại xã hội), một cộng đồng người cần có 3 yếu tố cơ bản nào về môi trường, con người và cách tạo ra của cải?",
-          "step_detail": "Ba yếu tố đó là: Điều kiện tự nhiên - hoàn cảnh địa lý; Dân số và mật độ dân cư; và Phương thức sản xuất vật chất."
-        },
-        {
-          "step_number": 3,
-          "hint": "Trong 3 yếu tố trên, yếu tố nào do con người chủ động tạo ra và thường xuyên biến đổi, từ đó quyết định tính chất của xã hội?",
-          "step_detail": "Đó là Phương thức sản xuất. Điều kiện tự nhiên và dân cư là điều kiện tất yếu nhưng biến đổi chậm. Phương thức sản xuất mới là yếu tố quyết định cách con người tương tác với tự nhiên và với nhau, từ đó quyết định bộ mặt xã hội."
-        }
-      ],
-      "common_mistakes": [
-        "Đồng nhất Tồn tại xã hội với 'môi trường tự nhiên' (quên mất yếu tố quan trọng nhất là phương thức sản xuất).",
-        "Trình bày sai khái niệm ý thức xã hội, nhầm lẫn với ý thức cá nhân."
-      ]
-    },
-    {
-      "id": "TRIET_C3_3.4_002",
-      "lesson_number": "3.4",
-      "lesson_name": "Tồn tại xã hội và ý thức xã hội",
-      "topic": "Vai trò quyết định của tồn tại xã hội",
-      "difficulty": "Medium",
-      "bloom_level": "Analyzing",
-      "question_text": "Phân tích vai trò quyết định của tồn tại xã hội đối với ý thức xã hội. Lấy một ví dụ thực tế để minh họa.",
-      "full_answer": "Tồn tại xã hội quyết định ý thức xã hội trên hai phương diện: Thứ nhất, tồn tại xã hội sinh ra ý thức xã hội, tồn tại xã hội thế nào thì ý thức xã hội thế ấy (ý thức xã hội chỉ là sự phản ánh tồn tại xã hội). Thứ hai, khi tồn tại xã hội (đặc biệt là phương thức sản xuất) thay đổi thì những tư tưởng, lý luận, tâm lý xã hội (ý thức xã hội) cũng sớm muộn sẽ thay đổi theo. Ví dụ: Khi phương thức sản xuất là nông nghiệp lúa nước nhỏ lẻ, ý thức xã hội hình thành là tâm lý tiểu nông, tùy tiện về giờ giấc, coi trọng kinh nghiệm. Khi chuyển sang nền công nghiệp hiện đại (tồn tại xã hội thay đổi), tâm lý con người chuyển sang tác phong công nghiệp, tuân thủ kỷ luật và coi trọng khoa học kỹ thuật.",
-      "scaffolding_steps": [
-        {
-          "step_number": 1,
-          "hint": "Dựa vào nguyên lý 'vật chất quyết định ý thức', hãy phát biểu vai trò của Tồn tại xã hội đối với sự hình thành của Ý thức xã hội.",
-          "step_detail": "Tồn tại xã hội quyết định nguồn gốc sinh ra ý thức xã hội. Tồn tại xã hội như thế nào thì sẽ sinh ra ý thức xã hội mang đặc điểm tương ứng."
-        },
-        {
-          "step_number": 2,
-          "hint": "Khi đời sống vật chất, kinh tế (Tồn tại xã hội) có sự thay đổi lớn, điều gì sẽ xảy ra với các quan niệm, tư tưởng, văn hóa (Ý thức xã hội)?",
-          "step_detail": "Khi tồn tại xã hội biến đổi (nhất là sự biến đổi của phương thức sản xuất), thì sớm muộn ý thức xã hội cũng sẽ biến đổi theo để phản ánh đúng hiện thực mới."
-        },
-        {
-          "step_number": 3,
-          "hint": "Hãy tìm một ví dụ: Sự khác nhau về thói quen, tâm lý, lối sống giữa một xã hội thuần nông và một xã hội công nghiệp hiện đại.",
-          "step_detail": "Ví dụ: Nền nông nghiệp lúa nước sinh ra thói quen làm việc theo con nước, thời tiết, tính kỷ luật thấp (tâm lý tiểu nông). Nền sản xuất công nghiệp yêu cầu dây chuyền nên sinh ra tác phong làm việc đúng giờ, kỷ luật cao."
-        }
-      ],
-      "common_mistakes": [
-        "Chỉ phân tích lý thuyết mà không đưa ra được ví dụ thực tế, hoặc ví dụ không làm rõ được mối quan hệ nhân - quả giữa kinh tế/vật chất và tư tưởng/văn hóa."
-      ]
-    },
-    {
-      "id": "TRIET_C3_3.4_003",
-      "lesson_number": "3.4",
-      "lesson_name": "Tồn tại xã hội và ý thức xã hội",
-      "topic": "Tính độc lập tương đối của Ý thức xã hội",
+      "topic": "3.4 Tồn tại xã hội và ý thức xã hội: Tính độc lập tương đối của Ý thức xã hội",
       "difficulty": "Hard",
       "bloom_level": "Evaluating",
       "question_text": "Trình bày tính độc lập tương đối của ý thức xã hội. Tại sao hiện nay nền kinh tế nước ta đã phát triển nhưng nhiều hủ tục, tư tưởng lạc hậu vẫn còn tồn tại?",
