@@ -7,8 +7,11 @@ from typing import List
 from langchain_community.document_loaders import TextLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_huggingface import HuggingFaceEndpointEmbeddings
-from langchain_community.vectorstores import Chroma
+# FIX: Cập nhật thư viện theo khuyến cáo của log để tránh DeprecationWarning
+from langchain_chroma import Chroma 
 from core.config import settings
+# FIX: Import bộ dịch mapping từ thư mục core
+from core.mapping import get_mapped_paths
 
 huggingface_token = os.getenv("HUGGING_FACE_API_KEY")
 
@@ -61,12 +64,16 @@ class RAGService:
             pages = loader.load()
             chunks = self.text_splitter.split_documents(pages)
 
+            # FIX: Dịch tên môn học sang dạng không dấu để đặt tên Collection chuẩn
+            mapped_subj, _ = get_mapped_paths(subject, "")
+            safe_collection_name = f"subject_{mapped_subj}"
+
             # 3. Lưu vào ChromaDB với metadata là môn học 
             vector_db = Chroma.from_documents(
                 documents=chunks,
                 embedding=self.embeddings,
                 persist_directory=self.persist_directory,
-                collection_name=f"subject_{subject}" # Mỗi môn học một bộ vector riêng
+                collection_name=safe_collection_name 
             )
             return True
         except Exception as e:
@@ -80,10 +87,13 @@ class RAGService:
         (score thấp = giống nhau nhiều trong không gian vector Chroma).
         """
         try:
+            # FIX: Dịch tên môn học tương tự như lúc Index
+            mapped_subj, _ = get_mapped_paths(subject, "")
+            safe_collection_name = f"subject_{mapped_subj}"
             vector_db = Chroma(
                 persist_directory=self.persist_directory,
                 embedding_function=self.embeddings,
-                collection_name=f"subject_{subject}",
+                collection_name=safe_collection_name, # ĐÃ SỬA: Dùng tên an toàn để query đúng collection
             )
 
             # Lấy kết quả kèm điểm similarity
@@ -105,5 +115,6 @@ class RAGService:
             return context_text
 
         except Exception as e:
-            print(f"[RAG] Query error: {e}")
-            return "Currently unable to retrieve reference materials due to a system error."
+            # FIX: Log lỗi chi tiết để dễ debug
+            print(f"[RAG] Query error: {str(e)}")
+            return ""

@@ -16,6 +16,7 @@ class CognitiveState(str, Enum):
     # nhóm 3: tương tác
     REQUEST_HINT = "REQUEST_HINT"           # Xin gợi ý, xin giải hộ (Từ case g, i của StratL)
     REQUEST_THEORY = "REQUEST_THEORY"       # Hỏi lại lý thuyết/định nghĩa (Từ case h của StratL)
+    REVEAL_ANSWER = "REVEAL_ANSWER"
 
 # CẢM XÚC (bổ sung theo case l, m của StratL)
 class EmotionState(str, Enum):
@@ -27,7 +28,7 @@ class EmotionState(str, Enum):
 class StudentEvaluation(BaseModel):
     cognitive_state: CognitiveState = Field(
         ..., 
-        description="Analyze the student's message and categorize their cognitive state or specific request."
+        description="The student's current cognitive state. STRICT RULE: You must output 'REVEAL_ANSWER' if the student has been stuck, provided incorrect answers, or shown continuous confusion for 3 or more consecutive attempts on the same step. Otherwise, classify into the appropriate correct or error states."
     )
     emotion_state: EmotionState = Field(
         ..., 
@@ -40,4 +41,5 @@ class StudentEvaluation(BaseModel):
     next_step: int = Field(
         ...,
         description="The current step number the student should focus on next (integer). If they complete the current step, increment this by 1. If they fail, keep it the same."
+
     )

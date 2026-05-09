@@ -11,6 +11,7 @@ from engine.ai_engine import AItutor
 from engine.session_manager import SessionManager
 from engine.rag_service import RAGService
 from engine.scaffolding import LearningScaffold
+from models import ChatHistory
 
 router = APIRouter()
 ai_tutor = AItutor()
@@ -21,7 +22,7 @@ rag_service = RAGService()
 # ENDPOINT 1: KHỞI TẠO PHIÊN HỌC (AI CHỦ ĐỘNG GIAO BÀI)
 # Gọi bằng phương thức GET khi frontend/HTML vừa load xong
 # =================================================================
-@router.get("/init", response_model=ChatResponse)
+@router.get("/init")
 def init_chat_session(subject: str, chapter: str, db: Session = Depends(get_db)):
     current_user_id = 1 # TODO: Sau này lấy từ Token đăng nhập (JWT)
     session_manager = SessionManager(db)
@@ -30,21 +31,44 @@ def init_chat_session(subject: str, chapter: str, db: Session = Depends(get_db))
         progress = session_manager.get_user_progress(current_user_id, subject, chapter)
         
         if progress:
-            # Nếu đã từng học chương này, lấy đúng Question ID đang làm dở
             current_question_id = progress.get("question_id")
         else:
-            # Nếu là lần đầu, lấy ID bài tập đầu tiên của chương từ AI Engine
             current_question_id = ai_tutor.get_first_question_id(subject, chapter)
-            # Tạo bản ghi tiến độ ban đầu (Bước 1)
             session_manager.update_progress(current_user_id, subject, chapter, current_question_id, step=1)
         
-        # 2. Gọi AI Engine lấy đề bài bài tập
-        welcome_message = ai_tutor.get_initial_question(subject, chapter, current_question_id)
+        # --- BẮT ĐẦU FIX: LẤY LỊCH SỬ CHAT TỪ DB ---
+        # Truy vấn trực tiếp vào DB để lấy data format dễ đọc cho Frontend
+        history_records = db.query(ChatHistory).filter(
+            ChatHistory.user_id == current_user_id,
+            ChatHistory.subject == subject,
+            ChatHistory.chapter == chapter
+        ).order_by(ChatHistory.created_at.asc()).all()
         
-        # 3. Lưu câu chào vào lịch sử chat (Trí nhớ dài hạn)
-        session_manager.save_message(current_user_id, subject, chapter, "ai", welcome_message)
-        
-        return ChatResponse(reply=welcome_message, status="success")
+        # Biến đổi thành mảng JSON
+        formatted_history = [
+            {"role": record.role, "content": record.content} 
+            for record in history_records
+        ]
+
+        # Nếu mảng trống -> Lần đầu tiên học -> Tạo câu chào
+        if not formatted_history:
+            welcome_message = ai_tutor.get_initial_question(subject, chapter, current_question_id)
+            session_manager.save_message(current_user_id, subject, chapter, "ai", welcome_message)
+            
+            return {
+                "reply": welcome_message, 
+                "history": [], # Lịch sử trống
+                "question_id": current_question_id,
+                "status": "success"
+            }
+
+        # Nếu đã có lịch sử -> KHÔNG tạo câu chào mới, trả về lịch sử
+        return {
+            "reply": "", 
+            "history": formatted_history, 
+            "question_id": current_question_id,
+            "status": "success"
+        }
 
     except Exception as e:
         print(f"Init Session Error: {str(e)}")

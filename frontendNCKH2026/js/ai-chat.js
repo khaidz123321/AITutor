@@ -1,4 +1,4 @@
-// =====================================================
+        // =====================================================
 // AI CHAT PAGE - FASTAPI INTEGRATION
 // =====================================================
 (function () {
@@ -73,19 +73,36 @@
             SUGGESTIONS.map(s => `<button class="suggestion-chip" onclick="sendSuggestion('${s}')">${s}</button>`).join('');
 
         // Gọi Backend lấy câu chào mừng
-        showTyping();
+        showTyping(); // Hiện dấu 3 chấm
         try {
+            // Thay đổi URL sao cho khớp với biến môn học và chương của Khải
             const response = await fetch(`${API_BASE_URL}/init?subject=${encodeURIComponent(courseTitle)}&chapter=${encodeURIComponent(currentChapter)}`);
             const data = await response.json();
-            removeTyping();
             
-            // Lấy câu chào từ Backend trả về
-            const aiGreeting = data.reply || data.message || `Chào bạn! Tôi là Gia sư AI PTIT, sẵn sàng hỗ trợ bạn môn ${courseTitle}.`;
-            appendMessage('ai', aiGreeting);
+            removeTyping(); // Tắt dấu 3 chấm
+            
+            // 1. NẾU CÓ LỊCH SỬ -> VẼ LẠI TOÀN BỘ
+            if (data.history && data.history.length > 0) {
+                data.history.forEach(item => {
+                    // Chuyển đổi role cho khớp với hàm appendMessage (user/ai)
+                    const role = item.role === 'user' ? 'user' : 'ai';
+                    appendMessage(role, item.content);
+                });
+            } 
+            // 2. NẾU KHÔNG CÓ LỊCH SỬ -> IN RA CÂU CHÀO
+            else if (data.reply) {
+                appendMessage('ai', data.reply);
+            }
+
+            // Lưu lại ID bài tập đang làm
+            if (data.question_id) {
+                currentQuestionId = data.question_id;
+            }
+
         } catch (error) {
-            console.error("Lỗi Init:", error);
+            console.error("Lỗi khởi tạo:", error);
             removeTyping();
-            appendMessage('ai', 'Không thể kết nối đến máy chủ AI (FastAPI). Bạn hãy chắc chắn rằng lệnh uvicorn đang chạy nhé.');
+            appendMessage('ai', 'Lỗi kết nối máy chủ. Vui lòng thử lại sau.');
         }
     }
 
@@ -186,23 +203,41 @@
     // 7. KHỞI CHẠY KHI TẢI XONG TRANG
     // ==========================================
     document.addEventListener('DOMContentLoaded', () => {
-        init();
+        const chatForm = document.getElementById('chatForm');
+        const input    = document.getElementById('chatInput');
 
-        document.getElementById('chatForm').addEventListener('submit', e => {
-            e.preventDefault();
-            sendMessage(document.getElementById('chatInput').value.trim());
-        });
+        // BƯỚC 1: PHẢI CHẶN RELOAD TRƯỚC (Bất kể API có lỗi hay không)
+        if (chatForm) {
+            chatForm.addEventListener('submit', (e) => {
+                e.preventDefault(); 
+                if (input) sendMessage(input.value.trim());
+            });
+        }
 
-        const input = document.getElementById('chatInput');
-        input.addEventListener('input', () => {
-            input.style.height = 'auto';
-            input.style.height = Math.min(input.scrollHeight, 120) + 'px';
-        });
-        input.addEventListener('keydown', e => {
-            if (e.key === 'Enter' && !e.shiftKey) {
-                e.preventDefault();
-                sendMessage(input.value.trim());
+        // BƯỚC 2: GẮN SỰ KIỆN PHÍM ENTER
+        if (input) {
+            input.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' && !e.shiftKey) {
+                    e.preventDefault(); // Chặn form submit mặc định
+                    sendMessage(input.value.trim());
+                }
+            });
+
+            // Tự giãn nở ô nhập liệu
+            input.addEventListener('input', () => {
+                input.style.height = 'auto';
+                input.style.height = Math.min(input.scrollHeight, 120) + 'px';
+            });
+        }
+
+        // BƯỚC 3: GỌI INIT CUỐI CÙNG VÀ BỌC TRONG TRY-CATCH
+        // Việc gọi init ở cuối giúp đảm bảo các Listener ở trên đã được gắn thành công
+        (async () => {
+            try {
+                await init();
+            } catch (err) {
+                console.warn("Init gặp lỗi nhưng hệ thống chat vẫn hoạt động:", err);
             }
-        });
+        })();
     });
 })();
