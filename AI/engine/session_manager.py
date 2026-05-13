@@ -99,3 +99,4 @@ class SessionManager:
             self.db.rollback()
             print(f"Lỗi khi lưu tiến độ học tập: {str(e)}")
             raise e
+        

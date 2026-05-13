@@ -11,12 +11,16 @@ from engine.ai_engine import AItutor
 from engine.session_manager import SessionManager
 from engine.rag_service import RAGService
 from engine.scaffolding import LearningScaffold
-from models import ChatHistory
+from models.chat_history import ChatHistory
+from core.mapping import get_mapped_paths
+from core.config import settings
+from schemas.evaluation import StudentEvaluation
+import os 
+import json
 
 router = APIRouter()
 ai_tutor = AItutor()
 rag_service = RAGService()
-# ĐÃ XÓA: scaffold = LearningScaffold(db=None) -> AI giờ tự đếm bước và chấm điểm!
 
 # =================================================================
 # ENDPOINT 1: KHỞI TẠO PHIÊN HỌC (AI CHỦ ĐỘNG GIAO BÀI)
@@ -87,6 +91,7 @@ def chat_with_tutor(request: ChatRequest, db: Session = Depends(get_db)):
     try:
         # 1. Xác định bài tập và bước hiện tại từ Database
         progress = session_manager.get_user_progress(current_user_id, request.subject, request.chapter)
+        original_question_id = progress.get("question_id") if progress else None    
         
         if not progress:
             # Trường hợp dự phòng nếu Init thất bại
@@ -120,7 +125,7 @@ def chat_with_tutor(request: ChatRequest, db: Session = Depends(get_db)):
 
         # 4. Gọi Single-Agent AI (Vừa chấm lỗi, vừa sinh câu trả lời)
         # eval_result giờ đây là một object chứa: response, next_step, cognitive_state
-        eval_result = ai_tutor.get_response(
+        eval_result: StudentEvaluation = ai_tutor.get_response(
             subject=request.subject,
             chapter=request.chapter,
             user_message=request.message,
@@ -133,12 +138,34 @@ def chat_with_tutor(request: ChatRequest, db: Session = Depends(get_db)):
         # Bóc tách dữ liệu an toàn (Tránh crash nếu AI API trả về None)
         if eval_result:
             ai_reply = eval_result.response
+            print(f"[AI Đánh giá Trạng thái]: {eval_result.cognitive_state}")
             
-            # ĐÃ FIX: Điều khiển bước nhảy bằng logic Python thay vì AI tự đếm
+            # --- BẮT ĐẦU FIX LOGIC NHẢY BƯỚC / NHẢY BÀI ---
+            
             if eval_result.cognitive_state == "STEP_CORRECT":
                 new_step = current_step + 1
+            
+            # NẾU XONG BÀI TOÁN -> CHỦ ĐỘNG BỐC ĐỀ MỚI
+            elif eval_result.cognitive_state == "PROBLEM_COMPLETED":
+                # 1. Logic giả định: Khải cần viết 1 hàm lấy ID bài tiếp theo
+                # Ví dụ: từ GT1_C1_001 -> GT1_C1_002
+                next_question_id = ai_tutor.get_next_question_id(request.subject, request.chapter, current_question_id)
+                
+                if next_question_id:
+                    # 2. Lấy đề bài mới
+                    new_question_text = ai_tutor.get_initial_question(request.subject, request.chapter, next_question_id)
+                    
+                    # 3. Ghi đè câu "hứa lèo" của AI bằng đề bài thực tế
+                    ai_reply = f"{ai_reply}\n\n**Bài toán tiếp theo dành cho bạn:**\n{new_question_text}"
+                    
+                    # 4. Reset step về 1 cho bài mới
+                    new_step = 1
+                    current_question_id = next_question_id # Cập nhật ID để lưu DB
+                else:
+                    ai_reply = f"{ai_reply}\n\nChúc mừng! Bạn đã hoàn thành toàn bộ bài tập của chương này rồi!"
+                    new_step = current_step
             else:
-                new_step = current_step 
+                new_step = current_step
         else:
             ai_reply = "Xin lỗi, hệ thống AI đang gặp sự cố kết nối. Bạn vui lòng thử lại nhé!"
             new_step = current_step # Giữ nguyên tiến độ nếu lỗi
@@ -150,7 +177,7 @@ def chat_with_tutor(request: ChatRequest, db: Session = Depends(get_db)):
             subject=request.subject, 
             chapter=request.chapter, 
             role="user", 
-            content=request.message
+            content=request.message 
         )
         
         # Lưu phản hồi AI
@@ -163,7 +190,7 @@ def chat_with_tutor(request: ChatRequest, db: Session = Depends(get_db)):
         )
 
         # Nếu AI quyết định cho sinh viên sang bước tiếp theo, cập nhật bảng Activity
-        if new_step != current_step:
+        if new_step != current_step or current_question_id != original_question_id:
             session_manager.update_progress(
                 user_id=current_user_id, 
                 subject=request.subject, 

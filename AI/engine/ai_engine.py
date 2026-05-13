@@ -2,9 +2,11 @@ from core.config import settings
 import os 
 import json 
 from langchain_google_genai import ChatGoogleGenerativeAI
-from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder, SystemMessagePromptTemplate, HumanMessagePromptTemplate
+from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from schemas.evaluation import StudentEvaluation
 from core.mapping import get_mapped_paths
+import os
+from core.config import settings
 
 class AItutor:
     def __init__(self):
@@ -157,3 +159,28 @@ class AItutor:
             "user_input": user_message
         })
         return eval_result
+    
+    def get_next_question_id(self, subject: str, chapter: str, current_question_id: str) -> StudentEvaluation:
+        """
+        Tìm ID của bài toán tiếp theo trong file JSON dựa trên bài hiện tại.
+        Trả về None nếu đã hết bài.
+        """
+        mapped_subj, mapped_chap = get_mapped_paths(subject, chapter)
+        json_path = os.path.join(settings.BASE_DIR, "prompts", mapped_subj, "question_bank", f"{mapped_chap}.json")
+        
+        try:
+            with open(json_path, "r", encoding="utf-8") as f:
+                data = json.load(f)
+                questions = data.get("questions", [])
+                
+                # Tìm vị trí câu hỏi hiện tại
+                for i, q in enumerate(questions):
+                    if q["id"] == current_question_id:
+                        # Kiểm tra xem có câu tiếp theo không
+                        if i + 1 < len(questions):
+                            return questions[i + 1]["id"]
+                        else:
+                            return None # Hết bài trong chương này
+        except Exception as e:
+            print(f"Lỗi tìm bài kế tiếp: {str(e)}")
+            return None
