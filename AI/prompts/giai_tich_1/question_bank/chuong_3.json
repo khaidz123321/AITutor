@@ -9,27 +9,27 @@
       "difficulty": "Medium",
       "bloom_level": "Understanding",
       "question_text": "Hãy nêu định nghĩa đạo hàm của hàm số tại một điểm. Xét tính liên tục và tính khả vi của hàm số $f(x) = |x|$ tại điểm $x_0 = 0$.",
-      "full_answer": "Đạo hàm của hàm số $f$ tại $x_0$ là giới hạn hữu hạn: $f'(x_0) = \\lim_{x \\to x_0} \\frac{f(x) - f(x_0)}{x - x_0}$[cite: 5]. Hàm số $f(x) = |x|$ liên tục tại $x = 0$ nhưng không khả vi tại đó vì đạo hàm trái $f'_t(0) = -1$ và đạo hàm phải $f'_p(0) = 1$ khác nhau[cite: 5].",
+      "full_answer": "Đạo hàm của hàm số $f$ tại $x_0$ là giới hạn hữu hạn: $f'(x_0) = \\lim_{x \\to x_0} \\frac{f(x) - f(x_0)}{x - x_0}$. Hàm số $f(x) = |x|$ liên tục tại $x = 0$ nhưng không khả vi tại đó vì đạo hàm trái $f'_t(0) = -1$ và đạo hàm phải $f'_p(0) = 1$ khác nhau.",
       "scaffolding_steps": [
         {
           "step_number": 1,
           "hint": "Viết công thức định nghĩa đạo hàm thông qua giới hạn của tỉ số giữa số gia hàm số và số gia đối số.",
-          "step_detail": "Định nghĩa: $f'(x_0) = \\lim_{\\Delta x \\to 0} \\frac{f(x_0 + \\Delta x) - f(x_0)}{\\Delta x}$[cite: 5]. Nếu giới hạn này hữu hạn, ta nói hàm số khả vi tại $x_0$[cite: 5]."
+          "step_detail": "Định nghĩa: $f'(x_0) = \\lim_{\\Delta x \\to 0} \\frac{f(x_0 + \\Delta x) - f(x_0)}{\\Delta x}$. Nếu giới hạn này hữu hạn, ta nói hàm số khả vi tại $x_0$."
         },
         {
           "step_number": 2,
           "hint": "Để xét tính liên tục của $f(x) = |x|$ tại 0, hãy tính giới hạn $\\lim_{x \\to 0} f(x)$ và so sánh với $f(0)$.",
-          "step_detail": "Ta có $f(0) = 0$ và $\\lim_{x \\to 0} |x| = 0$. Vì giới hạn bằng giá trị hàm số nên hàm số liên tục tại 0[cite: 5]."
+          "step_detail": "Ta có $f(0) = 0$ và $\\lim_{x \\to 0} |x| = 0$. Vì giới hạn bằng giá trị hàm số nên hàm số liên tục tại 0."
         },
         {
           "step_number": 3,
           "hint": "Tính đạo hàm một phía (trái và phải) tại 0. Lưu ý cách phá dấu giá trị tuyệt đối khi $x < 0$ và $x > 0$.",
-          "step_detail": "Đạo hàm phải: $f'_p(0) = \\lim_{x \\to 0^+} \\frac{x - 0}{x - 0} = 1$[cite: 5]. Đạo hàm trái: $f'_t(0) = \\lim_{x \\to 0^-} \\frac{-x - 0}{x - 0} = -1$[cite: 5]. Vì $f'_t(0) \\ne f'_p(0)$ nên không tồn tại đạo hàm tại 0[cite: 5]."
+          "step_detail": "Đạo hàm phải: $f'_p(0) = \\lim_{x \\to 0^+} \\frac{x - 0}{x - 0} = 1$. Đạo hàm trái: $f'_t(0) = \\lim_{x \\to 0^-} \\frac{-x - 0}{x - 0} = -1$. Vì $f'_t(0) \\ne f'_p(0)$ nên không tồn tại đạo hàm tại 0."
         }
       ],
       "common_mistakes": [
-        "Nhầm lẫn rằng hàm số cứ liên tục thì sẽ khả vi. Ví dụ $|x|$ cho thấy liên tục là điều kiện cần nhưng chưa đủ để khả vi[cite: 5].",
-        "Quên không kiểm tra đạo hàm hai phía khi xét tính khả vi tại các điểm 'gãy' của đồ thị[cite: 5]."
+        "Nhầm lẫn rằng hàm số cứ liên tục thì sẽ khả vi. Ví dụ $|x|$ cho thấy liên tục là điều kiện cần nhưng chưa đủ để khả vi.",
+        "Quên không kiểm tra đạo hàm hai phía khi xét tính khả vi tại các điểm 'gãy' của đồ thị."
       ]
     },
     {
@@ -37,28 +37,28 @@
       "topic": "3.1 Đạo hàm hàm ngược và hàm tham số",
       "difficulty": "Hard",
       "bloom_level": "Applying",
-      "question_text": "Tính đạo hàm $y'(x)$ của hàm số cho dưới dạng tham số: $\\begin{cases} x = \\ln(1+t^2) \\\\ y = t - \\arctan t \\end{cases}$[cite: 5].",
-      "full_answer": "Đạo hàm của hàm tham số là $y'(x) = \\frac{y'(t)}{x'(t)} = \\frac{1 - \\frac{1}{1+t^2}}{\\frac{2t}{1+t^2}} = \\frac{t}{2}$[cite: 5].",
+      "question_text": "Tính đạo hàm $y'(x)$ của hàm số cho dưới dạng tham số: $\\begin{cases} x = \\ln(1+t^2) \\\\ y = t - \\arctan t \\end{cases}$.",
+      "full_answer": "Đạo hàm của hàm tham số là $y'(x) = \\frac{y'(t)}{x'(t)} = \\frac{1 - \\frac{1}{1+t^2}}{\\frac{2t}{1+t^2}} = \\frac{t}{2}$.",
       "scaffolding_steps": [
         {
           "step_number": 1,
           "hint": "Tính đạo hàm của $x$ theo biến $t$. Lưu ý đây là đạo hàm của hàm hợp $\\ln(u)$.",
-          "step_detail": "$x'(t) = [\\ln(1+t^2)]' = \\frac{(1+t^2)'}{1+t^2} = \\frac{2t}{1+t^2}$[cite: 5]."
+          "step_detail": "$x'(t) = [\\ln(1+t^2)]' = \\frac{(1+t^2)'}{1+t^2} = \\frac{2t}{1+t^2}$."
         },
         {
           "step_number": 2,
           "hint": "Tính đạo hàm của $y$ theo biến $t$. Sử dụng bảng đạo hàm cơ bản cho hàm $\\arctan t$.",
-          "step_detail": "$y'(t) = (t - \\arctan t)' = 1 - \\frac{1}{1+t^2} = \\frac{1+t^2-1}{1+t^2} = \\frac{t^2}{1+t^2}$[cite: 5]."
+          "step_detail": "$y'(t) = (t - \\arctan t)' = 1 - \\frac{1}{1+t^2} = \\frac{1+t^2-1}{1+t^2} = \\frac{t^2}{1+t^2}$."
         },
         {
           "step_number": 3,
           "hint": "Áp dụng công thức đạo hàm hàm tham số $y'(x) = \\frac{y'(t)}{x'(t)}$ và rút gọn biểu thức.",
-          "step_detail": "$y'(x) = \\frac{t^2 / (1+t^2)}{2t / (1+t^2)} = \\frac{t^2}{2t} = \\frac{t}{2}$[cite: 5]."
+          "step_detail": "$y'(x) = \\frac{t^2 / (1+t^2)}{2t / (1+t^2)} = \\frac{t^2}{2t} = \\frac{t}{2}$."
         }
       ],
       "common_mistakes": [
         "Tính nhầm đạo hàm $x'(t)$ hoặc $y'(t)$ do quên quy tắc hàm hợp.",
-        "Lấy $x'(t)$ chia cho $y'(t)$ thay vì ngược lại[cite: 5]."
+        "Lấy $x'(t)$ chia cho $y'(t)$ thay vì ngược lại."
       ]
     },
     {
@@ -66,27 +66,27 @@
       "topic": "3.1 Đạo hàm Lôgarit",
       "difficulty": "Hard",
       "bloom_level": "Evaluating",
-      "question_text": "Sử dụng phương pháp đạo hàm lôgarit để tính đạo hàm của hàm số $y = u(x)^{v(x)}$ (với $u(x) > 0$)[cite: 5].",
-      "full_answer": "$y' = y \\left( v' \\ln u + v \\frac{u'}{u} \\right) = u^v \\left( v' \\ln u + v \\frac{u'}{u} \\right)$[cite: 5].",
+      "question_text": "Sử dụng phương pháp đạo hàm lôgarit để tính đạo hàm của hàm số $y = u(x)^{v(x)}$ (với $u(x) > 0$).",
+      "full_answer": "$y' = y \\left( v' \\ln u + v \\frac{u'}{u} \\right) = u^v \\left( v' \\ln u + v \\frac{u'}{u} \\right)$.",
       "scaffolding_steps": [
         {
           "step_number": 1,
           "hint": "Lấy lôgarit tự nhiên ($\\ln$) cả hai vế của phương trình $y = u^v$.",
-          "step_detail": "Ta có $\\ln y = \\ln(u^v) = v \\ln u$[cite: 5]."
+          "step_detail": "Ta có $\\ln y = \\ln(u^v) = v \\ln u$."
         },
         {
           "step_number": 2,
           "hint": "Đạo hàm cả hai vế theo biến $x$. Lưu ý vế trái là đạo hàm hàm hợp $(\\ln y)' = \\frac{y'}{y}$.",
-          "step_detail": "$\\frac{y'}{y} = (v \\ln u)'$. Áp dụng quy tắc đạo hàm của tích ở vế phải: $(v \\ln u)' = v' \\ln u + v (\\ln u)' = v' \\ln u + v \\frac{u'}{u}$[cite: 5]."
+          "step_detail": "$\\frac{y'}{y} = (v \\ln u)'$. Áp dụng quy tắc đạo hàm của tích ở vế phải: $(v \\ln u)' = v' \\ln u + v (\\ln u)' = v' \\ln u + v \\frac{u'}{u}$."
         },
         {
           "step_number": 3,
           "hint": "Rút ra $y'$ bằng cách nhân vế phải với $y$.",
-          "step_detail": "$y' = y \\left( v' \\ln u + v \\frac{u'}{u} \\right)$. Thay $y = u^v$ vào để có biểu thức cuối cùng theo $x$[cite: 5]."
+          "step_detail": "$y' = y \\left( v' \\ln u + v \\frac{u'}{u} \\right)$. Thay $y = u^v$ vào để có biểu thức cuối cùng theo $x$."
         }
       ],
       "common_mistakes": [
-        "Đạo hàm $u^v$ như hàm lũy thừa $x^n$ hoặc hàm mũ $a^x$ (sai vì cả cơ số và số mũ đều là biến số)[cite: 5].",
+        "Đạo hàm $u^v$ như hàm lũy thừa $x^n$ hoặc hàm mũ $a^x$ (sai vì cả cơ số và số mũ đều là biến số).",
         "Quên không nhân ngược lại với $y$ ở bước cuối cùng."
       ]
     },
@@ -96,26 +96,26 @@
       "difficulty": "Medium",
       "bloom_level": "Applying",
       "question_text": "Cho hàm số $y = \\arcsin \\frac{1-x}{1+x}$. Hãy tìm biểu thức vi phân $dy$ của hàm số này.",
-      "full_answer": "$dy = y'(x)dx = \\frac{-1}{(1+x)\\sqrt{x}}dx$[cite: 5].",
+      "full_answer": "$dy = y'(x)dx = \\frac{-1}{(1+x)\\sqrt{x}}dx$.",
       "scaffolding_steps": [
         {
           "step_number": 1,
-          "hint": "Nhắc lại công thức tính vi phân: $dy$ được tính bằng đạo hàm $y'(x)$ nhân với $dx$[cite: 5]. Trước hết, hãy tính đạo hàm của hàm hợp $\\arcsin(u)$ với $u = \\frac{1-x}{1+x}$.",
-          "step_detail": "Ta có $y' = \\frac{1}{\\sqrt{1-u^2}} \\cdot u'$[cite: 5]. Với $u = \\frac{1-x}{1+x}$, đạo hàm $u' = \\frac{-1(1+x) - (1-x)}{(1+x)^2} = \\frac{-2}{(1+x)^2}$[cite: 5]."
+          "hint": "Nhắc lại công thức tính vi phân: $dy$ được tính bằng đạo hàm $y'(x)$ nhân với $dx$. Trước hết, hãy tính đạo hàm của hàm hợp $\\arcsin(u)$ với $u = \\frac{1-x}{1+x}$.",
+          "step_detail": "Ta có $y' = \\frac{1}{\\sqrt{1-u^2}} \\cdot u'$. Với $u = \\frac{1-x}{1+x}$, đạo hàm $u' = \\frac{-1(1+x) - (1-x)}{(1+x)^2} = \\frac{-2}{(1+x)^2}$."
         },
         {
           "step_number": 2,
           "hint": "Thay $u$ và $u'$ vào công thức đạo hàm hàm hợp và rút gọn biểu thức dưới căn.",
-          "step_detail": "$y' = \\frac{1}{\\sqrt{1 - (\\frac{1-x}{1+x})^2}} \\cdot \\frac{-2}{(1+x)^2} = \\frac{1+x}{\\sqrt{(1+x)^2 - (1-x)^2}} \\cdot \\frac{-2}{(1+x)^2} = \\frac{-2}{(1+x)\\sqrt{4x}} = \\frac{-1}{(1+x)\\sqrt{x}}$[cite: 5]."
+          "step_detail": "$y' = \\frac{1}{\\sqrt{1 - (\\frac{1-x}{1+x})^2}} \\cdot \\frac{-2}{(1+x)^2} = \\frac{1+x}{\\sqrt{(1+x)^2 - (1-x)^2}} \\cdot \\frac{-2}{(1+x)^2} = \\frac{-2}{(1+x)\\sqrt{4x}} = \\frac{-1}{(1+x)\\sqrt{x}}$."
         },
         {
           "step_number": 3,
           "hint": "Viết biểu thức vi phân cuối cùng bằng cách thêm đuôi $dx$.",
-          "step_detail": "$dy = y'(x)dx = \\frac{-1}{(1+x)\\sqrt{x}}dx$[cite: 5]."
+          "step_detail": "$dy = y'(x)dx = \\frac{-1}{(1+x)\\sqrt{x}}dx$."
         }
       ],
       "common_mistakes": [
-        "Chỉ tính đạo hàm $y'$ mà quên không viết thêm $dx$ ở cuối biểu thức vi phân[cite: 5].",
+        "Chỉ tính đạo hàm $y'$ mà quên không viết thêm $dx$ ở cuối biểu thức vi phân.",
         "Rút gọn sai biểu thức đại số phức tạp trong căn bậc hai."
       ]
     },
@@ -124,27 +124,27 @@
       "topic": "3.2 Vi phân của hàm số: Các quy tắc và tính bất biến",
       "difficulty": "Easy",
       "bloom_level": "Remembering",
-      "question_text": "Trình bày các quy tắc tính vi phân đối với tổng, tích, thương của hai hàm số $u, v$. Tính bất biến của biểu thức vi phân được thể hiện như thế nào[cite: 5]?",
-      "full_answer": "Quy tắc: $d(u+v) = du + dv$; $d(uv) = u \\cdot dv + v \\cdot du$; $d(\\frac{u}{v}) = \\frac{v \\cdot du - u \\cdot dv}{v^2}$[cite: 5]. Tính bất biến: $dz = z'(u)du = z'(x)dx$, nghĩa là hình thức của vi phân không đổi dù biến số là biến độc lập hay là hàm số của một biến khác[cite: 5].",
+      "question_text": "Trình bày các quy tắc tính vi phân đối với tổng, tích, thương của hai hàm số $u, v$. Tính bất biến của biểu thức vi phân được thể hiện như thế nào?",
+      "full_answer": "Quy tắc: $d(u+v) = du + dv$; $d(uv) = u \\cdot dv + v \\cdot du$; $d(\\frac{u}{v}) = \\frac{v \\cdot du - u \\cdot dv}{v^2}$. Tính bất biến: $dz = z'(u)du = z'(x)dx$, nghĩa là hình thức của vi phân không đổi dù biến số là biến độc lập hay là hàm số của một biến khác.",
       "scaffolding_steps": [
         {
           "step_number": 1,
           "hint": "Viết công thức vi phân của một tổng và một tích tương tự như quy tắc đạo hàm.",
-          "step_detail": "$d(u+v) = du + dv$ và $d(u \\cdot v) = u \\cdot dv + v \\cdot du$[cite: 5]."
+          "step_detail": "$d(u+v) = du + dv$ và $d(u \\cdot v) = u \\cdot dv + v \\cdot du$."
         },
         {
           "step_number": 2,
           "hint": "Viết công thức vi phân cho một thương $\\frac{u}{v}$.",
-          "step_detail": "$d\\left(\\frac{u}{v}\\right) = \\frac{v \\cdot du - u \\cdot dv}{v^2}$ với điều kiện $v(x) \\neq 0$[cite: 5]."
+          "step_detail": "$d\\left(\\frac{u}{v}\\right) = \\frac{v \\cdot du - u \\cdot dv}{v^2}$ với điều kiện $v(x) \\neq 0$."
         },
         {
           "step_number": 3,
           "hint": "Giải thích tính 'bất biến' của vi phân khi chuyển từ biến $x$ sang biến trung gian $u$.",
-          "step_detail": "Dù $u$ là biến độc lập hay $u = u(x)$ là hàm số, biểu thức $df(u) = f'(u)du$ vẫn luôn đúng[cite: 5]."
+          "step_detail": "Dù $u$ là biến độc lập hay $u = u(x)$ là hàm số, biểu thức $df(u) = f'(u)du$ vẫn luôn đúng."
         }
       ],
       "common_mistakes": [
-        "Nhầm lẫn giữa vi phân cấp 1 (có tính bất biến) và vi phân cấp cao (không có tính bất biến)[cite: 5]."
+        "Nhầm lẫn giữa vi phân cấp 1 (có tính bất biến) và vi phân cấp cao (không có tính bất biến)."
       ]
     },
     {
@@ -152,28 +152,28 @@
       "topic": "3.2 Vi phân của hàm số: Ứng dụng tính gần đúng",
       "difficulty": "Medium",
       "bloom_level": "Applying",
-      "question_text": "Sử dụng vi phân, hãy tính giá trị gần đúng của $\\sqrt[3]{1,02}$[cite: 5].",
-      "full_answer": "$\\sqrt[3]{1,02} \\approx 1 + \\frac{1}{3} \\cdot 0,02 \\approx 1,0067$[cite: 5].",
+      "question_text": "Sử dụng vi phân, hãy tính giá trị gần đúng của $\\sqrt[3]{1,02}$.",
+      "full_answer": "$\\sqrt[3]{1,02} \\approx 1 + \\frac{1}{3} \\cdot 0,02 \\approx 1,0067$.",
       "scaffolding_steps": [
         {
           "step_number": 1,
           "hint": "Chọn hàm số $f(x)$ phù hợp và tính đạo hàm của nó. Sau đó xác định điểm $x_0$ và số gia $\\Delta x$ sao cho phép tính đơn giản nhất.",
-          "step_detail": "Chọn $f(x) = \\sqrt[3]{x}$, suy ra $f'(x) = \\frac{1}{3\\sqrt[3]{x^2}}$[cite: 5]. Chọn điểm gốc $x_0 = 1$ (vì $\\sqrt[3]{1}$ dễ tính) và số gia $\\Delta x = 0,02$[cite: 5]."
+          "step_detail": "Chọn $f(x) = \\sqrt[3]{x}$, suy ra $f'(x) = \\frac{1}{3\\sqrt[3]{x^2}}$. Chọn điểm gốc $x_0 = 1$ (vì $\\sqrt[3]{1}$ dễ tính) và số gia $\\Delta x = 0,02$."
         },
         {
           "step_number": 2,
-          "hint": "Nhắc lại công thức tính gần đúng bằng vi phân: $f(x_0 + \\Delta x) \\approx f(x_0) + f'(x_0)\\Delta x$[cite: 5].",
-          "step_detail": "Áp dụng: $\\sqrt[3]{1 + 0,02} \\approx f(1) + f'(1) \\cdot 0,02$[cite: 5]."
+          "hint": "Nhắc lại công thức tính gần đúng bằng vi phân: $f(x_0 + \\Delta x) \\approx f(x_0) + f'(x_0)\\Delta x$.",
+          "step_detail": "Áp dụng: $\\sqrt[3]{1 + 0,02} \\approx f(1) + f'(1) \\cdot 0,02$."
         },
         {
           "step_number": 3,
           "hint": "Thay các giá trị đã chọn vào công thức và tính toán kết quả cuối cùng.",
-          "step_detail": "$f(1) = \\sqrt[3]{1} = 1$[cite: 5]. $f'(1) = \\frac{1}{3 \\cdot 1^2} = \\frac{1}{3}$[cite: 5]. Vậy $\\sqrt[3]{1,02} \\approx 1 + \\frac{1}{3} \\cdot 0,02 = 1 + 0,00666... \\approx 1,0067$[cite: 5]."
+          "step_detail": "$f(1) = \\sqrt[3]{1} = 1$. $f'(1) = \\frac{1}{3 \\cdot 1^2} = \\frac{1}{3}$. Vậy $\\sqrt[3]{1,02} \\approx 1 + \\frac{1}{3} \\cdot 0,02 = 1 + 0,00666... \\approx 1,0067$."
         }
       ],
       "common_mistakes": [
         "Chọn $x_0$ quá xa giá trị cần tính khiến sai số lớn.",
-        "Tính sai đạo hàm của hàm căn thức bậc 3[cite: 5]."
+        "Tính sai đạo hàm của hàm căn thức bậc 3."
       ]
     },
     {
@@ -182,32 +182,32 @@
       "difficulty": "Hard",
       "bloom_level": "Applying",
       "question_text": "Sử dụng công thức Leibnitz, hãy tính đạo hàm cấp 100 của hàm số $f(x) = x^2 \\sin x$.",
-      "full_answer": "$f^{(100)}(x) = (x^2 - 9900) \\sin x - 200x \\cos x$[cite: 5].",
+      "full_answer": "$f^{(100)}(x) = (x^2 - 9900) \\sin x - 200x \\cos x$.",
       "scaffolding_steps": [
         {
           "step_number": 1,
           "hint": "Nhắc lại công thức Leibnitz tính đạo hàm cấp $n$ của một tích $u \\cdot v$.",
-          "step_detail": "Công thức: $(uv)^{(n)} = \\sum_{k=0}^{n} C_n^k u^{(k)} v^{(n-k)}$[cite: 5]. Ở đây, ta chọn $u = x^2$ và $v = \\sin x$[cite: 5]."
+          "step_detail": "Công thức: $(uv)^{(n)} = \\sum_{k=0}^{n} C_n^k u^{(k)} v^{(n-k)}$. Ở đây, ta chọn $u = x^2$ và $v = \\sin x$."
         },
         {
           "step_number": 2,
           "hint": "Tính các đạo hàm của $u = x^2$. Lưu ý từ cấp mấy thì đạo hàm của $u$ bằng 0?",
-          "step_detail": "$u = x^2$; $u' = 2x$; $u'' = 2$; $u''' = 0$. Do đó trong tổng Leibnitz, ta chỉ cần xét các số hạng với $k = 0, 1, 2$[cite: 5]."
+          "step_detail": "$u = x^2$; $u' = 2x$; $u'' = 2$; $u''' = 0$. Do đó trong tổng Leibnitz, ta chỉ cần xét các số hạng với $k = 0, 1, 2$."
         },
         {
           "step_number": 3,
           "hint": "Xác định công thức đạo hàm cấp cao của $v = \\sin x$.",
-          "step_detail": "Ta có công thức: $(\\sin x)^{(n)} = \\sin(x + n\\frac{\\pi}{2})$[cite: 5]. Áp dụng cho các cấp 100, 99 và 98[cite: 5]."
+          "step_detail": "Ta có công thức: $(\\sin x)^{(n)} = \\sin(x + n\\frac{\\pi}{2})$. Áp dụng cho các cấp 100, 99 và 98."
         },
         {
           "step_number": 4,
           "hint": "Thay các thành phần vào tổng và rút gọn.",
-          "step_detail": "$f^{(100)}(x) = C_{100}^0 x^2 (\\sin x)^{(100)} + C_{100}^1 (2x) (\\sin x)^{(99)} + C_{100}^2 (2) (\\sin x)^{(98)}$[cite: 5]. \n$= x^2 \\sin(x + 50\\pi) + 200x \\sin(x + \\frac{99\\pi}{2}) + 9900 \\sin(x + 49\\pi)$[cite: 5]. \n$= x^2 \\sin x - 200x \\cos x - 9900 \\sin x$[cite: 5]."
+          "step_detail": "$f^{(100)}(x) = C_{100}^0 x^2 (\\sin x)^{(100)} + C_{100}^1 (2x) (\\sin x)^{(99)} + C_{100}^2 (2) (\\sin x)^{(98)}$. \n$= x^2 \\sin(x + 50\\pi) + 200x \\sin(x + \\frac{99\\pi}{2}) + 9900 \\sin(x + 49\\pi)$. \n$= x^2 \\sin x - 200x \\cos x - 9900 \\sin x$."
         }
       ],
       "common_mistakes": [
-        "Chọn $u, v$ ngược lại khiến việc tính toán đạo hàm cấp cao của đa thức không bị triệt tiêu sớm, làm bài toán trở nên phức tạp[cite: 5].",
-        "Nhầm lẫn dấu khi tính $\\sin(x + n\\frac{\\pi}{2})$ với $n$ lớn[cite: 5]."
+        "Chọn $u, v$ ngược lại khiến việc tính toán đạo hàm cấp cao của đa thức không bị triệt tiêu sớm, làm bài toán trở nên phức tạp.",
+        "Nhầm lẫn dấu khi tính $\\sin(x + n\\frac{\\pi}{2})$ với $n$ lớn."
       ]
     },
     {
@@ -215,23 +215,23 @@
       "topic": "3.3 Đạo hàm cấp cao của hàm phân thức",
       "difficulty": "Medium",
       "bloom_level": "Understanding",
-      "question_text": "Tìm công thức đạo hàm cấp $n$ của hàm số $f(x) = \\frac{1}{x+a}$ (với $a$ là hằng số)[cite: 5].",
-      "full_answer": "$f^{(n)}(x) = \\frac{(-1)^n n!}{(x+a)^{n+1}}$[cite: 5].",
+      "question_text": "Tìm công thức đạo hàm cấp $n$ của hàm số $f(x) = \\frac{1}{x+a}$ (với $a$ là hằng số).",
+      "full_answer": "$f^{(n)}(x) = \\frac{(-1)^n n!}{(x+a)^{n+1}}$.",
       "scaffolding_steps": [
         {
           "step_number": 1,
           "hint": "Tính đạo hàm các cấp thấp (cấp 1, 2, 3) để tìm ra quy luật biến đổi của dấu, hệ số và số mũ.",
-          "step_detail": "$f'(x) = -(x+a)^{-2}$; $f''(x) = (-1)(-2)(x+a)^{-3} = 2(x+a)^{-3}$; $f'''(x) = 2(-3)(x+a)^{-4} = -6(x+a)^{-4}$[cite: 5]."
+          "step_detail": "$f'(x) = -(x+a)^{-2}$; $f''(x) = (-1)(-2)(x+a)^{-3} = 2(x+a)^{-3}$; $f'''(x) = 2(-3)(x+a)^{-4} = -6(x+a)^{-4}$."
         },
         {
           "step_number": 2,
           "hint": "Từ các kết quả trên, hãy dự đoán công thức tổng quát cho cấp $n$. Chú ý phần giai thừa và dấu $(-1)$.",
-          "step_detail": "Quy luật: dấu đan xen theo $(-1)^n$, hệ số tăng dần theo tích $1 \\cdot 2 \\cdot 3 \\dots n = n!$, và số mũ ở mẫu là $n+1$[cite: 5]."
+          "step_detail": "Quy luật: dấu đan xen theo $(-1)^n$, hệ số tăng dần theo tích $1 \\cdot 2 \\cdot 3 \\dots n = n!$, và số mũ ở mẫu là $n+1$."
         }
       ],
       "common_mistakes": [
-        "Quên dấu $(-1)^n$ dẫn đến sai kết quả ở các cấp đạo hàm chẵn hoặc lẻ[cite: 5].",
-        "Viết nhầm số mũ ở mẫu là $n$ thay vì $n+1$[cite: 5]."
+        "Quên dấu $(-1)^n$ dẫn đến sai kết quả ở các cấp đạo hàm chẵn hoặc lẻ.",
+        "Viết nhầm số mũ ở mẫu là $n$ thay vì $n+1$."
       ]
     },
     {
@@ -239,28 +239,28 @@
       "topic": "3.3 Vi phân cấp cao",
       "difficulty": "Medium",
       "bloom_level": "Applying",
-      "question_text": "Tính vi phân cấp hai $d^2y$ của hàm số $y = \\ln(x + \\sqrt{x^2+4})$[cite: 5].",
-      "full_answer": "$d^2y = \\frac{-x}{(x^2+4)\\sqrt{x^2+4}} dx^2$[cite: 5].",
+      "question_text": "Tính vi phân cấp hai $d^2y$ của hàm số $y = \\ln(x + \\sqrt{x^2+4})$.",
+      "full_answer": "$d^2y = \\frac{-x}{(x^2+4)\\sqrt{x^2+4}} dx^2$.",
       "scaffolding_steps": [
         {
           "step_number": 1,
-          "hint": "Nhắc lại định nghĩa vi phân cấp $n$: $d^ny = f^{(n)}(x)dx^n$[cite: 5]. Như vậy, trước hết ta cần tính đạo hàm cấp 1.",
-          "step_detail": "$y' = \\frac{1}{x+\\sqrt{x^2+4}} \\left( 1 + \\frac{x}{\\sqrt{x^2+4}} \\right) = \\frac{1}{x+\\sqrt{x^2+4}} \\cdot \\frac{\\sqrt{x^2+4}+x}{\\sqrt{x^2+4}} = \\frac{1}{\\sqrt{x^2+4}}$[cite: 5]."
+          "hint": "Nhắc lại định nghĩa vi phân cấp $n$: $d^ny = f^{(n)}(x)dx^n$. Như vậy, trước hết ta cần tính đạo hàm cấp 1.",
+          "step_detail": "$y' = \\frac{1}{x+\\sqrt{x^2+4}} \\left( 1 + \\frac{x}{\\sqrt{x^2+4}} \\right) = \\frac{1}{x+\\sqrt{x^2+4}} \\cdot \\frac{\\sqrt{x^2+4}+x}{\\sqrt{x^2+4}} = \\frac{1}{\\sqrt{x^2+4}}$."
         },
         {
           "step_number": 2,
           "hint": "Tiếp tục tính đạo hàm cấp 2 từ kết quả $y'$.",
-          "step_detail": "$y'' = \\left( (x^2+4)^{-1/2} \\right)' = -\\frac{1}{2}(x^2+4)^{-3/2} \\cdot 2x = \\frac{-x}{(x^2+4)\\sqrt{x^2+4}}$[cite: 5]."
+          "step_detail": "$y'' = \\left( (x^2+4)^{-1/2} \\right)' = -\\frac{1}{2}(x^2+4)^{-3/2} \\cdot 2x = \\frac{-x}{(x^2+4)\\sqrt{x^2+4}}$."
         },
         {
           "step_number": 3,
           "hint": "Viết biểu thức vi phân cấp hai hoàn chỉnh.",
-          "step_detail": "$d^2y = y'' dx^2 = \\frac{-x}{(x^2+4)\\sqrt{x^2+4}} dx^2$[cite: 5]."
+          "step_detail": "$d^2y = y'' dx^2 = \\frac{-x}{(x^2+4)\\sqrt{x^2+4}} dx^2$."
         }
       ],
       "common_mistakes": [
-        "Quên rằng biểu thức vi phân cấp cao không có tính bất biến, nên $d^2y \\neq y''(u)du^2$ nếu $u$ là một hàm số[cite: 5].",
-        "Viết thiếu $dx^2$ trong biểu thức cuối cùng[cite: 5]."
+        "Quên rằng biểu thức vi phân cấp cao không có tính bất biến, nên $d^2y \\neq y''(u)du^2$ nếu $u$ là một hàm số.",
+        "Viết thiếu $dx^2$ trong biểu thức cuối cùng."
       ]
     },
     {
@@ -269,27 +269,27 @@
       "difficulty": "Medium",
       "bloom_level": "Understanding",
       "question_text": "Phát biểu định lí Fermat về điểm cực trị. Một hàm số đạt cực trị tại $x_0$ thì có nhất thiết phải khả vi tại đó không? Cho ví dụ.",
-      "full_answer": "Định lí Fermat: Nếu $f(x)$ khả vi tại $x_0$ và đạt cực trị tại $x_0$ thì $f'(x_0) = 0$[cite: 5]. Hàm số đạt cực trị tại $x_0$ 'không nhất thiết' phải khả vi tại đó. Ví dụ: hàm $f(x) = |x|$ đạt cực tiểu tại $x = 0$ nhưng không có đạo hàm tại đó[cite: 5].",
+      "full_answer": "Định lí Fermat: Nếu $f(x)$ khả vi tại $x_0$ và đạt cực trị tại $x_0$ thì $f'(x_0) = 0$. Hàm số đạt cực trị tại $x_0$ 'không nhất thiết' phải khả vi tại đó. Ví dụ: hàm $f(x) = |x|$ đạt cực tiểu tại $x = 0$ nhưng không có đạo hàm tại đó.",
       "scaffolding_steps": [
         {
           "step_number": 1,
           "hint": "Nêu điều kiện cần để một hàm số có đạo hàm bằng 0 tại điểm cực trị theo định lí Fermat.",
-          "step_detail": "Nếu hàm số $f$ xác định trên $X$, đạt cực trị (cực đại hoặc cực tiểu) tại $x_0$ và 'có đạo hàm' tại điểm đó, thì đạo hàm $f'(x_0)$ bắt buộc phải bằng 0[cite: 5]."
+          "step_detail": "Nếu hàm số $f$ xác định trên $X$, đạt cực trị (cực đại hoặc cực tiểu) tại $x_0$ và 'có đạo hàm' tại điểm đó, thì đạo hàm $f'(x_0)$ bắt buộc phải bằng 0."
         },
         {
           "step_number": 2,
           "hint": "Xét trường hợp hàm số đạt cực trị nhưng đồ thị bị 'gãy'. Hãy lấy ví dụ về hàm trị tuyệt đối.",
-          "step_detail": "Hàm số $y = |x|$ có giá trị nhỏ nhất tại $x = 0$ (cực tiểu), nhưng tại đây đạo hàm trái là $-1$ và đạo hàm phải là $1$, nên hàm số không khả vi tại 0[cite: 5]."
+          "step_detail": "Hàm số $y = |x|$ có giá trị nhỏ nhất tại $x = 0$ (cực tiểu), nhưng tại đây đạo hàm trái là $-1$ và đạo hàm phải là $1$, nên hàm số không khả vi tại 0."
         },
         {
           "step_number": 3,
           "hint": "Phân biệt giữa 'điểm dừng' và 'điểm tới hạn'.",
-          "step_detail": "Điểm dừng là nơi $f'(x_0) = 0$[cite: 5]. Điểm tới hạn bao gồm cả điểm dừng và các điểm mà tại đó hàm số không khả vi. Điểm cực trị luôn phải là điểm tới hạn[cite: 5]."
+          "step_detail": "Điểm dừng là nơi $f'(x_0) = 0$. Điểm tới hạn bao gồm cả điểm dừng và các điểm mà tại đó hàm số không khả vi. Điểm cực trị luôn phải là điểm tới hạn."
         }
       ],
       "common_mistakes": [
-        "Nhầm tưởng rằng mọi điểm cực trị đều có đạo hàm bằng 0 (quên các điểm hàm số không khả vi)[cite: 5].",
-        "Nhầm chiều định lí: $f'(x_0) = 0$ chưa chắc $x_0$ đã là cực trị (ví dụ $y = x^3$ tại $x=0$)[cite: 5]."
+        "Nhầm tưởng rằng mọi điểm cực trị đều có đạo hàm bằng 0 (quên các điểm hàm số không khả vi).",
+        "Nhầm chiều định lí: $f'(x_0) = 0$ chưa chắc $x_0$ đã là cực trị (ví dụ $y = x^3$ tại $x=0$)."
       ]
     },
     {
@@ -297,27 +297,27 @@
       "topic": "3.4 Định lí Rôn (Rolle)",
       "difficulty": "Hard",
       "bloom_level": "Applying",
-      "question_text": "Phát biểu định lí Rolle. Cho hàm số $f(x)$ liên tục trên $[a, b]$, khả vi trên $(a, b)$ và $f(a) = f(b) = 0$. Chứng minh rằng với hằng số $k$ bất kỳ, phương trình $f'(x) = kf(x)$ luôn có nghiệm[cite: 5].",
-      "full_answer": "Định lí Rolle: Nếu $f(x)$ liên tục trên $[a, b]$, khả vi trên $(a, b)$ và $f(a) = f(b)$ thì tồn tại $c \\in (a, b)$ sao cho $f'(c) = 0$[cite: 5]. Để chứng minh bài toán, ta xét hàm phụ $g(x) = f(x)e^{-kx}$. Khi đó $g(a) = g(b) = 0$, áp dụng định lí Rolle cho $g(x)$ ta có $g'(c) = 0 \\Rightarrow f'(c) - kf(c) = 0$[cite: 5].",
+      "question_text": "Phát biểu định lí Rolle. Cho hàm số $f(x)$ liên tục trên $[a, b]$, khả vi trên $(a, b)$ và $f(a) = f(b) = 0$. Chứng minh rằng với hằng số $k$ bất kỳ, phương trình $f'(x) = kf(x)$ luôn có nghiệm.",
+      "full_answer": "Định lí Rolle: Nếu $f(x)$ liên tục trên $[a, b]$, khả vi trên $(a, b)$ và $f(a) = f(b)$ thì tồn tại $c \\in (a, b)$ sao cho $f'(c) = 0$. Để chứng minh bài toán, ta xét hàm phụ $g(x) = f(x)e^{-kx}$. Khi đó $g(a) = g(b) = 0$, áp dụng định lí Rolle cho $g(x)$ ta có $g'(c) = 0 \\Rightarrow f'(c) - kf(c) = 0$.",
       "scaffolding_steps": [
         {
           "step_number": 1,
           "hint": "Liệt kê 3 điều kiện bắt buộc của định lí Rolle.",
-          "step_detail": "1. Liên tục trên đoạn đóng $[a, b]$. 2. Khả vi trên khoảng mở $(a, b)$. 3. Giá trị tại hai đầu mút bằng nhau $f(a) = f(b)$[cite: 5]."
+          "step_detail": "1. Liên tục trên đoạn đóng $[a, b]$. 2. Khả vi trên khoảng mở $(a, b)$. 3. Giá trị tại hai đầu mút bằng nhau $f(a) = f(b)$."
         },
         {
           "step_number": 2,
           "hint": "Ý nghĩa hình học của định lí Rolle là gì?",
-          "step_detail": "Tồn tại ít nhất một điểm $c \\in (a, b)$ mà tại đó tiếp tuyến của đồ thị song song với trục hoành ($Ox$)[cite: 5]."
+          "step_detail": "Tồn tại ít nhất một điểm $c \\in (a, b)$ mà tại đó tiếp tuyến của đồ thị song song với trục hoành ($Ox$)."
         },
         {
           "step_number": 3,
           "hint": "Để giải quyết bài toán $f'(x) = kf(x)$, hãy tìm một hàm số mà khi đạo hàm sẽ xuất hiện biểu thức này. Gợi ý: dùng hàm mũ.",
-          "step_detail": "Xét $g(x) = f(x)e^{-kx}$. Đạo hàm $g'(x) = [f'(x) - kf(x)]e^{-kx}$[cite: 5]. Vì $f(a)=f(b)=0$ nên $g(a)=g(b)=0$. Theo định lí Rolle, tồn tại $c \\in (a, b)$ sao cho $g'(c) = 0$, dẫn đến $f'(c) = kf(c)$[cite: 5]."
+          "step_detail": "Xét $g(x) = f(x)e^{-kx}$. Đạo hàm $g'(x) = [f'(x) - kf(x)]e^{-kx}$. Vì $f(a)=f(b)=0$ nên $g(a)=g(b)=0$. Theo định lí Rolle, tồn tại $c \\in (a, b)$ sao cho $g'(c) = 0$, dẫn đến $f'(c) = kf(c)$."
         }
       ],
       "common_mistakes": [
-        "Quên không kiểm tra tính liên tục hoặc khả vi trước khi áp dụng định lí[cite: 5].",
+        "Quên không kiểm tra tính liên tục hoặc khả vi trước khi áp dụng định lí.",
         "Không biết cách xây dựng hàm phụ phù hợp để đưa về định lí Rolle."
       ]
     },
@@ -326,27 +326,27 @@
       "topic": "3.4 Định lí Lagrăng (Lagrange) và Côsi (Cauchy)",
       "difficulty": "Hard",
       "bloom_level": "Evaluating",
-      "question_text": "Phát biểu định lí Lagrange và định lí Cauchy. Giải thích tại sao định lí Lagrange là trường hợp đặc biệt của định lí Cauchy[cite: 5].",
-      "full_answer": "Lagrange: $f(b) - f(a) = f'(c)(b-a)$[cite: 5]. Cauchy: $\\frac{f(b)-f(a)}{g(b)-g(a)} = \\frac{f'(c)}{g'(c)}$[cite: 5]. Định lí Lagrange là trường hợp đặc biệt của Cauchy khi ta chọn hàm $g(x) = x$[cite: 5].",
+      "question_text": "Phát biểu định lí Lagrange và định lí Cauchy. Giải thích tại sao định lí Lagrange là trường hợp đặc biệt của định lí Cauchy.",
+      "full_answer": "Lagrange: $f(b) - f(a) = f'(c)(b-a)$. Cauchy: $\\frac{f(b)-f(a)}{g(b)-g(a)} = \\frac{f'(c)}{g'(c)}$. Định lí Lagrange là trường hợp đặc biệt của Cauchy khi ta chọn hàm $g(x) = x$.",
       "scaffolding_steps": [
         {
           "step_number": 1,
           "hint": "Phát biểu nội dung và công thức của định lí Lagrange (định lí về giá trị trung bình).",
-          "step_detail": "Nếu $f$ liên tục trên $[a, b]$ và khả vi trên $(a, b)$, tồn tại $c \\in (a, b)$ sao cho $f'(c) = \\frac{f(b) - f(a)}{b - a}$[cite: 5]."
+          "step_detail": "Nếu $f$ liên tục trên $[a, b]$ và khả vi trên $(a, b)$, tồn tại $c \\in (a, b)$ sao cho $f'(c) = \\frac{f(b) - f(a)}{b - a}$."
         },
         {
           "step_number": 2,
           "hint": "Phát biểu định lí Cauchy (mở rộng của Lagrange cho hai hàm số).",
-          "step_detail": "Nếu $f, g$ thỏa mãn các điều kiện liên tục, khả vi và $g'(x) \\neq 0$ trên $(a, b)$, tồn tại $c \\in (a, b)$ sao cho $\\frac{f(b) - f(a)}{g(b) - g(a)} = \\frac{f'(c)}{g'(c)}$[cite: 5]."
+          "step_detail": "Nếu $f, g$ thỏa mãn các điều kiện liên tục, khả vi và $g'(x) \\neq 0$ trên $(a, b)$, tồn tại $c \\in (a, b)$ sao cho $\\frac{f(b) - f(a)}{g(b) - g(a)} = \\frac{f'(c)}{g'(c)}$."
         },
         {
           "step_number": 3,
           "hint": "Thay $g(x) = x$ vào công thức của định lí Cauchy để thấy sự liên hệ.",
-          "step_detail": "Khi $g(x) = x$ thì $g'(x) = 1$. Công thức Cauchy trở thành $\\frac{f(b)-f(a)}{b-a} = \\frac{f'(c)}{1}$, chính là công thức Lagrange[cite: 5]."
+          "step_detail": "Khi $g(x) = x$ thì $g'(x) = 1$. Công thức Cauchy trở thành $\\frac{f(b)-f(a)}{b-a} = \\frac{f'(c)}{1}$, chính là công thức Lagrange."
         }
       ],
       "common_mistakes": [
-        "Viết nhầm công thức Cauchy thành tích thay vì thương, hoặc quên điều kiện mẫu số $g'(x) \\neq 0$[cite: 5]."
+        "Viết nhầm công thức Cauchy thành tích thay vì thương, hoặc quên điều kiện mẫu số $g'(x) \\neq 0$."
       ]
     },
     {
@@ -355,27 +355,27 @@
       "difficulty": "Hard",
       "bloom_level": "Applying",
       "question_text": "Hãy sử dụng các khai triển Maclaurin cơ bản để phân tích hàm số $f(x) = e^{\\sin x}$ đến số hạng chứa $x^3$.",
-      "full_answer": "$e^{\\sin x} = 1 + x + \\frac{1}{2}x^2 + o(x^3)$[cite: 5].",
+      "full_answer": "$e^{\\sin x} = 1 + x + \\frac{1}{2}x^2 + o(x^3)$.",
       "scaffolding_steps": [
         {
           "step_number": 1,
-          "hint": "Viết khai triển Maclaurin của hàm $e^u$ đến cấp 3[cite: 5].",
-          "step_detail": "$e^u = 1 + u + \\frac{u^2}{2!} + \\frac{u^3}{3!} + o(u^3)$[cite: 5]. Ở đây ta sẽ đặt $u = \\sin x$[cite: 5]."
+          "hint": "Viết khai triển Maclaurin của hàm $e^u$ đến cấp 3.",
+          "step_detail": "$e^u = 1 + u + \\frac{u^2}{2!} + \\frac{u^3}{3!} + o(u^3)$. Ở đây ta sẽ đặt $u = \\sin x$."
         },
         {
           "step_number": 2,
-          "hint": "Tiếp theo, viết khai triển Maclaurin của $u = \\sin x$ đến cấp 3[cite: 5].",
-          "step_detail": "$\\sin x = x - \\frac{x^3}{6} + o(x^3)$[cite: 5]."
+          "hint": "Tiếp theo, viết khai triển Maclaurin của $u = \\sin x$ đến cấp 3.",
+          "step_detail": "$\\sin x = x - \\frac{x^3}{6} + o(x^3)$."
         },
         {
           "step_number": 3,
-          "hint": "Thay khai triển của $\\sin x$ vào biểu thức của $e^u$ và chỉ giữ lại các số hạng có bậc không quá 3[cite: 5].",
-          "step_detail": "$e^{\\sin x} = 1 + (x - \\frac{x^3}{6}) + \\frac{1}{2}(x - \\frac{x^3}{6})^2 + \\frac{1}{6}(x - \\frac{x^3}{6})^3 + o(x^3)$[cite: 5]. Khi khai triển các lũy thừa, ta được: $1 + x - \\frac{x^3}{6} + \\frac{x^2}{2} + \\frac{x^3}{6} + o(x^3) = 1 + x + \\frac{x^2}{2} + o(x^3)$[cite: 5]."
+          "hint": "Thay khai triển của $\\sin x$ vào biểu thức của $e^u$ và chỉ giữ lại các số hạng có bậc không quá 3.",
+          "step_detail": "$e^{\\sin x} = 1 + (x - \\frac{x^3}{6}) + \\frac{1}{2}(x - \\frac{x^3}{6})^2 + \\frac{1}{6}(x - \\frac{x^3}{6})^3 + o(x^3)$. Khi khai triển các lũy thừa, ta được: $1 + x - \\frac{x^3}{6} + \\frac{x^2}{2} + \\frac{x^3}{6} + o(x^3) = 1 + x + \\frac{x^2}{2} + o(x^3)$."
         }
       ],
       "common_mistakes": [
-        "Khai triển thiếu số hạng hoặc tính toán sai hệ số khi nâng lũy thừa cho các đa thức vô cùng bé[cite: 5].",
-        "Quên không triệt tiêu các số hạng đối nhau như $-x^3/6$ và $+x^3/6$[cite: 5]."
+        "Khai triển thiếu số hạng hoặc tính toán sai hệ số khi nâng lũy thừa cho các đa thức vô cùng bé.",
+        "Quên không triệt tiêu các số hạng đối nhau như $-x^3/6$ và $+x^3/6$."
       ]
     },
     {
@@ -383,27 +383,27 @@
       "topic": "3.5 Tính giới hạn bằng công thức Maclaurin",
       "difficulty": "Medium",
       "bloom_level": "Evaluating",
-      "question_text": "Tính giới hạn sau bằng cách sử dụng khai triển Maclaurin: $\\lim_{x \\to 0} \\frac{x - \\sin x}{x(1 - \\cos x)}$[cite: 5].",
-      "full_answer": "$\\lim_{x \\to 0} \\frac{x - \\sin x}{x(1 - \\cos x)} = \\frac{1}{3}$[cite: 5].",
+      "question_text": "Tính giới hạn sau bằng cách sử dụng khai triển Maclaurin: $\\lim_{x \\to 0} \\frac{x - \\sin x}{x(1 - \\cos x)}$.",
+      "full_answer": "$\\lim_{x \\to 0} \\frac{x - \\sin x}{x(1 - \\cos x)} = \\frac{1}{3}$.",
       "scaffolding_steps": [
         {
           "step_number": 1,
-          "hint": "Thay các hàm $\\sin x$ và $\\cos x$ bằng các khai triển Maclaurin tương ứng của chúng[cite: 5].",
-          "step_detail": "Sử dụng: $\\sin x = x - \\frac{x^3}{6} + o(x^3)$ và $\\cos x = 1 - \\frac{x^2}{2} + o(x^2)$[cite: 5]."
+          "hint": "Thay các hàm $\\sin x$ và $\\cos x$ bằng các khai triển Maclaurin tương ứng của chúng.",
+          "step_detail": "Sử dụng: $\\sin x = x - \\frac{x^3}{6} + o(x^3)$ và $\\cos x = 1 - \\frac{x^2}{2} + o(x^2)$."
         },
         {
           "step_number": 2,
-          "hint": "Thay vào biểu thức giới hạn và rút gọn tử số cũng như mẫu số[cite: 5].",
-          "step_detail": "Tử số: $x - (x - \\frac{x^3}{6} + o(x^3)) = \\frac{x^3}{6} + o(x^3)$[cite: 5]. Mẫu số: $x(1 - (1 - \\frac{x^2}{2} + o(x^2))) = x(\\frac{x^2}{2} + o(x^2)) = \\frac{x^3}{2} + o(x^3)$[cite: 5]."
+          "hint": "Thay vào biểu thức giới hạn và rút gọn tử số cũng như mẫu số.",
+          "step_detail": "Tử số: $x - (x - \\frac{x^3}{6} + o(x^3)) = \\frac{x^3}{6} + o(x^3)$. Mẫu số: $x(1 - (1 - \\frac{x^2}{2} + o(x^2))) = x(\\frac{x^2}{2} + o(x^2)) = \\frac{x^3}{2} + o(x^3)$."
         },
         {
           "step_number": 3,
-          "hint": "Chia cả tử và mẫu cho $x^3$ và tìm giới hạn cuối cùng[cite: 5].",
-          "step_detail": "$\\lim_{x \\to 0} \\frac{x^3/6}{x^3/2} = \\frac{1/6}{1/2} = \\frac{1}{3}$[cite: 5]."
+          "hint": "Chia cả tử và mẫu cho $x^3$ và tìm giới hạn cuối cùng.",
+          "step_detail": "$\\lim_{x \\to 0} \\frac{x^3/6}{x^3/2} = \\frac{1/6}{1/2} = \\frac{1}{3}$."
         }
       ],
       "common_mistakes": [
-        "Khai triển không cùng cấp ở tử và mẫu khiến không triệt tiêu hết các đại lượng vô cùng bé, dẫn đến kết quả sai[cite: 5]."
+        "Khai triển không cùng cấp ở tử và mẫu khiến không triệt tiêu hết các đại lượng vô cùng bé, dẫn đến kết quả sai."
       ]
     },
     {
@@ -411,33 +411,33 @@
       "topic": "3.5 Quy tắc Lôpitan (L'Hospital): Dạng vô định vô hạn trừ vô hạn",
       "difficulty": "Hard",
       "bloom_level": "Applying",
-      "question_text": "Tính giới hạn sau bằng quy tắc Lôpitan: $\\lim_{x \\to 1} \\left( \\frac{1}{\\ln x} - \\frac{1}{x-1} \\right)$[cite: 5].",
-      "full_answer": "$\\lim_{x \\to 1} \\left( \\frac{1}{\\ln x} - \\frac{1}{x-1} \\right) = \\frac{1}{2}$[cite: 5].",
+      "question_text": "Tính giới hạn sau bằng quy tắc Lôpitan: $\\lim_{x \\to 1} \\left( \\frac{1}{\\ln x} - \\frac{1}{x-1} \\right)$.",
+      "full_answer": "$\\lim_{x \\to 1} \\left( \\frac{1}{\\ln x} - \\frac{1}{x-1} \\right) = \\frac{1}{2}$.",
       "scaffolding_steps": [
         {
           "step_number": 1,
-          "hint": "Đây là dạng vô định $\\infty - \\infty$[cite: 5]. Hãy quy đồng mẫu số để đưa về dạng $\\frac{0}{0}$ trước khi áp dụng quy tắc Lôpitan[cite: 5].",
-          "step_detail": "Biểu thức trở thành: $\\lim_{x \\to 1} \\frac{x - 1 - \\ln x}{(x - 1)\\ln x}$[cite: 5]."
+          "hint": "Đây là dạng vô định $\\infty - \\infty$. Hãy quy đồng mẫu số để đưa về dạng $\\frac{0}{0}$ trước khi áp dụng quy tắc Lôpitan.",
+          "step_detail": "Biểu thức trở thành: $\\lim_{x \\to 1} \\frac{x - 1 - \\ln x}{(x - 1)\\ln x}$."
         },
         {
           "step_number": 2,
-          "hint": "Áp dụng quy tắc Lôpitan lần thứ nhất bằng cách đạo hàm cả tử và mẫu[cite: 5].",
-          "step_detail": "$\\lim_{x \\to 1} \\frac{(x - 1 - \\ln x)'}{((x - 1)\\ln x)'} = \\lim_{x \\to 1} \\frac{1 - 1/x}{\\ln x + (x-1)/x} = \\lim_{x \\to 1} \\frac{x - 1}{x \\ln x + x - 1}$[cite: 5]."
+          "hint": "Áp dụng quy tắc Lôpitan lần thứ nhất bằng cách đạo hàm cả tử và mẫu.",
+          "step_detail": "$\\lim_{x \\to 1} \\frac{(x - 1 - \\ln x)'}{((x - 1)\\ln x)'} = \\lim_{x \\to 1} \\frac{1 - 1/x}{\\ln x + (x-1)/x} = \\lim_{x \\to 1} \\frac{x - 1}{x \\ln x + x - 1}$."
         },
         {
           "step_number": 3,
-          "hint": "Biểu thức vẫn còn dạng $\\frac{0}{0}$[cite: 5]. Hãy áp dụng quy tắc Lôpitan thêm một lần nữa[cite: 5].",
-          "step_detail": "$\\lim_{x \\to 1} \\frac{(x - 1)'}{(x \\ln x + x - 1)'} = \\lim_{x \\to 1} \\frac{1}{\\ln x + 1 + 1} = \\lim_{x \\to 1} \\frac{1}{\\ln x + 2}$[cite: 5]."
+          "hint": "Biểu thức vẫn còn dạng $\\frac{0}{0}$. Hãy áp dụng quy tắc Lôpitan thêm một lần nữa.",
+          "step_detail": "$\\lim_{x \\to 1} \\frac{(x - 1)'}{(x \\ln x + x - 1)'} = \\lim_{x \\to 1} \\frac{1}{\\ln x + 1 + 1} = \\lim_{x \\to 1} \\frac{1}{\\ln x + 2}$."
         },
         {
           "step_number": 4,
-          "hint": "Thay giá trị $x = 1$ vào kết quả cuối cùng[cite: 5].",
-          "step_detail": "$\\frac{1}{\\ln(1) + 2} = \\frac{1}{0 + 2} = \\frac{1}{2}$[cite: 5]."
+          "hint": "Thay giá trị $x = 1$ vào kết quả cuối cùng.",
+          "step_detail": "$\\frac{1}{\\ln(1) + 2} = \\frac{1}{0 + 2} = \\frac{1}{2}$."
         }
       ],
       "common_mistakes": [
-        "Áp dụng trực tiếp Lôpitan cho từng số hạng riêng lẻ của hiệu thay vì quy đồng mẫu số (sai quy tắc)[cite: 5].",
-        "Đạo hàm sai mẫu số dạng tích $u \\cdot v$[cite: 5]."
+        "Áp dụng trực tiếp Lôpitan cho từng số hạng riêng lẻ của hiệu thay vì quy đồng mẫu số (sai quy tắc).",
+        "Đạo hàm sai mẫu số dạng tích $u \\cdot v$."
       ]
     },
     {
@@ -445,28 +445,28 @@
       "topic": "3.6 Cực trị của hàm số: Quy tắc đạo hàm cấp cao",
       "difficulty": "Medium",
       "bloom_level": "Applying",
-      "question_text": "Sử dụng đạo hàm cấp cao, hãy tìm cực trị của hàm số $f(x) = x^3 - 3x^2 + 2$[cite: 5].",
-      "full_answer": "Hàm số đạt cực đại tại $x = 0$ ($f(0) = 2$) và đạt cực tiểu tại $x = 2$ ($f(2) = -2$)[cite: 5].",
+      "question_text": "Sử dụng đạo hàm cấp cao, hãy tìm cực trị của hàm số $f(x) = x^3 - 3x^2 + 2$.",
+      "full_answer": "Hàm số đạt cực đại tại $x = 0$ ($f(0) = 2$) và đạt cực tiểu tại $x = 2$ ($f(2) = -2$).",
       "scaffolding_steps": [
         {
           "step_number": 1,
           "hint": "Tính đạo hàm cấp 1 và tìm các điểm dừng (nơi $f'(x) = 0$).",
-          "step_detail": "$f'(x) = 3x^2 - 6x$[cite: 5]. Giải phương trình $3x^2 - 6x = 0$ ta được hai điểm dừng là $x = 0$ và $x = 2$[cite: 5]."
+          "step_detail": "$f'(x) = 3x^2 - 6x$. Giải phương trình $3x^2 - 6x = 0$ ta được hai điểm dừng là $x = 0$ và $x = 2$."
         },
         {
           "step_number": 2,
           "hint": "Tính đạo hàm cấp 2 để kiểm tra tính chất của các điểm dừng.",
-          "step_detail": "$f''(x) = 6x - 6$[cite: 5]."
+          "step_detail": "$f''(x) = 6x - 6$."
         },
         {
           "step_number": 3,
           "hint": "Thay các điểm dừng vào $f''(x)$. Nếu $f''(x_0) < 0$ thì là cực đại, nếu $f''(x_0) > 0$ thì là cực tiểu.",
-          "step_detail": "Tại $x = 0$: $f''(0) = -6 < 0 \\Rightarrow$ cực đại[cite: 5]. Tại $x = 2$: $f''(2) = 6 > 0 \\Rightarrow$ cực tiểu[cite: 5]."
+          "step_detail": "Tại $x = 0$: $f''(0) = -6 < 0 \\Rightarrow$ cực đại. Tại $x = 2$: $f''(2) = 6 > 0 \\Rightarrow$ cực tiểu."
         }
       ],
       "common_mistakes": [
         "Quên không tính giá trị cực trị $f(x_0)$ mà chỉ kết luận điểm cực trị $x_0$.",
-        "Nhầm lẫn dấu của đạo hàm cấp 2: tưởng $f'' > 0$ là cực đại (thực tế $f'' > 0$ là đáy/cực tiểu)[cite: 5]."
+        "Nhầm lẫn dấu của đạo hàm cấp 2: tưởng $f'' > 0$ là cực đại (thực tế $f'' > 0$ là đáy/cực tiểu)."
       ]
     },
     {
@@ -474,28 +474,28 @@
       "topic": "3.6 Tính lồi lõm và Điểm uốn",
       "difficulty": "Hard",
       "bloom_level": "Analyzing",
-      "question_text": "Xét tính lồi, lõm và tìm điểm uốn của đồ thị hàm số $y = \\frac{a \\ln x}{x}$ (với $a > 0, x > 0$)[cite: 5].",
-      "full_answer": "Hàm số lồi trong khoảng $(0, ae^{3/2})$, lõm trong khoảng $(ae^{3/2}, +\\infty)$. Điểm uốn là $U(ae^{3/2}, \\frac{3}{2}ae^{-3/2})$[cite: 5].",
+      "question_text": "Xét tính lồi, lõm và tìm điểm uốn của đồ thị hàm số $y = \\frac{a \\ln x}{x}$ (với $a > 0, x > 0$).",
+      "full_answer": "Hàm số lồi trong khoảng $(0, ae^{3/2})$, lõm trong khoảng $(ae^{3/2}, +\\infty)$. Điểm uốn là $U(ae^{3/2}, \\frac{3}{2}ae^{-3/2})$.",
       "scaffolding_steps": [
         {
           "step_number": 1,
           "hint": "Tính đạo hàm cấp 1 và cấp 2 của hàm số. Lưu ý quy tắc đạo hàm của thương.",
-          "step_detail": "$y' = \\frac{a(1 - \\ln x)}{x^2}$[cite: 5]. $y'' = \\frac{a(2\\ln x - 3)}{x^3}$[cite: 5]."
+          "step_detail": "$y' = \\frac{a(1 - \\ln x)}{x^2}$. $y'' = \\frac{a(2\\ln x - 3)}{x^3}$."
         },
         {
           "step_number": 2,
           "hint": "Tìm điểm mà tại đó đạo hàm cấp 2 bằng 0.",
-          "step_detail": "$y'' = 0 \\Leftrightarrow 2\\ln x - 3 = 0 \\Leftrightarrow \\ln x = \\frac{3}{2} \\Leftrightarrow x = e^{3/2}$[cite: 5]. (Trong giáo trình PTIT ví dụ ghi là $ae^{3/2}$ tùy theo cách đặt biến)[cite: 5]."
+          "step_detail": "$y'' = 0 \\Leftrightarrow 2\\ln x - 3 = 0 \\Leftrightarrow \\ln x = \\frac{3}{2} \\Leftrightarrow x = e^{3/2}$. (Trong giáo trình PTIT ví dụ ghi là $ae^{3/2}$ tùy theo cách đặt biến)."
         },
         {
           "step_number": 3,
           "hint": "Xét dấu $y''$ để kết luận tính lồi lõm. Quy ước: $y'' > 0$ là lõm (quay bề lõm lên trên), $y'' < 0$ là lồi (quay bề lồi lên trên/bề lõm xuống dưới).",
-          "step_detail": "$y'' < 0$ khi $x < e^{3/2} \\Rightarrow$ hàm số lồi[cite: 5]. $y'' > 0$ khi $x > e^{3/2} \\Rightarrow$ hàm số lõm[cite: 5]. Điểm tại đó đạo hàm cấp 2 đổi dấu chính là điểm uốn[cite: 5]."
+          "step_detail": "$y'' < 0$ khi $x < e^{3/2} \\Rightarrow$ hàm số lồi. $y'' > 0$ khi $x > e^{3/2} \\Rightarrow$ hàm số lõm. Điểm tại đó đạo hàm cấp 2 đổi dấu chính là điểm uốn."
         }
       ],
       "common_mistakes": [
-        "Tính sai đạo hàm cấp 2 do nhầm lẫn dấu hoặc hệ số khi đạo hàm phân thức[cite: 5].",
-        "Nhầm lẫn định nghĩa lồi/lõm (một số giáo trình quy ước ngược lại, nhưng cần bám sát slide PTIT: lồi tương ứng với $y'' < 0$)[cite: 5]."
+        "Tính sai đạo hàm cấp 2 do nhầm lẫn dấu hoặc hệ số khi đạo hàm phân thức.",
+        "Nhầm lẫn định nghĩa lồi/lõm (một số giáo trình quy ước ngược lại, nhưng cần bám sát slide PTIT: lồi tương ứng với $y'' < 0$)."
       ]
     },
     {
@@ -503,28 +503,28 @@
       "topic": "3.6 Các đường tiệm cận của đồ thị hàm số",
       "difficulty": "Hard",
       "bloom_level": "Evaluating",
-      "question_text": "Tìm các tiệm cận của đồ thị hàm số $y = x e \\ln(1 + \\frac{1}{x})$[cite: 5].",
-      "full_answer": "Đồ thị hàm số có tiệm cận đứng là $x = -1/e$ và tiệm cận xiên là $y = x + 1/e$[cite: 5].",
+      "question_text": "Tìm các tiệm cận của đồ thị hàm số $y = x e \\ln(1 + \\frac{1}{x})$.",
+      "full_answer": "Đồ thị hàm số có tiệm cận đứng là $x = -1/e$ và tiệm cận xiên là $y = x + 1/e$.",
       "scaffolding_steps": [
         {
           "step_number": 1,
           "hint": "Xác định miền xác định của hàm số để tìm các điểm nghi ngờ có tiệm cận đứng.",
-          "step_detail": "Điều kiện $1 + 1/x > 0$ và $x \\neq 0 \\Rightarrow x < -1/e$ hoặc $x > 0$ (theo slide)[cite: 5]. Tính giới hạn tại các đầu mút của MXĐ[cite: 5]."
+          "step_detail": "Điều kiện $1 + 1/x > 0$ và $x \\neq 0 \\Rightarrow x < -1/e$ hoặc $x > 0$ (theo slide). Tính giới hạn tại các đầu mút của MXĐ."
         },
         {
           "step_number": 2,
           "hint": "Tính giới hạn $\\lim_{x \\to x_0} f(x)$ để xác định tiệm cận đứng.",
-          "step_detail": "Khi $x \\to -1/e^-$, giới hạn tiến về $+\\infty$ nên $x = -1/e$ là tiệm cận đứng[cite: 5]."
+          "step_detail": "Khi $x \\to -1/e^-$, giới hạn tiến về $+\\infty$ nên $x = -1/e$ là tiệm cận đứng."
         },
         {
           "step_number": 3,
           "hint": "Tìm hệ số $a, b$ cho tiệm cận xiên $y = ax + b$ khi $x \\to \\pm\\infty$.",
-          "step_detail": "$a = \\lim_{x \\to \\infty} \\frac{f(x)}{x} = \\lim_{x \\to \\infty} e \\ln(1 + 1/x) = 1$[cite: 5]. $b = \\lim_{x \\to \\infty} [f(x) - ax] = 1/e$[cite: 5]. Vậy tiệm cận xiên là $y = x + 1/e$[cite: 5]."
+          "step_detail": "$a = \\lim_{x \\to \\infty} \\frac{f(x)}{x} = \\lim_{x \\to \\infty} e \\ln(1 + 1/x) = 1$. $b = \\lim_{x \\to \\infty} [f(x) - ax] = 1/e$. Vậy tiệm cận xiên là $y = x + 1/e$."
         }
       ],
       "common_mistakes": [
-        "Quên không tìm tiệm cận xiên khi giới hạn $\\frac{f(x)}{x}$ ra một số hữu hạn khác 0[cite: 5].",
-        "Sai sót khi tính các giới hạn phức tạp chứa hàm $\\ln$ và $e$ ở vô cực[cite: 5]."
+        "Quên không tìm tiệm cận xiên khi giới hạn $\\frac{f(x)}{x}$ ra một số hữu hạn khác 0.",
+        "Sai sót khi tính các giới hạn phức tạp chứa hàm $\\ln$ và $e$ ở vô cực."
       ]
     }
   ]

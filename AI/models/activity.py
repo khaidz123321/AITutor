@@ -8,7 +8,7 @@ class Activity(Base):
     # ondelete="CASCADE": nếu tài khoản User bị xóa, toàn bộ lịch sử hoạt động của người đó cũng bị xóa theo.
     user_id = Column(Integer, ForeignKey("users.id", ondelete="CASCADE"), index=True, nullable=False)
     # Phân loại hành động (vd: 'login', 'start_chat', 'submit_exercise')
-    action_type = Column(String(50), nullable=False)
+    action_type = Column(String(255), nullable=False)
     # mô tả chi tiết hành động 
     description = Column(Text)
     created_at = Column(DateTime(timezone=True), server_default=func.now())

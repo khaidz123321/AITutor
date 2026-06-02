@@ -26,6 +26,7 @@ def log_user_activity(request: ActivityCreate, db: Session = Depends(get_db)):
         db.commit()
         # làm mới để lấy id + created_at
         db.refresh(new_activity)
+        return new_activity
     except Exception as e:
         db.rollback()
         print(f"Error logging activity: {str(e)}")

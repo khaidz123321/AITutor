@@ -7,58 +7,77 @@ from engine.rag_service import RAGService
 
 def preload_txt_data():
     """
-    Nạp trực tiếp các file .txt 
+    Tự động quét và nạp các file .txt từ thư mục rag_input vào VectorDB
     """
     db = SessionLocal()
     rag_service = RAGService()
-    files_to_process = [
-        {"file_name": "data/processed_text/ket_qua_giai_tich.txt", "subject": "giai_tich_1"},
-        {"file_name": "data/processed_text/ket_qua_triet_hoc.txt", "subject": "triet_hoc_maclenin"}
-    ]
+    
+    # Danh sách các môn học cần nạp (Khải đảm bảo tên này khớp với thư mục trong rag_input)
+    subjects = ["giai_tich_1", "triet_hoc_maclenin"]
 
-    print(f"Đang bắt đầu nạp tài liệu")
-    for index, item in enumerate(files_to_process):
-        file_path = item["file_name"]
-        subject = item["subject"]
+    print(f"Đang nạp dữ liệu vào VetorDB")
+    print("=" * 60)
 
-        if not os.path.exists(file_path):
-            print(f"không tìm thấy file")
+    for subject in subjects:
+        # Đường dẫn tới thư mục chứa các file .txt của môn học đó
+        subject_dir = os.path.join("data", "rag_input", subject)
+
+        if not os.path.exists(subject_dir):
+            print(f"Không tìm thấy thư mục dữ liệu cho môn {subject}")
             continue 
 
-        try:
-            # gọi rag_service để vector hoá
-            success = rag_service.index_document(file_path=file_path, subject = subject)
-            if success: 
-                # Lưu lịch sử nạp vào Postgre
-                existing_doc = db.query(Document).filter(Document.filename == file_path).first()
-                if not existing_doc:
-                    new_doc = Document(
-                        user_id=1,
-                        filename=file_path,
-                        subject=subject,
-                        file_path=file_path,
-                        status="completed"
-                    )
-                    db.add(new_doc)
-                    db.commit()
-                    print(f"Đã lưu thành công: {file_path}")
+        # Lấy danh sách tất cả file .txt trong thư mục môn học
+        txt_files = sorted([f for f in os.listdir(subject_dir) if f.endswith(".txt")])
+        
+        if not txt_files:
+            print(f"Cảnh báo: Thư mục {subject} đang trống, không có file .txt để nạp.")
+            continue
+
+        print(f"\nĐang xử lý môn: {subject.upper()} ({len(txt_files)} file)")
+
+        for index, file_name in enumerate(txt_files):
+            file_path = os.path.join(subject_dir, file_name)
+
+            try:
+                print(f"  [+] Đang Vector hóa: {file_name}")
+                
+                # Gọi rag_service để băm nhỏ và tạo index
+                success = rag_service.index_document(file_path=file_path, subject=subject)
+                
+                if success: 
+                    # Kiểm tra và lưu lịch sử nạp vào PostgreSQL
+                    existing_doc = db.query(Document).filter(Document.filename == file_path).first()
+                    if not existing_doc:
+                        new_doc = Document(
+                            user_id=1, # Mặc định admin hoặc user đầu tiên
+                            filename=file_name,
+                            subject=subject,
+                            file_path=file_path,
+                            status="completed"
+                        )
+                        db.add(new_doc)
+                        db.commit()
+                        print(f" Đã lưu thông tin file vào DB.")
+                    else:
+                        print(f" File đã tồn tại trong DB, đã cập nhật nội dung Vector mới.")
                 else:
-                    print(f"Tài liệu đã tồn tại trong DB, đã cập nhật lại nội dung Vector.")
-            else:
-                print("Lỗi xử lí Vector")
-            # cơ chế chống lỗi 429
-            if index < len(files_to_process) - 1:
-                print(f"Đang hồi phục Quota API")
-                time.sleep(30)
-        except Exception as e:
-            print(f"Lỗi hệ thống khi xử lý")
-            db.rollback()
-            if "429" in str(e) or "RESOURCE_EXHAUSTED" in str(e):
-                print("Cạn hạn mức API. Timeout 60 giây để thử lại...")
-                time.sleep(60)
+                    print(f" Lỗi khi xử lý Vector cho file: {file_name}")
+
+                # Cơ chế chống lỗi 429 (Rate Limit) của Embedding API
+                # Nghỉ ngắn giữa các file để tránh bị khóa API
+                if index < len(txt_files) - 1:
+                    time.sleep(5) 
+
+            except Exception as e:
+                print(f" Lỗi hệ thống khi xử lý {file_name}: {str(e)}")
+                db.rollback()
+                if "429" in str(e) or "RESOURCE_EXHAUSTED" in str(e):
+                    print(" Cạn hạn mức API. Skip 60 giây để hồi phục...")
+                    time.sleep(60)
 
     db.close()
-    print("\nHOÀN TẤT!")
+    print("\n" + "=" * 60)
+    print("DỮ LIỆU ĐÃ ĐƯỢC NẠP VÀO HỆ THỐNG")
 
 if __name__ == "__main__":
     preload_txt_data()

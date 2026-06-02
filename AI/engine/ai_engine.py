@@ -1,5 +1,3 @@
-from core.config import settings
-import os 
 import json 
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
@@ -7,12 +5,20 @@ from schemas.evaluation import StudentEvaluation
 from core.mapping import get_mapped_paths
 import os
 from core.config import settings
+from langchain_groq import ChatGroq
+import google.api_core.exceptions as google_exc
 
 class AItutor:
     def __init__(self):
         self.llm = ChatGoogleGenerativeAI(
             api_key = settings.GOOGLE_API_KEY,
             model = settings.MODEL_NAME,
+            temperature = settings.TEMPERATURE
+        )
+        # Thêm LLM dự phòng bằng Groq
+        self.fallback_llm = ChatGroq(
+            api_key = settings.GROQ_API_KEY,
+            model_name = settings.FALLBACK_MODEL_NAME,
             temperature = settings.TEMPERATURE
         )
         # lưu trữ 2 lượt hỏi đáp
@@ -123,24 +129,39 @@ class AItutor:
             "Analyze the student's input and classify:\n"
             "- cognitive_state: Must be one of [STEP_CORRECT, PROBLEM_COMPLETED, INCOMPLETE, "
             "CALCULATION_ERROR, CONCEPTUAL_ERROR, VAGUE_OR_OFFTOPIC, REQUEST_HINT, REQUEST_THEORY, REVEAL_ANSWER]\n"
-            "- emotion_state: Must be one of [NEUTRAL, FRUSTRATED, LACK_CONFIDENCE]\n\n"
-            "FRUSTRATION CONTROL RULE: If the chat history shows the student has been stuck, provided incorrect answers, or shown continuous confusion for 3 or more consecutive attempts on the current step, you MUST set cognitive_state to 'REVEAL_ANSWER'.\n\n"
+            "- emotion_state: Must be one of [NEUTRAL, FRUSTRATED, LACK_CONFIDENCE]\n"
+            "THEORY DETECTION RULE: If the student asks 'what is it', 'I don't know', 'what does this mean', or asks for a definition, you MUST set cognitive_state to 'REQUEST_THEORY'.\n\n"
+            "FRUSTRATION CONTROL RULE: If the chat history shows the student has been stuck..."
             "**Step 2 — Respond** (Based on the diagnosis):\n"
             "1. STEP_CORRECT → Briefly praise the student and seamlessly guide them to the next logical sub-step.\n"
             "2. PROBLEM_COMPLETED → Congratulate them, summarize the key takeaways, and conclude the problem.\n"
             "3. INCOMPLETE → Explicitly acknowledge the correct portion, then ask a probing question to extract the missing condition or step.\n"
             "4. CALCULATION_ERROR → Point out the general area of the mistake (e.g., signs, arithmetic rules). DO NOT fix it for them.\n"
             "5. CONCEPTUAL_ERROR → Use [RAG_CONTEXT] and common mistakes to formulate a Socratic question that exposes their misunderstanding.\n"
-            "6. VAGUE_OR_OFFTOPIC → Gently redirect the student's focus back to the current scaffolding objective.\n"
+            "6. VAGUE_OR_OFFTOPIC → Gently redirect the student's focus back to the current scaffolding objective. If the student asks WHERE the theory comes from or which chapter/section, look at the [Nguồn: ...] tags in [RAG_CONTEXT] and copy the EXACT label (e.g., 'Giải tích 1 — Chương 1 — Mục: 1.1.2...'). If [RAG_CONTEXT] has no [Nguồn] tag, say you cannot determine the exact location. DO NOT mark the problem as completed.\n"
             "7. REQUEST_HINT → Provide a minimal, indirect hint to spark their thinking without giving away the exact operation.\n"
-            "8. REQUEST_THEORY → Provide a clear, detailed explanation using [RAG_CONTEXT], then connect it back to the current problem.\n\n"
-            "**Emotion Handling**: If the emotion_state is FRUSTRATED or LACK_CONFIDENCE, you MUST begin your `response` with an empathetic, encouraging sentence.\n\n"
+            "8. REQUEST_THEORY → DO NOT copy-paste raw text from [RAG_CONTEXT]. Use it only as background knowledge to provide a concise explanation, then formulate a Socratic guiding question to connect it back to the current problem.\n"
+            "   You MUST cite the source by using the `source_citation` JSON field. Extract the location from the `[Nguồn: ...]` tag in [RAG_CONTEXT] and format it strictly as a multi-line hierarchical list:\n"
+            "   Giáo trình: [Tên môn]\n"
+            "   [Chương X]\n"
+            "   Bài: [Số bài và tên bài, nếu có]\n"
+            "   Mục: [Số mục và tên mục]\n"
+            "   - Put this formatted text into the `source_citation` field using newline characters (\\n). DO NOT put it into the `response` string.\n"
+            "   - If some information (like 'Bài') is missing, just skip that line.\n"
             "9. REVEAL_ANSWER → DO NOT ask any more questions. Extract the correct solution from the [PROBLEM CONTEXT] for the current step, explain it clearly to the student, comfort them so they don't feel discouraged, and gently guide them to the next step.\n\n"
+            "**Emotion Handling**: If the emotion_state is FRUSTRATED or LACK_CONFIDENCE, you MUST begin your `response` with an empathetic, encouraging sentence.\n\n"
             "## CONSTRAINTS\n"
             "- The `response` field MUST be written entirely in natural, fluent VIETNAMESE.\n"
-            "- Limit the `response` to a MAXIMUM of 4 sentences (Smart Brevity).\n"
-            "- Use Markdown and LaTeX ($) for all mathematical formulas and expressions.\n"
-            "- NEVER reveal the final answer or do the computation for the student (UNLESS the cognitive_state is REVEAL_ANSWER. In that case, you are ALLOWED and REQUIRED to reveal the answer)."        )
+            "- DYNAMIC LENGTH:\n"
+            "  + If cognitive_state is 'STEP_CORRECT' or 'PROBLEM_COMPLETED': Keep it extremely concise (maximum 2-3 sentences). Quickly praise the student and seamlessly move to the next step.\n"
+            "  + If cognitive_state is 'REQUEST_THEORY', 'CONCEPTUAL_ERROR', or 'REVEAL_ANSWER': There is NO sentence limit. Provide a detailed, step-by-step explanation.\n"
+            "- SPACING RULE: Ensure clear readability by separating paragraphs with exactly ONE blank line. Use bullet points and bold text to organize key concepts. NEVER output a single giant wall of text.\n"
+            "- MATH FORMATTING RULE:\n"
+            "  + Use inline LaTeX (e.g., `$x = 5$`) for simple variables or short expressions embedded in text.\n"
+            "  + Use block LaTeX on a separate new line (e.g., `$$ \\lim_{{x \\to 0}} \\frac{{\\sin x}}{{x}} = 1 $$`) ONLY for complex formulas, multi-step equations, or important final results.\n"
+            "- NEVER reveal the final answer or do the computation for the student (UNLESS cognitive_state is REVEAL_ANSWER).\n"
+            "- MANDATORY CITATION RULE: Whenever you explain theory, you MUST fill the `source_citation` JSON field with the exact text from the `[Nguồn: ...]` tag in [RAG_CONTEXT]. Do NOT put the citation directly in the `response` text."
+        )
 
         chat_prompt = ChatPromptTemplate.from_messages([
             ("system", system_prompt),
@@ -149,16 +170,57 @@ class AItutor:
         ])
 
         # 5. Lắp ghép Chain và gọi API đúng 1 lần
-        chain = chat_prompt | structured_llm
-        eval_result = chain.invoke({
-            "persona": persona_text,
-            "json_context": json_context,
-            "rag_context": rag_context,
-            "scaffold_instruction": scaffold_instruction,
-            "chat_history": trimmed_history,
-            "user_input": user_message
-        })
-        return eval_result
+        try:
+            chain = chat_prompt | structured_llm
+            eval_result = chain.invoke({
+                "persona": persona_text,
+                "json_context": json_context,
+                "rag_context": rag_context,
+                "scaffold_instruction": scaffold_instruction,
+                "chat_history": trimmed_history,
+                "user_input": user_message
+            })
+            return eval_result
+        except Exception as e:
+            error_str = str(e).upper()
+            is_infra_error = any(kw in error_str for kw in [
+                "429", "RESOURCE_EXHAUSTED", "QUOTA", 
+                "503", "SERVICE_UNAVAILABLE",
+                "504", "DEADLINE_EXCEEDED", "TIMEOUT",
+                "500", "INTERNAL_SERVER_ERROR"
+            ])
+            
+            if not is_infra_error:
+                raise e  # Nếu là lỗi logic (vd: Pydantic parse error), ném lỗi ra ngoài
+            
+            print(f"[FALLBACK] Gemini gặp lỗi hạ tầng ({type(e).__name__}): {e}. Đang tự động chuyển sang Groq ({settings.FALLBACK_MODEL_NAME})...")
+            
+            # Sửa lỗi Groq Tool Calling bằng cách dùng JSON Mode
+            from langchain_core.output_parsers import JsonOutputParser
+            groq_parser = JsonOutputParser(pydantic_object=StudentEvaluation)
+            
+            fallback_sys_prompt = system_prompt + "\n\nYou MUST respond in pure JSON. \n{format_instructions}\nCRITICAL: DO NOT use <function> or </function> tags! Return RAW JSON ONLY!"
+            fallback_prompt = ChatPromptTemplate.from_messages([
+                ("system", fallback_sys_prompt),
+                MessagesPlaceholder(variable_name="chat_history"),
+                ("human", "{user_input}")
+            ])
+            
+            fallback_llm_json = self.fallback_llm.bind(response_format={'type': 'json_object'})
+            fallback_chain = fallback_prompt | fallback_llm_json | groq_parser
+            
+            eval_dict = fallback_chain.invoke({
+                "persona": persona_text,
+                "json_context": json_context,
+                "rag_context": rag_context,
+                "scaffold_instruction": scaffold_instruction,
+                "chat_history": trimmed_history,
+                "user_input": user_message,
+                "format_instructions": groq_parser.get_format_instructions()
+            })
+            
+            # Convert dict -> StudentEvaluation \u0111\u1ec3 t\u01b0\u01a1ng th\u00edch v\u1edbi return type
+            return StudentEvaluation(**eval_dict)
     
     def get_next_question_id(self, subject: str, chapter: str, current_question_id: str) -> StudentEvaluation:
         """

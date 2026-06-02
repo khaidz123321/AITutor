@@ -30,43 +30,40 @@ rag_service = RAGService()
 def init_chat_session(subject: str, chapter: str, db: Session = Depends(get_db)):
     current_user_id = 1 # TODO: Sau này lấy từ Token đăng nhập (JWT)
     session_manager = SessionManager(db)
+    mapped_subj, mapped_chap = get_mapped_paths(subject, chapter)
     
     try:
-        progress = session_manager.get_user_progress(current_user_id, subject, chapter)
+        # Thay thế toàn bộ bằng mapped_subj và mapped_chap
+        progress = session_manager.get_user_progress(current_user_id, mapped_subj, mapped_chap)
         
         if progress:
             current_question_id = progress.get("question_id")
         else:
-            current_question_id = ai_tutor.get_first_question_id(subject, chapter)
-            session_manager.update_progress(current_user_id, subject, chapter, current_question_id, step=1)
+            current_question_id = ai_tutor.get_first_question_id(mapped_subj, mapped_chap)
+            session_manager.update_progress(current_user_id, mapped_subj, mapped_chap, current_question_id, step=1)
         
-        # --- BẮT ĐẦU FIX: LẤY LỊCH SỬ CHAT TỪ DB ---
-        # Truy vấn trực tiếp vào DB để lấy data format dễ đọc cho Frontend
         history_records = db.query(ChatHistory).filter(
             ChatHistory.user_id == current_user_id,
-            ChatHistory.subject == subject,
-            ChatHistory.chapter == chapter
+            ChatHistory.subject == mapped_subj,
+            ChatHistory.chapter == mapped_chap
         ).order_by(ChatHistory.created_at.asc()).all()
         
-        # Biến đổi thành mảng JSON
         formatted_history = [
             {"role": record.role, "content": record.content} 
             for record in history_records
         ]
 
-        # Nếu mảng trống -> Lần đầu tiên học -> Tạo câu chào
         if not formatted_history:
-            welcome_message = ai_tutor.get_initial_question(subject, chapter, current_question_id)
-            session_manager.save_message(current_user_id, subject, chapter, "ai", welcome_message)
+            welcome_message = ai_tutor.get_initial_question(mapped_subj, mapped_chap, current_question_id)
+            session_manager.save_message(current_user_id, mapped_subj, mapped_chap, "ai", welcome_message)
             
             return {
                 "reply": welcome_message, 
-                "history": [], # Lịch sử trống
+                "history": [], 
                 "question_id": current_question_id,
                 "status": "success"
             }
 
-        # Nếu đã có lịch sử -> KHÔNG tạo câu chào mới, trả về lịch sử
         return {
             "reply": "", 
             "history": formatted_history, 
@@ -85,36 +82,54 @@ def init_chat_session(subject: str, chapter: str, db: Session = Depends(get_db))
 # =================================================================
 @router.post("/", response_model=ChatResponse)
 def chat_with_tutor(request: ChatRequest, db: Session = Depends(get_db)):
+    mapped_subj, mapped_chap = get_mapped_paths(request.subject, request.chapter)
     current_user_id = 1 # TODO: Sau này lấy từ Token đăng nhập
     session_manager = SessionManager(db)
     
     try:
-        # 1. Xác định bài tập và bước hiện tại từ Database
-        progress = session_manager.get_user_progress(current_user_id, request.subject, request.chapter)
+        # Sử dụng mapped_subj và mapped_chap
+        progress = session_manager.get_user_progress(current_user_id, mapped_subj, mapped_chap)
         original_question_id = progress.get("question_id") if progress else None    
         
         if not progress:
-            # Trường hợp dự phòng nếu Init thất bại
-            current_question_id = ai_tutor.get_first_question_id(request.subject, request.chapter)
+            current_question_id = ai_tutor.get_first_question_id(mapped_subj, mapped_chap)
             current_step = 1
         else:
             current_question_id = progress.get("question_id")
             current_step = progress.get("step", 1)
         
-        # Chỉ load đúng 1 bài tập đang làm (Tiết kiệm Token)
-        question_data = ai_tutor.load_question_data(request.subject, request.chapter, current_question_id)
+        question_data = ai_tutor.load_question_data(mapped_subj, mapped_chap, current_question_id)
 
-        # 2. Truy xuất lịch sử chat
         chat_history = session_manager.get_chat_history(
             user_id=current_user_id,
-            subject=request.subject,
-            chapter=request.chapter
+            subject=mapped_subj,
+            chapter=mapped_chap
         )
 
-        # 3. RAG: Tìm ngữ cảnh từ PDF nếu có
+        # Xây dựng RAG query thông minh: kết hợp message user + context bài toán hiện tại
+        # Giúp RAG tìm đúng lý thuyết dù user hỏi ngắn ("cái đó là gì?", "tôi không hiểu"...)
+        try:
+            question_json = json.loads(question_data) if isinstance(question_data, str) else {}
+            question_text = question_json.get("question_text", "")
+            topic_keywords = question_json.get("topic", "")  # nếu JSON có trường topic
+        except Exception:
+            question_text = ""
+            topic_keywords = ""
+
+        # Xây dựng RAG query thông minh: ưu tiên các keyword lý thuyết cốt lõi
+        # Tránh đưa cả câu hội thoại ("nguồn ở đâu", "tại sao") hoặc câu dẫn bài tập ("Cho tập hợp...") vào để vector db không bị nhiễu
+        if topic_keywords:
+            rag_query = topic_keywords
+        else:
+            rag_query_parts = []
+            if question_text:
+                rag_query_parts.append(question_text)
+            rag_query_parts.append(request.message)
+            rag_query = " ".join(rag_query_parts)
+
         rag_context = rag_service.query_context(
-            subject=request.subject, 
-            query=request.message
+            subject=mapped_subj,
+            query=rag_query
         )
         
         scaffold_manager = LearningScaffold(db)
@@ -123,11 +138,9 @@ def chat_with_tutor(request: ChatRequest, db: Session = Depends(get_db)):
             question_data=question_data
         )
 
-        # 4. Gọi Single-Agent AI (Vừa chấm lỗi, vừa sinh câu trả lời)
-        # eval_result giờ đây là một object chứa: response, next_step, cognitive_state
         eval_result: StudentEvaluation = ai_tutor.get_response(
-            subject=request.subject,
-            chapter=request.chapter,
+            subject=mapped_subj,
+            chapter=mapped_chap,
             user_message=request.message,
             question_id=current_question_id,
             chat_history=chat_history,
@@ -138,11 +151,16 @@ def chat_with_tutor(request: ChatRequest, db: Session = Depends(get_db)):
         # Bóc tách dữ liệu an toàn (Tránh crash nếu AI API trả về None)
         if eval_result:
             ai_reply = eval_result.response
+            if getattr(eval_result, "source_citation", ""):
+                citation_text = eval_result.source_citation.strip()
+                # Hiển thị chuyên nghiệp hơn thay vì in nghiêng nguyên khối
+                ai_reply += f"\n\n**Nguồn tài liệu:**\n{citation_text}"
+            
             print(f"[AI Đánh giá Trạng thái]: {eval_result.cognitive_state}")
             
             # --- BẮT ĐẦU FIX LOGIC NHẢY BƯỚC / NHẢY BÀI ---
             
-            if eval_result.cognitive_state == "STEP_CORRECT":
+            if eval_result.cognitive_state in ["STEP_CORRECT", "REVEAL_ANSWER"]:
                 new_step = current_step + 1
             
             # NẾU XONG BÀI TOÁN -> CHỦ ĐỘNG BỐC ĐỀ MỚI

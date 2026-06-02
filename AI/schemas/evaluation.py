@@ -38,8 +38,11 @@ class StudentEvaluation(BaseModel):
         ...,
         description="The actual response/message to the student in natural, fluent Vietnamese. Maximum 5 sentences."
     )
+    source_citation: str = Field(
+        default="",
+        description="If you answer a theory question, extract the source from [Nguồn: ...] in RAG_CONTEXT and format it EXACTLY as a hierarchical list using \\n. Example:\nGiáo trình: Giải tích 1\nChương 1\nBài 1.1 Số thực\nMục 1.1.2 Các tính chất số thực.\nIf some info is missing (like 'Bài'), just skip that line."
+    )
     next_step: int = Field(
         ...,
         description="The current step number the student should focus on next (integer). If they complete the current step, increment this by 1. If they fail, keep it the same."
-
     )

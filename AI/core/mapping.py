@@ -6,7 +6,7 @@ và tên thư mục/file thực tế trong Backend.
 # Ánh xạ tên môn học sang tên thư mục (Snake Case)
 SUBJECT_MAP = {
     "Giải tích 1": "giai_tich_1",
-    "Triết học Mác - Lênin": "triet_hoc_mac_lenin"
+    "Triết học Mác - Lênin": "triet_hoc_maclenin"
 }
 
 # Ánh xạ tên chương sang tên file chuong_x.json

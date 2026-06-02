@@ -8,28 +8,28 @@
       "topic": "4.1 Tích phân bất định: Phương pháp đổi biến số",
       "difficulty": "Medium",
       "bloom_level": "Applying",
-      "question_text": "Tính tích phân bất định sau bằng phương pháp đổi biến số: $I = \\int \\frac{x^3}{\\sqrt{2+x^2}} dx$[cite: 5].",
-      "full_answer": "$I = \\frac{1}{3}(x^2-4)\\sqrt{2+x^2} + C$[cite: 5].",
+      "question_text": "Tính tích phân bất định sau bằng phương pháp đổi biến số: $I = \\int \\frac{x^3}{\\sqrt{2+x^2}} dx$.",
+      "full_answer": "$I = \\frac{1}{3}(x^2-4)\\sqrt{2+x^2} + C$.",
       "scaffolding_steps": [
         {
           "step_number": 1,
           "hint": "Quan sát biểu thức dưới căn $\\sqrt{2+x^2}$. Hãy thực hiện phép đổi biến số bằng cách đặt căn thức này bằng một biến mới $t$.",
-          "step_detail": "Đặt $t = \\sqrt{2+x^2} \\Rightarrow t^2 = 2+x^2 \\Rightarrow 2t dt = 2x dx \\Rightarrow t dt = x dx$[cite: 5]. Đồng thời rút ra $x^2 = t^2 - 2$[cite: 5]."
+          "step_detail": "Đặt $t = \\sqrt{2+x^2} \\Rightarrow t^2 = 2+x^2 \\Rightarrow 2t dt = 2x dx \\Rightarrow t dt = x dx$. Đồng thời rút ra $x^2 = t^2 - 2$."
         },
         {
           "step_number": 2,
           "hint": "Tách tử số $x^3 dx = x^2 \\cdot (x dx)$ để thay thế các thành phần theo biến $t$.",
-          "step_detail": "$I = \\int \\frac{(t^2-2) \\cdot t dt}{t} = \\int (t^2-2) dt$[cite: 5]."
+          "step_detail": "$I = \\int \\frac{(t^2-2) \\cdot t dt}{t} = \\int (t^2-2) dt$."
         },
         {
           "step_number": 3,
           "hint": "Tìm nguyên hàm cơ bản theo $t$ và trả về biến $x$ ban đầu.",
-          "step_detail": "$I = \\frac{t^3}{3} - 2t + C$[cite: 5]. Thay ngược $t = \\sqrt{2+x^2}$ vào: $I = \\frac{1}{3}(2+x^2)\\sqrt{2+x^2} - 2\\sqrt{2+x^2} + C = \\frac{1}{3}(x^2-4)\\sqrt{2+x^2} + C$[cite: 5]."
+          "step_detail": "$I = \\frac{t^3}{3} - 2t + C$. Thay ngược $t = \\sqrt{2+x^2}$ vào: $I = \\frac{1}{3}(2+x^2)\\sqrt{2+x^2} - 2\\sqrt{2+x^2} + C = \\frac{1}{3}(x^2-4)\\sqrt{2+x^2} + C$."
         }
       ],
       "common_mistakes": [
         "Quên không đổi $x^2$ ở tử số sang biến $t$, dẫn đến biểu thức hỗn hợp giữa $x$ và $t$.",
-        "Quên trả lại biến $x$ sau khi đã tính xong nguyên hàm theo $t$[cite: 5]."
+        "Quên trả lại biến $x$ sau khi đã tính xong nguyên hàm theo $t$."
       ]
     },
     {
@@ -37,27 +37,27 @@
       "topic": "4.1 Tích phân bất định: Phương pháp tích phân từng phần",
       "difficulty": "Hard",
       "bloom_level": "Applying",
-      "question_text": "Tính tích phân sau bằng phương pháp từng phần: $I = \\int \\frac{xe^x}{(x+1)^2} dx$[cite: 5].",
-      "full_answer": "$I = \\frac{e^x}{x+1} + C$[cite: 5].",
+      "question_text": "Tính tích phân sau bằng phương pháp từng phần: $I = \\int \\frac{xe^x}{(x+1)^2} dx$.",
+      "full_answer": "$I = \\frac{e^x}{x+1} + C$.",
       "scaffolding_steps": [
         {
           "step_number": 1,
-          "hint": "Áp dụng công thức $\\int u dv = uv - \\int v du$[cite: 5]. Hãy chọn $dv = \\frac{1}{(x+1)^2} dx$ để có thể tìm được $v$ dễ dàng.",
-          "step_detail": "Đặt $u = xe^x \\Rightarrow du = (x+1)e^x dx$[cite: 5]. Đặt $dv = \\frac{1}{(x+1)^2} dx \\Rightarrow v = -\\frac{1}{x+1}$[cite: 5]."
+          "hint": "Áp dụng công thức $\\int u dv = uv - \\int v du$. Hãy chọn $dv = \\frac{1}{(x+1)^2} dx$ để có thể tìm được $v$ dễ dàng.",
+          "step_detail": "Đặt $u = xe^x \\Rightarrow du = (x+1)e^x dx$. Đặt $dv = \\frac{1}{(x+1)^2} dx \\Rightarrow v = -\\frac{1}{x+1}$."
         },
         {
           "step_number": 2,
           "hint": "Thay các thành phần $u, v, du$ vào công thức tích phân từng phần.",
-          "step_detail": "$I = -\\frac{xe^x}{x+1} - \\int -\\frac{1}{x+1} \\cdot (x+1)e^x dx$[cite: 5]."
+          "step_detail": "$I = -\\frac{xe^x}{x+1} - \\int -\\frac{1}{x+1} \\cdot (x+1)e^x dx$."
         },
         {
           "step_number": 3,
           "hint": "Rút gọn biểu thức dưới dấu tích phân và tính kết quả cuối cùng.",
-          "step_detail": "$I = -\\frac{xe^x}{x+1} + \\int e^x dx = -\\frac{xe^x}{x+1} + e^x + C$[cite: 5]. Rút gọn ta được $I = \\frac{e^x}{x+1} + C$[cite: 5]."
+          "step_detail": "$I = -\\frac{xe^x}{x+1} + \\int e^x dx = -\\frac{xe^x}{x+1} + e^x + C$. Rút gọn ta được $I = \\frac{e^x}{x+1} + C$."
         }
       ],
       "common_mistakes": [
-        "Chọn $u, v$ không phù hợp khiến biểu thức sau khi biến đổi càng trở nên phức tạp hơn[cite: 5].",
+        "Chọn $u, v$ không phù hợp khiến biểu thức sau khi biến đổi càng trở nên phức tạp hơn.",
         "Tính sai đạo hàm của $u = xe^x$ (thiếu quy tắc đạo hàm của tích)."
       ]
     },
@@ -66,23 +66,23 @@
       "topic": "4.1 Tích phân bất định: Hàm phân thức hữu tỉ",
       "difficulty": "Medium",
       "bloom_level": "Evaluating",
-      "question_text": "Tính tích phân sau bằng phương pháp phân tích thành các phân thức tối giản: $I = \\int \\frac{dx}{x^2+3x+4}$[cite: 5].",
-      "full_answer": "$I = \\frac{2}{\\sqrt{7}} \\arctan \\frac{2x+3}{\\sqrt{7}} + C$[cite: 5].",
+      "question_text": "Tính tích phân sau bằng phương pháp phân tích thành các phân thức tối giản: $I = \\int \\frac{dx}{x^2+3x+4}$.",
+      "full_answer": "$I = \\frac{2}{\\sqrt{7}} \\arctan \\frac{2x+3}{\\sqrt{7}} + C$.",
       "scaffolding_steps": [
         {
           "step_number": 1,
           "hint": "Kiểm tra mẫu số $x^2+3x+4$. Vì biệt thức $\\Delta = 3^2 - 4(4) = -7 < 0$, mẫu số vô nghiệm thực. Hãy biến đổi mẫu số về dạng bình phương thiếu.",
-          "step_detail": "$x^2 + 3x + 4 = (x + \\frac{3}{2})^2 + \\frac{7}{4}$[cite: 5]."
+          "step_detail": "$x^2 + 3x + 4 = (x + \\frac{3}{2})^2 + \\frac{7}{4}$."
         },
         {
           "step_number": 2,
-          "hint": "Sử dụng công thức nguyên hàm cơ bản: $\\int \\frac{du}{u^2+a^2} = \\frac{1}{a} \\arctan \\frac{u}{a} + C$[cite: 5].",
-          "step_detail": "Ở đây $u = x + \\frac{3}{2}$ và $a = \\frac{\\sqrt{7}}{2}$[cite: 5]."
+          "hint": "Sử dụng công thức nguyên hàm cơ bản: $\\int \\frac{du}{u^2+a^2} = \\frac{1}{a} \\arctan \\frac{u}{a} + C$.",
+          "step_detail": "Ở đây $u = x + \\frac{3}{2}$ và $a = \\frac{\\sqrt{7}}{2}$."
         },
         {
           "step_number": 3,
           "hint": "Áp dụng công thức và rút gọn kết quả.",
-          "step_detail": "$I = \\frac{1}{\\frac{\\sqrt{7}}{2}} \\arctan \\frac{x+3/2}{\\frac{\\sqrt{7}}{2}} + C = \\frac{2}{\\sqrt{7}} \\arctan \\frac{2x+3}{\\sqrt{7}} + C$[cite: 5]."
+          "step_detail": "$I = \\frac{1}{\\frac{\\sqrt{7}}{2}} \\arctan \\frac{x+3/2}{\\frac{\\sqrt{7}}{2}} + C = \\frac{2}{\\sqrt{7}} \\arctan \\frac{2x+3}{\\sqrt{7}} + C$."
         }
       ],
       "common_mistakes": [
@@ -95,26 +95,26 @@
       "difficulty": "Medium",
       "bloom_level": "Applying",
       "question_text": "Tính tích phân xác định sau: $I = \\int_{0}^{\\frac{\\pi}{4}} \\frac{x dx}{\\cos^2 x}$.",
-      "full_answer": "$I = \\frac{\\pi}{4} - \\frac{1}{2} \\ln 2$[cite: 4].",
+      "full_answer": "$I = \\frac{\\pi}{4} - \\frac{1}{2} \\ln 2$.",
       "scaffolding_steps": [
         {
           "step_number": 1,
-          "hint": "Sử dụng phương pháp tích phân từng phần $\\int_{a}^{b} u dv = uv \\big|_a^b - \\int_{a}^{b} v du$[cite: 4]. Hãy chọn $u$ và $dv$ phù hợp.",
-          "step_detail": "Đặt $u = x \\Rightarrow du = dx$[cite: 4]. Đặt $dv = \\frac{dx}{\\cos^2 x} \\Rightarrow v = \\tan x$[cite: 4]."
+          "hint": "Sử dụng phương pháp tích phân từng phần $\\int_{a}^{b} u dv = uv \\big|_a^b - \\int_{a}^{b} v du$. Hãy chọn $u$ và $dv$ phù hợp.",
+          "step_detail": "Đặt $u = x \\Rightarrow du = dx$. Đặt $dv = \\frac{dx}{\\cos^2 x} \\Rightarrow v = \\tan x$."
         },
         {
           "step_number": 2,
           "hint": "Thay vào công thức tích phân xác định từng phần và tính giá trị tại các cận.",
-          "step_detail": "$I = (x \\tan x) \\big|_0^{\\frac{\\pi}{4}} - \\int_{0}^{\\frac{\\pi}{4}} \\tan x dx = \\frac{\\pi}{4} \\tan \\frac{\\pi}{4} - 0 - \\int_{0}^{\\frac{\\pi}{4}} \\frac{\\sin x}{\\cos x} dx$[cite: 4]."
+          "step_detail": "$I = (x \\tan x) \\big|_0^{\\frac{\\pi}{4}} - \\int_{0}^{\\frac{\\pi}{4}} \\tan x dx = \\frac{\\pi}{4} \\tan \\frac{\\pi}{4} - 0 - \\int_{0}^{\\frac{\\pi}{4}} \\frac{\\sin x}{\\cos x} dx$."
         },
         {
           "step_number": 3,
           "hint": "Tính tích phân còn lại bằng cách đưa về dạng $\\int \\frac{d(\\cos x)}{\\cos x}$.",
-          "step_detail": "$\\int \\tan x dx = -\\ln|\\cos x|$[cite: 4]. Vậy $I = \\frac{\\pi}{4} + \\ln|\\cos x| \\big|_0^{\\frac{\\pi}{4}} = \\frac{\\pi}{4} + \\ln\\frac{\\sqrt{2}}{2} - \\ln 1 = \\frac{\\pi}{4} - \\frac{1}{2} \\ln 2$[cite: 4]."
+          "step_detail": "$\\int \\tan x dx = -\\ln|\\cos x|$. Vậy $I = \\frac{\\pi}{4} + \\ln|\\cos x| \\big|_0^{\\frac{\\pi}{4}} = \\frac{\\pi}{4} + \\ln\\frac{\\sqrt{2}}{2} - \\ln 1 = \\frac{\\pi}{4} - \\frac{1}{2} \\ln 2$."
         }
       ],
       "common_mistakes": [
-        "Quên không đổi dấu khi tính nguyên hàm của $\\tan x$ (vì $(\\cos x)' = -\\sin x$)[cite: 4].",
+        "Quên không đổi dấu khi tính nguyên hàm của $\\tan x$ (vì $(\\cos x)' = -\\sin x$).",
         "Thay sai giá trị các hàm lượng giác tại cận $\\pi/4$."
       ]
     },
@@ -123,27 +123,27 @@
       "topic": "4.2 Ứng dụng tích phân: Tính độ dài đường cong",
       "difficulty": "Hard",
       "bloom_level": "Evaluating",
-      "question_text": "Tính độ dài đường Astroid cho bởi phương trình tham số: $\\begin{cases} x = a \\cos^3 t \\\\ y = a \\sin^3 t \\end{cases}$ ($a > 0$)[cite: 4].",
-      "full_answer": "$L = 6a$ (đơn vị độ dài)[cite: 4].",
+      "question_text": "Tính độ dài đường Astroid cho bởi phương trình tham số: $\\begin{cases} x = a \\cos^3 t \\\\ y = a \\sin^3 t \\end{cases}$ ($a > 0$).",
+      "full_answer": "$L = 6a$ (đơn vị độ dài).",
       "scaffolding_steps": [
         {
           "step_number": 1,
-          "hint": "Sử dụng tính đối xứng của đường Astroid qua các trục tọa độ. Độ dài toàn phần $L$ bằng 4 lần độ dài cung trong góc phần tư thứ nhất ($t \\in [0, \\pi/2]$)[cite: 4].",
-          "step_detail": "$L = 4 \\int_{0}^{\\frac{\\pi}{2}} \\sqrt{x'^2(t) + y'^2(t)} dt$[cite: 4]."
+          "hint": "Sử dụng tính đối xứng của đường Astroid qua các trục tọa độ. Độ dài toàn phần $L$ bằng 4 lần độ dài cung trong góc phần tư thứ nhất ($t \\in [0, \\pi/2]$).",
+          "step_detail": "$L = 4 \\int_{0}^{\\frac{\\pi}{2}} \\sqrt{x'^2(t) + y'^2(t)} dt$."
         },
         {
           "step_number": 2,
           "hint": "Tính đạo hàm $x'(t)$ và $y'(t)$, sau đó rút gọn biểu thức dưới dấu căn.",
-          "step_detail": "$x' = -3a \\cos^2 t \\sin t$ và $y' = 3a \\sin^2 t \\cos t$[cite: 4]. Khi đó $x'^2 + y'^2 = 9a^2 \\cos^2 t \\sin^2 t (\\cos^2 t + \\sin^2 t) = 9a^2 \\cos^2 t \\sin^2 t$[cite: 4]."
+          "step_detail": "$x' = -3a \\cos^2 t \\sin t$ và $y' = 3a \\sin^2 t \\cos t$. Khi đó $x'^2 + y'^2 = 9a^2 \\cos^2 t \\sin^2 t (\\cos^2 t + \\sin^2 t) = 9a^2 \\cos^2 t \\sin^2 t$."
         },
         {
           "step_number": 3,
           "hint": "Lấy căn thức và thực hiện tích phân xác định.",
-          "step_detail": "$L = 4 \\int_{0}^{\\frac{\\pi}{2}} 3a \\sin t \\cos t dt = 12a \\int_{0}^{\\frac{\\pi}{2}} \\sin t d(\\sin t) = 6a \\sin^2 t \\big|_0^{\\frac{\\pi}{2}} = 6a$[cite: 4]."
+          "step_detail": "$L = 4 \\int_{0}^{\\frac{\\pi}{2}} 3a \\sin t \\cos t dt = 12a \\int_{0}^{\\frac{\\pi}{2}} \\sin t d(\\sin t) = 6a \\sin^2 t \\big|_0^{\\frac{\\pi}{2}} = 6a$."
         }
       ],
       "common_mistakes": [
-        "Không tận dụng tính đối xứng, dẫn đến việc xử lý dấu giá trị tuyệt đối của $\\sin t \\cos t$ trên toàn khoảng $[0, 2\\pi]$ bị sai[cite: 4].",
+        "Không tận dụng tính đối xứng, dẫn đến việc xử lý dấu giá trị tuyệt đối của $\\sin t \\cos t$ trên toàn khoảng $[0, 2\\pi]$ bị sai.",
         "Quên bình phương các đạo hàm trong công thức tính độ dài."
       ]
     },
@@ -152,22 +152,22 @@
       "topic": "4.2 Tích phân xác định: Định lí giá trị trung bình",
       "difficulty": "Medium",
       "bloom_level": "Understanding",
-      "question_text": "Phát biểu định lí giá trị trung bình đối với hàm số liên tục trên một đoạn. Áp dụng giải thích ý nghĩa hình học của hằng số $f(c)$ trong công thức $\\int_{a}^{b} f(x) dx = f(c)(b-a)$[cite: 4].",
-      "full_answer": "Định lí: Nếu $f(x)$ liên tục trên $[a, b]$ thì tồn tại $c \\in [a, b]$ sao cho $\\int_{a}^{b} f(x) dx = f(c)(b-a)$[cite: 4]. Ý nghĩa: Diện tích hình thang cong giới hạn bởi đồ thị $f(x)$ bằng diện tích một hình chữ nhật có cùng đáy $(b-a)$ và chiều cao bằng giá trị hàm số tại điểm $c$[cite: 4].",
+      "question_text": "Phát biểu định lí giá trị trung bình đối với hàm số liên tục trên một đoạn. Áp dụng giải thích ý nghĩa hình học của hằng số $f(c)$ trong công thức $\\int_{a}^{b} f(x) dx = f(c)(b-a)$.",
+      "full_answer": "Định lí: Nếu $f(x)$ liên tục trên $[a, b]$ thì tồn tại $c \\in [a, b]$ sao cho $\\int_{a}^{b} f(x) dx = f(c)(b-a)$. Ý nghĩa: Diện tích hình thang cong giới hạn bởi đồ thị $f(x)$ bằng diện tích một hình chữ nhật có cùng đáy $(b-a)$ và chiều cao bằng giá trị hàm số tại điểm $c$.",
       "scaffolding_steps": [
         {
           "step_number": 1,
           "hint": "Nêu điều kiện cần thiết của hàm số $f(x)$ để định lí tồn tại.",
-          "step_detail": "Hàm số bắt buộc phải 'liên tục' trên đoạn đóng $[a, b]$[cite: 4]."
+          "step_detail": "Hàm số bắt buộc phải 'liên tục' trên đoạn đóng $[a, b]$."
         },
         {
           "step_number": 2,
           "hint": "Viết công thức liên hệ giữa tích phân và giá trị trung bình $f(c)$.",
-          "step_detail": "$\\int_{a}^{b} f(x) dx = f(c) \\cdot (b-a)$ với $c \\in [a, b]$[cite: 4]."
+          "step_detail": "$\\int_{a}^{b} f(x) dx = f(c) \\cdot (b-a)$ với $c \\in [a, b]$."
         }
       ],
       "common_mistakes": [
-        "Quên điều kiện hàm số phải liên tục (nếu hàm gián đoạn, điểm $c$ có thể không tồn tại)[cite: 4]."
+        "Quên điều kiện hàm số phải liên tục (nếu hàm gián đoạn, điểm $c$ có thể không tồn tại)."
       ]
     },
     {
@@ -176,27 +176,27 @@
       "difficulty": "Medium",
       "bloom_level": "Applying",
       "question_text": "Tính tích phân suy rộng sau: $I = \\int_{0}^{+\\infty} \\frac{dx}{1+x^2}$.",
-      "full_answer": "$I = \\frac{\\pi}{2}$[cite: 4].",
+      "full_answer": "$I = \\frac{\\pi}{2}$.",
       "scaffolding_steps": [
         {
           "step_number": 1,
-          "hint": "Đưa tích phân suy rộng về dạng giới hạn của một tích phân xác định khi cận trên tiến tới dương vô cực[cite: 4].",
-          "step_detail": "$I = \\lim_{A \\to +\\infty} \\int_{0}^{A} \\frac{dx}{1+x^2}$[cite: 4]."
+          "hint": "Đưa tích phân suy rộng về dạng giới hạn của một tích phân xác định khi cận trên tiến tới dương vô cực.",
+          "step_detail": "$I = \\lim_{A \\to +\\infty} \\int_{0}^{A} \\frac{dx}{1+x^2}$."
         },
         {
           "step_number": 2,
-          "hint": "Tìm nguyên hàm của hàm số $\\frac{1}{1+x^2}$ và thay các cận vào biểu thức[cite: 4].",
-          "step_detail": "$\\int \\frac{dx}{1+x^2} = \\arctan x + C$[cite: 4]. Ta có: $I = \\lim_{A \\to +\\infty} (\\arctan A - \\arctan 0)$[cite: 4]."
+          "hint": "Tìm nguyên hàm của hàm số $\\frac{1}{1+x^2}$ và thay các cận vào biểu thức.",
+          "step_detail": "$\\int \\frac{dx}{1+x^2} = \\arctan x + C$. Ta có: $I = \\lim_{A \\to +\\infty} (\\arctan A - \\arctan 0)$."
         },
         {
           "step_number": 3,
           "hint": "Tính giới hạn của hàm $\\arctan A$ khi $A$ tiến tới $+\\infty$.",
-          "step_detail": "Vì $\\lim_{A \\to +\\infty} \\arctan A = \\frac{\\pi}{2}$ và $\\arctan 0 = 0$, kết quả là $I = \\frac{\\pi}{2}$[cite: 4]."
+          "step_detail": "Vì $\\lim_{A \\to +\\infty} \\arctan A = \\frac{\\pi}{2}$ và $\\arctan 0 = 0$, kết quả là $I = \\frac{\\pi}{2}$."
         }
       ],
       "common_mistakes": [
         "Quên không viết dưới dạng giới hạn mà tính toán như tích phân xác định thông thường.",
-        "Nhầm lẫn giá trị giới hạn của $\\arctan$ tại vô cực[cite: 4]."
+        "Nhầm lẫn giá trị giới hạn của $\\arctan$ tại vô cực."
       ]
     },
     {
@@ -204,27 +204,27 @@
       "topic": "4.3 Tiêu chuẩn so sánh và sự hội tụ",
       "difficulty": "Hard",
       "bloom_level": "Analyzing",
-      "question_text": "Xét sự hội tụ của tích phân suy rộng $I = \\int_{1}^{+\\infty} \\frac{dx}{x\\sqrt{1+x^2}}$[cite: 4].",
-      "full_answer": "Tích phân hội tụ vì hàm dưới dấu tích phân nhỏ hơn $\\frac{1}{x^2}$ trên $[1, +\\infty)$ và tích phân $\\int_{1}^{+\\infty} \\frac{dx}{x^2}$ hội tụ[cite: 4].",
+      "question_text": "Xét sự hội tụ của tích phân suy rộng $I = \\int_{1}^{+\\infty} \\frac{dx}{x\\sqrt{1+x^2}}$.",
+      "full_answer": "Tích phân hội tụ vì hàm dưới dấu tích phân nhỏ hơn $\\frac{1}{x^2}$ trên $[1, +\\infty)$ và tích phân $\\int_{1}^{+\\infty} \\frac{dx}{x^2}$ hội tụ.",
       "scaffolding_steps": [
         {
           "step_number": 1,
-          "hint": "Sử dụng tiêu chuẩn so sánh: tìm một hàm $g(x)$ đơn giản hơn mà hàm $f(x) = \\frac{1}{x\\sqrt{1+x^2}}$ luôn nhỏ hơn hoặc bằng trên khoảng đang xét[cite: 4].",
-          "step_detail": "Với mọi $x \\ge 1$, ta có $\\sqrt{1+x^2} > x$, do đó $\\frac{1}{x\\sqrt{1+x^2}} < \\frac{1}{x^2}$[cite: 4]."
+          "hint": "Sử dụng tiêu chuẩn so sánh: tìm một hàm $g(x)$ đơn giản hơn mà hàm $f(x) = \\frac{1}{x\\sqrt{1+x^2}}$ luôn nhỏ hơn hoặc bằng trên khoảng đang xét.",
+          "step_detail": "Với mọi $x \\ge 1$, ta có $\\sqrt{1+x^2} > x$, do đó $\\frac{1}{x\\sqrt{1+x^2}} < \\frac{1}{x^2}$."
         },
         {
           "step_number": 2,
-          "hint": "Nhắc lại điều kiện hội tụ của tích phân dạng $\\int_{a}^{+\\infty} \\frac{dx}{x^\\alpha}$[cite: 4].",
-          "step_detail": "Tích phân $\\int_{a}^{+\\infty} \\frac{dx}{x^\\alpha}$ hội tụ khi $\\alpha > 1$ và phân kì khi $\\alpha \\le 1$[cite: 4]."
+          "hint": "Nhắc lại điều kiện hội tụ của tích phân dạng $\\int_{a}^{+\\infty} \\frac{dx}{x^\\alpha}$.",
+          "step_detail": "Tích phân $\\int_{a}^{+\\infty} \\frac{dx}{x^\\alpha}$ hội tụ khi $\\alpha > 1$ và phân kì khi $\\alpha \\le 1$."
         },
         {
           "step_number": 3,
-          "hint": "Kết luận dựa trên tính chất: Nếu tích phân của hàm lớn hội tụ thì tích phân của hàm nhỏ cũng hội tụ[cite: 4].",
-          "step_detail": "Vì $\\alpha = 2 > 1$, tích phân $\\int_{1}^{+\\infty} \\frac{dx}{x^2}$ hội tụ. Vậy $I$ hội tụ[cite: 4]."
+          "hint": "Kết luận dựa trên tính chất: Nếu tích phân của hàm lớn hội tụ thì tích phân của hàm nhỏ cũng hội tụ.",
+          "step_detail": "Vì $\\alpha = 2 > 1$, tích phân $\\int_{1}^{+\\infty} \\frac{dx}{x^2}$ hội tụ. Vậy $I$ hội tụ."
         }
       ],
       "common_mistakes": [
-        "Chọn hàm so sánh không phù hợp (ví dụ so sánh với $1/x$ dẫn đến phân kì, dù thực tế nó hội tụ)[cite: 4].",
+        "Chọn hàm so sánh không phù hợp (ví dụ so sánh với $1/x$ dẫn đến phân kì, dù thực tế nó hội tụ).",
         "Nhầm lẫn giữa điều kiện hội tụ của tích phân loại 1 và chuỗi số."
       ]
     },
@@ -233,27 +233,27 @@
       "topic": "4.3 Tích phân suy rộng loại 2: Hàm có cực điểm",
       "difficulty": "Hard",
       "bloom_level": "Evaluating",
-      "question_text": "Tính tích phân suy rộng sau và xác định cực điểm của hàm số: $I = \\int_{0}^{1} \\frac{dx}{\\sqrt{1-x^2}}$[cite: 4].",
-      "full_answer": "Cực điểm là $x = 1$. Giá trị tích phân $I = \\frac{\\pi}{2}$[cite: 4].",
+      "question_text": "Tính tích phân suy rộng sau và xác định cực điểm của hàm số: $I = \\int_{0}^{1} \\frac{dx}{\\sqrt{1-x^2}}$.",
+      "full_answer": "Cực điểm là $x = 1$. Giá trị tích phân $I = \\frac{\\pi}{2}$.",
       "scaffolding_steps": [
         {
           "step_number": 1,
-          "hint": "Xác định giá trị của $x$ trong đoạn $[0, 1]$ làm cho mẫu số bằng 0. Đó chính là cực điểm[cite: 4].",
-          "step_detail": "Tại $x = 1$, mẫu số $\\sqrt{1-1^2} = 0$, hàm số tiến tới vô cực. Vậy $x=1$ là cực điểm[cite: 4]."
+          "hint": "Xác định giá trị của $x$ trong đoạn $[0, 1]$ làm cho mẫu số bằng 0. Đó chính là cực điểm.",
+          "step_detail": "Tại $x = 1$, mẫu số $\\sqrt{1-1^2} = 0$, hàm số tiến tới vô cực. Vậy $x=1$ là cực điểm."
         },
         {
           "step_number": 2,
-          "hint": "Viết tích phân dưới dạng giới hạn khi biến tiến về cực điểm từ phía bên trái[cite: 4].",
-          "step_detail": "$I = \\lim_{c \\to 1^-} \\int_{0}^{c} \\frac{dx}{\\sqrt{1-x^2}}$[cite: 4]."
+          "hint": "Viết tích phân dưới dạng giới hạn khi biến tiến về cực điểm từ phía bên trái.",
+          "step_detail": "$I = \\lim_{c \\to 1^-} \\int_{0}^{c} \\frac{dx}{\\sqrt{1-x^2}}$."
         },
         {
           "step_number": 3,
-          "hint": "Sử dụng nguyên hàm cơ bản $\\arcsin x$ để tính giới hạn[cite: 4].",
-          "step_detail": "$I = \\lim_{c \\to 1^-} (\\arcsin c - \\arcsin 0) = \\arcsin 1 - 0 = \\frac{\\pi}{2}$[cite: 4]."
+          "hint": "Sử dụng nguyên hàm cơ bản $\\arcsin x$ để tính giới hạn.",
+          "step_detail": "$I = \\lim_{c \\to 1^-} (\\arcsin c - \\arcsin 0) = \\arcsin 1 - 0 = \\frac{\\pi}{2}$."
         }
       ],
       "common_mistakes": [
-        "Không nhận ra hàm số có cực điểm tại cận và tính toán như tích phân xác định bình thường[cite: 4].",
+        "Không nhận ra hàm số có cực điểm tại cận và tính toán như tích phân xác định bình thường.",
         "Nhầm lẫn cực điểm nằm ở $x=0$ thay vì $x=1$."
       ]
     }

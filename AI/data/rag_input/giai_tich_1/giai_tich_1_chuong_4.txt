@@ -1,0 +1,1699 @@
+# CHUONG 4. CHUOI SO VA CHUOI HAM
+
+# 4.1. Chuoi só
+
+# 4.1.1. Dinh nghia
+
+$^ +$ Cho day so thuc $\left( a _ { n } \right)$ (hay phuc). Khi d6 tong vo han
+
+$$
+a _ { 1 } + a _ { 2 } + \ldots + a _ { n } + \ldots
+$$
+
+duqc goi la chuoi so thuc (tuong tmg: Chuoi só phuc) va duoc ky hieu boi $\sum _ { n = 1 } ^ { + \infty } a _ { n } ,$ $a _ { n }$ duqc goi la so hang thu $n$ cüa chuoi s6.   
+Vi du: Chuoi dieu $\begin{array} { r l } {  { \operatorname { \tt h o a : } \sum _ { n = 1 } ^ { + \infty } \frac { 1 } { n } , \operatorname { c h u \ ' o i \ R i e m a n n } \sum _ { n = 1 } ^ { + \infty } \frac { 1 } { n ^ { \alpha } } , \dots } } \\ & { \ \operatorname { c i a \ c h u \ ' o i \ s \cap } \sum _ { n = 1 } ^ { + \infty } a _ { n } \mathrm { \tt ~ l i } } \end{array}$   
+$^ +$ Tong rieng thu $n$
+
+$$
+S _ { n } = \sum _ { k = 1 } ^ { n } a _ { k } .
+$$
+
+$+ \mathrm { C h u } \tilde { \hat { \mathrm { \scriptsize ~ 1 ~ 5 \hat { 0 } ~ } } } \sum _ { n = 1 } ^ { + \infty } a _ { n }$ duoc goi la hoi tu toi $S$ ,neu lim $S _ { n } = S$ . Khi d6 2 ↓8
+
+$$
+R _ { n } = S - S _ { n }
+$$
+
+duqc goi la phan du bac $n$ cua $\sum _ { n = 1 } ^ { + \infty } a _ { n }$ . Nguqc lai, duqc goi la phan ky.
+
+Vi du 4.1. Khao sat su hoi tu hay phan ky cua tong vo han cap só nhan voi cong boi q
+
+$$
+\sum _ { n = 0 } ^ { + \infty } q ^ { n } , \ q \neq 0 .
+$$
+
+Gidi Xét tong rieng thu $n$ la $S _ { n }$ t6ng huu han các só hang cüa mot cap só nhan $( q \neq 1 )$
+
+$$
+S _ { n } = \sum _ { k = 0 } ^ { n - 1 } q ^ { k } = { \left\{ \begin{array} { l l } { { \frac { q ^ { n } - 1 } { q - 1 } } } & { { \hat { \mathbf { n } } } { \hat { \mathbf { e } } } { \mathbf { u } } q \neq 1 } \\ { n } & { { \mathrm { n } } { \hat { \mathbf { e } } } { \mathbf { u } } q = 1 . } \end{array} \right. }
+$$
+
+Vay
+
+$$
+\operatorname* { l i m } _ { n \to \infty } S _ { n } = \operatorname* { l i m } _ { n \to \infty } \sum _ { k = 0 } ^ { n - 1 } q ^ { k } = \left\{ \begin{array} { l l } { \frac { 1 } { 1 - q } } & { \mathrm { n } \tilde { \epsilon } { \mathbf { u } } \left| q \right| < 1 , q \neq 0 } \\ { \mathrm { k h o n g ~ t o n ~ t a i } } & { \mathrm { n } \tilde { \epsilon } { \mathbf { u } } q \leq - 1 } \\ { + \infty } & { \mathrm { n } \tilde { \epsilon } { \mathbf { u } } q \geq 1 . } \end{array} \right.
+$$
+
+$$
+\begin{array} { r l } {  { \widehat { \mathbf { s } \boldsymbol { \omega } } \sum _ { n = 1 } ^ { + \infty } a _ { n } \mathrm { ~ d u g c ~ g o i ~ l i ~ } h \widehat { o l } \mathrm { ~ } t u \mathrm { ~ } t u \mathrm { ~ } t u \mathrm { ~ } t \widehat { e } t \mathrm { ~ } d \widehat { o i } , \mathrm { ~ n \widehat { e } u ~ } \sum _ { n = 1 } ^ { + \infty } | a _ { n } | \mathrm { ~ h \widehat { o } i ~ t u } . } } \\ {  { \widehat { \mathbf { \omega } } \sum _ { n = 1 } ^ { + \infty } \mathrm { ~ } a _ { n } \mathrm { ~ d u g c ~ g o i ~ l i ~ } b \widehat { a } n \mathrm { ~ } h \widehat { o l } \mathrm { ~ } t u , \mathrm { ~ n \widehat { e } u ~ } \sum _ { n = 1 } ^ { + \infty } a _ { n } \mathrm { ~ h \widehat { o } i ~ t u ~ v \widehat { a } ~ } \sum _ { n = 1 } ^ { + \infty } | a _ { n } | \mathrm { ~ p h \widehat { a } n ~ k \widehat { y } ~ } } } \end{array}
+$$
+
+# 4.1.2. Cac dieu kien hoi tu
+
+Dinh ly 4.2. (Cauchy)
+
+$C h u \tilde { \partial } i \ s \tilde { \ O } \sum _ { n = 1 } ^ { + \infty } a _ { n }$ hoi tu khi va chi khi
+
+$$
+\forall \epsilon > 0 , \exists n _ { 0 } , \forall n \geq n _ { 0 } , \forall p \in \mathbb { N } : | a _ { n + 1 } + a _ { n + 2 } + . . . + a _ { n + p } | < \epsilon .
+$$
+
+Chitng minh. Ton tai gioi han lim $S _ { n }$ khi va chi khi day $( S _ { n } )$ la day Cauchy (xem $n {  } { \infty }$   
+chuong 2, muc 2.7) khi va chi khi 1
+
+$$
+\begin{array} { r } { > 0 , \exists n _ { 0 } , \forall n \geq n _ { 0 } , \forall p \in \mathbb { N } : | S _ { n + p } - S _ { n } | < \epsilon \Leftrightarrow | a _ { n + 1 } + a _ { n + 2 } + . . . + a _ { n + 1 } } \end{array}
+$$
+
+Vi du 4.3. Chitng minh rang chuoi dieu hoa
+
+$$
+\sum _ { n = 1 } ^ { + \infty } { \frac { 1 } { n } } = 1 + { \frac { 1 } { 2 } } + { \frac { 1 } { 3 } } + \ldots + { \frac { 1 } { n } } + \ldots
+$$
+
+phan ky.
+
+Gidi V6i moi $\boldsymbol { n } \in \mathbb { N } ^ { * }$ ,ta c6
+
+$$
+S _ { 2 n } - S _ { n } | = { \frac { 1 } { n + 1 } } + { \frac { 1 } { n + 2 } } + \ldots + { \frac { 1 } { 2 n } } > { \frac { 1 } { 2 n } } + { \frac { 1 } { 2 n } } + \ldots + { \frac { 1 } { 2 n } } = { \frac { 1 } { 2 } } .
+$$
+
+Theo dinh ly 4.2, chuói hieu hoa $\sum _ { k = 1 } ^ { + \infty } { \frac { 1 } { k } }$ phan ky. （20
+
+Dinh ly 4.4. Néu chuoi $\sum _ { k = 1 } ^ { + \infty } a _ { k }$ hoi tu,thi （204
+
+$$
+\operatorname* { l i m } _ { n \to \infty } a _ { n } = 0 .
+$$
+
+Ching minh. Ap dung dinh 1y 4.2 voi $p = 1$ hay
+
+$$
+\forall \epsilon > 0 , \exists n _ { 0 } , \forall n \ge n _ { 0 } : | a _ { n + 1 } | < \epsilon .
+$$
+
+Hay lim $a _ { n } = 0$ ： （20 $n {  } { \infty }$ （20
+
+Vi du 4.5. Khao sat su hoi tu hay phan ky cua chuoi so
+
+$$
+\sum _ { n = 1 } ^ { + \infty } { \frac { 2 n ^ { 2 } - 3 n - 1 } { n ^ { 2 } - 5 n - 3 } } .
+$$
+
+Gidi Xet gioi han
+
+$$
+\operatorname* { l i m } _ { n \to \infty } a _ { n } = \operatorname* { l i m } { \frac { 2 n ^ { 2 } - 3 n - 1 } { n ^ { 2 } - 5 n - 3 } } = 2 \neq 0 .
+$$
+
+Theo dinh ly 4.4, chuoi phan ky.
+
+Dinh ly 4.6. Néu chuoi $\sum _ { n = 1 } ^ { + \infty } a _ { n }$ hoi tu tuyet doi, thi $\sum _ { n = 1 } ^ { + \infty } a _ { n }$ hoi tu.
+
+Ching minh. Theo dinh ly 4.2, day $\sum _ { n = 1 } ^ { \infty } \left| a _ { n } \right.$ hoi tu khi va chi khi （20
+
+$$
+\forall \epsilon > 0 , \exists n _ { 0 } , \forall n \geq n _ { 0 } : \left| \left| a _ { n + 1 } \right| + \left| a _ { n + 2 } \right| + \ldots + \left| a _ { n + p } \right| \right| < \epsilon
+$$
+
+Ma
+
+$$
+\left| a _ { n + 1 } + a _ { n + 2 } + \ldots + a _ { n + p } \right| \leq \left| \left| a _ { n + 1 } \right| + \left| a _ { n + 2 } \right| + \ldots + \left| a _ { n + p } \right| \right| < \epsilon .
+$$
+
+Do dó, ta có
+
+$$
+\forall \epsilon > 0 , \exists n _ { 0 } , \forall n \geq n _ { 0 } : \left| a _ { n + 1 } + a _ { n + 2 } + \ldots + a _ { n + p } \right| < \epsilon .
+$$
+
+Vay （20 $\sum _ { n = 1 } ^ { + \infty } a _ { n }$ hoi tu.
+
+# 4.1.3. Cac tinh chat
+
+Dua vao dinh nghia, ta dé dang chung minh duoc các tinh chat sau:   
+$+$ Tinh chat $I$ Chuoi s6 $\sum _ { n = 1 } ^ { + \infty } a _ { n }$ hoi tu hay phan ky khong phu thuQc vao tóng huu han cac so hang dau tien. Hay
+
+$$
+\sum _ { n = 1 } ^ { + \infty } a _ { n } \mathrm { ~ \ h \hat { \mathsf { o i } } ~ t u ~ ( p h a n ~ k \hat { y } ) ~ } \Leftrightarrow \sum _ { n = n _ { 0 } } ^ { + \infty } a _ { n } \mathrm { ~ \ } \forall n _ { 0 } \geq 1 .
+$$
+
+$$
+\begin{array} { r l } & { \displaystyle { \imath h \ c h \hat { a } ^ { \prime } \ 2 \ \mathrm { N } \hat { \ e u } \ c h u \tilde { \circ } \ \mathrm { s } \ \tilde { \bigotimes } \sum _ { n = 1 } ^ { + \infty } a _ { n } \ \mathrm { h } \hat { \circ 1 } \ \mathrm { t u } , \mathrm { t h } \ \mathrm { c h } \tilde { \mathbf { u } } \tilde { \circ } \mathrm { i } \ \mathrm { s } \tilde { \bigotimes } \sum _ { n = 1 } ^ { + \infty } \lambda a _ { n } \ \mathrm { ~ \lambda } } \in \mathbb { R } \ 1 }  \\ & { \displaystyle { \imath h \ c h \hat { a } ^ { \prime } \ 3 \ \mathrm { N } \hat { \ e u } \ \mathrm { h a i } \ c h u \tilde { \circ } \mathrm { i } \ \mathrm { s } \tilde { \otimes } \sum _ { n = 1 } ^ { + \infty } a _ { n } \ \mathrm { v } \tilde { \mathbf { a } } \sum _ { n = 1 } ^ { + \infty } b _ { n } \ \mathrm { h } \hat { \circ 1 } \ \mathrm { t u } , \mathrm { t h } \ } }  \end{array}
+$$
+
+$$
+\sum _ { n = 1 } ^ { + \infty } ( a _ { n } + b _ { n } ) = \sum _ { n = 1 } ^ { + \infty } a _ { n } + \sum _ { n = 1 } ^ { + \infty } b _ { n } .
+$$
+
+$^ +$ Tinh chät 4 Chuoi so phuc
+
+$$
+\sum _ { n = 1 } ^ { + \infty } z _ { n } = \sum _ { n = 1 } ^ { + \infty } ( R e z _ { n } + i I m z _ { n } )
+$$
+
+hoi tu khi va chi khi
+
+$$
+\sum _ { n = 1 } ^ { + \infty } R e z _ { n } { \mathrm { ~ v \hat { a } ~ } } \sum _ { n = 1 } ^ { + \infty } I m z _ { n } { \mathrm { ~ h \hat { \mathrm { ~ } } t u } } .
+$$
+
+# 4.2. Chuoi só duong
+
+# 4.2.1. Dinh nghia
+
+Chuoi so thuc $\sum _ { n = 1 } ^ { + \infty } a _ { n }$ dugc goi la chuoi so duong, neu $a _ { n } > 0 \forall n \in \mathbb { N } ^ { * }$ . （20 Tu dinh nghia, ta nhan thay rang day só $( S _ { n } )$ don dieu tang. Do vay, chuoi so duong $\sum _ { n = 1 } ^ { + \infty } a _ { n }$ hoi tu khi va chi khi day só $( S _ { n } )$ bi chan tren.
+
+4.2.2. Cac tieu chuan hoi tu Khao sat su hoi tu cua chuoi só duong
+
+n 金   
+Dinh ly 4.7. (so sánh 1) 2 +8   
+Cho hai chuoi só duong an va 6m thoa man n= n= $a _ { n } \leq b _ { n } \forall n \geq n _ { 0 } .$ （
+
+Khi d6
+
+$^ +$ Neu (2) hoi tu, thi (1) hoi tu.   
+$^ +$ Néu (1) phan ky, thi (2) phan ky.
+
+Chung minh. Dat
+
+$$
+S _ { n } = \sum _ { k = n _ { 0 } } ^ { n } a _ { k } , \bar { S } _ { n } = \sum _ { k = n _ { 0 } } ^ { n } b _ { k } .
+$$
+
+Ta c6 (2)hoitu khi va chi khi ton tai $M$ sao cho ${ \bar { S } } _ { n } \leq M \forall n \geq n _ { 0 }$ Tir bat dang thuc,
+
+$$
+\begin{array} { c } { { a _ { n } \leq b _ { n } \forall n \geq n _ { 0 } \Rightarrow S _ { n } \leq M \forall n \geq n _ { 0 } . } } \\ { { \mathrm { h a y } \displaystyle \sum _ { k = 1 } ^ { + \infty } a _ { k } \mathrm { h } \hat { \mathrm { e } } \mathrm { i } \mathrm { t u } . } } \end{array}
+$$
+
+Vay $\sum _ { k = n _ { 0 } } ^ { + \infty } a _ { k }$ hoi tu （20
+
+Neu (1) phan ky, gia sir (2) hoi tu, theo chumg minh tren, ta c6 (1) hoi tu, trai gia thiet. Vay (2) phan ky.
+
+Vi du 4.8. Khao sat su hoi tu hay phan ky cua chuoi so
+
+$$
+\sum _ { n = 1 } ^ { + \infty } { \frac { n } { e ^ { n ^ { 2 } } + n - 1 } } .
+$$
+
+Gidi Tur bat dang thuc $e ^ { x } > { \frac { 1 } { 2 } } x ^ { 2 } \forall x > 0$ suy ra
+
+$$
+\frac { n } { e ^ { n ^ { 2 } } + n - 1 } \leq \frac { n } { e ^ { n ^ { 2 } } } < \frac { 2 } { n ^ { 3 } } < \frac { 2 } { n ^ { 2 } } \forall n \in \mathbb { N } ^ { * } : = \{ 1 , 2 , \ldots \} .
+$$
+
+Ma
+
+$$
+\mathfrak { I } _ { n } = \frac { 1 } { 1 ^ { 2 } } + \frac { 1 } { 2 ^ { 2 } } + \ldots + \frac { 1 } { n ^ { 2 } } < 1 + \frac { 1 } { 1 . 2 } + \frac { 1 } { 2 . 3 } + \ldots + \frac { 1 } { ( n - 1 ) n } = 2 - \frac { 1 } { n } \ .
+$$
+
+Vay day so duong $( S _ { n } )$ hoi tu. Hay chuoi so duong $\sum _ { n = 1 } ^ { + \infty } { \frac { 1 } { n ^ { 2 } } }$ hoi tu. Theo dinh ly 4.7, chuoi s0 $\sum _ { n = 1 } ^ { + \infty } { \frac { n } { e ^ { n ^ { 2 } } + n - 1 } }$ hoi tu. 1
+
+Dinh ly 4.9. (so sánh 2)   
+Cho hai chuoi so duong $\sum _ { n = 1 } ^ { + \infty } a _ { n }$ (1) va (2) thoa man n $\operatorname* { l i m } _ { n  \infty } { \frac { a _ { n } } { b _ { n } } } = M \geq 0 .$
+
+Khi d6
+
++ Neu $M \in ( 0 , + \infty )$ ,thi (1) hoi tu (phan ky) khi va chi khi (2) hoi tu (tuong ing: phan ky）.
+
+$^ +$ Néu M = O va (2) hoi tu, thi $( I )$ hoi tu. $+$ Neu $M = + \infty$ va (2) phan $k { \dot { y } }$ ,thi (1) phan k
+
+Chimg minh. $+$ Neu lir $\begin{array} { r } { \frac { n } { b _ { n } } = M \in ( 0 , + \infty ) } \end{array}$ ,thi
+
+$$
+\prime _ { \epsilon } \in ( 0 , M ) , \exists n _ { 0 } , \forall n \geq n _ { 0 } \Rightarrow | \frac { a _ { n } } { b _ { n } } - M | < \epsilon \Rightarrow ( M - \epsilon ) b _ { n } < a _ { n } < ( M - \epsilon )
+$$
+
+Theo dinh ly 4.7, ta c6 (1) hoi tu (phan ky) khi va chi khi (2) hoi tu (tuong ung: phan ky).
+
+$\textstyle + \mathrm { N } { \tilde { \in } } \mathbf { u } \operatorname* { l i m } _ { n \to \infty } { \frac { a _ { n } } { b _ { n } } } = M = 0$ thi
+
+$$
+\forall \epsilon > 0 , \exists n _ { 0 } , \forall n \geq n _ { 0 } \Rightarrow | \frac { a _ { n } } { b _ { n } } | < \epsilon \Rightarrow a _ { n } \leq \epsilon b _ { n } .
+$$
+
+Theo dinh ly 4.7, neu (2) hoi tu thi (1) hoi tu.
+
+$\begin{array} { r } { + \_ { \mathrm { N } } \tilde { \epsilon } _ { \mathsf { U } } \underset { n \to \infty } { \operatorname* { l i m } } \frac { a _ { n } } { b _ { n } } = + \infty \Rightarrow \underset { n \to \infty } { \operatorname* { l i m } } \frac { b _ { n } } { a _ { n } } = 0 . } \end{array}$ Khi d6,ching minh tuong tu nhu tren.
+
+Vi du 4.1o. Khao sat su hoi tu hay phan ky cua
+
+$$
+\sum _ { n = 1 } ^ { + \infty } n \sin ^ { 2 } { \frac { 2 } { n } } .
+$$
+
+Gidi Dat
+
+$$
+n \sin ^ { 2 } { \frac { 2 } { n } } > 0 \forall n \in \mathbb { N } ^ { * } , b _ { n } = { \frac { 1 } { n } } \Rightarrow \operatorname* { l i m } _ { n \to \infty } { \frac { a _ { n } } { b _ { n } } } = \operatorname* { l i m } _ { n \to \infty } { \frac { \sin ^ { 2 } { \frac { 2 } { n } } } { \frac { 1 } { n ^ { 2 } } } } = 4 \in ( 0 , + \infty ) .
+$$
+
+Ma chuoi dieu hoa
+
+$$
+\sum _ { n = 1 } ^ { + \infty } b _ { n } = \sum _ { n = 1 } ^ { + \infty } { \frac { 1 } { n } } { \mathrm { p h a n k } } { \dot { \mathrm { y } } } .
+$$
+
+Vay $\sum _ { n = 1 } ^ { + \infty } n \sin ^ { 2 } { \frac { 2 } { n } }$ phan ky. （
+
+Ching minh. - Neu $\operatorname* { l i m } _ { n \to \infty } \frac { a _ { n + 1 } } { a _ { n } } = D < 1$ , theo dinh nghia $\forall \epsilon \in ( 0 , 1 - D ) , \exists n _ { 0 } , \forall n \geq n _ { 0 } \Rightarrow | \frac { a _ { n + 1 } } { a _ { n } } - D | < \epsilon \Rightarrow a _ { n + 1 } < ( D + \epsilon$ voi $q = D + \epsilon \in ( 0 , 1 )$ ：
+
+Khi d6
+
+$$
+\left\{ \begin{array} { l l } { \mathrm { T h a y } \ n = n _ { 0 } } & { \Rightarrow a _ { n _ { 0 } + 1 } < a _ { n _ { 0 } } q } \\ { \mathrm { T h a y } \ n = n _ { 0 } + 1 } & { \Rightarrow a _ { n _ { 0 } + 2 } < a _ { n _ { 0 } + 1 } q < a _ { n _ { 0 } } q ^ { 2 } } \\ { \dots } & \\ { \mathrm { T h a y } \ n = n _ { 0 } + k } & { \Rightarrow a _ { n _ { 0 } + k } < a _ { n _ { 0 } } q ^ { k } . } \end{array} \right.
+$$
+
+Vi chuoi s6 $\sum _ { k = 1 } ^ { + \infty } a _ { n _ { 0 } } q ^ { k }$ hoi tu, nen $\sum _ { k = n _ { 0 } } ^ { + \infty } a _ { k }$ hoi tu, suy ra （20 $\sum _ { k = 1 } ^ { + \infty } a _ { k }$ hoi tu. - Néu $\begin{array} { r } { \operatorname* { l i m } _ { n \to \infty } \frac { a _ { n + 1 } } { a _ { n } } = D > 1 } \end{array}$ , theo dinh nghia
+
+AE $\begin{array} { r } { \Xi \left( 0 , D - 1 \right) , \exists n _ { 0 } , \forall n \ge n _ { 0 } \Rightarrow | \frac { a _ { n + 1 } } { a _ { n } } - D | < \epsilon \Rightarrow a _ { n + 1 } > ( D - \epsilon ) a _ { n } = 1 \quad } \end{array}$ voi $q = D - \epsilon > 1$ . Nhu vay
+
+$$
+a _ { n + 1 } > a _ { n } \geq a _ { n _ { 0 } } \forall n \geq n _ { 0 } > 0 \Rightarrow \operatorname* { l i m } _ { n \to \infty } a _ { n } \neq 0 .
+$$
+
+Theo dinh ly 4.4, ta c6 $\sum _ { k = 1 } ^ { + \infty } a _ { k }$ phan ky.
+
+Vi du 4.12. Khao sat su hoi tu cua chuoi so
+
+$$
+\sum _ { n = 1 } ^ { + \infty } { \frac { n ! } { n ^ { n } } } .
+$$
+
+Giai Dat
+
+$$
+\begin{array} { c c c } { \displaystyle { \boldsymbol { n } _ { n } = \frac { n ! } { n ^ { n } } \Rightarrow \operatorname* { l i m } _ { n  \infty } \frac { \boldsymbol { a } _ { n + 1 } } { \boldsymbol { a } _ { n } } = \operatorname* { l i m } _ { n  \infty } ( \frac { n } { n + 1 } ) ^ { n } = \operatorname* { l i m } _ { n  \infty } \frac { 1 } { ( 1 + \frac { 1 } { n } ) ^ { n } } = \frac { 1 } { e } < 1 . } } \end{array}
+$$
+
+Theo dau hieu D'Alembert, ta c6 $\sum _ { n = 1 } ^ { + \infty } { \frac { n ! } { n ^ { n } } }$ hoi tu. （
+
+Dinh ly 4.13. (Cauchy) Cho chuoi so duong $\sum _ { k = 1 } ^ { + \infty } a _ { k }$ thoa man $$
+\operatorname* { l i m } _ { n  \infty } \sqrt [ n ] { a _ { n } } = D \geq 0 .
+$$
+
+Ching minh. - Neu li n- $\operatorname* { m } _ { \gamma \infty } \sqrt [ n ] { a _ { n } } = D < 1$ , theo dinh nghia
+
+$$
+- \ D ) , \exists n _ { 0 } , \forall n \ge n _ { 0 } \Rightarrow | \sqrt [ n ] { a _ { n } } - D | < \epsilon \Rightarrow \sqrt [ n ] { a _ { n } } < D + \epsilon \Rightarrow a _ { n } < q ^ { n } ,
+$$
+
+v6i $q = D + \epsilon \in ( 0 , 1 )$ .
+
+Ma chuoi
+
+$$
+\sum _ { k = n _ { 0 } } ^ { + \infty } q ^ { n } = \frac { q ^ { n _ { 0 } } } { 1 - q } \mathrm { ( h _ { \cdot } ^ { \mathrm { o i } } ~ t u ) } ,
+$$
+
+nen $\sum _ { k = n _ { 0 } } ^ { + \infty } a _ { k }$ hoi tu, suy ra $\sum _ { k = 1 } ^ { + \infty } a _ { k }$ hoi tu. - Neu $\operatorname* { l i m } _ { n \to \infty } \sqrt [ n ] { a _ { n } } = D > 1$ , theo dinh nghia   
+$\forall \epsilon \in ( 0 , D - 1 ) , \exists n _ { 0 } , \forall n \geq n _ { 0 } \Rightarrow | \sqrt [ n ] { a _ { n } } - D | < \epsilon \Rightarrow \sqrt [ n ] { a _ { n } } > D - \epsilon > 1$ an>1.   
+Theo dinh ly 4.4, ta c6 $\sum _ { k = 1 } ^ { + \infty } a _ { k }$ phan ky. （2
+
+Vi du 4.14. Cho chuoi so duong $\sum _ { k = 1 } ^ { + \infty } a _ { k } \ c \acute { O } \operatorname* { l i m } _ { n  \infty } a _ { n } = a \in ( 0 , + \infty )$ . Khao sat su hoi tu hay phan ky cua chuoi so sau
+
+Gidi Ta c6
+
+$$
+D = \operatorname* { l i m } _ { n \to \infty } \sqrt [ n ] { ( \frac { x } { a _ { n } } ) ^ { n } } = \frac { x } { a } .
+$$
+
+Theo dinh ly 4.13, ta c6
+
++ Neu $x \in ( 0 , a )$ , thi hoi tu.   
++ Neu $x \in ( a , + \infty )$ , thi phan ky.   
++ Néu $x = a$ , thi chuoi tren c6 thé hoi tu va c6 thé phan ky. Ta xem các truong hop dac biet sau.
+
+Truong hop $l \colon a _ { n } = { \sqrt [ { n } ] { n } } \Rightarrow \operatorname* { l i m } _ { n \to \infty } a _ { n } = 1 \Rightarrow a = 1 = x$ . Khi d6
+
+$$
+\sum _ { k = 1 } ^ { + \infty } ( \frac { x } { a _ { n } } ) ^ { n } = \sum _ { k = 1 } ^ { + \infty } \frac { 1 } { n } \mathrm {  ~ \ p h a n ~ k \grave { y } . ~ }
+$$
+
+Truong hop 2: $a _ { n } = { \sqrt [ n ] { n ^ { 2 } } } \Rightarrow \operatorname* { l i m } _ { n \to \infty } a _ { n } = 1 \Rightarrow a = 1 = x$ .Khi d6
+
+# Dinh ly 4.15. (tich phan)
+
+Cho ham so $f ( x )$ duong, giam trén $[ 1 , + \infty )$ thoa man
+
+$$
+f ( n ) = a _ { n } \forall n \in \mathbb { N } ^ { * } .
+$$
+
+Khi do, chuoi so duong $\sum _ { k = 1 } ^ { + \infty } a _ { k }$ hoi tu (phan ky） khi va chi khi （202 $\begin{array} { l } { { + \infty } } \\ { { \int \displaylimits } \mathop { f ( x ) d x } \ h \chi i \ t _ { : } } \\ { { 1 } } \end{array}$ (tuong ing: Phan ky).
+
+Ching minh. Do ham $f ( x )$ giam tren $[ 1 , + \infty )$ , nén
+
+$$
+\begin{array} { r } { \iota \leq x \leq n + 1 \Leftrightarrow f ( n + 1 ) \leq f ( x ) \leq f ( n ) \Leftrightarrow a _ { n + 1 } \leq f ( x ) \leq a _ { n } \Rightarrow } \end{array}
+$$
+
+$$
+\begin{array} { c l } { { 1 } } & { { 1 } } \\ { { f ( x ) d x \leq a _ { n } \forall n = 1 , 2 , \ldots \Rightarrow S _ { n + 1 } - a _ { 1 } \leq \displaystyle \sum _ { k = 1 } ^ { n } \displaystyle \int _ { k } ^ { k + 1 } f ( x ) d x \leq S _ { n } \Rightarrow } } \\ { { } } & { { } } \\ { { \displaystyle S _ { n + 1 } - a _ { 1 } \leq \displaystyle \int _ { 1 } ^ { n + 1 } f ( x ) d x \leq S _ { n } . } } \end{array}
+$$
+
+Theo dinh ly 4.7, ta c6 dieu can chumg minh.
+
+Vi du 4.16. Khao sat su hoi tu hay phan ky cia chuoi Riemann
+
+$$
+\sum _ { k = 1 } ^ { + \infty } { \frac { 1 } { n ^ { \alpha } } } .
+$$
+
+Giai Dat
+
+$$
+a _ { n } = { \frac { 1 } { n ^ { \alpha } } } = f ( n ) { \mathrm { ~ } } \operatorname { v \dot { o i } } f ( x ) = { \frac { 1 } { x ^ { \alpha } } } > 0 { \mathrm { ~ } } \forall x \geq 1 .
+$$
+
+Theo vi du (5.34),
+
+$$
+\int _ { 1 } ^ { + \infty } \frac { d x } { x ^ { \alpha } } = \left\{ \begin{array} { l l } { { \frac { 1 } { \alpha - 1 } } } & { { \mathrm { n } \tilde { \epsilon } { \mathbf { u } } \alpha > 1 } } \\ { { \mathrm { p h a n k y } } } & { { \mathrm { n } \tilde { \epsilon } { \mathbf { u } } \alpha \leq 1 . } } \end{array} \right.
+$$
+
+Vay
+
+- Néu $\alpha > 1$ ,thi $\sum _ { k = 1 } ^ { + \infty } { \frac { 1 } { n ^ { \alpha } } }$ hoi tu. （204   
+- Neu $\alpha \leq 1$ ,thi $\sum _ { k = 1 } ^ { + \infty } { \frac { 1 } { n ^ { \alpha } } }$ phan ky. （20
+
+# 4.3. Chuoi dan dau
+
+4.3.1. Dinh nghia Cho day so duong $a _ { 1 } , a _ { 2 } , . . . , a _ { n } , . .$ .. Khi do chuoi dan dau la chuoi só c6 dang
+
+$$
+\sum _ { k = 1 } ^ { + \infty } ( - 1 ) ^ { k - 1 } a _ { k } = a _ { 1 } - a _ { 2 } + a _ { 3 } - . . . + ( - 1 ) ^ { n - 1 } a _ { n } + . . .
+$$
+
+hoac
+
+$$
+\sum _ { k = 1 } ^ { + \infty } ( - 1 ) ^ { k } a _ { k } = - a _ { 1 } + a _ { 2 } - a _ { 3 } - . . . + ( - 1 ) ^ { n } a _ { n } + . . .
+$$
+
+# 4.3.2. Dau hieu hoi tu
+
+Dinh ly 4.17. (Leibnitz)
+
+Cho chuoi dan dau dang
+
+$$
+\sum _ { k = 1 } ^ { + \infty } ( - 1 ) ^ { k - 1 } a _ { k } = a _ { 1 } - a _ { 2 } + a _ { 3 } - \ldots + ( - 1 ) ^ { n - 1 } a _ { n } + \ldots ^ { ( * ) }
+$$
+
+thoa man diéu kien
+
+Khi d6 chuoi (\*) hoi tu.
+
+Chitng minh. Xet hai day con cua day $( S _ { n } )$ la $\left( { \cal S } _ { 2 m } \right)$ va $\left( S _ { 2 m + 1 } \right)$ . Ta c6
+
+$$
+S _ { 2 m } = ( a _ { 1 } - a _ { 2 } ) + ( a _ { 3 } - a _ { 4 } ) + \ldots + ( a _ { 2 m - 1 } - a _ { 2 m } ) .
+$$
+
+Vi $\left( a _ { n } \right)$ giam, suy ra $a _ { k } - a _ { k + 1 } \geq 0 \forall k \geq 1 \Rightarrow S _ { 2 m } \geq 0 .$
+
+Mat khac
+
+$$
+\begin{array} { r } { \mathfrak { I } _ { 2 m } = a _ { 1 } - \left( \left( a _ { 2 } - a _ { 3 } \right) + \left( a _ { 4 } - a _ { 5 } \right) + \ldots + \left( a _ { 2 m - 2 } - a _ { 2 m - 1 } \right) + a _ { 2 m } \right) \le } \end{array}
+$$
+
+Do d6 day con $\left( { \cal S } _ { 2 m } \right)$ don dieu tang va bi chan tren. Khi d6
+
+$$
+\operatorname* { l i m } _ { m  \infty } S _ { 2 m } = S .
+$$
+
+Theo dinh nghia,
+
+$$
+\forall \epsilon > 0 , \exists n _ { 1 } , \forall n \geq n _ { 1 } : | S _ { 2 m } - S | < \frac { \epsilon } { 2 } .
+$$
+
+Tu gia thiet lim $a _ { n } = 0$ , theo dinh nghia ta c6 （20 $n {  } { \infty }$ （20
+
+$$
+\forall \epsilon > 0 , \exists n _ { 2 } , \forall n \geq n _ { 2 } : | a _ { n } | < { \frac { \epsilon } { 2 } } .
+$$
+
+Dat $n _ { 0 } = \operatorname* { m a x } \{ n _ { 1 } , n _ { 2 } \}$ .
+
+- Néu $n$ chan, theo chumg minh tren ta c6 $| S _ { n } - S | < \epsilon$ . - Néu $n \operatorname { l e }$ suy ra $n + 1$ chan. Khi d6
+
+$$
+| S _ { n } - S | = | S _ { n + 1 } - a _ { n + 1 } - S | \leq | S _ { n + 1 } - S | + | a _ { n + 1 } | \leq { \frac { \epsilon } { 2 } } + { \frac { \epsilon } { 2 } } = \epsilon .
+$$
+
+Theo tinh chat 2 cüa muc 2.6, ta c6
+
+$$
+\operatorname* { l i m } _ { n \to \infty } S _ { n } = S .
+$$
+
+Vi du 4.18. Khao sat su hoi tu hay phan ky cua dan dau
+
+Giai Dat
+
+$$
+f ( x ) = \frac { 1 } { x - \ln x } \Rightarrow f ^ { \prime } ( x ) = - \frac { 1 } { ( x - \ln x ) ^ { 2 } } ( 1 - \frac { 1 } { x } ) < 0 \forall x > 1 .
+$$
+
+Khi d6 day só $\left( a _ { n } \right)$ thoa man các dieu kien cua dinh ly 4.17 voi
+
+$$
+a _ { n } = f ( n ) = { \frac { 1 } { n - \ln n } } \Rightarrow \operatorname* { l i m } _ { n \to \infty } a _ { n } = 0 .
+$$
+
+Vay chuoi dan dau
+
+$$
+\sum _ { k = 1 } ^ { + \infty } { \frac { ( - 1 ) ^ { k } } { k - \ln k } }
+$$
+
+hoi tu.
+
+# 4.4. Chuoi ham
+
+4.4.1. Dinh nghia Cho mot day các ham thuc $f _ { 1 } ( x ) , f _ { 2 } ( x ) , . . . , f _ { n } ( x ) ,$ .. xac dinh tren $( a , b )$ . Khi d6, tong vo han
+
+$$
+\sum _ { k = 1 } ^ { + \infty } f _ { k } ( x ) ^ { ( * ) }
+$$
+
+duqgc goi la mot chuoi ham xac dinh tren $( a , b )$ ：
+
++ Ham só $f _ { n } ( x )$ duoc goi la so hang thu $n$ cua chuoi ham $( ^ { * } )$ ： $^ +$ Tóng huu han
+
+$$
+S _ { n } ( x ) = \sum _ { k = 1 } ^ { n } f _ { k } ( x )
+$$
+
+duqc goi la tong riéng thu $n$ cua chuoi ham $( ^ { * } )$ ：
+
+$+$ Diem $x _ { 0 }$ dugc goi la diem hoi tu (hay phan ky) cua chuoi ham $( ^ { * } )$ , neu chuoi s0
+
+$$
+\sum _ { k = 1 } ^ { n } f _ { k } ( x _ { 0 } )
+$$
+
+hoi tu (hay phan ky).
+
+$+$ Tap các diém hoi tu cua chuoi ham duoc goi la mién hoi tu cua chuoi ham $( ^ { * } )$ $^ +$ Chuoi ham $( ^ { * } )$ duoc goi la hoi tu déu toi ham so $f ( x )$ trén mién $D$ ,néu
+
+$$
+\forall \epsilon > 0 , \exists n _ { 0 } , \forall n \geq n _ { 0 } : | S _ { n } ( x ) - S ( x ) | < \epsilon \forall x \in D .
+$$
+
+$+ \mathrm { N } \mathrm { \hat { e } u }$ chuoi ham $( ^ { * } )$ hoi tu deu den $f ( x )$ , thi ham só
+
+$$
+R _ { n } ( x ) = f ( x ) - S _ { n } ( x )
+$$
+
+dugc goi la phan du bac $n$ cua chuoi ham $( ^ { * } )$ ：
+
+（20 $^ +$ Chuoi ham (\*) duqc goi la hoi tu tuyét doi tren mien $D$ ,neu
+
+$$
+\sum _ { k = 1 } ^ { n } | f _ { k } ( x ) |
+$$
+
+hoi tu tren mién $D$ ：
+
+# 4.4.2. Cac dieu kien hoi tu deu
+
+Cho chuoi ham
+
+$$
+\sum _ { k = 1 } ^ { n } f _ { k } ( x ) ^ { ( * ) }
+$$
+
+xäc dinh tren mien $D$ ：
+
+# Dinh ly 4.19. (Cauchy)
+
+Chuoi ham $( ^ { * } )$ hoi tu deu trén mién $D$ khi va chi khi
+
+$$
+\forall \epsilon > 0 , \exists n _ { 0 } , \forall n \geq n _ { 0 } , \forall p \in \mathbb { N } : | S _ { n + p } ( x ) - S _ { n } ( x ) | < \epsilon \forall x \in D .
+$$
+
+（20 $\sum _ { k = 1 } ^ { + \infty } f _ { k } ( x )$ Ching minh. $( \Rightarrow )$ Gia sur hoi tu deu tren mien $D$ den ham só $f ( x )$ . Theo dinh nghia,
+
+$$
+\forall \epsilon > 0 , \exists n _ { 0 } , \forall p \in \mathbb { N } : | S _ { n + p } ( x ) - S ( x ) | < { \frac { \epsilon } { 2 } } \ \forall x \in D .
+$$
+
+Khi d6
+
+$$
+x ) - S _ { n } ( x ) | \leq | S _ { n + p } ( x ) - S ( x ) | + | S _ { n } ( x ) - S ( x ) | < { \frac { \epsilon } { 2 } } + { \frac { \epsilon } { 2 } } = \epsilon \forall x
+$$
+
+$( \Leftarrow )$ Gia str
+
+$$
+\forall \epsilon > 0 , \exists n _ { 0 } , \forall n \geq n _ { 0 } , \forall p \in \mathbb { N } : | S _ { n + p } ( x ) - S _ { n } ( x ) | < \epsilon \forall x \in D .
+$$
+
+Voi moi $x$ c6 dinh, day so $( S _ { n } ( x ) )$ la mot day Cauchy. Theo tinh chat cüa day Cauchy (muc 2.7), ta có
+
+$$
+\operatorname* { l i m } _ { \to \infty } S _ { n } ( x ) = S ( x ) \forall x \in D \Rightarrow \operatorname* { l i m } _ { p \to \infty } | S _ { n + p } ( x ) - S _ { n } ( x ) | = | S ( x ) - S _ { n } ( x ) |
+$$
+
+Ket hop dieu nay voi $| S _ { n + p } ( x ) - S _ { n } ( x ) | < \epsilon ~ \forall p \in \mathbb { N } , x \in D$ tac6 $| S ( x ) -$ $S _ { n } ( x ) | < \epsilon \forall n \in \mathbb { N } , x \in L$ . Vay chuoi ham $( ^ { * } )$ hoi tu déu tren mién $D$ ：
+
+Vi du 4.20. Ching minh rang cac chuoi ham
+
+$$
+\begin{array} { l } { i ) \displaystyle \sum _ { n = 1 } ^ { + \infty } \frac { ( - 1 ) ^ { n - 1 } } { x ^ { 2 } + n } , } \\ { i i ) \displaystyle \sum _ { n = 1 } ^ { + \infty } \frac { ( - 1 ) ^ { n - 1 } x ^ { 2 } } { ( x ^ { 2 } + 1 ) ^ { n } } , } \end{array}
+$$
+
+hoi tu deu trén R.
+
+Gidi i) Dat
+
+$$
+S _ { n } ( x ) = \sum _ { k = 1 } ^ { n } { \frac { ( - 1 ) ^ { k - 1 } } { x ^ { 2 } + k } } .
+$$
+
+Khi d6
+
+$$
+S _ { n + p } ( x ) - S _ { n } ( x ) | = { \Big | } { \frac { ( - 1 ) ^ { n } } { x ^ { 2 } + n + 1 } } + { \frac { ( - 1 ) ^ { n + 1 } } { x ^ { 2 } + n + 2 } } + \ldots + { \frac { ( - 1 ) ^ { n + p + 1 } } { x ^ { 2 } + n + p } } { \Big | } .
+$$
+
+Ta xét hai truong hop cua $p$ ：
+
+Truong hop $\boldsymbol { I } \colon \boldsymbol { p }$ le.
+
+$$
+\begin{array} { c } { { \left| \displaystyle \sum _ { k \neq j = 1 \atop n + 1 } \displaystyle \sum _ { i = 1 } ^ { 1 } \left| S _ { \mathrm { s } \neq 0 , i } ( z ) \right| - S _ { \mathrm { s } \neq 0 , i } ( z ) \right| } } \\ { { - \left| \displaystyle \frac { 1 } { x ^ { 2 } \cdot \textbf { | \Re | 1 } } - \displaystyle \frac { 1 } { x ^ { 2 } \cdot \textbf { | \Im | 1 } } + \cdots + \displaystyle \frac { 1 } { x ^ { 2 } \cdot \textbf { | \Im | 1 } \cdot p } \right| } } \\ { { - \left| \displaystyle \sum _ { k \neq + n - 1 } \displaystyle \sum _ { i = 2 } ^ { 1 } + n + 2 \right| \displaystyle \sum _ { n \neq 1 } ^ { 1 } \dots } } \\ { { \mathrm { ~ | \Im | \displaystyle \frac { 1 } { x ^ { 2 } \cdot \textbf { | \Im | 1 } } \mathrm { ~ \it ~ \widetilde { p } \cdot ~ } \displaystyle \sum _ { k \neq 1 } ^ \mathrm { ~ \widetilde { \mathtt { d } } ( \mu _ 1 ) \cdot ~ | \Im | ~ \widetilde { p } ~ } | } } } \\ { { = \displaystyle \sum _ { k ^ { 2 } \neq n - 1 } \mathrm { ~ ~ \left( \it \int _ { a ^ { 2 } + n + 2 } \mathrm { ~ \partial \alpha \mu _ 2 ^ { 2 } ~ \alpha _ 1 ~ \widetilde { a } ^ 2 + n + 3 \delta _ 1 ^ { \tau } ~ | \Im ~ \alpha | ~ - } \right. } } } \\ { { \mathrm { ~ | \Im | \displaystyle \frac { 1 } { x ^ { 2 } \cdot \textbf { | \Im | 1 } } \mathrm { ~ \it { \Im | \alpha \mu _ 1 ~ \widetilde { a } ^ 2 \cdot \textbf { | \Im | 1 } \cdot \widetilde { p } | } } } } } \\  { \mathrm { ~ | \Im | \displaystyle \frac { 1 } { x ^ { 2 } \cdot \textbf { | \Im | 1 } } \mathrm { ~ \it { \Im | \alpha \mu _ 1 ~ \widetilde { a } ^ 2 \cdot \textbf { | \Im | 1 } \cdot \widetilde { p } | } } } } \\  { \mathrm { ~ | \Im | \displaystyle \frac { 1 } { x ^ { 2 } \cdot \textbf { | \Im | 1 } } \mathrm { ~ \it { \Im | \alpha \mu _ 2 ^ { 2 } \cdot \textbf { | \Im | 1 } \cdot \widetilde { p } | } } } } \end{array}
+$$
+
+Truong hop $2 \colon p$ chan.
+
+$$
+{ \begin{array} { r l } & { = \left| { \frac { 1 } { x ^ { 2 } + n + 1 } } - { \frac { 1 } { x ^ { 2 } + n + 2 } } + \ldots - { \frac { 1 } { x ^ { 2 } + n + p } } \right| } \\ & { = ( { \frac { 1 } { x ^ { 2 } + n + 1 } } - { \frac { 1 } { x ^ { 2 } + n + 2 } } ) + \ldots + ( { \frac { 1 } { x ^ { 2 } + n + p - 1 } } - { \frac { 1 } { x ^ { 2 } + n + 2 } } } \\ & { = { \frac { 1 } { x ^ { 2 } + n + 1 } } - \left( ( { \frac { 1 } { x ^ { 2 } + n + 2 } } ) - { \frac { 1 } { x ^ { 2 } + n + 3 } } \right) + \ldots } \\ & { + ( { \frac { 1 } { x ^ { 2 } + n + p - 2 } } - { \frac { 1 } { x ^ { 2 } + n + p - 1 } } ) + { \frac { 1 } { x ^ { 2 } + n + p } } ) } \\ & { < { \frac { 1 } { x ^ { 2 } + n + 1 } } } \end{array} }
+$$
+
+Tur (4.1) va (4.2) suy ra
+
+$$
+S _ { n + p } ( x ) - S _ { n } ( x ) | < { \frac { 1 } { x ^ { 2 } + n + 1 } } < { \frac { 1 } { n } } < \epsilon \Rightarrow n > { \frac { 1 } { \epsilon } } \Rightarrow n _ { 0 } = [ { \frac { 1 } { \epsilon } } ] + 1 .
+$$
+
+Theo dau hieu Cauchy, ta c6 $\sum _ { n = 1 } ^ { + \infty } { \frac { ( - 1 ) ^ { n - 1 } } { x ^ { 2 } + n } }$ hoi tu deu trén $\mathbb { R }$ （20
+
+ii) Tuong tu nhu tren, ta cung chung minh dugc rang
+
+$$
+| S _ { n + p } ( x ) - S _ { n } ( x ) | < { \frac { x ^ { 2 } } { ( 1 + x ^ { 2 } ) ^ { n } } }
+$$
+
+v6i
+
+$$
+S _ { n } ( x ) = \sum _ { k = 1 } ^ { n } { \frac { ( - 1 ) ^ { k - 1 } x ^ { 2 } } { ( x ^ { 2 } + 1 ) ^ { k } } } .
+$$
+
+Theo cong thurc khai trién Newton
+
+$$
+( a + b ) ^ { n } = \sum _ { k = 1 } ^ { n } C _ { n } ^ { k } a ^ { k } b ^ { n - k } .
+$$
+
+Ta c6
+
+$$
+\ast 1 + n x ^ { 2 } + \ldots > n x ^ { 2 } \Rightarrow \frac { x ^ { 2 } } { ( 1 + x ^ { 2 } ) ^ { n } } < \frac { 1 } { n } < \epsilon \Rightarrow n > \frac { 1 } { \epsilon } \Rightarrow n _ { 0 } = [ \frac { 1 } { \epsilon } ] + 1 .
+$$
+
+Theo dau hieu Cauchy, a c6 $\sum _ { n = 1 } ^ { + \infty } { \frac { ( - 1 ) ^ { n - 1 } x ^ { 2 } } { ( x ^ { 2 } + 1 ) ^ { n } } }$ hoi ty de tren $\mathbb { R }$ （20
+
+Dinh ly 4.21. Cho $| f _ { n } ( x ) | \leq c _ { n }$ ∀n ∈ N\*, x £ D va chuoi so duong $\sum _ { n = 1 } ^ { + \infty } c _ { n }$ hoi （202 tu. Khi do chuoi ham $( ^ { * } )$ hoi tu tuyet doi va hoi tu déu trén mién $D$ ：
+
+Ching minh. $+$ Chuoi ham $( ^ { * } )$ hoi tu tuyét doi tren mien $D$ ： That vay, voi mói $x _ { 0 } \in D$ c6 dinh, ta c6
+
++8 Ifn(xo)| ≤cn n ∈ N\* va ∑cn hoi tu $\ l \Rightarrow ( \ast \ l )$ hoi tu tuyet doi. n=1
+
+$^ +$ Chuoi ham $( ^ { * } )$ hoi tu deu tren mien $D$ ：
+
+That vay, Tu 1 $\sum _ { n = 1 } ^ { + \infty } c _ { n }$ hoi tu, suy ra
+
+$$
+\forall \epsilon > 0 , \exists n _ { 0 } , \forall n \geq n _ { 0 } , \forall p : | c _ { n + 1 } + c _ { n + 1 } + . . . + c _ { n + p } | < \epsilon .
+$$
+
+Khi d6
+
+$$
+\begin{array} { l } { | S _ { n + p } ( x ) - S _ { n } ( x ) | = | f _ { n + 1 } ( x ) + f _ { n + 2 } ( x ) + . . . + f _ { n + p } ( x ) | } \\ { \qquad \leq | f _ { n + 1 } ( x ) | + | f _ { n + 2 } ( x ) | + . . . + | f _ { n + p } ( x ) | } \\ { \qquad \leq c _ { n + 1 } + c _ { n + 1 } + . . . + c _ { n + p } } \\ { \qquad < \epsilon . } \end{array}
+$$
+
+Theo dinh ly 4.19, ta có chuoi ham $( ^ { * } )$ hoi tu deu tren mien $D$ ：
+
+Vi du 4.22. Chung minh rang chuoi ham
+
+$$
+\sum _ { n = 1 } ^ { + \infty } { \frac { \sin n \alpha x } { n ^ { 3 } + n - 1 } }
+$$
+
+hQi tu deu va hoi tu tuyét doi trén mién $\mathbb { R }$ ：
+
+Giai Ta c6
+
+$$
+\Big \vert \frac { \sin n \alpha x } { n ^ { 3 } + n - 1 } \Big \vert \leq \frac { 1 } { n ^ { 3 } } ~ \forall n \in \mathbb { N } ^ { * } .
+$$
+
+Do chuoi s6 （20 $\sum _ { n = 1 } ^ { + \infty } { \frac { 1 } { n ^ { 3 } } }$ hoi tu, nén theo dinh ly 4.21, chuói $\sum _ { n = 1 } ^ { + \infty } { \frac { \sin n \alpha x } { n ^ { 3 } + n - 1 } }$ hoi tu tuyet doi （20   
+va hoi tu deu trén mién $\mathbb { R }$ ：
+
+# 4.4.3. Tinh chat cüa chuoi ham hoi tu deu
+
+Cho chuoi ham
+
+hoi tu deu toi ham $f ( x )$ tren mien $D$ . Ta xét khao sat cac tinh chat cua ham $f ( x )$ trén mién $D$ nhu: Tinh lien tuc, kha vi.,..
+
+Dinh ly 4.23. Neu chuoi ham
+
+hoi tu deu toi ham $f ( x )$ tren mien $D$ va cac ham só $f _ { k } ( x )$ lien tuc trén mien $D$ voi moi $k \in \mathbb { N }$ ,thi ham so $f ( x )$ lién tuc trén mién $D$ ：
+
+Ching minh. Tur gia thiet $\sum _ { n = 1 } ^ { + \infty } f _ { n } ( x )$ hoi tu deu toi ham $f ( x )$ tren mien $D$ . Ta c6
+
+$$
+\forall \epsilon > 0 , \exists n _ { 0 } , \forall n \geq n _ { 0 } : | S _ { n } ( x ) - f ( x ) | < { \frac { \epsilon } { 3 } } ~ \forall x \in D .
+$$
+
+Do $f _ { k } ( x )$ lien tuc tren mien $D$ voi moi $k$ , nen voi moi $n$ c6 dinh, $S _ { n } ( x )$ la mot ham só lien tuc tren $D$ . Hay
+
+$$
+\forall \epsilon > 0 , \exists \delta > 0 , \forall x \in D : | x - x _ { 0 } | < \delta \Rightarrow | S _ { n } ( x ) - S _ { n } ( x _ { 0 } ) | < { \frac { \epsilon } { 3 } } .
+$$
+
+Khi d6, voi mói $x _ { 0 } \in D$ ,ta c6
+
+$$
+\begin{array} { l } { \displaystyle { { \bf \ddot { \Phi } } ( x ) - f ( x _ { 0 } ) \vert \le \vert S _ { n } ( x ) - f ( x ) \vert + \vert S _ { n } ( x ) - S _ { n } ( x _ { 0 } ) \vert + \vert S _ { n } ( x _ { 0 } ) - f ( x _ { 0 } ) \vert } } \\ { \displaystyle { ~ < \frac { \epsilon } { 3 } + \frac { \epsilon } { 3 } + \frac { \epsilon } { 3 } } } \\ { \displaystyle { ~ = \epsilon . } } \end{array}
+$$
+
+Vay ham só $f ( x )$ lien tuc tai diem $x _ { 0 }$ . Hay $f ( x )$ lien tuc tren mien $D$ ：
+
+Vi du 4.24. Chung minh rang chuoi ham
+
+$$
+\sum _ { n = 1 } ^ { + \infty } x ( 1 - x ) ^ { n }
+$$
+
+khong lien tuc deu trén $[ 0 , 2 )$ ：
+
+Gidi Xét gioi han
+
+$$
+\sum _ { n = 1 } ^ { + \infty } x ( 1 - x ) ^ { n } = \operatorname* { l i m } _ { n \to \infty } S _ { n } ( x ) = \operatorname* { l i m } _ { n \to \infty } \sum _ { k = 1 } ^ { n } x ( 1 - x ) ^ { k }
+$$
+
+$$
+= x \operatorname* { l i m } _ { n \to \infty } \sum _ { k = 1 } ^ { n } ( 1 - x ) ^ { k } = { \left\{ \begin{array} { l l } { 0 } & { { \tt n } { \tilde { \epsilon } } { \bf u } \quad x = 0 } \\ { 1 } & { { \tt n } { \tilde { \epsilon } } { \bf u } \quad x \in ( 0 , 2 ) . } \end{array} \right. }
+$$
+
+Vay ham só
+
+$$
+f ( x ) = \sum _ { n = 1 } ^ { + \infty } x ( 1 - x ) ^ { n }
+$$
+
+khong lien tuc tren $[ 0 , 2 )$ . Do d6, theo dinh ly4.23,ta c6 chuoi ham
+
+$$
+\sum _ { n = 1 } ^ { + \infty } x ( 1 - x ) ^ { n }
+$$
+
+khong lien tuc deu tren [0, 2).
+
+Dinh ly 4.25. Neu chuoi ham
+
+$$
+\sum _ { n = 1 } ^ { + \infty } f _ { n } ( x )
+$$
+
+hoi tu deu toi ham $f ( x )$ trén mien $[ a , b ]$ va cac ham só $f _ { k } ( x )$ lién tuc trén mien （204 $[ a , b ]$ voi moi $k \in \mathbb { N }$ , thi ham so $f ( x )$ kha tich trén tuc trén mién $[ a , b ]$ . Hon nia
+
+$$
+\int _ { a } ^ { b } f ( x ) d x = \sum _ { k = 1 } ^ { + \infty } \intop _ { a } ^ { b } f _ { k } ( x ) d x .
+$$
+
+Chung minh. Theo dinh ly 4.23, ham so $f ( x )$ lien tuc tren $[ a , b ]$ . Do d6 $f ( x )$ kha tich tren $[ a , b ]$ . Tur gia thiet $\sum _ { n = 1 } ^ { + \infty } f _ { n } ( x )$ hoi tu deu toi ham $f ( x )$ tren mien $D$ . Ta c6 $$
+\forall \epsilon > 0 , \exists n _ { 0 } , \forall n \geq n _ { 0 } : | S _ { n } ( x ) - f ( x ) | < { \frac { \epsilon } { b - a } } ~ \forall x \in D .
+$$
+
+Khi d6
+
+$$
+\begin{array} { r l }  \displaystyle | \begin{array} { l } { \displaystyle \int _ { a } ^ { b } S _ { n } ( x ) d x - \displaystyle \int _ { a } ^ { b } f ( x ) d x | = \displaystyle \prod _ { a = \atop a } ^ { b } ( S _ { n } ( x ) - f ( x ) ) d x | } \\ { \displaystyle } \\ { \leq \displaystyle \int _ { a } ^ { b } | S _ { n } ( x ) - f ( x ) | d x } \\ { \displaystyle } \\ { \mathrm { < \int _ { a } ^ { b } } \frac { c } { b - a } d x } \\ { \displaystyle } \\ { \mathrm { = } e \mathrm { . ~ } } \end{array} \end{array}
+$$
+
+Nhu vay
+
+$$
+\operatorname* { l i m } _ { n  \infty } \int _ { a } ^ { b } S _ { n } ( x ) d x = \int _ { a } ^ { b } f ( x ) d x .
+$$
+
+Dinh ly 4.26. Néu chuoi ham (\*) hoi tu ve ham $f ( x )$ trén $( a , b )$ va cac dao ham $f _ { k } ^ { \prime } ( x ) \ k \in \mathbb { N } ^ { * }$ thoa man:
+
+i） $f _ { k } ^ { \prime } ( x )$ lien tuc tren $( a , b )$   
+ii） （204 $\sum ^ { + \infty } f _ { n } ^ { \prime } ( x )$ hoi tu deu $( a , b )$ $\scriptstyle n = 1$ （204   
+Khi d6
+
+$$
+f ^ { \prime } ( x ) = \sum _ { n = 1 } ^ { + \infty } f _ { n } ^ { \prime } ( x ) x \in ( a , b ) .
+$$
+
+Chung minh. Theo dinh ly 4.25, voi $a < x < x _ { 0 } < b$ ta c6
+
+$$
+g ( t ) = \sum _ { n = 1 } ^ { \infty } f _ { k } ^ { \prime } ( t ) \forall t \in ( a , b )
+$$
+
+lien tuc tren $( a , b )$ va
+
+$$
+\begin{array} { l } { \displaystyle { \int _ { x _ { 0 } } ^ { x } g ( t ) d t = \int _ { x _ { 0 } } ^ { x } \sum _ { n = 1 } ^ { \infty } f _ { k } ^ { \prime } ( t ) d t } } \\ { \displaystyle { \qquad = f _ { 1 } ( x ) - f _ { 1 } ( x _ { 0 } ) + f _ { 2 } ( x ) - f _ { 2 } ( x _ { 0 } ) + \ldots } } \\ { \displaystyle { \qquad = f ( x ) - f ( x _ { 0 } ) . } } \end{array}
+$$
+
+Dao ham hai ve, theo dinh ly 5.10, ta c6
+
+$$
+g ( x ) = f ^ { \prime } ( x ) \Leftrightarrow f ^ { \prime } ( x ) = \sum _ { n = 1 } ^ { \infty } f _ { k } ^ { \prime } ( x ) { . }
+$$
+
+Vi du 4.27. Tim mien hoi tu cua ham $f ( x )$ vd xét tinh kha vi cua nó trén mien do.
+
+$$
+f ( x ) = \sum _ { n = 1 } ^ { + \infty } { \frac { | x | } { n ^ { 2 } + x ^ { 2 } } } .
+$$
+
+Gidi Ta c6
+
+$$
+\frac { | x | } { n ^ { 2 } + x ^ { 2 } } \frac { | x | } { n ^ { 2 } }
+$$
+
+va chuoi （2 $\sum _ { n = 1 } ^ { + \infty } { \frac { 1 } { n ^ { 2 } } }$ hoi tu. Do d6 ham $f ( x )$ có tap xac dinh la $\mathbb { R }$ ： Tiep theo, tien hanh xét dao ham dang
+
+$$
+\sum _ { n = 1 } ^ { \infty } f _ { k } ^ { \prime } ( x ) = \sum _ { n = 1 } ^ { \infty } { \frac { n ^ { 2 } \mathrm { s g n } x - x | x | } { ( n ^ { 2 } + x ^ { 2 } ) ^ { 2 } } } \ ( x \neq 0 ) .
+$$
+
+Ta c6, ton tai $n _ { 0 } = [ x ^ { 2 } ] + 1$ sao cho
+
+$$
+\Big | \frac { n ^ { 2 } \mathrm { s g n } x - x | x | } { ( n ^ { 2 } + x ^ { 2 } ) ^ { 2 } } \Big | \leq \frac { n ^ { 2 } + x ^ { 2 } } { n ^ { 4 } } \leq \frac { 2 n ^ { 2 } } { n ^ { 4 } } = \frac { 2 } { n ^ { 2 } } \ \forall n \geq n _ { 0 } .
+$$
+
+Theo dinh ly 4.21, chuói ham $\sum _ { n = 1 } ^ { \infty } f _ { k } ^ { \prime } ( x )$ hoi tu deu. Theo dinh ly 4.26, ta c6 $f ( x )$ khä vi tren $\mathbb { R }$ . Hon nua
+
+$$
+f ^ { \prime } ( x ) = \sum _ { n = 1 } ^ { \infty } { \frac { n ^ { 2 } \operatorname { s g n } x - x | x | } { ( n ^ { 2 } + x ^ { 2 } ) ^ { 2 } } } \ \forall x \in \mathbb { R } .
+$$
+
+# 4.5. Chuoi luy thua
+
+# 4.5.1. Dinh nghia
+
+Chuoi luy thuia la mot chuoi ham c6 dang
+
+$$
+\sum _ { n = 0 } ^ { \infty } a _ { n } x ^ { n } \mathrm { \quad } \mathrm { h o a c } \sum _ { n = 0 } ^ { \infty } a _ { n } ( x - x _ { 0 } ) ^ { n } ,
+$$
+
+trong d6 $x _ { 0 } , a _ { k } : c o n s t$ va $x ^ { 0 } = 1$ . Khi d6, cac só $a _ { 0 } , a _ { 1 } , \dotsc$ duqc goi la cac he so cüa chuoi luy thua.
+
+# 4.5.2. Tinh chat
+
+Ta khao sat mien hoi tu cua chuoi luy thua dang
+
+$$
+\sum _ { n = 0 } ^ { \infty } a _ { n } x ^ { n } . ^ { ( * ) }
+$$
+
+Dinh ly 4.28. (Abel2)
+
+Néu mot chuoi liy thita $( ^ { * } )$ hoi tu tai $x _ { 0 }$ , thi nó hoi tu tai moi $x : \ | x | < | x _ { 0 } |$ .Neu mot chuoi luy thita (\*) phan ky tai $x _ { 0 }$ , thi nó phan ky tai moi $x : \ | x | > | x _ { 0 } |$ .Khi d6
+
+$$
+R = \operatorname { s u p } \{ | x _ { 0 } | : \sum _ { n = 0 } ^ { \infty } a _ { n } x _ { 0 } ^ { n } h \rho i t u \}
+$$
+
+duoc goi la ban kinh hoi tu cua $( ^ { * } )$ ：
+
+Ching minh. Giai sur chuoi só $\sum _ { n = 0 } ^ { \infty } a _ { n } x _ { 0 } ^ { n }$ hoi tu. Theo dinh ly 4.4, ta c6
+
+$$
+\operatorname* { l i m } _ { n \to \infty } a _ { n } x _ { 0 } ^ { n } = 0 \Leftrightarrow \forall \epsilon > 0 , \exists n _ { 0 } , \forall n \geq n _ { 0 } : | a _ { n } x _ { 0 } ^ { n } | < \epsilon .
+$$
+
+Khi d6
+
+$$
+\forall x : \ | x | < | x _ { 0 } | \Leftrightarrow q = \left| { \frac { x } { x _ { 0 } } } \right| \in ( 0 , 1 ) ,
+$$
+
+ta c6
+
+$$
+| a _ { n } x ^ { n } | = | a _ { n } x _ { 0 } ^ { n } . ( { \frac { x } { x _ { 0 } } } ) ^ { n } | = | a _ { n } x _ { 0 } ^ { n } | { \Big | } { \frac { x } { x _ { 0 } } } { \Big | } ^ { n } = | a _ { n } x _ { 0 } ^ { n } | q ^ { n } < \epsilon q ^ { n } .
+$$
+
+Ma chuoi s6 $\sum _ { n = n _ { 0 } } ^ { \infty } \epsilon q ^ { n } = \epsilon { \frac { q ^ { n _ { 0 } } } { 1 - q } } \mathrm { \ h } \hat { \mathrm { g i } }$ tu, suy ra $\sum _ { n = 0 } ^ { \infty } \left| a _ { n } x ^ { n } \right|$ hoi tu. Theo dinh ly 4.7, ta c6 $( ^ { * } )$ hoi tu tuyet doi. Vay chuoi ham $( ^ { * } )$ hoi tu.
+
+Bay gio ta xét truong hop $( ^ { * } )$ phan ky tai $x _ { 0 }$ va $\vert x \vert > \vert x _ { 0 } \vert$ . Gia str $( ^ { * } )$ hoi tu tai $x$ . Theo chung minh tren, voi $x _ { 0 } : \ | x | > | x _ { 0 } |$ ,ta c6 $( ^ { * } )$ hoi tu tai $x _ { 0 }$ , trai voi gia thiet. Vay $( ^ { * } )$ phan ky tai $x$ . □
+
+# 4.5.3. Quy tac tim ban kinh hoi tu
+
+Dinh ly 4.29. Néu
+
+$$
+\operatorname* { l i m } _ { n \to \infty } \left| { \frac { a _ { n + 1 } } { a _ { n } } } \right| = \rho \ h o { \check { a } } c \ \operatorname* { l i m } _ { n \to \infty } \ \sqrt [ n ] { \left| a _ { n } \right| } = \rho .
+$$
+
+25.8.1802-6.4.1829,Niels Henrik Abel la mot nha Toan hoc vi dai nguoi Na Uy,Ong c6 cac cong trinh nghien cuu lien quan chu yeu den phep giai dai so cua phuong trinh tong quat bac5 va ly thuyet ham eliptic.Hermite timg noi: "Nguoi da de lai cong viéc cho cac nha Toan hoc nghien citu trong 5OO nam sau".
+
+thi chuoi ham $( ^ { * } )$ c6 ban kinh hoi tu duoc xac dinh boi:
+
+$+$ Neu $\rho \in ( 0 , + \infty )$ ,.thi $\textstyle R = { \frac { 1 } { \rho } }$ . $+ \ N \tilde { e u } \ \rho = 0$ ,thi $R = + \infty$ va mien hoi tu $D = \mathbb { R }$ ： + Neu $\rho = + \infty$ ,thi $R = 0$ va mien hoi tu $D = \{ 0 \}$
+
+Ching minh. Gia sur rang $\operatorname* { l i m } _ { n \to \infty } \left| { \frac { a _ { n + 1 } } { a _ { n } } } \right| = \rho$ (truong hop: （ $\operatorname* { l i m } _ { n \to \infty } \sqrt [ n ] { a _ { n } } = \rho$ duqc chung minh tuong tur).
+
++ Neu $\rho \in ( 0 , + \infty )$ va $\textstyle | x | < { \frac { 1 } { \rho } }$ ,thi
+
+$$
+\operatorname* { l i m } _ { n \to \infty } { \frac { | a _ { n + 1 } x ^ { n + 1 } | } { | a _ { n } x _ { n } | } } = \operatorname* { l i m } _ { n \to \infty } { \Big | } { \frac { a _ { n + 1 } } { a _ { n } } } { \Big | } | x | < \rho . { \frac { 1 } { \rho } } = 1 .
+$$
+
+Theo dau hieu D'Alembert, chuoi $( ^ { * } )$ hoi tu tuyet doi, suy ra chuoi $( ^ { * } )$ hoi tu. $+ \ N \widetilde { \mathsf { e u } } \ \rho = 0$ ,thi
+
+$$
+\operatorname* { l i m } _ { n \to \infty } { \frac { | a _ { n + 1 } x ^ { n + 1 } | } { | a _ { n } x _ { n } | } } = \operatorname* { l i m } _ { n \to \infty } { \Big | } { \frac { a _ { n + 1 } } { a _ { n } } } { \Big | } | x | = 0 \ \forall x \in \mathbb { R } .
+$$
+
+Vay chuoi $( ^ { * } )$ hoi tu voi moi $x \in \mathbb { R }$ ·
+
++ Néu $\rho = + \infty$ va $\textstyle | x | > { \frac { 1 } { \rho } }$ ,thi
+
+$$
+\operatorname* { l i m } _ { n \to \infty } { \frac { | a _ { n + 1 } x ^ { n + 1 } | } { | a _ { n } x _ { n } | } } = \operatorname* { l i m } _ { n \to \infty } { \bigg | } { \frac { a _ { n + 1 } } { a _ { n } } } { \bigg | } | x | > 1 \ \forall x \in \mathbb { R } \ \backslash \ \{ 0 \} .
+$$
+
+Theo dau hieu D'Alembert, ta c6 chuoi ham $( ^ { * } )$ phan ky.
+
+Vi du 4.3o. Tim mien hoi tu cua cac chuoi liy thita sau:
+
+$$
+\begin{array} { l } { { \displaystyle i \big ) \sum _ { n = 0 } ^ { + \infty } \frac { x ^ { n } } { n ! } \cdot } } \\ { { \displaystyle i i \sum _ { n = 1 } ^ { + \infty } n ^ { n } x ^ { n } } . } \\ { { \displaystyle i i i \big ) \sum _ { n = 1 } ^ { + \infty } \frac { x ^ { n } } { \big ( \frac { n + 1 } { n } \big ) ^ { n ^ { 2 } } } } } \end{array}
+$$
+
+Gidi i) Dat $\begin{array} { r } { a _ { n } = \frac { 1 } { n ! } } \end{array}$ . Khi d6
+
+$$
+\operatorname* { l i m } _ { n \to \infty } \left| { \frac { a _ { n + 1 } } { a _ { n } } } \right| = \operatorname* { l i m } _ { n \to \infty } { \frac { 1 } { n + 1 } } = 0 .
+$$
+
+Theo dinh ly 4.29, ta có mien hoi tu la $D = \mathbb { R }$ ：
+
+ii) Dat $a _ { n } = n ^ { n }$ . Khi d6
+
+$$
+\operatorname* { l i m } _ { n \to \infty } \left| { \frac { a _ { n + 1 } } { a _ { n } } } \right| = \operatorname* { l i m } _ { n \to \infty } n = + \infty .
+$$
+
+Theo dinh ly 4.29, ta c6 mien hoi tu la $D = \{ 0 \}$ ：
+
+i Dat $\begin{array} { r } { a _ { n } = \frac { 1 } { ( \frac { n + 1 } { n } ) ^ { n ^ { 2 } } } } \end{array}$ Khi d6
+
+$$
+\operatorname* { l i m } _ { n \to \infty } \left| { \frac { a _ { n + 1 } } { a _ { n } } } \right| = \operatorname* { l i m } _ { n \to \infty } \left( { \frac { n } { n + 1 } } \right) ^ { n } = { \frac { 1 } { e } } \Rightarrow R = { \frac { 1 } { \rho } } = e .
+$$
+
+Xet tai $x : x = - e$ ,chuoi $( ^ { * } )$ c6 dang
+
+$$
+\sum _ { n = 1 } ^ { + \infty } \frac { ( - 1 ) ^ { n } e ^ { n } } { ( \frac { n + 1 } { n } ) ^ { n ^ { 2 } } }
+$$
+
+Tu vi du 2.8, day $\textstyle ( e _ { n } ) : e _ { n } = ( 1 + { \frac { 1 } { n } } ) ^ { n }$ don dieu tang den $e$ ,suy ra
+
+$$
+\operatorname* { l i m } _ { n \to \infty } \Big | { \frac { ( - 1 ) ^ { n } e ^ { n } } { ( { \frac { n + 1 } { n } } ) ^ { n ^ { 2 } } } } \Big | = \operatorname* { l i m } _ { n \to \infty } \Big ( { \frac { e } { ( 1 + { \frac { 1 } { n } } ) ^ { n } } } \Big ) ^ { n } > 1 .
+$$
+
+Vay chuoi $( ^ { * } )$ khong hoi tu tai $x \stackrel { } { = } e$ va $x = - e$ .Theo dinh ly 4.29, ta c6 mienhQi tu la $D = ( - e , e )$ ：
+
+4.5.4. Tinh hoi tu deu cua chuoi luy thua
+
+Dinh ly 4.31. Neu chuoi liy thita $( ^ { * } )$ co ban kinh hoi tu $R > 0$ ， thi voi moi $R ^ { \prime } : 0 < R ^ { \prime } < R$ , ta có chuoi $( ^ { * } )$ hoi tu deu trén $[ - R ^ { \prime } , R ^ { \prime } ]$ ：
+
+Ching minh. Vi $R ^ { \prime } \in ( 0 , R )$ , nén chuoi s6
+
+$$
+\sum _ { n = 0 } ^ { + \infty } \left| a _ { n } R ^ { \prime n } \right|
+$$
+
+hoi tu. Voi moi $x _ { 0 } : x _ { 0 } \in [ - R ^ { \prime } , R ^ { \prime } ]$ ,ta c6 $\left| a _ { n } x _ { 0 } ^ { n } \right| \leq \left| a _ { n } R ^ { \prime n } \right| \forall n$ . Theo dinh ly 4.21, ta có chuoi $( ^ { * } )$ hoi tu deu tren $[ - R ^ { \prime } , R ^ { \prime } ]$ ： □
+
+Dinh ly 4.32. Cho chuoi luy thita $( ^ { * } )$ c6 ban kinh hoi tu $R > 0$ Dat
+
+$$
+f ( x ) = \sum _ { n = 0 } ^ { + \infty } a _ { n } x ^ { n } .
+$$
+
+Khi d6
+
+i) Ham s6 $f ( x )$ lien tuc trén $( - R , R )$ ：
+
+$$
+\begin{array} { r l } & { i ) \int _ { 0 } ^ { x } f ( t ) d t = \displaystyle \sum _ { n = 0 } ^ { + \infty } \int _ { 0 } ^ { x } a _ { n } t ^ { n } d t = \displaystyle \sum _ { n = 0 } ^ { + \infty } \frac { a _ { n } } { n + 1 } x ^ { n + 1 } \forall x \in ( - R , R ) . } \\ & { i i ) f ^ { \prime } ( x ) = \displaystyle \sum _ { n = 1 } ^ { + \infty } n a _ { n } x ^ { n - 1 } \forall x \in ( - R , R ) . } \end{array}
+$$
+
+Chitng minh. i) Do ham so $a _ { n } x ^ { n }$ lien tuc tren $\mathbb { R } \forall n$ va theo dinh ly 4.31, ta c6 $f ( x )$ lien tuc tren $( - R , R )$ ：
+
+ii) Theo dinh ly 4.25, voi ham só $f _ { k } ( x ) = a _ { n } x ^ { n }$ lien tuc tren $[ 0 , x ] \ \forall x \in ( - R , R )$ va chuoi $\sum _ { n = 0 } ^ { + \infty } a _ { n } x ^ { n }$ hoi tu deu den ham só $f ( x )$ tren $( - R , R )$ . Do vay, ta c6 （204
+
+$$
+\int _ { 0 } ^ { x } f ( t ) d t = \sum _ { n = 0 } ^ { + \infty } \int _ { 0 } ^ { x } a _ { n } t ^ { n } d t = \sum _ { n = 0 } ^ { + \infty } \frac { a _ { n } } { n + 1 } x ^ { n + 1 } \forall x \in ( - R , R ) .
+$$
+
+iii) Ta sé chumg minh chuoi luy thua $\sum _ { n = 1 } ^ { + \infty } n a _ { n } x ^ { n - 1 } { \mathrm { ~ h } } { \mathrm { } } { \mathrm { } } { \mathrm { } } { \mathrm { } } { \mathrm { } } { \mathrm { } } $ tu deu tren $( - R , R )$ ： That vay, voi $x \in ( - R , R ) \setminus \{ 0 \}$ ,ton tai $r$ sao cho $| x | < r < R$ . Tu chuoi s6 $\sum _ { n = 1 } ^ { + \infty } a _ { n } r ^ { n }$ hQi tu, suy ra lim $a _ { n } r ^ { n } \mathop { = } 0$ , theo dinh nghia   
+（20 $n {  } { \infty }$ （20
+
+$$
+\forall \epsilon > 0 , \exists n _ { 0 } , \forall n \ge n _ { 0 } : | a _ { n } r ^ { n } | < \epsilon .
+$$
+
+Khi d6
+
+$$
+| n a _ { n } x ^ { n - 1 } | = n | a _ { n } | r ^ { n } \Big | \frac { x } { r } \Big | ^ { n - 1 } \frac { 1 } { r } < \frac { \epsilon n } { r } \Big | \frac { x } { r } \Big | ^ { n - 1 } .
+$$
+
+V6i $x : \left| { \frac { x } { r } } \right| < 1 \Rightarrow \sum _ { n = 1 } ^ { + \infty } { \frac { \epsilon n } { r } } \bigg | { \frac { x } { r } } \bigg | ^ { n - 1 } \left. \right\}$ hoi tu (theo dau hieu D'Alembert). Vay chuoi luy thua （20 $\sum _ { n = 1 } ^ { + \infty } n a _ { n } x ^ { n - 1 } \ln$ Qi tu tren $[ - r , r ]$ . Theo dinh ly 4.31,chuoi luy thra $\sum _ { n = 1 } ^ { + \infty } n a _ { n } x ^ { n - 1 }$ （204 hoi tu déu tren $( - R , R )$ . Vay ham só $f ( x )$ thoa man tat cä các gia thiet cüa dinh ly 4.26, ta có ii) dugc chung minh. ■
+
+# Vi du 4.33. Tinh tong
+
+$$
+f ( x ) = x - { \frac { x ^ { 2 } } { 2 } } + { \frac { x ^ { 3 } } { 3 } } - { \frac { x ^ { 4 } } { 4 } } + \ldots + ( - 1 ) ^ { n - 1 } { \frac { x ^ { n } } { n } } + \ldots { \mathrm { ~ } } { \nu } \dot { o } i \ x \in ( - 1 , 1 ) .
+$$
+
+Gidi Ta c6 chuoi
+
+$$
+f ( x ) = \sum _ { n = 1 } ^ { \infty } ( - 1 ) ^ { n - 1 } { \frac { x ^ { n } } { n } }
+$$
+
+hQi tu tren $( - 1 , 1 )$ . Khi d6
+
+$$
+f ^ { \prime } ( x ) = 1 - x + x ^ { 2 } - x ^ { 3 } + \ldots + ( - 1 ) ^ { n } x ^ { n } + \ldots = { \frac { 1 } { 1 + x } } \ \forall | x | < 1 .
+$$
+
+Lay nguyén ham hai ve
+
+$$
+f ( x ) = \int { \frac { d x } { 1 + x } } = \ln ( 1 + x ) + C .
+$$
+
+Thay $x = 0$ vao $f ( x )$ , ta nhan duoc
+
+$$
+f ( 0 ) = C = 0 .
+$$
+
+Vay $f ( x ) = \ln ( 1 + x ) \forall x \in ( - 1 , 1 ) .$ # 4.5.5. Khai trien ham so thanh chuoi luy thua
+
+Gia sur ham $f ( x )$ c6 dao ham mqi cap tai lan can diém $x _ { 0 }$ . Chuoi Taylor cua ham $f ( x )$ tai lan can cua diem $x _ { 0 }$ la mot chuoi luy thua dang:
+
+$$
+) = f ( x _ { 0 } ) + \frac { f ^ { \prime } ( x _ { 0 } ) } { 1 ! } ( x - x _ { 0 } ) ^ { 1 } + \frac { f ^ { \prime \prime } ( x _ { 0 } ) } { 2 ! } ( x - x _ { 0 } ) ^ { 2 } + . . . + \frac { f ^ { ( n ) } ( x _ { 0 } ) } { n ! } ( x - x _ { 0 } ) ^ { 3 } .
+$$
+
+Trong truong hop dac biet, chuoi Maclaurin cua ham $f ( x )$ tai lan can cua diem $x _ { 0 }$ la mot chuoi luy thua c6 dang
+
+$$
+S ( x ) = f ( 0 ) + \frac { f ^ { \prime } ( 0 ) } { 1 ! } x ^ { 1 } + \frac { f ^ { \prime \prime } ( 0 ) } { 2 ! } x ^ { 2 } + \ldots + \frac { f ^ { ( n ) } ( 0 ) } { n ! } x ^ { n } + \ldots
+$$
+
+Van de ma ta quan tam $\acute { \sigma }$ day la: $f ( x ) = S ( x ) \colon$ Ta xét vi du duoi day.
+
+Vi du 4.34. Cho ham so
+
+$$
+f ( x ) = { \frac { 1 } { 1 - x } } + \varphi ( x ) { \mathrm { ~ } } { \mathrm { ~ } } { \mathrm { ~ } } { \mathrm { ~ } } { \mathrm { ~ } } { \mathrm { ~ } } \nu \dot { o } i \varphi ( x ) = { \left\{ \begin{array} { l l } { e ^ { - { \frac { 1 } { x ^ { 2 } } } } } & { n \hat { e } \tilde { u } \ x \not = 0 } \\ { 0 } & { n \hat { e } \tilde { u } \ x = 0 . } \end{array} \right. }
+$$
+
+Chitng minh rang: $S ( x ) \neq f ( x ) \forall x \in ( - 1 , 1 ) \backslash \{ 0 \} .$
+
+Giai Ta dé dang chung minh dugc rang
+
+$$
+\varphi ^ { ( k ) } ( 0 ) = 0 \quad \mathrm { v a } \left( { \frac { 1 } { 1 - x } } \right) ^ { ( k ) } = { \frac { k ! } { ( 1 - x ) ^ { k + 1 } } } ~ \forall k = 0 , 1 , 2 , \ldots
+$$
+
+Khi d6, ta có
+
+$$
+f ^ { ( k ) } ( 0 ) = k ! \forall k = 0 , 1 , 2 , \ldots
+$$
+
+Thay $f ^ { ( k ) } ( 0 )$ vao bieu thurc $S ( x )$ , ta nhan duoc $S ( x )$ c6 dang tong vo han cac so hang cüa cap só nhan lui vo han (cong boi $q : | q | < 1 )$
+
+$$
+) = \sum _ { n = 0 } ^ { + \infty } { \frac { f ^ { ( n ) } ( 0 ) } { n ! } } x ^ { n } = \sum _ { n = 0 } ^ { + \infty } x ^ { n } = { \frac { 1 } { 1 - x } } \neq { \frac { 1 } { 1 - x } } + \varphi ( x ) = f ( x ) \ \forall x \in ( - \pi )
+$$
+
+Khi nao thi dáu ${ \bf \zeta } ^ { \prime \prime } = { \bf \zeta } ^ { \prime \prime }$ xay ra?
+
+Dinh ly 4.35. Néu $f ( x )$ kha vi moi cap tai lan can cua diem $x _ { 0 }$ vd
+
+$$
+R _ { n } ( x ) = \operatorname * { l i m } _ { n \to \infty } { \frac { f ^ { ( n + 1 ) } ( \xi ) } { ( n + 1 ) ! } } ( x - x _ { 0 } ) ^ { n + 1 } = 0 { \mathrm { ~ } } { \nu } \dot { \sigma } i \xi = \lambda x _ { 0 } + ( 1 - \lambda ) x , \lambda \in
+$$
+
+thi $f ( x ) = S ( x )$ . Hay
+
+$$
+) = f ( x _ { 0 } ) + { \frac { f ^ { \prime } ( x _ { 0 } ) } { 1 ! } } ( x - x _ { 0 } ) ^ { 1 } + { \frac { f ^ { \prime \prime } ( x _ { 0 } ) } { 2 ! } } ( x - x _ { 0 } ) ^ { 2 } + \ldots + { \frac { f ^ { ( n ) } ( x _ { 0 } ) } { n ! } } ( x - x _ { 0 } ) ^ { 1 } .
+$$
+
+Ching minh Theo muc 4.5, ta c6
+
+$$
+f ( x ) = P _ { n } ( x ) + R _ { n } ( x ) ,
+$$
+
+trong d6
+
+$$
+P _ { n } ( x ) = \sum _ { k = 0 } ^ { n } { \frac { f ^ { ( k ) } ( x _ { 0 } ) } { k ! } } ( x - x _ { 0 } ) ^ { k } , \ R _ { n } ( x ) = { \frac { f ^ { ( n + 1 ) } ( \xi ) } { ( n + 1 ) ! } } ( x - x _ { 0 } ) ^ { n + 1 } = 0
+$$
+
+voi $\xi = \lambda x _ { 0 } + ( 1 - \lambda ) x$ ， $\lambda \in ( 0 , 1 )$
+
+Khi d6
+
+$$
+f ( x ) = \operatorname* { l i m } _ { n \to \infty } R _ { n } ( x ) + \operatorname* { l i m } _ { n \to \infty } P _ { n } ( x ) = \operatorname* { l i m } _ { n \to \infty } P _ { n } ( x ) .
+$$
+
+Dinh ly 4.36. Néu $f ( x )$ c6 dao ham moi cap tai lan can cia diem $x _ { 0 }$ va trong lan can nay c6
+
+$$
+| f ^ { ( k ) } ( x ) | \leq M \ \forall k \in \mathbb { N } ,
+$$
+
+thi $f ( x ) = S ( x )$ . Hay
+
+$$
+) = f ( x _ { 0 } ) + \frac { f ^ { \prime } ( x _ { 0 } ) } { 1 ! } ( x - x _ { 0 } ) ^ { 1 } + \frac { f ^ { \prime \prime } ( x _ { 0 } ) } { 2 ! } ( x - x _ { 0 } ) ^ { 2 } + \ldots + \frac { f ^ { ( n ) } ( x _ { 0 } ) } { n ! } ( x - x _ { 0 } ) ^ { n } .
+$$
+
+Ching minh Ta c6
+
+$$
+{ \frac { 1 } { ( n + 1 ) ! } } ( x - x _ { 0 } ) ^ { n + 1 } = ( x - x _ { 0 } ) ( e ^ { x } - e ^ { x _ { 0 } } ) \Rightarrow \sum _ { n = 0 } ^ { + \infty } { \frac { 1 } { ( n + 1 ) ! } } ( x - x _ { 0 } ) ^ { n + 1 }
+$$
+
+Theo dinh ly 4.4, ta có
+
+$$
+\operatorname* { l i m } _ { n \to \infty } { \frac { 1 } { ( n + 1 ) ! } } ( x - x _ { 0 } ) ^ { n + 1 } = 0 \Rightarrow \operatorname* { l i m } _ { n \to \infty } { \frac { 1 } { ( n + 1 ) ! } } | x - x _ { 0 } | ^ { n + 1 } = 0 .
+$$
+
+Khi d6,
+
+$$
+\operatorname* { l i m } _ { n \to \infty } | R _ { n } ( x ) | = \operatorname* { l i m } _ { n \to \infty } | { \frac { f ^ { ( n + 1 ) } ( \xi ) } { ( n + 1 ) ! } } ( x - x _ { 0 } ) ^ { n + 1 } | \leq \operatorname* { l i m } _ { n \to \infty } { \frac { M } { ( n + 1 ) ! } } | x - x _ { 0 } | ^ { n }
+$$
+
+Vay lim $\begin{array} { r } { R _ { n } ( x ) = 0 } \end{array}$ . Theo dinh ly 4.35, dinh ly dugc chung minh.
+
+Vi du 4.37. (Cong thitc Euler)
+
+Chitng minh rang:
+
+$$
+e ^ { \alpha i } = \cos \alpha + i \sin \alpha .
+$$
+
+Gidi Theocong thurc khai trien Taylor,ta de dang tinh duoc rang
+
+$$
+\begin{array} { c } { \displaystyle \sin x = x - \displaystyle \frac { x ^ { 3 } } { 3 ! } + \displaystyle \frac { x ^ { 5 } } { 5 ! } - \ldots + ( - 1 ) ^ { n } \displaystyle \frac { x ^ { 2 n + 1 } } { ( 2 n + 1 ) ! } + \ldots } \\ { \displaystyle \cos x = 1 - \displaystyle \frac { x ^ { 2 } } { 2 ! } + \displaystyle \frac { x ^ { 4 } } { 4 ! } - \ldots + ( - 1 ) ^ { n } \displaystyle \frac { x ^ { 2 n } } { ( 2 n ) ! } + \ldots } \\ { \displaystyle e ^ { x } = 1 + \displaystyle \frac { x } { 1 ! } + \displaystyle \frac { x ^ { 2 } } { 2 ! } + \ldots + \displaystyle \frac { x ^ { n } } { n ! } + \ldots } \end{array}
+$$
+
+Chu $\acute { \mathbf { y } }$ rang $i ^ { 2 n } = ( - 1 ) ^ { n }$ ,ta co
+
+$$
+\begin{array} { l } { { \displaystyle e ^ { i x } = 1 + \frac { i x } { 1 ! } + \frac { ( i x ) ^ { 2 } } { 2 ! } + . . . + \frac { ( i x ) ^ { n } } { n ! } + . . . } } \\ { { \mathrm { ~ } = 1 - \frac { x ^ { 2 } } { 2 ! } + \frac { x ^ { 4 } } { 4 ! } - . . . + ( - 1 ) ^ { n } \frac { x ^ { 2 n } } { ( 2 n ) ! } + . . . } } \\ { { \mathrm { ~ } + i \Big ( x - \frac { x ^ { 3 } } { 3 ! } + \frac { x ^ { 5 } } { 5 ! } - . . . + ( - 1 ) ^ { n } \frac { x ^ { 2 n + 1 } } { ( 2 n + 1 ) ! } + . . . \Big ) } } \end{array}
+$$
+
+# 4.6. Chuoi Fourier3 4.6.1. Chuoi luong giac
+
+La mot chuoi ham só có dang
+
+$$
+{ \frac { a _ { 0 } } { 2 } } + \sum _ { n = 1 } ^ { + \infty } ( a _ { n } \cos n x + b _ { n } \sin n x ) , ^ { ( * ) }
+$$
+
+trong d6 $a _ { k } , b _ { k } : \ c o n s t \ \forall k \in \mathbb { N } .$
+
+Xét he cac ham so
+
+$$
+H = \{ 1 , \cos x , \sin x , \cos 2 x , \sin 2 x , \ldots \} .
+$$
+
+Ta dé dang chung minh dugc rang: He $H$ c6 tinh truc giao, nghia la
+
+$$
+\int _ { - \pi } ^ { \pi } \alpha ( x ) \beta ( x ) d x = 0 ~ \forall \alpha ( x ) \neq \beta ( x ) \in H .
+$$
+
+Ta xet su hoi tu deu cua chuoi ham $( ^ { * } )$ ：
+
+Dinh ly 4.38. Neu hai chuoi $s \hat { \omega } ^ { \prime } \sum _ { n = 0 } ^ { + \infty } a _ { n } \nu \hat { a } \sum _ { n = 0 } ^ { + \infty } b _ { n }$ hoi tu tuyet doi, thi chuoi luong giac (\*) hoi tu deu va hoi tu tuyét doi trén R.
+
+Ching minh Tu
+
+$$
+\left| a _ { n } \cos n x + b _ { n } \sin n x \right| \leq \left| a _ { n } \right| + \left| b _ { n } \right| \ \forall x \in \mathbb { R }
+$$
+
+va gia thiet cho hai chuoi : $5 0 ~ \sum _ { n = 0 } ^ { + \infty } \left| a _ { n } \right| ~ \mathrm { v } \overset { } { \underset { n = 0 } { \sum } } \left| b _ { n } \right|$ hQi tu, theo dinh ly 4.21, suy ra chuoi luong giac $( ^ { * } )$ hoi tu deu va hoi tu tuyet doi tren $\mathbb { R }$ ：
+
+Dinh ly 4.39. Neu hai day so duong $( a _ { n } ) \nu \dot { a } ( b _ { n } )$ don dieu giam va hoi tu $\nu \hat { e } \ 0$ ， thi chuoi luong giac (\*) hoi tu trén mien $D = \mathbb { R } \setminus \left\{ k 2 \pi : \ k \in \mathbb { Z } \right\}$ ：
+
+Ching minh Dat
+
+$$
+S _ { n } = \sum _ { k = 1 } ^ { n } a _ { n } \cos k x , \quad \bar { S } _ { n } = \sum _ { k = 1 } ^ { n } a _ { n } \sin k x .
+$$
+
+$+$ Chung minh rang: $( S _ { n } ( x ) )$ hoi tu tren $D$ ：
+
+$$
+\begin{array} { l } { \displaystyle { \dot { \bar { \mathbf { \xi } } } _ { n } ( x ) = a _ { 1 } 2 \sin \frac { x } { 2 } \cos x + a _ { 2 } 2 \sin \frac { x } { 2 } \cos 2 x + . . . + a _ { n } 2 \sin \frac { x } { 2 } \cos n x } } \\ { \displaystyle { = a _ { 1 } \bigg ( \sin ( 1 + \frac { 1 } { 2 } ) x - \sin ( 1 - \frac { 1 } { 2 } ) x \bigg ) + a _ { 2 } \bigg ( \sin ( 2 + \frac { 1 } { 2 } ) x - \sin ( 2 - \frac { 1 } { 2 } ) x \bigg ) } } \\ { \displaystyle { + . . . + a _ { n } \bigg ( \sin ( n + \frac { 1 } { 2 } ) x - \sin ( n - \frac { 1 } { 2 } ) x \bigg ) } } \\ { \displaystyle { = a _ { n } \sin ( n + \frac { 1 } { 2 } ) x - a _ { 1 } \sin \frac { x } { 2 } + \sum _ { k = 2 } ^ { n } ( a _ { k + 1 } - a _ { k } ) \sin ( k - \frac { 1 } { 2 } ) x . } } \end{array}
+$$
+
+Tu
+
+$$
+| ( a _ { k - 1 } - a _ { k } ) \sin ( k - \frac { 1 } { 2 } ) x | \leq | a _ { k - 1 } - a _ { k } | = a _ { k - 1 } - a _ { k }
+$$
+
+$$
+\sum _ { k = 2 } ^ { n } ( a _ { k - 1 } - a _ { k } ) = a _ { 1 } - a _ { n } \to a _ { 1 } { \mathrm { ~ k h i ~ } } n \to \infty ,
+$$
+
+theo dau hieu Weierstrass, suy ra
+
+$$
+\sum _ { k = 2 } ^ { n } ( a _ { k + 1 } - a _ { k } ) \sin ( k - \frac { 1 } { 2 } ) x \mathrm { ~ h \circ i ~ t u ~ t \ o i ~ } S _ { 0 } ( x ) .
+$$
+
+Ket hop dieu nay voi
+
+$$
+\operatorname* { l i m } _ { n \to \infty } a _ { n } \sin ( n + \frac { 1 } { 2 } ) x = 0 ,
+$$
+
+ta c6 $2 \sin { \frac { x } { 2 } } S _ { n }$ hoi tu toi $- a _ { 1 } \sin \frac { x } { 2 } + S _ { 0 } ( x )$ . Hay $( S _ { n } ( x ) )$ hoi tu toi $\begin{array} { r } { - \frac { a _ { 1 } } { 2 } + \frac { S _ { 1 } ( x ) } { 2 \sin \frac { x } { 2 } } = } \end{array}$ $S ( x ) \ \forall x \in D .$ $^ +$ Bang cach chung minh tuong tu, ta cüng chung minh duoc rang chuoi $( { \bar { S } } _ { n } ( x ) )$ （20 hoi tu toi $\bar { S } ( x )$ khi $n \to \infty$ ： ?
+
+Vay chuoi $( ^ { * } )$ hoi tu toi $S ( x ) + { \bar { S } } ( x )$ tren mien $D$
+
+# 4.6.2. Khai trien Fourier cua ham só có chu ky 2π
+
+Cho ham $f ( x )$ xác dinh tren $\mathbb { R }$ va có chu ky $2 \pi$ Ham só $f ( x )$ dugc goi la khai trien dugc thanh chuoi luong giac, neu ta co thé viet
+
+$$
+f ( x ) = { \frac { a _ { 0 } } { 2 } } + \sum _ { k = 1 } ^ { + \infty } ( a _ { k } \cos k x + b _ { k } \sin k x ) \ \forall x \in \mathbb { R } .
+$$
+
+Khi d6, néu c6 thé chuyén dau tich phan qua tóng vo han (xem dinh ly 4.25 ), thi ta c6
+
+$$
+\int _ { - \pi } ^ { \pi } f ( x ) d x = \int _ { - \pi } ^ { \pi } { \frac { a _ { 0 } } { 2 } } d x + \sum _ { n = 1 } ^ { + \infty } \int _ { - \pi } ^ { \pi } ( a _ { n } \cos n x + b _ { n } \sin n x ) d x
+$$
+
+$$
+\begin{array} { c } { { \displaystyle { \int _ { - \pi } ^ { \pi } f ( x ) \cos n x d x = \int _ { - \pi } ^ { \pi } a _ { n } \cos ^ { 2 } n x d x } } } \\ { { = \pi a _ { n } , } } \end{array}
+$$
+
+$$
+\begin{array} { c } { { \displaystyle { \int } ^ { \pi } f ( x ) \sin n x d x = \int _ { - \pi } ^ { \pi } a _ { n } \sin ^ { 2 } n x d x } } \\ { { \mathrm { ~ } - \pi } } \\ { { \mathrm { ~ } = \pi b _ { n } . } } \end{array}
+$$
+
+Nhu vay, ta có
+
+$$
+( * * ) \left\{ \begin{array} { l l } { \displaystyle a _ { 0 } = \frac { 1 } { \pi } \int f ( x ) d x } \\ { \displaystyle - \pi } \\ { \displaystyle a _ { k } = \frac { 1 } { \pi } \int f ( x ) \cos { k x } d x } \\ { \displaystyle b _ { k } = \frac { 1 } { \pi } \int f ( x ) \sin { k x } d x \forall k \in \mathbb { N } ^ { * } . } \end{array} \right.
+$$
+
+Khi d6, ta goi chuoi Fourier cua ham só $f ( x )$ la chuoi luong giac c6 dang
+
+$$
+S ( x ) = { \frac { a _ { 0 } } { 2 } } + \sum _ { k = 1 } ^ { + \infty } ( a _ { k } \cos k x + b _ { k } \sin k x ) \ \forall x \in \mathbb { R } ,
+$$
+
+trong d6, cac he só $a _ { 0 } , a _ { k } , b _ { k } \forall k \in \mathbb { N } ^ { * }$ duoc xac dinh boi (\*\*) goi la cac hé s6 Fourier cua ham so $f ( x )$ ：
+
+Van de ta quan tam la: Khi nao $S ( x ) = f ( x ) ?$
+
+# Dinh ly 4.40. (Dirichlet4)
+
+Cho ham só $f ( x )$ tuan hoan voi chu ky $2 \pi$ thöa man mot trong hai dieu kien sau tren $[ - \pi , \pi ]$ ：
+
+i) $f ( x ) \nu \dot { a } f ^ { \prime } ( x )$ lien tuc tung khuc. ii) $f ( x )$ don dieu titng khuc va bi chan. Khi do, neu $f ( x )$ lien tuc tai $x _ { 0 }$ ,thi
+
+$$
+f ( x _ { 0 } ) = S ( x _ { 0 } ) ,
+$$
+
+neu $f ( x )$ gian doan tai $x _ { 0 }$ ,thi
+
+$$
+S ( x _ { 0 } ) = { \frac { 1 } { 2 } } { \Big ( } \operatorname* { l i m } _ { x \to x _ { 0 } ^ { + } } f ( x ) + \operatorname* { l i m } _ { x \to x _ { 0 } ^ { - } } f ( x ) { \Big ) } .
+$$
+
+(khong ching minh).
+
+Vi du 4.41. Tim khai trién Fourier cüa ham so tuan hoan voi chu ky $2 \pi$
+
+$$
+f ( x ) = x ^ { 2 } \quad \nu \dot { o } i - \pi \leq x \leq \pi .
+$$
+
+Gidi Tinh các heé só Fourier, ta c6
+
+![](images/ad5879c2269b7ca2888c856ea1b0b108c4c9dc97a93e7f4dce2801a1a1b1b236.jpg)
+
+Hinh 1: Bieu diéen hinh hoc cha $f ( x ) = x ^ { 2 } x \in [ - \pi , \pi ]$ chu ky $2 \pi$
+
+$$
+\begin{array} { l } { { \displaystyle a _ { 0 } = \frac { 1 } { \pi } \int _ { x } ^ { \pi } d x = \frac { 2 } { \pi } \int _ { x } ^ { \pi } r ^ { 2 } d x = \frac { 2 \pi ^ { 2 } } { 3 } , } } \\ { { \displaystyle \qquad - \frac { \pi } { \pi } } } \\ { { \displaystyle a _ { n } = \frac { 1 } { \pi } \int _ { x } ^ { \pi } r ^ { 2 } \cos n x d x = \frac { 2 } { \pi } \int _ { 0 } ^ { \pi } r ^ { 2 } \cos n x d x = \frac { 4 ( - 1 ) ^ { n } } { n ^ { 2 } } , } } \\ { { \displaystyle a _ { n } = \frac { 1 } { \pi } \int _ { x } ^ { \pi } \sin n x d x = 0 . } } \end{array}
+$$
+
+Vay khai trien Fourier cua ham $f ( x )$ c6 dang
+
+$$
+S ( x ) = { \frac { \pi ^ { 2 } } { 3 } } - 4 { \Big ( } \cos x - { \frac { \cos 2 x } { 2 ^ { 2 } } } + { \frac { \cos 3 x } { 3 ^ { 2 } } } - \ldots + { \frac { 4 ( - 1 ) ^ { n + 1 } \cos n x } { n ^ { 2 } } } + .
+$$
+
+Chu y rang $f ( x )$ va $f ^ { \prime } ( x )$ lien tuc ting khuc, theo dinh ly 4.40, ta c6 $f ( x ) = S ( x )$ ：
+
+# 4.6.3. Khai trien Fourier cua ham so có chu ky $2 T$ Cho ham $f ( x )$ xác dinh tren $\mathbb { R }$ va có chu ky $2 T$ . Bang cách doi bien
+
+$$
+t = { \frac { \pi x } { T } } ,
+$$
+
+ta có, ham só
+
+Nhu vay, theo chung minh tren, khai trien Fourier cüa ham $g ( t )$ c6 dang
+
+$$
+\frac { a _ { 0 } } { 2 } + \sum _ { k = 1 } ^ { + \infty } ( a _ { k } \cos k t + b _ { k } \sin k t ) \forall t \in \mathbb { R } ,
+$$
+
+trong d6
+
+$$
+\left\{ \begin{array} { l } { \displaystyle a _ { 0 } = \frac { 1 } { \pi } \int \displaylimits _ { g } ^ { \pi } g ( t ) d t } \\ { \displaystyle a _ { k } = \frac { 1 } { \pi } \int \displaylimits _ { g } ^ { \pi } g ( t ) \cos { k t } d t } \\ { \displaystyle b _ { k } = \frac { 1 } { \pi } \int \displaylimits _ { g } ^ { \pi } g ( t ) \sin { k t } d t \quad \forall k \in \mathbb N ^ { * } . } \end{array} \right.
+$$
+
+Bang cach doi bien $t \to x$ , ta nhan dugc chuoi Fourier cua ham $f ( x )$ c6 dang:
+
+$$
+S ( x ) = { \frac { a _ { 0 } } { 2 } } + \sum _ { k = 1 } ^ { + \infty } ( a _ { k } \cos { \frac { \pi k x } { T } } + b _ { k } \sin { \frac { \pi k x } { T } } ) \ \forall x \in \mathbb { R } ,
+$$
+
+trong d6, cac hé s6 Fourier $a _ { 0 } , a _ { k } , b _ { k } \forall k \in \mathbb { N } ^ { * }$ duoc xac dinh boi
+
+$$
+\left\{ \begin{array} { l l } { a _ { 0 } = \frac { 1 } { T } \int f ( x ) d x = \frac { 1 } { T } \int f ( x ) d x } \\ { \qquad - \frac { T } { T } } \\ { a _ { k } = \frac { 1 } { T } \int f ( x ) \cos \frac { k \pi x } { T } d x = \frac { 1 } { T } \int f ( x ) \cos \frac { k \pi x } { T } d x } \\ { \qquad - \frac { T } { T } } \\ { b _ { k } = \frac { 1 } { T } \int f ( x ) \sin \frac { k \pi x } { T } d x = \frac { 1 } { T } \int f ( x ) \sin \frac { k \pi x } { T } d x \ \forall k \in \mathbb { N } ^ { * } . } \end{array} \right.
+$$
+
+Vi du 4.42. Tim khai trien Fourier cua ham s6 tuan hoan voi chu ky $2 T = 2$ （20
+
+$$
+f ( x ) = | x | \quad \nu \dot { o } i - 1 \leq x \leq 1 .
+$$
+
+Tu d6 tinh tong
+
+$$
+S = { \frac { 1 } { 1 ^ { 2 } } } + { \frac { 1 } { 3 ^ { 2 } } } + \ldots + { \frac { 1 } { ( 2 n + 1 ) ^ { 2 } } } + \ldots
+$$
+
+Gidi Tinh các hé só Fourier, ta c6
+
+![](images/8d20126fe0386a2caa78970e5f926267fb907d3c979da1f209406f895fbcda7d.jpg)  
+Hinh 2: Bieu dien hinh hoc cua $f ( x ) = | x | , x \in [ - 1 , 1 ]$ , chu ky 2.
+
+$$
+\begin{array} { l } { { \displaystyle a _ { 0 } = \frac { 1 } { T } \int f ( x ) d x = 2 \int _ { 0 } ^ { 1 } x d x = 1 , } } \\ { { \displaystyle \vphantom { \displaystyle \frac { T } { T } \int } } } \\ { { \displaystyle a _ { n } = \frac { 1 } { T } \int f ( x ) \cos n \pi x d x = 2 \int _ { 0 } ^ { 1 } x \cos n \pi x d x = 2 . \frac { ( - 1 ) ^ { n } - 1 } { n ^ { 2 } \pi ^ { 2 } } , } } \\ { { \displaystyle \phantom { \displaystyle \frac { T } { T } } } } \\ { { \displaystyle b _ { n } = \frac { 1 } { T } \int f ( x ) \sin n \pi x d x = 0 . } } \end{array}
+$$
+
+Vay khai trien Fourier cua ham $f ( x )$ c6 dang
+
+$$
+S ( x ) = \frac { 1 } { 2 } - \frac { 2 } { \pi ^ { 2 } } \Big ( \frac { \cos \pi x } { 1 ^ { 2 } } + \frac { \cos 3 \pi x } { 3 ^ { 2 } } + \ldots + \frac { \cos ( 2 n + 1 ) \pi x } { ( 2 n + 1 ) ^ { 2 } } + \ldots \Big ) .
+$$
+
+Chy y rang $f ( x )$ va $f ^ { \prime } ( x )$ lien tuc timg khuc, theo dinh ly 4.40, ta c6 $f ( x ) = S ( x )$ . $\tt { \overrightarrow { D e } }$ tinh t6ng $S$ ,thay $x = 0$ vao $f ( x )$ , ta c6
+
+$$
+0 = { \frac { 1 } { 2 } } - { \frac { 2 } { \pi ^ { 2 } } } { \Big ( } { \frac { 1 } { 1 ^ { 2 } } } + { \frac { 1 } { 3 ^ { 2 } } } + \ldots + { \frac { 1 } { ( 2 n + 1 ) ^ { 2 } } } + \ldots { \Big ) } .
+$$
+
+Vay
+
+$$
+S = { \frac { \pi ^ { 2 } } { 4 } } .
+$$
+
+4.6.4. Khai trien Fourier cua ham só xác dinh tren $[ a , b ] . [ a , b ) , ( a , b ]$ ,hay $( a , b )$ Gia su cho ham só $f ( x )$ xác dinh tren $[ a , b ]$ , ta thac trien ham $f ( x )$ thanh ham só $F ( x )$ xác dinh tren $\mathbb { R }$ va có chu ky $2 T$ . Khi dó ta có khai trien Fourier cüa ham $F ( x )$ va cüng có khai trién Fourier cua ham $f ( x )$ voi $x \in [ a , b ]$ . Thac trien ham $f ( x )  F ( x )$ c6 cac dang sau: Dang $I$ . Chu ky cua ham só $F ( x )$ la $2 T = b - a$ .
+
+Vi du 4.43. Cho ham so $f ( x )$ xác dinh trén $( 0 , 2 ]$ （20
+
+$$
+f ( x ) = \left\{ \begin{array} { l l } { { x } } & { { n \hat { e } \overset { } { u } x \in ( 0 , 1 ] } } \\ { { 1 } } & { { n \hat { e } \overset { } { u } x \in ( 1 , 2 ] . } } \end{array} \right.
+$$
+
+Tim chuoi Fourier cüa ham $f ( x )$ ：
+
+Gidi Thac trién ham $f ( x )  F ( x )$ xäc dinh tren $\mathbb { R }$ va có chu ky $2 T = 2$ .Tinh cäc hé só Fourier, ta có
+
+$$
+\begin{array} { l } { \displaystyle \dot { u _ { 1 } } - \frac { 1 } { T } \int ^ { T } \boldsymbol { F } ( x ) d x - \displaystyle \int _ { 0 } ^ { 1 } \boldsymbol { x } d x + \displaystyle \int _ { 1 } ^ { 2 } | d x - \frac { 3 } { 2 } \boldsymbol { \cdot } , } \\ { \displaystyle \dot { u _ { \alpha } } - \frac { 1 } { T } \int ^ { T } \boldsymbol { F } ( x ) \cos { \frac { \pi \pi x } { T } } d x - \displaystyle \int _ { x } ^ { 1 } \boldsymbol { c } \cos { \alpha } \alpha x d x + \displaystyle \int _ { 1 } ^ { 2 } \boldsymbol { c } \cos { \alpha } x d x - \displaystyle \frac { ( - c ) } { T } , } \\ { \displaystyle \dot { u _ { \alpha } } = \frac { 1 } { T } \int ^ { T } \boldsymbol { F } ( x ) \sin { \frac { \pi \pi x } { T } } d x d x } \\ { = \displaystyle \int _ { 0 } ^ { 1 } \boldsymbol { c } \sin { \pi \pi x } d x - \displaystyle \int _ { 1 } ^ { 1 } \sin { \pi \pi x } \alpha d x = \frac { ( - 1 ) ^ { n } + ( - 1 ) ^ { n } - 1 } { n \pi } = - \frac { 1 } { n \pi } . } \end{array}
+$$
+
+Vay khai trien Fourier cüa ham $F ( x )$ c6 dang
+
+![](images/de079c6357d5948978341c3ea47322253c0cee3836ccd5556b195c2f0005a986.jpg)  
+Hinh 3: D6 thi cua $F ( x )$ trong vi du 4.43.
+
+$$
+S ( x ) = { \frac { 3 } { 4 } } + \sum _ { n = 1 } ^ { \infty } \Big ( { \frac { ( - 1 ) ^ { n } - 1 } { n ^ { 2 } \pi ^ { 2 } } } \cos n \pi x - { \frac { 1 } { n \pi } } \sin n \pi x \Big ) .
+$$
+
+Chy y rang $F ( x )$ va $F ^ { \prime } ( x )$ lien tuc ting khuc, theo dinh ly 4.40, ta có $F ( x ) =$ $S ( x )$ . Hay
+
+$$
+F ( x ) = { \frac { 3 } { 4 } } + \sum _ { n = 1 } ^ { \infty } \left( { \frac { ( - 1 ) ^ { n } - 1 } { n ^ { 2 } \pi ^ { 2 } } } \cos n \pi x - { \frac { 1 } { n \pi } } \sin n \pi x \right) .
+$$
+
+Thu gon ham $F ( x )$ tren $( 0 , 2 ]$ cho khai trien Fourier cüa ham $f ( x )$
+
+$$
+f ( x ) = { \frac { 3 } { 4 } } + \sum _ { n = 1 } ^ { \infty } { \Big ( } { \frac { ( - 1 ) ^ { n } - 1 } { n ^ { 2 } \pi ^ { 2 } } } \cos n \pi x - { \frac { 1 } { n \pi } } \sin n \pi x { \Big ) } .
+$$
+
+Dang 2. Ham só $F ( x )$ chan (do thi doi xung qua truc $O y )$ ：
+
+Vi du 4.44. Cho ham só $f ( x )$ xac dinh trén $( 0 , 2 ]$ （20
+
+$$
+f ( x ) = \left\{ \begin{array} { l l } { x } & { n \hat { e } u x \in ( 0 , 1 ] } \\ { 1 } & { n \hat { e } u x \in ( 1 , 2 ] . } \end{array} \right.
+$$
+
+Hay khai trien Fourier ham so $f ( x )$ thanh cac ham cosin.
+
+Gidi Thac trien ham $f ( x )  F ( x )$ xac dinh boi
+
+$$
+F ( x ) = \left\{ \begin{array} { l l } { | x | } & { \mathsf { n e u } | x | \le 1 } \\ { 1 } & { \mathsf { n e u } x \in [ - 2 , - 1 ) \cup ( 1 , 2 ] . } \end{array} \right.
+$$
+
+va tuan hoan voi chu ky $2 T = 4$ . Tinh cäc he so Fourier, ta c6
+
+$$
+\begin{array} { l } { \displaystyle { a _ { 0 } = \frac { 1 } { T } \int F ( x ) d x = \int _ { 0 } ^ { 1 } x d x + \int _ { 1 } ^ { 2 } \lVert d x = \frac { 3 } { 2 } , } } \\ { \displaystyle { \phantom { \frac { 1 } { T } \int } } } \\ { \displaystyle { a _ { \alpha } = \frac { 1 } { T } \int f ( x ) \cos { \frac { \pi \pi x } { T } d x } = \int x \cos { \frac { \pi \pi x } { 2 } d x } + \int _ { 1 } ^ { 2 } \cos { \frac { \pi \pi x } { 2 } d x } } } \\ { \displaystyle { \phantom { \frac { 1 } { T } \int } } } \\ { \displaystyle { \phantom { \frac { 1 } { T } \int } } } \\ { \displaystyle { b _ { n } = \frac { 1 } { T } \int _ { - T } ^ { 1 } F ( x ) \sin { \frac { \pi \pi } { T } d x } = 0 . } } \end{array}
+$$
+
+Vay khai trien Fourier cua ham $F ( x )$ c6 dang
+
+![](images/f393e90c58562fe4b838001ca7c6e555e6030419f03199c1621899dee388f57c.jpg)  
+Hinh 4: D6 thi cua $F ( x )$ trong vi du 4.44.
+
+$$
+S ( x ) = { \frac { 3 } { 4 } } + \sum _ { n = 1 } ^ { \infty } a _ { n } \cos { \frac { n \pi x } { 2 } } .
+$$
+
+Chy y rang $F ( x )$ va $F ^ { \prime } ( x )$ lien tuc tmg khuc, theo dinh ly 4.40, ta c6 $F ( x ) =$ $S ( x )$ . Thu gon ham $F ( x )$ tren $( 0 , 2 ]$ cho khai trien Fourier cua ham $f ( x )$
+
+$$
+f ( x ) = { \frac { 3 } { 4 } } + \sum _ { n = 1 } ^ { \infty } \left( { \frac { 4 } { n ^ { 2 } \pi ^ { 2 } } } ( \cos { \frac { n \pi } { 2 } } - 1 ) - { \frac { 2 } { n \pi } } \sin { \frac { n \pi } { 2 } } \right) \cos { \frac { n \pi x } { 2 } } .
+$$
+
+Dang 3. Ham só $F ( x )$ lé (d6 thi doi ximg qua tam $O$ ）
+
+Vi du 4.45. Cho ham so $f ( x )$ xac dinh tren (0,2]
+
+$$
+f ( x ) = \left\{ { \begin{array} { l l } { 1 - x } & { n { \dot { e } } u \ x \in ( 0 , 1 ] } \\ { 0 } & { n { \dot { e } } u \ x \in ( 1 , 2 ] . } \end{array} } \right.
+$$
+
+Hay khai trien Fourier ham só $f ( x )$ thanh cac ham sin.
+
+Giai Thac trien ham $f ( x )  F ( x )$ xac dinh boi
+
+$$
+F ( x ) = \left\{ { \begin{array} { l l } { 1 - x } & { { \tt n e u 0 < x \leq 1 } } \\ { - ( x + 1 ) } & { { \tt n e u - 1 \leq x \leq 0 } } \\ { 0 } & { { \tt n e u \leq u \leq [ - 2 , - 1 ) \cup ( 1 , 2 ] } . } \end{array} } \right.
+$$
+
+va tuän hoan voi chu ky $2 T = 4$ . Tinh các hé só Fourier, ta có
+
+$$
+\begin{array} { l } { \displaystyle { a _ { 0 } = \frac { 1 } { T } \int F ( x ) d x = \int _ { - 1 } ^ { 0 } ( 1 + x ) d x + \int _ { 0 } ^ { 1 } ( 1 - x ) d x = 0 , } } \\ { \displaystyle { \vphantom { \frac { 1 } { T } \int } } } \\ { \displaystyle { a _ { n } = \frac { 1 } { T } \int F ( x ) \cos { \frac { n \pi x } { T } } d x = 0 , } } \\ { \displaystyle { b _ { n } = \frac { 1 } { T } \int e ( x ) \sin { \frac { n \pi x } { T } } d x = 2 \int _ { 0 } ^ { 1 } ( 1 - x ) \sin { \frac { n \pi x } { 2 } } d x = \frac { 2 } { n \pi } - \frac { 4 \sin { \pi } } { n ^ { 2 } \pi ^ { 2 } } } } \end{array}
+$$
+
+Vay khai trien Fourier cua ham $F ( x )$ c6 dang
+
+![](images/33eba1bc8b87fdd4e281ad6807638b0aad20e38e793f8b7cdac3b80f1ea8012f.jpg)  
+Hinh 5: D6 thi cua $F ( x )$ trong vi du 4.45.
+
+$$
+S ( x ) = 4 \sum _ { n = 1 } ^ { \infty } \Big ( { \frac { 1 } { n \pi } } - { \frac { 2 \sin { \frac { n \pi } { 2 } } } { n ^ { 2 } \pi ^ { 2 } } } \Big ) \sin { \frac { n \pi x } { 2 } } .
+$$
+
+Chy $\acute { \mathbf { y } }$ rang $F ( x )$ va $F ^ { \prime } ( x )$ lien tuc tumg khuc, theo dinh ly 4.40, ta có $F ( x ) =$ （20 $S ( x )$ . Thu gon ham $F ( x )$ tren $( 0 , 2 ]$ cho khai trien Fourier cua ham $f ( x )$ dang
+
+$$
+f ( x ) = 4 \sum _ { n = 1 } ^ { \infty } \Big ( { \frac { 1 } { n \pi } } - { \frac { 2 \sin { \frac { n \pi } { 2 } } } { n ^ { 2 } \pi ^ { 2 } } } \Big ) \sin { \frac { n \pi x } { 2 } } .
+$$
+
+# BAI TAP CHUONG 4
+
+Bai 4.1. Tinh cac tong sau:
+
+ds : 2. 3   
+ds:-4 23   
+ds:15 1   
+ds：   
+（20 $\mathrm { d s } : 1 - { \sqrt [ { 3 } ] { 2 } } .$ （2   
+ds : 1.   
+ds:-0.   
+ds : phan ky.   
+ds : 1-√2.   
+$\mathrm { d s } : \frac { \log _ { 3 } 2 } { 1 - \log _ { 3 } ^ { 2 } 2 } .$
+
+冏1 $\begin{array} { r l } & { \begin{array} { r l } & { \sum _ { i = 1 } ^ { N } \frac { 1 } { 2 ^ { N / 2 } } } \\ & { \sum _ { i = 1 } ^ { N } \frac { 1 } { 2 ^ { N / 2 } } } \\ & { \sum _ { i = 1 } ^ { N } \frac { 1 } { 2 ^ { N / 2 } } } \\ & { \sum _ { i = 1 } ^ { N } \frac { 1 } { 2 ^ { N / 2 } } } \end{array} } \\ & { \begin{array} { r l } & { \sum _ { i = 1 } ^ { N } \frac { 1 } { 2 ^ { N / 2 } } \sum _ { j = 1 } ^ { N } } \\ & { \sum _ { i = 1 } ^ { N } \frac { 1 } { 2 ^ { N / 2 } } } \\ & { \sum _ { i = 1 } ^ { N } \frac { 1 } { 2 ^ { N / 2 } } } \end{array} } \\ & { \begin{array} { r l } & { \sum _ { i = 1 } ^ { N } \frac { 1 } { 2 ^ { N / 2 } } } \\ & { \sum _ { i = 1 } ^ { N } \frac { 1 } { 2 ^ { N / 2 } } } \\ & { \sum _ { i = 1 } ^ { N } \frac { 1 } { 2 ^ { N / 2 } } } \end{array} } \\ & { \begin{array} { r l } & { \sum _ { i = 1 } ^ { N } \frac { 1 } { 2 ^ { N / 2 } } } \\ & { \sum _ { i = 1 } ^ { N } \frac { 1 } { 2 ^ { N / 2 } } } \\ & { \sum _ { i = 1 } ^ { N } \frac { 1 } { 2 ^ { N / 2 } } } \end{array} } \end{array}$ 2) 3) 4 5 ⑥ 7 n=1 +(-1)+1 ? 8）M n n=1 9)∑(n+2-2Vn+1+ √n) n=2 +8 10) M 10g3 g2n+12 n=0
+
+# Bai 4.2. Dung dinh ly Cauchy, xét sur hoi tu cua cac chuoi sau:
+
+） $\begin{array} { l } { \displaystyle \sum _ { n = 1 } ^ { + \infty } \frac { \cos n x - \cos ( n + 1 ) x } { n } } \\ { \displaystyle \sum _ { n = 1 } ^ { + \infty } \frac { \cos x ^ { n } } { n ^ { 2 } } } \end{array}$ ds : hoi tu.   
+2) ds : hoi tu.
+
+3) $\begin{array} { l } { \displaystyle \sum _ { n = 1 } ^ { + \infty } \frac { ( - 1 ) ^ { n + 1 } } { n } } \\ { \displaystyle \sum _ { n = 1 } ^ { + \infty } \frac { 1 } { \sqrt { n ( n + 1 ) } } } \end{array}$ ds : phan ky, xét: $| S _ { 6 n } - S _ { 3 n } |$ ：  
+4 ds : phan ky, xét: $\left| S _ { 2 n } - S _ { n } \right|$ ：
+
+Bai 4.3. Dung dau hieu so sánh, xét su hoi tu cüa các chuoi sau:
+
+1 $\begin{array} { r l } & { \frac { 1 } { \Delta x } = \frac { \pi } { \pi ^ { 2 } } } \\ & { \frac { 1 } { \Delta x ^ { 2 } } } \\ & { \frac { 1 } { \Delta x ^ { 3 } } } \\ & { \frac { 1 } { \Delta x ^ { 3 } } } \\ & { \frac { 1 } { \Delta x ^ { 3 } } } \\ & { \frac { 1 } { \Delta x ^ { 3 } } } \\ & { \frac { 1 } { \Delta x ^ { 3 } } } \\ & { \frac { 1 } { \Delta x ^ { 3 } } } \\ & { \frac { 1 } { \Delta x ^ { 3 } } } \\ & { \frac { 1 } { \Delta x ^ { 3 } } } \\ & { \frac { 1 } { \Delta x ^ { 3 } } } \\ & { \frac { 1 } { \Delta x ^ { 3 } } } \\ & { \frac { 1 } { \Delta x ^ { 3 } } } \\ & { \frac { 1 } { \Delta x ^ { 3 } } } \end{array} \frac { \pi ^ { 3 } + 1 } { 1 2 \pi ^ { 2 } + 3 \pi - 1 / 3 \pi }  \\$ ds : hoi tu.   
+¥2 ds : phan ky.   
+¥3 ds : hoi tu.   
+4 ds :   
+5 ds : phan ky.   
+1   
+6 ds : hoi tu.   
+n=1   
++8 1   
+7)M ds : hoi tu.   
+=ncosn   
+8）Msin n+2 ds : hoi tu.   
+n=1 n√3n +1   
++8   
+9)M arcsin3_ n,p>0 1 $\mathrm { d s } : p > { \frac { 1 } { 3 } }  \mathrm { h { \hat { . } } }$ u $p \leq { \frac { 1 } { 3 } }  \mathrm { p h a n ~ k \hat { y } } .$ （20 n=1   
++8   
+10) ∑(1-cos 1 np ）,p>0 （20 $\mathrm { d s } : p > { \frac { 1 } { 2 } } \to \mathrm { h { \hat { \mathrm { { o } } } } i }$ tu, $p \leq { \frac { 1 } { 2 } }  \mathrm { p h a n } \mathrm { k } \grave { \mathrm { y } } .$ n=1
+
+Bai 4.4. Dung dau hieu D'alembert, xét su hoi tu cüa các chuoi sau:
+
+） $\begin{array} { l } { \displaystyle \sum _ { n = 1 } ^ { + \infty } \frac { 4 . 7 . 1 0 . . . ( 3 n + 1 ) } { 2 . 6 . 1 0 . . . ( 4 n - 2 ) } } \\ { \displaystyle \sum _ { n = 1 } ^ { + \infty } \frac { n + 1 } { 2 ^ { n } } } \end{array}$ ds : hoi tu.   
+冏2 ds : hoi tu.
+
+張3號 $\begin{array}{c} \begin{array} { r l } & { \frac { \Delta x } { \sqrt { 2 } } = \frac { \left( \frac { \Delta x } { 2 } - \frac { 1 } { 2 } \right) } { \nu ^ { 2 } } } \\ & { - \frac { \Delta x } { \sqrt { 2 } } } \\ & { \frac { \Delta x } { \sqrt { 2 } } } \\ & { \frac { \sqrt { 2 } } { 2 } } \\ & { \frac { \sqrt { 2 } } { 2 } } \\ & { \frac { \sqrt { 2 } } { 2 } } \\ & { \frac { \sqrt { 2 } } { 2 } } \\ & { - \frac { \sqrt { 2 } } { 2 } } \\ & { \frac { \sqrt { 2 } } { 2 } } \\ & { \frac { \sqrt { 2 } } { 2 } } \\ & { \frac { \sqrt { 2 } } { 2 } } \\ & { \frac { \sqrt { 2 } } { 2 } } \\ & { - \frac { 1 } { 4 } } \\ & { \frac { \sqrt { 2 } } { 2 } } \\ & { \frac { \sqrt { 3 } } { 2 } } \\ & { \frac { \sqrt { 2 } } { 2 } } \\ & { \frac { \sqrt { 3 } } { 2 } } \end{array} \frac { \left( \frac { \Delta x } { 2 } \right) } { 2 } = \frac { \left( \frac { \Delta x } { 2 } + \frac { 1 } { 2 } \right) } { 2 }  \\ & { \frac { \sqrt { 2 } } { 2 } } \\ & { \frac { \sqrt { 3 } } { 2 } } \\ & { \frac { \sqrt { 2 } } { 2 } } \\ & { \frac { \sqrt { 3 } } { 2 } } \\ & { \frac { \sqrt { 2 } } { 2 } } \\ & { \frac { \sqrt { 3 } } { 2 } } \\ & { \frac { \sqrt { 2 } } { 2 } } \\ & { \frac { \sqrt { 3 } } { 2 } } \\ & { \frac { \sqrt { 2 } } { 2 } } \end{array}$ （2冏5號678））∑+2²-1(n!）²10)Mg
+
+ds : hoi tu.   
+ds : hoi tu.   
+ds : hoi tu.   
+ds : hoi tu.   
+ds : phan ky.   
+ds : phan ky.   
+ds : hoi tu.   
+ds : hoi tu.
+
+Bai 4.5. Dung dau hieu Cauchy, xét su hoi tu cua cac chuoi sau:
+
+$$
+\begin{array} { r l } & { \frac { 1 } { \sqrt { 2 \pi } } \left( \frac { \sigma ( x ) } { 2 \sqrt { 3 } } \frac { \big ( 1 - \frac { \sigma ( x ) } { 2 } \big ) ^ { \frac { 1 } { \sigma ( x - 1 ) } } } { 1 } \right) ^ { \frac { 1 } { \sigma ( x - 1 ) } } } \\ & { \frac { 1 } { \sqrt { 2 \pi } } \left( \cos \frac { x } { x } \right) ^ { \frac { 1 } { \sigma ( x - 1 ) } } } \\ & { \frac { 1 } { \sqrt { 2 \pi } } \left( \frac { 2 \sigma ( x ) } { 2 \sqrt { 3 } } \frac { \big ( 1 - \frac { \sigma ( x ) } { 2 } \big ) ^ { \frac { 1 } { \sigma ( x - 1 ) } } } { 1 } \right) ^ { \frac { 1 } { \sigma ( x - 1 ) } } } \\ & { \frac { 1 } { \sqrt { 2 \pi } } \mathfrak { L } \left( \frac { \sigma ( x ) } { \pi ( 1 - 1 ) } \right) ^ { \frac { 1 } { \sigma ( x - 1 ) } } } \\ & { \frac { 1 } { \sqrt { 2 \pi } } \frac { \sigma ( x ) } { 2 \sqrt { 3 } } \frac { \sigma ( x - 1 ) } { 1 + \sqrt { 3 } } } \\ & { \frac { 1 } { \sqrt { 2 \pi } } \left( 1 + \mathrm { a x s i n } \frac { 1 } { \sqrt { 2 } \pi ^ { 2 } - 1 } \right) ^ { \frac { 1 } { \sigma ( x - 1 ) } } } \end{array}
+$$
+
+ds : hoi tu.   
+ds : hoi tu.   
+ds : hoi tu.   
+ds : hoi tu.   
+ds : hoi tu.   
+ds : hoi tu.   
+7 $\begin{array} { l } { { \displaystyle \sum _ { n = 1 } ^ { + \infty } 3 ^ { ( - 1 ) ^ { n } + 2 n } } } \\ { { \displaystyle \sum _ { n = 1 } ^ { + \infty } 3 ^ { ( - 1 ) ^ { n } - 2 n } } } \\ { { \displaystyle \sum _ { n = 1 } ^ { + \infty } \left( \frac { 2 n + ( - 1 ) ^ { n } } { 3 n - 4 } \right) ^ { 2 n + 5 } } } \\ { { \displaystyle \sum _ { n = 1 } ^ { + \infty } \left( \mathrm { z e c o s 2 } ^ { \mathrm { a } \mathrm { z e c o s 2 } ^ { \mathrm { a } - 1 } } \frac { n + 1 } { 2 n + 3 } \right) } } \end{array}$ ds : phan ky.   
+8） ds : hoi tu. （20   
+9) ds : hoi tu.   
+10 ds : hoi tu. （20
+
+Bai 4.6. Dung dau hieu tich phan, xét su hoi tu cüa các chuoi sau:
+
+1M   
++8 1   
+2∑nnn   
+3)nln h(hn)   
+5 $\begin{array} { r l } & { \sum _ { i = 1 } ^ { n } \frac { 1 } { n } \sum _ { j = 1 } ^ { n } \frac { 1 } { n } \sum _ { i = 1 } ^ { n } \frac { 1 } { n } \sum _ { j = 1 } ^ { n } } \\ & { \sum _ { i = 1 } ^ { n } \frac { 1 } { n } \sum _ { j = 2 } ^ { n } \frac { 1 } { n } \sum _ { i = 1 } ^ { n } \frac { 1 } { n } \sum _ { j = 1 } ^ { n } } \\ &  \sum _ { i = 1 } ^ { n } \frac { 1 } { n } \sum _ { j = 1 } ^ { n } \frac { 1 } { n } \sum _ { i = 1 } ^ { n } \frac { 1 } { n } \sum _ { j = 1 } ^ { n } \frac { 1 } { n } \sum _ { i = 1 } ^ { n } \frac { 1 } { n } \sum _ { j = 1 } ^ { n } \frac { 1 } { n } \sum _ { i = 1 } ^ { n } \frac { 1 } { n } \sum _ { j = 1 } ^ { n } \frac { 1 } { n } \sum _ { i = 1 } ^ { n } \frac { 1 } { n } \sum _ { j = 1 } ^ { n } \frac { 1 } { n } \sum _ { i = 1 } ^ { n } \frac { 1 } { n } \sum _ { j = 1 } ^ { n } \frac { 1 } { n } \sum _ { i = 1 } ^ { n } \frac { 1 } { n } \sum _ { j = 1 } ^ { n } \frac { 1 } { n } \sum _ { i = 1 } ^ { n } \frac { 1 } { n } \sum _ { j = 1 } ^ { n } \frac { 1 } { n } \sum _ { i = 1 } ^ { n } \frac { 1 } { n } \sum _ { j = 1 } ^ { n } \frac { 1 } { n } \sum _ { i = 1 } ^ { n } \frac { 1 } { n } \sum _ { j = 1 } ^ { n } \frac { 1 } { n } \sum _ { i = 1 } ^ { n } \frac { 1 } { n } \sum _ { j = 1 } ^ { n } \frac { 1 } { n } \sum _ { i = 1 } ^ { n } \frac { 1 } { n } \sum _ { j = 1 } ^ { n } \frac { 1 } { n } \sum _ { i = 1 } ^ { n } \frac { 1 } { n } \sum _ { j = 1 } ^ { n } \frac { 1 } { n } \sum _ { i = 1 } ^ { n } \frac { 1 } { n } \sum _ { j = 1 } ^ { n } \frac { 1 } { n } \sum _ { i = 1 } ^ { n } \frac { 1 } { n } \sum _ { j = 1 } ^ { n } \frac { 1 } { n } \sum _ { i = 1 } ^ { n } \frac { 1 } { n } \sum _ { j = 1 } ^ { n } \frac { 1 } { n } \sum _ { i = 1 } ^ { n } \frac { 1 } { n } \sum _ { j = 1 } ^ { n } \frac { 1 } { n } \sum _ { i = 1 } ^ { n } \frac { 1 } { n } \sum _ { j = 1 } ^ { n } \frac  \end{array}$   
+⑤   
+7   
+8   
+9號   
+10
+
+ds : phan ky.   
+ds : hoi tu.   
+ds : phan ky.   
+ds : hoi tu.   
+ds : phan ky.   
+ds : hoi tu.   
+ds : phan ky.   
+ds : hoi tu.   
+ds : hoi tu.   
+ds : hoi tu.
+
+Bai 4.7. Dung dau hieu Leibniz, xét su hoi tu cua các chuoi sau:
+
+ds : hoi tu.   
+ds : hoi tu.   
+ds : hoi tu.   
+ds : phan ky.   
+ds : hoi tu.   
+ds : hoi tu.   
+ds : phan ky.   
+ds : hoi tu.   
+ds : hoi tu.   
+ds : phan ky.
+
+冏） ¥2 $\begin{array} { r l } & { \frac { 1 } { \sqrt { 3 } } ( 1 - \frac { \sigma } { 2 } ) ^ { 2 } } \\ & { \times \frac { \sigma } { 2 } ( 2 \pi ) ^ { 2 } \ \frac { 1 } { \sigma ^ { 2 } } } \\ & { \times \frac { \sigma } { 2 } ( 1 + \frac { \sigma } { 2 } ) ^ { 2 } } \\ & { \times \frac { \sigma } { 2 } \frac { 1 } { \sigma ^ { 2 } } \frac { 1 } { \sigma ^ { 3 } } } \\ & { \times \frac { \sigma } { 2 } ( 1 - \frac { \sigma } { 2 } ) ^ { 2 } \frac { 1 } { \sigma ^ { 2 } } } \\ & { \times \frac { \sigma } { 2 } ( 1 + \frac { \sigma } { 2 } ) ^ { 2 } \frac { 1 } { \sigma ^ { 3 } } } \\ & { \times \frac { \sigma } { 2 } ( 1 + \frac { \sigma } { 2 } ) ^ { 2 } \frac { 1 } { \sigma ^ { 2 } } } \\ & { \times \frac { \sigma } { 2 } ( 1 + \frac { \sigma } { 2 } ) ^ { 2 } \frac { 1 } { \sigma ^ { 3 } } } \\ & { \times \frac { \sigma } { 2 } ( 1 + \frac { \sigma } { 2 } ) ^ { 2 } \frac { 1 } { \sigma ^ { 3 } } } \\ & { \times \frac { \sigma } { 2 } ( 1 + \frac { \sigma } { 2 } ) ^ { 2 } \frac { 1 } { \sigma ^ { 3 } } } \\ & { \times \frac { \sigma } { 2 } ( 1 + \frac { \sigma } { 2 } ) ^ { 2 } \frac { 1 } { \sigma ^ { 3 } } } \end{array}$   
+3   
+4 $\begin{array}{c} \begin{array} { r l } & { \sum _ { j = 0 } ^ { n } \frac { \partial \sin \theta } { \partial x } } \\ & { \frac { \sin \theta } { \cos x } } \\ & { \frac { \sin \theta } { \cos x } } \\ & { \frac { \sin \theta } { \cos x } } \\ & { \frac { \sin \theta } { \sin x } } \\ & { \frac { \sin \theta } { \cos x } } \\ & { \frac { \sin \theta } { \sin x } } \end{array} \qquad \begin{array} { r l } { \frac { 1 } { 2 } } & { \frac { 1 } { \sin ^ { 2 } \theta } } \\ { \frac { \sin ^ { 2 } \theta } { \sin ^ { 2 } \theta } } & { \frac { \sin \theta } { \cos \theta } } \\ { \frac { \sin \theta } { \sin x } } & { \frac { \sin \theta } { \cos \theta } } \\ { \frac { \sin \theta } { \cos x } } & { \frac { \sin \theta } { \cos x } } \end{array}  \\ & { \qquad \begin{array} { r l } { \frac { 1 } { 2 } } & { \frac { 1 } { \sin ^ { 2 } \theta } } \\ { \frac { 1 } { 2 } } & { \frac { 1 } { \sin ^ { 2 } \theta } } \\ { \frac { 1 } { 2 } } & { \frac { 1 } { \sin ^ { 2 } \theta } } \end{array} } \\ & { \qquad \times \qquad \begin{array} { r l } { \frac { 1 } { 2 } } & { \frac { 1 } { \sin ^ { 2 } \theta } } \\ { \frac { 1 } { 2 } } & { \frac { 1 } { \sin ^ { 2 } \theta } } \\ { \frac { 1 } { 2 } } & { \frac { 1 } { \sin ^ { 2 } \theta } } \end{array} } \end{array}$   
+5   
+6   
+7   
+8   
+9   
+10)M cos nπ   
+nsinn
+
+Bai 4.8. Khao sat su hoi tu deu cua các ham só sau:
+
+1) $\begin{array} { l } { { \displaystyle \sum _ { n = 1 } ^ { + \infty } x ^ { n - 1 } } } \\ { { \displaystyle \sum _ { n = 1 } ^ { + \infty } \left( - 1 \right) ^ { n } x ^ { n } } } \\ { { \displaystyle \sum _ { n = 1 } ^ { + \infty } \left( - 1 \right) ^ { n } x ^ { n } } } \\ { { \displaystyle \sum _ { n = 1 } ^ { + \infty } \left( - 1 \right) ^ { n } } } \\ { { \displaystyle \sum _ { n = 1 } ^ { + \infty } \sqrt { \frac { 1 } { x } } e ^ { - n x } } } \end{array}$ tren $D = [ - \frac { 1 } { 2 } , \frac { 1 } { 2 } ]$ : hQi tu deu.   
+2) tren $D = [ 0 , 1 ]$ （20 : hQi tu deu.   
+3 tren $D = [ 0 , + \infty )$ （20 : hQi tu deu.   
+4) tren $D = [ 0 , + \infty )$ : khong hoi tu d
+
+5) $\sum _ { n = 1 } ^ { + \infty } \ln ( 1 + { \frac { x } { n \ln ^ { 2 } ( n + 1 ) } } )$ tren $D = [ 0 , 2 ]$ （20 : hoi tu deu.   
+6 $\begin{array} { r l } & { \displaystyle \sum _ { n = 1 } ^ { + \infty } \frac { ( \sin \pi n ) } { n ! } } \\ & { \displaystyle \sum _ { n = 1 } ^ { + \infty } \frac { 1 } { ( n + 2 \pi ) ( n + 2 \pi + 2 ) } } \\ & { \displaystyle \sum _ { n = 1 } ^ { + \infty } \frac { ( - 1 ) ^ { n } } { 2 n + ( \cos \pi n ) } } \\ & { \displaystyle \sum _ { n = 1 } ^ { + \infty } \sqrt { \frac { \sin \pi n } { \sqrt { 2 \pi ^ { n + 2 } + n ^ { 2 } + 1 } } } } \\ & { \displaystyle \sum _ { n = 1 } ^ { + \infty } \frac { 1 } { 2 } } \end{array}$ tren $D = [ 0 , + \infty )$ （20 : hoi tu deu.   
+冏7 tren $D = [ 0 , + \infty )$ （20 : hoi tu deu.   
+8） trén $D = \mathbb { R }$ : hoi tu deu.   
+9) trén $D = \mathbb { R }$ : hoi tu deu.   
+110號 tren D=[0,+∞0） : hoi tu deu.   
+?
+
+Bai 4.9. Tim mien hoi tu cüa cac chuoi luy thua sau:
+
+1)（²-2） ds : D = R.n=0  
+2) N +0 4 ）n(+2） $\mathrm { d s } : { \cal D } = [ - \frac { 1 9 } { 4 } , \frac { 3 } { 4 } ) .$ 11 nn=1+8 xn  
+3 M2 （20 $\mathrm { d s } : D = [ - 1 , 1 ] .$ （20n=1  
+4 (x+1）2n ${ \mathrm { d } } \mathbf { s } : D = ( - { \sqrt { \frac { e } { 2 } } } - 1 , { \sqrt { \frac { e } { 2 } } } - 1 ) .$ n=1n.2n  
+5) W! (2n） (3x + 4)2n ds : $D = \mathbb { R }$ ，+ (2x +1)n  
+6∑ ds : $D = \mathbb { R }$ ：n=1 nn  
+7)M +8 2nx2n-1 $\mathrm { d } { \mathrm { s } } : D = [ - \frac { 1 } { \sqrt { 2 } } , \frac { 1 } { \sqrt { 2 } } ] .$ n=1 (4n - 3)2
+
+$$
+\begin{array} { l } { \displaystyle \sum _ { n = 1 } ^ { + \infty } \frac { ( - 1 ) ^ { n - 1 } 4 ^ { n } x ^ { n } } { n ^ { 2 } } } \\ { \displaystyle \sum _ { n = 1 } ^ { + \infty } \frac { ( - 1 ) ^ { n } ( x - 1 ) ^ { 6 n + 3 } } { 2 n + 1 } } \\ { \displaystyle \sum _ { n = 1 } ^ { + \infty } \frac { ( - 1 ) ^ { n } ( x + 1 ) ^ { 2 n + 1 } } { 3 ^ { 2 n + 1 } ( 2 n + 1 ) } } \end{array}
+$$
+
+Bai 4.10. Khai trién Fourier các ham so sau:
+
+$\begin{array} { r } { 1 ) f ( x ) = \frac { \pi - x } { 2 } } \end{array}$ voi $x \in ( 0 , 2 \pi )$ theo sin.  
+${ \mathrm { d s } } : \sum _ { n = 1 } ^ { \infty } { \frac { \sin n x } { n } }$ （20  
+$\begin{array} { r } { 2 ) f ( x ) = \cos \frac { x } { 2 } } \end{array}$ v6i $x \in ( - \pi , \pi )$ ， chu ky $2 \pi$ ：${ \begin{array} { l } { { \mathrm { d s } } : \cos { \frac { x } { 2 } } = { \frac { 2 } { \pi } } + { \frac { 1 } { \pi } } \sum _ { n = 1 } ^ { + \infty } { \frac { ( - 1 ) ^ { n } \cos n x } { { \frac { 1 } { 4 } } - n ^ { 2 } } } . } \\ { 3 ) { \mathrm { ~ f ( x ) } } = } \end{array} }$   
+3) f(x)=
+
+$$
+\textstyle \mathrm { d s } : a _ { 0 } = { \frac { 1 5 } { 2 } } , \ a _ { n } =
+$$
+
+bn 6 πn
+
+$\begin{array} { r } { 4 ) f ( x ) = \cos \frac { x } { 2 } x \in ( 0 , 2 \pi ] , \ \mathrm { c h u } \ \mathbf { k } \hat { \mathbf { y } } \ 2 T = 4 \pi . } \end{array}$ （20   
+$\begin{array} { r l } & { \mathbf { \Psi } ^ { \pm } ) J \left( x \right) - \cos \frac { \pi } { 2 } \mathbf { \Psi } ^ { \pm } \mathbf { \Psi } ^ { \ll } \left( \mathbf { \Psi } ^ { \cup } , 2 ^ { \pi / \Psi } \right) , \ \mathbf { \Psi } ^ { \cup \pm } \mathbf { \Psi } ^ { \pm } \mathbf { \Psi } ^ { \pm } \mathbf { \Psi } ^ { \pm } \mathbf { \Psi } ^ { \mp } \mathbf { \Psi } ^ { \mp } \mathbf { \Psi } ^ { \mp } \mathbf { \Psi } ^ { \mp } \mathbf { \Psi } } \\ & { \mathbf { \Psi } ^ { \mathrm { d s } } : a _ { 0 } = 0 , \ a _ { n } = 0 , b _ { n } = \frac { 8 n } { \pi ( 2 n - 1 ) ( 2 n + 1 ) } . } \\ & { \mathbf { \Psi } ^ { 5 } ) f ( x ) = x \sin x \ \mathbf { \Psi } x \in [ - \pi , \pi ] . } \\ & { \mathbf { \Psi } ^ { \mathrm { d s } } : a _ { 0 } = - 2 , \ a _ { 1 } = - \frac { 1 } { 2 } , a _ { n } = \frac { 2 } { n ^ { 2 } - 1 } ( n \geq 2 ) , b _ { n } = 0 . } \end{array}$ （20   
+$6 ) f ( x ) = x \cos x \quad x \in ( 0 , \pi )$ theo cosin.Tur d6 tinh tong $S = \sum _ { n = 1 } ^ { \infty } { \frac { 4 n ^ { 2 } + 1 } { ( 4 n ^ { 2 } - 1 ) ^ { 2 } } }$ $\begin{array} { l } { { \displaystyle \mathrm { d } { \bf s } : - \frac { 2 } { \pi } + \frac { \pi } { 2 } \cos x - \frac { 4 } { \pi } \sum _ { n = 1 } ^ { \infty } \frac { 4 n ^ { 2 } + 1 } { ( 4 n ^ { 2 } - 1 ) ^ { 2 } } \cos 2 n x , \ S = \frac { \pi ^ { 2 } } { 8 } + \frac { 1 } { 2 } . } } \\ { { \displaystyle 7 ) f ( x ) = x \cos x \ ~ x \in ( 0 , \pi ) \mathrm { t h e o } \ s i n } . } \\ { { \displaystyle \mathrm { d } { \bf s } : - \frac { 1 } { 2 } \sin x + 2 \sum _ { n = 2 } ^ { \infty } ( - 1 ) ^ { n } \frac { n } { n ^ { 2 } - 1 } \sin n x } . } \end{array}$   
+（20
+
+$\mathrm { d s } : { \cal D } = [ - \frac 1 4 , \frac 1 4 ] .$ $\begin{array} { r } { \mathtt { d s } : D = [ 0 , 2 ] . } \end{array}$ （20 ${ \mathrm { d s } } : D = [ - 2 , 4 ] .$ （20
+
+$$
+8 ) f ( x ) = \left\{ \begin{array} { l l } { { 0 } } & { { \tt n \tilde { e u } - 3 < x \leq 2 } } \\ { { x } } & { { \tt n \tilde { e u } 2 < x < 3 . } } \end{array} \right. \tt T r \tt d \vec { o } \operatorname { t i n h } \ t \partial / \log \ S = \sum _ { n = 1 } ^ { \infty } \frac { 1 } { ( 2 n - 1 }
+$$
+
+$$
+\frac { \ d H _ { 3 } } { \ d t } - \frac { \ d H _ { 6 } } { \ d \pi ^ { 2 } } \sum _ { n = 1 } ^ { \infty } \frac { \ d H _ { 1 } } { ( 2 n - 1 ) ^ { 2 } } \cos \frac { ( 2 n - 1 ) \pi x } { \ d t } - \frac { \ d H _ { 3 } } { \ d t } \sum _ { n = 1 } ^ { \infty } \frac { ( - 1 ) ^ { n } } { \ d t } \sin \frac { n \pi x } { \ d t } , S = \frac { \pi ^ { 2 } } { 8 } , \ ( x = 0 ) .
+$$
+
+$$
+9 ) f ( x ) = \left\{ { \begin{array} { l l } { 0 } & { { \mathrm { n } } { \tilde { \mathsf { e } } } { \mathsf { u } } { \mathrm { ~ } } { \frac { \pi } { 2 } } \leq | x | \leq \pi } \\ { \cos x } & { { \mathrm { n } } { \tilde { \mathsf { e } } } { \mathsf { u } } | x | < { \frac { \pi } { 2 } } . } \end{array} } \right.
+$$
+
+tren $[ - \pi , \pi ]$ ：$\mathrm { d } \mathrm { s } : \frac { \mathrm { 1 } } { \pi } + \frac { \mathrm { 1 } } { 2 } \sin x - \sum _ { n = 1 } ^ { \infty } \frac { \mathrm { 2 } } { \pi ( 4 n ^ { 2 } - 1 ) } \cos 2 n x$
+
+$$
+1 0 ) f ( x ) = \left\{ \begin{array} { l l } { x } \\ { 1 } \\ { 3 } \end{array} \right.
+$$
+
+theo các ham cosin.
+
+$$
+\begin{array} { r } { \mathtt { d s } : \frac { 2 } { 3 } + \frac { 3 } { \pi ^ { 2 } } \displaystyle \sum _ { n = 1 } ^ { \infty } \frac { \cos \frac { 2 n \pi } { 3 } - 1 } { n ^ { 2 } } \cos \frac { 2 n \pi x } { 3 } . } \end{array}
+$$

@@ -1,11 +1,52 @@
 import fitz 
 import os 
-from .marker_service import MarkerService
+import re 
+from .mineru_service import MinerU
 
 class DataReader:
     def __init__(self):
-        self.marker_svc = MarkerService()
+        self.mineru_svc = MinerU()
         self.math_heavy_subjects = ["giai_tich_1", "dai_so", "xac_suat_thong_ke"]
+    
+    def _format_markdown(self, text: str) -> str:
+        """
+        Regex nâng cao: Khớp chính xác định dạng giáo trình Triết học PTIT
+        """
+        # 1. Cấp 1: I. CHƯƠNG 1 hoặc CHƯƠNG 1 (Cho phép có khoảng trắng hoặc ký tự La Mã ở đầu)
+        text = re.sub(r'^\s*([IVX\.]*\s*CHƯƠNG\s+[IVX\d]+.*)', r'# \1', text, flags=re.IGNORECASE | re.MULTILINE)
+        
+        # 2. Cấp 2: 1. TRIẾT HỌC... (Các mục 1 chữ số)
+        text = re.sub(r'^\s*(\d+\.\s+[A-ZĐỨÁÀẢÃẠÉÈẺẼẸÍÌỈĨỊÓÒỎÕỌÔỐỒỔỖỘƠỚỜỞỠỢÚÙỦŨỤƯỨỪỬỮỰ].*)', r'## \1', text, flags=re.MULTILINE)
+        
+        # 3. Cấp 3: 1.1. Khái lược... (Các mục 2 chữ số)
+        text = re.sub(r'^\s*(\d+\.\d+\.\s+.*)', r'### \1', text, flags=re.MULTILINE)
+        
+        # 4. Cấp 4: 1.1.1. Nguồn gốc... (Các mục 3 chữ số)
+        text = re.sub(r'^\s*(\d+\.\d+\.\d+\.\s+.*)', r'#### \1', text, flags=re.MULTILINE)
+        
+        # 5. Cấp 5: a) hoặc a. (Các điểm nhỏ)
+        text = re.sub(r'^\s*([a-z][\.\)]\s+.*)', r'##### \1', text, flags=re.MULTILINE)
+        
+        return text
+    
+    def _normalize_mineru_output(self, text: str, file_name: str) -> str:
+        """
+        DỌN DẸP KẾT QUẢ MINERU:
+        - Chỉ đảm bảo thẻ CHƯƠNG nằm đúng cấp 1 (#) để script auto_split cắt được file.
+        - Tuyệt đối KHÔNG ép thẻ Bài/Mục/Chỉ mục bằng Regex để tránh bắt nhầm câu văn bài tập.
+        """
+        # 1. Nắn "CHƯƠNG" về Cấp 1 (#)
+        text = re.sub(r'^#*\s*(CHƯƠNG\s+\d+.*)', r'# \1', text, flags=re.IGNORECASE | re.MULTILINE)
+        
+        # Đảm bảo luôn có tiêu đề Chương ở đầu để không bị lạc dữ liệu
+        if not re.search(r'^#\s+CHƯƠNG', text, flags=re.IGNORECASE | re.MULTILINE):
+            chuong_title = file_name.replace('.pdf', '').replace('.txt', '').replace('_', ' ').upper()
+            text = f"# {chuong_title}\n\n{text}"
+
+        # 2. Dọn dẹp khoảng trắng thừa (MinerU thỉnh thoảng sinh nhiều dòng trống)
+        text = re.sub(r'\n{3,}', '\n\n', text).strip()  
+
+        return text
 
     def extract_folder(self, folder_path, subject):
         """
@@ -41,22 +82,28 @@ class DataReader:
 
     def extract_file(self, pdf_path, subject):
         """
-        Trích xuất văn bản thuần tuý từ pdf
+        Hàm điều phối trích xuất chính.
         """
-        # 1. Nếu là môn chứa toán học -> chuyển sang Marker Service (Cloud)
+        # --- FIX: Khai báo file_name ở đây ---
+        file_name = os.path.basename(pdf_path)
+
         if subject in self.math_heavy_subjects:
-            print(f"Môn '{subject}'. Giao file cho MarkerService xử lý...")
-            return self.marker_svc.process(pdf_path)
-        
-        # 2. Nếu là môn chữ (Triết học, Lịch sử...) -> Tự đọc bằng PyMuPDF
+            raw_text = self.mineru_svc.process(pdf_path)
+            if raw_text.startswith("LỖI"):
+                return raw_text            
+            clean_text = self._normalize_mineru_output(raw_text, file_name)
+            return clean_text
         else:
+            # Môn chữ (Triết): Xử lý tại chỗ bằng PyMuPDF
             try:
                 doc = fitz.open(pdf_path)
                 text = ""
                 for page in doc:
                     text += page.get_text()
                 doc.close()
-                return text
+                formatted_text = self._format_markdown(text)
+                return formatted_text
+                
             except Exception as e:
                 return f"Lỗi PyMuPDF cục bộ: {str(e)}"
 

@@ -1,0 +1,1742 @@
+# CHUONG 3. PHEP TINH TICH PHAN
+
+# 3.1. Tich phan xác dinh
+
+# 3.1.1. Dinh nghia
+
+Cho ham so $f ( x )$ xác dinh tren $[ a , b ]$ ： $+ { \mathrm { P h e p } }$ chia $P$ doan $[ a , b ]$ (hay con goi la phan hogch) bói $n$ diem
+
+$$
+x _ { 0 } = a < x _ { 1 } < \ldots < x _ { n } = b .
+$$
+
+Dat $\Delta _ { x _ { i } } = x _ { i } - x _ { i - 1 } \ \forall i = 1 , 2 , . . . , n , \Delta _ { P } = \operatorname* { m a x } \{ \Delta _ { x _ { 1 } } , \Delta _ { x _ { 2 } } , . . . , \Delta _ { x _ { n } } \}$ (duoc goi lado dai cua phan hoach $P$ ）
+
+$+ \mathrm { C h o n ~ m } \hat { \mathrm { g t ~ d i } } \ddot { \ell } \mathrm { m } \ \xi _ { i } \in [ x _ { i - 1 } , x _ { i } ] \forall i = 1 , 2 , . . . , n .$ Khi d6
+
+$$
+\sigma _ { n } = \sum _ { k = 1 } ^ { n } f ( \xi _ { k } ) \Delta _ { x _ { i } }
+$$
+
+duoc goi la mot tong tich phan (hay con goi la t6ng Riemann) cua $f ( x )$ tren $[ a , b ]$ ： Xét gioi han
+
+$$
+\quad I = \operatorname* { l i m } _ { \Delta _ { P } \to 0 } \sigma _ { n } .
+$$
+
+Néu $I$ tón tai huu han, khong phu thu@c vao phép chia $P$ va phép chon các diém $\xi _ { i } \ i = 1 , 2 , . . . , n .$ ,thi $\boldsymbol { \mathsf { I } }$ duoc goi la tich phan xac dinh cua $f ( x )$ tren $[ a , b ]$ va duoc b ky hieu $\textstyle \int f ( x ) d x$ . Khi dó ham só $f ( x )$ duqc goi la kha tich tren $[ a , b ]$ ：
+
+Trong truong hop dac biet, phep chia $P$ doan $[ 0 , 1 ]$ boi $n$ diém cach deu nhau
+
+$$
+0 < { \frac { 1 } { n } } < { \frac { 2 } { n } } < \ldots < { \frac { n } { n } } = 1 .
+$$
+
+V6i $f ( x )$ kha tich tren $[ 0 , 1 ]$ ,ta c6
+
+$$
+\operatorname* { l i m } _ { n \to \infty } { \frac { 1 } { n } } { \Big ( } f ( { \frac { 1 } { n } } ) + f ( { \frac { 2 } { n } } ) + \ldots + f ( { \frac { n } { n } } ) { \Big ) } = \int _ { 0 } ^ { 1 } f ( x ) d x .
+$$
+
+Y nghia: Dung tich phan dé tinh gioi han.
+
+Vi du 3.1. Gid sut $\begin{array} { r } { I = \int x ^ { 2 } d x } \end{array}$ t6n tai. Dung dinh nghia cua tich phan de tinh I.
+
+Giai Chia doan $[ - 1 , 2 ]$ thanh $n$ phän bang nhau va chon $\xi _ { i }$ la mut ben trai cua （20 $[ x _ { i - 1 } , x _ { i } ]$ （20
+
+$i = 1 , 2 , . . . , n$ , ta nhan duoc
+
+$$
+\displaystyle \sigma _ { P } = \frac { 3 } { n } \sum _ { k = 1 } ^ { n } \Big ( - 1 + \frac { 3 ( k - 1 ) } { n } \Big ) ^ { 2 } = \frac { 3 } { n } \sum _ { k = 1 } ^ { n } \Big ( 1 - \frac { 6 ( k - 1 ) } { n } + \frac { 9 ( k - 1 ) ^ { 2 } } { n ^ { 2 } }
+$$
+
+Vay
+
+$$
+I = \int _ { - 1 } ^ { 2 } x ^ { 2 } d x = \operatorname * { l i m } _ { n  \infty } \sigma _ { n } = 3 .
+$$
+
+# 3.1.2. $\check { \mathbf { Y } }$ nghia hinh hoc
+
+Neu $f ( x ) \geq 0 \forall x \in [ a , b ]$ ，thi $\sigma _ { n }$ la tong dien tich các hinh chur nhat c6 kich
+
+![](images/c1500b0561e3d33f9e3a123c2893aafccf0b5f07a6db484b38691ee184228c56.jpg)  
+Hinh 1: Bieu dien hinh hoc cüa tich phan
+
+thuóc la $\Delta _ { x _ { i } }$ va $f ( \xi _ { i } ) \ \forall i = { 1 , 2 , . . . , n }$ . Khi $\Delta _ { P }$ du nhó, $\sigma _ { n }$ xap xi voi dien tich hinh thang cong $A B b a$ tao boi cac duong $x = a , x = b , O x$ va $y = f ( x )$
+
+# 3.1.3. Tóng Darboux tren va duoi
+
+Gia sur $f ( x )$ Xác dinh va bi chan tren $[ a , b ]$ . Khi d6, ton tai
+
+$$
+m _ { i } = \operatorname * { i n f } _ { x \in [ x _ { i - 1 } , x _ { i } ] } f ( x ) , \quad M _ { i } = \operatorname * { s u p } _ { x \in [ x _ { i - 1 } , x _ { i } ] } f ( x ) \forall i = 1 , 2 , . . . , n .
+$$
+
+Ta goi
+
+$$
+s _ { P } = \sum _ { k = 1 } ^ { n } m _ { i } \Delta _ { x _ { i } }
+$$
+
+la t6ng Darboux duoi cua ham $f ( x )$ tren $[ a , b ]$ va
+
+$$
+S _ { P } = \sum _ { k = 1 } ^ { n } M _ { i } \Delta _ { x _ { i } }
+$$
+
+la t6ng Darboux trén cua ham $f ( x )$ tren $[ a , b ]$ ：
+
+Cho hai phan hoach $P _ { 1 }$ va $P _ { 2 }$ . Khi d6 $P _ { 1 } \subseteq P _ { 2 }$ , néu moi diem chia cua $P _ { 1 }$ deu thu@c tap các diem chia cua $P _ { 2 }$ .Dat
+
+$$
+{ \cal I } ^ { * } = \operatorname * { i n f } _ { { \cal P } } \{ { \cal S } _ { \cal P } \} , { \cal I } _ { * } = \operatorname * { s u p } _ { { \cal P } } \{ { s _ { \cal P } } \} .
+$$
+
+Dinh ly 3.2. i) $s _ { P } \leq \sigma _ { P } \leq S _ { P } \forall P .$ ii $P _ { 1 } \subseteq P _ { 2 } \Rightarrow s _ { P _ { 1 } } \leq s _ { P _ { 2 } }$ ,SP ≥ SP2.ii) $s _ { P _ { 1 } } \leq S _ { P _ { 2 } } \forall P _ { 1 } , P _ { 2 }$   
+iv $) \ I _ { * } \leq I ^ { * }$ ：
+
+Ching minh i) Tu
+
+$$
+f ( x ) \leq f ( \xi _ { i } ) \leq \operatorname* { s u p } _ { [ x _ { i - 1 } , x _ { i } ] } f ( x ) \Rightarrow m _ { i } \Delta _ { x _ { i } } \leq f ( \xi _ { i } ) \Delta _ { x _ { i } } \leq M _ { i } \Delta _ { x _ { i } } \forall i = 1 , \ M _ { i } \ G _ { i } = \ \frac { 1 } { \ M _ { i } } \Delta _ { x _ { i } } .
+$$
+
+$$
+\Rightarrow \sum _ { i = 1 } ^ { n } m _ { i } \Delta _ { x _ { i } } \leq \sum _ { i = 1 } ^ { n } f ( \xi _ { i } ) \Delta _ { x _ { i } } \leq \sum _ { i = 1 } ^ { n } M _ { i } \Delta _ { x _ { i } } \Rightarrow s _ { P } \leq \sigma _ { P } \leq S _ { P } \forall P .
+$$
+
+ii) Cho $P _ { 1 } \subseteq P _ { 2 }$ , khong mat tinh tong quat, gia sur $P _ { 1 }$ góm cac diém chia
+
+$$
+x _ { 0 } = a < x _ { 1 } < x _ { 2 } < \ldots < x _ { n } = b
+$$
+
+va $P _ { 2 }$ góm các diém chia
+
+$$
+x _ { 0 } = a < x _ { 1 } < x _ { 2 } < \ldots < x _ { k - 1 } < x ^ { * } < x _ { k } < \ldots < x _ { n } = b .
+$$
+
+Dat
+
+$$
+{ \bf \Phi } _ { k 1 } = x ^ { * } - x _ { k - 1 } , \Delta _ { x _ { k 2 } } = x _ { k } - x ^ { * } , m _ { k 1 } ^ { * } = \operatorname* { i n f } _ { [ x _ { k - 1 } , x ^ { * } ] } f ( x ) , m _ { k 2 } ^ { * } = \operatorname* { i n f } _ { [ x ^ { * } , x _ { k } ] } f ( x ) = 0 .
+$$
+
+Tu $[ x _ { k - 1 } , x _ { k } ] = [ x _ { k - 1 } , x ^ { * } ] \cup [ x ^ { * } , x _ { k } ]$ ,ta co
+
+$$
+\begin{array} { r l } { m _ { k } . \Delta _ { x _ { k } } = \displaystyle \operatorname* { i n f } _ { [ x _ { k - 1 } , x _ { k } ] } f ( x ) . \Delta _ { x _ { k } } } & { } \\ { = \displaystyle \operatorname* { i n f } _ { [ x _ { k - 1 } , x _ { k } ] } f ( x ) . \Delta _ { x _ { k 1 } } + \displaystyle \operatorname* { i n f } _ { [ x _ { k - 1 } , x _ { k } ] } f ( x ) . \Delta _ { x _ { k 2 } } } & { } \\ { \leq \displaystyle \operatorname* { i n f } _ { [ x _ { k - 1 } , x ^ { * } ] } f ( x ) . \Delta _ { x _ { k 1 } } + \displaystyle \operatorname* { i n f } _ { [ x ^ { * } , x _ { k } ] } f ( x ) . \Delta _ { x _ { k 2 } } } & { } \\ { = m _ { k 1 } ^ { * } . \Delta _ { x _ { k 1 } } + m _ { k 2 } ^ { * } . \Delta _ { x _ { k 2 } } . } & { } \end{array}
+$$
+
+Khi d6
+
+$$
+\begin{array} { r l } { \rho _ { R 1 } = } & { \displaystyle \sum _ { j = 1 } ^ { n } m _ { 2 } \Delta \alpha _ { 2 , 1 } } \\ & { \mathrm { ~ } } \\ { \displaystyle \sum _ { j = 1 } ^ { n } m _ { 3 } \Delta \alpha _ { 3 , 1 } \quad \mathrm { m a d } _ { 3 , \infty } } \\ & { \mathrm { ~ } } \\ { \displaystyle  \rho _ { 1 } = 1  } \\ { \displaystyle  \rho _ { 2 } \neq k  } \\ { \mathrm { ~ } } \\ { \leq } & { \displaystyle \sum _ { j = 1 } ^ { n } \quad \mathrm { m a x } _ { 1 } + \mathrm { m } _ { k + 1 } ^ { \alpha } \Delta _ { \alpha _ { 3 } , 1 } - \mathrm { m } _ { k + 1 } ^ { \alpha } \Delta _ { \alpha _ { 3 } , 1 }  } \\ { \displaystyle  j = 1  } \\ { \displaystyle  j \neq k  } \\ { - s _ { 0 } , } \end{array}
+$$
+
+Bang cach chmg minh tuong tur,ta cuing c6 $S _ { P _ { 1 } } \geq S _ { P _ { 2 } }$
+
+iii)Dat $P = P _ { 1 } \cup P _ { 2 }$ （ $P$ gom cac diem chia cua $P _ { 1 }$ va $P _ { 2 }$ ,suy ra $P _ { 1 } \subseteq P , P _ { 2 } \subseteq P$ ： Theo i) va ii), ta có
+
+$$
+\left\{ \begin{array} { l l } { s _ { P _ { 1 } } \leq s _ { P } } \\ { s _ { P } \leq S _ { P } } \\ { S _ { P } \leq S _ { P _ { 2 } } } \end{array} \right. \Rightarrow s _ { P _ { 1 } } \leq S _ { P _ { 2 } } \forall P _ { 1 } , P _ { 2 } .
+$$
+
+# 3.1.4. Cac dieu kien kha tich
+
+Dinh ly 3.3. Cho ham so $f ( x )$ xac dinh trén $[ a , b ]$ . Khi dó cac ménh de sau tuong duong.
+
+i) $f ( x )$ kha tich trén $[ a , b ]$ ：ii） $\operatorname * { l i m } _ { \Delta _ { P }  0 } ( S _ { P } - s _ { P } ) = 0 .$ （204ii) $I ^ { * } = I _ { * }$ ：
+
+Ching minhi) $\Rightarrow i i$ ）Gia sur $f ( x )$ khä tich tren $[ a , b ]$ . Hay gioi han $I$ sau ton tai huu han, khong phu thuQc vao phép chia $P$ va phép chon $\xi _ { k } \in [ x _ { k - 1 } , x _ { k } ]$ （2
+
+$$
+I = \operatorname * { l i m } _ { \Delta _ { P } \to 0 } \sigma _ { P } .
+$$
+
+Theo dinh nghia,
+
+$$
+) , \exists \delta > 0 , \forall P : 0 < \Delta _ { P } < \delta \Rightarrow | \sigma _ { P } - I | < \frac { \epsilon } { 4 } \Rightarrow I - \frac { \epsilon } { 4 } < \sigma _ { P } < I + \frac { \epsilon } { 4 }
+$$
+
+Mat khac, $s _ { P } = \sum _ { k = 1 } ^ { n } m _ { k } \Delta _ { x _ { k } } , S _ { P } = \sum _ { k = 1 } ^ { n } M _ { k } \Delta _ { x _ { k } }$ , theo dinh nghia cua inf, sup va dinh ly 3.2, ta có
+
+$$
+\left\{ \begin{array} { l } { { s _ { P } + \frac { \epsilon } { 4 } > \sigma _ { P } } } \\ { { S _ { P } - \frac { \epsilon } { 4 } < \sigma _ { P } . } } \end{array} \right. \Rightarrow I - \frac { \epsilon } { 2 } < \sigma _ { P } - \frac { \epsilon } { 4 } < s _ { P } \leq S _ { P } \leq \sigma _ { P } + \frac { \epsilon } { 4 } < I +
+$$
+
+Vay
+
+$$
+| < \frac { \epsilon } { 2 } , | S _ { P } - I | < \frac { \epsilon } { 2 } \Rightarrow | S _ { P } - s _ { P } | \leq | s _ { P } - I | + | S _ { P } - I | < \epsilon \Rightarrow \operatorname* { l i m } _ { \Delta _ { P }  0 } ( S _ { P } - I ) < \epsilon ,
+$$
+
+$i i ) \Rightarrow i { \dot { \cal { i } } }$ ） Theo dinhly 3.2, day $\left( s _ { P } \right)$ don dieu tang va bi chan trén va day $( S _ { P } )$ don dieu giam va bi chan duoi, suy ra ton tai huu han gioi han $\operatorname * { l i m } _ { \Delta _ { P }  0 } s _ { P } \mathrm { \bf ~ v } \mathrm { \bf \dot { a } } \operatorname * { l i m } _ { \Delta _ { P }  0 } S _ { P } .$ （20 Theo tinh chat cua day don dieu trong chuong 2, ta c6
+
+$$
+\operatorname* { l i m } _ { \Delta _ { P } \to 0 } s _ { P } = \operatorname* { i n f } _ { P } s _ { P } = I _ { * } , \operatorname* { l i m } _ { \Delta _ { P } \to 0 } S _ { P } = \operatorname* { s u p } _ { P } S _ { P } = I ^ { * } .
+$$
+
+Tur gia thiet $\operatorname* { l i m } _ { \Delta _ { P }  0 } ( S _ { P } - s _ { p } ) = 0 \Rightarrow I ^ { * } = I _ { * }$ Theo dinh ly 3.2,
+
+$$
+s _ { p } \leq \sigma _ { P } \leq S _ { P } \Rightarrow \operatorname* { l i m } _ { \Delta _ { P }  0 } \sigma _ { P } = I ^ { * } .
+$$
+
+$i i ) \Leftrightarrow i i i$ ）Hien nhien.
+
+Dinh ly 3.4. Néu $f ( x )$ lien tuc tren $[ a , b ]$ ,thi $f ( x )$ kha tich tren $[ a , b ]$ ：
+
+Ching minh Gia thiet cho $f ( x )$ lien tuc tren $[ a , b ]$ ,nen $f ( x )$ lien tuc tai $\bar { x } _ { k } \in [ a , b ]$ （2 bat ky. Hay
+
+$$
+0 , \exists \delta > 0 \forall x \in [ a , b ] : 0 < | x - \bar { x } _ { k } | < \delta \Rightarrow | f ( x ) - f ( \bar { x } _ { k } ) | < \frac { \epsilon } { b - a } .
+$$
+
+Gia sur $P$ la mot phan hoach bat ky sao cho $\Delta _ { P } < \delta$ Do $f ( x )$ lien tuc tren （204 $[ x _ { k - 1 } , x _ { k } ]$ ,nen
+
+$$
+\operatorname* { i n f } _ { [ x _ { k - 1 } , x _ { k } ] } f ( x ) = \operatorname* { m i n } _ { [ x _ { k - 1 } , x _ { k } ] } f ( x ) = f ( { \bar { x } } _ { k } )
+$$
+
+va
+
+$$
+\operatorname* { s u p } _ { [ x _ { k - 1 } , x _ { k } ] } f ( x ) = \operatorname* { m a x } _ { [ x _ { k - 1 } , x _ { k } ] } f ( x ) = f ( { \hat { x } } _ { k } ) .
+$$
+
+Tu
+
+$$
+< \delta \Rightarrow | \hat { x } _ { k } - \bar { x } _ { k } | < \delta \Rightarrow | f ( \hat { x } _ { k } ) - f ( \bar { x } _ { k } ) | < \frac { \epsilon } { b - a } \Rightarrow M _ { k } - m _ { k } < \frac { \epsilon } { b - m _ { k } }
+$$
+
+Do d6
+
+$$
+( M _ { k } - m _ { k } ) \Delta _ { x _ { k } } < \sum _ { k = 1 } ^ { n } \frac { \epsilon } { b - a } \Delta _ { x _ { k } } = \epsilon \Rightarrow | S _ { P } - s _ { P } | < \epsilon \Rightarrow \operatorname * { l i m } _ { \Delta _ { P }  0 } ( S _ { P } - s _ { P } ) = | S _ { P } - s | ,
+$$
+
+Theo dinh ly 3.3, ta c6 $f ( x )$ khä tich tren $[ a , b ]$ ：
+
+Dinh ly 3.5. Neu $f ( x )$ bi chan va có hitu han diem gian doan trén $[ a , b ]$ ,thi $f ( x )$ kha tich trén $[ a , b ]$ ：
+
+Chitng minh Khong mat tinh tóng quat, ta gia str rang $f ( x )$ c6 dung mot diem gian doan $x _ { 0 } \in [ a , b ]$ .Dat
+
+$$
+m = \operatorname* { m i n } _ { [ a , b ] } f ( x ) , M = \operatorname* { m a x } _ { [ a , b ] } f ( x ) , \Delta _ { x _ { 0 } } = [ x _ { 0 } - \epsilon ^ { 2 } , x _ { 0 } + \epsilon ^ { 2 } ] .
+$$
+
+Vi xo la diem gian doan,suy ra m < M. Voi moi O < ∈< s(M-m)， chon $0 < \delta < \epsilon .$ Ta c6 $f ( x )$ kha tich tren $[ a , x _ { 0 } - \epsilon ^ { 2 } ]$ va $[ x _ { 0 } + \epsilon ^ { 2 } , b ]$ .Goi $P _ { 1 }$ la phan hoach tren $[ a , x _ { 0 } - \epsilon ^ { 2 } ]$ va $P _ { 2 }$ la phan hoach $\mathrm { t r @ [ \mathcal { X } 0 + \epsilon ^ { 2 } ,  } b ]$ sao cho $\Delta _ { P _ { 1 } } < \delta , \Delta _ { P _ { 2 } } < \delta$ . Ta deu c6
+
+$$
+\operatorname* { l i m } _ { \Delta _ { P _ { j } } \to 0 } ( M _ { P _ { j } } - m _ { P _ { j } } ) = 0 \Rightarrow \sum _ { k = 1 } ^ { n } \left( M _ { k } ( P _ { j } ) - m _ { k } ( P _ { j } ) \right) < \frac { \epsilon } { 2 } \forall j = 1 , 2 .
+$$
+
+xét phan hoach $P$ bat ky cua $[ a , b ]$ sao cho $\Delta _ { P } < \delta$ ta c6
+
+$$
+\sum _ { k = 1 } ^ { n } ( M _ { k } - m _ { k } ) \Delta _ { x _ { k } } = \sum _ { \Delta _ { x _ { k } } \cap \Delta _ { x _ { k } } = \emptyset } ( M _ { k } - m _ { k } ) \Delta _ { x _ { k } } + \sum _ { \Delta _ { x _ { k } } \cap \Delta _ { x _ { k } } \neq \emptyset } ( M _ { k } - m _ { k } ) \Delta _ { x _ { k } } .
+$$
+
+Theo (3.1) ta có
+
+$$
+\sum _ { \Delta _ { x _ { k } } \cap \Delta _ { x _ { k } } = \emptyset } ( M _ { k } - m _ { k } ) \Delta _ { x _ { k } } < \frac { \epsilon } { 2 } .
+$$
+
+Mat khac, do $M _ { k } - m _ { k } < M - m$ ,nén
+
+$$
+\begin{array} { r l } { \displaystyle \sum _ { \Delta _ { x _ { k } } \cap \Delta _ { x _ { k } } \neq \emptyset } ( M _ { k } - m _ { k } ) \Delta _ { x _ { k } } \leq ( M - m ) \sum _ { \Delta _ { x _ { k } } \cap \Delta _ { x _ { k } } \neq \emptyset } \Delta _ { x _ { k } } } & { } \\ { \leq ( M - m ) ( 2 \epsilon ^ { 2 } + 2 \delta ) } & { } \\ { \leq ( M - m ) 4 \epsilon ^ { 2 } } & { } \\ { < ( M - m ) 4 \epsilon \frac { 1 } { 8 ( M - m ) } } & { } \\ { = \frac { \epsilon } { 2 } . } \end{array}
+$$
+
+Vay $\begin{array} { r } { \sum _ { k = 1 } ^ { n } ( M _ { k } - m _ { k } ) \Delta _ { x _ { k } } = 0 . } \end{array}$ Theo dinh ly 3.3, $f ( x )$ kha tich tren $[ a , b ]$
+
+Dinh ly 3.6. Néu ham só $f ( x )$ don dieu va bi chan trén $[ a , b ]$ ,thi $f ( x )$ kha tich tren $[ a , b ]$ ：
+
+Ching minh Gia sur $f ( x )$ don dieu tang tren $[ a , b ]$ . Khi d6
+
+$$
+m _ { k } = \operatorname* { i n f } _ { [ x _ { k - 1 } , x _ { k } ] } f ( x ) = f ( x _ { k - 1 } ) , M _ { k } = \operatorname* { s u p } _ { [ x _ { k - 1 } , x _ { k } ] } f ( x ) = f ( x _ { k } ) \Rightarrow M _ { k } - r
+$$
+
+Voi moi $\epsilon > 0$ chon
+
+$$
+\delta = \frac { \epsilon } { f ( b ) - f ( a ) } .
+$$
+
+Khi d6 moi phan hoach $P \operatorname* { m i n } \left| P \right| < \delta$ déu c6
+
+$$
+\sum _ { k = 1 } ^ { n } ( M _ { k } - m _ { k } ) \Delta _ { x _ { k } } < \delta \sum _ { k = 1 } ^ { n } \left( f ( x _ { k } ) - f ( x _ { k - 1 } ) \right) = \delta { \bigl ( } f ( b ) - f ( a ) { \bigr ) } =
+$$
+
+Vay ham só $f ( x )$ kha tich tren $[ a , b ]$ ：
+
+# 3.2. Tinh chat
+
+Cho $f ( x ) , g ( x )$ la hai ham só khä tich tren $[ a , b ]$ . Khi d6
+
+$$
+\begin{array}{c} \begin{array} { l } { { \displaystyle { \begin{array} { l } { { \dot { \gamma } } } \\ { { \dot { \alpha } } } \end{array} } \left( f ( x ) + g ( x ) \right) d x = \int _ { a } ^ { b } f ( x ) d x + \int _ { a } ^ { b } g ( x ) d x . } } \\ { { \displaystyle { \begin{array} { l } { { \dot { \alpha } } } \\ { { \dot { \beta } } } \\ { { \dot { \alpha } } } \end{array} } } \\ { { \begin{array} { l } { { \dot { \beta } } } \\ { { \dot { \alpha } } } \end{array} } \left( f ( x ) - g ( x ) \right) d x = \int _ { a } ^ { b } f ( x ) d x - \int _ { a } ^ { b } g ( x ) d x . } \\ { { \dot { \beta } } } \\ { { \dot { \alpha } } } \end{array} } \\ { { \begin{array} { l } { { \dot { \beta } } } \\ { { \dot { \alpha } } } \end{array} } \left( k f ( x ) \right) d x = k \int _ { a } ^ { b } f ( x ) d x \mathrm { v } \mathrm { { \widehat { \ o i } } } k = c o n s t . } \\ { { \boldsymbol { \alpha } } } \\ { { \begin{array} { l } { { \dot { \beta } } } \\ { { \mathrm {  { \texttt { \texttt { a } } } } \not \mathrm { { \\\ { \partial } } } \not \mathrm { { \\\ { \partial } } } \not \mathrm { { \partial } } \tilde { \mathrm { { e } } } ( x ) \leq g ( x ) \forall x \in [ a , b ] , \mathrm { t h i } \int _ { a } ^ { b } f ( x ) d x \leq \int _ { a } ^ { b } g ( x ) d x . } } \end{array} } } \end{array}
+$$
+
+$$
+{ \begin{array} { r l } & { { \mathrm { \it ~ b } } } \\ & { + \int \int f ( x ) d x = { \frac { c } { a } } f ( x ) d x + \int _ { c } ^ { b } f ( x ) d x \ \forall c \in ( a , b ) . } \\ & { { \mathrm { \it ~ b } } } \\ & { + \int f ( x ) d x = - \int f ( x ) d x . } \\ & { { \mathrm { \it ~ a } } } \\ & { + \left| \int f ( x ) d x \right| \leq \int \left| f ( x ) \right| d x . } \\ & { { \mathrm { \it ~ b } } } \\ & { + \int \int f ( x ) d x = { \frac { b } { a } } f ( t ) d t \ { \mathrm { \mathrm { ( t i c h ~ p h a n ~ k h o n g ~ p h u ~ t h u g } } } } \end{array} }
+$$
+
+Dinh ly 3.7. (Dinh ly gia tri trung binh)
+
+Neu $f ( x )$ kha tich trén $[ a , b ]$ vd $m \ \leq \ f ( x ) \ \leq \ M \forall x \in \ [ a , b ]$ , thi ton tai so $\mu \in [ m , M ]$ sao cho
+
+$$
+\mu = { \frac { 1 } { b - a } } \intop _ { a } ^ { b } f ( x ) d x .
+$$
+
+Ching minh Ta c6
+
+$$
+\begin{array} { r } { \forall x \in [ a , b ] : m \leq f ( x ) \leq M \Rightarrow m ( b - a ) \leq \displaystyle \int _ { a } ^ { b } f ( x ) d x \leq M ( b - a ) . } \end{array}
+$$
+
+Hay
+
+Dat $\begin{array} { r } { \mu = \frac { 1 } { b - a } \int _ { a } ^ { b } f ( x ) d x } \end{array}$ ta c6 so $\mu$ can tim.
+
+Vi du 3.8. (Bat dang thitc Cauchy-Schwarz) Neu $f ( x ) , g ( x )$ lien tuc tren $[ a , b ]$ ,thi
+
+$$
+{ \biggl ( } \int _ { a } ^ { b } f ( x ) g ( x ) d x { \biggr ) } ^ { 2 } \leq \int _ { a } ^ { b } f ^ { 2 } ( x ) d x . \int _ { a } ^ { b } g ^ { 2 } ( x ) d x .
+$$
+
+Ching minh Ta có $\overset { b } { \underset { a } { \int } } \left( y f ( x ) + g ( x ) \right) ^ { 2 } d x \geq 0 \forall y \in \mathbb { R } . \mathrm { H }$ ay
+
+$$
+A y ^ { 2 } + 2 B y + C \geq 0 \forall y ,
+$$
+
+voi
+
+$$
+A = \int _ { a } ^ { b } f ^ { 2 } ( x ) d x , B = \int _ { a } ^ { b } f ( x ) g ( x ) d x , C = \int _ { a } ^ { b } g ^ { 2 } ( x ) d x .
+$$
+
+D0 $\begin{array} { r } { A = \int f ^ { 2 } ( x ) d x \geq 0 } \end{array}$ , nen ta xét hai truong hop: a
+
+Truong hop 1: Neu $A = 0$ ,thi $B = 0$ . That vay
+
+- Neu $B > 0$ ,thi $2 B y + C \ge 0 \Rightarrow 0 \le \operatorname * { l i m } _ { \prime  - \infty } ( 2 B y + C ) = - \infty$ , mau thuan. y↓18 - Neu $B < 0$ ,thi $2 B y + C \ge 0 \Rightarrow 0 \le \operatorname * { l i m } _ { y  + \infty } ( 2 B y + C ) = - \infty$ , mau thuan.
+
+Vay bat dang thurc tren luon dung.
+
+Truong hop 2: Néu $A > 0$ , thi theo dinh ly dau tam thuc bac hai, ta có $\Delta ^ { \prime } =$ $B ^ { 2 } - A C \leq 0$ ， hay
+
+$$
+{ \biggl ( } \int _ { a } ^ { b } f ( x ) g ( x ) d x { \biggr ) } ^ { 2 } \leq \int _ { a } ^ { b } f ^ { 2 } ( x ) d x . \int _ { a } ^ { b } g ^ { 2 } ( x ) d x .
+$$
+
+# 3.3. Moi quan he giua nguyen ham va tich phan xac dinh
+
+Ta nhac lai mot so nét co ban cua nguyen ham.
+
+# 3.3.1. Nguyen ham
+
+- Ham so $F ( x )$ duoc goi la mot nguyen ham cua $f ( x )$ ,neu $F ^ { \prime } ( x ) = f ( x )$
+
+Nhan xét $3 . 9 . \ + \ N \hat { e u } \ F ( x ) \ l \dot { a }$ mot nguyén ham cua $f ( x )$ ，thi $F ( x ) + C$ voi $C = c o n s t$ cung la nguyén ham cua $f ( x )$ ：   
+$+ \ N \hat { e u } \ F ( x ) \ \nu \dot { a } \ G ( x )$ la hai nguyén ham cua $f ( x )$ , thi ton tai $C = c o n s t$ sao cho $G ( x ) = F ( x ) + C .$ （20
+
+- Neu $F ( x )$ la mot nguyen ham cua $f ( x )$ ,thi $F ( x ) + C$ $C = c o n s t$ duoc goi la mQt ho nguyén ham cua $f ( x )$ duoc ky hieu boi $\textstyle \int f ( x ) d x$ (con goi la tich phan khong xác dinh). Hay
+
+$$
+\int f ( x ) d x = F ( x ) + C .
+$$
+
+Chu y rang: Vi phan cua ham $f ( x )$ la $d f ( x ) = f ^ { \prime } ( x ) d x$ ：
+
+Cac cong thic co ban cua nguyen ham:
+
+$$
+\begin{array} { r l } & { \int \omega ^ { \epsilon } d x = \frac { 1 } { n + 1 } \frac { 1 } { n + 1 } \epsilon ^ { 2 \epsilon + 1 } - C \mathrm { \Delta } w \mathrm { d } \epsilon \varphi - 1 , \mathscr { C } = \mathrm { c o n s t . } } \\ & { \int \frac { 1 } { n } \mathrm { d } x = - \mathrm { h } [ x ] \mathrm { \Delta } [ \mathrm { \Omega } ] \mathrm { \Omega } \mathrm { C } , } \\ & { \int \bar { \omega } ^ { \epsilon } d x = e ^ { - 1 } \cdot C , } \\ & { \int \omega ^ { \epsilon } d x = \frac { 1 } { \mathrm { h } _ { 1 } \alpha _ { k } ^ { \epsilon } } - C \mathrm { \Delta } w \mathrm { d } \mathrm { \Omega } \varphi \mathrm { \Delta } \varphi \varphi \mathrm { _ 0 , } } \\ & { \int \mathrm { d } x \mathrm { i n c } i z e - \mathrm { c o n s t . } + \mathscr { C } , } \\ & { \int \mathrm { d } x \mathrm { e x } d x = \mathrm { i n } x \mathrm { \partial } \mathscr { C } \mathrm { \Delta } \varphi } \\ & { \int \mathrm { d } x \mathrm { i n c } i x \partial \mathscr { C } \mathrm { \Delta } \varphi = - \mathrm { c o n s t . } } \\ & { \int \mathrm { d } x ^ { \omega } \mathrm { e } ^ { - 1 } \mathrm { e } ^ { - 1 } \mathrm { e } ^ { - 1 } \mathrm { e } ^ { - 1 } \mathrm { e } ^ { - 1 } \mathrm { e } ^ { - 1 } } \\ & { \int \mathrm { d } x ^ { \omega } \mathrm { e } ^ { - 1 } \mathrm { e } ^ { - 1 } \mathrm { e } ^ { - 1 } \mathrm { e } ^ { - 1 } \mathrm { e } ^ { - 1 } } \end{array}
+$$$$
+\begin{array} { r l } & { \int _ { 0 } ^ { x } e ^ { - i x } e ^ { - i x } + \mathcal { Q } ^ { \prime } \ d t } \\ & { \int _ { 0 } ^ { x } e ^ { i x } - \mathrm { h } _ { 0 } ^ { - 1 } e ^ { i x } \ d t \mathcal { L } ^ { 2 } \ d t \mathcal { L } ^ { 2 } \ d t \mathcal { L } ^ { 2 } \ d t \mathcal { L } ^ { 2 } \ d t \mathcal { L } ^ { 2 } } \\ & { \int _ { 0 } ^ { x } e ^ { i x } - \mathrm { s i x } _ { 0 } ^ { - 1 } \ d t \mathcal { L } ^ { 2 } \ d t \mathcal { L } ^ { 2 } } \\ & { \int _ { 0 } ^ { x } e ^ { - i x } e ^ { - i x } - \mathrm { s i x } _ { 0 } ^ { - 1 } \ d t \mathcal { L } ^ { 2 } \ d t } \\ & { \int _ { 0 } ^ { x } \frac { 1 } { \mathrm { s i x } _ { 0 } ^ { - 1 } } \ d t \mathcal { L } ^ { 2 } \ d t \mathcal { L } ^ { 2 } \ d t \mathcal { L } ^ { 2 } } \\ & { \int _ { 0 } ^ { x } \frac { 1 } { \mathrm { s i x } _ { 0 } ^ { - 1 } } \ d t \mathcal { L } ^ { 2 } \ d t \mathcal { L } ^ { 2 } \ d t \mathcal { L } ^ { 2 } } \\ & { \int _ { 0 } ^ { x } \frac { 1 } { \mathrm { s i x } _ { 0 } ^ { - 1 } } \ d t \mathcal { L } ^ { 2 } \ d t \mathcal { L } ^ { 2 } \ d t \mathcal { L } ^ { 2 } \ d t } \\ & { \int _ { 0 } ^ { x } \frac { 1 } { \mathrm { s i x } _ { 0 } ^ { - 1 } } \ d t \mathcal { L } ^ { 2 } \ d t \mathcal { L } ^ { 2 } \ d t \mathcal { L } ^ { 2 } \ d t \mathcal { L } ^ { 2 } \ d t } \\ & { \int _ { 0 } ^ { x } \frac { 1 } { \mathrm { s i x } _ { 0 } ^ { - 1 } } \ d t \mathcal { L } ^ { 2 } \ d t \mathcal { L } ^ { 2 } \ d t \mathcal { L } ^ { 2 } \ d t \mathcal { L } ^ { 2 } \ d t } \\ & { \int _ { 0 } ^ { x } \frac { 1 } { \mathrm { s i x } _ { 0 } ^ { - 1 } } \ d t \mathcal { L } ^ { 2 } \ d t \mathcal { L } ^ { 2 } \ d t \mathcal { L } ^ { 2 } \ d t \mathcal { L } ^ { 2 } \ d t \mathcal { L } ^ { 2 } \ d t } \\ &  \int _ { 0 } ^ { x } \frac { 1 } { \mathrm { s i x } _ { 0 } ^ { - 1 } } \ d t \mathcal { L } ^ { 2 } \ d t \mathcal { L } ^ { 2 } \ d t \mathcal { L } ^ { 2 } \ d t \mathcal { L } ^ { 2 } \ d t \mathcal { L } ^ { 2 } \ d t \mathcal { L } ^ { 2 } \ d t \mathcal { L } ^ { 2 } \ d t \mathcal { L } \end{array}
+$$
+
+$$
+\begin{array} { r l } & { \int _ { \Omega } \exp \varepsilon } \\ & { = \int _ { \Omega } \exp \varepsilon \mathrm { d } \varepsilon \times \mathrm { d } \varepsilon \times \mathrm { d } \varepsilon } \\ & { \quad \times \int _ { \Omega } \exp \varepsilon \mathrm { d } \varepsilon \times \mathrm { d } \varepsilon } \\ & { \quad \times \int _ { \Omega } \frac { 1 } { \sqrt { \pi } } \exp \varepsilon \mathrm { d } \varepsilon \times \mathrm { d } \varepsilon } \\ & { \quad \times \int _ { \Omega } \frac { 1 } { \sqrt { \pi } } \exp \varepsilon \mathrm { d } \varepsilon \times \mathrm { d } \varepsilon } \\ & { \quad \times \mathrm { e } ^ { \int _ { \Omega } \varepsilon } \int _ { \Omega } \exp \varepsilon \mathrm { d } \varepsilon \times \mathrm { d } \varepsilon } \\ & { \quad \quad \quad \int _ { \Omega } \frac { 1 } { \sqrt { \pi } \mathrm { d } \varepsilon } \int _ { \Omega } ^ { \varepsilon } \exp \varepsilon \mathrm { d } \varepsilon \times \mathrm { d } \varepsilon } \\ & { \quad \quad \quad \int _ { \Omega } \frac { 1 } { \sqrt { \pi } \mathrm { d } \varepsilon } \int _ { \Omega } ^ { \varepsilon } \exp \varepsilon \mathrm { d } \varepsilon \times \mathrm { d } \varepsilon } \\ & { \quad \quad \quad \int _ { \Omega } \frac { 1 } { \sqrt { \pi } \mathrm { d } \varepsilon } \int _ { \Omega } ^ { \varepsilon } \exp \varepsilon \mathrm { d } \varepsilon \times \mathrm { d } \varepsilon } \\ & { \quad \quad \quad \times \mathrm { e } ^ { \int _ { \Omega } \varepsilon } \int _ { \Omega } ^ { \varepsilon } \exp \varepsilon \mathrm { d } \varepsilon } \end{array}
+$$
+
+# 3.3.2. Ham tl
+
+- Cho ham só $f ( x )$ khä tich tren $[ a , b ]$ . Ham só
+
+$$
+\varphi ( x ) = \intop _ { a } ^ { x } f ( t ) d t
+$$
+
+xác dinh tren $[ a , b ]$ duqc goi la ham theo can trén.
+
+Dinh ly 3.10. Néu $f ( x )$ lien tuc tren $[ a , b ]$ ,thi
+
+$$
+\varphi ^ { \prime } ( x ) = f ( x ) \ \forall x \in [ a , b ] .
+$$
+
+Ching minh Voi moi $x \in [ a , b ]$ , gia sur $\Delta _ { x } > 0 : x + \Delta _ { x } \in [ a , b ]$ （ $\Delta _ { x } < 0$ chung minh tuong tur). Khi d6
+
+$$
+\begin{array} { l } { \displaystyle \Delta _ { \varphi } = \varphi ( x + \Delta _ { x } ) - \varphi ( x ) } \\ { \displaystyle \qquad x + \Delta _ { x } } \\ { \displaystyle = \int _ { c } f ( t ) d t - \int f ( t ) d t } \\ { \displaystyle \qquad \frac { e } { x + \Delta _ { x } } } \\ { \displaystyle = \int _ { c } ^ { x } f ( t ) d t + \int _ { c } f ( t ) d t - \int _ { a } ^ { x } f ( t ) d t } \\ { \displaystyle \qquad \frac { e } { x + \Delta _ { x } } } \\ { \displaystyle = \ \int _ { c } f ( t ) d t . } \end{array}
+$$
+
+Theo dinh ly gia tri trung binh 3.7 va tinh lien tuc cua ham $f ( x )$ , ta c6 ton tai （204 $c _ { x } \in [ x , x + \Delta _ { x } ]$ sao cho
+
+$$
+\begin{array} { r } { \Delta _ { \varphi } = \displaystyle \int ^ { x \top \sum _ { j } x } f ( t ) d t = f ( c _ { x } ) . \Delta _ { x } \Rightarrow \varphi ^ { \prime } ( x ) = \operatorname* { l i m } _ { \Delta _ { x } \to 0 } \frac { \Delta _ { \varphi } } { \Delta _ { x } } = \operatorname* { l i m } _ { \Delta _ { x } \to 0 } f ( c _ { x } ) = f } \end{array}
+$$
+
+# 3.3.3. Cong thuc Newton-Leibnitz1
+
+V6i m0i $F ( x )$ xác dinh tren $[ a , b ]$ , ta ky hieu
+
+$$
+F ( b ) - F ( a ) = F ( x ) { \Big | } _ { a } ^ { b } .
+$$
+
+Dinh ly 3.11. (Cong thuc Newton-Leibnitz)
+
+Neu $f ( x )$ lien tuc trén $[ a , b ]$ vd $F ( x )$ la mot nguyén ham cua $f ( x )$ ,thi
+
+$$
+\int _ { a } ^ { b } f ( x ) d x = F ( x ) { \Big | } _ { a } ^ { b } .
+$$
+
+11.7.1646-14.111716,nha toan hoc va cung Ia nha triet hoc,nhasur hoc,nha luat hoc,nha ngoai giaoDuc Gottfried Leipzig la mot trong nhing thanh vien nuoc ngoai dau tien cua Vien Han lam khoa hoc Paris. Cong lao quan trong nhat cua ong trong toan hoc la phat minh ra phep tinh vi tich phan, dong thoi va doc lap voi Newton.
+
+Chiing minh Theo dinh ly 3.10, $\textstyle \varphi ( x ) = \int f ( t ) d t$ la mot nguyen ham cua $f ( x )$ a Theo dinh ly 3.9, t6n tai $\mathbf { s } \tilde { \boldsymbol { 0 } } ^ { C }$ sao cho $\varphi ( x ) = F ( x ) + C \forall x \in [ a , b ]$ .Vi
+
+$$
+\varphi ( a ) = F ( a ) + C = 0 \Rightarrow C = - F ( a ) ,
+$$
+
+nén
+
+$$
+\int _ { a } ^ { b } f ( x ) d x = \varphi ( b ) = F ( b ) + C = F ( b ) - F ( a ) .
+$$
+
+Vi du 3.12. Tinh tich phan
+
+$$
+\int _ { 0 } ^ { 2 } \frac { 1 } { \sqrt { 4 + x ^ { 2 } } } d x .
+$$
+
+Gidi Ta c6
+
+$$
+{ \frac { 1 } { \sqrt { 4 + x ^ { 2 } } } } d x = { \frac { 1 } { 2 } } \int _ { 0 } ^ { 2 } { \frac { 1 } { \sqrt { 1 + ( { \frac { x } { 2 } } ) ^ { 2 } } } } d x = \int _ { 0 } ^ { 2 } { \frac { 1 } { \sqrt { 1 + ( { \frac { x } { 2 } } ) ^ { 2 } } } } d { \frac { x } { 2 } } = \arctan { \frac { x } { 2 } } \Big | _ { 0 } ^ { 2 }
+$$
+
+3.4. Cac phuong phap tinh tich phan
+
+# 3.4.1. Phuong phap doi bien
+
+Dang 1 $\therefore x = \varphi ( t )$
+
+Dinh ly 3.13. Néu ham $f ( x )$ lien tuc tren $[ a , b ]$ va ham só $\varphi ( t )$ thoa man:
+
+${ \bf { \Psi } } + \varphi ( \alpha ) = a , \varphi ( \beta ) = b$ $\mathbf { \nabla } + \varphi ^ { \prime } ( t )$ lien tuc tren $[ \alpha , \beta ]$ （2$+ \forall t \in [ \alpha , \beta ] \Rightarrow x = \varphi ( t ) \in [ a , b ] ,$ （20
+
+thi
+
+$$
+\int _ { a } ^ { b } f ( x ) d x = \int _ { \alpha } ^ { \beta } f { \big ( } \varphi ( t ) { \big ) } \varphi ^ { \prime } ( t ) d t .
+$$
+
+Chitng minh Vi $f ( x )$ lien tuc, nen theo dinh ly 3.10, ton tai nguyén ham $F ( x )$ , hay $F ^ { \prime } ( x ) = f ( x )$ . Khi d6 ro rang $G ( t ) = F ( \varphi ( t ) )$ la mot nguyen ham cua $f ( \varphi ( t ) ) . \varphi ^ { \prime } ( t )$
+
+Theo cong thuc Newton-Leibnitz, ta có
+
+$$
+\begin{array} { c } { { \displaystyle \int _ { a } ^ { b } f ( x ) d x = F ( b ) - F ( a ) } } \\ { { \mathrm { } } } \\ { { \displaystyle \int _ { a } ^ { b } f ( \varphi ( t ) ) \varphi ^ { \prime } ( t ) d t = F ( \alpha ) - F ( \beta ) } } \\ { { \mathrm { } } } \\ { { \mathrm { } = F ( \varphi ( \alpha ) ) - F ( \varphi ( \beta ) ) } } \\ { { \mathrm { } = F ( b ) - F ( a ) } } \end{array}
+$$
+
+Vay ta có cong thuc can chung minh.
+
+Vi du 3.14. Tinh tich phan
+
+$$
+I = \int _ { 0 } ^ { 3 } \sqrt { 9 - x ^ { 2 } } d x .
+$$
+
+Gidi Dat $x = 3 \sin t$ $\begin{array} { r } { x = 0 \Rightarrow t = 0 , x = 3 \Rightarrow t = \frac { \pi } { 2 } , d x = 3 \cos t d t . } \end{array}$ 、Theo dinh ly 3.13, ta có
+
+$$
+\cdot \sqrt { 9 - x ^ { 2 } } d x = \int _ { 0 } ^ { \frac { \pi } { 2 } } \sqrt { 9 - 9 \sin ^ { 2 } t } . 3 \cos t d t = 9 \int _ { 0 } ^ { \frac { \pi } { 2 } } \vert \cos t \vert . \cos t d t = { \frac { 9 \pi } { 4 } }
+$$
+
+$D a n g 2 \colon t = \varphi ( x ) .$
+
+Dinh ly 3.15. Neu $f ( x )$ lien tuc tren $[ a , b ]$ vd ham $\varphi ( t )$ thoa man cac dieu kién:
+
+$+$ tang ngat tren $[ a , b ]$   
+$+ \ \varphi ^ { \prime } ( x )$ lien tuc trén $[ a , b ]$   
++ $N \hat { e u } f ( x ) d x = g ( t ) d t$ ,thi $g ( t )$ lien tuc tren $[ \varphi ( a ) , \varphi ( b ) ]$ ，   
+thi
+
+$$
+\int _ { a } ^ { b } f ( x ) d x = \int _ { \varphi ( a ) } ^ { \varphi ( b ) } g ( t ) d t .
+$$
+
+Ching minh Bang cach chung minh tuong tu nhu dinh ly 3.13 voi $x = \varphi ( t )$
+
+Vi du 3.16. Tinh tich phan
+
+$$
+I = \int _ { 0 } ^ { \ln 3 } \frac { e ^ { x } d x } { \sqrt { ( 1 + e ^ { x } ) ^ { 3 } } } .
+$$
+
+Giai Dat $t = { \sqrt { 1 + e ^ { x } } } \Rightarrow e ^ { x } = t ^ { 2 } - 1 \Rightarrow e ^ { x } d x = 2 t d t , x = 0 \to t = { \sqrt { 2 } } , x$ 二$\ln { 3 }  t = 2$ $$
+I = \int _ { 0 } ^ { \ln 3 } \frac { e ^ { x } d x } { \sqrt { ( 1 + e ^ { x } ) ^ { 3 } } } = \int _ { \sqrt { 2 } } ^ { 2 } \frac { 2 t d t } { t ^ { 3 } } = 2 \int _ { \sqrt { 2 } } ^ { 2 } \frac { 1 } { t ^ { 2 } } d t = \frac { - 2 } { t } \Big \vert _ { \sqrt { 2 } } ^ { 2 } = \sqrt { 2 } - 1 .
+$$
+
+Vi du 3.17. Cho cac ham trong dau tich phan lien tuc. i) CMR: 一
+
+$$
+\begin{array} { l } { \displaystyle { \int _ { 0 } ^ { \frac { \pi } { 2 } } f ( \sin x ) d x = \int _ { 0 } ^ { \frac { \pi } { 2 } } f ( \cos x ) d x . } } \end{array}
+$$
+
+Tu do tinh $I _ { 1 } = \int _ { 0 } ^ { \frac { \pi } { 2 } } { \frac { \sqrt [ 3 ] { \sin { x } } } { \sqrt [ 3 ] { \sin { x } } + \sqrt [ 3 ] { \cos { x } } } } d x$ ii) CMR:
+
+$$
+\intop _ { 0 } ^ { \pi } x f ( \sin x ) d x = { \frac { \pi } { 2 } } \intop _ { 0 } ^ { \pi } f ( \sin x ) d x .
+$$
+
+Tu do tinh $\begin{array} { r } { I _ { 2 } = \int \frac { x \sin x } { 1 + \cos ^ { 2 } x } d x } \\ { 0 } \end{array}$
+
+Gidi i) D6i bien $\begin{array} { r } { t = \frac { \pi } { 2 } - x } \end{array}$ ,ta c6
+
+$$
+\int _ { 0 } ^ { \frac { \pi } { 2 } } f ( \sin x ) d x = \int _ { \frac { \pi } { 2 } } ^ { 0 } f ( \cos t ) ( - d t ) = \int _ { 0 } ^ { \frac { \pi } { 2 } } f ( \cos t ) d t = \int _ { 0 } ^ { \frac { \pi } { 2 } } f ( \cos x ) d x .
+$$
+
+Tu d6,
+
+$$
+\frac { \sqrt [ 3 ] { \cos x } } { \sqrt [ 3 ] { \cos x } + \sqrt [ 3 ] { \sin x } } d x \Rightarrow 2 I _ { 1 } = \int \frac { \sqrt [ 3 ] { \sin x } } { \sqrt [ 3 ] { \sin x } + \sqrt [ 3 ] { \cos x } } d x + \int \frac { \sqrt [ 3 ] { \cos x } } { \sqrt [ 3 ] { \cos x } + \sqrt [ 3 ] { \cos x } } d x
+$$
+
+Vay $\begin{array} { r } { 2 I _ { 1 } = \int _ { 0 } ^ { \frac { \pi } { 2 } } d x = \frac { \pi } { 2 } \Rightarrow I _ { 1 } = \frac { \pi } { 4 } . } \end{array}$
+
+ii) D6i bien $t = \pi - x$ , ta nhan duoc
+
+$$
+\int _ { 0 } ^ { \pi } { x } f ( \sin { x } ) d x = \int _ { 0 } ^ { \pi } ( \pi - t ) f ( \sin { t } ) d t = \pi \int _ { 0 } ^ { \pi } { f ( \sin { t } ) d t } - \intop _ { 0 } ^ { \pi } t f ( \sin { t } )
+$$
+
+Vay
+
+$$
+\intop _ { 0 } ^ { \pi } x f ( \sin x ) d x = \frac { \pi } { 2 } \intop _ { 0 } ^ { \pi } f ( \sin x ) d x .
+$$
+
+Tu d6
+
+$$
+{ \bf \tau } _ { 2 } = \frac { \pi } { 2 } \int _ { 0 } ^ { \pi } \frac { \sin x } { 2 - \sin ^ { 2 } x } d x = \frac { \pi } { 2 } \int _ { 0 } ^ { \pi } \frac { d ( \cos x ) } { 1 + \cos ^ { 2 } x } = \frac { \pi } { 2 } \arctan ( \cos x ) \bigg | _ { 0 } ^ { \frac { \pi } { 2 } } = \frac { \pi ^ { 2 } } { 4 } .
+$$
+
+# 3.4.2. Phuong phap tich phan tung phan
+
+Cho $u = u ( x ) , v = v ( x )$ la ham só lien tuc tren $[ a , b ]$ . Tu cong thuc vi phan
+
+$$
+d ( u v ) = u d v + v d u ,
+$$
+
+ta c6 cong thuc tich phan ting phan sau
+
+$$
+\int _ { a } ^ { b } u d v = ( u v ) { \Big \vert } _ { a } ^ { b } - \intop _ { a } ^ { b } v d u .
+$$
+
+Vi du 3.18. Tinh tich phan
+
+$$
+I = \int _ { 0 } ^ { 3 } \arcsin \sqrt { \frac { x } { 1 + x } } d x .
+$$
+
+Gidi Dung cong thuc tich phan ting phan, voi
+
+$$
+u = \arcsin { \sqrt { \frac { x } { 1 + x } } } , d v = d x \Rightarrow u = { \frac { 1 } { \sqrt { x } ( 1 + x ) } } , v = x .
+$$
+
+Khi d6
+
+$$
+\begin{array} { l } { I = x \arcsin \sqrt { \displaystyle \frac { x } { 1 + x } } \left| _ { 0 } ^ { 3 } - \frac { 1 } { 2 } \int \frac { x d x } { \sqrt { x } ( 1 + x ) } \right. } \\ { \displaystyle = 3 \arcsin \frac { \sqrt { 3 } } { 2 } - \int \frac { ( \sqrt { x } ) ^ { 2 } d \sqrt { x } } { 1 + \left( \sqrt { x } \right) ^ { 2 } } } \\ { \displaystyle = \pi - \sqrt { x } \left| _ { 0 } ^ { 3 } + \arctan \sqrt { x } \right| _ { 0 } ^ { 3 } } \\ { \displaystyle = \frac { 4 \pi } { 3 } - \sqrt { 3 } . } \end{array}
+$$
+
+# 3.5. Tich phan cua ham phan thuc huu ty
+
+T6ng quat, ta xét tich phan
+
+${ \cal I } = \int _ { a } ^ { b } \frac { P _ { n } ( x ) } { Q _ { m } ( x ) } d x ~ \mathrm { v } \dot { \mathrm { o i } } ~ P _ { n } ( x ) , Q _ { m } ( x ) \mathrm { l } \dot { \mathrm { a } } \mathrm { h a i } \mathrm { d a t h i t c } \mathrm { b } \dot { \mathrm { a } } \mathrm { c } \mathrm { \Delta } n \mathrm { v } \dot { \mathrm { a } } m$ Luog ing,
+
+# 3.5.1. Cac dang co ban
+
+$$
+\begin{array} { r l } { f _ { 1 } = \displaystyle \frac { \int _ { 0 } ^ { \infty } d u } { \pi } } & { { } ( \sigma , \frac { 2 } { \sigma } ) , } \\ { f _ { 2 } = \displaystyle \frac { \int _ { 0 } ^ { \infty } d u } { \pi } } & { { } ( \sigma , \delta ( q , \gamma , \dot { \varepsilon } ) ) } \\ { f _ { 3 } = \displaystyle \frac { \int _ { 0 } ^ { \infty } d u } { \pi } , } \\ { f _ { 4 } = \displaystyle \frac { \int _ { 0 } ^ { \infty } d u } { \pi } , } \\ { f _ { 5 } = \displaystyle \frac { \int _ { 0 } ^ { \infty } d u } { \pi } , } \\ { f _ { 6 } = \displaystyle \frac { \int _ { 0 } ^ { \infty } d u } { \pi } , } \\ { f _ { 5 } = \displaystyle \frac { \int _ { 0 } ^ { \infty } d u } { \pi } , } \\ { f _ { 6 } = \displaystyle \frac { \int _ { 0 } ^ { \infty } d u } { \pi } , } \\ { f _ { 7 } = \displaystyle \frac { \int _ { 0 } ^ { \infty } d u } { \pi } , } \\ { f _ { 8 } = \displaystyle \frac { \int _ { 0 } ^ { \infty } d u } { \pi } , } \\ { f _ { 9 } = \displaystyle \frac { \int _ { 0 } ^ { \infty } d u } { \pi } , } \end{array}
+$$
+
+$$
+\begin{array} { l } { { \displaystyle { \cal I } _ { 1 } = \frac { 1 } { a } \int \displaystyle \frac { a d x } { a x + b } = \int \displaystyle \frac { \beta } { a x + b } { \displaystyle a } { \displaystyle a } + b } = \displaystyle \frac { 1 } { a } \ln { \displaystyle | a x + b | } \displaystyle \frac { \beta } { a } = \frac { 1 } { a } \ln { | \displaystyle \frac { a \beta + b } { a \alpha + b } | } . }  \\ { { \displaystyle { \cal I } _ { 2 } = \displaystyle \frac { 1 } { a } \int \displaystyle \frac { a d x } { ( a x + b ) ^ { \gamma } } = \displaystyle \frac { 1 } { a } \int \displaystyle \frac { d ( a x + b ) } { ( a x + b ) ^ { \gamma } } = \displaystyle \frac { 1 } { ( 1 - \gamma ) ( a x + b ) ^ { \gamma - 1 } } { \displaystyle \Big | } _ { \alpha } ^ { \beta } . } } \end{array}
+$$
+
+$$
+\begin{array} { l } { { \displaystyle I _ { 3 } = \frac { 1 } { a ^ { 2 } } \int \frac { \beta } { 1 + ( \frac { x } { a } ) ^ { 2 } } \frac { d x } { a } \int \frac { d ( \frac { x } { a } ) } { a } = \frac { 1 } { a } \arctan \frac { x } { a } \Big \vert _ { \alpha } ^ { \beta } } } \\ { { \displaystyle I _ { 4 } = \frac { 1 } { a } \int \frac { d ( x ^ { 2 } + a ^ { 2 } ) } { x ^ { 2 } + a ^ { 2 } } = \frac { 1 } { a } \ln ( x ^ { 2 } + a ^ { 2 } ) \Big \vert _ { \alpha } ^ { \beta } } . }  \end{array}
+$$
+
+$+$ Phuong phap tinh ${ \cal I } _ { 5 } = \int _ { \alpha } ^ { \beta } \frac { d x } { ( x ^ { 2 } + a ^ { 2 } ) ^ { \gamma } } = J _ { \gamma }$ x²+a2）= Jγ (dat） （γ ≥2,γ ∈ N).Dät u =(x²+a2)y ,dv = dx. Khi d6
+
+$$
+d u = \frac { - 2 \gamma x d x } { ( x ^ { 2 } + a ^ { 2 } ) ^ { \gamma + 1 } } , v = x .
+$$
+
+Theo cong thuc tich phan tung phan, ta c6
+
+$$
+I _ { 5 } = \frac { x } { ( x ^ { 2 } + a ^ { 2 } ) ^ { \gamma } } \bigg | _ { \alpha } ^ { \beta } + 2 \gamma \int \frac { x ^ { 2 } d x } { ( x ^ { 2 } + a ^ { 2 } ) ^ { \gamma + 1 } } .
+$$
+
+Mat khac
+
+$$
+\frac { x ^ { 2 } d x } { ^ { 2 } + a ^ { 2 } ) ^ { \gamma + 1 } } = \int _ { \alpha } ^ { \beta } \frac { ( x ^ { 2 } + a ^ { 2 } - a ^ { 2 } ) d x } { ( x ^ { 2 } + a ^ { 2 } ) ^ { \gamma + 1 } } = \int _ { \alpha } ^ { \beta } \frac { d x } { ( x ^ { 2 } + a ^ { 2 } ) ^ { \gamma } } - a ^ { 2 } \int _ { \alpha } ^ { \beta } \frac { d x } { ( x ^ { 2 } + a ^ { 2 } ) }
+$$
+
+Suy ra
+
+$$
+J _ { \gamma } = \frac { x } { ( x ^ { 2 } + a ^ { 2 } ) ^ { \gamma } } \bigg | _ { \alpha } ^ { \beta } + 2 \gamma J _ { \gamma } - 2 a ^ { 2 } \gamma J _ { \gamma + 1 } .
+$$
+
+Nhu vay
+
+$$
+J _ { \gamma + 1 } = \frac { x } { 2 \gamma a ^ { 2 } ( x ^ { 2 } + a ^ { 2 } ) ^ { \gamma } } \Big | _ { \alpha } ^ { \beta } + \frac { 2 \gamma - 1 } { 2 a ^ { 2 } \gamma } J _ { \gamma } .
+$$
+
+Theo quy nap toan hoc, ta tinh duoc $J _ { \gamma }$ theo qua trinh
+
+$$
+J _ { 1 } \to J _ { 2 } \to \ldots \to J _ { \gamma } ,
+$$
+
+trong d6 $J _ { 1 } = I _ { 3 }$ ：
+
+$\begin{array} { r l } { + \operatorname { T i n h } \ I _ { 6 } = \int \frac { \beta } { \alpha } \frac { x d x } { ( x ^ { 2 } + a ^ { 2 } ) ^ { \gamma } } } & { { } ( \gamma \geq 2 , \gamma \in \mathbb { N } ) . } \end{array}$
+
+$$
+I _ { 6 } = \frac { 1 } { 2 } \int _ { \alpha } \frac { \ d z d ( x ^ { 2 } + a ^ { 2 } ) } { ( x ^ { 2 } + a ^ { 2 } ) ^ { \gamma } } = \frac { 1 } { 2 ( 1 - \gamma ) } ( x ^ { 2 } + a ^ { 2 } ) ^ { 1 - \gamma } \Big | _ { \alpha } ^ { \beta } .
+$$
+
+# 3.5.2. Phuong phap dong nhat hé so
+
+Buoc $O$ Neu $n \geq m$ thi ta chia da thuc $P _ { n } ( x )$ cho da thuc $Q _ { m } ( x )$ sao cho phan thuc $\frac { P _ { n } ( x ) } { Q _ { m } ( x ) }$ 品 $n < m$ .
+
+Buoc $\boldsymbol { I }$ . Phan tich $P _ { n } ( x )$ thanh nhan tir:
+
+$$
+Q _ { m } ( x ) = a ( x - x _ { 1 } ) ^ { \alpha _ { 1 } } . . . ( x - x _ { k } ) ^ { \alpha _ { k } } . ( x ^ { 2 } + b _ { 1 } x + c _ { 1 } ) ^ { \beta _ { 1 } } . . . ( x ^ { 2 } + b _ { h } x + c _ { h }
+$$
+
+sao cho $\Delta _ { i } = b _ { i } ^ { 2 } - 4 c _ { i } ^ { 2 } < 0 \forall i = 1 , 2 , . . . , h .$
+
+Buoc 2. Quy tac dong nhat he so:
+
+$$
+\begin{array} { r l } & { \frac { P _ { \mathrm { r } } ( x , y ) } { Q _ { \mathrm { m } } ( x ) } = \frac { a _ { 1 1 } } { ( x - x _ { 1 } ) ^ { 1 } } + \frac { a _ { 1 2 } } { ( x - x _ { 1 } ) ^ { 2 } } + \ldots + \frac { a _ { 1 \alpha } } { ( x - x _ { 1 } ) ^ { \alpha _ { 1 } } } } \\ & { \phantom { \frac { P _ { \mathrm { r } } ( x , y ) } { Q _ { \mathrm { m } } ( x ) } = } + \ldots } \\ & { \phantom { \frac { Q _ { \mathrm { m } } } { Q _ { \mathrm { m } } ( x ) } = } + \frac { a _ { \mathrm { d r } } } { ( x - x _ { k } ) ^ { 1 } } + \frac { a _ { \mathrm { d r } } } { ( x - x _ { k } ) ^ { 2 } } + \ldots + \frac { \widehat { a } _ { \mathrm { t a r } } } { ( x - x _ { k } ) ^ { \alpha _ { 1 } } } } \\ & { \phantom { \frac { P _ { \mathrm { r } } ( x , y ) } { Q _ { \mathrm { m } } ( x ) } = } + \frac { b _ { 1 1 } x + c _ { 1 1 } } { ( x ^ { 2 } + b _ { 1 } x + c _ { 1 } ) ^ { 1 } } + \frac { b _ { 1 2 } x + c _ { 1 2 } } { ( x ^ { 2 } + b _ { 1 } x + c _ { 1 } ) ^ { 2 } } + \ldots + \frac { b _ { 1 3 } x + c _ { 1 2 } } { ( x ^ { 2 } + b _ { 1 } x + c _ { 1 } ) ^ { 3 } } } \\ & { \phantom { \frac { P _ { \mathrm { r } } ( x , y ) } { Q _ { \mathrm { m } } ( x ) } = } + \ldots } \\ & { \phantom { \frac { P _ { \mathrm { r } } ( x , y ) } { Q _ { \mathrm { m } } ( x ) } = } + \frac { b _ { 1 2 } x + c _ { \mathrm { d r } } } { ( x ^ { 2 } + b _ { 1 } x + c _ { k } ) ^ { 1 } } + \frac { b _ { 1 3 } x + c _ { 1 2 } } { ( x ^ { 2 } + b _ { 1 } x + c _ { k } ) ^ { 2 } } + \ldots + \frac { b _ { 1 3 } x + c _ { 1 2 } } { ( x ^ { 2 } + b _ { 1 } x + c _ { 1 } ) ^ { 3 } } } \end{array}
+$$
+
+# Nhan xet 3.19. Tu
+
+$$
+\frac { p x + q } { + b x + c ) ^ { \alpha } } = \frac { p t + \bar { q } } { ( t ^ { 2 } + a ^ { 2 } ) ^ { \alpha } } \nu \dot { o i } t = x + \frac { b } { 2 } , a ^ { 2 } = c - \frac { b ^ { 2 } } { 4 } > 0 , \bar { q } = q + \frac { p } { 2 }
+$$
+
+suy ra viéc tinh $\begin{array} { r } { I = \int _ { a } ^ { b } { \frac { P _ { n } ( x ) } { Q _ { m } ( x ) } d x } } \end{array}$ dugc chuyen ve viec tinh cac tich phan dang $I _ { 1 } , . . . , I _ { 6 }$
+
+Vi du 3.20. Tinh tich phan
+
+$$
+I = \int _ { 1 } ^ { \sqrt { 3 } } \frac { 3 x + 1 } { x ( 1 + x ^ { 2 } ) ^ { 2 } } d x .
+$$
+
+Giai Dong nhat he so
+
+$$
+{ \frac { 3 x + 1 } { x ( 1 + x ^ { 2 } ) ^ { 2 } } } = { \frac { A } { x } } + { \frac { B x + C } { 1 + x ^ { 2 } } } + { \frac { D x + E } { ( 1 + x ^ { 2 } ) ^ { 2 } } } .
+$$
+
+Hay
+
+$$
+3 x + 1 = ( A + B ) x ^ { 4 } + C x ^ { 3 } + ( 2 A + B + D ) x ^ { 2 } + ( C + F ) x + A .
+$$
+
+Hé so cac luy thua hai vé bang nhau.
+
+$$
+\left\{ \begin{array} { l l } { A + B = 0 } \\ { C = 0 } \\ { 2 A + B + D = 0 } \\ { C + F = 3 } \\ { A = 1 . } \end{array} \right.
+$$
+
+Tu d6
+
+$$
+\begin{array} { l } { { \displaystyle I = \int \displaystyle \int \displaystyle \frac { d x } { x } - \int \displaystyle \int \displaystyle \frac { x \hat { \Im } } { 1 + x ^ { 2 } } \displaystyle - \int \displaystyle \int \displaystyle \frac { x d x } { 1 } ~ } } \\ { { \displaystyle \qquad = \big ( \ln x - \displaystyle \frac { 1 } { 2 } \ln ( 1 + x ^ { 2 } ) \big ) \displaystyle \Big | _ { 1 } ^ { \sqrt { 3 } } - \displaystyle \frac { \sqrt { 3 } } { 2 } \int ( 1 + x ^ { 2 } ) ^ { - 2 } d ( 1 + x ^ { 2 } ) + 3 \int \displaystyle \frac { x d x } { ( 1 + x ^ { 2 } ) ^ { - 2 } } } } \\ { { \displaystyle \qquad = \big ( \ln x - \displaystyle \frac { 1 } { 2 } \ln ( 1 + x ^ { 2 } ) + \displaystyle \frac { \sqrt { 3 } } { 2 ( 1 + x ^ { 2 } ) ^ { 2 } } \big ) \displaystyle \Big | _ { 1 } ^ { \sqrt { 3 } } + 3 . 3 } } \\ { { \displaystyle \qquad = - \frac { 1 } { 8 } + 3 J , } } \end{array}
+$$
+
+Tinh $\begin{array} { r } { J = \int _ { 1 } ^ { \sqrt { 3 } } \frac { d x } { ( 1 + x ^ { 2 } ) ^ { 2 } } . } \end{array}$ Theo cong thut tinh $I _ { 5 }$ ,ta c6
+
+$$
+J = { \frac { 1 } { 2 } } { \frac { x } { 1 + x ^ { 2 } } } { \Big | } _ { 1 } ^ { \sqrt { 3 } } + { \frac { 1 } { 2 } } { \int } { \frac { d x } { 1 + x ^ { 2 } } } = { \frac { 1 } { 8 } } + { \frac { 1 } { 2 } } \arctan x { \Big | } _ { 1 } ^ { \sqrt { 3 } } = { \frac { 1 } { 8 } } + { \frac { \pi } { 2 4 } } .
+$$
+
+Vay $\begin{array} { r } { I = - \frac { 1 } { 8 } + 3 J = \frac { 1 } { 4 } + \frac { \pi } { 8 } } \end{array}$
+
+# 3.6. Tich phan cua ham luong giac
+
+Xét tich phan c6 dang
+
+$$
+I = \int _ { \alpha } ^ { \beta } R ( \sin x , \cos x ) d x .
+$$
+
+Dang 1. (phuong phap chung) Doi bien $\begin{array} { r } { t = \tan { \frac { x } { 2 } } } \end{array}$
+
+Khi d6
+
+$$
+d t = { \frac { 1 } { 2 \cos ^ { 2 } { \frac { x } { 2 } } } } d x = { \frac { 1 } { 2 } } ( 1 + \tan ^ { 2 } { \frac { x } { 2 } } ) d x = { \frac { 1 } { 2 } } ( 1 + t ^ { 2 } ) d x \Rightarrow d x = { \frac { 2 d t } { 1 + t ^ { 2 } } } ,
+$$
+
+va
+
+$$
+\sin x = { \frac { 2 \tan { \frac { x } { 2 } } } { 1 + \tan ^ { 2 } { \frac { x } { 2 } } } } = { \frac { 2 t } { 1 + t ^ { 2 } } } , \cos x = { \frac { 1 - \tan ^ { 2 } { \frac { x } { 2 } } } { 1 + \tan ^ { 2 } { \frac { x } { 2 } } } } = { \frac { 1 - t ^ { 2 } } { 1 + t ^ { 2 } } } .
+$$
+
+Vi du 3.21. Tinh tich phan
+
+$$
+I = \int _ { 0 } ^ { 2 } { \frac { d x } { 2 \sin x - \cos x + 5 } } .
+$$
+
+Giai Dat $\begin{array} { r } { t = \tan { \frac { x } { 2 } } } \end{array}$ （号 $\begin{array} { r } { x = 0  t = 0 , x = 2  t = \frac { \pi } { 4 } } \end{array}$ . Ta c6
+
+$$
+d x = { \frac { 2 d t } { t ^ { 2 } } } , \sin x = { \frac { 1 - t ^ { 2 } } { 1 + t ^ { 2 } } } , \cos x = { \frac { 1 - t ^ { 2 } } { 1 + t ^ { 2 } } } .
+$$
+
+Vay
+
+$$
+I = \int _ { 0 } ^ { \frac { \pi } { 4 } } \frac { d t } { 3 t ^ { 2 } + 2 t + 2 } = \frac { 1 } { \sqrt { 5 } } \arctan \frac { 3 t + 1 } { \sqrt { 5 } } \biggr \vert _ { 0 } ^ { \frac { \pi } { 4 } } = \frac { 1 } { \sqrt { 5 } } \biggr ( \arctan \frac { 3 \pi + 4 } { 4 \sqrt { 5 } } - \biggr .
+$$
+
+Dang 2. $R ( \sin x , \cos x )$ chan doi voi sin $x$ , cos x, hay
+
+$R ( - \sin x , - \cos x ) = R ( \sin x , \cos x ) \ \forall x \in D$ (tap xac dinh cua $R ( \sin x , c o s x ) )$
+
+Phuong phap giai: Dat $\begin{array} { r } { t = \tan x \Rightarrow d t = \frac { 1 } { \cos ^ { 2 } x } d x = ( 1 + t ^ { 2 } ) d x \Rightarrow d x = \frac { d t } { 1 + t ^ { 2 } } } \end{array}$ hoac $\begin{array} { r } { t = \cot x \Rightarrow d t = - \frac { 1 } { \sin ^ { 2 } x } d x = - ( 1 + t ^ { 2 } ) d x \Rightarrow d x = - \frac { d t } { 1 + t ^ { 2 } } . } \end{array}$
+
+Vi du 3.22. Tinh tich phan
+
+$$
+I = \int _ { \frac { \pi } { 4 } } ^ { \frac { \pi } { 3 } } { \frac { d x } { \sin ^ { 3 } x \cos ^ { 5 } x } } .
+$$
+
+Gidi Dat $\begin{array} { r } { t = t a n x \Rightarrow d x = \frac { d t } { 1 + t ^ { 2 } } } \end{array}$ 1+t,x= $\begin{array} { r } { x = \frac { \pi } { 4 } \to t = 1 , x = \frac { \pi } { 3 } \to t = \sqrt { 3 } } \end{array}$ . Khi d6
+
+$$
+I = \int \limits _ { \frac { \pi } { 4 } } ^ { \frac { \pi } { 3 } } \frac { d x } { \sin ^ { 3 } x \cos ^ { 5 } x } = \int \frac { \frac { \pi } { 3 } } { \frac { ( 1 + \tan ^ { 2 } x ) ^ { 3 } } { t a n ^ { 3 } x } \frac { 1 } { \cos ^ { 2 } x } d x }
+$$
+
+$$
+= \int _ { 1 } ^ { \sqrt { 3 } } \frac { ( 1 + t ^ { 2 } ) ^ { 3 } } { t ^ { 3 } } d t = ( - \frac { 1 } { 2 t ^ { 2 } } + 3 \ln t + \frac { 3 } { 2 } t ^ { 2 } + \frac { 1 } { 4 } t ^ { 4 } ) \Big | _ { 1 } ^ { \sqrt { 3 } } .
+$$
+
+Vay $\begin{array} { r } { I = { \frac { 3 } { 2 } } \ln 3 + { \frac { 1 9 } { 3 } } } \end{array}$
+
+Dang 3 $R ( \sin x , \cos x )$ lé doi voi sin $x$ , hay
+
+$R ( - \sin x , \cos x ) = - R ( \sin x , \cos x ) \ \forall x \in D$ (tap xac dinh cia $R ( \sin x , c o s x ) )$
+
+Phuong phap giai: Dat $t = \cos x \Rightarrow d t = - \sin x d x .$
+
+Vi du 3.23. Tinh tich phan
+
+$$
+I = \int _ { 0 } ^ { \frac { \pi } { 4 } } \frac { \sin { x } d x } { \cos { x } \sqrt { 1 + \sin ^ { 2 } { x } } } .
+$$
+
+Gidi Dat cos $x = t \Rightarrow d t = - \sin x d x$ 号 $\begin{array} { r } { x = 0 \to t = 1 , x = \frac { \pi } { 4 } \to t = \frac { \sqrt { 2 } } { 2 } } \end{array}$ ,ta c6
+
+$$
+\begin{array} { l } { { I = - \displaystyle \int _ { 0 } ^ { \frac { \bar { z } } { 2 } } \frac { - \sin x d x } { \cos x \sqrt { 2 - \cos ^ { 2 } x } } = - \displaystyle \int _ { 1 } ^ { \frac { \bar { z } ^ { 2 } } { 2 } } \frac { d t } { t \sqrt { 2 - t ^ { 2 } } } } } \\ { { \displaystyle \quad = - \displaystyle \int _ { 1 } ^ { \frac { \bar { z } ^ { 2 } } { 2 } } \frac { d t } { t ^ { 2 } \sqrt { \frac { \bar { z } ^ { 2 } - 1 } { t ^ { 2 } } - 1 } } = - \displaystyle \int _ { 1 } ^ { \frac { \bar { z } ^ { 2 } } { 2 } } \frac { d t } { \sqrt { \frac { \bar { z } ^ { 2 } - 1 } { t ^ { 2 } } - 1 } } } } \\ { { \displaystyle \int \frac { d t } { \sqrt { x ^ { 2 } + a } } = \ln | x + \sqrt { x ^ { 2 } + a } | + C , } } \end{array}
+$$
+
+Theo cong thuc
+
+ta c6
+
+$$
+I = { \frac { 1 } { \sqrt { 2 } } } \ln | { \frac { \sqrt { 2 } } { t } } + { \sqrt { \frac { 2 } { t ^ { 2 } } - 1 } } | { \Big | } _ { 1 } ^ { \frac { \sqrt { 2 } } { 2 } } = - { \frac { 1 } { \sqrt { 2 } } } \ln { \frac { 2 + \sqrt { 3 } } { 1 + \sqrt { 2 } } } .
+$$
+
+Dang 4. $R ( \sin x , \cos x )$ lé doi voi cos $x$ , hay
+
+R(sinx,-cos x)= -R(sin x,cos x) ∀x ∈ D (tap xac dinh cia $R ( \sin x , c o s x ) )$
+
+Phuong phap giai: Dat $t = \sin x \Rightarrow d t = \cos x d x .$
+
+Vi du 3.24. Tinh tich phan
+
+$$
+I = \int _ { 0 } ^ { \frac { \pi } { 2 } } \frac { ( \sin 2 x + \cos x ) d x } { \sqrt { 1 + 3 \sin x } } .
+$$
+
+$$
+\begin{array} { r } { \sqrt { 1 + 3 \sin x } = t \Rightarrow d t = \frac { 3 \cos x d x } { 2 \sqrt { 1 + 3 \sin x } } , x = 0 \to t = 1 , x = \frac { \pi } { 2 } \to t = 2 , } \end{array}
+$$
+
+$$
+{ \frac { \ddot { \bar { \varepsilon } } } { ( 2 \sin x + 1 ) \cos x d x } } = { \frac { 2 } { 3 } } \int _ { 0 } ^ { \frac { \frac { \pi } { 2 } } { 2 } } { \frac { ( 2 \sin x + 1 ) 3 \cos x d x } { 2 { \sqrt { 1 + 3 \sin x } } } } = { \frac { 2 } { 3 } } \int _ { 1 } ^ { 2 } ( 2 { \frac { t ^ { 2 } - 1 } { 3 } } - 1 ) ^ { \frac { \pi } { 2 } } .
+$$
+
+$$
+{ \bf \Phi } = \frac { 2 } { 9 } \int _ { 1 } ^ { 2 } ( 2 t + 1 ) d t = \frac { 2 } { 9 } ( \frac { 2 } { 3 } t ^ { 3 } + t ) \Big | _ { 1 } ^ { 2 } = \frac { 3 4 } { 2 7 } .
+$$
+
+Muon quan sat cac dang tich phan khac,ta c6 the tham khao thém cac dang trong phan bai tap.
+
+# 3.7. Mot vai ung dung cua tich phan
+
+# 3.7.1. Tinh dien tich
+
+Dang $I$ Hinh tao boi cac duong cong tren hé truc toa do Oxy. $+ \ N @ { \tt u }$ hinh $( H )$ duqc cho boi:
+
+$$
+( H _ { 1 } ) \left\{ \begin{array} { l l } { y = f ( x ) } \\ { y = g ( x ) } \\ { x = a \mathrm { ~ } ( a < b ) } \\ { x = b } \end{array} \right. \Rightarrow S _ { H _ { 1 } } = \intop _ { a } ^ { b } | f ( x ) - g ( x ) | d x .
+$$
+
+![](images/97ae368171dc0622b5bbf431e24b76bc8b970f7839daeaf85477e8b3bc958fb3.jpg)  
+Hinh 2: Bieu dien hinh $\left( H _ { 1 } \right)$ Vi du 3.25.Tinh dien tich hinh tao boi cac duong cong
+
+$$
+( H ) \left\{ { x + y = 0 \atop y = 2 x - x ^ { 2 } . } \right.
+$$
+
+Gidi Parabol va duong thäng cät nhau tai các diém c6 hoanh do $x _ { 1 } = 0 , x _ { 2 } = 3$ ： Vi vay, dien tich duoc tinh boi
+
+$$
+S _ { H } = \int _ { 0 } ^ { 3 } ( 2 x - x ^ { 2 } + x ) d x = ( \frac { 3 } { 2 } x ^ { 2 } - \frac { x ^ { 3 } } { 3 } ) \Big | _ { 0 } ^ { 3 } = \frac { 9 } { 2 } .
+$$
+
+$+ \ N @ { \tt u }$ hinh $( H )$ duqc cho boi:
+
+![](images/e5b842e0258388278649e0a8acc4ef5ee81c00688d1c7e2fc9fe1ff8876355a4.jpg)  
+Hinh 3: Bieu dién hinh $\left( H _ { 2 } \right)$ （204
+
+Vi du 3.26. Hinh tao boi cac duong cong parabol $y ^ { 2 } = 2 x$ chia dién tich hinh tron
+
+$x ^ { 2 } + y ^ { 2 } \leq 8$ theo ty so nao?
+
+![](images/4f3d8c173a5e4bf5ea929c0f1f3d7b5297402c809fe08023622273e54e75b662.jpg)  
+Hinh 4: Hinh ve cüa vi du 3.26
+
+Gidi it Giai Ky hieu dien tich hinh tron la $S _ { 1 }$ ， con dien tich phan gioi han bói parabol va hinh tron (nhu trén hinh vé) la $S _ { 2 }$ . Ro rang $S _ { 1 } = 8 \pi$ . Tim hoanh do giao diem cüa parabol va duong tron; muon vay ta giai phuong trinh
+
+$$
+x ^ { 2 } + 2 x + 1 = 9 \Rightarrow x = 2 \Rightarrow y _ { 1 } = 2 , y _ { 2 } = - 2 .
+$$
+
+Tu phuong trinh duong tron
+
+$$
+x ^ { 2 } + y ^ { 2 } = 8 \Leftrightarrow x ^ { 2 } = 8 - y ^ { 2 } \Rightarrow c u n g ( A B ) : x = { \sqrt { 8 - y ^ { 2 } } } .
+$$
+
+Dua vao do thi va cong thuc tinh dien tich hinh $\left( H _ { 2 } \right)$ ,ta có
+
+$$
+\begin{array} { r l } & { \bar { S } _ { 2 } - \displaystyle \int _ { - 2 } ^ { 2 } ( \sqrt { 8 - y ^ { 2 } } - \frac { 1 } { 2 } y ^ { 2 } ) d y } \\ & { \quad - \displaystyle \int _ { - 2 } ^ { 2 } } \\ & { \quad - 2 } \\ & { \quad - 2 } \\ & { \quad = \mathcal { J } - \displaystyle \frac { 8 } { 3 } } \\ & { \quad = \mathcal { J } - \displaystyle \frac { 8 } { 3 } } \\ & { \quad \mathcal { J } - \displaystyle \int _ { - 2 } ^ { 2 } \sqrt { 8 - y ^ { 2 } } d y , } \end{array}
+$$
+
+$$
+\begin{array} { r } { y = 2 \sqrt { 2 } \sin t , d y = 2 \sqrt { 2 } \cos t , y = - 2  t = - \frac { \pi } { 4 } , y = 2  t = \frac { \pi } { 4 } . } \end{array}
+$$
+
+$$
+J = 8 \intop _ { - \frac { \pi } { 4 } } ^ { \frac { \pi } { 4 } } { \left| \cos t \right| } \cos t d t = 4 \intop _ { - \frac { \pi } { 4 } } ^ { \frac { \pi } { 4 } } ( 1 + \cos 2 t ) d t = 2 \pi + 4 .
+$$
+
+Khi d6
+
+$$
+S _ { 2 } = 2 \pi + \frac { 4 } { 3 } \Rightarrow \frac { S _ { 1 } - S _ { 2 } } { S _ { 2 } } = \frac { 9 \pi - 2 } { 3 \pi + 2 } .
+$$
+
+Dang 2 Hinh tao boi cac duong cong tren he toa do cuc $r = r ( \varphi )$ ：
+
+Moi quan he gita he truc toa do Oxy va he truc toa do cuc la
+
+$$
+\left\{ { \begin{array} { l } { x = r ( \varphi ) \cos \varphi } \\ { y = r ( \varphi ) \sin \varphi . } \end{array} } \right.
+$$
+
+Khi d6 dien tich hinh tao bói
+
+$$
+( H ) : r = r ( \varphi ) \quad ( \alpha \leq \varphi \leq \beta ) .
+$$
+
+la
+
+$$
+S _ { H } = { \frac { 1 } { 2 } } \int _ { \alpha } ^ { \beta } r ^ { 2 } ( \varphi ) d \varphi .
+$$
+
+Vi du 3.27.Tinh dien tich tao boi duong cong Cardioid (hinh trai tim) c6 phuong trinh
+
+$$
+( H ) : r = a ( 1 + \cos \varphi ) .
+$$
+
+Giai Duong Cardioid c6 tinh chat doi xung qua truc $O x$ , nen ta c6
+
+$$
+= \int _ { 0 } ^ { \pi } a ^ { 2 } ( 1 + \cos \varphi ) ^ { 2 } d \varphi = a ^ { 2 } \int _ { 0 } ^ { \pi } ( 1 + 2 \cos \varphi + \cos ^ { 2 } \varphi ) d \varphi = a ^ { 2 } ( \pi + { \frac { 1 } { 2 } } \pi ) =
+$$
+
+Dang $3$ Hinh tao boi cac duong cong dang tham so.
+
+Cho hinh $( H )$ duoc tao boi duong cong dang tham só
+
+$$
+\left\{ \begin{array} { l l } { x = x ( t ) } \\ { y = y ( t ) } & { t _ { 1 } \leq t \leq t _ { 2 } . } \end{array} \right.
+$$
+
+$$
+S _ { H } = \int _ { t _ { 1 } } ^ { t _ { 2 } } { | y ( t ) . x ^ { \prime } ( t ) | d t } .
+$$
+
+Vi du 3.28.Tinh dién tich hinh tao boi elip có phuong trinh
+
+$$
+( E ) : { \frac { x ^ { 2 } } { a ^ { 2 } } } + { \frac { y ^ { 2 } } { b ^ { 2 } } } = 1 .
+$$
+
+![](images/e93e73c54c810e00f2507ba691f264e7a140f0e590e52620eae26a1ef6d07cd0.jpg)  
+Hinh 5: Duong cong Cardioid
+
+Giai Phuong trinh chinh täc cua $( E )$ duoc viet duoi dang tham só
+
+$$
+( E ) : \left\{ { \begin{array} { l } { x = a \cos t } \\ { y = b \sin t 0 \leq t \leq 2 \pi . } \end{array} } \right.
+$$
+
+Do $( E )$ c6 tinh chat doi xung qua truc $O x , O y$ , nen dien tich cua $( E )$ duqc tinh boi
+
+$$
+S _ { E } = 4 \intop _ { 0 } ^ { \frac { \pi } { 2 } } | y ( t ) . x ^ { \prime } ( t ) | d t = 4 \intop _ { 0 } ^ { \frac { \pi } { 2 } } a b \sin ^ { 2 } t d t = \pi a b .
+$$
+
+# 3.7.2. Tinh do dai duong cong
+
+Dang $I$ Duong cong tren he truc toa do Oxy.
+
+Cho duong cong $A B$ c6 phuong trinh
+
+$$
+{ \widetilde { A B } } : \ y = f ( x ) \ x \in [ a , b ] .
+$$
+
+Khi d6, do dai duong cong $A B$ dugc xac dinh boi cong thuc
+
+$$
+| \widetilde { A B } | = \int _ { a } ^ { b } \sqrt { 1 + f _ { \ x } ^ { \prime 2 } } d x .
+$$
+
+Dang 2 Duong cong tren he truc toa d@ cuc.
+
+Cho duong cong $A B$ c6 phuong trinh
+
+$$
+{ \widetilde { A B } } : r = r ( \varphi ) \varphi \in [ \alpha , \beta ] .
+$$
+
+Khi d6
+
+$$
+| \widetilde { A B } | = \int _ { \alpha } ^ { \beta } \sqrt { r ^ { 2 } ( \varphi ) + r ^ { \prime 2 } ( \varphi ) } d \varphi .
+$$
+
+Dang 3 Duong cong dang tham so.
+
+Khi d6
+
+$$
+\begin{array} { c } { \displaystyle \widetilde { A B } : \left\{ x = x ( t ) \begin{array} { l } { \displaystyle } \\ { \displaystyle { y = y ( t ) } \quad t _ { 1 } \leq t \leq t _ { 2 } . } \end{array} \right. } \\ { \displaystyle \big . \big | \widetilde { A B } \big | = \int _ { t _ { 1 } } ^ { t _ { 2 } } \sqrt { x _ { t } ^ { \prime 2 } + y _ { t } ^ { \prime 2 } } d t . } \end{array}
+$$
+
+Vi du 3.29. Tinh do dai duong cong Astroid cho boi phuong trinh tham s6
+
+$$
+\widetilde { A B } : \left\{ \begin{array} { l l } { x = a \cos ^ { 3 } t } \\ { y = a \sin ^ { 3 } t \quad a > 0 . } \end{array} \right.
+$$
+
+Giai Theo cong thuc dang 3, ta c6
+
+![](images/c16a924efc24f72e7d021abc6e334556580ca1497c436d43152251fded0bbe10.jpg)  
+Hinh 6: Duong cong Cycloid
+
+$$
+\begin{array} { r l } { \| \overline { { A \tilde { B } } } - \displaystyle { \int _ { 0 } ^ { \infty } \sqrt { x _ { i } ^ { 2 } + y _ { i } ^ { 2 } } d t } } & { } \\ { = } & { - \frac { 1 } { 2 } \displaystyle { \int _ { 0 } ^ { \infty } \sqrt { ( - 3 \alpha \cos ^ { 2 } { t } \sin { t } ) ^ { 2 } + ( 3 \alpha \sin ^ { 2 } { t } \cos { t } ) ^ { 2 } } d t } } \\ { = } & { 6 \alpha _ { 2 } ^ { 1 } \displaystyle { \int _ { 0 } ^ { \frac { 1 } { 2 } } \sin { 2 t } d t } } \\ { = } & { - 3 \alpha _ { 1 } \cos { 2 t } \Big | _ { 0 } ^ { \frac { 1 } { 2 } } } \\ { = } & { 6 \alpha . } \end{array}
+$$
+
+# 3.7.3. Tinh thé tich cua vat thé
+
+Cho vat thé $( H )$ nam gita hai mat phang vuong góc voi $O x$
+
+$$
+( \alpha ) : \ x = a , ( \beta ) : \ x = b \ a < b .
+$$
+
+Khi d6 voi moi $x _ { 0 } \in [ a , b ]$ , mat phang $( \gamma )$ có6 phuong trinh $x = x _ { 0 }$ cat vat thé $( H )$ theo thiet dien c6 dien tich $S ( x _ { 0 } )$ . Khi d6 thé tich vat thé $( H )$ dugc tinh boi cong thuc
+
+$$
+V _ { H } = \intop _ { a } ^ { b } S ( x ) d x .
+$$
+
+Trong truong hop dac biet, $( H )$ la mot vat thé tao boi: Quay hinh
+
+$$
+\left\{ { \begin{array} { l } { y = f ( x ) \geq 0 \forall x \in [ a , b ] } \\ { x = a , } \\ { x = b . } \end{array} } \right.
+$$
+
+xung quanh truc $O x$ . Khi d6,thé́ tich duoc xac dinh boi cong thuc
+
+$$
+V _ { H } = \pi \int _ { a } ^ { b } f ^ { 2 } ( x ) d x .
+$$
+
+That vay, do $( \gamma )$ cat hinh $( H )$ theo thiet dien la mot hinh tron có bán kinh $R =$ $f ( x _ { 0 } )$ nen $S ( x _ { 0 } ) = \pi R ^ { 2 } = \pi f ^ { 2 } ( x _ { 0 } )$
+
+![](images/610b908f9dfb6b598436de23e73e468bf0ddada87788b5e63ded1081020f072b.jpg)  
+Hinh 7: Hinh biéu dien the tich cua $( H )$ （2
+
+Vi du 3.30. Tinh thé́ tich cua vat thé
+
+![](images/bb0ddf0b6c3d80972889149b55e54c114ff6ffdae52b6d49675a294ea6e4220f.jpg)
+
+Giai Thiet dien tao boi mat phäng $( \gamma ) : x \equiv x _ { 0 }$ la mot hinh chur nhat. Tur sur dong dang cua tam giac $O A B$ va $O C D$ ta c6
+
+$$
+{ \frac { A B } { D C } } = { \frac { O A } { O D } } ,
+$$
+
+tur d6
+
+$$
+D C = { \frac { A B . O D } { O A } } = { \frac { c x _ { 0 } } { a } } .
+$$
+
+Dien tich $S ( x )$ cua thiet dien bat ky vuong góc voi truc $O x$ se bang
+
+$$
+S ( x ) = \frac { 2 b c x } { a } \sqrt { 1 - \frac { x ^ { 2 } } { a ^ { 2 } } } .
+$$
+
+Vay
+
+$$
+V = \frac { 2 b c } { a } \int _ { 0 } ^ { a } { x \sqrt { 1 - \frac { x ^ { 2 } } { a ^ { 2 } } } d x } = \frac { 2 a b c } { 3 } ( 1 - \frac { x ^ { 2 } } { a ^ { 2 } } ) ^ { \frac { 3 } { 2 } } \Big | _ { a } ^ { 0 } = \frac { 2 } { 3 } a b c .
+$$
+
+# 3.7.4. Tinh dien tich cua mat tron xoay
+
+Mat tron xoay $( H )$ duqc tao thanh do cung $A B$ qua xung quanh truc $O x$ Dang $I$ Cung $A B$ cho boi phuong trinh dang tóng quat
+
+$$
+{ \widetilde { A B } } : y = f ( x ) \geq 0 \quad a \leq x \leq b .
+$$
+
+Khi d6, dien tich mat tron xoay dugc dinh boi cong thuc
+
+$$
+S _ { H } = 2 \pi \intop _ { a } ^ { b } f ( x ) \sqrt { 1 + f ^ { \prime 2 } ( x ) } d x .
+$$
+
+![](images/8b93f056a00d423a011f78db538011c7b0d7bae2ba8787449cae8cd134a2d61f.jpg)  
+Hinh 8: Hinh vé cúa vi du 3.31
+
+Dang 2 Cung $A B$ cho boi phuong trinh trong hé toa do cuc
+
+$$
+r = r ( \varphi ) { \mathrm { ~ v \ ' o i ~ } } \sin \varphi \geq 0 { \mathrm { ~ } } \forall \varphi \in [ \alpha , \beta ] .
+$$
+
+Khi d6, dien tich mat tron xoay duoc dinh boi cong thuc
+
+$$
+S _ { H } = 2 \pi \int _ { \alpha } ^ { \beta } r ( \varphi ) \sin \varphi \sqrt { r ^ { 2 } ( \varphi ) + r ^ { \prime 2 } ( \varphi ) } d \varphi .
+$$
+
+Dang 3 Cung $A B$ cho boi phuong trinh dang tham só
+
+$$
+\widetilde { A B } : \left\{ { \begin{array} { l } { x = x ( t ) } \\ { y = y ( t ) \geq 0 } \end{array} } \right. \quad t _ { 1 } \leq t \leq t _ { 2 } .
+$$
+
+Khi d6, dien tich mat tron xoay dugc dinh boi cong thuc
+
+$$
+S _ { H } = 2 \pi \intop _ { t _ { 1 } } ^ { t _ { 2 } } y ( t ) \sqrt { x ^ { \prime 2 } ( t ) + y ^ { \prime 2 } ( t ) } d t .
+$$
+
+Vi du 3.31. Cho duong cong cycloide cho boi phuong trinh dang tham so
+
+$$
+\widetilde { A B } : \left\{ \begin{array} { l l } { x = a ( t - \sin t ) } \\ { y = a ( 1 - \cos t ) } \end{array} \right. \quad 0 \leq t \leq 2 \pi , a > 0 .
+$$
+
+Tinh dién tich mat tron xoay khi xoay cung $\widetilde { A B }$ xung quanh truc $O x$ ：
+
+Gidi Theo cong thuc tinh dien tich mat tron xoay dang 3, ta c6
+
+$$
+\begin{array} { r l } & { S u _ { \tau } = 2 a \int _ { \gamma \cup \gamma } ^ { \theta } ( 1 - \cos ( \theta ) ) \sin \theta ^ { \prime } ( \theta ) d t } \\ & { \qquad \quad \frac { \sin \theta } { \sin \theta } } \\ & { \qquad = 2 a \int _ { \gamma \cup \gamma } ^ { \theta } ( 1 - \cos ( \theta ) ) ^ { \prime } d ( 1 - \cos ( \theta ) + a ) ^ { \prime } d s \tan ^ { 2 } u _ { \tau } } \\ & { \qquad \quad \frac { \sin \theta } { \sin \theta } } \\ & { \qquad = 4 a ^ { \prime } \sin ^ { 2 } \theta \big ( 1 - \cos ( \theta ) ) \sin \frac { \theta } { \sin \theta } \big ( 1 - \cos ( \theta ) \big ) } \\ & { \qquad \quad \frac { \sin \theta } { \sin \theta } } \\ & { \qquad \quad - 4 a ^ { \prime } \pi \int _ { \gamma \cup \gamma } ^ { \theta } ( 1 - \cos ( \theta ) ) \sin \frac { \theta } { 2 } d s } \\ & { \qquad \quad \frac { \sin \theta } { \sin \theta } } \\ & { \qquad \quad - 2 a ^ { \prime } \pi \int _ { \gamma \cup \gamma } ^ { \theta } ( 3 \sin \frac { \theta } { 2 } ) \sin \frac { \theta } { \phi } \big ( 1 - \cos ^ { 2 } \theta \big ) } \\ & { \qquad \quad - 2 a ^ { \prime } \pi \int _ { \gamma \cup \gamma } ^ { \theta } ( 3 \sin \frac { \theta } { 2 } ) \sin \frac { \theta } { \phi } \big ( 3 - \sin ^ { 2 } \theta \big ) . } \end{array}
+$$
+
+# 3.8. Tich phan voi can vo han
+
+# 3.8.1. Dinh nghia
+
+$^ +$ Cho ham $f ( x )$ kha tich tren $[ a , b ] \forall b > a$ . Neu ton tai huu han gioi han
+
+$$
+\operatorname* { l i m } _ { b  + \infty } \int _ { a } ^ { b } f ( x ) d x ,
+$$
+
+thi gioi han nay duoc goi la tich phan suy rong cua ham so $f ( x )$ v6i $\mathrm { c a n + \infty }$ va ky hieu la
+
+$$
+\int _ { a } ^ { + \infty } f ( x ) d x .
+$$
+
+Khi dó, ta noi rang tich phan $\stackrel { + \infty } { \int } f ( x ) d x$ hoi tu. Nguoc lai tich phan suy rong tren la phan ky.
+
+$+$ Tuong tu nhu vay, ta dinh nghia tich phan suy rong voi can -0o
+
+$$
+\operatorname* { l i m } _ { a \to - \infty } \int _ { a } ^ { b } f ( x ) d x = \int _ { - \infty } ^ { b } f ( x ) d x .
+$$
+
+（2 $+ \infty$ $+$ Tich phan suy rong cua ham só $f ( x )$ voi hai can +oo,-oo,ky hieula ʃ f(x)dx. 18
+
+Tich phan nay hoi tu khi va chi khi ca hai tich phan suy rong
+
+$$
+\int _ { a } ^ { + \infty } f ( x ) d x , \int _ { - \infty } ^ { b } f ( x ) d x \forall a , b \in \mathbb { R }
+$$
+
+cung hoi tu. Khi d6
+
+$$
+\int _ { - \infty } ^ { + \infty } f ( x ) d x = \int _ { a } ^ { + \infty } f ( x ) d x + \int _ { - \infty } ^ { a } f ( x ) d x \forall a \in \mathbb { R } .
+$$
+
+Vi du 3.32. Cho $a > 0$ , xét su hoi tu hay phan ky cua cac tich phan sau.
+
+$$
+\begin{array} { r l } & { \dot { \gamma } ^ { \infty } } \\ { \dot { i } \dot { \gamma } \ \stackrel { d \times } { \left( \begin{array} { l l } { \dot { \pi } } \\ { 0 } \end{array} \right) } \ \stackrel { d \times } { \left( \begin{array} { l l } { \dot { \pi } ^ { 2 } + a ^ { 2 } } \end{array} \right) } . } \\ & { \dot { \left. \begin{array} { l l } { 0 } \\ { \dot { \pi } ^ { 3 } } \end{array} \right) } \ \stackrel { d \times } { \left( \begin{array} { l l } { \dot { \pi } ^ { 2 } + a ^ { 2 } } \\ { - \frac { \pi } { x ^ { 2 } + a ^ { 2 } } } \end{array} \right) } . } \\ & { \qquad \dot { \gamma } ^ { \infty } } \\ & { \dot { i } \dot { i } \dot { \eta } \ \stackrel { d \times } { \left( \begin{array} { l l } { \dot { \pi } ^ { 2 } } \\ { - \infty } \end{array} \right) } \ \stackrel { d \times } { \sqrt { x ^ { 2 } + a ^ { 2 } } } \cdot } \\ & { \qquad \dot { \gamma } ^ { \infty } } \\ & { \dot { i } \dot { \nu } \stackrel { d \times } { \left( \begin{array} { l l } { \dot { \pi } ^ { 2 } } \\ { 1 } \end{array} \right) } \ \stackrel { d \times } { \left( \begin{array} { l l } { \dot { \pi } ^ { 2 } } \\ { - \dot { \pi } ^ { 2 } } \end{array} \right) } \ \stackrel { d \times } { \left( \begin{array} { l l } { \mathbb { R } . } \\ { 0 } \end{array} \right) } . } \end{array}
+$$
+
+Giai
+
+$$
+{ \begin{array} { c } { i \displaystyle ) \int _ { 0 } ^ { + \infty } { \frac { d x } { x ^ { 2 } + a ^ { 2 } } } = \operatorname* { l i m } _ { b \to + \infty } \int _ { 0 } ^ { b } { \frac { d x } { x ^ { 2 } + a ^ { 2 } } } } \\ { = \operatorname* { l i m } _ { b \to + \infty } { \frac { 1 } { a } } \arctan { \frac { x } { a } } { \Big | } _ { 0 } ^ { b } = { \frac { \pi } { 2 a } } } \end{array} }
+$$
+
+$$
+\begin{array} { l } { { \displaystyle i i \ j \int _ { - \infty } ^ { 0 } \left. \frac { x d x } { x ^ { 2 } + a ^ { 2 } } = \frac 1 2 \ln ( x ^ { 2 } + a ^ { 2 } ) \right| _ { - \infty } ^ { 0 } = - \infty \quad \mathrm { ( p h a n ~ k \hat { y } ) } . } } \\ { { \displaystyle \quad - \infty } } \\ { { \displaystyle i i i ) \int _ { - \infty } ^ { 0 } \left. \frac { d x } { x ^ { 2 } + a ^ { 2 } } = \frac { 1 } { a } \arctan { \frac { x } { a } } \right| _ { - \infty } ^ { 0 } + \left. \frac { 1 } { a } \arctan { \frac { x } { a } } \right| _ { 0 } ^ { + \infty } . } } \\ { { \displaystyle \qquad = \frac { \pi } { 2 a } + \frac { \pi } { 2 a } = \frac { \pi } { a } \quad \mathrm { ( h \hat { e } i ~ t ) } . } } \end{array}
+$$
+
+$$
+i v ) \int \displaylimits _ { 1 } ^ { + \infty } \frac { d x } { x ^ { \alpha } } = \left. \begin{array} { l l } { \frac { 1 } { ( 1 - \alpha ) x ^ { \alpha - 1 } } \Big | _ { 1 } ^ { + \infty } } & { \mathrm { \ n \lessgtr u ~ } \alpha \neq 1 } \\ { \ln x \Big | _ { 1 } ^ { + \infty } } & { \mathrm { \ n \lessgtr u ~ } \alpha = 1 . } \end{array} \right. = \left. \begin{array} { l l } { \frac { 1 } { \alpha - 1 } } & { \mathrm { \ n \lessgtr u ~ } \alpha > 0 } \\ { \mathrm { p h a n k y } } & { \mathrm { \ n \lessgtr u ~ } \alpha \leq 1 } \end{array} \right.
+$$
+
+Nhan xe $\ t 3 . 3 3 . 7 { \it i c h p h i a n s u y r } { \hat { \rho } } n g \int _ { a } ^ { + \infty } f ( x ) d x h \hat { \varrho } i t u k h i v \hat { a } c h i ^ { \prime } k h i \stackrel {  } { \int } f ( x ) d x \vee$ a hoi tu. That vay
+
+$$
+\int _ { a } ^ { + \infty } f ( x ) d x = \int _ { a } ^ { b } f ( x ) d x + \int _ { b } ^ { + \infty } f ( x ) d x .
+$$
+
+# 3.8.2. Cac dieu kien hoi tu cua tich phan suy rong
+
+Ta xét các dieu kien hoi tu cüa tich phan suy rong voi can $\mathrm { l } \mathrm { \hat { a } } + \infty$ ：
+
+Dinh ly 3.34. Cho ham s6 $f ( x ) \geq 0$ va kha tich trén $[ a , b ] \ \forall b > a$ Khi do
+
+$$
+\int _ { a } ^ { + \infty } f ( x ) d x h \acute { \varrho } i \ t u \ \qquad 
+$$
+
+khi va chi khi ham só
+
+$$
+\varphi ( x ) = \int _ { a } ^ { x } f ( t ) d t b i c h \underline { { { \breve { a } } } } n t r \hat { e } n
+$$
+
+tren $[ a , b ]$
+
+Ching minh Theo dinh nghia,
+
+$$
+\begin{array} { l } { \displaystyle { \int _ { a } ^ { + \infty } f ( x ) d x = \operatorname* { l i m } _ { x  + \infty } \varphi ( x ) . } } \end{array}
+$$
+
+Do $f ( x ) \geq 0$ ,nén $\varphi ( x )$ don dieu tang. Theo tinh chat cüa gioi han ham so don dieu, gioi han lim $\varphi ( x )$ ton tai khi va chi khi $\varphi ( x )$ bi chan tren tren $[ a , + \infty )$ .□ x→8
+
+Dinh ly 3.35. (Dau hieu so sánh)
+
+Cho hai ham so $f ( x ) , g ( x )$ kha tich trén $[ a , b ] ~ \forall b > 0 ~ \nu \dot { a }$ $$
+0 \leq f ( x ) \leq g ( x ) \forall x \in [ a , + \infty ) .
+$$
+
+Khi do,
+
+$$
+\begin{array} { l } { { + \infty } } \\ { { + \ N \hat { e } \tilde { u } \ \int \ g ( x ) d x \ h \hat { \varrho } i \ t { u } , \ t h i \ \stackrel { \ + \infty } { \int } \ f ( x ) d x \ h \hat { \varrho } i \ t { u } . } } \\ { { \ } } \\ { { \qquad \quad + \infty \ } } \\ { { + \ N \hat { e } \tilde { u } \ \int \ f ( x ) d x \ p h \hat { a } n \ k \hat { y } , \ t h i \ \stackrel { \ } { \int } \ g ( x ) d x \ p h \hat { a } n \ k \hat { y } . } } \\ { { \ } } \\ { { \qquad \quad { \quad } a } } \end{array}
+$$
+
+Ching minh
+
+$+ \mathrm { N } \tilde { \mathrm { e } } \mathrm { u } \underset { a } { \overset { } { \int } } g ( x ) d x \mathrm { h } \hat { \mathrm { o } } \mathrm { i }$ tu, thi theo dinh ly 3.34, ta có $\begin{array} { c } { { b } } \\ { { \int g ( x ) d x \leq M \forall b > a } } \end{array}$ . Mat a   
+khac, tur $f ( x ) \leq g ( x ) \forall x \in [ a , + \infty )$ suy ra $\begin{array} { r } { \varphi ( b ) = \int _ { a } ^ { b } f ( x ) d x \leq \intop _ { a } ^ { b } f ( x ) d x \leq } \end{array}$   
+$M \ \forall b > a$ . Theo dinh ly 3.34, ta c6 $\begin{array} { l } { { + \infty } } \\ { { \int \displaylimits } } \\ { { 0 } } \end{array} { f ( x ) d x \mathrm { ~ h } \hat { \mathrm { { 0 } } } \mathrm { { i } } }$ tu. （20 $+ \infty$ （20 （20 $\begin{array} { l } { + \infty } \\ { \int \ g ( x ) d x } \\ { 0 } \end{array}$   
++ Néu S f(x)dx phan ky, thi phan ky. Ta chung minh bäng phän a   
+chung va sur dung chung minh tren. □
+
+Vi du 3.36. Xet su hoi tu hay phan ky cua tich phan
+
+$$
+\int _ { \mathrm { ~ 1 ~ } } ^ { + \infty } { \frac { \displaystyle x d x } { \displaystyle 2 x ^ { 5 } + x ^ { 2 } - 1 } } .
+$$
+
+$\begin{array} { r } { f ( x ) = \frac { x d x } { 2 x ^ { 5 } + x ^ { 2 } - 1 } \geq 0 \forall x \geq 1 } \end{array}$ 麥泊 $\begin{array} { r } { f ( x ) \leq g ( x ) = \frac { 1 } { x ^ { 4 } } \forall x \geq 2 . } \end{array}$ Mat khac
+
+$$
+\int _ { 1 } ^ { + \infty } g ( x ) d x = \int _ { 1 } ^ { + \infty } \frac { 1 } { x ^ { 4 } } d x = - \frac { 1 } { 3 x ^ { 3 } } \Big | _ { 1 } ^ { + \infty } = \frac { 1 } { 3 } .
+$$
+
+（ $\prod _ { 1 } ^ { + \infty } { \frac { x d x } { 2 x ^ { 5 } + x ^ { 2 } - 1 } } { \mathrm { ~ h } } { \hat { \mathrm { p } } } { \mathrm { i } }$ 1Theo dinh ly 3.35, tu.
+
+Dinh ly 3.37. (Dau hieu gioi han)
+
+Cho hai ham so $f ( x ) , g ( x )$ kha tich tren $[ a , b ] \ \forall b > 0 , f ( x ) \geq 0 . g ( x ) \geq 0 \ \forall x \geq a$ （2   
+vd 1
+
+$$
+\operatorname* { l i m } _ { b  + \infty } \frac { f ( x ) } { g ( x ) } = M \geq 0 .
+$$
+
+Khi d6,
+
+$\stackrel { + \infty } { \int } f ( x ) d x$ （20 $\begin{array}{c} \begin{array} { l } { { \begin{array} { l } { + \infty } \\ { \int } \end{array} } g ( x ) d x } \\ { a } \end{array}  \end{array}$ i) Neu $M \in ( 0 , + \infty )$ ,thi hoi tu (phan ky) khi va chi khi hoi tu (phan ky).
+
+$$
+\begin{array} { l } { { \ddot { \imath } \jmath \ { \hat { e } } u \ M = 0 \ \nu \ \overset { + \infty } { a } \ g ( x ) d x \ h \hat { \varrho } i \ t u , \ t h \overset { + \infty } { \underset { a } { \int } } \ f ( x ) d x \ h \hat { \varrho } i \ t u . } } \\ { { \nonumber } } \\ { { \overbrace { { \imath } i \jmath } \ { \cal N } \hat { e } \ u \ M = + \infty \ \nu \overset { + } { a } \ \int \ g ( x ) d x \ p h \hat { a } n \ k \overset { + } { \overbrace { \int } } \ f ( x ) d x \ p h \hat { a } n \ k \overset { + } { \overbrace { \int } } . } } \end{array}
+$$
+
+Ching minh i) Gia sur $M \in ( 0 , + \infty )$ , theo dinh nghia,
+
+$$
+\cdot \epsilon > 0 , \exists > 0 \forall x > x \Rightarrow | \frac { f ( x ) } { g ( x ) } - M | < \epsilon \Rightarrow M - \epsilon < \frac { f ( x ) } { g ( x ) } < M + \epsilon
+$$
+
+$$
+\Rightarrow ( M - \epsilon ) g ( x ) < f ( x ) < ( M + \epsilon ) g ( x ) .
+$$
+
+Theo dinh ly $\begin{array} { l l } { \gamma \ 3 . 3 5 , \ H } \\ { \textup { \texttt { \ i } } _ { a } ^ { + \infty } \ f ( x ) d x \ \mathrm { h } \mathring { \mathfrak { g } } ^ { \mathrm { \ i } } \ \mathfrak { t } , \ \mathrm { w h } \ ; \ \textup { r a y } \ \textup { r a } \int \big ( M + \epsilon ) g ( x ) d x \ \Rightarrow \textup { \textstyle \int } g ( x ) d x } \\ { \ + \infty } \\ { \int \displaylimits _ { a } ^ { + \infty } g ( x ) d x \ \mathrm { h } \mathring { \mathfrak { g } } ^ { \mathrm { \ i } } \ \mathfrak { t } \mathfrak { h } \ \ \overset { \mathrm { i } } { \underset { a } { \int } } \ ( M - \epsilon ) g ( x ) d x \ \mathrm { h } \mathring { \mathfrak { g } } ^ { \mathrm { \ i } } \ \mathfrak { t } , \ \mathrm { s u p } \ \textup { r a } \int \displaylimits _ { a } ^ { + \infty } f ( x ) d x \ \ \mathrm { h } \mathring { \mathfrak { g } } ^ { \mathrm { \ i } } } \\ { \textup { \texttt { \ i } } _ { a } ^ { + \infty } } \\ { \textup { \texttt { \ i } } \int \displaylimits } \ f ( x ) d x \ \mathrm { h } \mathring { \mathfrak { g } } ^ { \mathrm { \ i } } \ \mathrm { t u } \ \mathrm { k h i } \ \ \mathrm { v a } \ \mathrm { c h } \mathrm { i } \ \ \mathrm { k h i } \ \ \textup { \textup { \texttt { \ i } } } \int \ g ( x ) d x \ \mathrm { h } \mathring { \mathfrak { g } } ^ { \mathrm { \ i } } \ \mathfrak { t } . \ \mathrm { P h i a } \ \mathrm { k } \mathrm { \dot { y } } \ \ \mathrm { d u o }  \end{array}$ hoi tu. Neu （204 tu. Nhu vay ） chung minh tuong tu.
+
+ii) Gia sur $M = 0$ va （20 $\begin{array} { l } { + \infty } \\ { \int \displaylimits _ { a } ^ { \infty } g ( x ) d x } \end{array}$ hoi tu. Tu dinh nghia   
+b $\operatorname* { l i m } _ { \to + \infty } \frac { f ( x ) } { g ( x ) } = 0 \Leftrightarrow \forall \epsilon > 0 , \exists b , \forall x > b \Rightarrow | \frac { f ( x ) } { g ( x ) } | < \epsilon \Rightarrow 0 \leq f ( x ) < \epsilon$ g(x)   
+va （20 $\begin{array} { l } { + \infty } \\ { \int \ g ( x ) d x } \\ { a } \end{array}$ hQi tu, suy ra $\stackrel { + \infty } { \int } f ( x ) d x$ hoi tu. 一   
+ii) Gia sur $M = + \infty$ va $\begin{array} { l } { + \infty } \\ { \int \displaylimits _ { a } ^ { \infty } g ( x ) d x } \end{array}$ phan ky. Ta co ?
+
+$$
+\operatorname* { l i m } _ { b  + \infty } \frac { f ( x ) } { g ( x ) } = + \infty \Leftrightarrow \forall K > 0 , \exists b > 0 , \forall x > b
+$$
+
+$$
+\Rightarrow | { \frac { f ( x ) } { g ( x ) } } | > K \Rightarrow f ( x ) > K g ( x ) \forall x > b .
+$$
+
+Theo dinh ly 3.37 va gia thiet +0 g(x)dx phan ky, ta có （20 $\stackrel { + \infty } { \int } f ( x ) d x$ phan ky. a
+
+Vi du 3.38. Xet su hoi tu hay phan ky cua tich phan sau
+
+$$
+I _ { 1 } = \int \displaylimits _ { 1 } ^ { + \infty } \frac { ( 2 x ^ { 2 } + 1 ) d x } { x ^ { 3 } \sqrt [ 3 ] { x ^ { 4 } + 2 x + 1 } } , I _ { 2 } = \int \displaylimits _ { 3 } ^ { + \infty } \frac { \ln ( x - 2 ) d x } { 3 x ^ { 3 } + x ^ { 2 } + 1 } .
+$$
+
+$G i \dot { a } i + \mathrm { X e t } \ I _ { 1 }$ voi ham so $\begin{array} { r } { f ( x ) = \frac { ( 2 x ^ { 2 } + 1 ) } { x ^ { 3 } \sqrt [ 3 ] { x ^ { 4 } + 2 x + 1 } } \geq 0 \forall x \geq 1 . } \end{array}$ Dat
+
+$$
+g ( x ) = \frac { x ^ { 2 } } { x ^ { 3 } \sqrt [ 3 ] { x ^ { 4 } } } \geq 0 \forall x \geq 1 \Rightarrow \operatorname* { l i m } _ { x  + \infty } \frac { f ( x ) } { g ( x ) } = 2 \in ( 0 , + \infty ) .
+$$
+
+Mat khac, theo vi du 3.32, $\begin{array} { l } { { \begin{array} { l } { + \infty } \\ { \int } \end{array} } g ( x ) d x } \\ { { \begin{array} { l } { 1 } \end{array} } } \end{array}$ hoi tu. Do vay $I _ { 1 }$ hoi tu. $\begin{array} { r } { \mathrm { X e t ~ } I _ { 2 } , f ( x ) = \frac { \ln ( x - 2 ) } { 3 x ^ { 3 } + x ^ { 2 } + 1 } \geq 0 \forall x \geq 3 , g ( x ) = \frac { \ln x } { x ^ { 3 } } \geq 0 \forall x \geq 3 . } \end{array}$ Khi d6, theo quy tac L'Hospital, ta có
+
+$$
+\operatorname* { l i m } _ { x \to + \infty } { \frac { f ( x ) } { g ( x ) } } = \operatorname* { l i m } _ { x \to + \infty } { \frac { x ^ { 3 } } { 3 x ^ { 3 } + x ^ { 2 } + 1 } } { \frac { \ln ( x - 2 ) } { \ln x } } = \operatorname* { l i m } _ { x \to + \infty } { \frac { 1 } { 3 } } { \frac { \ln ( x - 2 ) } { \ln x } }
+$$
+
+$$
+= \operatorname* { l i m } _ { x  + \infty } \frac { 1 } { 3 } \frac { \frac { 1 } { x - 2 } } { \frac { 1 } { x } } = \frac { 1 } { 3 } \in ( 0 , + \infty ) .
+$$
+
+Mat khac （204 $\begin{array}{c} \begin{array} { l } { { \begin{array} { l } { { + \infty } } \\ { { \int } } \end{array} { g ( x ) d x } \ = \begin{array} { l } { { + \infty } } \\ { { \int } } \end{array} { x ^ { - 3 } } \ln { x d x } } \\ { { 3 } } \end{array} } \end{array}$ hoi tu (Dung tich phan ting phan voi $u = \ln x$ ，   
+$d v = x ^ { - 3 } d x )$ .Vay $I _ { 2 }$ hoi tu. 3.8.3. Hoi tu tuyet doi va ban hoi tu   
+$+$ Tich phan suy rong $\stackrel { + \infty } { \int } f ( x ) d x$ duqc goi la hoi tu tuyét doi, neu （204 ${ \underset { a } { \overset { \scriptstyle + \infty } { \prime } } } | f ( x ) | d x$ hoi tu.   
+$+$ Tich phan suy rong $\stackrel { + \infty } { \int } f ( x ) d x$ duqc goi la ban hoi tu, neéu $\begin{array}{c} \begin{array} { l } { { \begin{array} { l } { { + \infty } } \\ { { \int } } \end{array} } f ( x ) d x { \mathrm { ~ h } } { \mathrm { ~ } } { \mathrm { i } } } \\ { a } \end{array}  \end{array}$ tu va a   
+tich phan （20 $\begin{array} { r } { \underset { a } { \overset { } { \mathop { + } } } \mathcal { \infty } | f ( x ) | d x \mathrm { \ p h a n \ k \grave { y } . } } \end{array}$ 1   
+Dinh ly 3.39. (khong chitng minh) $+ \infty$ +8   
+Neu f If(x)|dx hoi tu, thi J f(x)dx cung hoi tu. Dieu nguoc lai có the khong a a   
+dung. 一
+
+Vi du 3.40. i) Xet su hoi tu cua tich phan
+
+$$
+I _ { 1 } = \int _ { 1 } ^ { + \infty } \frac { \cos { x } } { x ^ { 2 } } d x .
+$$
+
+ii) Cho tich phan
+
+$$
+I _ { 2 } = \int _ { 1 } ^ { + \infty } \frac { \sin { x } } { x } d x .
+$$
+
+Ching minh rang: $I _ { 2 }$ ban hoi tu.
+
+Gidi i) Ta c6
+
+$$
+0 \leq \frac { | \cos x | } { x ^ { 2 } } \leq \frac { 1 } { x ^ { 2 } } \forall x \geq 1 \mathrm { \ v a } \int \frac { 1 } { x ^ { 2 } } d x = 1 .
+$$
+
+Do d6 $I _ { 1 }$ hoi tu (Do dinh ly 3.39).
+
+ii) $I _ { 2 }$ hoi tu.
+
+That vay,
+
+$$
+I _ { 2 } = \int _ { 1 } \frac { + \infty } { x } \mathrm { d } x = \int _ { 1 } ^ { + \infty } \frac { 1 } { x } d ( - \cos x ) = - \frac { \cos x } { x } \Big | _ { 1 } ^ { + \infty } + \int _ { 1 } ^ { + \infty } \frac { - 1 } { x ^ { 2 } } \cos x d x .
+$$
+
+Ma $\operatorname* { l i m } _ { x \to + \infty } { \frac { 1 } { x } } \cos x = 0$ va theo i), $\begin{array} { r } { I _ { 1 } = \underset { 1 } { \overset { } { \int } } \frac { \cos x } { x ^ { 2 } } d x } \end{array}$ hoi tu. Do vay $I _ { 2 }$ hoi tu.   
+$I _ { 2 }$ khong hoi tu tuyet doi.
+
+That vay, tr bat dang thuc
+
+$$
+\Big | \frac { \sin x } { x } \Big | \geq \frac { \sin ^ { 2 } x } { x } ~ \forall x \geq 1 ,
+$$
+
+ta xét tich phan $\begin{array} { r } { J = \begin{array} { l } { \int } \\ { 1 } \end{array} \frac { \sin ^ { 2 } x } { x } d x } \end{array}$
+
+$$
+J = \int _ { 1 } ^ { + \infty } { \frac { 1 - \cos 2 x } { 2 x } } d x = { \frac { 1 } { 2 } } \int _ { 1 } ^ { + \infty } { \frac { 1 } { x } } d x - \int _ { 1 } ^ { + \infty } { \frac { \cos 2 x } { 2 x } } d x .
+$$
+
+Tuong tu nhu $I _ { 2 }$ ,ta $\mathrm { d } \tilde { \hat { \mathrm { e } } }$ dang chung minh duoc （ $\begin{array} { l } { { \bf \Xi } + \infty } \\ { { \bf \Xi } \displaystyle { \int \mathrm { ~ \frac { \cos { 2 \it x } } { 2 { \it x } } d } { \it x } } } \end{array}$ hoi tu. Tu
+
+$$
+\int \frac { 1 } { x } d x = \operatorname* { l i m } _ { b  + \infty } \ln x \Big | _ { 1 } ^ { b } = + \infty
+$$
+
+suy ra $J = + \infty$ . Hay $\begin{array} { r } { \int _ { 1 } ^ { + \infty } { \left| \frac { \sin x } { x } \right| } d x } \end{array}$ phan ky. Vay $I _ { 2 }$ khong hoi tu tuyet doi
+
+3.9. Tich phan suy rong voi can huu han
+
+# 3.9.1. Dinh nghia
+
+$^ +$ Cho ham só $f ( x )$ khä tich tren $[ a , c ] \ \forall c \in ( a , b )$ va $\operatorname* { l i m } _ { x \to b ^ { - } } f ( x ) = \infty$ . Khi d6
+
+$$
+I = \operatorname* { l i m } _ { c  b ^ { - } } \int f ( x ) d x
+$$
+
+dugc goi la tich phan suy rong voi cuc diem $b$ va ky hieu la $\begin{array} { r l } {  { b } } \\ & { { } \int f ( x ) d x . \operatorname { N } \hat { \mathbf { e } } \mathbf { u } I } \\ { \quad a } \end{array}$ t6n tai huu han, thi $\begin{array} { l } { { b } } \\ { { \int f ( x ) d x } } \end{array}$ dugc goi la hoi tu. Nguqc lai, goi la phan ky. a   
+（20 $^ +$ Cho ham só $f ( x )$ khä tich tren $[ c , b ] \forall c \in ( a , b )$ va $\operatorname* { l i m } _ { x \to a ^ { + } } f ( x ) = \infty$ . Khi d6
+
+$$
+I = \operatorname* { l i m } _ { c \to a ^ { + } } \int f ( x ) d x
+$$
+
+dugc goi la tich phan suy rong voi cuc diem $a$ va ky hieu la $\begin{array} { l } { b } \\ { \int f ( x ) d x . { \mathrm { N } } \hat { \mathbf { e } } { \mathbf { u } } I } \\ { a } \end{array}$ t6n   
+tai huu han, thi $\stackrel { b } { \int } f ( x ) d x$ duoc goi la hoi tu. Ngugc lai, goi la phan ky. a   
+$+$ Cho ham só $f ( x )$ khä tich tren $[ c , b ] \forall c \in ( x _ { 0 } , b )$ ，va $[ a , c ] \forall c \in ( a , x _ { 0 } )$ va   
+$\operatorname* { l i m } _ { x \to x _ { 0 } } f ( x ) = \infty$ . Khi d6 $\stackrel { b } { \int } f ( x ) d x$ duoc goi la tich phan suy rong voi cuc diem a   
+（20 $x _ { 0 }$ . Neu $\stackrel { x _ { 0 } } { \int } f ( x ) d x$ va $\begin{array} { r l } { ~ } & { { } _ { b } ^ { b } } \\ { \int f ( x ) d x ~ } & { { } \mathrm { { h } \hat { \mathrm { o } } i } } \\ { x _ { 0 } } & { { } } \end{array}$ tu,thi $\stackrel { b } { \int } f ( x ) d x$ duoc goi la hoi tu. Nguoc a a   
+lai, goi la phan ky.   
+$+$ Cho ham só $f ( x )$ khä tich tren $[ c , b ] \forall b > c > a$ va $\operatorname* { l i m } _ { c \to a ^ { + } } f ( x ) = \infty$ Khi d6 （20   
+$\stackrel { + \infty } { \int } f ( x ) d x$ duqc goi la tich phan suy róng voi cuc diém $x _ { 0 }$ va cän vo han. Neu   
+（20 $a$ □   
+（20 $b$ （20 +8 +8   
+$\textstyle \int f ( x ) d x$ va f f(x)dx hoi tu, thi S f(x)dx duoc goi la hoi tu. Nguoc lai, goi   
+$a$ b a   
+la phan ky. ?
+
+Vi du 3.41. Tinh tich phan suy rong
+
+$$
+\int \limits _ { a } ^ { b } \frac { d x } { ( x - a ) ^ { \alpha } } ( a < b , \alpha \in \mathbb { R } ) .
+$$
+
+Giai Neu $\alpha > 0$ ，thi 4wa = +o = x = a la cuc diem. Ta xét cac truong hop sau:
+
+$+ \ N @ \mathrm { u } \ \alpha > 1$ ,thi
+
+$$
+\int _ { \imath } ^ { b } \frac { d x } { ( x - a ) ^ { \alpha } } = \int _ { a } ^ { b } ( x - a ) ^ { - \alpha } d ( x - a ) = \frac { 1 } { ( 1 - \alpha ) ( x - a ) ^ { \alpha - 1 } } \Big | _ { a } ^ { b } = + \infty .
+$$
+
++ Néu $\alpha = 1$ ,thi
+
+$$
+\int _ { a } ^ { b } { \frac { d x } { x - a } } = \ln ( x - a ) { \Big | } _ { a } ^ { b } = + \infty .
+$$
+
++ Néu $\alpha < 1$ , thi
+
+$$
+{ \frac { d x } { - a ) ^ { \alpha } } } = \int _ { a } ^ { b } ( x - a ) ^ { - \alpha } d ( x - a ) = { \frac { 1 } { 1 - \alpha } } ( x - a ) ^ { 1 - \alpha } \bigg | _ { a } ^ { b } = { \frac { 1 } { ( 1 - \alpha ) ( b - a ) } } .
+$$
+
+Nhu vay
+
+$$
+\int _ { a } ^ { b } \frac { d x } { ( x - a ) ^ { \alpha } } = \left\{ \begin{array} { l l } { + \infty } & { \mathrm { n } \tilde { \epsilon } \mathbf { u } ~ \alpha \geq 1 } \\ { \frac { 1 } { ( 1 - \alpha ) ( b - a ) ^ { \alpha - 1 } } } & { \mathrm { n } \tilde { \epsilon } \mathbf { u } ~ \alpha < 1 . } \end{array} \right.
+$$
+
+# 3.9.2. Quan he giua hai loai tich phan suy rong
+
+Xét tich phan suy rong voi can hiu han có cuc diém $a$
+
+$$
+\int _ { a } ^ { b } f ( x ) d x .
+$$
+
+D6i bien $\begin{array} { r } { x = a + \frac { 1 } { y }  a ^ { + } \Leftrightarrow y  + \infty } \end{array}$ ,ta c6
+
+$$
+\quad : x = \operatorname* { l i m } _ { c \to a ^ { + } } \int { f ( x ) d x } = \operatorname* { l i m } _ { y \to + \infty } \int { f ( a + { \frac { 1 } { y } } ) { \frac { ( - d y ) } { y ^ { 2 } } } } = \operatorname* { l i m } _ { y \to + \infty } \int _ { { \frac { 1 } { b - a } } } ^ { y } { \frac { f ( a + { \frac { 1 } { y } } ) } { y ^ { 2 } } }
+$$
+
+Nhu vay
+
+$$
+\int _ { a } ^ { b } f ( x ) d x = \int _ { \alpha } ^ { + \infty } g ( x ) d x { \mathrm { ~ } } { \mathrm { ~ v { \dot { o } } i ~ } } g ( x ) = { \frac { f ( a + { \frac { 1 } { x } } ) } { x ^ { 2 } } } , \alpha = { \frac { 1 } { b - a } } .
+$$
+
+# 3.9.3. Cac dinh ly hoi tu
+
+Tuong tur nhu chung minh doi voi tich phan suy rong voi can vo han. Ta có cac dinh ly duoi day.
+
+Dinh ly 3.42. (Dau hiéu so sanh)
+
+$$
+s \delta \quad 0 \leq f ( x ) \leq g ( x ) \forall x \in [ a , b ) \nu \dot { a } \operatorname* { l i m } _ { x \to b ^ { + } } f ( x ) = \operatorname* { l i m } _ { x \to b ^ { + } } g ( x ) = + \infty .
+$$
+
+Vi du 3.43. Khao sát su hoi tu cua tich phan
+
+$$
+I = \int _ { 0 } ^ { 1 } { \frac { \lvert \ln x \rvert } { x ^ { \alpha } } } d x \quad ( \alpha \in \mathbb { R } ) .
+$$
+
+Giai Truong hop $\boldsymbol { I }$ . Néu $\alpha < 1$ ,Dat $\epsilon = 1 - \alpha$ ,khi d6 $\epsilon > 0$ . Ta c6
+
+$$
+\frac { | \ln x | } { x ^ { \alpha } } = \frac { | \ln x | } { x ^ { 1 - \epsilon } } = \frac { x ^ { \frac { \epsilon } { 2 } } | \ln x | } { x ^ { 1 - \frac { \epsilon } { 2 } } } .
+$$
+
+Tu $\operatorname* { l i m } _ { x  0 ^ { + } } x ^ { \frac { \epsilon } { 2 } } | \ln x | = 0$ suy ra ton tai $x _ { 0 }$ sao cho
+
+$$
+\left. x ^ { \frac { \epsilon } { 2 } } \right| \ln x | < 1 \forall x \in ( 0 , x _ { 0 } ) .
+$$
+
+Vay
+
+$$
+\frac { | \ln x | } { x ^ { \alpha } } = \frac { x ^ { \frac { \epsilon } { 2 } } | \ln x | } { x ^ { 1 - \frac { \epsilon } { 2 } } } < \frac { 1 } { x ^ { 1 - \frac { \epsilon } { 2 } } } . \forall x \in ( 0 , x _ { 0 } ) .
+$$
+
+Theo vi du 3.41, ta có $\int \limits _ { 0 } ^ { 1 } \frac { 1 } { x ^ { 1 - \frac { \epsilon } { 2 } } } d x$ hoi tu. Khi d6, theo dinh ly 3.42, tich phan $I$ hoi tu.
+
+Dinh ly 3.44. (Dau hiéu gioi han)
+
+Cho cac ham $s \delta ^ { \prime } 0 \leq f ( x ) , 0 \leq g ( x ) \forall x \in [ a , b ) , \operatorname* { l i m } _ { x \to b ^ { + } } f ( x ) = \operatorname* { l i m } _ { x \to b ^ { + } } g ( x ) = + \infty .$ vd
+
+$$
+\operatorname* { l i m } _ { x  b ^ { + } } { \frac { f ( x ) } { g ( x ) } } = M \geq 0 .
+$$
+
+Khi d6
+
+Vi du 3.45. Khao sat su hoi tu cüa cac tich phan sau
+
+$$
+\begin{array} { r l } & { I _ { 1 } = \displaystyle \int _ { 0 } ^ { 1 } \frac { d x } { \sqrt { ( 1 - x ^ { 2 } ) ( 1 - k ^ { 2 } x ^ { 2 } ) } } ~ \nu \dot { o t } ~ \vert k \vert < 1 . } \\ & { I _ { 2 } = \displaystyle \int _ { 0 } ^ { 1 } \frac { d x } { \sqrt [ 3 ] { x ( e ^ { x } - e ^ { - x } ) } } . } \\ & { I _ { 3 } = \displaystyle \int _ { 0 } ^ { \frac { \pi } { 2 } } \frac { \ln ( \sin x ) } { \sqrt { x } } d x . } \end{array}
+$$
+
+Giai
+
+- Xet $I _ { 1 }$ ：
+
+D0 $| k | < 1 \mathrm { \ n { \hat { e } n } } 1 - k ^ { 2 } x ^ { 2 } > 0 \forall x \in [ 0 , 1 ]$ Xet gioi han
+
+$$
+\operatorname* { l i m } _ { x \to 1 ^ { - } } { \frac { 1 } { \sqrt { ( 1 - x ^ { 2 } ) ( 1 - k x ^ { 2 } ) } } } = + \infty .
+$$
+
+Vay $x = 1$ la cuc diem.
+
+Dat
+
+$$
+f ( x ) = { \frac { 1 } { \sqrt { ( 1 - x ^ { 2 } ) ( 1 - k ^ { 2 } x ^ { 2 } ) } } } , g ( x ) = { \frac { 1 } { 1 - x } } = { \frac { 1 } { ( 1 - x ) ^ { \frac { 1 } { 2 } } } }
+$$
+
+$$
+\stackrel { } { > } \operatorname* { l i m } _ { x  1 ^ { - } } \frac { f ( x ) } { g ( x ) } = \operatorname* { l i m } _ { x  1 ^ { - } } \frac { 1 } { \sqrt { ( 1 + x ) ( 1 - k ^ { 2 } x ^ { 2 } ) } } = \frac { 1 } { \sqrt { 2 ( 1 - k ^ { 2 } ) } } \in ( 0 , + \infty ) .
+$$
+
+Theo vi du 3.41, $\begin{array} { r l } {  { \int { \frac { d x } { \sqrt { 1 - x } } \ \mathrm { h } \hat { \mathrm { 0 i } } } } } \\ { \quad 0 } \end{array}$ dhoi tu. Khi d6,theo dinh ly 3.44,I1 hoi tu. - Xet $I _ { 2 }$ ：
+
+Xet gioi han
+
+$$
+\operatorname* { l i m } _ { x \to 0 ^ { + } } \frac { 1 } { \sqrt [ 3 ] { x ( e ^ { x } - e ^ { - x } ) } } = \operatorname* { l i m } _ { x \to 0 ^ { + } } \sqrt [ 3 ] { \frac { e ^ { x } } { x ( e ^ { 2 x } - 1 ) } } = + \infty .
+$$
+
+Dit $\textstyle g ( x ) = { \frac { 1 } { \sqrt [ { 3 } ] { x ^ { 2 } } } }$ suy ra
+
+$$
+\operatorname* { l i m } _ { x \to 0 ^ { + } } { \frac { f ( x ) } { g ( x ) } } = { \frac { 1 } { \sqrt [ 3 ] { 2 } } } \in ( 0 ; + \infty ) .
+$$
+
+Ma $\begin{array} { r } { \int ^ { 1 } g ( x ) d x = 3 } \\ { 0 } \end{array}$ hoi tu. Vay $\tilde { \mathcal { I } _ { 2 } }$ hoi tu. （204   
+- Xet $I _ { 3 }$ ：
+
+Dé dang thay $x = 0$ la cuc diem. Dat
+
+$$
+f ( x ) = { \frac { \ln ( \sin x ) } { \sqrt { x } } } , g ( x ) = { \frac { 1 } { x ^ { \lambda } } } { \mathrm { ~ v \dot { o } i ~ } } \lambda \in ( { \frac { 1 } { 2 } } , 1 ) .
+$$
+
+Theo quy tac L'Hospital, ta c6
+
+$$
+\begin{array} { l } { \displaystyle \operatorname* { l i m } _ { x  0 ^ { + } } \frac { f ( x ) } { g ( x ) } = \displaystyle \operatorname* { l i m } _ { x  0 ^ { + } } \frac { \ln ( \sin { x } ) } { x ^ { \frac { 1 } { 2 } - \lambda } } } \\ { = \displaystyle \operatorname* { l i m } _ { x  0 ^ { + } } \frac { \cot x } { ( \frac { 1 } { 2 } - \lambda ) x ^ { - \frac { 1 } { 2 } - \lambda } } } \\ { = \displaystyle \operatorname* { l i m } _ { x  0 ^ { + } } \frac { x ^ { \frac { 1 } { 2 } + \lambda } } { ( \frac { 1 } { 2 } - \lambda ) \tan x } } \\ { = \displaystyle \operatorname* { l i m } _ { x  0 ^ { + } } \frac { x ^ { \frac { 1 } { 2 } + \lambda } } { ( \frac { 1 } { 2 } - \lambda ) x } } \\ { = 0 . } \end{array}
+$$
+
+Theo vi du 3.41, $\begin{array} { l } { { \mathbf \Lambda } _ { { 0 } } ^ { { 1 } } \qquad \quad \overset { \quad } { \int } g ( x ) d x } \\ { { 0 } \qquad \quad \qquad \quad \mathrm { ~ } } \end{array}$ hoi tu, nen $I _ { 3 }$ hoi tu.
+
+# BAI TAP CHUONG 3.
+
+Bai 3.1. Dung dinh nghia, tinh các tich phan sau:
+
+$\mathrm { d s } : \frac { 1 } { 3 } .$ （20 ds : 1. $\mathrm { d s } : - \frac { 1 } { 3 } .$
+
+1) $\begin{array} { l } { \displaystyle \int _ { 0 } ^ { 1 } x ^ { 2 } d x } \\ { \displaystyle \frac { 0 } { \frac { \pi } { 2 } } } \\ { \displaystyle \int _ { 0 } ^ { \frac { \pi } { 2 } } \sin x d x } \\ { \displaystyle \frac { \frac { \pi } { 2 } } { \int _ { 0 } ^ { \frac { \pi } { 2 } } \cos 2 x d x } } \end{array}$   
+2)   
+3 （20
+
+Bai 3.2. Dung t6ng tich phan, tim cac gioi han sau:
+
+1 $\begin{array} { r l } & { \operatorname* { l i m } _ { \mathbf { x } \in \mathcal { X } _ { 1 } } \left( \int _ { \mathbb { R } _ { + + } } | \mathbf { x } _ { 1 } | \ \int _ { \mathbb { R } _ { + } } | \int _ { \mathbb { R } _ { + } } | \mathbf { x } _ { 2 } | \ \right) } \\ & { \operatorname* { l i m } _ { \mathbf { x } \in \mathcal { X } _ { 2 } } \left( \frac { 1 } { \eta _ { \mathbf { x } } \eta _ { \mathbf { x } } } \ \Big | ^ { 2 } + \frac { \mathcal { X } _ { 1 } } { \eta _ { \mathbf { x } } + \eta _ { \mathbf { x } } } \ \Big | - \frac { \mathcal { X } _ { 1 } } { \eta _ { \mathbf { x } } \eta _ { \mathbf { x } } } \ \Big | \ \right) } \\ & { \operatorname* { l i m } _ { \mathbf { x } \in \mathcal { X } _ { 1 } } \left( \lVert \mathbf { i } - \frac { \mathcal { X } _ { 2 } } { \eta _ { \mathbf { x } } } \rVert ^ { 2 } \lVert \mathbf { 1 } - \frac { \mathcal { X } _ { 2 } } { \eta _ { \mathbf { x } } \eta _ { \mathbf { x } } } \rVert ^ { 2 } \right) } \\ & { \operatorname* { l i m } _ { \mathbf { x } \in \mathcal { X } _ { 1 } } \left( \lVert \mathbf { i } - \frac { \mathcal { X } _ { 2 } } { \eta _ { \mathbf { x } } } \rVert ^ { 2 } \lVert \mathbf { 1 } - \frac { \mathcal { X } _ { 2 } } { \eta _ { \mathbf { x } } \eta _ { \mathbf { x } } } \rVert ^ { 2 } \right) } \\ & { \operatorname* { l i m } _ { \mathbf { x } \in \mathcal { X } _ { 1 } } \left( \lVert \mathbf { x } _ { 1 } - \frac { \mathcal { X } _ { 2 } } { \eta _ { \mathbf { x } } \eta _ { \mathbf { x } } } \rVert ^ { 2 } \right) } \\ & { \operatorname* { l i m } _ { \mathbf { x } \in \mathcal { X } _ { 1 } } \left( \lVert \mathbf { x } _ { 1 } - \mathcal { X } _ { 2 } \rVert ^ { 2 } \right) } \\ & { \operatorname* { l i m } _ { \mathbf { x } \in \mathcal { X } _ { 1 } } \left( \lVert \mathbf { x } _ { 1 } - \mathcal { X } _ { 2 } \rVert ^ { 2 } \right) } \\ & { \operatorname* { l i m } _ { \mathbf { x } \in \mathcal { X } _ { 1 } } \left( \lVert \mathbf { x } _ { 1 } - \mathcal { X } _ { 2 } \rVert ^ { 2 } \right) } \\ & { \operatorname* { l i m } _ { \mathbf { x } \in \mathcal { X } _ { 1 } } \left( \lVert \mathbf { x } _ { 1 } \rVert ^ { 2 } \lVert \mathbf { x } _ { 2 } - \dots + \langle \mathbf { x } _ { N } \rVert ^ { 2 } \right) } \\ &  \operatorname* { l i m } _  \mathbf  \end{array}$ （20 $\mathrm { d s } : \ln 2$ ，   
+2) ds :In2-1   
+3 ds:   
+4 ds:   
+5 ds:3   
+6 ds:   
+6   
+1   
+7 ds:   
+8） ds : 2.   
+T   
+1   
+9） lim ds : =.   
+n→n e   
+10）limsin（2+0 +2+cs++2+c0 ds:
+
+Bai 3.3. Tinh cac nguyen ham sau
+
+$$
+\begin{array} { l } { { 1 ) \displaystyle \int \displaystyle \frac { 2 x ^ { 4 } + 5 x ^ { 2 } - 2 } { 2 x ^ { 3 } - x - 1 } d x . } } \\ { { \displaystyle \mathrm { d s } : \displaystyle \frac { 1 } { 2 } x ^ { 2 } + \ln | x - 1 | + \ln ( 2 x ^ { 2 } + 2 x + 1 ) + \arctan ( 2 x + 1 ) + C } } \end{array}
+$$
+
+2/ $\begin{array} { r l } & { \frac { d x } { \varepsilon - 1 ) ( x ^ { 2 } - x + 1 ) ^ { 2 } } \cdot \mathrm { ~ d s : ~ l n ~ } \frac { x - 1 } { x } | - \frac { 1 0 } { 3 \sqrt { 3 } } \arcsin \frac { 2 x - 1 } { \sqrt { 3 } } - \frac { 1 } { 3 } \frac { 2 x } { x ^ { 2 } - \sqrt { 3 } } , } \\ & { \frac { x ^ { 4 } + 1 } { x ^ { 4 } - x ^ { 3 } - x ^ { 2 } } d x . \quad \mathrm { ~ d s : ~ l n ~ } | x | + \frac { 1 } { x } + \frac { 1 } { 2 } \ln | x - 1 | - \frac { 1 } { 2 } \ln | x - 1 | + \frac { 1 } { x } } \\ & { \frac { 3 x + 5 } { \varepsilon + 2 x + 2 ) ^ { 2 } } d x . \quad \mathrm { ~ d s : ~ } \frac { 2 x - 1 } { 2 ( x ^ { 2 } + 2 x + 2 ) } + \arctan ( x + 1 ) + C . } \\ & { \frac { x ^ { 2 } - 2 ) ^ { 2 } d x } { ( x ^ { 2 } + 1 ) ( x ^ { 2 } + 1 ) ^ { 3 } } \quad \quad \mathrm { ~ d s : ~ } \frac { 1 } { 2 } \frac { 1 + x } { ( 1 + x ^ { 2 } ) ^ { 2 } } + \frac { 1 } { 4 } \frac { x - 2 } { x ^ { 2 } + 1 } + \frac { 1 } { 4 } \arctan x + C . } \\ & { \frac { d x } { + \sqrt { x ^ { 2 } - 1 } ) ^ { 2 } } \quad \quad \quad \mathrm { ~ d s : ~ } \frac { 2 } { 3 } ( x ^ { 3 } - \sqrt { ( x ^ { 2 } - 1 ) ^ { 3 } } ) - x + C . } \end{array}$ -1 x+1   
+3 $\begin{array} { r l } & { \mathrm { d } \sin ( \kappa ) = \frac { 1 } { \kappa } - \frac { 1 } { 2 } \frac { 1 } { \kappa } \frac { 1 } { \kappa } - 1 - \frac { \kappa } { 2 } \frac { 1 } { \kappa } \log \left( - \frac { \kappa } { 2 } \right) - 1 } \\ & { \mathrm { d } \sin ( \kappa ) = \frac { 2 \kappa } { \kappa } } \\ &  \phantom { \frac { 1 } { \kappa } - \frac { 1 } { \kappa } \frac { 1 } { \kappa ^ { 2 } } - \frac { \kappa } { 2 \kappa ^ { 2 } } \frac { 1 } { \kappa ^ { 2 } } \frac { 1 } { \kappa ^ { 3 } } \frac { 1 } { \kappa ^ { 3 } } \pi \kappa \kappa \mathrm { d } \sigma _ { \kappa } ^ { - 1 } \mathrm { ~ | ~ } \mathrm { ~ , ~ } } \\ &  \phantom { \frac { 1 } { \kappa } - \frac { 1 } { \kappa } \frac { 1 } { \kappa } \frac { 1 } { \kappa ^ { 2 } } \frac { 1 } { \kappa ^ { 3 } } \frac { 1 } { \| \kappa ^ { 2 } - \kappa ^ { 2 } \| ^ { 2 } } \frac { 1 } { \| \kappa ^ { 2 } - \kappa ^ { 2 } \| ^ { 2 } } \mathrm { ~ | ~ } \frac { \kappa } { 2 } \sigma \kappa \mathrm { e x t ~ | \kappa ~ } \mathrm { C } } \\ & { \phantom { \frac { 1 } { \kappa } - \frac { \kappa } { 2 } \frac { \kappa ^ { 2 } } { \kappa ^ { 3 } } ( \kappa ^ { 2 } - \sqrt { \kappa ^ { 2 } - \kappa ^ { 2 } } ) - 1 } \sigma - C . } \\ & { \phantom { \frac { 1 } { \kappa } - \frac { \kappa ^ { 2 } } { \kappa } - 1 } \alpha \kappa \kappa \mathrm { i } \sigma _ { \kappa } ^ { - 1 } \mathrm { ~ - } \mathrm { ~ c . } } \\ &  \phantom { \frac { 1 } { \kappa } - \frac { \kappa ^ { 2 } } { \kappa ^ { 3 } } - 1 - \frac { \kappa ^ { 2 } } { 2 } \frac { \kappa } { \kappa ^ { 3 } } \frac { 1 } { \kappa ^ { 4 } } \mathrm { e x t ~ | \kappa ^ { 2 } - \kappa ^ { 2 } \| ^ { 2 } } } \\ &  \phantom { \frac { 1 } { \kappa } - \frac { \kappa ^ { 2 } } { \kappa ^ { 3 } } - \frac { 2 \kappa ^ { 2 } } { \kappa ^ { 4 } } \frac { \kappa ^ { 2 } } { \kappa ^ { 3 } } \mathrm { e x t ~ | \kappa ^ { 2 } - | ^ { 2 } } } \\ & { \phantom { \frac { 1 } { \kappa } - \frac { \kappa ^ { 2 } } { \kappa ^ { 2 } } - 1 } \mathrm { e x t ~ | \kappa ^ { 2 } ~ } } \\ &  \phantom  \frac { 1 } { \kappa } - \frac { \kappa ^ { 2 } } { \kappa ^ { 3 } } \frac { 1 }  \kappa \end{array}$ x+1+C. 1   
+4 a   
+5）   
+6   
+7） x sin2(2 + In x) d   
+8） 2x -Varcsindx.   
+√1-x²   
+9）-dr   
+10) x-1+
+
+Bai 3.4. Dung phuong phap doi bien, tinh cac tich phan sau
+
+1 $\begin{array} { r l } & { \left\{ \begin{array} { l l } { \frac { \partial ^ { 2 } } { \partial x \partial x ^ { 2 } } - \mathbf { h } \log \cdot \mathbf { \phi } } \\ { \frac { \partial ^ { 2 } } { \partial y \partial x ^ { 2 } } - \mathbf { \phi } } \end{array} \right. } \\ & { \left\{ \begin{array} { l l } { \frac { \partial ^ { 2 } } { \partial x \partial x ^ { 2 } } - \mathbf { \phi } } \\ { \frac { \partial ^ { 2 } } { \partial y \partial x ^ { 2 } } - \mathbf { \phi } } \end{array} \right. } \\ & { \left\{ \begin{array} { l l } { \frac { \partial ^ { 2 } } { \partial x \partial x ^ { 2 } } } \\ { \frac { \partial ^ { 2 } } { \partial y \partial x ^ { 2 } } - \mathbf { \phi } } \end{array} \right. } \\ & { \left\{ \begin{array} { l l } { \frac { \partial ^ { 2 } } { \partial x \partial x ^ { 2 } } } \\ { \frac { \partial ^ { 2 } } { \partial y \partial x ^ { 2 } } } \end{array} \right. } \\ & { \left\{ \begin{array} { l l } { \frac { \partial ^ { 2 } } { \partial x \partial x ^ { 2 } } } \\ { \frac { \partial ^ { 2 } } { \partial y \partial x ^ { 2 } } } \end{array} \right. } \\ & { \left\{ \begin{array} { l l } { \frac { \partial ^ { 2 } } { \partial x \partial x ^ { 2 } } } \\ { \frac { \partial ^ { 2 } } { \partial y \partial x ^ { 2 } } } \end{array} \right. } \\ & { \left\{ \begin{array} { l l } { \frac { \partial ^ { 2 } } { \partial x \partial x ^ { 2 } } } \end{array} \right. } \end{array}$ 2 P34：5 _r6? 1 + cos²x0
+
+$\mathrm { d s : \frac { 7 } { 2 { \sqrt { 3 } } } - 1 . }$ $\mathrm { d s } : \frac { \pi } { 3 \sqrt { 3 } } .$   
+ds:3（π -2） ${ \mathrm { d s } } : { \frac { \pi } { 4 } } .$   
+$\mathrm { d s : { \frac { 4 \pi } { 3 } } - { \sqrt { 3 } } . }$ $\mathrm { d s } : { \frac { \pi ^ { 2 } } { 4 } } .$
+
+7 $\begin{array} { r l } & { \cdot \displaystyle \int _ { \varepsilon } ^ { \frac { 1 } { 2 } } x ( 2 - x ^ { \prime } ) ^ { \nu _ { 0 } } d x } \\ & { \textrm { s p } } \\ & { \cdot \displaystyle \int _ { 0 } ^ { \frac { 1 } { 2 } } \left( \frac { 2 ( 2 + 1 ) d x } { x ^ { 4 } } - 1 \right) d x } \\ & { \cdot \displaystyle \int _ { 0 } ^ { \frac { 1 } { 2 } } \sqrt { \frac { 1 + x } { 1 - x } } d x . } \\ & { \cdot \displaystyle \int _ { 0 } ^ { \frac { 1 } { 2 } } \sqrt { \frac { 1 + x } { 1 - x } } d x . } \\ & { \textrm { i n d } } \\ & { \displaystyle \int _ { 0 } ^ { \frac { 1 } { 2 } } \sqrt { \mathrm { e } ^ { \mathrm { i } x } - 1 } \mathrm { d } x . } \end{array}$ m $\mathrm { d s : 3 1 5 { \frac { 1 } { 2 6 } } . }$   
+8 $\mathrm { d s } : { \frac { 1 } { \sqrt { 2 } } } \arctan { \frac { 1 } { 2 } } .$   
+9 $\mathrm { d s } : \frac { \pi } { 4 } + 1 - \frac { \sqrt { 2 } } { 2 } .$   
+1 $\mathrm { d s } : { \frac { 4 - \pi } { 2 } } .$
+
+Bai 3.5. Dung phuong phap tich phan tung phan, tinh các tich phan sau
+
+1 （20 （20 1) x arctan xdx. $\mathrm { d s } : \frac { 1 } { 6 } .$   
+0   
+T   
+2) e sin xdx. $\mathrm { d } \mathrm { s } : \frac { 1 } { 2 } ( e ^ { \pi } + 1 ) .$ （20 J   
+0   
+1   
+3) xe2dx. ? $\mathrm { d } \mathrm { s } : \frac { 1 } { 8 } ( e ^ { 2 } + 3 ) .$ （20 0   
+1   
+4 arcsinx dx. ds : π√2-4. √1+x   
+0   
+π4   
+5) ln(1 + tan x)dx. $\mathrm { d s : \frac { \pi \ln 2 } { 8 } . }$ 0   
+3   
+6 。 arcsin 1+x x dx. $\mathrm { d s : { \frac { 4 \pi } { 3 } } - { \sqrt { 3 } } . }$ （20 T   
+7) (x sin x)²dx. $\mathrm { d s : \frac { \pi ^ { 3 } } { 6 } - \frac { \pi } { 4 } . }$ 0   
+e   
+8 cos(ln x)dx. $\mathrm { d s } : \frac { 1 } { 2 } \big ( e ^ { \frac { \pi } { 2 } } - 1 \big ) .$ J1
+
+9) $\begin{array} { l } { \displaystyle \int _ { 1 } ^ { 2 } x \log _ { 2 } x d x . } \\ { \displaystyle \int _ { 0 } ^ { 2 } \sqrt { 4 - x ^ { 2 } } d x . } \end{array}$ ${ \mathrm { d s } } : 2 - { \frac { 3 } { 4 \ln 2 } } .$ 10 （204 $\mathrm { d } \mathrm { s } : \pi .$ ，
+
+Bai 3.6. Tinh cac tich phan sau theo cong thuc truy hoi.   
+$\begin{array} { r l } & { \displaystyle \frac { 1 ) J _ { n } } { 1 } = \int _ { 0 } ^ { \infty } \sin ^ { \alpha } d d z . } \\ & { \displaystyle \frac { 1 } { 9 } J _ { n } = \int _ { 0 } ^ { \infty } \left( 1 - x ^ { 2 } \right) ^ { n } d z . } \\ & { \displaystyle \frac { 1 } { 9 } J _ { n } = \int _ { 0 } ^ { \infty } \left( 1 - x ^ { 2 } \right) ^ { n } d z . } \\ & { \displaystyle \frac { 3 ) J _ { n } } { 3 } = \int _ { 0 } ^ { \infty } \left[ \ln ^ { \alpha } \mathrm { e } ^ { \alpha } \right] J _ { n } , } \\ & { \displaystyle \frac { 1 } { 9 } J _ { n } = \int _ { 0 } ^ { \infty } \cos ^ { \alpha } n x d z . } \end{array}$ $\mathrm { d s } : I _ { n } = \frac { n - 1 } { n } I _ { n - 2 } .$   
+（20 $\mathrm { d s } : I _ { n } = \frac { 2 ^ { 2 n } ( n ! ) ^ { 2 } } { 2 n + 1 ) ! } .$ 二   
+（20 ds:In = e(1+n+.. +2.3.(n - 1)n)-nl.   
+（20 8 $I _ { n } = \frac { \pi } { 2 ^ { n + 1 } } .$ 一   
+Bai 3.7. Cho $a > 0 , b > 0 , c > 0$ , tinh dien tich hinh tao boi cac duong cong   
+$1 ) { \frac { x ^ { 2 } } { a ^ { 2 } } } + { \frac { y ^ { 2 } } { b ^ { 2 } } } = 1 .$ 一 （20 ds : πab.   
+（20 $2 ) y ^ { 2 } = x ^ { 2 } ( 4 - x ^ { 2 } ) .$ ds:4 3 88p²√2   
+$3 ) y ^ { 2 } = 2 p x , 2 7 p y ^ { 2 } = 8 ( x - p ) ^ { 3 } ( p > 0 ) .$ ds: 15   
+$\begin{array} { r l } & { 4 \beta \nu = a _ { 1 } ^ { \prime } 2 \cos \ell \quad \cos 2 \ell ) , y = a _ { 1 } ^ { \prime } 2 \sin \ell \quad \sin \ell \quad \sin \ell } \\ & { 5 \beta \nu - 3 a ^ { \prime } , y - 3 \ell - \vartheta ^ { 2 } , } \\ & { 6 \beta \nu = \frac { \mathbf { e } ^ { 2 } } { 8 } \cos ^ { 2 } \ell , y = \frac { c ^ { 2 } } { \beta } \sin ^ { 3 } \ell \quad c ^ { 2 } = a ^ { 2 } - b ^ { 2 } , } \\ & { 7 \gamma = a \sin 3 \beta \cdot } \\ & { 8 \tilde { p } ^ { 2 } \cdot \forall e ^ { 2 } = 1 , } \\ & { 9 \mu \nu = a \cos 5 \tilde { p } , } \\ & { 1 0 \tilde { p } ^ { 2 } = a ^ { 2 } \cos 2 \tilde { \psi } . } \end{array}$ $\textstyle \mathrm { d s } : 6 \pi a ^ { 2 }$ ， 72√3 ds: 5 （20 ds: Ta² ds: 12 2 ds: Ta² ds: 5 （ ${ \mathrm { d } } \mathrm { s } : a ^ { 2 }$ .
+
+$\begin{array} { l } { { 1 ) y ^ { 2 } = 2 x } } \\ { { } } \\ { { 2 ) 9 y ^ { 2 } = 4 ( 3 - x ^ { 2 } ) , y \geq 0 . } } \\ { { } } \\ { { 3 ) y = \ln \cos x ~ 0 \leq x \leq a < \displaystyle \frac \pi 2 . } } \\ { { 4 ) x = \displaystyle \frac { c ^ { 2 } } { a } \cos ^ { 3 } t , y = \displaystyle \frac { c ^ { 2 } } { b } \sin ^ { 3 } t . } } \end{array}$ $0 \leq x \leq { \frac { 1 } { 2 } } . \ d { \mathrm { s } } : { \sqrt { 2 } } + \ln ( 1 + { \sqrt { 2 } } ) .$ （20 $\mathrm { d } \mathrm { s } : \pi$ ， $\begin{array} { c l l } { { } } & { { \displaystyle \mathrm { d s : l n } \tan ( \displaystyle \frac { \pi } { 4 } + \displaystyle \frac { a } { 2 } ) . } } \\ { { } } & { { \displaystyle c ^ { 2 } = a ^ { 2 } - b ^ { 2 } } } & { { \displaystyle \mathrm { d s : \frac { 4 ( a ^ { 3 } - { b ^ { 3 } } ) } { } . } } } \end{array}$   
+5)x = cost + tsint, $y = \sin t - t \cos t \quad \quad 0 \in [ 0 , 2 \pi ] .$ （ $\mathtt { d s } : 2 \pi ^ { 2 }$ ：   
+$6 ) x = c h ^ { 3 } t , y = s h ^ { 3 } t$ 0≤t≤b. $\mathrm { d s } : \frac { 3 } { 8 } \Big ( \frac { 1 } { \sqrt { c h ( 2 b ) } } - 1 \Big ) .$ （20   
+$\begin{array} { l } { { 7 ) r = a ( 1 + \cos \varphi ) } } \\ { { \ } } \\ { { 8 ) r = \displaystyle \frac { a } { 1 + \cos \varphi } } } \\ { { \ } } \\ { { 9 ) r = a \sin ^ { 3 } \displaystyle \frac { \varphi } { 3 } . } } \\ { { \ } } \\ { { 1 0 ) \varphi = \displaystyle \frac { 1 } { 2 } ( r + \displaystyle \frac { 1 } { r } ) } } \end{array}$ ： π-2 b π-2 ds : 8√2a. ds : a(√2 + n(1 + √2)) 3πa ds : 2   
+（20 1 △≤3. ds : 2 + = ln3.
+
+Bai 3.9. Tinh the tich cua vat thé tao boi cac duong cong
+
+$1 ) \frac { x ^ { 2 } } { a ^ { 2 } } + \frac { y ^ { 2 } } { b ^ { 2 } } + \frac { z ^ { 2 } } { c ^ { 2 } } = 1 .$ ds :πabe.   
+2）)x²+y²=a²,x²+2² 8 ds :16a3. 3   
+$3 ) \frac { x ^ { 2 } } { a ^ { 2 } } + \frac { y ^ { 2 } } { b ^ { 2 } } = 1 , z = \frac { c } { a } x , z = 0 , a , b , c > 0 .$ 4πabc ds :   
+$\begin{array} { l } { { { \displaystyle \mathrm {  ~ \sigma ~ } ^ { \mathrm { { \scriptstyle 3 } } } ) } { \displaystyle \overline { { { a ^ { \mathrm { 2 } } } } } } + { \displaystyle \frac { b ^ { 2 } } { b ^ { 2 } } } = 1 , z = { \displaystyle - x , z = \mathrm {  ~ \psi ~ } } = \mathrm {  ~ \psi ~ } , a , \upsilon , c > \mathrm {  ~ \upsilon ~ } } } \\ { { \displaystyle \mathrm {  ~ \psi ~ } ^ { \mathrm { { \scriptstyle 4 } } } ) z ^ { 2 } = b ( a - x ) , x ^ { 2 } + y ^ { 2 } = a x ~ a , b > 0 . } } \\ { { \displaystyle \mathrm {  ~ \psi ~ } ^ { \mathrm { { \scriptstyle 3 } } } \frac { x ^ { 2 } } { a ^ { 2 } } + \frac { y ^ { 2 } } { z ^ { 2 } } = 1 , ~ 0 < z < a . } } \\ { { \displaystyle \mathrm {  ~ \psi ~ } ^ { \mathrm { { \scriptstyle 6 } } } ) x + y + z ^ { 2 } = 1 , x = 0 , y = 0 , z = 0 . } } \end{array}$ 3 ds: 1a²Vab. 15 Ta3 ds : 2 Ta ds : 2   
+$7 ) y = b { \left( { \frac { x } { a } } \right) } ^ { \frac { 2 } { 3 } } , \ x \leq x \leq a ,$ 3   
+（20 quay xung quanh truc $O x$ ： ds: πab². 8π   
+（20 $8 ) y = 2 x - x ^ { 2 } , y = 0$ quay xung quanh truc $O y$ ds : 3   
+（20 $9 ) y = b ( \frac { x } { a } ) ^ { 2 } , y = b | \frac { x } { a } |$ quay xung quanh truc $O x$ ： ds :4πab² 15   
+$1 0 ) x ^ { 2 } + ( y - b ) ^ { 2 } = a ^ { 2 } , 0 < a \leq b$ quay xung quanh truc $O x$ ： （20 $ { \mathrm { d s } } : 2 \pi ^ { 2 } a ^ { 2 } b$
+
+Bai .10. Tinh các tich phan suy rong sau
+
+1 $\begin{array} { r l } & { \mathbb { I } _ { + } ^ { \mathcal { I } } ( \frac { 1 } { \varepsilon ^ { 3 } } ( \frac { 1 } { \varepsilon ^ { 3 } - 1 } + \frac { 2 } { \varepsilon ^ { 3 } + 1 } ) ^ { 3 } \mathrm { d } x  } \\ & {  \downarrow + \varepsilon ^ { 3 } \quad } \\ & { \downarrow \int _ { \varepsilon } ^ { \varepsilon } e ^ { 2 \mathrm { i } \Psi } \mathrm { d } \varepsilon ^ { \prime } } \\ & { \downarrow \int _ { \varepsilon } ^ { \varepsilon } e ^ { 2 \mathrm { i } \Psi } \mathrm { i d } \varepsilon ^ { \prime } } \\ & { \downarrow \int _ { \varepsilon } ^ { \varepsilon } e ^ { 3 \mathrm { i n } \psi } \mathrm { i n } \psi \mathrm { i n } ^ { \varepsilon } \mathrm { ~ a > 0 ~ } } \\ & { \downarrow \int _ { \varepsilon } ^ { \varepsilon } e ^ { 2 \mathrm { i } \Psi } \mathrm { i d } \varepsilon ^ { \prime } \mathrm { i n } \psi } \\ & { \downarrow ( \frac { \varepsilon + 2 \mathrm { i } \Psi \mathrm { i n } \psi \mathrm { i n } ^ { \varepsilon } \mathrm { ~ a ~ } } { \mathcal { I } _ { \varepsilon } ^ { \prime } } ) } \\ & { \downarrow ( \frac { \varepsilon + \mathrm { i } \Psi \mathrm { i n } \psi } { \sqrt { \pi } \sqrt { | \varepsilon | ^ { 2 } + 1 } \tau ^ { 2 } }  } \\ & {  \downarrow , \quad . . . , \quad . . } \end{array}$   
+2   
+3   
+4   
+¥5   
+6 PTIT （2   
+7)   
+π2   
+8） ln(cosx)dx.   
+0   
++8   
+xlnxdx   
+9! (x² + 1）2’   
+10) In xdx V   
+品 （20 ${ \mathrm { d s : ~ } } { \frac { 2 } { 3 } } + { \frac { 1 } { 2 } } \ln { 3 } .$ （20 （20 $\mathrm { d s } : \frac { 1 } { 3 6 } .$   
+$\mathrm { d s } : \frac { b } { a ^ { 2 } + b ^ { 2 } } .$ $\mathrm { d s } : { \frac { \pi } { 4 } } + { \frac { \ln 2 } { 2 } } .$   
+$\mathrm { d s } : \ln ( 1 + { \sqrt { 2 } } ) .$ （20 $\mathrm { d s : \frac { \pi \ln 2 } { 2 } . }$   
+（20 $\mathrm { d s : \frac { \pi \ln 2 } { 2 } . }$   
+$\mathrm { d s } : - { \frac { \pi \ln 2 } { 2 } } .$   
+ds : 0.   
+ds:-4.   
+ds : hoi tu.   
+ds : phan ky.
+
+Bai 3.11. Khao sat su hoi tu cua các tich phan sau.
+
+$$
+\begin{array} { l } { + \infty } \\ { \displaystyle \int \frac { \sin ^ { 2 } 3 x } { \sqrt [ 3 ] { 2 x ^ { 4 } - x + 1 } } d x . } \\ { + \infty } \\ { \displaystyle \int \frac { 1 } { \sqrt [ 3 ] { 4 x - \log _ { 2 } x } } d x . } \end{array}
+$$
+
+3 $\begin{array} { r l } & { \varepsilon ^ { \prime \prime } = \frac { 1 } { \varepsilon ^ { 3 } } \sqrt { \frac { 1 } { \varepsilon ^ { 3 } } \frac { 1 } { \varepsilon ^ { 3 } } } , } \\ & { + \varepsilon ^ { \prime } = \frac { 1 } { \varepsilon ^ { 3 } } \sqrt { \frac { 1 } { \varepsilon ^ { 3 } } \frac { 1 } { \varepsilon ^ { 3 } } } , } \\ & { + \int _ { 0 } ^ { \infty } \varepsilon ^ { \prime \prime } \sin \left( \theta - \theta _ { 0 } \right) , } \\ & { + \frac { 1 } { \varepsilon ^ { 3 } } \left( \frac { 1 } { \varepsilon ^ { 3 } } \cos \left( \theta _ { 0 } - \theta _ { 0 } \right) \right) , } \\ & { + \int _ { 0 } ^ { \infty } \frac { \cos \left( \theta _ { 0 } - \theta _ { 0 } \right) } { \varepsilon ^ { 3 } } d \varepsilon , } \\ & { + \int _ { 0 } ^ { \infty } \frac { 1 } { \varepsilon ^ { 3 } } \left( \frac { 1 } { \varepsilon ^ { 3 } } \sin \left( \theta _ { 0 } - \theta _ { 0 } \right) \right) , } \\ & { + \int _ { 0 } ^ { \infty } \frac { 1 } { \varepsilon ^ { 3 } } \left( \frac { 1 } { \varepsilon ^ { 3 } } \sin \left( \theta _ { 0 } - \theta _ { 0 } \right) \right) , } \\ & { + \int _ { 0 } ^ { \infty } \frac { 1 } { \varepsilon ^ { 3 } } \left( \frac { 1 } { \varepsilon ^ { 3 } } \sin \left( \theta _ { 0 } - \theta _ { 0 } \right) \right) , } \\ & { + \int _ { 0 } ^ { \infty } \frac { 1 } { \varepsilon ^ { 3 } } \left( \frac { 1 } { \varepsilon ^ { 3 } } \sin \left( \theta _ { 0 } - \theta _ { 0 } \right) \right) , } \end{array}$ 4 5 \`6＇ 7 8 x√x²-1 1 +8 r sin 3x 9 2x3+Vxdx. +8 < x\~(x+2)dx 10） 3x+1 0
+
+ds : hoi tu.   
+ds : hoi tu.   
+ds : hoi tu.   
+ds : hoi tu.   
+ds : phan ky.   
+ds : hoi tu.   
+ds : hoi tu.   
+ds : phan ky.   
+ds : hoi tu.   
+ds : hoi tu.   
+ds : hoi tu.   
+ds : phan ky.
+
+Bai 3.12. Khao sat su hoi tu cua cac tich phan sau.
+
+$$
+\begin{array} { r l } & { \int _ { 0 } ^ { \infty } \frac { 1 } { \sqrt { x } } d x . } \\ & { \int _ { 0 } ^ { 1 } \frac { \mathrm { l n } ( 1 - \sqrt { x ^ { 2 } } ) d x . } { \sqrt { \pi } \sin \sqrt { x } } . } \\ & { \int _ { 0 } ^ { 1 } \frac { \sqrt { 2 ^ { \nu } - 1 } } { 1 - \cos { 3 x } } d x . } \\ & { \int _ { 0 } ^ { 1 } \frac { \sqrt { 2 ^ { \nu } - 1 } } { 1 - \cos { 3 x } } d x . } \\ & { \int _ { 0 } ^ { 1 } \frac { \sqrt { \sin ( 1 + 2 \pi ) } } { 1 - \cos { 3 x } } d x . } \end{array}
+$$
+
+5 $\begin{array} { r l } & { \left\{ \begin{array} { l l } { \frac { \partial \sin \alpha _ { \ell } } { \partial z ^ { 2 } } } \\ { \frac { \sin \alpha _ { \ell } } { \sqrt { 1 - \alpha _ { \ell } ^ { 2 } } } } \\ { \frac { \sin \alpha _ { \ell } } { \sqrt { 1 - \alpha _ { \ell } ^ { 2 } } } } \end{array} \right. } \\ & { \left\{ \begin{array} { l l } { \frac { \partial \sin \alpha _ { \ell } } { \sqrt { 1 - \alpha _ { \ell } ^ { 2 } } } } \\ { \frac { \sin \alpha _ { \ell } } { \sqrt { 1 - \alpha _ { \ell } ^ { 2 } } } } \end{array} \right. } \\ & { \left\{ \begin{array} { l l } { \frac { \sin \alpha _ { \ell } } { \sqrt { 1 - \alpha _ { \ell } ^ { 2 } } } } \\ { \frac { \sin \alpha _ { \ell } } { \sqrt { 1 - \alpha _ { \ell } ^ { 2 } } } } \end{array} \right. } \\ & { \left\{ \begin{array} { l l } { \frac { \sin \alpha _ { \ell } } { \sqrt { 1 - \alpha _ { \ell } ^ { 2 } } } } \\ { \frac { \sin \alpha _ { \ell } } { \sqrt { 1 - \alpha _ { \ell } ^ { 2 } } } } \end{array} \right. } \end{array}$   
+6)   
+7)   
+8   
+9   
+1
+
+ds : phan ky.   
+ds : hoi tu.   
+ds : hoi tu.   
+ds : phan ky.   
+ds : phan ky.   
+ds : hoi tu.

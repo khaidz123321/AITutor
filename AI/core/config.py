@@ -23,10 +23,14 @@ class Settings(BaseSettings):
         encoded_pass = urllib.parse.quote_plus(self.DB_PASSWORD)
         return f"postgresql://{self.DB_USER}:{encoded_pass}@{self.DB_SERVER}:{self.DB_PORT}/{self.DB_NAME}"
 
-    # 3. gọi api
+    # 3. Cấu hình AI Model chính (Primary)
     GOOGLE_API_KEY: str = os.getenv("GOOGLE_API_KEY")
     MODEL_NAME: str = os.getenv("MODEL_NAME", "gemini-2.5-flash")
     TEMPERATURE: float = float(os.getenv("TEMPERATURE", 0.1))
+
+    # 4. Cấu hình AI Model dự phòng (Fallback) - Groq
+    GROQ_API_KEY: str = os.getenv("GROQ_API_KEY")
+    FALLBACK_MODEL_NAME: str = os.getenv("FALLBACK_MODEL_NAME", "llama-3.3-70b-versatile")
 
     HUGGING_FACE_API_KEY: str = os.getenv("HUGGING_FACE_API_KEY")
 

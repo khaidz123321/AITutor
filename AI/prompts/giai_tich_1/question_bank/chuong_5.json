@@ -101,21 +101,21 @@
         {
           "step_number": 1,
           "hint": "Với mỗi giá trị $x_0$ cố định, chuỗi hàm trở thành một chuỗi số. Hãy nhận dạng loại chuỗi số này.",
-          "step_detail": "Khi cố định $x = x_0$, ta có chuỗi số $\\sum_{n=1}^{\\infty} \\frac{1}{n^{x_0}}$. Đây là chuỗi Riemann với tham số $\\alpha = x_0$[cite: 4]."
+          "step_detail": "Khi cố định $x = x_0$, ta có chuỗi số $\\sum_{n=1}^{\\infty} \\frac{1}{n^{x_0}}$. Đây là chuỗi Riemann với tham số $\\alpha = x_0$."
         },
         {
           "step_number": 2,
           "hint": "Nhắc lại điều kiện hội tụ của chuỗi Riemann $\\sum \\frac{1}{n^\\alpha}$.",
-          "step_detail": "Chuỗi Riemann hội tụ khi và chỉ khi tham số $\\alpha > 1$[cite: 4]."
+          "step_detail": "Chuỗi Riemann hội tụ khi và chỉ khi tham số $\\alpha > 1$."
         },
         {
           "step_number": 3,
           "hint": "Áp dụng điều kiện trên vào biến $x$ để kết luận miền hội tụ.",
-          "step_detail": "Chuỗi hàm hội tụ khi và chỉ khi $x > 1$. Vậy miền hội tụ là $X = (1, +\\infty)$[cite: 4]."
+          "step_detail": "Chuỗi hàm hội tụ khi và chỉ khi $x > 1$. Vậy miền hội tụ là $X = (1, +\\infty)$."
         }
       ],
       "common_mistakes": [
-        "Nhầm lẫn miền hội tụ là $x \\ge 1$ (tại $x=1$ chuỗi điều hòa phân kì)[cite: 4].",
+        "Nhầm lẫn miền hội tụ là $x \\ge 1$ (tại $x=1$ chuỗi điều hòa phân kì).",
         "Quên không liên hệ với điều kiện hội tụ của chuỗi số tương ứng."
       ]
     },
@@ -124,23 +124,23 @@
       "topic": "5.2 Sự hội tụ đều: Tiêu chuẩn Weierstrass",
       "difficulty": "Hard",
       "bloom_level": "Analyzing",
-      "question_text": "Sử dụng tiêu chuẩn Weierstrass, hãy chứng minh chuỗi hàm $\\sum_{n=1}^{\\infty} \\frac{\\cos nx}{n^2 + 2x^2}$ hội tụ đều trên $\\mathbb{R}$[cite: 4].",
-      "full_answer": "Chuỗi hàm hội tụ tuyệt đối và đều trên $\\mathbb{R}$ vì $|f_n(x)| \\le \\frac{1}{n^2}$ và chuỗi số $\\sum \\frac{1}{n^2}$ hội tụ[cite: 4].",
+      "question_text": "Sử dụng tiêu chuẩn Weierstrass, hãy chứng minh chuỗi hàm $\\sum_{n=1}^{\\infty} \\frac{\\cos nx}{n^2 + 2x^2}$ hội tụ đều trên $\\mathbb{R}$.",
+      "full_answer": "Chuỗi hàm hội tụ tuyệt đối và đều trên $\\mathbb{R}$ vì $|f_n(x)| \\le \\frac{1}{n^2}$ và chuỗi số $\\sum \\frac{1}{n^2}$ hội tụ.",
       "scaffolding_steps": [
         {
           "step_number": 1,
           "hint": "Tìm một chặn trên $a_n$ cho trị tuyệt đối của số hạng tổng quát $|f_n(x)|$ sao cho $a_n$ không phụ thuộc vào $x$.",
-          "step_detail": "Ta có $|\\cos nx| \\le 1$ và $n^2 + 2x^2 \\ge n^2$ với mọi $x \\in \\mathbb{R}$. Do đó, $|f_n(x)| = \\left| \\frac{\\cos nx}{n^2 + 2x^2} \\right| \\le \\frac{1}{n^2} = a_n$[cite: 4]."
+          "step_detail": "Ta có $|\\cos nx| \\le 1$ và $n^2 + 2x^2 \\ge n^2$ với mọi $x \\in \\mathbb{R}$. Do đó, $|f_n(x)| = \\left| \\frac{\\cos nx}{n^2 + 2x^2} \\right| \\le \\frac{1}{n^2} = a_n$."
         },
         {
           "step_number": 2,
           "hint": "Xét sự hội tụ của chuỗi số dương $\\sum a_n$ vừa tìm được.",
-          "step_detail": "Chuỗi số $\\sum_{n=1}^{\\infty} \\frac{1}{n^2}$ là chuỗi Riemann với $\\alpha = 2 > 1$, nên nó hội tụ[cite: 4]."
+          "step_detail": "Chuỗi số $\\sum_{n=1}^{\\infty} \\frac{1}{n^2}$ là chuỗi Riemann với $\\alpha = 2 > 1$, nên nó hội tụ."
         },
         {
           "step_number": 3,
           "hint": "Áp dụng định lý Weierstrass để đưa ra kết luận.",
-          "step_detail": "Vì $|f_n(x)| \\le a_n$ và $\\sum a_n$ hội tụ, theo tiêu chuẩn Weierstrass, chuỗi hàm hội tụ tuyệt đối và đều trên $\\mathbb{R}$[cite: 4]."
+          "step_detail": "Vì $|f_n(x)| \\le a_n$ và $\\sum a_n$ hội tụ, theo tiêu chuẩn Weierstrass, chuỗi hàm hội tụ tuyệt đối và đều trên $\\mathbb{R}$."
         }
       ],
       "common_mistakes": [
@@ -153,18 +153,18 @@
       "topic": "5.2 Tính chất của chuỗi hàm hội tụ đều",
       "difficulty": "Medium",
       "bloom_level": "Understanding",
-      "question_text": "Nếu chuỗi hàm $\\sum f_n(x)$ hội tụ đều về $S(x)$ trên đoạn $[a, b]$ và các hàm $f_n(x)$ đều liên tục, ta có thể kết luận gì về tích phân của tổng $S(x)$[cite: 4]?",
-      "full_answer": "Tích phân của tổng bằng tổng các tích phân: $\\int_{a}^{b} S(x)dx = \\sum_{n=1}^{\\infty} \\int_{a}^{b} f_n(x)dx$[cite: 4].",
+      "question_text": "Nếu chuỗi hàm $\\sum f_n(x)$ hội tụ đều về $S(x)$ trên đoạn $[a, b]$ và các hàm $f_n(x)$ đều liên tục, ta có thể kết luận gì về tích phân của tổng $S(x)$?",
+      "full_answer": "Tích phân của tổng bằng tổng các tích phân: $\\int_{a}^{b} S(x)dx = \\sum_{n=1}^{\\infty} \\int_{a}^{b} f_n(x)dx$.",
       "scaffolding_steps": [
         {
           "step_number": 1,
           "hint": "Nhắc lại tính chất liên tục của hàm tổng $S(x)$.",
-          "step_detail": "Khi chuỗi hàm liên tục hội tụ đều, hàm tổng $S(x)$ cũng là một hàm liên tục trên đoạn đó[cite: 4]."
+          "step_detail": "Khi chuỗi hàm liên tục hội tụ đều, hàm tổng $S(x)$ cũng là một hàm liên tục trên đoạn đó."
         },
         {
           "step_number": 2,
           "hint": "Nêu điều kiện để thực hiện phép lấy tích phân từng số hạng của chuỗi hàm.",
-          "step_detail": "Điều kiện cần và đủ là chuỗi hàm phải hội tụ đều trên đoạn lấy tích phân[cite: 4]."
+          "step_detail": "Điều kiện cần và đủ là chuỗi hàm phải hội tụ đều trên đoạn lấy tích phân."
         }
       ],
       "common_mistakes": [
@@ -181,22 +181,22 @@
       "scaffolding_steps": [
         {
           "step_number": 1,
-          "hint": "Xác định hệ số $a_n$ và sử dụng quy tắc tìm bán kính hội tụ $R$ thông qua giới hạn $L = \\lim_{n \\to \\infty} \\sqrt[n]{|a_n|}$ hoặc $L = \\lim_{n \\to \\infty} |\\frac{a_{n+1}}{a_n}|$[cite: 4].",
-          "step_detail": "Ta có $a_n = \\frac{1}{n}$. Giới hạn $L = \\lim_{n \\to \\infty} \\frac{1}{\\sqrt[n]{n}} = 1$. Vậy bán kính hội tụ $R = \\frac{1}{L} = 1$[cite: 4]. Khoảng hội tụ là $(-1, 1)$[cite: 4]."
+          "hint": "Xác định hệ số $a_n$ và sử dụng quy tắc tìm bán kính hội tụ $R$ thông qua giới hạn $L = \\lim_{n \\to \\infty} \\sqrt[n]{|a_n|}$ hoặc $L = \\lim_{n \\to \\infty} |\\frac{a_{n+1}}{a_n}|$.",
+          "step_detail": "Ta có $a_n = \\frac{1}{n}$. Giới hạn $L = \\lim_{n \\to \\infty} \\frac{1}{\\sqrt[n]{n}} = 1$. Vậy bán kính hội tụ $R = \\frac{1}{L} = 1$. Khoảng hội tụ là $(-1, 1)$."
         },
         {
           "step_number": 2,
-          "hint": "Xét sự hội tụ tại hai điểm đầu mút $x = R$ và $x = -R$[cite: 4].",
-          "step_detail": "Tại $x = 1$: Chuỗi trở thành $\\sum \\frac{1}{n}$ (chuỗi điều hòa), phân kì[cite: 4]. Tại $x = -1$: Chuỗi trở thành $\\sum \\frac{(-1)^n}{n}$ (chuỗi đan dấu), hội tụ theo định lí Leibnitz[cite: 4]."
+          "hint": "Xét sự hội tụ tại hai điểm đầu mút $x = R$ và $x = -R$.",
+          "step_detail": "Tại $x = 1$: Chuỗi trở thành $\\sum \\frac{1}{n}$ (chuỗi điều hòa), phân kì. Tại $x = -1$: Chuỗi trở thành $\\sum \\frac{(-1)^n}{n}$ (chuỗi đan dấu), hội tụ theo định lí Leibnitz."
         },
         {
           "step_number": 3,
           "hint": "Kết hợp khoảng hội tụ và các điểm đầu mút để đưa ra miền hội tụ cuối cùng.",
-          "step_detail": "Chuỗi hội tụ khi $-1 \\le x < 1$. Vậy miền hội tụ là $[-1, 1)$[cite: 4]."
+          "step_detail": "Chuỗi hội tụ khi $-1 \\le x < 1$. Vậy miền hội tụ là $[-1, 1)$."
         }
       ],
       "common_mistakes": [
-        "Quên không xét sự hội tụ tại các điểm đầu mút $x = \\pm R$[cite: 4].",
+        "Quên không xét sự hội tụ tại các điểm đầu mút $x = \\pm R$.",
         "Nhầm lẫn giới hạn $\\sqrt[n]{n}$ bằng 0 (thực tế bằng 1)."
       ]
     },
@@ -205,28 +205,28 @@
       "topic": "5.3 Tính tổng của chuỗi lũy thừa",
       "difficulty": "Hard",
       "bloom_level": "Evaluating",
-      "question_text": "Tính tổng của chuỗi hàm $S(X) = \\sum_{n=1}^{\\infty} nX^n$ trên miền hội tụ của nó[cite: 4].",
-      "full_answer": "$S(X) = \\frac{X}{(1-X)^2}$ với $|X| < 1$[cite: 4].",
+      "question_text": "Tính tổng của chuỗi hàm $S(X) = \\sum_{n=1}^{\\infty} nX^n$ trên miền hội tụ của nó.",
+      "full_answer": "$S(X) = \\frac{X}{(1-X)^2}$ với $|X| < 1$.",
       "scaffolding_steps": [
         {
           "step_number": 1,
           "hint": "Tìm bán kính hội tụ của chuỗi để xác định điều kiện của $X$.",
-          "step_detail": "Với $a_n = n$, ta có $L = \\lim \\frac{n+1}{n} = 1 \\Rightarrow R = 1$. Chuỗi hội tụ khi $|X| < 1$[cite: 4]."
+          "step_detail": "Với $a_n = n$, ta có $L = \\lim \\frac{n+1}{n} = 1 \\Rightarrow R = 1$. Chuỗi hội tụ khi $|X| < 1$."
         },
         {
           "step_number": 2,
-          "hint": "Sử dụng tính chất đạo hàm từng số hạng của chuỗi lũy thừa: $(\\sum a_n X^n)' = \\sum n a_n X^{n-1}$[cite: 4].",
-          "step_detail": "Ta có $\\sum_{n=1}^{\\infty} nX^n = X \\sum_{n=1}^{\\infty} nX^{n-1} = X \\sum_{n=1}^{\\infty} (X^n)'$[cite: 4]."
+          "hint": "Sử dụng tính chất đạo hàm từng số hạng của chuỗi lũy thừa: $(\\sum a_n X^n)' = \\sum n a_n X^{n-1}$.",
+          "step_detail": "Ta có $\\sum_{n=1}^{\\infty} nX^n = X \\sum_{n=1}^{\\infty} nX^{n-1} = X \\sum_{n=1}^{\\infty} (X^n)'$."
         },
         {
           "step_number": 3,
-          "hint": "Hoán đổi dấu đạo hàm và dấu tổng (do chuỗi hội tụ đều trong khoảng hội tụ), sau đó sử dụng công thức tổng chuỗi cấp số nhân[cite: 4].",
-          "step_detail": "$S(X) = X \\left( \\sum_{n=1}^{\\infty} X^n \\right)' = X \\left( \\frac{X}{1-X} \\right)'$[cite: 4]. Tính đạo hàm phân thức: $\\left( \\frac{X}{1-X} \\right)' = \\frac{1(1-X) - X(-1)}{(1-X)^2} = \\frac{1}{(1-X)^2}$[cite: 4]. Vậy $S(X) = \\frac{X}{(1-X)^2}$[cite: 4]."
+          "hint": "Hoán đổi dấu đạo hàm và dấu tổng (do chuỗi hội tụ đều trong khoảng hội tụ), sau đó sử dụng công thức tổng chuỗi cấp số nhân.",
+          "step_detail": "$S(X) = X \\left( \\sum_{n=1}^{\\infty} X^n \\right)' = X \\left( \\frac{X}{1-X} \\right)'$. Tính đạo hàm phân thức: $\\left( \\frac{X}{1-X} \\right)' = \\frac{1(1-X) - X(-1)}{(1-X)^2} = \\frac{1}{(1-X)^2}$. Vậy $S(X) = \\frac{X}{(1-X)^2}$."
         }
       ],
       "common_mistakes": [
         "Thiếu nhân tử $X$ ở ngoài dấu tổng sau khi lấy đạo hàm.",
-        "Không kiểm tra miền hội tụ trước khi thực hiện phép lấy đạo hàm từng số hạng[cite: 4]."
+        "Không kiểm tra miền hội tụ trước khi thực hiện phép lấy đạo hàm từng số hạng."
       ]
     },
     {
@@ -234,28 +234,28 @@
       "topic": "5.3 Khai triển Maclaurin",
       "difficulty": "Medium",
       "bloom_level": "Applying",
-      "question_text": "Viết khai triển Maclaurin của hàm số $f(x) = \\ln(1+x)$[cite: 4].",
-      "full_answer": "$\\ln(1+x) = \\sum_{n=1}^{\\infty} (-1)^{n-1} \\frac{x^n}{n} = x - \\frac{x^2}{2} + \\frac{x^3}{3} - \\dots$ với $-1 < x \\le 1$[cite: 4].",
+      "question_text": "Viết khai triển Maclaurin của hàm số $f(x) = \\ln(1+x)$.",
+      "full_answer": "$\\ln(1+x) = \\sum_{n=1}^{\\infty} (-1)^{n-1} \\frac{x^n}{n} = x - \\frac{x^2}{2} + \\frac{x^3}{3} - \\dots$ với $-1 < x \\le 1$.",
       "scaffolding_steps": [
         {
           "step_number": 1,
-          "hint": "Nhắc lại định nghĩa chuỗi Maclaurin là chuỗi Taylor tại điểm $x_0 = 0$[cite: 4].",
-          "step_detail": "Công thức: $f(x) = f(0) + \\frac{f'(0)}{1!}x + \\dots + \\frac{f^{(n)}(0)}{n!}x^n + \\dots$[cite: 4]."
+          "hint": "Nhắc lại định nghĩa chuỗi Maclaurin là chuỗi Taylor tại điểm $x_0 = 0$.",
+          "step_detail": "Công thức: $f(x) = f(0) + \\frac{f'(0)}{1!}x + \\dots + \\frac{f^{(n)}(0)}{n!}x^n + \\dots$."
         },
         {
           "step_number": 2,
           "hint": "Tính các đạo hàm cấp cao của $f(x) = \\ln(1+x)$ và giá trị của chúng tại 0.",
-          "step_detail": "$f(0) = \\ln 1 = 0$; $f'(x) = \\frac{1}{1+x} \\Rightarrow f'(0) = 1$; $f''(x) = -\\frac{1}{(1+x)^2} \\Rightarrow f''(0) = -1$; $f'''(x) = \\frac{2}{(1+x)^3} \\Rightarrow f'''(0) = 2$[cite: 4]. Tổng quát: $f^{(n)}(0) = (-1)^{n-1}(n-1)!$[cite: 4]."
+          "step_detail": "$f(0) = \\ln 1 = 0$; $f'(x) = \\frac{1}{1+x} \\Rightarrow f'(0) = 1$; $f''(x) = -\\frac{1}{(1+x)^2} \\Rightarrow f''(0) = -1$; $f'''(x) = \\frac{2}{(1+x)^3} \\Rightarrow f'''(0) = 2$. Tổng quát: $f^{(n)}(0) = (-1)^{n-1}(n-1)!$."
         },
         {
           "step_number": 3,
           "hint": "Thay các giá trị đạo hàm vào công thức chuỗi Maclaurin và rút gọn.",
-          "step_detail": "$\\ln(1+x) = 0 + \\frac{1}{1!}x + \\frac{-1}{2!}x^2 + \\frac{2}{3!}x^3 + \\dots = x - \\frac{x^2}{2} + \\frac{x^3}{3} - \\dots$[cite: 4]."
+          "step_detail": "$\\ln(1+x) = 0 + \\frac{1}{1!}x + \\frac{-1}{2!}x^2 + \\frac{2}{3!}x^3 + \\dots = x - \\frac{x^2}{2} + \\frac{x^3}{3} - \\dots$."
         }
       ],
       "common_mistakes": [
         "Sai dấu các số hạng trong chuỗi.",
-        "Nhầm lẫn hệ số của chuỗi $\\ln(1+x)$ có giai thừa ở mẫu (thực tế mẫu chỉ là $n$)[cite: 4]."
+        "Nhầm lẫn hệ số của chuỗi $\\ln(1+x)$ có giai thừa ở mẫu (thực tế mẫu chỉ là $n$)."
       ]
     },
     {
@@ -264,27 +264,27 @@
       "difficulty": "Medium",
       "bloom_level": "Understanding",
       "question_text": "Cho hàm số $f(x)$ tuần hoàn với chu kì $2\\pi$, bị chặn và khả tích trên $[-\\pi, \\pi]$. Hãy nêu công thức tính các hệ số Fourier $a_0, a_n, b_n$ của hàm số này.",
-      "full_answer": "Các hệ số Fourier được tính bằng công thức: $a_0 = \\frac{1}{\\pi} \\int_{-\\pi}^{\\pi} f(x) dx$[cite: 4]; $a_n = \\frac{1}{\\pi} \\int_{-\\pi}^{\\pi} f(x) \\cos nx dx$[cite: 4]; $b_n = \\frac{1}{\\pi} \\int_{-\\pi}^{\\pi} f(x) \\sin nx dx$ với $n = 1, 2, \\dots$[cite: 4].",
+      "full_answer": "Các hệ số Fourier được tính bằng công thức: $a_0 = \\frac{1}{\\pi} \\int_{-\\pi}^{\\pi} f(x) dx$; $a_n = \\frac{1}{\\pi} \\int_{-\\pi}^{\\pi} f(x) \\cos nx dx$; $b_n = \\frac{1}{\\pi} \\int_{-\\pi}^{\\pi} f(x) \\sin nx dx$ với $n = 1, 2, \\dots$.",
       "scaffolding_steps": [
         {
           "step_number": 1,
           "hint": "Xác định dạng tổng quát của chuỗi lượng giác Fourier.",
-          "step_detail": "Chuỗi Fourier có dạng: $f(x) \\sim \\frac{a_0}{2} + \\sum_{n=1}^{\\infty} (a_n \\cos nx + b_n \\sin nx)$[cite: 4]."
+          "step_detail": "Chuỗi Fourier có dạng: $f(x) \\sim \\frac{a_0}{2} + \\sum_{n=1}^{\\infty} (a_n \\cos nx + b_n \\sin nx)$."
         },
         {
           "step_number": 2,
           "hint": "Ghi nhớ công thức tính hệ số tự do $a_0$, lưu ý nhân tử $1/\\pi$.",
-          "step_detail": "$a_0$ là giá trị trung bình của hàm trên một chu kì, tính bởi: $a_0 = \\frac{1}{\\pi} \\int_{-\\pi}^{\\pi} f(x) dx$[cite: 4]."
+          "step_detail": "$a_0$ là giá trị trung bình của hàm trên một chu kì, tính bởi: $a_0 = \\frac{1}{\\pi} \\int_{-\\pi}^{\\pi} f(x) dx$."
         },
         {
           "step_number": 3,
           "hint": "Viết công thức cho các hệ số $a_n$ và $b_n$ gắn với hàm tương ứng.",
-          "step_detail": "$a_n$ đi kèm với $\\cos nx$ và $b_n$ đi kèm với $\\sin nx$, cả hai đều có nhân tử $1/\\pi$ phía trước tích phân trên đoạn $[-\\pi, \\pi]$[cite: 4]."
+          "step_detail": "$a_n$ đi kèm với $\\cos nx$ và $b_n$ đi kèm với $\\sin nx$, cả hai đều có nhân tử $1/\\pi$ phía trước tích phân trên đoạn $[-\\pi, \\pi]$."
         }
       ],
       "common_mistakes": [
         "Nhầm lẫn nhân tử phía trước tích phân (quên chia cho $\\pi$ hoặc nhầm thành $1/2\\pi$).",
-        "Nhầm lẫn công thức giữa $a_n$ và $b_n$ (nhầm sin thành cos và ngược lại)[cite: 4]."
+        "Nhầm lẫn công thức giữa $a_n$ và $b_n$ (nhầm sin thành cos và ngược lại)."
       ]
     },
     {
@@ -292,23 +292,23 @@
       "topic": "5.4 Khai triển Fourier cho hàm Chẵn và hàm Lẻ",
       "difficulty": "Medium",
       "bloom_level": "Applying",
-      "question_text": "Nếu hàm số $f(x)$ là hàm số lẻ trên đoạn $[-l, l]$, khai triển Fourier của nó có đặc điểm gì đặc biệt về các hệ số[cite: 4]?",
-      "full_answer": "Nếu $f(x)$ là hàm lẻ, các hệ số $a_0 = 0$ và $a_n = 0$[cite: 4]. Chuỗi Fourier lúc này chỉ còn các hàm sin (gọi là chuỗi sin): $f(x) = \\sum_{n=1}^{\\infty} b_n \\sin \\frac{n\\pi x}{l}$[cite: 4]. Hệ số $b_n = \\frac{2}{l} \\int_{0}^{l} f(x) \\sin \\frac{n\\pi x}{l} dx$[cite: 4].",
+      "question_text": "Nếu hàm số $f(x)$ là hàm số lẻ trên đoạn $[-l, l]$, khai triển Fourier của nó có đặc điểm gì đặc biệt về các hệ số?",
+      "full_answer": "Nếu $f(x)$ là hàm lẻ, các hệ số $a_0 = 0$ và $a_n = 0$. Chuỗi Fourier lúc này chỉ còn các hàm sin (gọi là chuỗi sin): $f(x) = \\sum_{n=1}^{\\infty} b_n \\sin \\frac{n\\pi x}{l}$. Hệ số $b_n = \\frac{2}{l} \\int_{0}^{l} f(x) \\sin \\frac{n\\pi x}{l} dx$.",
       "scaffolding_steps": [
         {
           "step_number": 1,
           "hint": "Nhắc lại tính chất tích phân của hàm lẻ trên đoạn đối xứng $[-l, l]$.",
-          "step_detail": "Tích phân của hàm lẻ trên đoạn đối xứng luôn bằng 0[cite: 4]. Vì $f(x)$ lẻ và $\\cos$ chẵn nên tích $f(x)\\cos$ lẻ, dẫn đến $a_n = 0$[cite: 4]."
+          "step_detail": "Tích phân của hàm lẻ trên đoạn đối xứng luôn bằng 0. Vì $f(x)$ lẻ và $\\cos$ chẵn nên tích $f(x)\\cos$ lẻ, dẫn đến $a_n = 0$."
         },
         {
           "step_number": 2,
           "hint": "Xác định các hệ số còn lại cho hàm lẻ.",
-          "step_detail": "Vì $f(x)$ lẻ và $\\sin$ lẻ nên tích $f(x)\\sin$ chẵn. Hệ số $b_n$ sẽ gấp đôi tích phân trên nửa đoạn $[0, l]$[cite: 4]."
+          "step_detail": "Vì $f(x)$ lẻ và $\\sin$ lẻ nên tích $f(x)\\sin$ chẵn. Hệ số $b_n$ sẽ gấp đôi tích phân trên nửa đoạn $[0, l]$."
         }
       ],
       "common_mistakes": [
         "Vẫn đi tính các hệ số $a_n$ cho hàm lẻ, gây lãng phí thời gian.",
-        "Nhầm lẫn hàm chẵn thì khai triển theo sin (thực tế hàm chẵn khai triển theo cos)[cite: 4]."
+        "Nhầm lẫn hàm chẵn thì khai triển theo sin (thực tế hàm chẵn khai triển theo cos)."
       ]
     },
     {
@@ -316,22 +316,22 @@
       "topic": "5.4 Định lí Dirichlet và Điểm gián đoạn",
       "difficulty": "Hard",
       "bloom_level": "Evaluating",
-      "question_text": "Phát biểu định lí Dirichlet. Tại điểm gián đoạn $x_0$, tổng của chuỗi Fourier $S(x_0)$ sẽ hội tụ về giá trị nào[cite: 4]?",
-      "full_answer": "Tại điểm gián đoạn $x_0$, chuỗi Fourier hội tụ về trung bình cộng của giới hạn trái và giới hạn phải: $S(x_0) = \\frac{f(x_0^+) + f(x_0^-)}{2}$[cite: 4]. Tại các điểm liên tục, chuỗi hội tụ đúng về $f(x_0)$[cite: 4].",
+      "question_text": "Phát biểu định lí Dirichlet. Tại điểm gián đoạn $x_0$, tổng của chuỗi Fourier $S(x_0)$ sẽ hội tụ về giá trị nào?",
+      "full_answer": "Tại điểm gián đoạn $x_0$, chuỗi Fourier hội tụ về trung bình cộng của giới hạn trái và giới hạn phải: $S(x_0) = \\frac{f(x_0^+) + f(x_0^-)}{2}$. Tại các điểm liên tục, chuỗi hội tụ đúng về $f(x_0)$.",
       "scaffolding_steps": [
         {
           "step_number": 1,
           "hint": "Xác định điều kiện để hàm số có thể khai triển Fourier theo Dirichlet.",
-          "step_detail": "Hàm $f(x)$ phải tuần hoàn chu kì $2l$, đơn điệu từng khúc và bị chặn trên $[-l, l]$[cite: 4]."
+          "step_detail": "Hàm $f(x)$ phải tuần hoàn chu kì $2l$, đơn điệu từng khúc và bị chặn trên $[-l, l]$."
         },
         {
           "step_number": 2,
           "hint": "Nêu giá trị hội tụ của chuỗi tại điểm gián đoạn loại 1.",
-          "step_detail": "Nếu $x_0$ là điểm nhảy, tổng chuỗi Fourier sẽ nằm chính giữa bước nhảy đó: $S(x_0) = \\frac{1}{2} [\\lim_{x \\to x_0^+} f(x) + \\lim_{x \\to x_0^-} f(x)]$[cite: 4]."
+          "step_detail": "Nếu $x_0$ là điểm nhảy, tổng chuỗi Fourier sẽ nằm chính giữa bước nhảy đó: $S(x_0) = \\frac{1}{2} [\\lim_{x \\to x_0^+} f(x) + \\lim_{x \\to x_0^-} f(x)]$."
         }
       ],
       "common_mistakes": [
-        "Cho rằng chuỗi Fourier luôn hội tụ về giá trị hàm số $f(x_0)$ tại mọi điểm (sai tại điểm gián đoạn)[cite: 4]."
+        "Cho rằng chuỗi Fourier luôn hội tụ về giá trị hàm số $f(x_0)$ tại mọi điểm (sai tại điểm gián đoạn)."
       ]
     }
   ]

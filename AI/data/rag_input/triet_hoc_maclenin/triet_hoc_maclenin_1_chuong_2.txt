@@ -1,0 +1,1914 @@
+# Chương 2: CHỦ NGHĨA DUY VẬT BIỆN CHỨNG 
+Nội dung của chương 2 giúp sinh viên nắm được quan điểm của chủ nghĩa duy 
+vật biện chứng về mối quan hệ giữa vật chất và ý thức, những nội dung cơ bản của 
+phép biện chứng duy vật, biết rút ra ý nghĩa phương pháp luận vận dụng trong nhận 
+thức và thực tiễn. 
+### 2.1. VẬT CHẤT VÀ Ý THỨC 
+#### 2.1.1. Vật chất và phương thức tồn tại của vật chất 
+##### a) Quan niệm của chủ nghĩa duy tâm và chủ nghĩa duy vật trước C. Mác về 
+phạm trù vật chất 
+- Quan niệm về vật chất của chủ nghĩa duy tâm: 
+Các nhà triết học duy tâm, cả chủ nghĩa duy tâm khách quan và chủ nghĩa duy 
+tâm chủ quan, từ thời cổ đại đến hiện đại tuy buộc phải thừa nhận sự tồn tại của các sự 
+vật, hiện tượng của thế giới nhưng lại phủ nhận đặc trưng “tự thân tồn tại” của chúng. 
+Thực chất, họ phủ nhận đặc tính tồn tại khách quan của vật chất. 
++ Chủ nghĩa duy tâm khách quan thừa nhận sự tồn tại hiện thực của giới tự 
+nhiên, nhưng lại cho rằng nguồn gốc của nó là do một lực lượng tinh thần phi tự nhiên.  
++ Chủ nghĩa duy tâm chủ quan cho rằng đặc trưng cơ bản nhất của mọi sự vật, 
+hiện tượng là sự tồn tại lệ thuộc vào chủ quan, tức là một hình thức tồn tại khác của 
+ý thức. 
+- Quan niệm về vật chất của chủ nghĩa duy vật trước Mác:   
+Quan điểm nhất quán từ xưa đến nay của các nhà triết học duy vật là thừa nhận 
+sự tồn tại khách quan của thế giới vật chất, lấy bản thân giới tự nhiên để giải thích tự 
+nhiên. Lập trường đó là đúng đắn, song chưa đủ để các nhà duy vật trước C. Mác đi 
+đến một quan niệm hoàn chỉnh về phạm trù nền tảng này. Tuy vậy, cùng với những 
+tiến bộ của lịch sử, quan niệm của các nhà triết học duy vật về vật chất cũng từng bước 
+phát triển theo hướng ngày càng sâu sắc và trừu tượng hóa khoa học hơn. 
++ Chủ nghĩa duy vật thời cổ đại: 
+Thời cổ đại, đặc biệt là ở Hy Lạp - La Mã, Trung Quốc, Ấn Độ đã xuất hiện chủ 
+nghĩa duy vật với quan niệm chất phác về giới tự nhiên, về vật chất và ý thức. Nhìn 
+chung các nhà duy vật thời cổ đại qui vật chất về một hay một vài dạng cụ thể của nó 
+và xem chúng là khởi nguyên (cái bắt đầu) của thế giới, tức qui vật chất về những vật 
+thể hữu hình, cảm tính đang tồn tại ở thế giới bên ngoài, chẳng hạn, nước (Talét), lửa 
+(Hêraclít), không khí (Anaximen); đất, nước, lửa, gió (Tứ đại - Ấn Độ), Kim, mộc, 
+thủy, hỏa, thổ (Ngũ hành - Trung Quốc). Đỉnh cao của tư tưởng duy vật cổ đại về vật 
+chất là thuyết nguyên tử của hai nhà triết học Hy Lạp cổ đại là Leucippus (Lơxíp) 
+(khoảng 500 - 440 trước Công nguyên) và Democritos (Đêmôcrít) (khoảng 460 - 370 
+trước Công nguyên). Cả hai ông đều cho rằng, vật chất là nguyên tử. Nguyên tử theo 
+họ là những hạt nhỏ nhất, không thể phân chia, không khác nhau về chất, tồn tại vĩnh 
+viễn và sự phong phú của chúng về hình dạng, tư thế, trật tự sắp xếp quy định tính 
+muôn vẻ của vạn vật. 
++ Chủ nghĩa duy vật thế kỷ XV - XVIII 
+Đến thế kỷ XVII - XVIII, chủ nghĩa duy vật mang hình thức chủ nghĩa duy vật 
+siêu hình, máy móc. Thuyết nguyên tử vẫn được các nhà triết học và khoa học tự nhiên 
+thời kỳ phục hưng và cận đại tiếp tục nghiên cứu, khẳng định trên lập trường duy vật. 
+Đặc biệt, những thành công kỳ diệu của Newton trong vật lý học cổ điển (nghiên cứu 
+cấu tạo và thuộc tính của các vật thể vật chất vĩ mô - bắt đầu tính từ nguyên tử trở lên) 
+và việc khoa học vật lý thực nghiệm chứng minh được sự tồn tại thực sự của nguyên tử 
+càng làm cho quan niệm trên đây được củng cố thêm. 
+Song, do chưa thoát khỏi phương pháp tư duy siêu hình nên nhìn chung các nhà 
+triết học duy vật thời kỳ cận đại đã không đưa ra được những khái quát triết học đúng 
+đắn. Họ thường đồng nhất vật chất với khối lượng, coi những định luật cơ học như 
+những chân lý không thể thêm bớt và giải thích mọi hiện tượng của thế giới theo những 
+chuẩn mực thuần túy cơ học; xem vật chất, vận động, không gian, thời gian như những 
+thực thể khác nhau, không có mối liên hệ nội tại với nhau...  
+##### b) Cuộc cách mạng trong khoa học tự nhiên cuối thế kỷ XIX, đầu thế kỷ XX và 
+sự phá sản của các quan điểm duy vật siêu hình về vật chất 
+Năm 1895, Rơnghen phát hiện ra tia X. Năm 1896, Beccoren phát hiện ra hiện 
+tượng phóng xạ của nguyên tố Urani. Năm 1897 Tômxơn phát hiện ra điện tử. Năm 
+1901 Kaufman đã chứng minh được khối lượng của điện tử không phải là bất biến mà 
+thay đổi theo vận tốc vận động của nguyên tử. Năm 1898 - 1902, nhà nữ vật lý học 
+người Ba Lan - Marie Sklodowska (Mari Scôlôđốpsca) cùng với chồng là Pierre 
+Curie, nhà hóa học người Pháp, đã khám phá ra chất phóng xạ mạnh là pôlôni và 
+rađium. Những phát hiện vĩ đại đó chứng tỏ rằng, nguyên tử không phải là phần tử 
+nhỏ nhất mà nó có thể bị phân chia, chuyển hóa. Năm 1905, thuyết tương đối hẹp và 
+năm 1916, thuyết tương đối tổng quát của Albert Einstein (A. Anhxtanh) ra đời đã 
+chứng minh: Không gian, thời gian, khối lượng luôn biến đổi cùng với sự vận động 
+của vật chất. Thế giới vật chất không có và không thể có những vật thể không có kết 
+cấu, tức là không thể có đơn vị cuối cùng, tuyệt đối đơn giản và bất biến để đặc trưng 
+chung cho vật chất. Thế giới ấy còn nhiều điều “kỳ lạ” mà con người đã và đang tiếp 
+tục khám phá, chẳng hạn: sự chuyển hóa giữa hạt và trường, sóng và hạt, hạt và phản 
+hạt, “hụt khối lượng”, quan hệ bất định, v.v.. V.I. Lênin viết: “Điện tử cũng vô cùng 
+tận như nguyên tử; tự nhiên là vô tận”1 là hoàn toàn đúng đắn. 
+Những phát minh này đã bác bỏ quan niệm siêu hình về vật chất. Một nhiệm vụ 
+đặt ra là phải khái quát những thành tựu mới nhất của khoa học về vật chất, để chống 
+lại chủ nghĩa duy tâm, để mở đường cho khoa học tiếp tục phát triển. Nhiệm vụ đó đã 
+được Lênin giải quyết bằng định nghĩa khoa học về vật chất. 
+##### c) Quan niệm của triết học Mác - Lênin về vật chất 
+Khắc phục những thiếu sót của chủ nghĩa duy vật trước Mác, qui vật chất về một 
+hay một vài dạng cụ thể của nó; C.Mác và Ph.Ăngghen đã phân biệt tính khái quát của 
+phạm trù vật chất và sự tồn tại vật chất ở những dạng cụ thể. Để có một quan niệm đúng 
+đắn về vật chất, cần phải có sự phân biệt rõ ràng giữa vật chất với tính cách là một phạm 
+trù của triết học với bản thân các sự vật, hiện tượng cụ thể của thế giới vật chất. Bản 
+thân phạm trù vật chất cũng không phải là sự sáng tạo tùy tiện của tư duy con người, 
+mà trái lại, là kết quả của con đường trừu tượng hóa của tư duy con người về các sự 
+vật, hiện tượng có thể cảm biết được bằng các giác quan. Vật chất với tư cách là phạm 
+trù triết học là kết quả của sự khái quát hóa, trừu tượng hóa những thuộc tính, những mối 
+liên hệ vốn có của các sự vật, nên nó phản ánh vật chất nói chung, vô hạn, vô tận, không 
+sinh ra, không mất đi. Còn các dạng vật chất mà khoa học cụ thể nghiên cứu đều có giới 
+hạn, có sinh ra và mất đi để chuyển hoá thành cái khác. Vì vậy, không thể quy vật chất nói 
+chung về vật thể, không thể đồng nhất vật chất nói chung với những dạng tồn tại cụ thể của 
+nó như các nhà duy vật cổ đại, duy vật cận đại đã làm. 
+V.I. Lênin đã tiến hành tổng kết toàn diện những thành tựu mới nhất của khoa 
+học, đấu tranh chống mọi biểu hiện của chủ nghĩa hoài nghi, duy tâm đang lầm lẫn 
+hoặc xuyên tạc những thành tựu mới trong nhận thức cụ thể của con người về vật chất, 
+mưu toan bác bỏ chủ nghĩa duy vật, qua đó bảo vệ và phát triển quan niệm duy vật 
+biện chứng về phạm trù vật chất.  
+ Để đưa ra được một quan niệm thực sự khoa học về vật chất, V.I. Lênin đặc biệt 
+quan tâm đến việc tìm kiếm phương pháp định nghĩa cho phạm trù này. Kế thừa 
+những tư tưởng của C. Mác và Ph. Ăngghen, V.I. Lênin đã định nghĩa vật chất với tư 
+cách là một phạm trù triết học và bằng cách đem đối lập với phạm trù ý thức trên 
+phương diện nhận thức luận cơ bản. 
+## 1. V.I. Lênin: Toàn tập, Sđd, t.18, tr.323. 
+Trong tác phẩm Chủ nghĩa duy vật và chủ nghĩa kinh nghiệm phê phán, V.I. 
+Lênin đã đưa ra định nghĩa về vật chất như sau: “Vật chất là một phạm trù triết học 
+dùng để chỉ thực tại khách quan được đem lại cho con người trong cảm giác, được 
+cảm giác của chúng ta chép lại, chụp lại, phản ánh, và tồn tại không lệ thuộc vào 
+cảm giác”. Đây là một định nghĩa hoàn chỉnh về vật chất mà cho đến nay các nhà 
+khoa học hiện đại coi là một định nghĩa kinh điển.  
+- Định nghĩa vật chất của Lênin bao hàm các nội dung cơ bản sau: 
+Trước hết, cần phân biệt vật chất với tư cách là phạm trù triết học với các quan 
+niệm của khoa học tự nhiên về cấu tạo và những thuộc tính cụ thể của các dạng vật 
+chất khác nhau (các vật thể cụ thể, cảm tính).  
+ Vật chất với tư cách là phạm trù triết học là kết quả của sự khái quát hóa, trừu 
+tượng hóa những thuộc tính, những mối liên hệ vốn có của các sự vật, nên nó phản ánh 
+vật chất nói chung, vô hạn, vô tận, không sinh ra, không mất đi.  
+ Còn các dạng vật chất mà khoa học cụ thể nghiên cứu đều có giới hạn, có sinh ra 
+và mất đi để chuyển hoá thành cái khác. Vì vậy, không thể quy vật chất nói chung về 
+vật thể, không thể đồng nhất vật chất nói chung với những dạng tồn tại cụ thể của nó 
+như các nhà duy vật cổ đại, duy vật cận đại đã làm. 
+ Thứ hai, vật chất là thực tại khách quan - cái tồn tại hiện thực bên ngoài ý thức 
+và không lệ thuộc vào ý thức. Đặc trưng quan trọng nhất của “vật chất” là thuộc tính khách 
+quan, tồn tại độc lập với ý thức con người, không lệ thuộc vào cảm giác chủ quan của con 
+người cho dù con người có nhận thức được hay chưa nhận thức được. 
+ Nói đến vật chất là nói đến tất cả những gì đã và đang hiện hữu thực sự bên 
+ngoài ý thức của con người. Vật chất là hiện thực chứ không phải là hư vô và hiện thực 
+này mang tính khách quan chứ không phải hiện thực chủ quan. Như vậy, mọi sự vật, 
+hiện tượng từ vi mô đến vĩ mô, từ những cái đã biết đến những cái chưa biết, từ những 
+sự vật “giản đơn nhất” đến những hiện tượng vô cùng “kỳ lạ”, dù tồn tại trong tự nhiên 
+hay trong xã hội cũng đều là những đối tượng tồn tại khách quan, độc lập với ý thức 
+con người, nghĩa là đều thuộc phạm trù vật chất, đều là các dạng cụ thể của vật chất. 
+Xã hội loài người cũng là một dạng tồn tại đặc biệt của vật chất. 
+Thứ ba, vật chất (dưới hình thức tồn tại cụ thể của nó) là cái có thể gây nên cảm giác ở 
+con người khi nó trực tiếp hoặc gián tiếp tác động đến các giác quan của con người. V.I. 
+Lênin khẳng định rằng, vật chất luôn biểu hiện đặc tính hiện thực khách quan của 
+mình thông qua sự tồn tại không lệ thuộc vào ý thức của các sự vật, hiện tượng cụ thể, 
+tức là luôn biểu hiện sự tồn tại hiện thực của mình dưới dạng các thực thể. Các thực 
+thể này do những đặc tính bản thể luận vốn có của nó, nên khi trực tiếp hoặc gián tiếp 
+tác động vào các giác quan sẽ đem lại cho con người những cảm giác. Mặc dù không 
+phải mọi sự vật, hiện tượng, quá trình trong thế giới khi tác động lên giác quan của 
+con người đều được các giác quan con người nhận biết; có cái phải qua dụng cụ khoa 
+học, thậm chí có cái bằng dụng cụ khoa học nhưng cũng chưa biết; có cái đến nay vẫn 
+chưa có dụng cụ khoa học để biết được; song, nếu nó tồn tại khách quan, hiện thực ở 
+bên ngoài, độc lập, không phụ thuộc vào ý thức của con người thì nó vẫn là vật chất. 
+Thứ tư, vật chất là cái mà ý thức chẳng qua chỉ là sự phản ánh của nó.  
+Chỉ có một thế giới duy nhất là thế giới vật chất. Còn các hiện tượng tinh thần 
+(cảm giác, tư duy, ý thức...) lại luôn luôn có nguồn gốc từ các hiện tượng vật chất và 
+những gì có được trong các hiện tượng tinh thần ấy (nội dung của chúng) chẳng qua 
+cũng chỉ là sự chép lại, chụp lại, phản ánh lại của các sự vật, hiện tượng đang tồn tại 
+với tư cách là hiện thực khách quan.  
+- Ý nghĩa phương pháp luận quan niệm vật chất của triết học Mác - Lênin 
++ Định nghĩa vật chất của V.I. Lênin đã giải quyết hai mặt vấn đề cơ bản của triết 
+học trên lập trường của chủ nghĩa duy vật biện chứng; cung cấp nguyên tắc thế giới 
+quan và phương pháp luận khoa học để đấu tranh chống chủ nghĩa duy tâm, thuyết 
+không thể biết, chủ nghĩa duy vật siêu hình và mọi biểu hiện của chúng trong triết học 
+tư sản hiện đại về phạm trù này. Trong nhận thức và thực tiễn, đòi hỏi con người phải 
+quán triệt nguyên tắc khách quan, xuất phát từ hiện thực khách quan, tôn trọng khách 
+quan, nhận thức và vận dụng đúng quy luật khách quan...  
++ Định nghĩa vật chất của V.I. Lênin là cơ sở khoa học cho việc xác định vật chất 
+trong lĩnh vực xã hội, đó là các điều kiện sinh hoạt vật chất, hoạt động vật chất và các 
+quan hệ vật chất xã hội giữa người với người. Nó còn tạo sự liên kết giữa chủ nghĩa 
+duy vật biện chứng và chủ nghĩa duy vật lịch sử thành một hệ thống lý luận thống 
+nhất, góp phần tạo nên nền tảng lý luận khoa học cho việc phân tích một cách duy vật 
+biện chứng các vấn đề của chủ nghĩa duy vật lịch sử, trước hết là các vấn đề về sự vận 
+động và phát triển của phương thức sản xuất vật chất, về mối quan hệ giữa tồn tại xã 
+hội và ý thức xã hội, về mối quan hệ giữa quy luật khách quan của lịch sử và hoạt 
+động có ý thức của con người... 
++ Định nghĩa về vật chất của Lênin khắc phục khủng hoảng niềm tin trong khoa 
+học tự nhiên; đem lại cho các khoa học định hướng đi sâu khám phá hơn nữa các giới 
+hạn tồn tại của thế giới vật chất. 
++ Định nghĩa về vật chất của Lênin cũng là cơ sở để xây dựng mối quan hệ chặt 
+chẽ giữa triết học và khoa học tự nhiên. 
+##### d) Phương thức tồn tại của vật chất 
+Phương thức tồn tại của vật chất tức là cách thức tồn tại và hình thức tồn tại của 
+vật chất. Chủ nghĩa duy vật biện chứng khẳng định: Vận động là cách thức tồn tại, 
+đồng thời là hình thức tồn tại của vật chất; không gian, thời gian là hình thức tồn tại 
+của vật chất. 
+* Vận động  
+Sự tồn tại của thế giới vật chất hết sức phong phú và phức tạp. Với tư cách là 
+một khái niệm triết học, vận động theo nghĩa chung nhất là mọi sự biến đổi nói 
+chung. Ph. Ăngghen viết: “Vận động, hiểu theo nghĩa chung nhất, - tức được hiểu là một 
+phương thức tồn tại của vật chất, là một thuộc tính cố hữu của vật chất, - thì bao gồm 
+tất cả mọi sự thay đổi và mọi quá trình diễn ra trong vũ trụ, kể từ sự thay đổi vị trí đơn 
+giản cho đến tư duy”1. 
+- Vận động là phương thức tồn tại của vật chất.  
++ Vật chất chỉ có thể tồn tại bằng cách vận động và thông qua vận động mà biểu 
+hiện sự tồn tại của nó với các hình dạng phong phú, muôn vẻ, vô tận.  
++ Con người chỉ nhận thức được sâu sắc sự vật, hiện tượng bằng cách xem xét 
+chúng trong quá trình vận động. 
+- Vận động là một thuộc tính cố hữu của vật chất 
+Vận động là thuộc tính cố hữu của vật chất, là tự thân vận động không do một lực 
+lượng phi vật chất nào tạo ra, nó tồn tại vĩnh viễn, không thể tạo ra và không bị tiêu diệt. 
+Quan niệm về tính không thể tạo ra và không bị tiêu diệt của vận động đã được các nhà 
+khoa học tự nhiên chứng minh bằng quy luật bảo toàn và chuyển hóa năng lượng. Theo 
+quy luật này, vận động của vật chất được bảo toàn cả về số lượng và chất lượng. Bảo 
+toàn về lượng của vận động có nghĩa là tổng số vận động của vũ trụ là không thay đổi, 
+lượng vận động của sự vật này mất đi thì cũng ngang bằng lượng vận động của các sự 
+vật khác nhận được. Bảo toàn về chất của vận động là bảo toàn các hình thức vận động 
+và bảo toàn khả năng chuyển hóa của các hình thức vận động. Một hình thức vận động 
+cụ thể thì có thể mất đi để chuyển hóa thành hình thức vận động khác, còn vận động nói 
+chung tồn tại vĩnh viễn gắn liền với bản thân vật chất 
+- Những hình thức vận động cơ bản của vật chất bao gồm: Vận động cơ học, vận 
+động vật lý, vận động hoá học, vận động sinh học, vận động xã hội.  
+## 1. C. Mác và Ph. Ăngghen: Toàn tập, Sđd, t.20, tr.519. 
++ Vận động cơ học (sự dịch chuyển vị trí của các vật thể trong không gian). Ví dụ 
+như sự dịch chuyển của các phương tiện trên đường, người chạy từ điểm A đến điểm 
+B. 
++ Vận động vật lý (sự biến đổi của nhiệt, điện, trường và các hạt cơ bản,..). Ví dụ 
+như sự chuyển động của các electron trong dòng điện, sự thay đổi nhiệt độ của 
+nước,... 
++ Vận động hoá học (các biến đổi của các chất vô cơ và hữu cơ trong quá trình 
+hoá hợp và phân giải các chất,...). Ví dụ như thanh sắt để trong không khí ẩm bị gỉ do 
+quá trình oxi hóa,... 
++ Vận động sinh học ( sự biến đổi của cơ thể sống, trao đổi chất giữa cơ thể sống 
+và môi trường,...). Ví dụ như sự nảy mầm và lớn lên của cây, quá trình phân bào, biến 
+đổi gen,... 
++ Vận động xã hội (sự thay đổi, thay thế của các hình thái kinh tế - xã hội, sự 
+biến đổi của các hoạt động kinh tế, xã hội,...). Ví dụ như sự thay đổi của nền kinh tế 
+Việt Nam sau đổi mới, sự thay thế của chế độ tư bản chủ cho chế độ phong kiến ở 
+Pháp sau cách mạng tư sản,... 
+Cơ sở của sự phân chia các hình thức vận động dựa trên các nguyên tắc các hình 
+thức vận động được sắp xếp theo thứ tự từ trình độ thấp đến trình độ cao tương ứng với 
+trình độ nhất định của tổ chức vật chất. 
+Các hình thức vận động khác nhau về chất song chúng không tồn tại biệt lập mà có 
+mối quan hệ mật thiết với nhau, trong đó: 
++ Các hình thức vận động có mối liên hệ phát sinh, nghĩa là hình thức vận động cao 
+nảy sinh trên cơ sở của những hình thức vận động thấp và bao hàm hình thức vận động 
+thấp;  
++ Hình thức vận động cao khác về chất so với hình thức vận động thấp và không thể 
+quy về hình thức vận động thấp. Việc quy giản hình thức vận động cao về hình thức vận 
+động thấp có thể dẫn đến sai lầm. Ví dụ như chủ nghĩa Đácuyn xã hội vào giữa thế kỷ 
+XIX đã quy giản vận động xã hội xuống vận động sinh học, coi con người có nhân tính 
+cũng chỉ như những động vật hoạt động theo bản năng thuần túy. Vì vậy họ đã sai lầm khi 
+cho rằng sự phát triển của xã hội cũng giống hệt quá trình chọn lọc tự nhiên, con người 
+cắn xé, tiêu diệt lẫn nhau để sinh tồn, kẻ nào mạnh thích ứng được thì tồn tại, nếu không 
+sẽ bị tiêu diệt. Học thuyết này sai lầm về nhân thức, phản động về mặt xã hội khi cố tình 
+luận giải cho trật tự xâm lược của chủ nghĩa đế quốc. 
+Việc phân chia các hình thức vận động cơ bản có ý nghĩa quan trọng đối với việc 
+phân chia đối tượng và xác định mối quan hệ giữa các ngành khoa học, đồng thời cũng 
+cho phép vạch ra các nguyên lý đặc trưng cho sự tương quan giữa các hình thức vận động 
+của vật chất. Trong tương lai, khoa học hiện đại có thể sẽ phát hiện ra những trình độ tổ 
+chức vật chất mới, và do đó, cũng có thể tìm ra những hình thức vận động mới, cho nên 
+có thể và cần phải phát triển, bổ sung cho sự phân loại nói trên của Ph. Ăngghen, mặc dù 
+những nguyên tắc căn bản của sự phân loại đó vẫn giữ nguyên giá trị. 
+Các hình thức vận động tồn tại trong mối liên hệ không thể tách rời nhau. Giữa hai 
+hình thức vận động cao và thấp có thể có hình thức vận động trung gian, đó là những mắt 
+khâu chuyển tiếp trong quá trình chuyển hóa lẫn nhau của các hình thức vận động. Tuy 
+nhiên, những kết cấu vật chất đặc thù bao giờ cũng được đặc trưng bởi một hình thức vận 
+động cơ bản nhất định. Ví dụ như với một con gà có thể biểu hiện nhiều hình thức vận 
+động như cơ học, vật lý, hóa học,... nhưng hình thức vận động sinh học sẽ là đặc trưng 
+nhất cho nó với tư cách là một cơ thể sống; con người có thể biểu hiện tất cả các hình 
+thức vận động nhưng hình thức vận động sinh học là đặc trưng nhất cho trình độ tồn tại 
+của con người và xã hội loài người. Vì vậy, vừa phải thấy mối liên hệ giữa các hình thức 
+vận động, vừa phải phân biệt sự khác nhau về chất của chúng. 
+* Vận động và đứng im 
+Khi khẳng định vận động là phương thức tồn tại của vật chất, là thuộc tính cố 
+hữu của vật chất, vận động là tuyệt đối và vĩnh viễn, chủ nghĩa duy vật biện chứng 
+không phủ nhận hiện tượng đứng im nhưng đứng im là hiện tượng có tính tương đối và 
+tạm thời và thực chất đứng im chỉ là một trạng thái đặc biệt của vận động. 
+Đứng im là trạng thái ổn định về chất của sự vật, hiện tượng trong những mối 
+quan hệ và điều kiện cụ thể. Đứng im là trạng thái cân bằng tạm thời của sự vật trong 
+quá trình vận động của nó. 
+Đứng im chỉ có tính tạm thời, chỉ xảy ra trong một mối quan hệ nhất định chứ 
+không phải trong mọi mối quan hệ cùng một thời điểm, chỉ xảy ra với một hình thức 
+vận động nào đó, ở một lúc nào đó, chứ không phải cùng một lúc đối với mọi hình 
+thức vận động. 
+Đứng im là một dạng của vận động, trong đó sự vật chưa thay đổi căn bản về 
+chất, nó còn là nó chứ chưa chuyển hóa thành cái khác.  
+Không có đứng im thì không có sự ổn định của sự vật và con người cũng không 
+bao giờ nhận thức được chúng. Không có đứng im thì sự vật, hiện tượng cũng không 
+thể thực hiện được sự vận động chuyển hóa tiếp theo. 
+Quan niệm của phép biện chứng duy vật về vận động của vật chất đòi hỏi phải 
+quán triệt quan điểm vận động vào nhận thức và thực tiễn. Quan điểm vận động đòi 
+hỏi phải xem xét, đánh giá sự vật, hiện tượng trong quá trình vận động, đồng thời khi 
+tiến hành cải tạo sự vật, hiện tượng phải thông qua những hình thức vận động vốn có, 
+đặc trưng của chúng. Nhận thức các hình thức vận động của vật chất thực chất là nhận 
+thức bản thân thế giới vật chất. 
+ 
+Sơ đồ: Vận động và đứng im trong thế giới vật chất 
+* Không gian và thời gian 
+- Không gian là hình thức tồn tại của vật chất xét về mặt quảng tính, chỉ sự tồn tại 
+xét về vị trí, kết cấu, quy mô và sự cùng tồn tại, trật tự giữa các sự vật, hiện tượng. 
+Không gian có tính ba chiều (chiều dài, chiều rộng, chiều cao) 
+- Thời gian là hình thức tồn tại của vật chất vận động xét về mặt độ dài diễn biến, 
+sự kế tiếp của các quá trình. Thời gian chỉ có tính một chiều (từ quá khứ tới tương lai). 
+- Tính chất của không gian, thời gian: 
++ Tính khách quan: Không gian - thời gian là thuộc tính của vật chất, vật chất tồn 
+tại khách quan, nên không gian - thời gian cũng tồn tại khách quan. Quan điểm này 
+bác bỏ quan niệm của chủ nghĩa duy tâm chủ quan coi không gian và thời gian là hình 
+thức trực quan tiên nghiệm, là sự sắp xếp các cảm giác mà con người thu được  theo 
+một trật tự nhất định, hoặc chỉ là hệ thống liên kết chặt chẽ của những chuỗi cảm giác, 
+do con người sinh ra. 
++ Tính không tách rời nhau và không tách rời phương thức vận động: Không 
+gian và thời gian là hai thuộc tính, hai hình thức tồn tại khác nhau của vật chất vận 
+động, nhưng chúng không tách rời nhau. Không có sự vật, hiện tượng nào tồn tại trong 
+không gian mà lại không có một quá trình diễn biến của nó. Cũng không thể có sự vật, 
+hiện tượng nào có thời gian tồn tại mà lại không có quảng tính, kết cấu nhất định. Tính 
+chất của không gian và sự biến đổi của nó bao giờ cũng gắn liền với tính chất và sự 
+biến đổi của thời gian và ngược lại. Do đó, về thực chất không gian và thời gian là một 
+thể thống nhất không gian - thời gian. Vật chất có ba chiều không gian và một chiều 
+thời gian. 
++ Tính vĩnh cửu và vô tận: Vật chất là vĩnh cửu và vô tận, nên không gian - thời 
+gian cũng vĩnh cửu, vô tận theo mọi phía. Không gian và thời gian của vật chất nói 
+chung là vô tận, xét về cả phạm vi lẫn tính chất. Khoa học hiện đại đã chứng minh 
+rằng trong thế giới không ở đâu có tận cùng về không gian, cũng như không ở đâu có 
+ngưng đọng, không biến đổi hoặc không có sự tiếp nối của các quá trình. Không gian 
+và thời gian của một sự vật, hiện tượng cụ thể là có tận cùng và hữu hạn nhưng không 
+gian, thời gian của thế giới vật chất nói chung là vĩnh cửu và vô tận. 
+Quan điểm của chủ nghĩa duy vật biện chứng về không gian, thời gian có ý nghĩa 
+phương pháp luận quan trọng. Quá trình nhận thức sự vật, hiện tượng phải gắn liền với 
+điều kiện không gian và thời gian tồn tại của nó, phải tính đến quá khứ, hiện tại và 
+tương lai phát triển của sự vật, có như vậy, nhận thức mới có thể đạt tới chân lý khoa 
+học.  
+đ) Tính thống nhất vật chất của thế giới  
+* Tồn tại của thế giới là tiền đề cho sự thống nhất của thế giới 
+Tồn tại là phạm trù dùng để chỉ tính có thực của thế giới xung quanh con người. 
+Khẳng định sự tồn tại là gạt bỏ những nghi ngờ về tính không thực, sự hư vô, sự 
+“không tồn tại”. 
+Sự tồn tại của thế giới là hết sức phong phú về dạng, loại. Có tồn tại vật chất và 
+tồn tại tinh thần. Có tồn tại khách quan và tồn tại chủ quan. Có tồn tại của tự nhiên và 
+tồn tại của xã hội... Thế giới quanh ta tồn tại, nhưng hình thức tồn tại của thế giới là 
+hết sức đa dạng. Vì thế, tồn tại của thế giới là tiền đề cho sự thống nhất của thế giới. 
+Song, tính thống nhất của thế giới không phải ở sự tồn tại của nó. 
+* Tính thống nhất vật chất của thế giới 
+Chủ nghĩa duy vật biện chứng khẳng định bản chất của thế giới là vật chất, thế 
+giới thống nhất ở tính vật chất của nó. Quan điểm trên đã định hướng cho con người 
+giải thích về tính đa dạng của thế giới và tiếp tục nhận thức tính đa dạng ấy trong quá 
+trình cải tạo thế giới. 
++ Chỉ có một thế giới duy nhất và thống nhất đó là thế giới vật chất. Thế giới vật 
+chất tồn tại khách quan, có trước và độc lập với ý thức con người. 
++ Mọi bộ phận của thế giới vật chất đều có mối liên hệ thống nhất với nhau, biểu 
+hiện ở chỗ chúng đều là những dạng cụ thể của vật chất, là những kết cấu vật chất, 
+hoặc có nguồn gốc vật chất, do vật chất sinh ra và chịu sự chi phối bởi các quy luật 
+khách quan phổ biến của thế giới vật chất. 
++ Thế giới vật chất tồn tại vĩnh viễn, vô hạn và vô tận, không được sinh ra và 
+cũng không bị mất đi. Trong thế giới, các sự vật, hiện tượng luôn luôn vận động, biến 
+đổi không ngừng và chuyển hóa lẫn nhau, là nguồn gốc, nguyên nhân và kết quả của 
+nhau, về thực chất, đều là những quá trình vật chất. 
+Như vậy, quan điểm của chủ nghĩa duy vật biện chứng về thế giới thống nhất ở 
+tính vật chất có ý nghĩa: Con người không thể bằng ý thức của mình sản sinh ra được 
+các đối tượng vật chất, mà chỉ có thể cải biến thế giới vật chất trên cơ sở nắm vững 
+những thuộc tính khách quan vốn có của các dạng vật chất và những quy luật vận động 
+của thế giới vật chất. 
+Như vậy, thế giới bao gồm cả tự nhiên và xã hội, về bản chất là vật chất, thống 
+nhất ở tính vật chất. Ph. Ăngghen kết luận: “Tính thống nhất thực sự của thế giới là ở 
+tính vật chất của nó, và tính vật chất này được chứng minh không phải bằng vài ba lời 
+lẽ khéo léo của kẻ làm trò ảo thuật, mà bằng một sự phát triển lâu dài và khó khăn của 
+triết học và khoa học tự nhiên”1. 
+#### 2.1.2. Nguồn gốc, bản chất và kết cấu của ý thức 
+Ý thức là một trong hai phạm trù cơ bản được các trường phái triết học quan tâm 
+nghiên cứu, nhưng tùy theo cách lý giải khác nhau mà có những quan niệm rất khác 
+nhau, là cơ sở để hình thành các trường phái triết học khác nhau, hai đường lối cơ bản 
+đối lập nhau là chủ nghĩa duy vật và chủ nghĩa duy tâm. Đứng vững trên lập trường của 
+chủ nghĩa duy vật biện chứng, khái quát những thành tựu mới nhất của khoa học tự 
+nhiên và bám sát thực tiễn xã hội, triết học Mác - Lênin đã góp phần làm sáng tỏ vấn đề 
+ý thức, mối quan hệ giữa vật chất và ý thức. 
+##### a) Nguồn gốc của ý thức 
+Quan điểm của chủ nghĩa duy tâm 
+## 1. C. Mác và Ph. Ăngghen: Toàn tập, Sđd, t.20, tr.67. 
+Ý thức là bản thể đầu tiên, tồn tại vĩnh viễn, là nguyên nhân sinh thành, chi phối 
+sự tồn tại, biến đổi của toàn bộ thế giới vật chất. Vật chất chẳng quả chỉ là sản phẩm 
+của bản nguyên tinh thần. 
+Quan điểm của chủ nghĩa duy vật siêu hình 
+Xuất phát từ thế giới hiện thực để lý giải nguồn gốc của ý thức. Tuy nhiên họ 
+đồng nhất ý thức với vật chất, ý thức chỉ là một dạng vật chất đặc biệt, do vật chất sản 
+sinh ra “óc tiết ra ý thức như gan tiết ra mật”. 
+Quan điểm của chủ nghĩa duy vật biện chứng  
+Theo quan điểm duy vật biện chứng, ý thức có nguồn gốc tự nhiên và nguồn gốc 
+xã hội: 
+-  Nguồn gốc tự nhiên của ý thức: Sự xuất hiện con người và hình thành bộ óc 
+của con người và sự hình thành khả năng phản ánh sáng tạo ở bộ óc người khi nhận tác 
+động từ thế giới hiện thực là nguồn gốc tự nhiên của ý thức. 
+Về bộ óc người: Bộ óc con người là khí quan vật chất của ý thức, cơ quan sinh ra 
+ý thức. Bộ óc người được coi là sản phẩm hoàn hảo trong quá trình tiến hóa của tự 
+nhiên theo lịch sử trái đất. Bộ óc người có cấu trúc đặc biệt phát triển, rất tinh vi và 
+phức tạp, bao gồm khoảng 14 - 15 tỷ tế bào thần kinh. Sự phân khu của não bộ và hệ 
+thống dây thần kinh liên hệ với các giác quan để thu nhận và xử lý thông tin từ thế giới 
+khách quan vào não bộ, hình thành những phản xạ có điều kiện và không có điều kiện, 
+điều khiển các hoạt động của cơ thể trong quan hệ với thế giới bên ngoài. 
+Ý thức là thuộc tính của một dạng vật chất sống có tổ chức cao nhất là bộ óc 
+người. Óc người là khí quan vật chất của ý thức. Ý thức là chức năng của bộ óc 
+người, ý thức không thể tách rời bộ óc. Ý thức là chức năng của bộ óc người hoạt 
+động bình thường. Sinh lý và ý thức là hai mặt của một quá trình - quá trình sinh lý 
+thần kinh trong bộ óc người mang nội dung ý thức, cũng giống như tín hiệu vật chất 
+mang nội dung thông tin. Bộ óc càng hoàn thiện, hoạt động sinh lí thần kinh càng 
+hiệu quả thì thế giới tinh thần càng có cơ sở phát triển sâu sắc và phong phú. 
+Về mối quan hệ giữa con người với thế giới khách quan tạo ra quá trình phản 
+ánh năng động, sáng tạo: Trong mối quan hệ này, thế giới khách quan tác động lên các 
+giác quan của con người giúp bộ óc người phản ánh những thông tin tác động. 
+Trái đất hình thành trải qua quá trình tiến hóa lâu dài dẫn đến sự xuất hiện con 
+người. Đó cũng là lịch sử phát triển năng lực phản ánh của thế giới vật chất từ thấp 
+đến cao và cao nhất là trình độ phản ánh - ý thức. Phản ánh là thuộc tính phổ biến của 
+mọi dạng vật chất, được biểu hiện trong sự liên hệ, tác động qua lại giữa các đối tượng 
+vật chất với nhau. Đó là khả năng giữ lại, tái tạo những đặc điểm của một hệ thống vật 
+chất này ở một hệ thống vật chất khác trong quá trình tác động qua lại của chúng. Sự 
+phản ánh phụ thuộc vào vật tác động và vật nhận tác động; đồng thời luôn mang nội 
+dung thông tin của vật tác động. Các kết cấu vật chất càng phát triển, hoàn thiện thì 
+năng lực phản ánh của nó càng cao. Những đặc trưng cơ bản vừa nêu trên có giá trị 
+khoa học, cung cấp cơ sở để làm sáng tỏ nguồn gốc tự nhiên của ý thức. Ý thức là hình 
+thức phản ánh sáng tạo đặc trưng chỉ có ở con người và là hình thức phản ánh cao nhất 
+của thế giới vật chất. 
+Thuộc tính phản ánh của vật chất cũng có nhiều cấp độ:  
++ Phản ánh vật lý, hóa học có tính chất thụ động, chưa có sự chọn lọc, định hướng 
+là trình độ phản ánh đặc trưng của giới tự nhiên vô sinh có trình độ kết cấu vật chất đơn 
+giản. Ví dụ về phản ánh vật lí như khi bánh xe lăn qua mặt đường đất ẩm, trên mặt đất 
+còn giữ lại vết bánh xe, trong gương có ghi lại hình ảnh của chúng ta,... 
++ Phản ánh sinh học là hình thức phản ánh cao hơn, đặc trưng cho giới tự nhiên 
+hữu sinh. Phản ánh sinh học đã có sự lựa chọn, định hướng để thích nghi với môi trường 
+nhằm duy trì sự tồn tại giới tự nhiên hữu sinh. Trình độ phản ánh sinh học của các cơ thể 
+sống cũng bao gồm nhiều hình thức cụ thể cao thấp khác nhau tùy thuộc vào mức độ 
+hoàn thiện, đặc điểm cấu trúc của các cơ quan chuyên trách làm chức năng phản ánh: ở 
+thực vật, là sự kích thích (tính hướng sáng của cây xanh,...); ở động vật bậc thấp là tính 
+cảm ứng (con cuốn chiếu cuộn mình lại khi bị chạm vào,...); ở động vật có hệ thần kinh, 
+là sự phản xạ; ở động vật cấp cao có bộ óc, là tâm lý. Tâm lý động vật là trình độ phản 
+ánh cao nhất của các loài động vật, bao gồm cả phản xạ không có điều kiện và có điều 
+kiện (những chú khỉ, chú chó có thể bắt chước hay làm nhiều trò xiếc khi được huấn 
+luyện,...). Tuy nhiên, tâm lý động vật chưa phải là ý thức, mà đó vẫn là trình độ phản 
+ánh mang tính bản năng của các loài động vật bậc cao, xuất phát từ nhu cầu sinh lý tự 
+nhiên, trực tiếp của cơ thể động vật chi phối. Mặc dù ở một số loài động vật bậc cao, 
+bước đầu đã có trí khôn, trí nhớ, biết “suy nghĩ” theo cách riêng của chúng, nhưng theo  
+Ăngghen, đó chỉ là “cái tiền sử” duy nhất gợi ý cho chúng ta tìm hiểu “bộ óc có tư duy 
+của con người” đã ra đời như thế nào. 
++ Phản ánh năng động và sáng tạo của ý thức là hình thức cao nhất của sự phản 
+ánh, chỉ được thực hiện ở dạng vật chất có tổ chức phát triển cao nhất là bộ óc người, chỉ 
+nảy sinh và xuất hiện cùng với sự xuất hiện của con người. 
+- Nguồn gốc xã hội của ý thức: Ý thức được hình thành bởi nhiều yếu tố xã hội, 
+trong đó cơ bản và trực tiếp nhất là nhân tố lao động và ngôn ngữ. 
+Lao động: Là quá trình con người sử dụng công cụ tác động vào giới tự nhiên, 
+thay đổi giới tự nhiên, nhằm thỏa mãn nhu cầu tồn tại, phát triển của mình.  
+Nhờ có lao động và quá trình sử dụng công cụ lao động, con người đã hoàn thiện 
+mặt sinh học, cấu tạo của não bộ và dáng đứng thẳng. Quá trình lao động cũng rèn 
+luyện các giác quan cho con người. 
+Thông qua hoạt động lao động cải tạo thế giới khách quan mà con người đã từng 
+bước nhận thức được thế giới, có ý thức ngày càng sâu sắc về thế giới. Ý thức hình 
+thành không phải là quá trình con người tiếp nhận thụ động các tác động từ thế giới 
+khách quan vào bộ óc của mình, mà chủ yếu từ hoạt động thực tiễn. Con người sử 
+dụng công cụ lao động tác động vào đối tượng hiện thực, bắt chúng phải bộc lộ thành 
+những hiện tượng, những thuộc tính, kết cấu... nhất định và thông qua giác quan, hệ 
+thần kinh tác động vào bộ óc để con người phân loại dưới dạng thông tin, qua đó nhận 
+biết nó ngày càng sâu sắc.Cũng trong quá trình lao động, ngôn ngữ nảy sinh làm cho 
+tư duy phát triển. 
+Ngôn ngữ:  là hệ thống tín hiệu vật chất mang nội dung ý thức, là cái vỏ vật chất 
+của tư duy 
+Là phương thức tồn tại cơ bản của con người, lao động mang tính xã hội đã làm 
+nảy sinh nhu cầu giao tiếp, trao đổi kinh nghiệm giữa các thành viên trong xã hội. Từ 
+nhu cầu đó, bộ máy phát âm, trung tâm ngôn ngữ trong bộ óc con người được hình 
+thành và hoàn thiện dần. Ngôn ngữ bắt nguồn từ trong lao động và phát triển cùng với 
+lao động, là cái vỏ vật chất của tư duy, vì vậy, không có ngôn ngữ con người không thể 
+có ý thức. Cùng với lao động, ngôn ngữ có vai trò to lớn đối với sự tồn tại và phát triển 
+của ý thức. Ngôn ngữ vừa là phương tiện giao tiếp, vừa là công cụ của tư duy. Nhờ ngôn 
+ngữ, con người có thể khái quát, trừu tượng hóa, suy nghĩ độc lập, tách khỏi sự vật cảm 
+tính; có ngôn ngữ để có thể giao tiếp, trao đổi tư tưởng, lưu giữ, kế thừa những tri thức, 
+kinh nghiệm phong phú của xã hội đã tích lũy được qua các thế hệ, thời kỳ lịch sử. Ý 
+thức là một hiện tượng có tính xã hội, do đó không có phương tiện trao đổi xã hội về 
+mặt ngôn ngữ thì ý thức không thể hình thành và phát triển được. 
+Xem xét nguồn gốc tự nhiên và nguồn gốc xã hội của ý thức cho thấy, ý thức 
+xuất hiện là kết quả của quá trình tiến hóa lâu dài của giới tự nhiên, của lịch sử trái đất, 
+đồng thời là kết quả trực tiếp của thực tiễn xã hội - lịch sử của con người; trong đó, 
+nguồn gốc tự nhiên là điều kiện cần, còn nguồn gốc xã hội là điều kiện đủ để ý thức 
+hình thành, tồn tại và phát triển. Nếu chỉ nhấn mạnh mặt tự nhiên mà quên đi mặt xã 
+hội, hoặc ngược lại chỉ nhấn mạnh mặt xã hội mà quên đi mặt tự nhiên của nguồn gốc 
+ý thức đều dẫn đến những quan niệm sai lầm, phiến diện của chủ nghĩa duy tâm hoặc 
+duy vật siêu hình, không thể hiểu được thực chất của hiện tượng ý thức, tinh thần của 
+loài người nói chung, cũng như của mỗi người nói riêng. Hoạt động thực tiễn phong 
+phú của loài người là môi trường để ý thức hình thành, phát triển và khẳng định sức 
+mạnh sáng tạo của nó. Nghiên cứu nguồn gốc của ý thức cũng là một cách tiếp cận để 
+hiểu rõ bản chất của ý thức, khẳng định bản chất xã hội của ý thức.  
+ 
+Sơ đồ: Nguồn ggocs của ý thức 
+##### b) Bản chất của ý thức 
+Bản chất ý thức là hình ảnh chủ quan của thế giới khách quan, là quá trình phản 
+ánh năng động, sáng tạo hiện thực khách quan của óc người. 
+- Ý thức là hình ảnh chủ quan của thế giới khách quan: 
+Đối với con người, cả ý thức và vật chất đều là hiện thực, nghĩa là đều tồn tại thực. 
+Nhưng cần phân biệt giữa chúng có sự khác nhau, đối lập nhau về bản chất: vật chất là 
+hiện thực khách quan; còn ý thức là hiện thực chủ quan. 
+Ý thức là cái phản ánh thế giới khách quan, ý thức không phải là sự vật, mà chỉ là 
+“hình ảnh” của sự vật ở trong óc người. 
+Thế giới khách quan là nguyên bản, là tính thứ nhất. Còn ý thức chỉ là bản sao, là 
+“hình ảnh” về thế giới đó, là tính thứ hai. 
+Về nội dung mà ý thức phản ánh là khách quan, còn hình thức phản ánh là chủ 
+quan. Ý thức là cái vật chất ở bên ngoài “di chuyển” vào trong đầu óc của con người 
+và được cải biến đi ở trong đó. 
+Kết quả phản ánh của ý thức tùy thuộc vào nhiều yếu tố: đối tượng phản ánh, 
+điều kiện lịch sử - xã hội, phẩm chất, năng lực, kinh nghiệm sống của chủ thể phản 
+ánh. Cùng một đối tượng phản ánh nhưng với các chủ thể phản ánh khác nhau có đặc 
+điểm tâm lý, tri thức, kinh nghiệm, thể chất khác nhau, trong những hoàn cảnh lịch sử 
+khác nhau... thì kết quả phản ánh đối tượng trong ý thức cũng rất khác nhau. 
+- Ý thức là sự phản ánh năng động, sáng tạo hiện thực khách quan của óc người. 
+Ý thức không phải là kết quả của sự phản ánh ngẫu nhiên, đơn lẻ, thụ động thế 
+giới khách quan. Trái lại, đó là kết quả của quá trình phản ánh có định hướng, có 
+mục đích rõ rệt.  
+Là hiện tượng xã hội, ý thức hình thành, phát triển gắn liền với hoạt động thực 
+tiễn xã hội. Bằng hoạt động thực tiễn đa dạng, phong phú của mình, con người làm 
+biến đổi thế giới và qua đó chủ động khám phá không ngừng cả bề rộng và chiều sâu 
+của các đối tượng phản ánh.  
+Sự phản ánh năng động, sáng tạo của ý thức là quá trình thống nhất của ba mặt:  
++ Một là, trao đổi thông tin giữa chủ thể và đối tượng phản ánh. Đây là quá 
+trình mang tính hai chiều, có định hướng và chọn lọc các thông tin cần thiết.  
++ Hai là, mô hình hóa đối tượng trong tư duy dưới dạng hình ảnh tinh thần. 
+Thực chất đây là quá trình “sáng tạo lại” hiện thực của ý thức theo nghĩa: mã hóa các 
+đối tượng vật chất thành các ý tưởng tinh thần phi vật chất.  
++ Ba là, chuyển hóa mô hình từ tư duy ra hiện thực khách quan, tức là quá trình 
+hiện thực hóa tư tưởng, thông qua hoạt động thực tiễn biến cái quan niệm thành cái 
+thực tại, biến các ý tưởng phi vật chất trong tư duy thành các dạng vật chất ngoài 
+hiện thực.  
+- Ý thức là hiện tượng mang bản chất xã hội, phản ánh những quan hệ xã hội 
+khách quan, không phải là hiện tượng có tính cá nhân thuần túy. 
+Từ kết quả nghiên cứu nguồn gốc và bản chất của ý thức cho thấy, ý thức là 
+hình thức phản ánh cao nhất riêng có của óc người về hiện thực khách quan trên cơ 
+sở thực tiễn xã hội - lịch sử. 
+##### c) Kết cấu của ý thức 
+Để nhận thức được sâu sắc về ý thức, cần xem xét nắm vững tổ chức kết cấu 
+của nó; tiếp cận từ các góc độ khác nhau sẽ đem lại những tri thức nhiều mặt về cấu 
+trúc, hoặc cấp độ của ý thức.  
+- Các lớp cấu trúc của ý thức: tri thức, tình cảm và ý chí. Các yếu tố trên có quan hệ 
+biện chứng với nhau, trong đó tri thức đóng vai trò quan trọng nhất. 
++ Tri thức là những hiểu biết của con người về hiện thực khách quan, làm tái 
+hiện trong tư tưởng những thuộc tính, những quy luật của thế giới ấy và diễn đạt chúng 
+dưới hình thức ngôn ngữ hoặc các hệ thống tín hiệu khác. 
+Tri thức có nhiều loại và nhiều cấp độ khác nhau như tri thức về tự nhiên, về xã 
+hôi, về con người, tri thức thông thường và tri thức khoa học. 
++ Tình cảm là hình thái đặc biệt của sự phản ánh tồn tại, là sự rung động phản ánh thái 
+độ của con người trong mối quan hệ với thế giới tự nhiên và xã hội.  
++ Ý chí là những cố gắng, nỗ lực, khả năng huy động mọi sức mạnh, tiềm năng trong 
+mỗi con người vào hoạt động để có thể vượt qua mọi trở ngại để đạt được mục đích. 
+- Các cấp độ của ý thức: tự ý thức, tiềm thức, vô thức 
++ Tự ý thức là khả năng nhận thức về chính bản thân mình trong mối quan hệ với 
+ý thức về thế giới bên ngoài. Ví dụ: Một sinh viên nhận thức rõ về vị trí, vai trò, khả 
+năng, mục đích sống của chính bản thân mình trong mối quan hệ với tự nhiên và xã 
+hội, từ đó sẽ có khả năng chủ động điều chỉnh hành vi của mình cho phù hợp, hoạt 
+động có mục đích và có trách nhiệm hơn. 
++ Tiềm thức là những tri thức mà chủ thể đã có được từ trước đã gần như trở 
+thành thói quen, thành kỹ năng nằm trong tầng sâu của ý thức chủ thể, là ý thức dưới 
+dạng tiềm tàng, không chịu sự kiểm soát trực tiếp của lí trí.  
+Là hoạt động tâm lý gắn bó chặt chẽ với loại hình tư duy chính xác, được lặp đi 
+lặp lại nhiều lần. Khi tiềm thức hoạt động sẽ góp phần giảm bớt sự quá tải của đầu óc 
+khi công việc lặp lại nhiều lần, mà vẫn đảm bảo độ chính xác cao và chặt chẽ cần 
+thiết của tư duy khoa học. Ví dụ: Một công nhân thực hiện một động tác kỹ thuật 
+phức tạp nhưng khi thực hiện rất nhiều lần, nó sẽ trở thành kỹ năng thuần thục, khi 
+đó học sẽ thao tác dưới sự chỉ đạo của tiềm thức, lí trí không cần chỉ đạo trực tiếp 
+nữa. 
++ Vô thức là những hiện tượng tâm lý không phải do lý trí điều khiển, nằm 
+ngoài phạm vi của lý trí mà lí trí không kiểm soát được trong một lúc nào đó. Chúng 
+điều khiển những hành vi thuộc về bản năng trong con người thông qua phản xạ 
+không điều kiện. 
+Trong đời sống của con người, có những hành vi do bản năng chi phối. Vô thức 
+là những trạng thái tâm lý ở tầng sâu điều chỉnh sự suy nghĩ, hành vi, thái độ ứng xử 
+của con người mà chưa có sự can thiệp của lý trí. Vô thức biểu hiện ra thành nhiều 
+hiện tượng khác nhau như bản năng ham muốn, giấc mơ, bị thôi miên, mộng du, lỡ 
+lời, nói nhịu,... Mỗi hiện tượng vô thức có vùng hoạt động riêng, có vai trò, chức 
+năng riêng, song tất cả đều có một chức năng chung là giải tỏa những ức chế trong 
+hoạt động thần kinh vượt ngưỡng, nhất là những ham muốn bản năng không được 
+phép bộc lộ ra và thực hiện trong quy tắc của đời sống cộng đồng. 
+Trong hoạt động của con người, tự ý thức vẫn giữ vai trò chủ đạo, quyết định 
+hành vi của cá nhân. Nhờ có tự ý thức, các hiện tượng vô thức được điều chỉnh, 
+hướng tới các giá trị chân, thiện, mỹ. Vô thức chỉ là một mắt khâu trong cuộc sống 
+có khả năng tự ý thức của con người. 
+* Vấn đề “trí tuệ nhân tạo” 
+Trong khoa học máy tính, trí tuệ nhân tạo hay AI (tiếng Anh: artificial 
+intelligence), đôi khi được gọi là trí thông minh nhân tạo, là trí thông minh được thể 
+hiện bằng máy móc, trái ngược với trí thông minh tự nhiên của con người. Thông 
+thường, thuật ngữ "trí tuệ nhân tạo" thường được sử dụng để mô tả các máy móc (hoặc 
+máy tính) có khả năng bắt chước các chức năng "nhận thức" mà con người thường 
+phải liên kết với tâm trí, như "học tập" và "giải quyết vấn đề"1 
+Ngày nay con người sản xuất ra nhiều loại máy móc thay thế lao động cơ bắp và 
+một phần trí óc của con người như: máy tính điện tử, người máy thông minh, trí tuệ 
+nhân tạo. Song đó không có nghĩa là máy móc cũng có ý thức như con người.  
+Ý thức và máy tính điện tử là hai quá trình khác nhau về bản chất. “Người máy 
+thông minh” thực ra chỉ là một quá trình vật lý. Hệ thống thao tác của nó đã được con 
+người lập trình phỏng theo một số thao tác của tư duy con người. Máy móc chỉ là 
+những kết cấu kỹ thuật do con người sáng tạo ra. Còn con người là một thực thể xã hội 
+năng động được hình thành trong tiến trình lịch sử tiến hóa lâu dài của giới tự nhiên và 
+thực tiễn xã hội. 
+Sự phản ánh sáng tạo, tái tạo lại hiện thực chỉ có ở ý thức của con người với tư cách là 
+một thực thể xã hội, hoạt động cải tạo thế giới khách quan. Ý thức mang bản chất xã hội. 
+Do vậy, dù máy móc có hiện đại đến đâu chăng nữa cũng không thể hoàn thiện được như 
+bộ óc con người.  
+#### 2.1.3. Mối quan hệ giữa vật chất và ý thức 
+##### a) Quan điểm của chủ nghĩa duy tâm và chủ nghĩa duy vật siêu hình 
+- Chủ nghĩa duy tâm coi ý thức là tồn tại duy nhất, tuyệt đối, là tính thứ nhất, từ 
+đó sinh ra tất cả; còn thế giới vật chất chỉ là bản sao, là tính thứ hai, do ý thức, tinh 
+thần sinh ra. 
+- Chủ nghĩa duy vật siêu hình tuyệt đối hóa yếu tố vật chất, chỉ nhấn mạnh vai trò 
+của vật chất sinh ra ý thức, quyết định ý thức mà phủ nhận tính độc lập tương đối của 
+ý thức, không thấy được tính năng động, sáng tạo, vai trò to lớn của ý thức trong hoạt 
+động thực tiễn cải tạo hiện thực khách quan. 
+                                          
+1 https://vi.wikipedia.org/wiki/Trí_tuệ_nhân_tạo 
+##### b) Quan điểm của chủ nghĩa duy vật biện chứng 
+Theo quan điểm triết học Mác - Lênin, vật chất và ý thức có mối quan hệ biện 
+chứng với nhau, trong đó vật chất quyết định ý thức, còn ý thức tác động tích cực trở 
+lại vật chất  
+* Vật chất quyết định ý thức  
+- Vật chất quyết định nguồn gốc của ý thức 
+ Vật chất sinh ra ý thức vì ý thức xuất hiện gắn liền với con người và bộ não con 
+người. Con người cùng bộ não con người là kết quả quá trình phát triển, tiến hóa lâu dài 
+của thế giới vật chất. Bộ óc người là dạng vật chất có tổ chức cao nhất, là cơ quan phản 
+ánh đề hình thành ý thức. Ý thức tồn tại phụ thuộc vào hoạt động thần kinh của bộ não. 
+Do đó, vật chất chính là nguồn gốc của ý thức. 
+- Vật chất quyết định nội dung của ý thức 
+Nội dung của ý thức, suy cho cùng đều là phản ánh hiện thực khách quan vào trong 
+đầu óc của con người. Thế giới khách quan, trước hết và chủ yếu là hoạt động thực tiễn có 
+tính xã hội – lịch sử của loài người là yếu tố quyết định nội dung mà ý thức phản ánh. Sự 
+phát triển của hoạt động thực tiễn cả về bề rộng và chiều sâu là động lực mạnh mẽ nhất 
+quyết định tính phong phú và độ sâu sắc nội dung của tư duy, ý thức con người. Nói cách 
+khác, thế giới khách quan tồn tại, vận động và phát triển được ý thức phản ánh lại chính là 
+nội dung của ý thức. 
+- Vật chất quyết định bản chất của ý thức 
+Bản chất của ý thức chính là sự phản ánh năng động, sáng tạo thế giới khách quan 
+của bộ óc con người. Ý thức không phải là hiện tượng huyền bí mà được phát triển từ 
+chính thuộc tính phản ánh của thế giới vật chất. Sự phản ánh đó không phải là soi gương, 
+chụp ảnh hoặc phản ánh tâm lý như con vật mà là phản ánh tích cực, tự giác, sáng tạo 
+thông qua thực tiễn. Chính hoạt động vật chất có tính cải biến thế giới của con người là cơ 
+sở để hình thành, phát triển ý thức. 
+- Vật chất quyết định sự vận động, biến đổi, phát triển của ý  thức 
+Biểu hiện: Sự vận động, biến đổi không ngừng của thế giới vật chất, của thực tiễn là 
+yếu tố quyết định sự vận động, biến đổi của tư duy; thế giới vật chất biến đổi thì ý thức 
+sớm muộn cũng sẽ biến đổi theo. 
+* Ý thức có tính độc lập tương đối và tác động trở lại vật chất 
+- Ý thức phản ánh thế giới vật chất, do vật chất sinh ra nhưng khi nó đã ra đời thì nó 
+không phải là sự phản ánh nguyên xi mà là hình ảnh đã được cải biến, có đời sống riêng, 
+có quy luật vận động, phát triển riêng, không lệ thuộc máy móc vào thế giới vật chất. 
+- Ý thức có thể thay đổi nhanh hay chậm, đi song hành so với hiện thực song nhìn 
+chung nó thường thay đổi chậm so với sự biến đổi của thế giới vật chất. 
+- Sự tác động của ý thức đối với vật chất phải thông qua hoạt động thực tiễn của con 
+người chứ tự bản thân ý thức không thể biến đổi được hiện thực. Dựa trên những hiểu biết 
+quy luật vận động, phát triển của thế giới khách quan, từ đó đề ra mục đích, nội dung, biện 
+pháp và ý chí quyết tâm thực hiện thắng lợi mục tiêu đã xác định. 
+- Ý thức chỉ đạo hoạt động, hành động của con người. Nó có thể quyết định làm cho 
+hoạt động của con người đúng hay sai, thành công hay thất bại. Nói cách khác, ý thức tác 
+động trở lại vật chất theo 2 chiều hướng:  
++ Tích cực: Ý thức có thể trở thành động lực phát triển của vật chất nếu nó phản ánh 
+đúng hiện thực;  
++ Tiêu cực: Ý thức có thể là lực cản phá vỡ sự vận động và phát triển của vật 
+chất khi ý thức phản ánh sai lệch, xuyên tạc hiện thực. 
+- Xã hội càng phát triển thì vai trò của ý thức ngày càng to lớn nhất là trong thời đại 
+ngày nay khi khoa học đã trở thành lực lượng sản xuất trực tiếp. Trong bối cảnh toàn cầu 
+hóa, vai trò của tri thức khoa học, của tư tưởng chính trị, tư tưởng nhân văn là hết sức 
+quan trọng. 
+##### b) Ý nghĩa phương pháp luận 
+Từ mối quan hệ giữa vật chất và ý thức trong triết học Mác - Lênin, rút ra nguyên 
+tắc phương pháp luận là tôn trọng tính khách quan kết hợp với phát huy tính năng 
+động chủ quan. 
+- Từ vai trò vật chất quyết định ý thức, tất yếu đòi hỏi trong hoạt động nhận thức, 
+thực tiễn phải luôn tôn trọng hiện thực khách quan, quy luật khách quan, tránh tô hồng 
+hoặc bôi đen đối tượng. Nhận thức, cải tạo sự vật, hiện tượng phải xuất phát từ chính 
+sự vật, hiện tượng 
+- Từ vai trò ý thức tác động lại vật chất, đòi hỏi phải luôn chú ý phát huy đầy đủ 
+tính năng động, chủ quan, sáng tạo của con người trong việc nhận thức và cải tạo thế 
+giới. Chống tư tưởng, thái độ thụ động, ỷ lại, há miệng chờ sung, bảo thủ, trì trệ, thiếu 
+tính sáng tạo, chủ quan duy ý chí... 
+- Trong đời sống xã hội, mối quan hệ giữa vật chất với ý thức biểu hiện ở mối 
+quan hệ giữa kinh tế với chính trị, đời sống vật chất với đời sống tinh thần, tồn tại xã 
+hội với ý thức xã hội. Vì vậy, trong nhận thức và hành động, muốn đạt hiệu quả cao 
+phải vận dụng đúng, đủ và toàn diện mối quan hệ này, tránh tuyệt đối hóa bất kỳ mặt 
+nào (vật chất hoặc ý thức). 
+### 2.2. PHÉP BIỆN CHỨNG DUY VẬT 
+Phép biện chứng duy vật là một bộ phận lý luận cơ bản hợp thành thế giới quan 
+và phương pháp luận triết học của chủ nghĩa Mác – Lênin, là “linh hồn sống”, là “cái 
+quyết định” của chủ nghĩa Mác. Phép biện chứng duy vật là khoa học về “mối liên hệ 
+phổ biến”, và cũng là “khoa học về những qui luât phổ biến của sự vận động và phát 
+triển của tự nhiên, xã hội và tư duy”. 
+#### 2.2.1. Hai loại hình biện chứng và phép biện chứng duy vật 
+##### a) Hai loại hình biện chứng 
+- Biện chứng thường được hiểu theo hai nghĩa:  
+Thứ nhất, là phạm trù dùng để chỉ những mối liên hệ qua lại lẫn nhau, sự vận động 
+và phát triển của bản thân các sự vật, hiện tượng, quá trình tồn tại độc lập bên ngoài ý thức 
+con người;  
+Thứ hai, là phạm trù dùng để chỉ những mối liên hệ và sự vận động, biến đổi của 
+chính quá trình phản ánh hiện thực khách quan vào đầu óc con người. 
+- Biện chứng khách quan là khái niệm dùng để chỉ biện chứng của bản thân thế 
+giới tồn tại khách quan, độc lập với ý thức con người. 
+- Biện chứng chủ quan chính là sự phản ánh biện chứng khách quan vào bộ óc 
+con người, là biện chứng của chính quá trình nhận thức, là biện chứng của tư duy phản 
+ánh hiện thực khách quan vào bộ óc con người.  
+Biện chứng khách quan quy định biện chứng chủ quan, tức là bản thân sự vật, 
+hiện tượng trong thế giới tồn tại như thế nào thì tư duy, nhận thức của con người về 
+chúng cũng phải phản ánh đúng như vậy. 
+Tuy nhiên, biện chứng chủ quan cũng có tính độc lập tương đối với biện chứng 
+khách quan. Trên thực tế, sự vật, hiện tượng được phản ánh và nhận thức của con 
+người về chúng không hoàn toàn trùng khít nhau, bởi quá trình tư duy, nhận thức còn 
+phải tuân theo những quy luật mang tính mục đích và sáng tạo của con người. 
+##### b) Khái niệm phép biện chứng duy vật 
+- Theo chủ nghĩa Mác-Lênin, khái niệm biện chứng dùng để chỉ những mối liện 
+hệ, tương tác, chuyển hoá và vận động, phát triển theo quy luật của các sự vật, hiện 
+tượng, quá trình trong tự nhiên, xã hội và tư duy. 
+- Phép biện chứng là học thuyết nghiên cứu, khái quát biện chứng của thế giới 
+thành hệ thống các nguyên lý, quy luật khoa học nhằm xây dựng hệ thống các nguyên 
+tắc phương pháp luận của nhận thức và thực tiễn. 
+* Các hình thức cơ bản của phép biện chứng trong lịch sử. 
+ 
+ 
+ 
+ Sơ đồ: Ba hình thức cơ bản của phép biện chứng 
+* Những đặc trưng cơ bản và vai trò của phép biện chứng duy vật 
+- Phép biện chứng duy vật của chủ nghĩa Mác - Lênin có hai đặc trưng cơ bản sau: 
++ Phép biện chứng duy vật của chủ nghĩa Mác - Lênin là phép biện chứng được 
+xác lập trên nền tảng của thế giới quan duy vật khoa học; 
++ Trong phép biện chứng duy vật của chủ nghĩa Mác - Lênin có sự thống nhất 
+giữa nội dung thế giới quan duy vật biện chứng và phương pháp luận (biện chứng duy 
+vật), không chỉ dừng lại ở sự giải thích thế giới mà còn là công cụ để nhận thức thế 
+giới và cải tạo thế giới. 
+- Phép biện chứng duy vật là nội dung đặc biệt quan trọng trong thế giới quan và 
+phương pháp luận triết học của chủ nghĩa Mác - Lênin, tạo nên tính khoa học và cách 
+mạng, đồng thời cũng là thế giới quan và phương pháp luận chung nhất trong các lĩnh 
+vực nghiên cứu khoa học. 
+#### 2.2.2. Nội dung của phép biện chứng duy vật  
+##### a) Hai nguyên lý của phép biện chứng duy vật 
+Nguyên lý triết học là những luận điểm - định đề khái quát nhất được hình thành 
+nhờ sự quan sát, trải nghiệm của nhiều thế hệ người trong mọi lĩnh vực tự nhiên, xã 
+hội và tư duy; rồi đến lượt mình, chúng lại làm cơ sở, tiền đề cho những suy lý tiếp 
+theo rút ra những nguyên tắc, quy luật, quy tắc, phương pháp... phục vụ cho các hoạt 
+động nhận thức và thực tiễn của con người.  
+* Nguyên lý về mối liên hệ phổ biến 
+-  Khái niệm mối liên hệ, mối liên hệ phổ biến 
++ Mối liên hệ là một phạm trù triết học dùng để chỉ sự quy định, ràng buộc, sự 
+tác động qua lại, sự chuyển hóa lẫn nhau giữa các mặt của một sự vật, hiện tượng hoặc 
+giữa các sự vật, hiện tượng với nhau. Ví dụ: Mỗi sinh vật sống đều có liên hệ với môi 
+trường bên ngoài như cái cây để tồn tại và phát triển thì nó có liên hệ với điều kiện đất 
+đai, nhiệt độ, độ ẩm, ánh sáng,... 
++ Mối liên hệ phổ biến dùng để chỉ tính phổ biến của các mối liên hệ của các sự 
+vật, hiện tượng của thế giới, đồng thời cũng dùng để chỉ các mối liên hệ tồn tại ở nhiều 
+sự vật, hiện tượng của thế giới. Trong đó, những mối liên hệ phổ biến nhất là những 
+mối liên hệ tồn tại ở nhiều sự vật, hiện tượng của thế giới thuộc đối tượng nghiên cứu 
+của phép biện chúng duy vật. Đó là các mối liên hệ giữa các mặt đối lập, lượng và 
+chất, cái chung và cái riêng, nguyên nhân và kết quả,... 
+Cô lập (tách rời) là trạng thái của các đối tượng khi sự thay đổi của đối tượng này 
+không ảnh hưởng đến các đối tượng khác, không làm chúng thay đổi. Ví dụ: Sự thay 
+đổi nhiệt độ của một ấm nước đang đun không làm thay đổi quá trình phân bào của 
+cây ngô ngoài đồng. Tuy nhiên, không có sự vật, hiện tượng nào tồn tại ở trạng thái cô 
+lập tuyệt đối. Trong những hoàn cảnh nhất định, chúng có thể cô lập ở phương diện 
+này nhưng lại có mối liên hệ ở những phương diện khác. Mọi đối tượng đều trong 
+trạng thái vừa cô lập vừa liên hệ với nhau. Chúng liên hệ với nhau ở một số khía cạnh 
+và không liên hệ với nhau ở những khía cạnh khác, trong chúng có cả những biến đổi 
+khiến các đối tượng khác thay đổi, lẫn những biến đổi không làm các đối tượng khác 
+thay đổi. Như vậy, liên hệ và cô lập thống nhất với nhau mà ví dụ điển hình là quan hệ 
+giữa cơ thể sống và môi trường. Cơ thể sống gắn bó với môi trường nhưng đồng thời 
+cũng tách biệt, có tính độc lập tương đối. Một số thay đổi nhất định của môi trường 
+làm cơ thể sống thay đổi, nhưng có những thay đổi khác lại không làm nó thay đổi. 
+Chỉ những biến đổi môi trường gắn với hoạt động sống của cơ thể mới làm ảnh hưởng 
+đến cơ thể; còn thay đổi nào không gắn với hoạt động đó thì không gây ra sự biến đổi. 
+Như vậy, liên hệ và cô lập luôn tồn tại cùng nhau, là những mặt tất yếu của mọi quan 
+hệ cụ thể giữa các đối tượng. 
+- Tính chất của các mối liên hệ 
++ Tính khách quan của các mối liên hệ: Sự quy định, thâm nhập, chuyển hoá, tác 
+động lẫn nhau giữa các sự vật, hiện tượng hoặc trong bản thân chúng là cái vốn có của 
+nó, tồn tại độc lập không phụ thuộc vào ý chí của con người. 
++ Tính phổ biến của các mối liên hệ: bất kỳ ở đâu, trong tự nhiên, xã hội và tư 
+duy đều có vô vàn các mối liên hệ đa dạng, chúng giữ những vai trò, vị trí khác nhau 
+trong sự vận động, chuyển hóa của các sự vật, hiện tượng.  
++ Tính đa dạng, phong phú của mối liên hệ: Các sự vật, hiện tượng hay quá trình 
+khác nhau đều có những mối liên hệ cụ thể khác nhau, giữ vị trí, vai trò khác nhau đối 
+với sự tồn tại và phát triển của nó. Có mối liên hệ bên trong (giữa các yếu tố trong bản 
+thân sự vật) và mối liên hệ bên ngoài (giữa các sự vật, hiện tượng với nhau). Có mối 
+liên hệ về không gian và cũng có mối liên hệ về mặt thời gian giữa các sự vật, hiện 
+tượng. Có mối liên hệ chung tác động lên toàn bộ hay trong những lĩnh vực rộng lớn 
+của thế giới; có mối liên hệ riêng chỉ tác động trong từng lĩnh vực, từng sự vật và hiện 
+tượng cụ thể. Có mối liên hệ trực tiếp giữa nhiều sự vật, hiện tượng, có mối liên hệ 
+gián tiếp. Có mối liên hệ tất nhiên, có mối liên hệ ngẫu nhiên. Có mối liên hệ bản chất, 
+có mối liên hệ không bản chất chỉ đóng vai trò phụ thuộc. Có mối liên hệ chủ yếu và 
+có mối liên hệ thứ yếu... Các mối liên hệ đó giữ những vai trò khác nhau quy định sự 
+vận động, phát triển của sự vật, hiện tượng. 
+Để phân loại các mối liên hệ phải tùy thuộc vào tính chất và vai trò của từng mối 
+liên hệ. Tuy vậy, việc phân loại này cũng chỉ mang tính tương đối, bởi vì các mối liên 
+hệ của các đối tượng rất phức tạp, không thể tách chúng khỏi tất cả các mối liên hệ 
+khác. Mọi liên hệ còn cần được nghiên cứu cụ thể trong sự biến đổi và phát triển cụ 
+thể của chúng. 
+- Khái quát nội dung nguyên lý:  
+Triết học duy vật biện chứng duy vật cho rằng, các sự vật, hiện tượng của thế 
+giới tồn tại trong mối liên hệ qua lại với nhau, quy định lẫn nhau, thâm nhập, chuyển 
+hóa lẫn nhau, không tách biệt nhau. Cơ sở của sự tồn tại đa dạng các mối liên hệ là 
+tính thống nhất vật chất của thế giới. Theo đó, các sự vật, hiện tượng phong phú trong 
+thế giới chỉ là những dạng tồn tại khác nhau của một thế giới vật chất duy nhất. Các 
+mối liên hệ có tính khách quan, phổ biến và đa dạng, phong phú.  
+- Ý nghĩa phương pháp luận 
+ Trong nhận thức và hoạt động thực tiễn cần phải quán triệt nguyên tắc toàn diện.  
++ Thứ nhất, khi nghiên cứu, xem xét đối tượng cụ thể, cần đặt nó trong chỉnh thể 
+thống nhất của tất cả các mặt, các bộ phận, các yếu tố, các thuộc tính, các mối liên hệ 
+của chỉnh thể đó; 
++ Thứ hai, chủ thể phải rút ra được các mặt, các mối liên hệ tất yếu của đối tượng 
+đó và nhận thức chúng trong sự thống nhất hữu cơ nội tại, bởi chỉ có như vậy, nhận 
+thức mới có thể phản ánh được đầy đủ sự tồn tại khách quan với nhiều thuộc tính, 
+nhiều mối liên hệ, quan hệ và tác động qua lại của đối tượng; 
++ Thứ ba, cần xem xét đối tượng này trong mối liên hệ với đối tượng khác và với 
+môi trường xung quanh, kể cả các mặt của các mối liên hệ trung gian, gián tiếp; trong 
+không gian, thời gian nhất định, tức là cần nghiên cứu cả những mối liên hệ của đối 
+tượng trong quá khứ, hiện tại và phán đoán tương lai; 
++ Thứ tư, quan điểm toàn diện đối lập với quan điểm phiến diện, một chiều, chỉ 
+thấy mặt này mà không thấy mặt khác; hoặc chú ý đến nhiều mặt nhưng lại xem xét 
+dàn trải, không thấy mặt bản chất của đối tượng nên dễ rơi vào thuật ngụy biện (đánh 
+tráo các mối liên hệ cơ bản thành không cơ bản hoặc ngược lại) và chủ nghĩa chiết 
+trung (lắp ghép vô nguyên tắc các mối liên hệ trái ngược nhau vào một mối liên hệ 
+phổ biến). 
+ Trong nhận thức và hoạt động thực tiến cũng cần tôn trọng quan điểm lịch sử - 
+cụ thể. Vì các sự vật, hiện tượng trong không gian, thời gian khác nhau thì các mối 
+liên hệ biểu hiện khác nhau nên đòi hỏi chúng ta khi nhận thức và tác động vào sự 
+vật phải chú ý điều kiện, hoàn cảnh lịch sử - cụ thể, môi trường cụ thể trong đó sự 
+vật hình thành, tồn tại và phát triển. 
+*  Nguyên lý về sự phát triển 
+- Khái niệm phát triển 
++ Phát triển là quá trình vận động tiến lên từ thấp đến cao, từ kém hoàn thiện 
+đến hoàn thiện hơn, từ chất cũ đến chất mới ở trình độ cao hơn. Thực chất của phát 
+triển là sự phát sinh đối tượng mới phù hợp với quy luật tiến hóa và sự diệt vong của 
+đối tượng cũ đã trở nên lỗi thời 
++ Như vậy, phát triển không bao gồm toàn bộ sự vận động, nó chỉ khái quát xu 
+hướng chung của sự vận động - xu hướng vận động đi lên của sự vật. Sự phát triển 
+chỉ là trường hợp đặc biệt của vận động, vận động theo khuynh hướng đi lên. Vận 
+động diễn ra trong không gian và thời gian, nếu thoát ly chúng thì không thể có phát 
+triển.  
++ Sự phát triển là sự vận động đi lên, là quá trình tiến lên thông qua bước nhảy; 
+sự vật, hiện tượng cũ mất đi, sự vật, hiện tượng mới ra đời thay thế; chỉ ra nguồn gốc 
+bên trong của sự vận động, phát triển là đấu tranh giữa các mặt đối lập bên trong sự 
+vật, hiện tượng. Quá trình đó diễn ra vừa dần dần, vừa có những bước nhảy vọt... làm 
+cho sự phát triển mang tính quanh co, phức tạp, có thể có những bước thụt lùi tương 
+đối trong sự tiến lên. 
++ Cần phân biệt phát triển với tiến hóa và tiến bộ: 
+ Tiến hóa là một dạng của phát triển, diễn ra theo cách từ từ và thường là sự 
+biến đổi hình thức của sự sống và xã hội từ đơn giản đến phức tạp. Thuyết tiến hóa 
+tập trung giải thích khả năng sống sót và thích ứng của cơ thể sống trong cuộc đấu 
+tranh sinh tồn. 
+Tiến bộ là một quá trình biến đổi hướng tới cải thiện thực trạng xã hội từ chỗ 
+chưa hoàn thiện đến hoàn thiện hơn so với thời điểm ban đầu. Trong tiến bộ, khái niệm 
+phát triển đã được lượng hóa thành tiêu chí cụ thể để đánh giá mức độ trưởng thành 
+của các dân tộc, các lĩnh vực của đời sống con người...  
+- Tính chất của sự phát triển 
+Các quá trình phát triển đều có tính khách quan, tính phổ biến, tính kế thừa và 
+tính đa dạng, phong phú. 
++ Tính khách quan của sự phát triển biểu hiện ở nguồn gốc của sự vận động và 
+phát triển. Nguồn gốc của sự phát triển nằm trong chính bản thân sự vật, hiện tượng, 
+do giải quyết những mâu thuẫn khách quan vốn có của sự vật và đặc biệt không phụ 
+thuộc vào ý thức chủ quan của con người.  
++ Tính phổ biến: sự phát triển diễn ra trong mọi lĩnh vực tự nhiên, xã hội và tư 
+duy, từ hiện thực khách quan đến những khái niệm phản ánh hiện thực ấy.  
++ Tính kế thừa: sự vật, hiện tượng mới sự vật, hiện tượng mới ra đời vẫn còn giữ 
+lại, chọn lọc và cải tạo các yếu tố còn tác dụng, còn thích hợp với chúng, trong khi gạt 
+bỏ mặt tiêu cực, lỗi thời, lạc hậu của sự vật, hiện tượng cũ đang gây cản trở sự vật, 
+hiện tượng mới tiếp tục phát triển. 
++ Tính đa dạng, phong phú: mỗi sự vật hiện tượng có quá trình phát triển khác nhau, 
+trong không gian, thời gian khác nhau, sự vật phát triển khác nhau. 
+- Khái quát nội dung nguyên lý: Mọi sự vật, hiện tượng trong thế giới đều không 
+ngừng vận động, biến đổi. Khuynh hướng chung của sự vận động là phát triển. Sự phát triển 
+có tính khách quan, tính phổ biến, tính kế thừa và tính đa dạng, phong phú. 
+- Ý nghĩa phương pháp luận 
+ Trong nhận thức và hoạt động thực tiễn, muốn nắm được bản chất, khuynh 
+hướng phát triển của sự vật, hiện tượng thì phải tự giác tuân thủ nguyên tắc phát triển, 
+tránh tư tưởng bảo thủ, trì trệ. Cụ thể: 
++ Thứ nhất, cần đặt đối tượng vào sự vận động, phát hiện xu hướng biến đổi của 
+nó để không chỉ nhận thức nó ở trạng thái hiện tại, mà còn dự báo được khuynh hướng 
+phát triển trong tương lai. 
++ Thứ hai, cần nhận thức được rằng, phát triển là quá trình trải qua nhiều giai 
+đoạn, mỗi giai đoạn có đặc điểm, tính chất, hình thức khác nhau nên cần tìm hình thức, 
+phương pháp tác động phù hợp để thúc đẩy hoặc kìm hãm sự phát triển đó.  
++ Thứ ba, phải sớm phát hiện và ủng hộ đối tượng mới hợp quy luật, tạo điều kiện 
+cho nó phát triển; chống lại quan điểm bảo thủ, trì trệ, định kiến. 
++ Thứ tư, trong quá trình thay thế đối tượng cũ bằng đối tượng mới phải biết kế 
+thừa các yếu tố tích cực từ đối tượng cũ và phát triển sáng tạo chúng trong điều kiện 
+mới. 
+Cần phải có quan điểm lịch sử - cụ thể khi xem xét sự vận động, phát triển của sự 
+vật, hiện tượng trong những hoàn cảnh không gian, thời gian khác nhau. 
+##### b) Các cặp phạm trù cơ bản của phép biện chứng duy vật 
+Phạm trù triết học là hình thức hoạt động trí óc phổ biến của con người, là những mô 
+hình tư tưởng phản ánh những thuộc tính và mối liên hệ vốn có ở tất cả các đối tượng hiện 
+thực. 
+* Cái riêng và cái chung 
+- Phạm trù cái riêng, cái chung, cái đơn nhất 
++ Cái riêng: là phạm trù triết học dùng để chỉ một sự vật, một hiện tượng, 
+một quá trình nhất định. 
++ Cái chung: là phạm trù triết học dùng để chỉ những mặt, những thuộc tính 
+không những có ở một sự vật, hiện tượng nào đó, mà còn lặp lại trong nhiều sự vật, 
+hiện tượng (nhiều cái riêng) khác. 
++ Cái đơn nhất: là phạm trù triết học dùng để chỉ các mặt, các đặc điểm chỉ vốn 
+có ở một sự vật, hiện tượng (một cái riêng) nào đó mà không lặp lại ở sự vật, hiện 
+tượng nào khác. 
+Ví dụ: Nếu ta xét 3 thành phố Hà Nội, Đà Nẵng, Hồ Chí Minh là 3 cái riêng. 
+Những thuộc tính giống nhau, lặp lại ở 3 thành phố này như thuộc tính đều là các 
+thành phố trực thuộc trung ương thuộc Việt Nam, có mật độ dân đông, là những trung 
+tâm kinh tế lớn của cả nước,... sẽ tạo thành cái chung của 3 thành phố này. Bên cạnh 
+những thuộc tính chung đó, Hà Nội có những cái đơn nhất không lặp lại ở những 
+thành phố khác như Hà Nội là thủ đô của Việt Nam, có Hồ Gươm, có lăng Bác Hồ,... 
+- Quan hệ biện chứng giữa cái riêng và cái chung 
+ Theo quan điểm của Chủ nghĩa duy vật biện chứng: Cái riêng, cái chung, cái 
+đơn nhất đều tồn tại khách quan. Trong đó: 
++ Cái chung và cái đơn nhất chỉ tồn tại trong cái riêng, thông qua cái riêng mà biểu 
+hiện sự tồn tại của nó; cái chung không tồn tại biệt lập, tách rời cái riêng. Không có cái 
+chung hay đơn nhất tồn tại thuần túy bên ngoài cái riêng. Ví dụ: Không có khái niệm 
+“cái cây” nói chung tồn tại thuần túy bên cạnh những cây cam, cây đào, cây thông,... cụ 
+thể với tư cách là những cái riêng. Những cây cam, cây đào, cây thông,... riêng lẻ đều 
+có rễ, thân, lá, có quá trình lí hóa sinh để duy trì sự sống. Những đặc tính chung này lặp 
+lại ở những cái cây riêng lẻ và được phản ánh trong khái niệm cái cây. Rõ ràng những 
+thuộc tính chung này thực sự tồn tại nhưng phải tồn tại thông qua những cái riêng lẻ, cụ 
+thể. 
+Cái riêng chỉ tồn tại trong mối quan hệ với cái chung; không có cái riêng tồn tại 
+độc lập tuyệt đối tách rời cái chung. Ví dụ: mỗi con người là một cái riêng, nhưng mỗi 
+con người không thể tồn tại bên ngoài mối liên hệ đưa đến cái chung giữa những con 
+người như đều chịu sự chi phối của các quy luật sinh học, xã hội. 
++ Cái riêng là cái toàn bộ, phong phú, đa dạng hơn cái chung; cái chung là cái bộ 
+phận nhưng sâu sắc, bản chất hơn cái riêng. Ví dụ: mỗi con cá riêng lẻ tồn tại trên thế 
+giới phong phú và đa dạng vô cùng. Mỗi con cá cụ thể (cái riêng) như vậy được coi là 
+cái toàn bộ chứa các bộ phận, các thuộc tính được lặp lại ở nhiều con cá (cái chung) 
+và cả những yếu tố, thuộc tính đơn nhất nữa. Trong những thuộc tính của các con cá 
+cụ thể thì những thuộc tính chung như sống dưới nước, thở bằng mang, bơi bằng 
+vây,... sẽ phản ánh sâu sắc hơn, nói lên bản chất của loài cá. 
++ Cái chung và cái đơn nhất có thể chuyển hoá cho nhau trong những điều kiện 
+xác định. Ví dụ: sự thay đổi một đặc tính nào đó của sinh vật trước sự thay đổi của 
+môi trường diễn ra bằng cách, ban đầu xuất hiện một đặc tính ở một cá thể riêng biệt. 
+Do phù hợp với điều kiện mới, đặc tính đó được bảo tồn, duy trì ở nhiều thế hệ và trở 
+thành phổ biến ở nhiều cá thể. Những đặc tính không phù hợp với điều kiện mới, sẽ 
+dần trở thành cái đơn nhất và mất dần đi. 
++ Mối liên hệ giữa cái đơn nhất với cái chung biểu hiện ở mối liên hệ lẫn nhau 
+trong một thể thống nhất bao gồm những mặt, những yếu tố riêng lẻ, vốn có trong một 
+sự vật, hiện tượng này và những mặt, những yếu tố được lặp lại trong các sự vật, hiện 
+tượng khác. 
++ Cái đặc thù chỉ ra sự khác biệt cùng có ở một số cái riêng với cái chung vốn có 
+ở tất cả cái riêng. 
++ Cái phổ biến đều là cái chung theo nghĩa hình thức, tức là chúng đều bao gồm 
+những cái như nhau ở mọi đối tượng, giai đoạn vận động của chúng 
+- Ý nghĩa phương pháp luận 
+- Cần phải nhận thức cái chung để vận dụng vào cái riêng trong hoạt động nhận 
+thức và thực tiễn. Muốn nắm bắt được cái chung thì cần phải xuất phát từ những cái 
+riêng bởi cái chung không tồn tại trừu tượng bên ngoài cái riêng. 
+- Mặt khác, cần phải cụ thể hóa cái chung trong mỗi hoàn cảnh, điều kiện cụ thể; 
+khắc phục bệnh giáo điều, siêu hình, máy móc hoặc cục bộ, địa phương trong vận 
+dụng mỗi cái chung để giải quyết mỗi trường hợp cụ thể. 
+- Trong hoạt động nhận thức và thực tiễn chúng ta cần phải biết vận dụng các 
+điều kiện thích hợp cho sự chuyển hóa giữa cái đơn nhất và cái chung theo những mục 
+đích nhất định. Cần phải tạo điều kiện thuận lợi để “cái đơn nhất” có lợi cho con 
+người trở thành “cái chung” và “cái chung” bất lợi trở thành “cái đơn nhất”. 
+* Nguyên nhân và kết quả 
+- Phạm trù nguyên nhân, kết quả 
++ Nguyên nhân là phạm trù triết học chỉ sự tương tác lẫn nhau giữa các mặt trong 
+một sự vật, hiện tượng hoặc giữa các sự vật, hiện tượng với nhau gây nên những biến 
+đổi nhất định. Ví dụ: do tương tác giữa dòng điện với dây dẫn, đốt nóng dây tóc bóng 
+đèn là nguyên nhân làm bóng đèn dây tóc sáng; cuộc đấu tranh giữa giai cấp vô sản và 
+giai cấp tư sản là nguyên nhân đưa đến cuộc cách mạng vô sản. 
++ Kết quả là phạm trù triết học chỉ những biến đổi xuất hiện do sự tương tác giữa 
+các yếu tố mang tính nguyên nhân gây nên. Ví dụ: bóng đèn dây tóc phát sáng là kết 
+quả do sự tương tác giữa dòng điện với dây dẫn, đốt nóng dây tóc bóng đèn; cách 
+mạng vô sản là kết quả của cuộc đấu tranh giữa giai cấp vô sản và giai cấp tư sản. 
+Không nên hiểu nguyên nhân và kết quả nằm ở những sự vật, hiện tượng khác 
+nhau, chẳng hạn cho rằng nguồn điện là nguyên nhân của bóng điện sáng, giai cấp vô 
+sản là nguyên nhân của cuộc cách mạng vô sản,... Cách hiểu như vậy sẽ dẫn đến cách 
+hiểu cho rằng nguyên nhân của một sự vật, hiện tượng nằm ngoài sự vật, hiện tượng 
+đó và sẽ dẫn đến sự thừa nhận rằng nguyên nhân của thế giới nằm ngoài thế giới vật 
+chất, tức là ở thế giới tinh thần. 
++ Nguyên cớ: Là cái không có mối liên hệ bản chất với kết quả, là những sự vật, 
+hiện tượng xuất hiện đồng thời với nguyên nhân, nhưng nó chỉ là quan hệ bên ngoài, 
+không bản chất, không sinh ra kết quả. Nguyên cớ thường được dùng với nghĩa là cái 
+nhằm che giấu đi nguyên nhân thực sự. Ví dụ: Sự kiện Vịnh Bắc Bộ 8/1964 mà đế quốc 
+Mỹ dựng lên không phải là nguyên nhân của việc mở rộng chiến tranh, đem máy bay 
+bắn phá miền Bắc Việt Nam của đế quốc Mỹ. Đó là cái cớ để đế quốc Mỹ dùng để hợp 
+lý hóa kế hoạch chiến tranh của chúng, che giấu nguyên nhân thực sự là mưu đồ xâm 
+lược toàn bộ Việt Nam của đế quốc Mỹ. 
++ Điều kiện: Là những yếu tố giúp nguyên nhân sinh ra kết quả, nhưng bản thân 
+điều kiện không sinh ra kết quả, là những sự vật, hiện tượng gắn liền với nguyên nhân, 
+liên hệ với nguyên nhân trong cùng một không gian, thời gian, tác động vào nguyên 
+nhân làm cho nguyên nhân phát sinh tác dụng. Ví dụ: nguyên nhân của phản ứng hóa 
+học là sự tương tác, phản ứng của các chất tham gia để hình thành nên chất mới. 
+Nhưng để đạt đến kết quả đó cần phải có các điều kiện xúc tác về nhiệt độ, áp suất, 
+môi trường. 
+Mối liên hệ nhân quả có tính khách quan, phổ biến và tất yếu. 
+Tính khách quan: Theo quan điểm của chủ nghĩa duy vật biện chứng, mối liên hệ 
+nhân - quả là mối liên hệ khách quan vốn có của bản thân các sự vật, hiện tượng trong 
+quá trình vận động và tương tác, không phụ thuộc vào ý thức con người. Dù con người 
+có nhận thức được hay không thì các sự vật, hiện tượng vẫn nằm trong vô vàn những 
+mối liên hệ nhân quả. Con người chỉ phản ánh được những mối liên hệ nhân quả đó để 
+vận dụng vào hoạt động thực tiễn chứ không thể sáng tạo ra các mối liên hệ nhân quả 
+của hiện thực từ ý thức của mình.  
+Tính phổ biến: Tất cả mọi hiện tượng trong tự nhiên và trong xã hội đều được 
+gây ra bởi những nguyên nhân nhất định. Mọi hiện tượng đều có nguyên nhân. Không 
+có hiện tượng nào không có nguyên nhân cả. Chỉ có điều nguyên nhân ấy đã được phát 
+hiện hay chưa được phát hiện mà thôi. Đây chính là nội dung cơ bản của nguyên tắc 
+quyết định luận - một nguyên tắc quan trọng của nhận thức khoa học. 
+Tính tất yếu: Từ quan niệm cho rằng kết quả do nguyên nhân sinh ra còn phụ 
+thuộc vào những điều kiện, hoàn cảnh nhất định. Thực tiễn cho thấy rằng một nguyên 
+nhân nhất định trong hoàn cảnh nhất định tất yếu gây ra kết quả nhất định. Trong cùng 
+một điều kiện, hoàn cảnh, các nguyên nhân càng ít khác nhau bao nhiêu thì kết quả do 
+chúng gây ra cũng ít khác nhau bấy nhiêu. Ví dụ: cùng những hạt đậu trong những 
+điều kiện giống nhau thì do tác động của quá trình trao đổi chất để nảy mầm thì tất 
+yếu sẽ thành cây đậu chứ không thể thành cây táo hay cây cam được. 
+- Quan hệ biện chứng giữa nguyên nhân và kết quả 
++ Nguyên nhân sinh ra kết quả, xuất hiện trước kết quả. Tuy nhiên không phải 
+hiện tượng nào nối tiếp nhau về mặt thời gian cũng là quan hệ nhân quả.  Ví dụ: Chúng 
+ta thường thấy chớp trước khi nghe thấy tiếng sấm những chớp không phải là nguyên 
+nhân của sấm vì chớp không sinh ra sấm; sấm và chớp đều do sự phóng điện giữa hai 
+đám mây tích điện trái dấu sinh ra nhưng vì vận tốc ánh sáng nhanh hơn vận tốc 
+truyền âm thanh nên có nhìn thấy chớp trước khi nghe thấy tiếng sấm. Nguyên nhân 
+và kết quả có quan hệ sản sinh. Nguyên nhân sinh ra kết quả, do vậy nguyên nhân bao 
+giờ cũng có trước kết quả, còn kết quả bao giờ cũng xuất hiện sau nguyên nhân. 
+ + Một nguyên nhân có thể sinh ra một hoặc nhiều kết quả. Ví dụ: chặt phá rừng 
+có thể gây ra nhiều hậu quả như lũ lụt, hạn hán, xói mòn đất, biến đổi khí hậu, tiêu 
+diệt một số loài sinh vật. Một kết quả có thể do một hoặc nhiều nguyên nhân tạo nên. 
+Ví dụ: nguyên nhân của mất mùa có thể do sâu bệnh, hạn hán, lũ lụt, chăm bón không 
+đúng kỹ thuật…; Sinh viên không thể tham gia lớp học trực tuyến có thể do: Lỗi ứng 
+dụng, đường truyền yếu, mất điện, thiết bị học tập hỏng,… 
+Các nguyên nhân rất đa dạng, có vai trò khác nhau đối với việc hình thành kết 
+quả: nguyên nhân bên trong, nguyên nhân bên ngoài, nguyên nhân khách quan, nguyên 
+nhân chủ quan, nguyên nhân chủ yếu, nguyên nhân thứ yếu,... Nguyên nhân sinh ra kết 
+quả rất phức tạp vì còn phụ thuộc vào nhiều điều kiện và hoàn cảnh khác nhau. Nếu 
+nhiều nguyên nhân cùng tồn tại và tác động cùng chiều trong một sự vật thì chúng sẽ 
+ảnh hưởng cùng chiều, thúc đẩy sự hình thành kết quả. Ngược lại, nếu những nguyên 
+nhân tác động đồng thời theo các hướng khác nhau thì có thể cản trở tác dụng của 
+nhau, thậm chí triệt tiêu tác dụng của nhau, ngăn cản sự xuất hiện của kết quả. 
+  + Nguyên nhân và kết quả có thể chuyển hóa lẫn nhau. Cái mà ở thời điểm hoặc 
+trong mối quan hệ này là nguyên nhân thì ở thời điểm hoặc trong mối quan hệ khác lại 
+là kết quả; còn kết quả lại trở thành nguyên nhân, nhưng đã ở trong các quan hệ khác, 
+thành nguyên nhân loại khác. Chuỗi nhân quả là vô cùng, không có bắt đầu và không có 
+kết thúc. Một hiện tượng được coi là nguyên nhân hay kết quả bao giờ cũng chỉ trong 
+những quan hệ xác định cụ thể. 
+Kết quả sau khi được sinh ra nó có ảnh hưởng trở lại nguyên nhân theo hai hướng: 
+Tích cực: thúc đẩy sự hoạt động của nguyên nhân; hoặc tiêu cực: cản trở sự hoạt động 
+của nguyên nhân. Ví dụ: trình độ dân trí thấp do kinh tế kém phát triển, ít đầu tư cho 
+giáo dục. Những dân trí thấp lại là nhân tố cản trở việc áp dụng khoa học kỹ thuật vào 
+sản xuất, vì vậy lại kìm hãm sản xuất phát triển. Ngược lại, trình độ dân trí cao là kết 
+quả của chính sách phá triển kinh tế và giáo dục đúng đắn. Dân trí cao lại tác động tích 
+cực đến sự phát triển kinh tế và giáo dục. 
+- Ý nghĩa phương pháp luận 
+ + Vì mối liên hệ nhân quả có tính khách quan, tất yếu nên trong nhận thức và 
+thực tiễn không thể phủ nhận quân hệ nhân - quả. 
++ Bất kỳ sự vật, hiện tượng nào cũng có nguyên nhân và do nguyên nhân quyết 
+định, thì để nhận thức được sự vật, hiện tượng ấy nhất thiết phải tìm ra nguyên nhân 
+xuất hiện; muốn loại bỏ một sự vật, hiện tượng nào đó không cần thiết, thì phải loại bỏ 
+nguyên nhân sinh ra nó.  
++ Xét về mặt thời gian, nguyên nhân có trước kết quả nên khi tìm nguyên nhân 
+của một sự vật, hiện tượng cần tìm ở các sự vật, hiện tượng mối liên hệ đã xảy ra 
+trước khi sự vật, hiện tượng xuất hiện. 
++ Nguyên nhân và kết quả có thể chuyển hóa lẫn nhau nên để nhận thức được tác 
+dụng của một sự vật, hiện tượng và để xác định phương hướng đúng cho hoạt động 
+thực tiễn cần đặt sự vật, hiện tượng đó vào từng vị trí. 
+ + Vì mối liên hệ nhân - quả rất phức tạp, đa dạng nên phải phân biệt chính xác 
+các loại nguyên nhân đặc biệt chú ý đến nguyên nhân chủ yếu và bên trong để có 
+phương pháp giải quyết đúng đắn, phù hợp với mỗi trường hợp cụ thể trong nhận thức 
+và thực tiễn. 
+* Tất nhiên và ngẫu nhiên 
+- Phạm trù tất nhiên, ngẫu nhiên 
++ Tất nhiên phạm trù triết học dùng để chỉ mối liên hệ bản chất, do nguyên 
+nhân cơ bản bên trong sự vật, hiện tượng quy định và trong điều kiện nhất định 
+phải xảy ra đúng như thế chứ không thể khác. 
++ Ngẫu nhiên phạm trù triết học dùng để chỉ mối liên hệ không bản chất, do 
+nguyên nhân, hoàn cảnh bên ngoài quy định nên có thể xuất hiện, có thể không xuất 
+hiện; có thể xuất hiện thế này hoặc có thể xuất hiện thế khác.  
+Ví dụ: Khi gieo con xúc xắc sẽ có một trong sáu mặt úp và một trong sáu mặt 
+ngửa là tất nhiên vì nó được quy định bởi chính cấu trúc 6 mặt của nó. Tuy nhiên, 
+mặt nào sấp, mặt nào ngửa trong mỗi lần tung lại là cái ngẫu nhiên do tác động 
+của lực tung, lực cản của không khí,... 
+Không chỉ cái tất nhiên mới có nguyên nhân mà cả cái tất nhiên và ngẫu nhiên 
+đều có nguyên nhân. Cũng không phải là những gì con người chưa nhận thức được 
+nguyên nhân là hiện tượng ngẫu nhiên, những gì con người đã nhận thức được 
+nguyên nhân và chi phối được nó thì lầ cái ngẫu nhiên. Quan niệm như vậy sẽ rơi 
+vào chủ nghĩa duy tâm. 
+- Quan hệ biện chứng giữa tất nhiên và ngẫu nhiên 
++ Ngẫu nhiên và tất nhiên đều tồn tại khách quan và đều có vị trí nhất định đối với sự 
+phát triển của sự vật, trong đó tất nhiên đóng vai trò quyết định. Tất nhiên chi phối sự phát 
+triển còn ngẫu nhiên làm cho sự phát triển phong phú, nhanh hoặc chậm. Ví dụ: Sự phát 
+triển của cây trồng trước hết bị chi phối quyết định trước hết bởi cái tất nhiên thể hiện ở 
+sự tác động các nguyên nhân cơ bản, bên trong các quá trình chuyển hóa, sinh trưởng 
+của nó. Tuy nhiên những yếu tố ngẫu nhiên do tác động từ các nguyên nhân bên ngoài, 
+hoàn cảnh thời tiết, kỹ thuật chăm sóc,... làm ảnh hưởng đến tốc độ, cách thức phát triển 
+của cây trồng. 
++ Tất nhiên và ngẫu nhiên đều tồn tại nhưng chúng không tồn tại biệt lập dưới 
+dạng thuần tuý cũng như không có cái ngẫu nhiên thuần tuý, mà chúng tồn tại trong sự 
+thống nhất hữu cơ với nhau vì: Cái tất nhiên bao giờ cũng biểu hiện sự tồn tại của 
+mình thông qua vô số cái ngẫu nhiên. Còn cái ngẫu nhiên là sự biểu hiện của cái 
+tất nhiên, bổ sung cho cái tất nhiên. Cái tất yếu như là khuynh hướng chung của 
+sự phát triển, khuynh hướng đó không tồn tại thuần túy, biệt lập mà thể hiện 
+thông qua những cái ngẫu nhiên. Ví dụ: Sự xuất hiện của các lãnh tụ của các cuộc 
+cách mạng trong lịch sử là tất nhiên do nhu cầu nội tại của xã hội để giải quyết 
+những nhiệm vụ lịch sử đặt ra. Nhưng nhân vật đó là ai lại không phải là tất 
+nhiên vì nó không phụ thuộc vào tiến trình chung của lịch sử. Nếu gạt bỏ nhân vật 
+này thì sẽ xuất hiện nhân vật khác thay thế. Người thay thế này như thế nào có thể 
+ảnh hưởng đến tiến trình cách mạng chung đó. 
++ Cái tất nhiên và cái ngẫu nhiên có thể được chuyển hoá lẫn nhau.  
+Có cái bắt đầu xuất hiện là ngẫu nhiên qua đó phát triển trở thành tất nhiên và 
+ngược lại. Ví dụ: việc trao đổi sản phẩm này lấy sản phẩm khác trong kinh tế tự nhiên 
+thời công xã nguyên thủy ban đầu chỉ là hiện tượng ngẫu nhiên, chưa xuất phát từ bản 
+chất của nền kinh tế đó; tuy nhiên sau đó khi lực lượng sản xuất phát triển thúc đẩy 
+quá trình phân công lao động dẫn đến nhu cầu trao đổi sản phẩm. Khi sản xuất hàng 
+hóa ra đời thì hiện tượng trao đổi sản phẩm lại trở thành tất nhiên trong sản xuất 
+hàng hóa (xuất phát từ quy luật kinh tế của sản xuất hàng hóa). Sự chuyển hoá giữa 
+tất nhiên và ngẫu nhiên còn ở chỗ: Có cái xét trong mối quan hệ này là ngẫu nhiên 
+nhưng trong mối quan hệ lại là tất nhiên và ngược lại. Ranh giới giữa cái tất nhiên và 
+ngẫu nhiên chỉ mang tính tương đối nên cần xem xét sự vật, hiện tượng một cách linh 
+hoạt, có quan điểm lịch sử - cụ thể.  
+- Ý nghĩa phương pháp luận 
++ Cái tất nhiên gắn với bản chất của sự vật nên trong hoạt động thực tiễn phải 
+dựa vào cái tất nhiên nhưng cái ngẫu nhiên cũng ảnh hưởng đến sự phát triển của sự 
+vật. Vì vậy, trong hoạt động thực tiễn phải có nhiều phương án. 
++ Vì cái tất nhiên không tồn tại thuần túy mà bộc lộ qua vô vàn cái ngẫu nhiên. 
+Do vậy muốn nhận thức được cái tất nhiên phải thông qua việc nghiên cứu, phân tích 
+so sánh rất nhiều cái ngẫu nhiên. Vì không phải cái chung nào cũng là cái tất yếu, nên 
+khi nghiên cứu cái ngẫu nhiên không chỉ dừng lại ở việc tìm ra cái chung, mà cần phải 
+tiến sâu hơn nữa mới tìm ra cái chung tất yếu. 
++ Cái ngẫu nhiên trong điều kiện nhất định có thể chuyển hóa thành cái tất nhiên. 
+Do vậy trong nhận thức cũng như trong hoạt động thực tiễn, chúng ta không được xem 
+nhẹ, bỏ qua cái ngẫu nhiên, mặc dù nó không quyết định xu hướng phát triển của sự vật.  
+* Nội dung và hình thức 
+- Phạm trù nội dung, hình thức 
+ + Nội dung là phạm trù triết học: Dùng để chỉ tổng thể tất cả các mặt, những yếu 
+tố, những quá trình tạo nên sự vật, hiện tượng. 
+ + Hình thức là phạm trù triết học: Dùng để chỉ phương thức tồn tại, biểu hiện và 
+phát triển của sự vật, hiện tượng đó, là hệ thống các mối liên hệ tương đối bền vững giữa 
+các yếu tố của nó. Sự vật có hình thức biểu hiện ra bề ngoài nhưng phép biện chứng duy 
+vật chú ý chủ yếu đến hình thức bên trong của sự vật. 
+Ví dụ: Một cuốn giáo trình: nội dung của nó bao gồm toàn bộ nội dung kiến thức, 
+giấy, mực in tạo nên cuốn giáo trình đó. Hình thức bề ngoài của cuốn sách như màu sắc 
+trình bày, khổ giấy, kiểu chữ,... Hình thức bên trong của cuốn sách là trình tự sắp xếp 
+các nội dung kiến thức, bố cục chương tiết, cách thức liên kết các kiến thức,... Nội dung 
+của quá trình sản xuất là tổng hợp tất cả các yếu tố như con người, công cụ lao động, 
+đối tượng lao động,... Còn hình thức của quá trình sản xuất là cách thức kết hợp, thứ tự 
+sắp xếp các yếu tố tương đối bền vững các yếu tố của quá trình sản xuất, hình thức quan 
+hệ giữa con người với con người trong sản xuất,... 
+- Quan hệ biện chứng giữa nội dung và hình thức 
++ Nội dung và hình thức luôn gắn bó chặt chẽ với nhau trong một thể thống nhất. Các 
+sự vật, hiện tượng được tạo nên từ những mặt, những yếu tố của nó nhưng những mặt, 
+những yếu tố này không tách rời nhau mà thống nhất, gắn kết với nhau. Không có hình thức 
+nào tồn tại thuần túy không chứa đựng nội dung; ngược lại cũng không có nội dung nào tồn 
+tại không trong một hình thức xác định. Một nội dung trong quá trình phát triển có thể có 
+nhiều hình thức khác nhau; ngược lại, một hình thức có thể thể hiện nhiều nội dung khác 
+nhau. 
+Ví dụ: Quá trình sản xuất ra một sản phẩm sẽ bao gồm các yếu tố nội dung: con 
+người, máy móc thiết bị, nguyên liệu, nhiên liệu,... Những yếu tố đó có thể được liên kết, kết 
+hợp, phân công, tổ chức sản xuất dưới những hình thức khác nhau. Như vậy nội dung của 
+quá trình sản xuất có thể được diễn ra dưới nhiều hình thức khác nhau. Ngược lại, cùng một 
+cách thức tổ chức sản xuất như nhau nhưng có thể thực hiện ở nhiều ngành hay khu vực 
+sản xuất với những yếu tố nội dung khác nhau, sản xuất ra những sản phẩm khác nhau. 
+Như vậy, một hình thức có thể thể hiện nhiều nội dung khác nhau. 
+ + Nội dung giữ vai trò quyết định đối với hình thức và hình thức tác động trở lại 
+nội dung trong quá trình vận động phát triển của sự vật.  
+  Nội dung giữa vai trò quyết định vì các sự vật, hiện tượng trước hết được tạo thành 
+từ các yếu tố nội dung. Giữa nội dung và hình thức không phải luôn có sự thống nhất. 
+Thông thường, quá trình biến đổi của sự vật được bắt đầu từ sự biến đổi nội dung của nó 
+(dưới một hình thức phù hợp), tới một giai đoạn nhất định sẽ xuất hiện sự không phù hợp 
+giữa nội dung và hình thức. Khi đó sẽ xuất hiện nhu cầu thay đổi hình thức tạo nên sự phù 
+hợp mới. Ví dụ: Dưới một hình thức kinh doanh phù hợp, quá trình sản xuất của doanh 
+nghiệp không ngừng phát triển. Và đến một giai đoạn nhất định, với sự biến đổi của nội 
+dung sản xuất (trình độ lao động nâng lên, máy móc công nghệ hiện đại,...) thì cách thức 
+tổ chức kinh doanh cũ sẽ không còn phù hợp nữa mà đòi hỏi phải có những thay đổi trong 
+hình thức quản lý, tổ chức sản xuất và đổi mới phương thức thực hiện mối quan hệ với 
+người lao động để tiếp tục thúc đẩy quá trình sản xuất phát triển. Sự biến đổi của nội 
+dung quyết định làm cho hình thức phải biến đổi cho phù hợp với nội dung. Ví dụ khi nội  
+dung, nhiệm vụ, chức năng của nhà nước xã hội chủ nghĩa khác với nhà nước phong kiến 
+thì hình thức tổ chức bộ máy của nhà nước cũng phải thay đổi, không theo hình thức quân 
+chủ nữa mà là hình thức tập trung dân chủ. 
+ Sự tác động trở lại của hình thức với nội dung: Hình thức có tính độc lập tương đối 
+và có tác động trở lại với nội dung. Nếu hình thức phù hợp với nội dung nó sẽ tạo điều 
+kiện thuận lợi cho nội dung phát triển, nếu không phù hợp nó sẽ kìm hãm nội dung phát 
+triển. Tuy nhiên, khi hình thức không phù hợp với nội dung, thì theo quy luật nó sẽ được 
+thay đổi cho phù hợp với nội dung, thúc đẩy nội dung phát triển. Ví dụ: Cùng với những 
+yếu tố nội dung của quá trình sản xuất nhưng cách thức quản lý tổ chức sản xuất phù hợp, 
+hình thức quan hệ sản xuất giữa con người với con người phù hợp sẽ kích thích các yếu tố 
+của sản xuất phát triển, ngược lại nếu không phù hợp sẽ kìm hãm sự phát triển của sản 
+xuất, khiến quá trình sản xuất kém hiệu quả; Cùng một nội dung tư tưởng của bài phát 
+biểu nhưng nếu hình thức trình bày phù hợp, rõ ràng, có kết hợp các điểm nhấn nhá, thể 
+hiện bằng âm lượng phù hợp sẽ có thể truyền tải tốt nội dung đến người nghe hơn; Hay, 
+một chiếc điện thoại sản xuất ra và có thể bán chạy trên thị trường không chỉ ở cấu hình 
+mạnh hay yếu, những tính năng nổi trội, mà còn ở hình thức, kiểu dáng (dày hay mỏng; to 
+hay bé), màu sắc của nó… 
+- Ý nghĩa phương pháp luận  
++ Nội dung và hình thức luôn gắn bó với nhau, do vậy không được tách rời, tuyệt 
+đối hoá giữa nội dung và hình thức, chống chủ nghĩa hình thức. 
++ Nội dung quyết định hình thức vì vậy trong nhận thức và hoạt động thực tiễn 
+trước hết phải căn cứ vào nội dung; tuy nhiên hình thức cũng có tác động trở lại nội 
+dung nên cần chủ động sử dụng những hình thức phù hợp với nội dung từng giai đoạn 
+phát triển của sự vật, hiện tượng. 
++ Một nội dung có thể biểu hiện qua nhiều hình thức khác nhau. Vì vậy; trong 
+thực tiễn phải biết sử dụng nhiều hình thức và thay đổi các hình thức cho phù hợp. 
+* Bản chất và hiện tượng 
+- Phạm trù bản chất, hiện tượng 
++ Bản chất phạm trù triết học: dùng để chỉ tổng thể các mối liên hệ khách quan, 
+tất nhiên, tương đối ổn định bên trong, quy định sự vận động, phát triển của đối 
+tượng và thể hiện mình qua các hiện tượng tương ứng của đối tượng.  
+ + Hiện tượng phạm trù triết học: dùng để chỉ những biểu hiện của các mặt, mối 
+liên hệ tất nhiên tương đối ổn định ở bên ngoài; là mặt dễ biến đổi hơn và là hình thức 
+thể hiện của bản chất đối tượng.  
+Ví dụ: Bản chất của một nguyên tố hóa học là những thuộc tính do mối liên hệ 
+giữa điện tử và hạt nhân của nó quyết định, còn những phản ứng hóa học của nguyên 
+tố đó khi tương tác với những nguyên tố khác là hiện tượng thể hiện ra bên ngoài của 
+mối liên kết giữa điện tử và hạt nhân. Bản chất của quan hệ giữa giai cấp tư sản và vô 
+sản trong chủ nghĩa tư bản là quan hệ bóc lột giá trị thặng dư, nhưng hiện tượng biểu 
+hiện ra bên ngoài của quan hệ này lại là sự trao đổi bình đẳng giữa bên mua sức lao 
+động và bên bán sức lao động thông qua sự thỏa thuận bằng các hợp đồng lao động. 
+- Quan hệ biện chứng giữa bản chất và hiện tượng 
+ Bản chất và hiện tượng tồn tại khách quan có mối quan hệ biện chứng với nhau 
+vừa thống nhất, vừa đối lập với nhau: 
++ Sự thống nhất giữa bản chất và hiện tượng:  
+Bản chất bao giờ cũng bộc lộ ra qua hiện tượng, còn hiện tượng bao giờ cũng là 
+sự biểu hiện của một bản chất nhất định. Sự thống nhất giữa bản chất và hiện tượng thể 
+hiện ở chỗ bản chất và hiện tượng về căn bản là phù hợp với nhau. Bản chất thường 
+được bộc lộ ra ở những hiện tượng tương ứng. Bản chất nào thì có hiện tượng ấy. Khi 
+bản chất thay đổi thì hiện tượng cũng thay đổi theo. Khi bản chất mất đi thì hiện tượng 
+cũng mất theo. Bản chất quy định hiện tượng. 
+Ví dụ: trong nghiên cứu khoa học, người ta thường bắt đầu từ việc quan sát, 
+thống kê các hiện tượng (quan sát tự nhiên hay thí nghiệm) trên cơ sở tiến hành 
+nghiên cứu (có thể thông qua việc xác lập mô hình giả thuyết,…) về bản chất của hiện 
+tượng để giải thích các hiện tượng để quan sát được. 
++ Sự đối lập giữa bản chất và hiện tượng: 
+ Bản chất là cái chung, cái tất yếu quyết định sự tồn tại và phát triển của sự vật, hiện tượng 
+là cái riêng biệt phong phú và đa dạng; Cùng một bản chất có thể thể hiện ở những hiện tượng 
+khác nhau tùy theo sự thay đổi của hoàn cảnh. Vì vậy, hiện tượng phong phú hơn bản chất, bản 
+chất thì sâu sắc hơn hiện tượng. 
+ Bản chất là cái bên trong, ẩn giấu sâu xa của hiện thực khách quan, hiện tượng là 
+cái bên ngoài. Bản chất không bộc lộ hoàn toàn ở một hiện tượng mà ở nhiều hiện 
+tượng khác nhau. Có những hiện tượng biểu hiện bản chất dưới những hình thức đã 
+biến đổi, có khi xuyên tạc bản chất. Ví dụ: có những người có bản chất gian xảo 
+nhưng lại thể hiện thông qua những hiện tượng như lời nói tốt đẹp, ngon ngọt, dễ nghe 
+để che giấu đi bản chất thực sự nhằm lừa đảo người khác. 
+ Bản chất là cái tương đối ổn định, còn hiện tượng là cái thường xuyên biến đổi. 
+- Ý nghĩa phương pháp luận 
++ Bản chất không tồn tại thuần túy mà tồn tại trong sự vật và biểu hiện qua hiện 
+tượng, vì vậy muốn nhận thức được bản chất phải xuất phát từ các hiện tượng các quá 
+trình thực tế. Muốn nhận thức đúng sự vật, hiện tượng thì không chỉ dừng lại ở một 
+hiện tượng nhất định nào mà phải phân tích, tổng hợp sự biến đổi của nhiều hiện tượng 
+nhất là các hiện tượng điển hình mới hiểu rõ được bản chất của sự vật. Nhận thức bản 
+chất sự vật là một quá trình phức tạp đi từ hiện tượng đến bản chất, từ bản chất ít sâu 
+sắc đến bản chất sâu sắc hơn. 
++ Mặt khác, bản chất phản ánh tính tất yếu, tính quy luật, nên trong nhận thức và 
+thực tiễn cần phải căn cứ vào bản chất chứ không căn cứ vào hiện tượng thì mới có thể 
+đánh giá một cách chính xác về sự vật, hiện tượng đó và mới có thể cải tạo căn bản sự vật. 
+* Khả năng và hiện thực 
+- Phạm trù khả năng, hiện thực 
++ Hiện thực là phạm trù triết học chỉ những gì hiện có, đang tồn tại trên thực tế. 
++ Khả năng là phạm trù triết học chỉ cái hiện chưa có, chưa xuất hiện, chưa tồn 
+tại trên thực tế nhưng sẽ có, sẽ tới, sẽ tồn tại thực sự khi có các điều kiện tương ứng. 
+Ví dụ: Trước mặt chúng ta có người thợ mộc, gỗ, cưa, bào, đục, đinh,... đó là 
+hiện thực. Từ đó xuất hiện khả năng xuất hiện một cái bàn. Lúc này cái bàn chưa có, 
+chưa tồn tại trong thực tế nhưng khi người thợ mộc sử dụng các công cụ và nguyên 
+liệu đó để lao động sản xuất tạo ra cái bàn thì nó sẽ thực sự xuất hiện. 
+- Quan hệ biện chứng giữa khả năng và hiện thực 
+  + Khả năng và hiện thực tồn tại trong mối quan hệ chặt chẽ với nhau, không 
+tách rời nhau, thường xuyên biến đổi, chuyển hoá lẫn nhau trong qua strinhf phát triển 
+của sự vật. Cụ thể: khả năng chuyển hóa thành hiện thực và hiện thực lại chứa đựng 
+những khả năng mới; khả năng mới, trong những điều kiện nhất định, lại chuyển hóa 
+thành hiện thực…Cùng trong những điều kiện nhất định, ở cùng một sự vật có thể tồn 
+tại nhiều khả năng chứ không phải chỉ một khă năng. 
++ Ngoài những khă năng vốn có, trong những điều kiện mới thì sự vật sẽ xuất 
+hiện thêm những khả năng mới, đồng thời bản thân khả năng cũng thay đổi theo sự 
+thay đổi của điều kiện. 
++ Để khă năng biến thành hiện thực, thường cần không phải chỉ một điều kiện mà 
+là một tập hợp nhiều điều kiện. Ví dụ: một hạt thóc có khả năng nảy mầm cần tập hợp 
+các điều kiện như: nhiệt độ, độ ẩm, ánh sáng, dinh dưỡng,... 
+- Ý nghĩa phương pháp luận 
++ Vì hiện thực là cái tồn tại thực sự, còn khả năng là cái hiện chưa có, nên trong 
+hoạt động thực tiễn cần phải dựa vào hiện thực để đề ra chủ trương, phương hướng cho 
+hoạt động của mình. 
+ + Khả năng là cái chưa tồn tại nhưng nó biểu hiện khuynh hướng phát triển của 
+sự vật trong tương lai, do đó phải tính đến các khả năng để việc đề ra chủ trương, kế 
+hoạch hành động sát hợp hơn, tạo ra các điều kiện thích hợp để biến khả năng thành 
+hiện thực. 
++ Tích cực phát huy nhân tố chủ quan trong việc nhận thức và hoạt động thực 
+tiễn để biến khả năng thành hiện thực theo mục đích nhất định. 
+##### c) Các quy luật cơ bản của phép biện chứng duy vật 
+Quy luật là mối liên hệ phổ biến, khách quan, bản chất, bền vững, tất yếu giữa 
+các đối tượng và nhất định tác động khi có các điều kiện phù hợp. 
+Những quy luật của phép biện chứng mang tính phổ biến, phản ánh những mối 
+liên hệ phổ biến của tất cả các đối tượng hiện thực. 
+Việc nhận thức các quy luật khách quan, nhất là các quy luật phổ biến, có ý nghĩa 
+thực tiễn to lớn, tạo điều kiện cho con người làm chủ tốt hơn tự nhiên và xã hội. 
+* Quy luật chuyển hóa từ những sự thay đổi về lượng thành những sự thay 
+đổi về chất và ngược lại 
+Vị trí, vai trò của quy luật: Quy luật này chỉ ra cách thức chung nhất của sự vận 
+động và phát triển, khi cho thấy sự thay đổi về chất chỉ xảy ra khi sự vật, hiện tượng đã 
+tích lũy những thay đổi về lượng đạt đến ngưỡng nhất định. Quy luật cũng chỉ ra tính 
+chất của sự vận động và phát triển, khi cho thấy sự thay đổi về lượng của sự vật, hiện 
+tượng diễn ra từ từ kết hợp với sự thay đổi nhảy vọt về chất làm cho sự vật, hiện tượng 
+vừa tiến bước tuần tự, vừa có những bước đột phá vượt bậc.  
+- Khái niệm chất, lượng  
++ Chất là khái niệm dùng để chỉ tính quy định khách quan vốn có của sự vật, 
+hiện tượng; là sự thống nhất hữu cơ của các thuộc tính, yếu tố tạo nên sự vật, hiện 
+tượng làm cho sự vật, hiện tượng là nó mà không phải là sự vật, hiện tượng khác (trả 
+lời cho câu hỏi sự vật, hiện tượng đó là gì? Giúp phân biệt nó với sự vật, hiện tượng 
+khác). Đặc điểm cơ bản của chất là nó thể hiện tính ổn định tương đối của sự vật, hiện 
+tượng; nghĩa là khi nó chưa chuyển hóa thành sự vật, hiện tượng khác thì chất của nó 
+vẫn chưa thay đổi. Mỗi sự vật, hiện tượng đều có quá trình tồn tại và phát triển qua 
+nhiều giai đoạn, trong mỗi giai đoạn ấy nó lại có chất riêng. Như vậy, mỗi sự vật, hiện 
+tượng không phải chỉ có một chất mà có thể có nhiều chất.  
+Chất và sự vật có mối quan hệ chặt chẽ, không tách rời nhau. Trong hiện thực 
+khách quan không thể tồn tại sự vật không có chất và không thể có chất nằm ngoài sự 
+vật. Chất của sự vật được biểu hiện qua những thuộc tính của nó, nhưng không phải 
+bất kỳ thuộc tính nào cũng biểu hiện chất của sự vật. Thuộc tính của sự vật có thuộc 
+tính cơ bản và thuộc tính không cơ bản. Những thuộc tính cơ bản được tổng hợp lại tạo 
+thành chất của sự vật; quy định sự tồn tại, vận động và phát triển của sự vật, chỉ khi 
+nào chúng thay đổi hay mất đi thì sự vật mới thay đổi hay mất đi. Nhưng thuộc tính 
+của sự vật chỉ bộc lộ qua các mối liên hệ cụ thể với các sự vật khác. Bởi vậy, sự phân 
+chia thuộc tính thành thuộc tính cơ bản và thuộc tính không cơ bản cũng chỉ mang tính 
+tương đối. Trong mối liên hệ cụ thể này, thuộc tính này là thuộc tính cơ bản thể hiện 
+chất của sự vật, trong mối liên hệ cụ thể khác sẽ có thêm thuộc tính khác hay thuộc 
+tính khác là thuộc tính cơ bản. Ví dụ: Trong mối quan hệ với động vật thì các thuộc 
+tính có khả năng chế tạo, sử dụng công cụ, có tư duy là thuộc tính cơ bản của con 
+người còn những thuộc tính khác không là thuộc tính cơ bản. Song trong quan hệ giữa 
+những con người cụ thể với nhau thì những thuộc tính của con người về nhân dạng, về 
+dấu vân tay,... lại trở thành thuộc tính cơ bản. 
+Chất của sự vật không những được quy định bởi chất của những yếu tố tạo thành 
+mà còn bởi phương thức liên kết giữa các yếu tố tạo thành, nghĩa là bởi kết cấu của sự 
+vật. Trong hiện thực các sự vật được tạo thành bởi các yếu tố như nhau, song chất của 
+chúng lại khác. Ví dụ: Kim cương và than chì đều có cùng thành phần hóa học do các 
+nguyên tố cácbon tạo nên nhưng do phương thức liên kết giữa các nguyên tử cácbon 
+là khác nhau, vì thế chất của chúng hoàn toàn khác nhau. Kim cương rất cứng, còn 
+than chì lại mềm. Trong một tập thể nhất định nếu phương thức liên kết giữa các cá 
+nhân biến đổi thì tập thể đó có thể trở nên vững mạnh, hoặc sẽ trở thành yếu kém, 
+nghĩa là chất của tập thể biến đổi. 
+Từ đó có thể thấy sự thay đổi về chất của sự vật vừa phụ thuộc vào sự thay đổi 
+các yếu tố cấu thành sự vật, vừa phụ thuộc vào sự thay đổi phương thức liên kết giữa 
+các yếu tố ấy.  
++ Lượng là khái niệm dùng để dùng để chỉ tính quy định vốn có của sự vật, hiện 
+tượng về mặt quy mô, trình độ phát triển, các yếu tố biểu hiện ở số lượng các thuộc 
+tính, ở tổng số các bộ phận, ở đại lượng, ở tốc độ và nhịp điệu vận động và phát triển 
+của sự vật, hiện tượng. 
+Lượng còn biểu hiện ở kích thước dài hay ngắn, số lượng lớn hay nhỏ, tổng số 
+ít hay nhiều, trình độ cao hay thấp, tốc độ vận động nhanh hay chậm, màu sắc đậm 
+hay nhạt... 
+Sự phân biệt giữa chất và lượng chỉ có ý nghĩa tương đối, tùy theo từng mối quan 
+hệ mà xác định đâu là lượng và đâu là chất; cái là lượng trong mối quan hệ này, lại có 
+thể là chất trong mối quan hệ khác.  
+- Quan hệ biện chứng giữa chất và lượng: 
+ + Quá trình chuyển hóa từ những sự thay đổi về lượng thành những sự thay đổi 
+về chất: Bất kỳ sự vật, hiện tượng nào cũng là một thể thống nhất giữa hai mặt chất và 
+lượng, chúng tác động biện chứng lẫn nhau theo cơ chế khi sự vật, hiện tượng đang tồn 
+tại, chất và lượng thống nhất với nhau ở một độ nhất định. 
+ Độ là khái niệm dùng để chỉ mối liên hệ thống nhất và quy định lẫn nhau giữa 
+chất với lượng; là giới hạn tồn tại của sự vật, hiện tượng mà trong đó sự thay đổi về 
+lượng chưa dẫn đến sự thay đổi về chất. Do đó, sự vật, hiện tượng vẫn còn là nó, chưa 
+chuyển hoá thành sự vật, hiện tượng khác. 
+Sự vận động biến đổi của sự vật, hiện tượng thường bắt đầu từ sự thay đổi về 
+lượng. Khi lượng thay đổi đến một giới hạn nhất định sẽ tất yếu dẫn đến sự thay đổi về 
+chất. Giới hạn đó chính là điểm nút; 
+ Điểm nút là phạm trù triết học dùng để chỉ điểm giới hạn mà ở đó sự thay đổi về 
+lượng đã đủ làm thay đổi về chất của sự vật; 
+  Sự thay đổi về lượng khi đạt tới điểm nút, với những điều kiện nhất định tất yếu 
+dẫn tới bước nhảy chất mới ra đời. 
+ Bước nhảy là phạm trù triết học dùng để chỉ sự chuyển hóa cơ bản về chất của 
+sự vật, hiện tượng do những thay đổi về lượng trước đó gây ra. Bước nhảy là sự kết 
+thúc một giai đoạn vận động, phát triển; đồng thời đó cũng là điểm khởi đầu cho một 
+giai đoạn mới. 
+Bước nhảy để chuyển hóa về chất của sự vật hết sức đa dạng và phong phú với 
+những hình thức khác nhau. Căn cứ vào quy mô và nhịp độ của bước nhảy, có bước 
+nhảy toàn bộ và bước nhảy cục bộ. Căn cứ vào thời gian của sự thay đổi về chất và 
+dựa trên cơ chế của sự thay đổi đó, có bước nhảy tức thời và bước nhảy dần dần.  
++ Quá trình chuyển hoá từ những sự thay đổi về chất thành những sự thay đổi về 
+lượng. Khi chất mới ra đời lại có sự tác động trở lại lượng của sự vật trên nhiều 
+phương diện như: làm thay đổi kết cấu; quy mô, trình độ, nhịp điệu của sự vận động và 
+phát triển. Ví dụ: Khi nước từ trạng thái lỏng sang trạng thái hơi thì vận tốc của các 
+phân tử nước sẽ cao hơn, thể tích của nước ở trạng thái hơi sẽ lớn hơn thể tích của nó 
+ở trạng thái lỏng với cùng một khối lượng,... 
+Tùy vào sự vật, hiện tượng, tùy vào mâu thuẫn vốn có của chúng và vào điều 
+kiện, trong đó diễn ra sự thay đổi về chất của sự vật, hiện tượng mà có nhiều hình thức 
+bước nhảy.  
+Có thể khái quát lại nội dung cơ bản của quy luật chuyển hóa những thay đổi về 
+lượng dẫn đến những thay đổi về chất và ngược lại như sau: Mọi đối tượng đều là sự 
+thống nhất của hai mặt đối lập chất và lượng, những sự thay đổi dần dần về lượng 
+vượt quá giới hạn của độ sẽ dẫn đến sự thay đổi căn bản về chất thông qua bước nhảy, 
+chất mới ra đời tiếp tục tác động trở lại duy trì sự thay đổi của lượng.  
+- Ý nghĩa phương pháp luận 
+Thứ nhất, trong hoạt động nhận thức và hoạt động thực tiễn phải biết tích lũy về 
+lượng để có biến đổi về chất; không được nôn nóng cũng như không được bảo thủ. 
+Bước nhảy làm cho chất mới ra đời, thay thế chất cũ là hình thức tất yếu của sự vận 
+động, phát triển của mọi sự vật, hiện tượng; nhưng sự thay đổi về chất do thực hiện 
+bước nhảy gây nên chỉ xảy ra khi lượng đã thay đổi đến giới hạn, tức là đến điểm nút, 
+đến độ nên muốn tạo ra bước nhảy thì phải thực hiện quá trình tích lũy về lượng.  
+Thứ hai, khi lượng đã đạt đến điểm nút thì thực hiện bước nhảy là yêu cầu khách 
+quan của sự vận động của sự vật, hiện tượng; tư tưởng nôn nóng thường biểu hiện ở 
+chỗ không chú ý thỏa đáng đến sự tích lũy về lượng mà cho rằng sự phát triển của sự 
+vật, hiện tượng chỉ là những bước nhảy liên tục; ngược lại, tư tưởng bảo thủ thường 
+biểu hiện ở chỗ không dám thực hiện bước nhảy, coi sự phát triển chỉ là những thay 
+đổi về lượng. Do vậy, cần khắc phục cả hai biểu hiện trên.  
+Thứ ba, sự tác động của quy luật này đòi hỏi phải có thái độ khách quan, khoa 
+học và quyết tâm thực hiện bước nhảy; tuy đều có tính khách quan, nhưng quy luật xã 
+hội chỉ diễn ra thông qua hoạt động có ý thức của con người; do vậy, khi thực hiện 
+bước nhảy trong lĩnh vực xã hội, tuy vẫn phải tuân theo điều kiện khách quan, nhưng 
+cũng phải chú ý đến điều kiện chủ quan. Nói cách khác, trong hoạt động thực tiễn, 
+không những cần xác định quy mô và nhịp điệu bước nhảy một cách khách quan, khoa 
+học, chống giáo điều, rập khuôn, mà còn phải có quyết tâm và nghị lực để thực hiện 
+bước nhảy khi điều kiện đã chín muồi, chủ động nắm bắt thời cơ thực hiện kịp thời 
+bước nhảy khi điều kiện cho phép, chuyển thay đổi mang tính tiến hóa sang thay đổi 
+mang tính cách mạng.  
+Thứ tư, quy luật yêu cầu phải nhận thức được sự thay đổi về chất còn phụ thuộc 
+vào phương thức liên kết giữa các yếu tố tạo thành sự vật, hiện tượng; do đó, phải biết 
+lựa chọn phương pháp phù hợp để tác động vào phương thức liên kết đó trên cơ sở 
+hiểu rõ bản chất, quy luật của chúng.  
+* Quy luật thống nhất và đấu tranh giữa các mặt đối lập 
+- Vị trí của quy luật: Quy luật thống nhất và đấu tranh của các mặt đối lập là quy 
+luật về nguồn gốc, động lực cơ bản, phổ biến của mọi quá trình vận động và phát triển. 
+Quy luật thống nhất và đấu tranh của các mặt đối lập (hay còn gọi là quy luật mâu 
+thuẫn) được coi là hạt nhân của phép biện chứng. V.I.Lênin viết” có thể định nghĩa 
+vắn tắt phép biện chứng là học thuyết về sự thống nhất của các mặt đối lập. Như thế là 
+nắm được hạt nhân của phép biện chứng, nhưng điều đó đòi hỏi phải có những giải 
+thích và một sự phát triển thêm”1.  
+- Khái niệm mâu thuẫn và các tính chất chung của mâu thuẫn 
++ Mặt đối lập: Dùng để chỉ những mặt, những thuộc tính, những khuynh hướng 
+vận động trái ngược nhau nhưng đồng thời lại là điều kiện, tiền đề tồn tại của nhau. 
+Tất cả các sự vật, hiện tượng trên thế giới đều chứa đựng những mặt đối lập. Ví dụ: 
+trong nguyên tử có điện tử và hạt nhân, trong cơ thể sinh vật có quá trình đồng hóa và 
+dị hóa, trong nền kinh tế thị trường có cung và cầu,... 
++ Khái niệm mâu thuẫn biện chứng: Dùng để chỉ mối liên hệ thống nhất, đấu 
+tranh và chuyển hoá giữa các mặt đối lập của mỗi sự vật, hiện tượng hoặc giữa các sự 
+vật, hiện tượng với nhau. Nhân tố tạo thành mâu thuẫn là mặt đối lập. 
+Các tính chất của mâu thuẫn biện chứng: 
+ + Tính khách quan và phổ biến 
+                                          
+1 V.I.Lênin: Toàn tập, Nxb Tiến bộ, Mát xcơva.1981,t29,tr240 
+  Mọi sự vật, hiện tượng đều chứa đựng những mặt, những khuynh hướng đối 
+lập, tạo thành những mâu thuẫn trong bản thân nó. Mâu thuẫn là cái vốn có của sự vật, 
+hiện tượng, ở mọi giai đoạn tồn tại và phát triển của sự vật, hiện tượng đều chứa đựng 
+mâu thuẫn; 
+  + Tính đa dạng, phong phú và tính lịch sử cụ thể 
+   Biểu hiện ở chỗ: Mỗi sự vật, hiện tượng, quá trình đều có thể bao hàm nhiều 
+loại mâu thuẫn khác nhau, biểu hiện khác nhau trong những điều kiện lịch sử, cụ thể 
+khác nhau; chúng giữ vị trí, vai trò khác nhau đối với sự tồn tại, vận động và phát triển 
+của sự vật. Đó là mâu thuẫn bên trong và bên ngoài, cơ bản và không cơ bản, chủ yếu 
+và thứ yếu… Trong các lĩnh vực khác nhau cũng tồn tại những mâu thuẫn với những 
+tính chất khác nhau tạo nên tính phong phú trong sự biểu hiện của mâu thuẫn. 
+- Trong mâu thuẫn biện chứng, các mặt đối lập vừa thống nhất với nhau, vừa 
+đấu tranh với nhau. Trong sự thống nhất và đấu tranh của các mặt đối lập, sự đấu tranh 
+giữa chúng là tuyệt đối, còn sự thống nhất giữa chúng là tương đối. 
++ Khái niệm thống nhất giữa các mặt đối lập dùng để chỉ sự liên hệ giữa chúng, 
+thể hiện: Thứ nhất, các mặt đối lập cần đến nhau, nương tựa vào nhau, làm tiền đề cho 
+nhau tồn tại; Thứ hai, các mặt đối lập tác động ngang nhau, cân bằng nhau thể hiện sự 
+đấu tranh giữa cái mới đang hình thành với cái cũ chưa mất hẳn; Thứ ba, giữa các mặt 
+đối lập có sự tương đồng, đồng nhất do trong các mặt đối lập còn tồn tại những yếu tố 
+giống nhau. 
++ Khái niệm đấu tranh của các mặt đối lập dùng để sự tác động qua lại theo xu 
+hướng bài trừ, phủ định nhau của các mặt đối lập. Hình thức đấu tranh của các mặt đối 
+lập rất phong phú, đa dạng, tuỳ thuộc vào tính chất, mối quan hệ và điều kiện cụ thể 
+của sự vật, hiện tượng. 
+Ví dụ: quá trình phát triển của các giống loài (thực vật, động vật) là quá trình 
+làm phát sinh giống loài mới từ giống loài cũ, nhờ kết quả tất yếu của quá trình thống 
+nhất, đấu tranh và chuyển hóa của các mặt đối lập: đồng hóa và dị hóa; biến dị và di 
+truyền; giữa các giống loài vừa nương tựa vào nhau để tồn tại, vừa đấu tranh sinh tồn 
+khốc liệt với nhau dẫn đến sự loại bỏ tự nhiên đối với các nhân tố không phù hợp với 
+hoàn cảnh môi trường. 
+- Mâu thuẫn biện chứng là nguồn gốc của sự vận động và phát triển: 
+Trong sự tác động qua lại của các mặt đối lập thì đấu tranh giữa các mặt đối lập 
+quy định một cách tất yếu sự thay đổi của các mặt đang tác động và làm cho mâu 
+thuẫn phát triển. Lúc đầu mới xuất hiện, mâu thuẫn chỉ là sự khác nhau căn bản, nhưng 
+vận động theo khuynh hướng trái ngược nhau. Sự khác nhau ngày càng phát triển và đi 
+đến đối lập. Khi hai mặt đối lập xung đột gay gắt đã đủ điều kiện, chúng sẽ chuyển hóa 
+lẫn nhau, mâu thuẫn được giải quyết. Nhờ đó mà thể thống nhất cũ được thay thế bằng 
+thể thống nhất mới; sự vật cũ mất đi, sự vật mới ra đời thay thế. Sự chuyển hoá giữa 
+các mặt đối lập diễn ra hết sức phong phú, đa dạng, tuỳ thuộc vào tính chất của các 
+mặt đối lập cũng như tuỳ thuộc vào từng điều kiện, hoàn cảnh cụ thể. Không có thống 
+nhất của các mặt đối lập thì cũng không có sự đấu tranh giữa chúng. Sự vận động và 
+phát triển bao giờ cũng là sự thống nhất giữa tính ổn định và tính thay đổi. Sự thống 
+nhất và đấu tranh của các mặt đối lập quy định tính ổn định và tính thay đổi, phát triển 
+của sự vật. Do đó, mâu thuẫn biện chứng chính là nguồn gốc của sự vận động và phát 
+triển. 
+- Phân loại mâu thuẫn: 
+Mâu thuẫn rất đa dạng, phong phú vì thế giới vật chất đa dạng phong phú. Mâu 
+thuẫn có nhiều loại:  
++ Căn cứ vào mối quan hệ đối với sự vật được xem xét người ta phân thành: Mâu 
+thuẫn bên trong là sự tác động qua lại giữa các mặt, các khuynh hướng đối lập của 
+cùng một sự vật; Mâu thuẫn bên ngoài là mâu thuẫn giữa các sự vật với nhau. Việc 
+phân biệt mâu thuẫn trong, ngoài chỉ là tương đối tuỳ phạm vi nghiên cứu. Ví dụ: Nếu 
+xem xét mâu thuẫn nảy sinh về lợi ích kinh tế giữa hai quốc gia là mâu thuẫn bên 
+ngoài xét với mỗi quốc gia đó, nhưng nếu xem xét mâu thuẫn về lợi ích kinh tế giữa 
+hai quốc gia trong một tổ chức kinh tế khu vực thì đó lại là mâu thuẫn bên trong của 
+tổ chức kinh tế đó. 
+Giải quyết mâu thuẫn bên trong có vai trò quyết định trực tiếp, giải quyết mâu 
+thuẫn bên ngoài có vai trò quan trọng đối với sự phát triển của sự vật. Giải quyết tốt 
+mâu thuẫn trong, ngoài đều là điều kiện tiền đề thúc đẩy nhau. 
++ Căn cứ vào ý nghĩa đối với sự tồn tại và phát triển của toàn bộ sự vật, chia 
+thành mâu thuẫn cơ bản, không cơ bản. Mâu thuẫn cơ bản là mâu thuẫn quy định bản 
+chất của sự vật, quy định sự phát triển của tất cả các giai đoạn của sự vật. Mâu thuẫn 
+không cơ bản không quy định bản chất của sự vật. Mâu thuẫn nảy sinh hay được giải 
+quyết không làm thay đổi bản chất, không làm thay đổi sự vật. 
++ Căn cứ vào vai trò ở mỗi giai đoạn phát triển của sự vật, chia thành mâu thuẫn 
+chủ yếu và thứ yếu. Mâu thuẫn chủ yếu là mâu thuẫn nổi lên hàng đầu ở một giai đoạn 
+phát triển nhất định của sự vật. Nó chi phối các mâu thuẫn khác trong giai đoạn đó. 
+Mâu thuẫn thứ yếu là mâu thuẫn nảy sinh hay được giải quyết không làm thay đổi sự 
+vật ở giai đoạn nhất định đó. 
+Ví dụ: Đầu thế kỷ XX, trong xã hội Việt Nam xuất hiện hai mâu thuẫn: mâu 
+thuẫn giữa toàn thể dân tộc Việt Nam với thực dân Pháp (mâu thuẫn dân tộc); mâu 
+thuẫn giữa giai cấp đại chủ phong kiến với giai cấp nông dân (mâu thuẫn giai cấp). 
+Trong hai mâu thuẫn đó, mâu thuẫn dân tộc là mâu thuẫn chủ yếu, mâu thuẫn giai cấp 
+là mâu thuẫn thứ yếu. 
+ Mâu thuẫn cơ bản và mâu thuẫn chủ yếu có quan hệ chặt chẽ với nhau. Mâu 
+thuẫn cơ bản được biểu hiện qua các mâu thuẫn chủ yếu. Việc giải quyết mâu thuẫn 
+chủ yếu là từng bước đi đến giải quyết mâu thuẫn cơ bản. 
++ Căn cứ vào địa vị, lợi ích giữa các giai cấp chia thành mâu thuẫn đối kháng và 
+không đối kháng: Mâu thuẫn đối kháng là mâu thuẫn giữa những lực lượng xã hội - 
+giai cấp, tập đoàn có lợi ích căn bản đối lập nhau không thể điều hoà. Chẳng hạn mâu 
+thuẫn giữa địa chủ và nông dân trong xã hội phong kiến, giữa tư sản - vô sản trong xã 
+hội tư bản… Mâu thuẫn không đối kháng là mâu thuẫn giữa các lực lượng xã hội có 
+lợi ích căn bản thống nhất với nhau, chỉ đối lập về những lợi ích không cơ bản, cục bộ, 
+tạm thời, chẳng hạn, đối lập lợi ích không cơ bản giữa công nhân, nông dân, và các 
+tầng lớp lao động khác trong thời kỳ quá độ lên chủ nghĩa xã hội ở Việt Nam. 
+- Nội dung khái quát của quy luật: Mọi sự vật, hiện tượng đều chứa đựng những 
+mặt đối lập có khuynh hướng biến đổi ngược chiều nhau. Mối liên hệ của hai mặt đối 
+lập tạo nên mâu thuẫn. Các mặt đối lập vừa thống nhất với nhau, vừa chuyển hóa lẫn 
+nhau làm mâu thuẫn được giải quyết, sự vật biến đổi và phát triển, cái mới ra đời tahy 
+thế cho cái cũ. 
+- Ý nghĩa phương pháp luận  
++ Trong nhận thức và thực tiễn cần phải thừa nhận tính khách quan của mâu 
+thuẫn, phát hiện mâu thuẫn, phân tích đầy đủ các mặt đối lập, nắm được bản chất, 
+nguồn gốc, phương hướng, giải pháp đúng cho hoạt động nhận thức và thực tiễn.  
++ Cần có quan điểm lịch sử, cụ thể, tức là biết phân tích cụ thể từng loại mâu 
+thuẫn, xem xét vai trò, vị trí và mối quan hệ giữa các mâu thuẫn và có phương pháp 
+giải quyết phù hợp. 
++ Phải nắm vững nguyên tắc giải quyết mâu thuẫn bằng đấu tranh giữa các mặt 
+đối lập, không điều hòa mâu thuẫn cũng không nóng vội hay bảo thủ, bởi giải quyết 
+mâu thuẫn còn phụ thuộc vào điều kiện đã đủ và chín muồi hay chưa. 
+* Quy luật phủ định của phủ định  
+ - Vị trí của quy luật: Là một trong ba quy luật của phép biện chứng duy vật, quy 
+luật phủ định của phủ định chỉ ra khuynh hướng (đi lên), hình thức (xoáy ốc), kết quả 
+(sự vật, hiện tượng mới ra đời từ sự vật, hiện tượng cũ) của sự phát triển của chúng 
+thông qua sự thống nhất giữa tính thay đổi với tính kế thừa trong sự phát triển; nghĩa là 
+sự vật, hiện tượng mới ra đời từ sự vật, hiện tượng cũ, phát triển từ thấp đến cao, từ 
+đơn giản đến phức tạp, từ kém hoàn thiện đến hoàn thiện hơn. 
+- Khái niệm phủ định, phủ định biện chứng 
+Phủ định là sự thay thế sự vật này bằng sự vật khác trong quá trình vận động và 
+phát triển. 
+ Phủ định có 2 hình thức:  
+ + Phủ định siêu hình: Xóa bỏ hoàn toàn, triệt tiêu sự phát triển; hoặc là giữ lại 
+nguyên si những gì bản thân nó đã có ở giai đoạn trước. 
+ + Phủ định biện chứng: Là sự phủ định tạo ra điều kiện, tiền đề cho quá trình 
+phát triển của sự vật. Phủ định biện chứng làm cho sự vật, hiện tượng mới ra đời thay 
+thế sự vật, hiện tượng cũ và là yếu tố liên hệ giữa sự vật, hiện tượng cũ với sự vật, hiện 
+tượng mới. Phủ định biện chứng là tự phủ định, tự phát triển của sự vật, hiện tượng. 
+ - Tính chất của phủ định biện chứng  
++ Tính khách quan: vì đó là sự tự thân phủ định, nguyên nhân của sự phủ định 
+nằm chính trong bản thân sự vật, hiện tượng; nó là kết quả của quá trình đấu tranh giải 
+quyết mâu thuẫn tất yếu, bên trong của sự vật; tạo khả năng ra đời, của cái mới, thay 
+thế cái cũ, tạo nên xu hướng phát triển của chính bản thân sự vật; 
++ Tính kế thừa: Kế thừa những nội dung tích cực, những nhân tố hợp quy luật, 
+lọc bỏ những mặt tiêu cực, trái quy luật; cái mới ra đời, dựa trên những hạt nhân hợp 
+lý của cái cũ để phát triển thành cái mới, tạo nên tính liên tục của sự phát triển.  
++ Tính phổ biến: diễn ra trong mọi lĩnh vực tự nhiên, xã hội và tư duy. 
++ Tính đa dạng, phong phú của phủ định biện chứng thể hiện ở nội dung, hình 
+thức của nó. 
+- Đặc điểm của phủ định biện chứng  
+Đặc điểm cơ bản của phủ định biện chứng là sau một số (ít nhất là hai) lần phủ 
+định, sự vật, hiện tượng phát triển có tính chu kỳ theo đường xoáy ốc mà thực chất của 
+sự phát triển đó là sự biến đổi, trong đó giai đoạn sau vẫn bảo tồn những gì tích cực đã 
+được tạo ra ở giai đoạn trước. 
+- Nội dung qui luật phủ định của phủ định 
+Trong sự vận động vĩnh viễn của thế giới vật chất, phủ định biện chứng là một 
+quá trình vô tận, tạo nên khuynh hướng phát triển của sự vật từ trình độ thấp đến trình 
+độ cao hơn, diễn ra có tính chất chu kỳ theo hình thức "xoáy ốc". 
+Thứ nhất: Phát triển là một quá trình phủ định liên tục từ thấp đến cao 
+Phủ định biện chứng bao hàm trong nó quá trình giữ lại và đột biến những nội 
+dung tích cực của cái bị phủ định. Giá trị của phủ định biện chứng được quy định bởi 
+vai trò của nó trong việc sáng tạo ra cái mới. Không có cái mới nào lại ra đời từ hư vô, 
+không có sự vật nào, hiện tượng nào lại không mang nguồn cội. Cứ thế, quá trình phủ 
+định diễn ra liên tục. Do đó, sự phát triển thông qua những lần phủ định biện chứng sẽ 
+tạo ra xu hướng tiến lên không ngừng.  
+Kế thừa biện chứng là khái niệm dùng để chỉ sự vật, hiện tượng mới ra đời vẫn 
+giữ lại có chọn lọc và cải tạo yếu tố còn thích hợp để chuyển sang chúng; loại bỏ các 
+yếu tố không còn thích hợp của sự vật, hiện tượng cũ đang gây cản trở cho sự phát 
+triển của sự vật, hiện tượng mới; 
+Thứ hai: Sự phát triển thông qua quá trình phủ định mang tính chu kỳ 
++ Phủ định biện chứng thường diễn ra theo chu kỳ, tính chu kỳ của phủ định biện 
+chứng biểu hiện ở chỗ thông qua một số lần phủ định, cái mới xuất hiện dường như lặp 
+lại cái cũ, nhưng trên cơ sở cao hơn; 
++ Mỗi chu kỳ thường có hai lần phủ định chủ yếu:  
+ Phủ định lần 1: Làm cho sự vật trở thành cái đối lập với chính nó, tức chuyển cái 
+khẳng định sang cái phủ định (A       B); 
+ Phủ định lần 2 (phủ định cái phủ định): Sự vật mới ra đời, đối lập với cái đối lập, 
+nên sự vật dường như quay trở lại cái cũ nhưng trên cơ sở cao hơn. Đó là đặc điểm cơ 
+bản của quy luật phủ định của phủ ưnh; 
+    Phủ định lần 1           Phủ định lần 2 
+    A                           B                                 A’ 
+Cái khẳng định - Phủ định - Phủ định cái phủ định 
+ Như vậy, kết quả của sự phủ định của phủ định là cái tổng hợp tất cả những yếu 
+tố tích cực đã được nhận từ trước trong cái khẳng định ban đầu và cái phủ định lần thứ 
+nhất. Đó chính là quá trình “lọc bỏ” biện chứng. 
+Thứ ba: Khuynh hướng của sự phát triển, hình thức “xoáy ốc” của sự phát triển. 
+Đường xoáy ốc là khái niệm dùng để chỉ sự vận động của những nội dung mang 
+tính kế thừa có trong sự vật, hiện tượng mới nên không thể đi theo đường thẳng, mà 
+diễn ra theo đường tròn không nằm trên một mặt phẳng tựa như đường xoáy ốc. 
+Đường xoáy ốc là hình thức diễn đạt rõ nhất đặc trưng của quá trình phát triển biện 
+chứng ở tính kế thừa qua khâu trung gian, tính lặp lại, nhưng không quay lại và tính 
+tiến lên của sự phát triển. 
+Quy luật phủ định của phủ định khái quát tính tất yếu tiến lên của sự phát triển. 
+Song sự tiến lên đó không diễn ra theo con đường thẳng mà theo đường “xoáy ốc”. 
+Mỗi vòng mới của đường xoáy ốc thể hiện một trình độ cao hơn của sự phát triển, 
+đồng thời dường như quay trở lại cái đã qua, dường như lặp lại vòng trước, nhưng với 
+một trình độ cao hơn. Sự nối tiếp nhau của các vòng thể hiện tính vô tận của sự phát 
+triển, tính vô tận tiến lên từ thấp đến cao. 
+ Tóm lại, nội dung cơ bản của quy luật phủ định của phủ định trong phép biện 
+chứng duy vật phản ánh mối quan hệ biện chứng giữa cái phủ định và cái khẳng định 
+trong quá trình phát triển của sự vật. Phủ định biện chứng là điều kiện cho sự phát 
+triển, cái mới ra đời là kết quả của sự kế thừa những nội dung tích cực từ trong sự vật 
+cũ, phát huy nó trong sự vật mới và tạo nên tính chu kỳ của sự phát triển. 
+- Ý nghĩa phương pháp luận 
++ Vì phủ định biện chứng có đặc điểm kế thừa cho nên khi phủ định phải đảm 
+bảo tính kế thừa có phê phán; kế thừa những nhân tố hợp quy luật, những tinh hoa của 
+cái cũ, làm tiền đề cho sự phát triển và lọc bỏ, cải tạo cái tiêu cực, tránh thái độ phủ 
+định sạch trơn. 
++ Trong nhận thức và hành động phải kiên quyết phủ định cái lỗi thời lạc hậu, tạo 
+điều kiện cho sự ra đời của cái mới, ủng hộ cái mới và đấu tranh cho cái mới thắng lợi; 
+khắc phục tư tưởng bảo thủ, trì trệ, kìm hãm sự phát triển của cái mới. 
+ + Xu hướng phát triển của sự vật là đi lên, song con đường phát triển không phải 
+là thẳng tắp mà đi theo đường “xoáy ốc”, diễn ra quanh co phức tạp trong đó bao gồm 
+nhiều chu kỳ khác nhau. Cho nên trong học tập, công tác phải nắm được đặc điểm, bản 
+chất, các mối liên hệ của sự vật, hiện tượng, phân ra các giai đoạn phát triển để tác 
+động cho phù  hợp. 
++ Quy luật này giúp nhận thức đầy đủ hơn về sự vật, hiện tượng mới ra đời phù 
+hợp với quy luật phát triển, biểu hiện giai đoạn cao về chất trong sự phát triển. Trong 
+tự nhiên, sự xuất hiện của sự vật, hiện tượng mới diễn ra tự phát; nhưng trong xã hội, 
+sự xuất hiện mới gắn với nhận thức và hành động có ý thức của con người. 
+### 2.3. LÝ LUẬN NHẬN THỨC  
+#### 2.3.1. Quan niệm về nhận thức trong lịch sử triết học 
+##### a) Khái niệm lý luận nhận thức 
+Lý luận nhận thức là một bộ phận của triết học, nghiên cứu bản chất của nhận 
+thức, những hình thức, các giai đoạn của nhận thức; con đường để đạt chân lý, tiêu 
+chuẩn của chân lý, v.v.. 
+ Lý luận nhận thức là khía cạnh thứ hai của vấn đề cơ bản của triết học; tức là, lý 
+luận nhận thức phải giải quyết mối quan hệ của tri thức, của tư duy con người đối với 
+hiện thực xung quanh, trả lời câu hỏi con người có thể nhận thức được thế giới hay 
+không? 
+Quan điểm của chủ nghĩa duy tâm về nhận thức: 
+Chủ nghĩa duy tâm chủ quan: Béccơli cho rằng chân lý là sự phù hợp giữa suy 
+diễn về sự vật với chính bản thân sự vật trên thực tế. Ông phủ nhận chân lý khách 
+quan, thừa nhận thượng đế là chủ thể nhận thức. E. Makhơ coi sự vật chỉ là kết quả của 
+sự phức hợp các cảm giác. 
+Chủ nghĩa duy tâm khách quan: Platon, Heghen không phủ nhận khả năng nhận 
+thức của con người, nhưng lại giải thích một cách duy tâm, thần bí khả năng này của 
+con người. Plato cho rằng, khả năng đó là khả năng của linh hồn vũ trụ. Heghen coi 
+khả năng đó chính là khả năng của tinh thần thế giới. 
+Quan điểm của chủ nghĩa hoài nghi: Nghi ngờ khả năng nhận thức của con 
+người, thậm chí có người (như Hium) đã nghi ngờ cả bản thân sự tồn tại khách quan 
+của các sự vật, hiện tượng. họ không hiểu được trên thực tế biện chứng của quá trình 
+nhận thức. 
+Quan điểm của thuyết không thể biết: Điển hình là Cantơ cho rằng, về nguyên tắc 
+con người, không thể nhận thức được bản chất thế giới. Chúng ta có hình ảnh về sự 
+vật, nhưng đó chỉ là những biểu hiện bên ngoài của chúng. 
+Quan điểm của chủ nghĩa duy vật trước C. Mác: Nhìn chung đều công nhận khả 
+năng nhận thức thế giới của con người. Nhưng do tính chất siêu hình nên họ hiểu phản 
+ánh chỉ là sự sao chép giản đơn. Vì thế, lý luận nhận thức của chủ nghĩa duy vật trước 
+C. Mác, còn mang tính siêu hình, máy móc, coi phản ánh chỉ là sự sao chép giản đơn, 
+thụ động, không có quá trình vận động, biến đổi, không biện chứng. Các nhà duy vật 
+trước C. Mác chưa hiểu vai trò của thực tiễn trong nhận thức.  
+* Các nguyên tắc xây dựng lý luận nhận thức của chủ nghĩa duy vật biện chứng: 
+Một là, thừa nhận thế giới vật chất tồn tại khách quan, bên ngoài và độc lập với ý 
+thức con người. 
+Hai là, thừa nhận khả năng nhận thức được thế giưới của con người. Không có gì 
+là không thể nhận thức mà chỉ có cái con người chưa nhận thức được nhưng sẽ nhận 
+thức được. 
+Ba là, khẳng định nhận thức là một quá trình biện chứng, tích cực, tự giác, sáng 
+tạo.  
+Bốn là, lấy thực tiễn làm cơ sở chủ yếu và trực tiếp nhất của nhận thức, là động 
+lực, mục đích của nhận thức và là tiêu chuẩn để kiểm tra chân lý. 
+#### 2.3.2. Lý luận nhận thức duy vật biện chứng 
+##### a. Nguồn gốc, bản chất của nhận thức 
+* Nguồn gốc của nhận thức: 
+- Triết học Mác - Lênin thừa nhận sự tồn tại khách quan của thế giới và cho rằng 
+thế giới khách quan là đối tượng của nhận thức. Không phải ý thức của con người sản 
+sinh ra thế giới mà thế giới vật chất tồn tại độc lập với con người, đó là nguồn gốc 
+“duy nhất và cuối cùng” của nhận thức. 
+* Bản chất của nhận thức: 
+- Bản chất của nhận thức là sự phản ánh tích cực, sáng tạo thế giới vật chất vào 
+bộ óc con người. Quá trình phản ánh năng động là một quá trình phức tạp, quá 
+trình nảy sinh và giải quyết mâu thuẫn chứ không phải quá trình máy móc giản 
+đơn, thụ động và nhất thời 
+- Nhận thức là một quá trình biện chứng có vận động và phát triển, là quá trình 
+đi từ chưa biết đến biết, từ biết ít tới biết nhiều hơn, từ biết chưa đầy đủ đến đầy đủ 
+hơn. Đây là một quá trình, không phải nhận thức một lần là xong, mà có phát triển, bổ 
+sung và hoàn thiện; 
+ Các trình độ của nhận thức: Trong quá trình nhận thức của con người luôn luôn 
+nảy sinh quan hệ biện chứng giữa nhận thức kinh nghiệm và nhận thức lý luận; nhận 
+thức thông thường và nhận thức khoa học. 
+Nhận thức kinh nghiệm và nhận thức lý luận: 
++ Nhận thức kinh nghiệm: Là hình thức nhận thức hình thành từ sự quan sát trực 
+tiếp các sự vật hiện tượng trong tự nhiên, xã hội, hay trong các kinh nghiệm khoa học. 
+Kết quả của nhận thức này là những tri thức kinh nghiệm. Tri thức này có hai loại là tri 
+thức kinh nghiệm thông thường và tri thức kinh nghiệm khoa học. 
++Nhận thức kinh nghiệm và nhận thức lý luận có quan hệ chặt chẽ với nhau, 
+trong đó nhận thức kinh nghiệm là cơ sở của nhận thức lý luận. Nhận thức kinh 
+nghiệm cung cấp những tư liệu phong phú cụ thể trên cơ sở đó giúp cho nhận thức lý 
+luận vạch ra bản chất của sự vật hiện tượng. 
+Nhận thức thông thường và nhận thức khoa học:  
++ Nhận thức thông thường (nhận thức tiền khoa học) là loại nhận thức được hình 
+thành một cách tự phát trực tiếp từ trong hoạt động hàng ngày của con người. Nó phản 
+ánh sự vật với tất cả những đặc điểm chi tiết, cụ thể và những sắc thái khác nhau của 
+sự vật. Do đó, Nhận thức thông thường mang tính phong phú, nhiều vẻ và gắn liền với 
+những quan niệm sống thực tế hàng ngày. 
++ Nhận thức khoa học được hình thành một cách tự giác và gián tiếp từ sự phản 
+ánh đặc điểm bản chất, những quan hệ tất yếu của đối tượng nghiên cứu. Sự phản ánh 
+này diễn ra dưới dạng trừu tượng lôgíc đó là các khái niệm, các quy luật khoa học. 
+  Nhận thức thông thường có trước nhận thức khoa học, là nguồn chất liệu để 
+xây dựng nội dung của các khoa học, tuy nhiên nhận thức thông thường mới chỉ dừng 
+lại cái bề ngoài ngẫu nhiên không bản chất của đối tượng. Muốn phát triển thành nhận 
+thức khoa học phải thông qua khả năng tổng kết trừu tượng khái quát đúng đắn của các 
+nhà khoa học. Song khi đạt tới trình độ nhận thức khoa học nó tác động trở lại nhận 
+thức thông thường, làm cho nhận thức thông thường phát triển và tăng cường nội dung 
+khoa học. 
+- Nhận thức là quá trình tác động biện chứng giữa chủ thể và khách thể thông 
+qua hoạt động thực tiễn của con người. Chủ thể nhận thức là con người, bị giới hạn 
+bởi điều kiện lịch sử có tính chất lịch sử - xã hội. Khách thể nhận thức không chỉ là thế 
+giới vật chất mà có thể còn là tư duy, tâm lý, tư tưởng, tinh thần, tình cảm, v.v.. Khách 
+thể nhận thức cũng có tính lịch sử - xã hội, cũng bị chế ước bởi điều kiện lịch sử - xã 
+hội cụ thể. 
+Vì vậy, hoạt động thực tiễn là cơ sở, động lực, mục đích của nhận thức và là tiêu 
+chuẩn để kiểm tra chân lý. Nhận thức là quá trình phản ánh hiện thực khách quan một 
+cách tích cực, chủ động, sáng tạo bởi con người trên cơ sở thực tiễn mang tính lịch sử 
+cụ thể. 
+##### b. Thực tiễn và vai trò của thực tiễn với nhận thức 
+* Phạm trù thực tiễn  
+- Theo quan điểm của triết học Mác - Lênin, thực tiễn là toàn bộ những hoạt 
+động vật chất - cảm tính, có tính lịch sử - xã hội của con người nhằm cải tạo tự nhiên 
+và xã hội phục vụ nhân loại tiến bộ. 
+- Đặc trưng của thực tiễn: 
+Thứ nhất, thực tiễn không phải là toàn bộ hoạt động của con người mà chỉ là 
+những hoạt động vật chất - cảm tính. Đó là những hoạt động mà con người phải sử 
+dụng lực lượng vật chất, công cụ vật chất tác động vào các đối tượng vật chất để làm 
+biến đổi chúng, từ đó làm biến đổi thế giới khách quan. 
+Thứ hai, hoạt động thực tiễn là những hoạt động mang tính lịch sử - xã hội, tức là 
+chỉ diễn ra trong xã hội với sự tham gia của đông đảo người và bị quy định bởi những 
+điều kiện cụ thể. 
+Thứ ba, thực tiễn là hoạt động có mục đích nhằm cải tạo tự nhiên và xã hội phục 
+vụ con người. 
+- Thực tiễn biểu hiện rất đa dạng với nhiều hình thức ngày càng phong phú, song 
+có ba hình thức cơ bản là hoạt động sản xuất vật chất, hoạt động chính trị xã hội và 
+hoạt động thực nghiệm khoa học: 
++ Hoạt động sản xuất vật chất: Là hình thức hoạt động cơ bản, đầu tiên của thực 
+tiễn, biểu thị mối quan hệ của con người với tự nhiên và là phương thức tồn tại cơ bản 
+của con người và xã hội loài người Đây là hoạt động mà trong đó con người sử dụng 
+những công cụ lao động tác động vào giới tự nhiên để tạo ra những của cải và các điều 
+kiện thiết yếu nhằm duy trì sự tồn tại và phát triển của mình và xã hội; 
++ Hoạt động chính trị - xã hội là hoạt động thực tiễn thể hiện tính tự giác cao của 
+con người nhằm biến đổi, cải tạo xã hội, phát triển các thiết chế xã hội, các quan hệ xã 
+hội, v.v.. Hoạt động chính trị - xã hội bao gồm các hoạt động như đấu tranh giai cấp; 
+đấu tranh giải phóng dân tộc; đấu tranh cho hòa bình, dân chủ, tiến bộ xã hội; đấu 
+tranh cải tạo các quan hệ chính trị - xã hội, nhằm tạo ra môi trường xã hội dân chủ, 
+lành mạnh, thuận lợi cho con người phát triển. 
++ Thực nghiệm khoa học là một hình thức đặc biệt của thực tiễn, con người chủ 
+động tạo ra những điều kiện không có sẵn trong tự nhiên để tiến hành thực nghiệm 
+khoa học theo mục đích mà mình đã đề ra. Trên cơ sở đó, vận dụng những thành tựu 
+khoa học, kỹ thuật, công nghệ vào sản xuất vật chất, vào cải tạo chính trị - xã hội, cải 
+tạo các quan hệ chính trị - xã hội. 
+- Mỗi hình thức hoạt động cơ bản của thực tiễn có một chức năng quan trọng 
+khác nhau, không thể thay thế được cho nhau, song giữa chúng có mối quan hệ chặt 
+chẽ, tác động qua lại lẫn nhau. Trong đó, hoạt động sản xuất vật chất là hoạt động cơ 
+bản nhất, đóng vai trò quyết định đối với các hoạt động khác.  
+* Vai trò của thực tiễn đối với nhận thức 
+ Vai trò của thực tiễn đối với nhận thức được thể hiện trước hết ở chỗ: Thực tiễn 
+là cơ sở, động lực, mục đích của nhận thức và là tiêu chuẩn của chân lý. 
+ - Thực tiễn là cơ sở, động lực của nhận thức 
+Bằng và thông qua hoạt động thực tiễn, con người tác động vào thế giới khách 
+quan, buộc chúng phải bộc lộ những thuộc tính, những quy luật để con người nhận 
+thức. Chính thực tiễn cung cấp những tài liệu, vật liệu cho nhận thức của con người. 
+Thực tiễn luôn đề ra nhu cầu, nhiệm vụ và phương hướng phát triển của nhận 
+thức, vì thế nó luôn thúc đẩy cho sự ra đời của các ngành khoa học. Thực tiễn có tác 
+dụng rèn luyện các giác quan của con người, làm cho chúng phát triển tinh tế hơn, 
+hoàn thiện hơn, trên cơ sở đó giúp quá trình nhận thức của con người tốt hơn. 
+Hoạt động thực tiễn còn là cơ sở chế tạo ra các công cụ, phương tiện, máy móc 
+mới hỗ trợ con người trong quá trình nhận thức, chẳng hạn kính hiển vi, kính thiên 
+văn, máy vi tính, v.v., đã mở rộng khả năng của các khí quan nhận thức của con người. 
+- Thực tiễn là mục đích của nhận thức 
+Chính nhu cầu sản xuất vật chất và cải tạo xã hội buộc con người phải nhận thức 
+thế giới xung quanh. Nhận thức nhằm phục vụ thực tiễn, soi đường, dẫn dắt, chỉ đạo 
+thực tiễn. Mọi tri thức khoa học - kết quả của nhận thức chỉ có ý nghĩa khi được áp 
+dụng vào đời sống thực tiễn một cách trực tiếp hay gián tiếp để phục vụ con người. 
+- Thực tiễn là tiêu chuẩn của chân lý 
+Nhận thức của con người khi trở thành kinh nghiệm và lý luận thì tách rời khỏi 
+thực tiễn và sẽ rơi vào vào hai khả năng đúng hoặc sai. Làm sao biết được lý luận đó 
+đúng hay sai? Tiêu chuẩn để đánh giá cuối cùng không nằm trong lý luận, trong nhận 
+thức mà ở thực tiễn; Khi nhận thức đã được thực tiễn xác nhận là đúng nhận thức đó 
+trở thành chân lý, vì thế thực tiễn là tiêu chuẩn của chân lý.  
+Điều này có nghĩa là thực tiễn là thước đo giá trị, vật chất hóa được tri thức, hiện 
+thực hóa được tư tưởng, nơi kiểm nghiệm tính đúng đắn của của nhận thức. Đồng thời 
+thực tiễn không ngừng bổ sung, điều chỉnh, sửa chữa, phát triển và hoàn thiện nhận 
+thức. 
+- Ý nghĩa phương pháp luận 
+ Vai trò của thực tiễn đối với nhận thức, đòi hỏi chúng ta phải luôn luôn quán 
+triệt quan điểm thực tiễn. Tức là, nhận thức sự vật phải gắn với nhu cầu thực tiễn, tăng 
+cường tổng kết thực tiễn để rút ra những kết luận góp phần bổ sung, hoàn thiện, phát 
+triển nhận thức, lý luận. Việc nghiên cứu lý luận phải liên hệ với thực tiễn, học đi đôi 
+với hành. 
+ Nếu xa rời thực tiễn sẽ dẫn đến sai lầm của bệnh chủ quan, duy ý chí, giáo điều, 
+máy móc, quan liêu. Ngược lại, nếu tuyệt đối hóa vai trò của thực tiễn sẽ rơi vào chủ 
+nghĩa thực dụng, kinh nghiệm chủ nghĩa. 
+##### c. Các giai đoạn cơ bản của quá trình nhận thức  
+ Quan điểm của V.I.Lênin về con đường biện chứng của sự nhận thức chân lý 
+V.I. Lênin đã khái quát con đường biện chứng của quá trình nhận thức như sau: 
+“Từ trực quan sinh động đến tư duy trừu tượng, và từ tư duy trừu tượng đến thực tiễn - 
+đó là con đường biện chứng của sự nhận thức chân lý, của sự nhận thức thực tại khách 
+quan”1. 
+ 
+- Nhận thức cảm tính  
+ Nhận thức cảm tính là giai đoạn mở đầu của quá trình nhận thức. Đó là giai đoạn 
+con người sử dụng các giác quan để tác động trực tiếp vào các sự vật nhằm nắm bắt 
+các sự vật ấy. Trực quan sinh động bao gồm 3 hình thức là cảm giác, tri giác và biểu 
+tượng; 
++ Cảm giác là hình thức đầu tiên, giản đơn nhất của quá trình nhận thức ở giai 
+đoạn cảm tính, được nảy sinh do sự tác động trực tiếp của khách thể lên các giác quan 
+của con người, đưa lại cho con người những thông tin trực tiếp, giản đơn nhất về một 
+thuộc tính riêng lẻ của sự vật.  
++ Tri giác là kết quả của sự tác động trực tiếp của sự vật đồng thời lên nhiều giác 
+quan của con người. Tri giác là tổng hợp của nhiều cảm giác, cho ta hình ảnh về sự vật 
+trọn vẹn hơn cảm giác. Nhưng tri giác vẫn là hình ảnh trực tiếp, cảm tính về sự vật. 
++ Biểu tượng là hình thức phản ánh cao nhất và phức tạp nhất của giai đoạn trực 
+quan sinh động. Đó là hình ảnh có tính đặc trưng và tương đối hoàn chỉnh được tái 
+hiện lại trong bộ óc người về sự vật khi sự vật đó không còn trực tiếp tác động vào các 
+giác quan. 
+-  Nhận thức lý tính  
+## 1. V.I. Lênin: Toàn tập, Sđd, t.29, tr.179. 
+ Nhận thức lý tính là sự phản ánh gián tiếp, trừu tượng và khái quát những thuộc 
+tính, những đặc điểm bản chất của đối tượng. Đây là giai đoạn nhận thức thực hiện 
+chức năng quan trọng nhất là tách ra và nắm lấy cái bản chất có tính quy luật của các 
+sự vật, hiện tượng. Nhận thức lý tính được thể hiện với ba hình thức: khái niệm, phán 
+đoán và suy lý; 
++ Khái niệm là hình thức cơ bản của tư duy trừu tượng, phản ánh khái quát, gián 
+tiếp một hoặc một số thuộc tính chung có tính bản chất nào đó của một nhóm sự vật, 
+hiện tượng được biểu thị bằng một từ hay một cụm từ.  
++ Phán đoán là là hình thức liên hệ các khái niệm, phản ánh mối liên hệ giữa các 
+sự vật, hiện tượng của thế giới trong ý thức con người.  
+Phán đoán là một hình thức của tư duy trừu tượng, bằng cách liên kết các khái 
+niệm lại để khẳng định hay phủ định một thuộc tính nào đó của sự vật. Phán đoán 
+được biểu hiện dưới hình thức ngôn ngữ thành một mệnh đề, bao gồm chủ từ, vị từ và 
+hệ từ; trong đó, hệ từ đóng vai trò quan trọng nhất vì nó biểu thị mối quan hệ của sự 
+vật được phản ánh.  
++ Suy lý (suy luận) cũng là một hình thức của tư duy trừu tượng, trong đó các 
+phán đoán đã liên kết với nhau theo quy tắc: phán đoán cuối cùng (kết luận) được suy 
+ra từ những phán đoán đã biết làm tiền đề. 
+Có hai loại suy lý chính: quy nạp và diễn dịch. Quy nạp là loại hình suy luận 
+trong đó từ tiền đề là những tri thức về riêng từng đối tượng người ta khái quát thành 
+tri thức chung cho cả lớp đối tượng, tức là tư duy vận động từ cái đơn nhất đến cái 
+chung, cái phổ biến. Diễn dịch là loại hình suy luận trong đó từ tiền đề là tri thức 
+chung về cả lớp đối tượng người ta rút ra kết luận là tri thức về riêng từng đối tượng 
+hay bộ phận đối tượng, tức là tư duy vận động từ cái chung đến cái ít chung hơn, đến 
+cái đơn nhất (cái riêng). 
+- Mối quan hệ giữa nhận thức cảm tính, nhận thức lý tính:  
+Nhận thức cảm tính và nhận thức lý tính là hai giai đoạn khác nhau về chất 
+nhưng lại thống nhất với nhau, liên hệ, bổ sung cho nhau trong quá trình nhận thức của 
+con người. Nhận thức cảm tính là cơ sở cho nhận thức lý tính, không có nhận thức cảm 
+tính thì không có nhận thức lý tính. Ngược lại, nhờ có nhận thức lý tính mà con người 
+mới đi sâu nhận thức được bản chất của sự vật, hiện tượng.  
+Trong thực tiễn, cần tránh cường điệu, tuyệt đối hóa vai trò của nhận thức cảm 
+tính, hạ thấp và phủ nhận vai trò của nhận thức lý tính. Như vậy sẽ rơi vào chủ nghĩa 
+duy cảm. Đồng thời, cần phải tránh cường điệu thái quá vai trò của nhận thức lý tính, 
+của trí tuệ dẫn đến hạ thấp hoặc phủ nhận vai trò của nhận thức cảm tính, của cảm 
+giác, rơi vào chủ nghĩa duy lý. 
+- Sự thống nhất giữa trực quan sinh động, tư duy trừu tượng và thực tiễn: 
+Một vòng khâu của quá trình nhận thức được bắt đầu từ trực quan sinh động đến 
+tư duy trừu tượng và từ tư duy trừu tượng đến thực tiễn. Trong đó, thực tiễn vừa là cơ 
+sở, vừa là khâu kết thúc và đồng thời có vai trò kiểm tra tính chân thực các kết quả 
+nhận thức. Quá trình nhận thức thông qua các vòng khâu nhận thức này để ngày càng 
+tiến sâu hơn vào bản chất của các sự vật, hiện tượng. Kết thúc vòng khâu này cũng 
+đồng thời là sự bắt đầu của một vòng khâu mới của sự nhận thức sâu sắc hơn, toàn 
+diện hơn. Cứ thế, nhận thức của con người là vô tận. Mỗi nấc thang mà con người đạt 
+được trong quá trình nhận thức, đều là kết quả của cả nhận thức cảm tính và cả nhận 
+thức lý tính, được thực hiện trên cơ sở của hoạt động thực tiễn.  
+Vòng khâu của nhận thức từ trực quan sinh động đến tư duy trừu tượng và từ tư 
+duy trừu tượng đến thực tiễn, được lặp đi lặp lại nhưng sâu hơn về bản chất. Đó cũng 
+chính là quá trình giải quyết những mâu thuẫn không ngừng nảy sinh trong nhận thức. 
+Đó là mâu thuẫn giữa chưa biết và biết, giữa biết ít và biết nhiều, giữa chân lý và sai 
+lầm, v.v..Cứ mỗi khi mâu thuẫn được giải quyết, thì nhận thức của con người lại tiến 
+gần tới chân lý hơn. 
+##### d. Quan điểm của chủ nghĩa duy vật biện chứng về chân lý 
+- Quan niệm về chân lý: Chủ nghĩa duy vật biện chứng cho rằng, chân lý là 
+những tri thức phù hợp với hiện thực khách quan và được thực tiễn kiểm nghiệm.  
+- Các tính chất của chân lý: tính khách quan, tính tương đối, tính tuyệt đối và tính 
+cụ thể: 
++ Tính khách quan của chân lý là tính độc lập về nội dung phản ánh của nó đối 
+với ý thức của con người và loài người. Có nghĩa là nội dung của những tri thức đúng 
+đắn không phải là sản phẩm thuần túy chủ quan, không phải là sự xác lập tùy tiện của 
+con người hoặc có sẵn ở trong nhận thức mà nội dung đó thuộc về thế giới khách quan, 
+do thế giới khách quan quy định; 
++ Tính tuyệt đối và tính tương đối: Tính tuyệt đối của chân lý là tính phù hợp 
+hoàn toàn và đầy đủ giữa nội dung phản ánh của tri thức với hiện thực khách quan. 
+Tính tương đối của chân lý là tính phù hợp nhưng chưa hoàn toàn đầy đủ giữa nội 
+dung phản ánh của những tri thức với hiện thực khách quan. Điều đó có nghĩa là giữa 
+nội dung của chân lý với khách thể được phản ánh chỉ mới phù hợp từng phần, từng bộ 
+phận, ở một số mặt, một số khía cạnh nào đó trong những điều kiện nhất định;  
+Ví dụ: “trong giới hạn của mặt phẳng có độ cong = 0, tổng các góc trong của 
+tam giác là 1800”(tuyệt đối), nhưng nếu độ cong khác 0 thì định lý này không 
+đúng nữa (tương đối), nó cấn được bổ sung bằng định lý mới. 
+Tính tương đối và tính tuyệt đối của chân lý không tồn tại tách rời nhau mà có sự 
+thống nhất biện chứng với nhau; 
++ Tính cụ thể của chân lý là đặc tính gắn liền và phù hợp giữa nội dung phản ánh 
+với một đối tượng nhất định cùng các điều kiện, hoàn cảnh lịch sử, cụ thể (không gian, 
+thời gian, góc độ phản ánh) 
+Ví dụ: Mọi phát biểu định lý trong các khoa học đều kèm theo các điệu kiện xác 
+định, nhằm đảm bảo tính chính xác của nó: “trong giới hạn của mặt phẳng có độ cong 
+= 0, tổng các góc trong của tam giác là 1800”, hay “nước sôi ở 1000 C với điều kiện 
+nước nguyên chất và áp suất là 1 atm (atmotphe)”… 
+Mỗi chân lý đều có tính khách quan, tính tương đối, tính tuyệt đối và tính cụ thể. 
+Các tính chất đó của chân lý có quan hệ chặt chẽ với nhau, không tách rời nhau. Thiếu 
+một trong các tính chất đó thì những tri thức đạt được trong quá trình nhận thức không 
+thể có giá trị đối với đời sống của con người.  
+- Vai trò của chân lý đối với thực tiễn: 
++ Chân lí là một trong những điều kiện tiên quyết bảo đảm sự thành công và tính 
+hiệu quả trong hoạt động thực tiễn; 
++ Chân lí phát triển nhờ thực tiễn và thực tiễn phát triển nhờ vận dụng đúng đắn 
+những chân lí mà con người đã đạt được trong hoạt động thực tiễn; 
++ Cần phát huy vai trò của chân lí khoa học trong thực tiễn hiện nay. 
+CÂU HỎI ÔN TẬP 
+## 1. Hãy phân tích sự khác nhau giữa quan niệm của chủ nghĩa duy vật biện chứng 
+với chủ nghĩa duy vật trước Mác về vật chất (qua định nghĩa của Lênin về vật chất) 
+2. Ý thức xuất hiện do những nguồn gốc nào? 
+## 3. Hãy phân tích những quan niệm của chủ nghĩa duy vật biện chứng về bản chất 
+và kết cấu của ý thức? So sánh ý thức của con người với hoạt động của người máy và 
+tâm lý động vật? 
+## 4. Hãy phân tích quan niệm của chủ nghĩa duy vật biện chứng về mối quan hệ 
+biện chứng giữa vật chất và ý thức? 
+## 5. Hãy nêu và phân tích nội dung của hai nguyên lý cơ bản của phép biện chứng 
+duy vật và rút ra ý nghĩa phương pháp luận? 
+## 6. Hãy phân tích nội dung những cặp phạm trù cơ bản của phép biện chứng duy 
+vật và rút ra ý nghĩa phương pháp luận? 
+## 7. Hãy phân tích nội dung các quy luật cơ bản của phép biện chứng duy vật và rút 
+ra ý nghĩa phương pháp luận? 
+## 8. Hãy phân tích bản chất của nhận thức, vai trò của thực tiên đối với nhận thức 
+và nguyên tắc thống nhất giữa lý luận và thực tiễn? 
+VẤN ĐỀ THẢO LUẬN 
+## 1.  Có ý kiến cho rằng, cuộc cách mạng 4.0 gắn với “trí tuệ nhân tạo”, sự xuất 
+hiện của các Robot thông minh sẽ thay thế hoàn toàn con người trong tương lại. Hãy 
+nêu ra quan điểm của bạn về ý kiến này? 
+## 2. Hãy nêu những tấm gương thành đạt nhờ ý chí vượt lên trên hoàn cảnh khó 
+khăn mà em biết và nêu bình luận của bản thân? 
+## 3. Vận dụng ý nghĩa phương pháp luận rút ra từ mối quan hệ giữa vật chất và 
+ý thức vào thực tiễn công cuộc đổi mới ở Việt Nam hiện nay? 
+## 4. Vận dụng quy luật Chuyển hóa từ những sự thay đổi dần dần về lượng 
+thành những sự thay đổi về chất và ngược lại để phân tích “nghệ thuật chớp thời 
+cơ” trong cách mạng tháng Tám -1945? 
+## 5. Vận dụng kiến thức lý luận nhận thức duy vật biện chứng để phân tích câu 
+nói của nhà triết học Gớt: “Lý thuyết chỉ là màu xám, cây đời thì mãi xanh tươi”

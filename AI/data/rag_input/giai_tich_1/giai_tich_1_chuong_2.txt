@@ -1,0 +1,2122 @@
+# CHUONG 2. PHEP TINH VI PHAN CUA HAM MQT BIEN SO
+
+# 2.1. Cac khai niem co ban
+
+# 2.1.1. Ham mot bien thuc
+
+Cho $X \subseteq \mathbb { R } , Y \subseteq \mathbb { R }$ ,ánh xa
+
+$$
+\begin{array} { c } { { f : X  Y } } \\ { { x \mapsto y = f ( x ) } } \end{array}
+$$
+
+duqc goi la mot ham só mot bién, tap $X$ duqc goi la mién xac dinh cua ham só （20 $f$ . Thong thuong ky hieu $x$ la doi so, $y$ la ham so.
+
+# 2.1.2. Ham só chan, lé
+
+x∈D⇒-x ∈D, -Ham só $y = f ( x )$ duqc goi la chan tren mien D ← (f(-x)=f(x) ∀x∈D.
+
+x ∈D→-x ∈D, -Ham s6 $y = f ( x )$ duqc goi la leé tren mien D 台 f(-x)=-f(x) ∀x ∈D.
+
+Vi du $f _ { 1 } ( x ) = | 1 - x | + | 1 + x |$ la ham so chan tren $\mathbb { R }$ ： $f _ { 2 } ( x ) = x ^ { 4 } \sin x$ la ham so lé tren $\mathbb { R }$ ： 一
+
+# 2.1.3. Ham só tuan hoan
+
+Ham só $y = f ( x )$ dugc goi la tuan hoan tren mién $D \Leftrightarrow$ t6n tai $T > 0$ sao cho
+
+Khi d6 $T$ dugc goi la chu ky cua $f$ .
+
+Vi du Ham só $y = \sin ( a x + b ) $ voi $a > 0$ tuän hoan voi chu ky $\begin{array} { r } { T = \frac { 2 \pi } { a } } \end{array}$ tren $\mathbb { R }$ ：
+
+# 2.1.4. Ham só don dieu (tang hoac giam)
+
++ Ham só $y = f ( x )$ duoc goi la tang tren mien $D$ khi va chi khi
+
+$$
+\forall x _ { 1 } , x _ { 2 } \in D , x _ { 1 } < x _ { 2 } \Rightarrow f ( x _ { 1 } ) \leq f ( x _ { 2 } ) .
+$$
+
+$+ \ \mathrm { H \dot { a } m }$ s6 $y = f ( x )$ duqc goi la tang ngat (hay con goi la dong bien) tren mién $D$ khi va chi khi
+
+$$
+\forall x _ { 1 } , x _ { 2 } \in D , x _ { 1 } < x _ { 2 } \Rightarrow f ( x _ { 1 } ) < f ( x _ { 2 } ) .
+$$
+
+$+ \ : \mathrm { H a m } \ : \mathrm { s } \hat { 0 } \ : y = f ( x )$ duqc goi la giam tren mien $D$ khi va chi khi
+
+$$
+\forall x _ { 1 } , x _ { 2 } \in D , x _ { 1 } < x _ { 2 } \Rightarrow f ( x _ { 1 } ) \geq f ( x _ { 2 } ) .
+$$
+
++ Ham só $y = f ( x )$ dugc goi la giam ngat (hay con goi la nghich bien) tren mién $D$ khi va chi khi
+
+$$
+\forall x _ { 1 } , x _ { 2 } \in D , x _ { 1 } < x _ { 2 } \Rightarrow f ( x _ { 1 } ) > f ( x _ { 2 } ) .
+$$
+
+# 2.1.5. Ham so bi chan
+
++ Ham só $y = f ( x )$ dugc goi la bi chan trén tren mien $D$ khi va chi khi ton tai $M \in \mathbb { R }$ sao cho
+
+$$
+f ( x ) \leq M \ \forall x \in D .
+$$
+
++ Ham só $y = f ( x )$ duoc goi la bi chan duoi tren mien $D$ khi va chi khi ton tai $m \in \mathbb { R }$ sao cho 1
+
+$$
+f ( x ) \geq m \forall x \in D .
+$$
+
++ Ham só $y = f ( x )$ duoc goi la bi chan trén mién $D$ khi va chi khi $f$ bi chan tren va bi chan duoi trén $D$ 一
+
+# 2.1.6. Can tren dung va can duoi dung
+
+$+ \ \mathrm { S } \tilde { \sigma } \ m$ duoc goi la can duoi dung (infimum) cua ham $f$ tren mien $D$ , ky hieu （24 $m = \operatorname* { i n f } _ { x \in D } f ( x )$ khi va chi khi $m$ la só l6n nhat thöa man
+
+$$
+f ( x ) \geq m \forall x \in D .
+$$
+
+$+ \ S \tilde { 0 } \ M$ duqc goi la can trén dung (supremum) cua ham $f$ tren mien $D$ , ky hieu
+
+$$
+M = \operatorname* { s u p } _ { x \in D } f ( x )
+$$
+
+khi va chi khi $M$ la só nhö nhat thöa man
+
+$$
+f ( x ) \leq M \ \forall x \in D .
+$$
+
+\*He qua
+
+$M$ la can tren dung cua ham $f ( x )$ tren $D$ khi va chi khi
+
+$$
+\left\{ \begin{array} { l l } { M \geq f ( x ) \forall x \in D , } \\ { \forall \epsilon > 0 \Rightarrow \exists x _ { 0 } \in D } \end{array} \right.
+$$
+
+（204 $m$ la can duoi dung cüa ham $f ( x )$ tren $D$ khi va chi khi
+
+$$
+\left\{ \begin{array} { l l } { m \leq f ( x ) \forall x \in D , } \\ { \forall \epsilon > 0 \Rightarrow \exists x _ { 0 } \in D } \end{array} \right.
+$$
+
+Ching minh Ta chung minh voi can tren dung, con can duoi dung dugc chung minh tuong tur.
+
+$( \Rightarrow )$ Gia sur $M = \operatorname* { s u p } _ { x \in D } f ( x )$ , theo dinh nghia $f ( x ) \leq M \forall x \in D$ Ta can chung minh rang:
+
+Gia sur dieu nay khong dung. Hay
+
+$$
+\exists \epsilon > 0 : M \ge f ( x _ { 0 } ) + \epsilon \forall x _ { 0 } \in D \Rightarrow f ( x _ { 0 } ) \le M - \epsilon \forall x _ { 0 } \in D .
+$$
+
+Dieu nay mau thuan voi gia thiet $M$ la can tren dung.
+
+$( \Leftarrow )$ Gia thiet cho $M$ thoa man
+
+$$
+\left\{ \begin{array} { l l } { M \geq f ( x ) \forall x \in D , } \\ { \forall \epsilon > 0 \Rightarrow \exists x _ { 0 } \in D \mathrm { s a o c h o } M < f ( x _ { 0 } ) + \epsilon . } \end{array} \right.
+$$
+
+Ta chung minh bang phan chung, gia sur $M$ khong la sδ nhó nhat thöa man $f ( x ) \leq$ $M \ \forall x \in D$ , hay ton tai $M _ { 0 } < M$ sao cho $f ( x ) \leq M _ { 0 } \forall x \in D$ .Dat $\epsilon = M -$ $M _ { 0 } > 0 \Rightarrow \exists x _ { 0 } \in D$ sao cho $M < f ( x _ { 0 } ) + \epsilon = f ( x _ { 0 } ) + M - M _ { 0 } \Leftrightarrow f ( x _ { 0 } ) > M _ { 0 } ,$ （2号 mau thuan. Vay $M = \operatorname* { s u p } _ { x \in D } f ( x )$ ， □
+
+\* Tien de
+
+- Neu $f$ bi chan tren tren $D$ , thi ton tai sup $f ( x )$ ： - Neu $f$ bi chan duoi tren $D$ , thi ton tai （ $\operatorname* { i n f } _ { x \in D } f ( x ) .$
+
+\* Nhan xét
+
+Cho ham $f$ ton tai can tren dung va can duoi dung. Khi d6
+
+$$
+\operatorname* { s u p } _ { x \in D } f ( x ) \geq \operatorname* { m a x } _ { x \in D } f ( x ) ,
+$$
+
+dau ${ \vec { \mathbf { \zeta } } } ^ { , , } = { \vec { \mathbf { \zeta } } } ^ { , }$ xäy ra khi va chi khi ton tai $x _ { 0 } \in D$ sao cho $f ( x _ { 0 } ) = \operatorname* { s u p } _ { x \in D } f ( x )$ .
+
+$$
+\operatorname* { i n f } _ { x \in D } f ( x ) \leq \operatorname* { m i n } _ { x \in D } f ( x ) ,
+$$
+
+dau ${ \ v O } ^ { \prime \prime } = { \ v O } ^ { \prime \prime }$ xäy ra khi va chi khi ton tai $x _ { 0 } \in D$ sao cho $f ( x _ { 0 } ) = \operatorname* { i n f } _ { x \in D } f ( x )$ \* Vi du Cho $f$ t6n tai can duoi dung tren $D$ . Chung minh rang
+
+$$
+\operatorname* { i n f } _ { x \in D } f ( x ) = - \operatorname* { s u p } _ { x \in D } \{ - f ( x ) \} .
+$$
+
+$$
+\begin{array} { r l } & { \cdot \ : m i n h \ : \mathrm { D } \check { \mathfrak { a } } \mathfrak { t } \ : m = \operatorname* { i n f } _ { x \in D } f ( x ) \Rightarrow - f ( x ) \leq - m \ : \forall x \in D \ : \Rightarrow \ : \underset { x \in D } { \operatorname* { s u p } } \{ - f ( x ) \leq - f ( x ) \} } \\ & { \mathrm { M } \check { \mathfrak { a } } \mathfrak { t } \ : \mathrm { k h } \acute { \mathrm { a c } } - f ( x ) \leq \underset { x \in D } { \operatorname* { s u p } } \{ - f ( x ) \} \Rightarrow f ( x ) \geq \underset { x \in D } { \operatorname* { s u p } } \{ - f ( x ) \} \ : \forall x \in D } \\ & { \ : x ) \geq \underset { x \in D } { \operatorname* { s u p } } \{ - f ( x ) \} . \mathrm { N h u } \ : \mathrm { v } \hat { \mathfrak { a } } \mathbf { y } \ : m = \underset { x \in D } { \operatorname* { s u p } } \{ - f ( x ) \} . } \end{array}
+$$
+
+# 2.1.7. Ham so nguoc
+
+Cho $X , Y \subseteq \mathbb { R }$ va mot song ánh $f : X \to Y$ . Khi d6, ánh xa ngugc $f ^ { - 1 } : Y \to X$ xác dinh mot ham so $y = f ^ { - 1 } ( x )$ duqc goi la ham so ngugc cua ham só $y = f ( x )$ . Vi du Ham só $y \ : = \ : a ^ { x }$ voi $a > 0 , a \ne 1$ c6 ham só nguoc la $y = l o g _ { a } x$ voi $x \in ( 0 ; + \infty )$ ，
+
+Tinh chät do thi D6 thi ham s6 $y = f ( x )$ va do thi ham nguoc $y = f ^ { - 1 } ( x )$ doi xung qua duong thäng $y = x$ ： 一
+
+1. Ham $y = a r c s i n x$ （204 \*Dinh nghia
+
+$$
+y = a r c s i n x \Leftrightarrow { \left\{ \begin{array} { l l } { x = \sin y } \\ { y \in [ - { \frac { \pi } { 2 } } ; { \frac { \pi } { 2 } } ] . } \end{array} \right. }
+$$
+
+Nhu vay, mien xác dinh cua $y =$ arcsinx la $D = [ - 1 ; 1 ]$ va tap gia tri la $D _ { f } =$ $[ - \frac { \pi } { 2 } ; \frac { \pi } { 2 } ]$ ． 一
+
+\*Vi du Tinh $a r c s i n { \textstyle { \frac { 1 } { 2 } } } = ?$ （ Gidi Dat $a r c s i n { \textstyle { \frac { 1 } { 2 } } } = y \Rightarrow { \textstyle { \frac { 1 } { 2 } } } = \sin y \Rightarrow y = { \frac { \pi } { 6 } }$ $y \in [ \frac { - \pi } { 2 } ; \frac { \pi } { 2 } ]$ Ⅰ． $\begin{array} { r } { \sqrt { \underset { \cdot } { \mathrm { a y } } \ a r c s i n \frac { 1 } { 2 } } = \frac { \pi } { 6 } } \end{array}$
+
+2. Ham $y = a r c c o s x$
+
+\*Dinh nghia
+
+$$
+y = a r c c o s x \Leftrightarrow { \left\{ \begin{array} { l l } { x = \cos y } \\ { y \in [ 0 ; \pi ] . } \end{array} \right. }
+$$
+
+Nhu vay, mien xac dinh cua $y = a r c c o s x$ la $D = [ - 1 ; 1 ]$ va tap gia tri la $D _ { f } =$ $\left[ 0 ; \pi \right]$ ，
+
+${ ^ * V } _ { } i$ du Chung minh rang
+
+$$
+a r c s i n x + a r c c o s x = \frac { \pi } { 2 } ~ \forall x \in [ - 1 ; 1 ] .
+$$
+
+$$
+\Rightarrow \cos ( { \frac { \pi } { 2 } } - a r c s i n x ) = \sin ( a r c s i n x ) = x = \cos ( a r c c o s x ) \forall x \in [ - 1 \pi ]
+$$
+
+$$
+\begin{array} { r } { \Rightarrow \frac { \pi } { 2 } - a r c s i n x = a r c c o s x . } \end{array}
+$$
+
+3. Ham $y = a r c t a n x$ （204
+
+\*Dinh nghia
+
+$$
+y = a r c t a n x \Leftrightarrow \left\{ \begin{array} { l l } { x = \tan y } \\ { y \in ( - \frac { \pi } { 2 } ; \frac { \pi } { 2 } ) . } \end{array} \right.
+$$
+
+Nhu vay, mien xac dinh cua y = arctanx la $D = \mathbb { R }$ va tap gia tri la $\begin{array} { r } { D _ { f } = \left( - \frac { \pi } { 2 } ; \frac { \pi } { 2 } \right) } \end{array}$ . ${ ^ * V } _ { } i$ du Tinh arctan√3 =?
+
+Gidi Dat arctan ${ \sqrt { 3 } } \ = \ y \ \Rightarrow \ { \sqrt { 3 } } \ = \ \tan y \ \Rightarrow \ y \ = \ { \frac { \pi } { 3 } }$ vi $y ~ \in ~ ( - \frac { \pi } { 2 } ; \frac { \pi } { 2 } )$ Vay arctan $\begin{array} { r } { \sqrt { 3 } = \frac { \pi } { 3 } } \end{array}$ ，
+
+4.Ham $y = a r c c o t x$ （20 \*Dinh nghia
+
+$$
+y = a r c c o t x \Leftrightarrow { \left\{ \begin{array} { l l } { x = \cot y } \\ { y \in ( 0 ; \pi ) . } \end{array} \right. }
+$$
+
+Nhu vay, mien xac dinh cua $y = a r c c o t x \tt { l i } D = \mathbb { R }$ va tap gia tri la $D _ { f } = ( 0 ; \pi )$ ： \*Vi du Chimg minh rang
+
+$$
+a r c t g x + a r c c o t x = \frac { \pi } { 2 } .
+$$
+
+Giai Theo dinh nghia $\ a r c t g x \in \left( - \frac { \pi } { 2 } , \frac { \pi } { 2 } \right)$ ,ta c6 $\begin{array} { r } { \frac { \pi } { 2 } - a r c t { g x } \in ( 0 , \pi ) \quad } \end{array}$ . Do vay
+
+$$
+\cot ( \frac { \pi } { 2 } - a r c t g x ) = \tan ( a r c t g x ) \Leftrightarrow \frac { \pi } { 2 } - a r c t g x = a r c c o t x .
+$$
+
+# 2.1.8. Ham hypebolic
+
+1. Ham sinhypebolic: Ky hieu $y = s h ( x )$ , duqc xac dinh boi cong thuc:
+
+$$
+s h ( x ) = \frac { 1 } { 2 } ( e ^ { x } - e ^ { - x } ) .
+$$
+
+2. Ham cosinhypebolic Ky hieu $y = c h ( x )$ , dugc xac dinh boi cong thuc:
+
+$$
+c h ( x ) = \frac { 1 } { 2 } ( e ^ { x } + e ^ { - x } ) .
+$$
+
+Vi du Cho $x , y \in \mathbb { R }$ , dung dinh nghia, chung minh rang:
+
+$$
+\begin{array} { r l } & { \delta \dot { \mathcal { H } } ( x , y ) = \langle y \dot { N } ( x ^ { \dagger } ) x ( x ^ { \dagger } ) \delta \dot { N } ( y ) + c \dot { N } ( x ^ { \dagger } ) x ( y ) \delta \dot { N } ( y ) , } \\ & { \delta \dot { N } ( x ^ { \dagger } ) = \langle x \dot { N } ( x ^ { \dagger } ) x ( \dot { N } y ) - \delta \dot { N } ( x ^ { \dagger } ) x ( \dot { N } y ) \delta \dot { N } ( y ) , } \\ & { c \dot { N } ( x ^ { \dagger } - y ) = c \dot { N } ( x ) c ( \dot { N } y ) + \delta \dot { N } ( x ^ { \dagger } ) \delta \dot { N } ( y ) , } \\ & { c \dot { N } ( x ^ { \dagger } - y ) = c \dot { N } ( x ^ { \dagger } ) c \dot { N } ( \dot { N } y ) - \delta \dot { N } ( \dot { N } y ) \delta \dot { N } ( \dot { y } ) , } \\ & { c \dot { N } ( x ^ { \dagger } ) = - \delta \dot { N } ^ { 2 } ( x ^ { \dagger } ) = 1 , } \\ & { c \dot { N } ^ { 2 } ( x ^ { \dagger } ) + \delta \dot { N } ^ { 2 } ( x ^ { \dagger } ) - c \dot { N } ( \dot { x } y ) , } \\ & { \delta \dot { N } ( x ^ { \dagger } ) = \delta \dot { N } ( x ^ { \dagger } ) - c \dot { N } ( \dot { x } y ) , } \\ & { \delta \dot { N } ( x ^ { \dagger } ) = \mathrm { ~ c h } ( x y ) = 2 c y \dot { N } ( x ^ { \dagger } ) , } \\ & { c \dot { N } ( x ) = \mathrm { ~ c h } ( x y ) = 2 c y \dot { N } \dot { x } ^ { \frac { \partial } { \partial x ^ { \dagger } } } \delta \dot { N } ^ { \frac { \partial } { \partial y } } , } \\ & { c \dot { N } ( x ) - c \dot { N } ( \dot { y } ) = 2 c y \dot { N } ^ { \frac { \partial } { \partial x ^ { \dagger } } } \delta \dot { N } ^ { \frac { \partial } { \partial y } } , } \\ & { \delta \dot { N } ( x ^ { \dagger } ) = \delta \dot { N } ( \dot { y } ) - 2 c \dot { N } \dot { x } ^ { \frac { \partial } { \partial x ^ { \dagger } } } \delta \dot { N } ^ { \frac { \partial } { \partial y } } , } \\ & { \delta \dot { N } ( x ^ { \dagger } ) = \delta \dot { N } ( \dot { y } ) - 2 c \dot { N } ( x ^ { \dagger } ) , } \\ & { \delta \dot { N } ( x ^ { \dagger } ) = \delta \dot { N } ( \dot { x } ^ { \dagger } ) - c \dot { N } ( x ^ { \dagger } ) = 0 , } \end{array}
+$$
+
+3. Ham tanghypebolic Ky hieu $y = t h ( x )$ ,dugc xac dinh boi cong thuc:
+
+$$
+t h ( x ) = \frac { s h ( x ) } { c h ( x ) } .
+$$
+
+4. Ham cotanghypebolic Ky hieu $y = c o t h ( x )$ , dugc xac dinh boi cong thuc:
+
+$$
+c o t h ( x ) = \frac { c h ( x ) } { s h ( x ) } .
+$$
+
+Vi du Cho $x , y \in \mathbb { R }$ , dung dinh nghia, chung minh rang:
+
+$$
+t h ( x + y ) = { \frac { t h ( x ) + t h ( y ) } { 1 + t h ( x ) . t h ( y ) } } { \mathrm { ~ v \dot { o i } ~ } } x y ( x + y ) \neq 0 ,
+$$
+
+$$
+t h ( x - y ) = { \frac { t h ( x ) - t h ( y ) } { 1 - t h ( x ) . t h ( y ) } } { \mathrm { ~ v o i ~ } } x y ( x - y ) \neq 0 ,
+$$
+
+$$
+t h ( 2 x ) = { \frac { 2 t h ( x ) } { 1 + t h ^ { 2 } ( x ) } } { \mathrm { ~ v \ ' o i ~ } } x \neq 0 .
+$$
+
+Giai
+
+$$
+{ \frac { t h ( x ) + t h ( y ) } { 1 + t h ( x ) . t h ( y ) } } = { \frac { { \frac { s h ( x ) } { c h ( x ) } } + { \frac { s h ( y ) } { c h ( y ) } } } { 1 + { \frac { s h ( x ) } { c h ( x ) } } . { \frac { s h ( y ) } { c h ( y ) } } } }
+$$
+
+$$
+= { \frac { s h ( x ) . c h ( y ) + c h ( x ) . s h ( y ) } { c h ( x ) . c h ( y ) + s h ( x ) . s h ( y ) } } = { \frac { s h ( x + y ) } { c h ( x + y ) } } = t h ( x + y ) .
+$$
+
+Cac ket qua con lai dugc chung minh tuong tu.
+
+# 2.2. Gioi han cua ham mot bien só
+
+# 2.2.1. Dinh nghia
+
+$^ +$ Cho ham so $f ( x )$ xác dinh trong khoang $( a , b )$ ,va $x _ { 0 } \in [ a , b ]$ . Ta noi rang $f ( x )$ c6 gioi han $A$ (huu han) khi $x$ dan toi $x _ { 0 }$ ,ky hieu la lim $f ( x ) = A$ khi va chi khi x→xo
+
+$$
+0 < | x - x _ { 0 } | < \delta \forall x \in ( a , b ) \Rightarrow | f ( x ) - A | < \epsilon .
+$$
+
+$+$ Cho ham só $f ( x )$ xác dinh trong khoang $( a , b )$ ,va $x _ { 0 } \in [ a , b ]$ . Ta noi rang $f ( x )$ c6 gioi han trai $A$ (huu han) khi $x$ dan toi $x _ { 0 }$ , ky hieu la $\operatorname* { l i m } _ { x \to x _ { 0 } ^ { - } } f ( x ) = A$ khi va chi khi
+
+$$
+\forall x \in ( a , b ) : 0 > x - x _ { 0 } > - \delta \Rightarrow | f ( x ) - A | < \epsilon .
+$$
+
+$+$ Cho ham só $f ( x )$ xác dinh trong khoäng $( a , b )$ ,va $x _ { 0 } \in [ a , b ]$ . Ta noi rang $f ( x )$   
+c6 gioi han phai $A$ (huu han) khi $x$ dan toi $x _ { 0 }$ ,ky hieu la $\operatorname* { l i m } _ { x \to x _ { 0 } ^ { + } } f ( x ) = A 1$ khi va chi khi
+
+$\forall \epsilon > 0 \exists \delta > 0$ sao cho $\forall x \in ( a , b ) : 0 < x - x _ { 0 } < \delta \ \forall x \in ( a , b ) \Rightarrow | f ( x ) - A | < \epsilon .$ Nhan xet:
+
+$$
+\operatorname* { l i m } _ { x \to x _ { 0 } } f ( x ) = A \Leftrightarrow { \left\{ \begin{array} { l l } { \displaystyle \operatorname* { l i m } _ { x \to x _ { 0 } ^ { - } } f ( x ) = A } \\ { \displaystyle \operatorname* { l i m } _ { x \to x _ { 0 } ^ { + } } f ( x ) = A } \end{array} \right. }
+$$
+
+$+$ Cho ham so $f ( x )$ xác dinh trong khoang $( a , b )$ va $x _ { 0 } \in [ a , b ]$ . Ta noi rang $f ( x )$ c6 gioi han $+ \infty$ (vo han) khi $x$ dan toi $x _ { 0 }$ , ky hieu la lim $f ( x ) = + \infty$ khi va （204 $x {  } x _ { 0 }$ chi khi
+
+$$
+0 < | x - x _ { 0 } | < \delta \forall x \in ( a , b ) \Rightarrow f ( x ) > A .
+$$
+
+$+$ Cho ham so $f ( x )$ xác dinh trong khoang $( a , b )$ va $x _ { 0 } \in [ a , b ]$ . Ta noi rang $f ( x )$ c6 gioi han - $\infty$ (vo han) khi $x$ dan toi $x _ { 0 }$ , ky hieu la lim $f ( x ) = - \infty$ khi va （20 $x {  } x _ { 0 }$ chi khi
+
+$+$ Cho ham só $f ( x )$ xác dinh trong khoang $( a , + \infty )$ . Ta noi rang $f ( x )$ c6 gioi han $A$ (huru han) khi $x$ dan toi $+ \infty$ , ky hieu la $\operatorname* { l i m } _ { x \to + \infty } f ( x ) = A$ khi va chi khi （
+
+$$
+\forall \epsilon > 0 \exists x _ { 0 } \ \mathrm { ~ s a o ~ c h o ~ } \forall x > x _ { 0 } \Rightarrow | f ( x ) - A | < \epsilon .
+$$
+
+$+$ Cho ham só $f ( x )$ Xác dinh trong khoäng $( - \infty , a )$ . Ta noi rang $f ( x )$ c6 gioi han $A$ (huru han) khi $x$ dan toi $- \infty$ , ky hieu la $\operatorname* { l i m } _ { x \to - \infty } f ( x ) = A$ khi va chi khi $$
+\forall \epsilon > 0 \exists x _ { 0 } \ \mathrm { ~ s a o ~ c h o ~ } \forall x < x _ { 0 } \Rightarrow | f ( x ) - A | < \epsilon .
+$$
+
+$+$ Cho ham só $f ( x )$ xác dinh trong khoäng $( a , + \infty )$ . Ta nói rang $f ( x )$ c6 gioi han $+ \infty ( - \infty )$ (vo han) khi $x$ dan toi $+ \infty$ ky hieu la $\operatorname* { l i m } _ { x \to + \infty } f ( x ) = + \infty$ (turong ting: $- \infty )$ khi va chi khi
+
+$$
+\forall A \ \exists x _ { 0 } \ { \mathrm { ~ s a o ~ c h o ~ } } \forall x > x _ { 0 } \Rightarrow f ( x ) > A
+$$
+
+$+$ Cho ham só $f ( x )$ xác dinh trong khoang $( - \infty , a )$ . Ta noi rang $f ( x )$ c6 gioi han $+ \infty$ (turong tmg: $- \infty ,$ khi $x$ dan toi $- \infty$ , ky hieu la $\operatorname* { l i m } _ { x \to - \infty } f ( x ) = + \infty$ (turong ung: $- \infty )$ ）khi va chi khi 1
+
+Vi du 2.1. Dung dinh nghia ching minh rang
+
+$$
+\operatorname* { l i m } _ { x \to 1 } { \frac { x + 1 } { 2 x - 1 } } = 2 .
+$$
+
+Giai Theo dinh nghia,
+
+$$
+\operatorname* { l i m } _ { x \to 1 } { \frac { x + 1 } { 2 x - 1 } } = 2
+$$
+
+khi va chi khi
+
+$$
+\exists \delta = \delta ( \epsilon ) { \mathrm { ~ s a o ~ c h o ~ } } \forall x : | x - 1 | < \delta \Rightarrow | { \frac { x + 1 } { 2 x - 1 } } - 2 | = | x - 1 | \cdot { \frac { 3 } { | 2 x - 1 | } } <
+$$
+
+Neu ta chon $\begin{array} { r } { \delta < \frac { 1 } { 2 } } \end{array}$ ,thi
+
+$$
+\delta \Leftrightarrow 1 - \delta < x < 1 + \delta \Rightarrow | 2 x - 1 | = 2 x - 1 > 2 ( 1 - \delta ) - 1 = 1 - 2 \delta > 0
+$$
+
+Do d6, voi $\begin{array} { r } { \delta < \frac { 1 } { 2 } } \end{array}$ ,ta c6
+
+$$
+\forall x : | x - 1 | < \delta \Rightarrow | \frac { x + 1 } { 2 x - 1 } - 2 | = | x - 1 | \cdot \frac { 3 } { | 2 x - 1 | } < \frac { 3 \delta } { 1 - 2 \delta } ,
+$$
+
+ma $\begin{array} { r } { \frac { 3 \delta } { 1 - 2 \delta } < \epsilon \Leftrightarrow \delta < \frac { \epsilon } { 2 \epsilon + 3 } } \end{array}$ 2+:Nhu vay,δ= δ(e) duqc xac dinh boi
+
+$$
+0 < \delta < \operatorname * { m i n } \{ \frac { 1 } { 2 } , \frac { \epsilon } { 2 \epsilon + 3 } \} .
+$$
+
+# 2.2.2. Quan he giua gioi han cua day so va gioi han cua ham so
+
+$$
+\operatorname* { l i m } _ { x \to x _ { 0 } } f ( x ) = A \Leftrightarrow \{ \forall x _ { n } : \operatorname* { l i m } _ { n \to \infty } x _ { n } = x _ { 0 } \Rightarrow \operatorname* { l i m } _ { n \to \infty } f ( x _ { n } ) = A \} .
+$$
+
+Chitng minh $( \Rightarrow )$ Gia sur $\operatorname* { l i m } _ { x \to x _ { 0 } } f ( x ) = A$ va $\operatorname* { l i m } _ { n \to \infty } x _ { n } = x _ { 0 } .$ . Theo dinh nghia, ta có （204
+
+$$
+\begin{array} { r } { \left\{ \begin{array} { l l } { \forall \epsilon > 0 \exists \delta > 0 \mathrm { ~ s a o ~ c h o ~ } 0 < | x - x _ { 0 } | < \delta \forall x \in ( a , b ) \Rightarrow | f ( x ) - A } \\ { \exists n _ { 0 } \in \mathbb { N } \forall n \geq n _ { 0 } \Rightarrow | x _ { n } - x _ { 0 } | < \delta } \end{array} \right. } \end{array}
+$$
+
+Ta chon $\begin{array} { r } { \delta : = \frac { 1 } { n } \Rightarrow \exists x _ { n } : 0 < | x _ { n } - x _ { 0 } | < \delta \mathrm { ~ v } \hat { \mathbf { a } } | f ( x _ { n } ) - A | \ge \epsilon . } \end{array}$ Khi d6, ta c6
+
+$$
+\operatorname* { l i m } _ { n \to \infty } x _ { n } = x _ { 0 } \quad { \mathrm { \ v { v } } } { \dot { \mathbf { a } } } \quad \operatorname* { l i m } _ { n \to \infty } f ( x _ { n } ) \neq A .
+$$
+
+Dieu nay mau thuan voi gia thiet tren. Nhu va $\operatorname* { y } _ { x \to x _ { 0 } } f ( x ) = A .$
+
+Dua vao moi quan hé nay va tinh chat duy nhat cua gioi han cua day sO, ta có ket qua duoi day.
+
+Nh@n xét: Néu ton tai $\operatorname* { l i m } _ { x \to x _ { 0 } } f ( x ) = A$ thi $A$ la duy nhat.
+
+# 2.2.3. Tinh chat
+
+1. Tinh bi chan
+
+Dinh ly 2.2. Néu $\operatorname* { l i m } _ { x \to x _ { 0 } } f ( x ) = A { \nu \hat { a } } | f ( x _ { 0 } ) | < + \infty$ ,thi $f ( x )$ bi chan trong mot lan can cua $x _ { 0 }$ ：   
+Ching minh Gia sur $\operatorname* { l i m } _ { x \to x _ { 0 } } f ( x ) = A$ , theo dinh nghia,   
+$\forall \epsilon > 0$ (cho truoc) $\exists \delta > 0$ sao cho $\forall x \in ( a , b ) : 0 \neq | x - x _ { 0 } | < \delta \Rightarrow | f ( x ) - A | < \epsilon .$   
+Hay voi $\epsilon > 0$ cho truoc, ta có $\delta > 0$ cung dugc cho truoc va
+
+$$
+A - \epsilon < f ( x ) < A + \epsilon \forall x \in ( x _ { 0 } - \delta ; x _ { 0 } ) \cup ( x _ { 0 } ; x _ { 0 } + \delta ) .
+$$
+
+Khi d6, $\forall x \in ( x _ { 0 } - \delta ; x _ { 0 } + \delta )$ ta c6
+
+$$
+n : = \operatorname* { m i n } \{ - | f ( x _ { 0 } ) | , \ A - \epsilon \} \leq f ( x ) \leq M : = \operatorname* { m a x } \{ | f ( x _ { 0 } ) | , \ A + \epsilon \} .
+$$
+
+（24 Dinh ly 2.3. i) Gid su ton tai hitu han lim $\forall x \in ( x _ { 0 } - \delta _ { 0 } , x _ { 0 } + \delta _ { 0 } )$ thi $\operatorname* { l i m } _ { x \to x _ { 0 } } f ( x ) \leq \operatorname* { l i m } _ { x \to x _ { 0 } } g ( x )$ x→xo $f ( x )$ , lim g(x). Néu $f ( x ) \leq g ( x )$ ii) Néu lim $f ( x ) > m$ ，thi ton tai $\delta > 0$ sao cho $f ( x ) > m \forall x _ { 0 } \neq x \in$ $x {  } x _ { 0 }$   
+（204 $( x _ { 0 } - \delta , x _ { 0 } + \delta )$ ：   
+i Neu $f ( x ) \leq g ( x ) \forall x \in ( x _ { 0 } - \delta , x _ { 0 } + \delta ) \nu \dot { a } \operatorname* { l i m } _ { x  x _ { 0 } } f ( x ) = + \infty , t h i$ $x { \to } x _ { 0 }$ lim g(x) = $+ \infty$ ：
+
+Ching minh i) Gia sur nguqc lai rang $A = \operatorname* { l i m } _ { x \to x _ { 0 } } f ( x ) > \operatorname* { l i m } _ { x \to x _ { 0 } } g ( x ) = B$ Dat $\begin{array} { r } { \epsilon = \frac { A - B } { 2 } > 0 } \end{array}$ , theo dinh nghia, ton tai $\delta _ { 1 }$ va $\delta _ { 2 }$ sao cho
+
+$$
+\begin{array} { r } { \left\{ \forall x : \ 0 < | x - x _ { 0 } | < \delta _ { 1 } \Rightarrow | f ( x ) - A | < \epsilon \right. } \\ { \forall x : \ 0 < | x - x _ { 0 } | < \delta _ { 2 } \Rightarrow | g ( x ) - B | < \epsilon . } \end{array}
+$$
+
+Ta dat $\delta : = \operatorname* { m i n } \{ \delta _ { 1 } , \delta _ { 2 } \}$ . Khi d6
+
+$$
+| x - x _ { 0 } | < \delta \Rightarrow { \left\{ \begin{array} { l l } { | f ( x ) - A | < \epsilon \Rightarrow f ( x ) > A - \epsilon = A - { \frac { A - B } { 2 } } = { \frac { A + \delta } { 2 } } } \\ { | g ( x ) - B | < \epsilon \Rightarrow g ( x ) < B + \epsilon = B + { \frac { A - B } { 2 } } = { \frac { A + \delta } { 2 } } } \end{array} \right. }
+$$
+
+$\Rightarrow g ( x ) < f ( x )$ . Dieu nay mau thuan voi gia thiet. Nhu vay $\operatorname* { l i m } _ { x \to x _ { 0 } } f ( x ) \ \leq$ （204$\operatorname* { l i m } _ { x \to x _ { 0 } } g ( x )$ ：
+
+ii) Gia sur $A = \operatorname* { l i m } _ { x  x _ { 0 } } f ( x ) = A > m$ ,dat $\epsilon = A - m > 0$ . Theo dinh nghia, $\exists \delta > 0$ sao cho $\forall x : 0 < | x - x _ { 0 } | < \delta \Rightarrow | f ( x ) - A | < \epsilon \Rightarrow f ( x ) > A - \epsilon = m$ iii) Theo dinh nghia cua lim $f ( x ) = + \infty , \forall A , \exists \delta _ { 1 } > 0$ sao cho （ $x { \to } x _ { 0 }$ （ $\forall x : 0 < | x - x _ { 0 } | < \delta _ { 1 } \Rightarrow f ( x ) > A$ .Dat $\delta _ { 2 } = \operatorname* { m i n } \{ \delta , \delta _ { 1 } \}$ . Khi d6
+
+$$
+\begin{array} { r } { \langle x : 0 < | x - x _ { 0 } | < \delta _ { 2 } \Rightarrow \left\{ \begin{array} { l l } { f ( x ) > A } & { } \\ { f ( x ) < g ( x ) } \end{array} \right. \Rightarrow g ( x ) > A \Rightarrow \underset { x \to x _ { 0 } } { \operatorname* { l i m } } g ( x ) } \end{array}
+$$
+
+Dua vao tinh chat i), ta $\mathrm { d } \tilde { \hat { \mathrm { e } } }$ dang có ket qu' sau:
+
+Nguyén ly kep: Neu $f ( x ) \leq g ( x ) \leq h ( x ) \forall x \in ( x _ { 0 } - \delta , x _ { 0 } + \delta ) \forall { \widehat { \mathbf { a } } } \operatorname* { l i m } _ { x \to x _ { 0 } } f ( x ) =$ $\operatorname* { l i m } _ { x \to x _ { 0 } } h ( x ) = A$ ,thi （20 $\operatorname* { l i m } _ { x \to x _ { 0 } } g ( x ) = A$ ，
+
+Vi du 2.4. Chitng minh rang
+
+$$
+\operatorname* { l i m } _ { x  \infty } ( 1 + { \frac { 1 } { x } } ) ^ { x } = e .
+$$
+
+Ching minh Xét truong hop $x \to + \infty$ . V6i moi $x > 1$ , luon t6n tai $n \in \mathbb { N }$ sao cho $\begin{array} { r } { n \leq x \leq n + 1 \Rightarrow \frac { 1 } { n + 1 } \leq \frac { 1 } { x } \leq \frac { 1 } { n } } \end{array}$ Khi d6, theo dinh nghia $\operatorname* { l i m } _ { n \to \infty } ( 1 + { \frac { 1 } { n } } ) ^ { n } = e ,$ ta c6
+
+$$
+e  { \bigg ( } 1 + { \frac { 1 } { n + 1 } } { \bigg ) } ^ { n } \leq { \bigg ( } 1 + { \frac { 1 } { x } } { \bigg ) } ^ { n } \leq { \bigg ( } 1 + { \frac { 1 } { x } } { \bigg ) } ^ { x } \leq { \bigg ( } 1 + { \frac { 1 } { n } } { \bigg ) } ^ { x }
+$$
+
+$$
+\leq { \Big ( } 1 + { \frac { 1 } { n } } { \Big ) } ^ { n + 1 } = { \Big ( } 1 + { \frac { 1 } { n } } { \Big ) } ^ { n } . { \Big ( } 1 + { \frac { 1 } { n } } { \Big ) } \to e .
+$$
+
+Suyra $\operatorname* { l i m } _ { x  + \infty } ( 1 + { \textstyle \frac { 1 } { x } } ) ^ { x } = e .$ （2
+
+Trong truong hop $x \to - \infty$ .D6i bien $x = - y ,$ ta co $x \to - \infty \Leftrightarrow y \to + \infty$ va
+
+$$
+\operatorname* { l i m } _ { x \to - \infty } \left( 1 + { \frac { 1 } { x } } \right) ^ { x } = \operatorname* { l i m } _ { y \to + \infty } \left( 1 + { \frac { 1 } { - y } } \right) ^ { - y } = \operatorname* { l i m } _ { y \to + \infty } \left( { \frac { y } { y - 1 } } \right) ^ { y }
+$$
+
+$$
+= \operatorname* { l i m } _ { y \to + \infty } \Big ( 1 + \frac { 1 } { y - 1 } \Big ) ^ { y - 1 } . \Big ( 1 + \frac { 1 } { y - 1 } \Big ) = e .
+$$
+
+Nhurvay lin $\begin{array} { r } { \mathbf { \Psi } _ { \times } \left( 1 + \frac { 1 } { x } \right) ^ { x } = e . } \end{array}$
+
+Ta dé dang c6 cac cong thuc droi day.
+
+# Mot só tinh chat ve so $e$
+
+Tinh chdt $I \operatorname* { l i m } _ { y  0 } ( 1 + y ) ^ { \frac { 1 } { y } } = e .$ （ Tinh chat $\begin{array} { r } { 2 \operatorname* { l i m } _ { y \to 0 } \frac { \ln ( 1 + y ) } { y } = 1 . } \end{array}$ Tinh chat $\begin{array} { r } { \beta \operatorname* { l i m } _ { y  0 } \frac { e ^ { y } - 1 } { y } = 1 } \end{array}$
+
+Vi du 2.5. Tim gioi han
+
+$$
+\operatorname* { l i m } _ { x \to 0 } \log _ { 1 - x \sin 3 x } ( \cos 4 x + x ^ { 2 } ) .
+$$
+
+Giai Theo tinh chat 2 va cong thuc （20 $\operatorname* { l i m } _ { x \to 0 } { \frac { \sin x } { x } } = 1$ ,ta c6
+
+$$
+\begin{array} { r l } & { \underset { x  0 } { \operatorname* { l i m } } \log _ { 1 - x \leq \operatorname* { i n a n s t } } \langle \cos \mathbf { * } x + x ^ { 2 } \rangle - \underset { x  \pi } { \operatorname* { l i m } } \frac { \ln ( \cos 4 x + x ^ { 2 } ) } { \ln ( 1 - x \sin \lambda x ) } } \\ & { \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad } \\ & { = \frac { \underset { x \in [ - 2 ] \times \operatorname* { i n a n s t } } { \operatorname* { l i m } } - \underset { x \in [ - 2 ] \times \operatorname* { i n s t } } { \operatorname* { l i m } } } { \operatorname* { l i m } } \frac { \ln ( 1 - 2 \sin ^ { 2 } x + x ^ { 2 } ) } { \sin ( 1 - x \sin \lambda x ) } , \quad \quad \ c = 2 \sin ^ { 2 } x \times } \\ & { \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \frac { \ln ( 1 - 2 \sin ^ { 2 } x + 2 \cos ^ { 2 } x + 1 ) } { \operatorname* { l i m } } , } \\ &  = \underset { x \in [ - 3 ] \times \operatorname* { i n } } { \operatorname* { l i m } } \frac { \frac { \frac { \lambda + 2 \sin ^ { 2 } x + 2 \sin ^ { 2 } x } { 2 } } { \sin ( 1 - x \sin ^ { 2 } x ) } } { \frac { \frac { \lambda + 2 \sin ^ { 2 } x + 2 \sin ^ { 2 } x } { \cos ( 1 - x \sin \lambda x ) } } { \frac { \lambda + 2 \sin ^ { 2 } x } { \cos ( 1 - x \cos \lambda x ) } } - ( 3 \frac { \sin ^ { 2 } x + 2 \cos ^ { 2 } x } { \sin x } ) } { \frac { \frac { \lambda + 2 \sin ^ { 2 } x + 2 \sin ^ { 2 } x } { \cos ( 1 - x \cos \lambda x ) } } { \frac { \lambda + 2 \sin ^ { 2 } x } { \cos ( 1 - x \cos \lambda x ) } } } \\ & { \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad } \\ &  = \frac  \underset { x \in [ - 2 ] \times \operatorname* { i n a n s t } } { \operatorname* { l i m } } - \frac  \frac { \lambda + 2 \sin ^ { 2 } x + 2 \sin ^ { 2 } x } { \sin ( 1 - x \big ) \frac { \lambda + 2 \sin ^ { 2 } x } { \sin x } }  \ \end{array}
+$$
+
+# 2.2.4. Cac phép toan ve gioi han
+
+Cho cac gioi han hiu han （20 $f ( { \widehat { x } } ) = A$ va $\operatorname* { l i m } _ { x \to x _ { 0 } } g ( x ) = B$ $( x _ { 0 } \in \bar { \mathbb { R } } )$ ). Khi x→xo d6, ta có các phép toan gioi han sau:
+
+$$
+\begin{array} { r l } & { \underset { x  x _ { 0 } } { \operatorname* { l i m } } [ f ( x ) + g ( x ) ] = \underset { x  x _ { 0 } } { \operatorname* { l i m } } f ( x ) + \underset { x  x _ { 0 } } { \operatorname* { l i m } } g ( x ) . } \\ & { \underset { x  x _ { 0 } } { \operatorname* { l i m } } \big [ f ( x ) - g ( x ) \big ] = \underset { x  x _ { 0 } } { \operatorname* { l i m } } f ( x ) - \underset { x  x _ { 0 } } { \operatorname* { l i m } } g ( x ) . } \\ & { \underset { x  x _ { 0 } } { \operatorname* { l i m } } \big [ k . f ( x ) \big ] = k \underset { \alpha  x _ { 0 } } { \operatorname* { l i m } } f ( x ) , \mathrm { v i m } 9 \mathrm { i } \mathrm { m o i } k \in \mathbb { R } . } \\ & { \underset { x  x _ { 0 } } { \operatorname* { l i m } } \big [ f ( x ) . g ( x ) \big ] = \underset { x  x _ { 0 } } { \operatorname* { l i m } } f ( x ) . \underset { x  x _ { 0 } } { \operatorname* { l i m } } g ( x ) . } \\ & { \underset { x  x _ { 0 } } { \operatorname* { l i m } } \frac { f ( x ) } { g ( x ) } = \underset { x  x _ { 0 } } { \overset { \operatorname* { l i m } } { \operatorname* { l i m } } } g ( x ) } \end{array}
+$$
+
+# 2.2.5. Gioi han cua ham don dieu
+
+Dinh ly 2.6. i) Cho ham só $f ( x )$ tang tren $( a , x _ { 0 } )$ . Neu $f ( x )$ bi chan tren, thi ton   
+tai hiu han lim $f ( x )$ . Neu $f ( x )$ khong bi chan trén, thi $\operatorname* { l i m } _ { x \to x _ { 0 } ^ { - } } f ( x ) = + \infty .$ $x {  } x _ { 0 } ^ { - }$ （20   
+ii) Cho ham só $f ( x )$ giam trén $( a , x _ { 0 } )$ . Néu $f ( x )$ bi chan duoi, thi ton tai hitu han   
+lim $f ( x )$ .Neu $f ( x )$ khong bi chan duoi, thi $\operatorname* { l i m } _ { x \to x _ { 0 } ^ { - } } f ( x ) = - \infty .$   
+（20 $x {  } x _ { 0 } ^ { - }$ （20
+
+Ching minh i) Gia su $f ( x )$ tang va bi chan tren tren $( a , x _ { 0 } )$ . Tón tai huu han $A = \arg f ( x )$ . Theo He qua cua sup, ta ( $\mathsf { c o } \forall \epsilon > 0$ ， $\exists x ^ { * } \in ( a , x _ { 0 } ) : { \mathrm { ~ } } A - \epsilon <$ （ $x \in \left( a , x _ { 0 } \right)$ （204 $f ( x ^ { * } ) \leq A$ .Mat khac $f ( x )$ tang, nen $f ( x ) \geq f ( x ^ { * } ) \forall x \in ( x ^ { * } , x _ { 0 } )$ . Do d6, voi
+
+$\delta = x _ { 0 } - x ^ { \ast } > 0$ ,ta c6
+
+$$
+\epsilon < f ( x ) \leq A \forall x \in ( x ^ { * } , x _ { 0 } ) \Rightarrow | f ( x ) - A | < \epsilon \forall x : 0 > x - x _ { 0 } >
+$$
+
+Nhu vay $\operatorname* { l i m } _ { x \to x _ { 0 } ^ { - } } f ( x ) = A .$ Néu $f ( x )$ khong bi chan tren, tuc la $\forall A$ ， $\exists x ^ { * } \in ( a , x _ { 0 } ) : f ( x ^ { * } ) > A$ Do $f ( x )$ tang tren $( a , x _ { 0 } )$ ，nen $f ( x ) \geq f ( x ^ { * } ) > A \forall x \in ( x ^ { * } , x _ { 0 } ) \Rightarrow f ( x ) > A \forall x \in$ $( a , x _ { 0 } ) : \ x - x _ { 0 } > - \delta$ voi $\delta = x _ { 0 } - x ^ { * }$ . Nhu vay $\operatorname* { l i m } _ { x \to x _ { 0 } ^ { - } } f ( x ) = + \infty$
+
+ii) Chung minh tuong tu nhu trong i) hoäc áp dung i) cho ham so $g ( x ) = - f ( x )$ ：
+
+# 2.3. Dai luong vo cung bé va vo cung lon
+
+# 2.3.1. Dinh nghia
+
+$+ \ : \mathrm { H a m } \ : \mathrm { s } \widetilde { 0 } \ : \alpha ( x )$ duoc goi la vo cung $b \acute { e }$ , viet tat la VCB tai $x _ { 0 }$ néu lim $\alpha ( x ) = 0$ · $x {  } x _ { 0 }$ $+ \ \mathbf { C h o } \ \alpha ( x ) , \beta ( x )$ la hai VCB tai $x _ { 0 }$ $\begin{array} { r } { \mathrm { \ i . \phantom { + } } \mathrm { N \hat { e } u } \operatorname* { l i m } _ { x \to x _ { 0 } } \frac { \alpha ( x ) } { \beta ( x ) } = 0 } \end{array}$ 啦 $\alpha ( x )$ duoc goi a VCB bac cao hon $\beta ( x )$ tai $x _ { 0 }$ , ky hieu la $\alpha ( x ) = O ( \beta ( x ) )$ tai $x _ { 0 }$ ：
+
+$+ \ \mathbf { C h o } \ \alpha ( x ) , \beta ( x )$ la hai VCB tai $\scriptstyle { \mathcal { X } } _ { 0 }$ Neu $\operatorname* { l i m } _ { x  x _ { 0 } } { \frac { \alpha ( x ) } { \beta ( x ) } } = m \neq 0$ thi $\alpha ( \boldsymbol { x } ) , \beta ( \boldsymbol { x } )$ duoc goi la hai VCB cung cap tai $\scriptstyle { \mathcal { X } } _ { 0 }$ . Dac biet, khi $m = 1$ ,ta goi $\alpha ( \boldsymbol { x } ) , \beta ( \boldsymbol { x } )$ duoc goi la hai VCB tuong duong tai xo, ky hieu $\alpha ( x ) \sim \beta ( x )$ tai $x _ { 0 }$ ：
+
+Tham khao cac dinh nghia duoi day
+
+$+ \ \mathrm { H \dot { a } m }$ $\alpha ( x )$ duoe g $\nu \hat { o }$ cing lonvieta l $x _ { 0 }$ neu ham sb $\textstyle { \frac { 1 } { \alpha ( x ) } }$ duqc goi la vo cung $b \acute { e }$ tai $x _ { 0 }$ ，
+
+$+ \mathrm { C h o } \alpha ( x ) , \beta ( x )$ la hai VCL tai $x _ { 0 }$ va lim $\begin{array} { r } { \frac { \alpha ( x ) } { \beta ( x ) } = m } \end{array}$ . Néu $m = \infty$ thi $\alpha ( x )$ duoc goi la VCL bac cao hon $\beta ( x )$ tai $x _ { 0 }$ . Neu $m \neq 0$ thi $\alpha ( \boldsymbol { x } ) , \beta ( \boldsymbol { x } )$ duoc goi la hai VCL cung cap tai $x _ { 0 }$ . Dac biet, khi $m = 1$ ,ta goi $\alpha ( \boldsymbol { x } ) , \beta ( \boldsymbol { x } )$ duoc goi la hai $V C L$ tuong duong tai $x _ { 0 }$ ：
+
+Hé qud: Neu $\alpha ( x ) \sim \alpha _ { 1 } ( x )$ va $\beta ( x ) \sim \beta _ { 1 } ( x )$ tai $x _ { 0 }$ ,thi
+
+$$
+\operatorname* { l i m } _ { x \to x _ { 0 } } { \frac { \alpha ( x ) } { \beta ( x ) } } = \operatorname* { l i m } _ { x \to x _ { 0 } } { \frac { \alpha _ { 1 } ( x ) } { \beta _ { 1 } ( x ) } } .
+$$
+
+Vi du 2.7. Dung VCB tuong duong, tim gioi han
+
+$$
+\operatorname* { l i m } _ { x \to 0 } { \frac { \sin ^ { 2 } 3 x } { x \sin 5 x } } .
+$$
+
+Gidi Theo cong thuic $\operatorname* { l i m } _ { x \to 0 } { \frac { \sin x } { x } } = 1$ ,ta ${ \mathrm { : } } 6 \sin ( k x ) \sim k x$ . Tur he qua tren, suy ra
+
+$$
+\operatorname* { l i m } _ { x \to 0 } { \frac { \sin ^ { 2 } 3 x } { x \sin 5 x } } = \operatorname* { l i m } _ { x \to 0 } { \frac { ( 3 x ) ^ { 2 } } { x 5 x } } = { \frac { 9 } { 5 } } .
+$$
+
+# 2.3.2. Tinh chat
+
+Dua vao dinh nghia VCB va tinh chat cua gioi han, ta có các tinh chat dai só cua VCB nhu sau:
+
+1. Néu $\alpha _ { i } ( x ) i = 1 , 2 , . . . , n$ la cac VCB tai $x _ { 0 }$ ,thi $\sum _ { i = 1 } ^ { n } \alpha _ { i } ( x )$ va $\prod _ { i = 1 } ^ { n } \alpha _ { i } ( x )$ cung la（20VCB tai $x _ { 0 }$ ：
+
+2. Neu $\alpha ( x )$ la VCB tai $x _ { 0 }$ va $\beta ( x )$ bi chan trong lan can cua diém $x _ { 0 }$ ,thi $\alpha ( \boldsymbol { x } ) . \beta ( \boldsymbol { x } )$ cung la VCB tai $x _ { 0 }$ ：
+
+3. Cho $\alpha ( x ) , \beta ( x )$ la hai VCB tai $x _ { 0 }$ ,neu $\alpha ( x ) \sim \beta ( x )$ ,thi $c . \alpha ( x ) \sim c . \beta ( x )$ .
+
+Vi du 2.8. Cho $\alpha \neq \beta$ , tim gioi han
+
+$$
+\operatorname* { l i m } _ { x \to 0 } { \frac { e ^ { a x } - e ^ { b x } } { \sin ( \alpha x ) - \sin ( \beta x ) } } .
+$$
+
+Gidi Theo cong thutc $\operatorname* { l i m } _ { x \to 0 } { \frac { e ^ { x } - 1 } { x } } = 1$ ta c6 $e ^ { x } - 1 \sim x$ @ $0 \Rightarrow e ^ { a x } - e ^ { b x } \sim ( a - b ) x$ . Tur sin $x \sim x \Rightarrow \sin ( a x ) - \sin ( b x ) \sim ( a - b ) x$ Do d6
+
+$$
+\operatorname* { l i m } _ { x \to 0 } { \frac { e ^ { a x } - e ^ { b x } } { \sin ( \alpha x ) - \sin ( \beta x ) } } = \operatorname* { l i m } _ { x \to 0 } { \frac { ( a - b ) x } { ( \alpha - \beta ) x } } = { \frac { a - b } { \alpha - \beta } } .
+$$
+
+# 2.4. Ham lien tuc
+
+# 2.4.1. Dinh nghia
+
+Cho ham só $y = f ( x )$ xác dinh tren mien $D$ va $x _ { 0 } \in D$ ：
+
+$+ \operatorname { H a m } \ s \tilde { 0 } \ f ( x )$ dugc goi la lien tuc tai $x _ { 0 }$ khi va chi khi lim $f ( x ) = f ( x _ { 0 } )$ （204 $x {  } x _ { 0 }$ （20   
+Hay $\forall \epsilon > 0$ $) , \ \exists \delta > 0 , \forall x : 0 < | x - x _ { 0 } | < \delta \Rightarrow | f ( x ) - f ( x _ { 0 } ) | < \epsilon .$ （20   
+$+ \ \mathrm { H } \mathrm { \bar { a } m } \ \mathrm { s } \tilde { 0 } \ f ( x )$ duqc goi la lien tuc trai tai $x _ { 0 }$ khi va chi khi lim $f ( x ) = f ( x _ { 0 } )$ x→x0   
+Hay $\forall \epsilon > 0 , \exists \delta > 0 , \forall x : 0 > x - x _ { 0 } > - \delta \Rightarrow | f ( x ) - f ( x _ { 0 } ) | < \epsilon .$   
+$+ \operatorname { H a m } \ s \tilde { 0 } \ f ( x )$ duoc goi la lien tuc phai tai $x _ { 0 }$ khi va chi khi lim f(x) = f(xo). （20 ${ x } \to { x } _ { 0 } ^ { + }$   
+Hay $\forall \epsilon > 0 , \exists \delta > 0 , \forall x : 0 < x - x _ { 0 } < \delta \Rightarrow | f ( x ) - f ( x _ { 0 } ) | < \epsilon .$ Nhan xet: $f ( x )$ lien tuc tai $x _ { 0 }$ khi va chi khi $f ( x )$ lien tuc trai va lien tuc phai tai
+
+$x _ { 0 }$ ：
+
+$+ \ \mathrm { H \dot { a } m }$ s6 $f ( x )$ dugc goi la gian doan tai $x _ { 0 }$ ,neu $f ( x )$ khong lien tuc tai $x _ { 0 }$ ,khi
+
+d6 $x _ { 0 }$ duoc goi la diem gian doan cua $f ( x )$   
++ Neu $x _ { 0 }$ la diem gian doan cua $f ( x )$ va ton tai huru han cac gioi han $\operatorname* { l i m } _ { x \to x _ { 0 } ^ { + } } f ( x ) =$ （20   
+$f ( x _ { 0 } ^ { + } )$ , lim_ f(x)= f(xσ),thi $h = | f ( x _ { 0 } ^ { + } ) - f ( x _ { 0 } ^ { - } ) |$ duqc goi la do dai cua buoc x→xo   
+nhdy cua ham $f ( x )$ tai $x _ { 0 }$ ：   
+（20 $+ \ \mathrm { H \dot { a } m }$ s6 $f ( x )$ duqc goi la lien tuc trén khoang $( a , b )$ ，neu $f ( x )$ lien tuc tai   
+$\forall x _ { 0 } \in ( a , b ) .$   
+$+ \operatorname { H a m } \ s \tilde { 0 } \ f ( x )$ dugc goi la lien tuc tren doan $[ a , b ]$ ,neu $f ( x )$ lien tuc tren khoäng   
+$( a , b )$ , lien tuc trai tai $b$ va lien tuc phai tai $a$ ：
+
+Vi du 2.9. Tim $a , b$ de ham so sau lien tuc trén $\mathbb { R }$
+
+$$
+f ( x ) = \left\{ \begin{array} { l l } { a x ^ { 2 } - b x + 1 } & { n \hat { e } u \ : x < 1 , } \\ { 2 a - b } & { n \hat { e } u \ : 1 \leq x \leq 2 , } \\ { b x + a - 1 } & { n \hat { e } u \ : x > 2 . } \end{array} \right.
+$$
+
+Gidi -Neu $x < 1$ ,thi $f ( x ) = a x ^ { 2 } - b x + 1$ lien tuc tren $\mathbb { R }$ , suy ra $f ( x )$ lien tuc tren $( - \infty , 1 )$ ：
+
+-Neu $x \in [ 1 , 2 ]$ ,thi $f ( x ) = 2 a - b$ lien tuc tren $\mathbb { R }$ , suy ra $f ( x )$ lien tuc tren [1, 2]. -Neu $x > 2$ ，thi $f ( x ) = b x + a - 1$ lien tuc tren $\mathbb { R }$ ，suy ra $f ( x )$ lien tuc tren $( 2 , + \infty )$ ：
+
+Nhu vay $f ( x )$ lien tuc tren $\mathbb { R }$ khi va chi khi $f ( x )$ lien tuc trai tai 1 va lien tuc phai tai 2. Tuc la
+
+$$
+\{ \begin{array} { l l } { \displaystyle \operatorname* { l i m } _ { x  1 ^ { - } } f ( x ) = f ( 1 ) , } \\ { \displaystyle \operatorname* { l i m } _ { x  2 ^ { + } } f ( x ) = f ( 2 ) , } \end{array}  \Leftrightarrow \{ \begin{array} { l l } { \displaystyle \operatorname* { l i m } _ { x  1 ^ { - } } ( a x ^ { 2 } - b x + 1 ) = 2 a - b , \medskip } \\ { \displaystyle \operatorname* { l i m } _ { x  2 ^ { + } } ( b x + a - 1 = 2 a - b , } \end{array} 
+$$
+
+$$
+\Leftrightarrow \left\{ { \begin{array} { l } { a - b + 1 = 2 a - b , } \\ { 2 b + a - 1 = 2 a - b . } \end{array} } \right.
+$$
+
+Vay $a = 1$ va $\begin{array} { r } { b = \frac { 2 } { 3 } } \end{array}$ , ham so $f ( x )$ lien tuc tren $\mathbb { R }$ ：
+
+# 2.4.2. Tinh chat dai só
+
+Cho $f ( x ) , g ( x )$ la hai ham so lien tuc tren mién $D$ , dung dinh nghia ham lien tuc va cäc dinh ly vé gioi han ham só, ta có cäc tinh chat sau:
+
+$+ \mathrm { H } \mathrm { \dot { a } m }$ s6 $f ( x ) + g ( x )$ lien tuc tren mién $D$   
++ Ham só $f ( x ) . g ( x )$ lien tuc tren mien $D$ ：   
+$+ \mathrm { H \bar { a } m } \ s \hat { \sigma } \ k g ( x )$ lien tuc tren mién $D$ ,voi $k = c o n s t$ ·   
+$+ \ : \mathrm { H a m } \ : \mathrm { s } \widetilde { 0 } \ : | f ( x ) |$ lien tuc trén mien $D$ ：   
+$+ \ \mathrm { H \bar { a } m \ s \hat { o } } \ \frac { f ( x ) } { g ( x ) }$ lien tuc tren mien $D$ tru nhung diem $x _ { 0 }$ sao cho $g ( x _ { 0 } ) = 0$ ：
+
+Tu cac tinh chat nay suy ra các ket quaä sau:
+
+He qud
+
+$+ \ \mathrm { H \dot { a } m }$ da thuc bac $n$ ， $y = P _ { n } ( x )$ lien tuc tren $\mathbb { R }$ ：   
++ Ham phan thuc y = $\begin{array} { r } { y = { \frac { P _ { n } ( x ) } { Q _ { m } ( x ) } } } \end{array}$ lien tuc tren $\mathbb { R }$ trur nhing diem $x _ { 0 }$ sao cho $Q _ { m } ( x _ { 0 } ) = 0$ $+ \mathrm { C a c }$ ham só luong giac, ham só mu, ham só logarit, các ham hypebolic va các ham nguoc lien tuc tren tap xác dinh cüa chung.
+
+Vi du 2.10. Cho $f ( x ) , g ( x )$ lien tuc trén mien $D$ . Ching minh rang cac ham $s \hat { o } ^ { \prime }$ ：， $\operatorname* { m i n } \{ f ( x ) , g ( x ) \} \nu \dot { a } \operatorname* { m a x } \{ f ( x ) , g ( x ) \}$ cung lien tuc tren $D$
+
+Gidi Bang cach sur dung cac he thuc
+
+$$
+\operatorname* { m a x } \{ f ( x ) , g ( x ) \} = { \frac { 1 } { 2 } } { \Big ( } f ( x ) + g ( x ) + | f ( x ) - g ( x ) | { \Big ) } \forall x \in D ,
+$$
+
+$$
+\operatorname* { m i n } \{ f ( x ) , g ( x ) \} = { \frac { 1 } { 2 } } { \Big ( } f ( x ) + g ( x ) - | f ( x ) - g ( x ) | { \Big ) } \forall x \in D
+$$
+
+va các tinh chat tren, ta co cac ham $\operatorname { s } \tilde { \operatorname { o } } \operatorname* { m i n } \{ f ( x ) , g ( x ) \} \operatorname { v } \mathrm { a } \operatorname { m a x } \{ f ( x ) , g ( x ) \}$ cung lien tuc tren $D$ ： 一
+
+# 2.4.3. Cuc tri cua ham lien tuc
+
+Dinh ly 2.11. Néu ham so $f ( x )$ lien tuc trén $[ a , b ]$ va $f ( a ) . f ( b ) < 0$ , thi ton tai （20 $c \in ( a , b )$ sao cho $f ( c ) = 0$ ：
+
+Ching minh (phuong pháp chia doi)
+
+Tu $f ( a ) . f ( b ) < 0$ , khong mat tinh tóng quat, ta gia sur rang $f ( a ) < 0$ va $f ( b ) > 0$ ： Buoc 1: Chia doan $[ a , b ]$ thanh 2 doan $[ a , c ]$ @ $[ c , b ]$ voi $\textstyle c = { \frac { a + b } { 2 } }$ . Xay ra 3 truong hop
+
+$+$ Truong hop 1: Neu $f ( c ) > 0$ thi dat $a _ { 1 } = a , b _ { 1 } = c$ . Ta luon c6
+
+$$
+f ( a _ { 1 } ) < 0 , f ( b _ { 1 } ) > 0 , [ a _ { 1 } , b _ { 1 } ] \subset [ a , b ] \ \mathrm { ~ v a ~ } b _ { 1 } - a _ { 1 } = \frac { b - a } { 2 } .
+$$
+
+$+$ Truong hop 2: Neu $f ( c ) < 0$ thi dat $a _ { = } c , b _ { 1 } = b$ . Ta cung c6
+
+$$
+f ( a _ { 1 } ) < 0 , f ( b _ { 1 } ) > 0 , [ a _ { 1 } , b _ { 1 } ] \subset [ a , b ] \ \mathrm { ~ v a ~ } b _ { 1 } - a _ { 1 } = \frac { b - a } { 2 } .
+$$
+
+$+ ^ { ' }$ Truong hop 3: Neu $f ( c ) = 0$ thi dung.
+
+Buoc 2: Chi doan $[ a _ { 1 } , b _ { 1 } ]$ thanh 2 doan $[ a _ { 1 } , c ]$ 间 $[ c , b _ { 1 } ]$ $\begin{array} { r } { c = \frac { a _ { 1 } + b _ { 1 } } { 2 } } \end{array}$ . Xay ra 2 truong hop
+
+$+$ Truong hop 1: Neu $f ( c ) > 0$ thi dat $a _ { 2 } = a _ { 1 } , b _ { 2 } = c .$ . Ta luon c6
+
+$$
+f ( a _ { 2 } ) < 0 , f ( b _ { 2 } ) > 0 , [ a _ { 2 } , b _ { 2 } ] \subset [ a _ { 1 } , b _ { 1 } ] \ \mathrm { ~ v a ~ } b _ { 2 } - a _ { 2 } = \frac { b - a } { 2 ^ { 2 } } .
+$$
+
+$+$ Truong hop 2: Neu $f ( c ) < 0$ thi dat $a _ { 2 } = c , b _ { 2 } = b _ { 1 }$ . Ta cung c6
+
+$$
+f ( a _ { 2 } ) < 0 , f ( b _ { 2 } ) > 0 , [ a _ { 2 } , b _ { 2 } ] \subset [ a _ { 1 } , b _ { 1 } ] \ \mathrm { ~ v \ " { a } } \ b _ { 2 } - a _ { 2 } = \frac { b - a } { 2 ^ { 2 } } .
+$$
+
+Buoc $n$ : Chia doan $\begin{array} { r } { \left[ a _ { n - 1 } , b _ { n - 1 } \right] \operatorname { t h a n h } 2 \operatorname { d o a n } \left[ a _ { n - 1 } , c \right] \operatorname { v \hat { a } } \left[ c , b _ { n - 1 } \right] \operatorname { v \hat { o } i } c = \frac { a _ { n - 1 } + b _ { n - 1 } } { 2 } . } \end{array}$ Xay ra 2 truong hop
+
+$+$ Trrong hop 1: Néu $f ( c ) > 0$ thi dat $a _ { n } = a _ { n - 1 } , b _ { n } = c$ Ta luon c6
+
+$$
+f ( a _ { n } ) < 0 , f ( b _ { n } ) > 0 , [ a _ { n } , b _ { n } ] \subset [ a _ { n - 1 } , b _ { n - 1 } ] \mathrm { v a } b _ { n } - a _ { n } = { \frac { b - a } { 2 ^ { n } } } .
+$$
+
+$+$ Truong hop 2: Néu $f ( c ) < 0$ thi dat $a _ { n } = c , b _ { n } = b _ { n - 1 }$ . Ta cung c6
+
+$$
+f ( a _ { n } ) < 0 , f ( b _ { n } ) > 0 , [ a _ { n } , b _ { n } ] \subset [ a _ { n - 1 } , b _ { n - 1 } ] \mathrm { v a } b _ { n } - a _ { n } = { \frac { b - a } { 2 ^ { n } } } .
+$$
+
+Nhu vay, neu tim duoc $c$ sé dimg lai, neu khong tim duoc $c$ thi nhan duoc hai day $\mathrm { k } \hat { \mathbf e }$ nhau $\left( a _ { n } \right)$ va $\left( b _ { n } \right)$ . Khi dó, ton tai duy nhat $c$ sao cho $\operatorname* { l i m } _ { n \to \infty } a _ { n } = \operatorname* { l i m } _ { n \to \infty } b _ { n } = c .$ Ket hop dieu nay voi tinh lien tuc cüa ham $f ( x )$ ,ta c6
+
+$$
+\operatorname* { l i m } _ { n \to \infty } f ( a _ { n } ) = f ( c ) \leq 0 { \mathrm { ~ } } { \mathrm { ~ v { \dot { a } } ~ } } \operatorname* { l i m } _ { n \to \infty } f ( b _ { n } ) = f ( c ) \geq 0 \Rightarrow f ( c ) = 0 .
+$$
+
+Vi du 2.12. Tim nghiém xap xi cua phuong trinh
+
+$$
+\sin x - { \frac { x } { 2 } } = 0
+$$
+
+trén [1,3] dén do chinh xac 2 chit s6 thap phan.
+
+Giai Dat $f ( x ) = \sin x - { \frac { x } { 2 } }$ , ta c6 $f ( x )$ lien tuc tren [1, 3] va $f ( 1 ) f ( 3 ) \approx 0 . 3 4 ( - 1 . 3 6 ) <$ O. Dung phuong phap chia doi, suy ra
+
+![](images/abed8889f84c38a535e669d8954762bc6865039661b9c645d98528ca3efbcc78.jpg)
+
+Nhu vay, nghiem xap xi la $x _ { 0 } \approx 1 . 9 0 { \pm } 0 . 0 1$ ：
+
+Vi du 2.13. Cho ham s6 $f ( x )$ lien tuc trén $[ a , b ] \nu \dot { a } \gamma \in ( f ( a ) , f ( b ) )$ . Ching minh rang ton tai $c \in ( a , b )$ sao cho $f ( c ) = \gamma$ . ■
+
+Giai Dat $g ( x ) = f ( x ) - \gamma$ .Do $f ( x )$ lien tuc tren $[ a , b ]$ va $f ( a ) < \gamma < f ( b )$ ,nen $g ( x )$ cung lien tuc tren $[ a , b ]$ va $g ( a ) . g ( b ) < 0$ . Theo tinh chat tru mat cua $f ( x )$ ， ta có ton tai $c \in ( a , b )$ sao cho $g ( c ) = 0 \Rightarrow f ( c ) = \gamma .$
+
+# 2.4.4. Tinh chat bi chan
+
+Dinh ly 2.14. Néu ham so $f ( x )$ lien tuc trén $[ a , b ]$ thi $f ( x )$ dat gia tri lon nhat vd nho nhat trén $[ a , b ]$ . Hay ton tai $x _ { 1 } , x _ { 2 } \in [ a , b ]$ sao cho
+
+$$
+f ( x _ { 1 } ) = \operatorname* { m i n } _ { x \in [ a , b ] } f ( x ) , f ( x _ { 2 } ) = \operatorname* { m a x } _ { x \in [ a , b ] } f ( x ) .
+$$
+
+Ching minh $^ +$ Ham so $f ( x )$ bi chan tren $/ [ a , b ]$ (phan ching).
+
+That vay, gia sur $f ( x )$ khong bi chan tren $/ \left[ a , b \right]$ ,hay $\forall n \in \mathbb { N }$ ， $\exists y _ { n } \in [ a , b ]$ sao cho $f ( y _ { n } ) ~ \geq ~ n$ . Day $\left( y _ { n } \right)$ bi chan, theo Bolzano-Weierstrass, ton tai day con $\left( y _ { n _ { k } } \right)$ sao cho $\operatorname* { l i m } _ { k \to \infty } y _ { n _ { k } } \ : = \ : y ^ { * } \in [ a , b ] \Rightarrow \operatorname* { l i m } _ { k \to \infty } f ( y _ { n _ { k } } ) = f ( y ^ { * } )$ Mat khac $f ( y _ { n _ { k } } ) \geq n _ { k } \Rightarrow \operatorname* { l i m } _ { k \to \infty } f ( y _ { n _ { k } } ) = + \infty$ . Dieu nay mau thuan. Nhu vay $f ( x )$ bi chan
+
+tren $/ \left[ a , b \right]$ ：
+
+$+ \ \mathrm { H } \mathrm { \bar { a } m } \ \mathrm { s } \tilde { 0 } \ f ( x )$ bi chan duoi $/ [ a , b ]$ (ching minh tuong tu). Nhu vay, ham só $f ( x )$ bi chan $/ [ a , b ]$ ： $+ \arcsin$ tai $x _ { 1 } \in [ a , b ]$ sao cho $f ( x _ { 1 } ) = \operatorname* { m i n } _ { x \in [ a , b ] } f ( x )$
+
+That vay, do $f ( x )$ bi chan duoi $/ \left[ a , b \right]$ nén ton tai can duoi dung cua $f ( x )$ tren （20 $[ a , b ]$ .Dat $m = \operatorname* { i n f } _ { x \in [ a , b ] } f ( x )$ . Theo dinh nghia, voi moi $\textstyle \epsilon = { \frac { 1 } { n } } > 0$ ， $\exists y _ { n } \in [ a , b ] \ :$ $\begin{array} { r } { m \leq f ( y _ { n } ) \leq m + \frac { 1 } { n } } \end{array}$ .Tu $y _ { n } \in [ a , b ]$ va dinh ly Bolzano-Weierstrass, ton tai mot day con $\left( y _ { n _ { k } } \right)$ sao cho
+
+$$
+\left\{ \begin{array} { l l } { 0 \leq f ( y _ { n _ { k } } ) - m \leq \frac { 1 } { n _ { k } } } \\ { \displaystyle \operatorname* { l i m } _ { k \to \infty } y _ { n _ { k } } = x _ { 1 } \in [ a , b ] } & { \displaystyle \Rightarrow \left\{ \begin{array} { l l } { \displaystyle \operatorname* { l i m } _ { k \to \infty } f ( y _ { n _ { k } } ) = m } \\ { \displaystyle \operatorname* { l i m } _ { k \to \infty } f ( y _ { n _ { k } } ) = f ( x _ { 1 } ) } \end{array} \right. } & { \Rightarrow m = f ( x _ { 1 } ) } \end{array} \right.
+$$
+
+Nhu vay $f ( x _ { 1 } ) = \operatorname* { m i n } _ { x \in [ a , b ] } f ( x )$ $+ \arcsin$ tai $x _ { 2 } \in [ a , b ]$ sao cho $f ( x _ { 2 } ) = \operatorname* { m a x } _ { x \in [ a , b ] } f ( x )$ ，
+
+Ta dat $M = \operatorname* { s u p } \ f ( x )$ va duoc chung minh tuong tu. $\scriptstyle x \in [ a , b ]$ （
+
+Vi du 2.15. Cho hai ham $s \hat { o ^ { \prime } } f ( x ) \nu \dot { a } g ( x )$ lien tuc tren $[ a , b ]$ thoa man
+
+$$
+0 < g ( x ) < f ( x ) \forall x \in [ a , b ] .
+$$
+
+Ching minh rang: Ton tai $\lambda > 0$ sao cho $( 1 + \lambda ) g ( x ) \leq f ( x ) \ \forall x \in [ a , b ] .$
+
+Gidi Dat $\begin{array} { r } { h ( x ) = \frac { f ( x ) } { g ( x ) } } \end{array}$ , theo tinh chat cua ham lien tuc, ta c6 $h ( x )$ lien tuc tren $[ a , b ]$ . Theo tinh chat bi chan cua $h ( x )$ , ton tai $x _ { 1 } \in [ a , b ]$ sao cho $h ( x _ { 1 } ) = \operatorname* { m i n } _ { x \in [ a , b ] } h ( x )$ ， Tu $0 < g ( x ) < f ( x ) \forall x \in [ a , b ]$ suy ra $h ( x _ { 1 } ) > 1$ ,dat $\lambda = h ( x _ { 1 } ) - 1 > 0$ (const). Khi d6
+
+$$
+\forall x \in [ a , b ] : h ( x ) \geq h ( x _ { 1 } ) = 1 + \lambda \Rightarrow f ( x ) \geq ( 1 + \lambda ) g ( x ) .
+$$
+
+# 2.5. Ham lien tuc deu
+
+# 2.5.1. Dinh nghia
+
+Ham só $f ( x )$ duqc goi la lien tuc déu tren mien $D$ khi va chi khi
+
+$$
+\forall \epsilon > 0 , \exists \delta = \delta ( \epsilon ) > 0 , \forall x , x ^ { \prime } \in D : | x - x ^ { \prime } | < \delta \Rightarrow | f ( x ) - f ( x ^ { \prime } ) | < \delta
+$$
+
+# 2.5.2. Quan he giua tinh lien tuc va lien tuc deu
+
+Dinh ly 2.16. Néu ham $f ( x )$ lien tuc deu trén mien $D$ ,thi $f ( x )$ lien tuc tren $D$ ：
+
+Ching minh Voi moi $x _ { 0 } \in D$ bat $\mathbf { k } \grave { \mathbf { y } }$ , theo dinh nghia cua lien tuc déu, chon dac biet $x ^ { \prime } = x _ { 0 }$ ，
+
+$$
+\forall \epsilon > 0 , \exists \delta > 0 , \forall x : | x - x _ { 0 } | < \delta \Rightarrow | f ( x ) - f ( x _ { 0 } ) | < \epsilon
+$$
+
+$\Rightarrow f ( x )$ lien tuc tai $x _ { 0 }$ . Nhu vay $f ( x )$ lien tuc tren $D$ .
+
+Nhan xét 2.17. Néu ham $f ( x )$ lien tuc trén $D \not \Rightarrow f ( x )$ lien tuc deu trén $D$ ：
+
+Vi du Ham só $f ( x ) = x ^ { 2 }$ lien tuc tren $\mathbb { R }$ ,nhung $f ( x )$ khong lien tuc déu tren $\mathbb { R }$ ， That vay, theo dinh nghia cua lien tuc deu, $f ( x )$ khong lien tuc deu trén $\mathbb { R }$ khi va chi khi
+
+$$
+\exists \epsilon > 0 , \forall \delta > 0 , \exists x , x ^ { \prime } \in \mathbb { R } : | x - x ^ { \prime } | < \delta \Rightarrow | f ( x ) - f ( x ^ { \prime } ) | \geq \epsilon .
+$$
+
+Ta chon $\begin{array} { r } { \epsilon = \frac { 1 } { 2 } , x = \frac { 1 } { \delta ^ { 3 } } , x ^ { \prime } = \frac { 1 } { \delta ^ { 3 } } + \frac { \delta } { 2 } , } \end{array}$ Suy ra
+
+$$
+| x - x ^ { \prime } | = { \frac { \delta } { 2 } } < \delta \forall \delta > 0 \mathrm {  ~ \ v a ~ } | f ( x ) - f ( x ^ { \prime } ) | = | { \frac { 1 } { \delta ^ { 6 } } } - \left( { \frac { 1 } { \delta ^ { 3 } } } + { \frac { \delta } { 2 } } \right) ^ { 2 } |
+$$
+
+$$
+= \frac { 1 } { \delta ^ { 2 } } + \frac { \delta ^ { 2 } } { 4 } \geq 1 > \frac { 1 } { 2 } = \epsilon .
+$$
+
+Nhu vay, $f ( x )$ khong lien tuc deu tren $\mathbb { R }$ .
+
+Tuy nhien, néu $f ( x )$ lien tuc tren mot doan thi ta có dinh ly (Heinel) sau:
+
+Dinh ly 2.18. Neu ham $f ( x )$ lien tuc trén $[ a , b ]$ ,thi $f ( x )$ lien tuc deu trén $[ a , b ]$ ：
+
+Chitng minh Gia sur nguoc lai rang $f ( x )$ khong lien tuc deu tren $[ a , b ]$ , hay
+
+$$
+\exists \epsilon > 0 , \forall \delta > 0 , \exists x , x ^ { \prime } \in [ a , b ] : | x - x ^ { \prime } | < \delta \Rightarrow | f ( x ) - f ( x ^ { \prime } ) | \geq \epsilon .
+$$
+
+Chon $\begin{array} { r } { \delta = \frac { 1 } { n } \ \forall n \geq 1 \Rightarrow x _ { n } , x _ { n } ^ { \prime } \in [ a , b ] : } \end{array}$ $$
+| x _ { n } - x _ { n } ^ { \prime } | < { \frac { 1 } { n } } , | f ( x _ { n } ) - f ( x _ { n } ^ { \prime } ) | \geq \epsilon .
+$$
+
+Tu $x _ { n } \in [ a , b ] \forall n \geq 1$ , theo Bolzano-Weierstrass, ton tai day con $( x _ { n _ { k } } )$ thoa man
+
+$$
+\operatorname* { l i m } _ { k \to \infty } x _ { n _ { k } } = x ^ { * } \in [ a , b ] .
+$$
+
+Ket hop dieu nay voi $\begin{array} { r } { | x _ { n _ { k } } - x _ { n _ { k } } ^ { \prime } | < \frac { 1 } { n _ { k } } , ~ | f ( x _ { n _ { k } } ) - f ( x _ { n _ { k } } ^ { \prime } ) | \geq \epsilon } \end{array}$ ，cho $k  \infty$ suy ra $x _ { n _ { k } } ^ { \prime } \to x ^ { * }$ va $| f ( x ^ { * } ) - f ( x ^ { * } ) | \geq \epsilon$ , mau thuan voi gia thiet $\epsilon > 0$ ： □
+
+Vi du 2.19. Ching minh rang $f ( x ) = { \sqrt { x } }$ lien tuc déu trén $[ 0 , + \infty )$ ：
+
+C $\mathrm {  ~ \ i ~ } \stackrel { , } { a i } + \mathrm {  ~ \cal { X } e t }$ ham $f ( x )$ tren doan $[ 0 , 1 ]$ , theo dinh ly 2.18, $f ( x )$ lien tuc déu tren$[ 0 , 1 ]$ ：
+
++ Xet ham $f ( x )$ tren doan $[ 1 , + \infty ) , \forall x _ { 1 } , x _ { 2 } \in [ 1 , + \infty ) : \ | x _ { 1 } - x _ { 2 } | < \delta$ Ta c6
+
+$$
+| f ( x _ { 1 } ) - f ( x _ { 2 } ) | = | { \sqrt { x _ { 1 } } } - { \sqrt { x _ { 2 } } } | = { \frac { | x _ { 1 } - x _ { 2 } | } { \sqrt { x _ { 1 } } + { \sqrt { x _ { 2 } } } } } \leq { \frac { 1 } { 2 } } | x _ { 1 } - x _ { 2 } | < { \frac { \delta } { 2 } } .
+$$
+
+Chon $\delta : 0 < \delta < 2 \epsilon$ . Theo dinh nghia, ham $f ( x )$ lien tuc deu tren $[ 1 , + \infty )$ .Do vay, $f ( x )$ lien tuc deu $/ [ 0 , + \infty )$ （2
+
+Vi du 2.20. Ching minh rang $f ( x ) = \cos x ^ { 2 }$ khong lien tuc deu trén $[ 0 , + \infty )$ ：
+
+Giai Theo dinh nghia, $f ( x )$ khong lien tuc deu tren $D$ khi va chi khi
+
+$$
+\exists \epsilon > 0 , \forall \delta > 0 , \exists x _ { 1 } , x _ { 2 } \in D : | x _ { 1 } - x _ { 2 } | < \delta \Rightarrow | f ( x _ { 1 } ) - f ( x _ { 2 } ) | \geq \epsilon .
+$$
+
+Trong bai nay, chon $\epsilon \in ( 0 , 2 ]$ . V6i moi $\delta > 0$ , ta chon
+
+$$
+x _ { k } = { \sqrt { 2 k \pi } } , \ x _ { k } ^ { \prime } = { \sqrt { ( 2 k + 1 ) \pi } } \ \mathrm { \ v { o i } } \ k \in \mathbb { N } , k > { \frac { \pi } { 2 \delta ^ { 2 } } } .
+$$
+
+Khi d6,
+
+$$
+x _ { k } ^ { \prime } | = | { \sqrt { 2 k \pi } } - { \sqrt { ( 2 k + 1 ) \pi } } | = { \frac { \pi } { { \sqrt { 2 k \pi } } + { \sqrt { ( 2 k + 1 ) \pi } } } } < { \frac { \pi } { { \sqrt { 2 k \pi } } } } < \delta
+$$
+
+va
+
+$$
+| f ( x _ { k } ) - f ( x _ { k } ^ { \prime } ) | = | \cos 2 k \pi - \cos ( 2 k + 1 ) \pi | = 2 \geq \epsilon .
+$$
+
+Nhu vay, ham $f ( x ) = \cos x ^ { 2 }$ khong lien tuc deu tren $[ 0 , + \infty )$ ：
+
+# 2.6. Dao ham
+
+# 2.6.1. Dinh nghia
+
+Cho ham só $f ( x )$ xác dinh tren khoang $( a , b )$ ：
+
+$+ \ \mathrm { H \dot { a } m }$ s0 $f ( x )$ dugc goi la kha vi (con goi la có dao ham) tai diem $x _ { 0 } \in ( a , b )$ ， néu ton tai huu han gioi han
+
+$$
+\operatorname* { l i m } _ { x \to x _ { 0 } } { \frac { f ( x ) - f ( x _ { 0 } ) } { x - x _ { 0 } } } \ \mathrm { h a y } \quad \operatorname* { l i m } _ { \Delta _ { x } \to 0 } { \frac { f ( x _ { 0 } + \Delta _ { x } ) - f ( x _ { 0 } ) } { \Delta _ { x } } } .
+$$
+
+Gioi han nay dugc ky hieu boi $f ^ { \prime } ( x _ { 0 } )$ hay $\textstyle { \frac { d f } { d x } } ( x _ { 0 } )$ va dugc goi la dao ham cua ham $f ( x )$ tai $x _ { 0 }$ ：
+
++ Neu $f ( x )$ kha vi tai moi diem $x _ { 0 } \in ( a , b )$ thi $f ( x )$ duoc goi la kha vi tren $( a , b )$ ：
+
+Nhan xét 2.21. Néu ham so $f ( x )$ kha vi tai diem $\mathbf { \chi } _ { x _ { 0 } } ^ { }$ thi $f ( x )$ lien tuc tai $x _ { 0 }$ ：
+
+That vay, $f ( x )$ khä vi tai diem $x _ { 0 }$ hay ton tai gioi han
+
+$$
+\operatorname* { l i m } _ { x \to x _ { 0 } } { \frac { f ( x ) - f ( x _ { 0 } ) } { x - x _ { 0 } } } \Rightarrow \operatorname* { l i m } _ { x \to x _ { 0 } } { \Big ( } f ( x ) - f ( x _ { 0 } ) { \Big ) } = 0 \Rightarrow \operatorname* { l i m } _ { x \to x _ { 0 } } f ( x ) = f ( x )
+$$
+
+Vay $f ( x )$ lien tuc tai $x _ { 0 }$ ：
+
+Vi du 2.22. Ding dinh nghia,tim dao ham cia ham so $f ( x ) = \sin 2 x$ tai $\begin{array} { r } { x _ { 0 } = \frac { \pi } { 6 } } \end{array}$
+
+Gidi Tim gioi han
+
+$$
+\operatorname* { l i m } _ { x \to x _ { 0 } } { \frac { f ( x ) - f ( x _ { 0 } ) } { x - x _ { 0 } } } = \operatorname* { l i m } _ { x \to { \frac { \pi } { 6 } } } { \frac { \sin 2 x - \sin { \frac { \pi } { 3 } } } { x - { \frac { \pi } { 6 } } } }
+$$
+
+$$
+= \operatorname* { l i m } _ { x \to { \frac { \pi } { 6 } } } { \frac { 2 \cos ( x + { \frac { \pi } { 6 } } ) . \sin ( x - { \frac { \pi } { 6 } } ) } { x - { \frac { \pi } { 6 } } } } = 2 \cos { \frac { \pi } { 3 } } = 1 .
+$$
+
+Vay $\begin{array} { r } { f ^ { \prime } ( \frac { \pi } { 3 } ) = 1 } \end{array}$ .
+
+$+ \ \mathrm { H \dot { a } m }$ s6 $f ( x )$ duoc goi la kha vi phai (con goi la có dao ham phai) tai diém $x _ { 0 } \in ( a , b )$ , neu ton tai huu han gioi han
+
+$$
+\operatorname* { l i m } _ { x \to x _ { 0 } ^ { + } } { \frac { f ( x ) - f ( x _ { 0 } ) } { x - x _ { 0 } } } \ \mathrm { h a y } \quad \operatorname* { l i m } _ { \Delta _ { x } \to 0 ^ { + } } { \frac { f ( x _ { 0 } + \Delta _ { x } ) - f ( x _ { 0 } ) } { \Delta _ { x } } } .
+$$
+
+Gioi han nay duoc ky hieu boi $f _ { + } ^ { \prime } ( x _ { 0 } )$ va dugc goi la dao ham phai cua ham $f ( x )$ tai $x _ { 0 }$ .
+
+$+ \ \mathrm { H \dot { a } m }$ s6 $f ( x )$ dugc goi la kha vi trai (con goi la c6 dao ham trai) tai diém $x _ { 0 } \in ( a , b )$ , neu ton tai huu han gioi han
+
+$$
+\operatorname* { l i m } _ { x \to x _ { 0 } ^ { - } } { \frac { f ( x ) - f ( x _ { 0 } ) } { x - x _ { 0 } } } \ \mathrm { h a y } \quad \operatorname* { l i m } _ { \Delta _ { x } \to 0 ^ { - } } { \frac { f ( x _ { 0 } + \Delta _ { x } ) - f ( x _ { 0 } ) } { \Delta _ { x } } } .
+$$
+
+Gioi han nay duoc ky hieu boi $f _ { - } ^ { \prime } ( x _ { 0 } )$ va duqc goi la dao ham trai cua ham $f ( x )$ tai $x _ { 0 }$ .
+
+Nhan xet 2.23. Ham so $f ( x )$ c6 dao ham tai $x _ { 0 }$ khi va chi khi $f ( x )$ c6 dao ham phai $f _ { + } ( x _ { 0 } )$ , dao ham trai $f _ { + } ^ { \prime } ( x _ { 0 } )$ va $f _ { - } ^ { \prime } ( x _ { 0 } ) = f _ { + } ^ { \prime } ( x _ { 0 } )$ ：
+
+Vi du 2.24. Ching minh rang: Ham so $f ( x ) = x | x - 1 |$ ton tai $f _ { - } ^ { \prime } ( 1 ) , f _ { + } ^ { \prime } ( 1 )$ ， nhung khong ton tai $f ^ { \prime } ( 1 )$ >
+
+Giai
+
+$$
+1 ) = \operatorname* { l i m } _ { \Delta x \to 0 ^ { + } } \frac { f ( 1 + \Delta _ { x } ) - f ( 1 ) } { \Delta _ { x } } = \operatorname* { l i m } _ { \Delta x \to 0 ^ { + } } \frac { ( 1 + \Delta _ { x } ) | \Delta _ { x } | } { \Delta _ { x } } = \operatorname* { l i m } _ { \Delta x \to 0 ^ { + } } ( 1 + \Delta _ { x } ) | \Delta _ { x } | ,
+$$
+
+$$
+f _ { - } ^ { \prime } ( 1 ) = \operatorname* { l i m } _ { \Delta _ { x } \to 0 ^ { - } } \frac { f ( 1 + \Delta _ { x } ) - f ( 1 ) } { \Delta _ { x } } = \operatorname* { l i m } _ { \Delta _ { x } \to 0 ^ { - } } \frac { ( 1 + \Delta _ { x } ) | \Delta _ { x } | } { \Delta _ { x } } = - 1 .
+$$
+
+Do d6 $f _ { + } ^ { \prime } ( 1 ) = 1 \neq - 1 = f _ { - } ^ { \prime } ( 1 )$ .Vay $f ( x )$ khong kha vi tai 1.
+
+# 2.6.2. Cac cong thuc cua dao ham
+
+Cho cac ham só $f ( x ) { \mathrm { \ v { \dot { a } } } } g ( x )$ kha vi tren $( a , b )$
+
+$$
+{ \begin{array} { r l } & { + \left( f ( x ) + g ( x ) \right) ^ { \prime } = f ^ { \prime } ( x ) + g ^ { \prime } ( x ) . } \\ & { + \left( f ( x ) - g ( x ) \right) ^ { \prime } = f ^ { \prime } ( x ) - g ^ { \prime } ( x ) . } \\ & { + \left( f ( x ) . g ( x ) \right) ^ { \prime } = f ^ { \prime } ( x ) . g ( x ) + f ( x ) . g ^ { \prime } ( x ) . } \\ & { + \left( { \frac { f ( x ) } { g ( x ) } } \right) ^ { \prime } = { \frac { f ^ { \prime } ( x ) . g ( x ) - f ( x ) . g ^ { \prime } ( x ) } { g ^ { 2 } ( x ) } } . } \\ & { + \left( k . f ( x ) \right) ^ { \prime } = k f ^ { \prime } ( x ) \ } \end{array} }
+$$
+
+# 2.6.3. Dao ham cia cac ham so thong dung
+
+$$
+\begin{array} { r l } & { y = C ( c o n s t ) \Rightarrow y ^ { \prime } = 0 \forall x \in \mathbb { R } . } \\ & { y = x ^ { \alpha } ( \alpha \in \mathbb { R } ) \Rightarrow y ^ { \prime } = \alpha x ^ { \alpha - 1 } \forall x \in \mathbb { R } . } \\ & { y = \sin x \Rightarrow y ^ { \prime } = \cos x \forall x \in \mathbb { R } . } \end{array}
+$$
+
+$$
+\begin{array} { r l } & { \mathrm { ~ \mathcal ~ { ~ y ~ } ~ } \mathrm { ~ \mathcal ~ { ~ s ~ } ~ } \mathrm { ~ \mathcal ~ { ~ s ~ } ~ } \mathrm { ~ \mathcal ~ { ~ s } ~ } \mathrm { ~ \mathcal ~ { ~ s } ~ } \mathrm { ~ \mathcal ~ { ~ s } ~ } \mathrm { ~ \mathcal { ~ s } ~ } } \\ & { \mathrm { ~ \mathcal ~ { { ~ y ~ } ~ } ~ } = a ^ { x } \mathrm { ~ ( ~ v \delta i ~ 1 ~ \div ~ } a > 0 \mathrm { ) } \Rightarrow y ^ { \prime } = a ^ { x } \ln a \mathrm { ~ \mathcal ~ { ~forall ~ } \boldsymbol { x } \in \mathbb { R } . ~ } } \\ & { \mathrm { ~ \mathcal ~ { ~ y ~ } ~ } = \log _ { a } x \mathrm { ~ ( ~ v \delta i ~ 1 ~ \neq ~ } a > 0 \mathrm { ) } \Rightarrow y ^ { \prime } = \frac { 1 } { x \ln a } \mathrm { ~ \mathcal ~ { ~forall ~ } \boldsymbol { x } \in \mathbb { R } ^ \ast = \left\{ ~ \boldsymbol { x } \in \mathbb { R } : ~ \boldsymbol { x } > 0 \mathrm { ~ } \right. } } \\ & { \mathrm { ~ \mathcal ~ { ~ y ~ } ~ } = s h \mathrm { ~ \mathcal ~ { ~ x } \Rightarrow ~ } y ^ { \prime } = c h \mathrm { . ~ \mathcal ~ { ~ v } ~ } \mathrm { ~ \mathcal { ~ x } ~ } \mathrm { ~ \in \mathbb { R } . ~ } } \\ & { \mathrm { ~ \mathcal ~ { ~ y ~ } ~ } = c h \mathrm { ~ \mathcal ~ { ~ x } \Rightarrow ~ } y ^ { \prime } = s h \mathrm { . ~ \mathcal ~ { ~ v } ~ } \mathrm { ~ \mathcal ~ { ~ x } ~ } } \\ &  \mathrm { ~ \mathcal ~ { ~ y ~ } ~ } = t h \mathrm { ~ \mathcal ~ { ~ x } \Rightarrow ~ y ^ { \prime } = \frac { 1 } { c h ^ { 2 } \cdot x } \mathrm { ~ \mathcal ~ { ~ \forall ~ } \boldsymbol { x } \in \mathbb { R } . ~ } } \\ & { \mathrm { ~ \mathcal ~ { ~ y ~ } ~ } = c o t h \mathrm { ~ \mathcal ~ { ~ x } \Rightarrow ~ } y ^ { \prime } = \frac { - 1 } { s h ^ { 2 } \cdot x } \mathrm { ~ \mathcal ~ { ~ \forall ~ } \boldsymbol { x } \in \mathbb { R } \setminus \left\{ ~ 0 \right\} . } } \end{array}
+$$
+
+# 2.6.4. Dao ham cua cac ham so nguoc
+
+$$
+\begin{array} { r } { + y = \arcsin x \Rightarrow y ^ { \prime } = \frac { 1 } { \sqrt { 1 - x ^ { 2 } } } . } \end{array}
+$$
+
+Ching minh Theo dinh nghia $y = \arcsin x \Leftrightarrow x = \sin y$ va $y \in [ - \frac { \pi } { 2 } , \frac { \pi } { 2 } ]$ . Ta c6
+
+$$
+y ^ { \prime } = { \frac { 1 } { x _ { y } ^ { \prime } } } = { \frac { 1 } { ( \sin y ) _ { y } ^ { \prime } } } = { \frac { 1 } { \cos y } } = { \frac { 1 } { \sqrt { 1 - x ^ { 2 } } } } .
+$$
+
+Tuong tu nhu chung minh tren, ta c6 các ket qua sau:
+
+$$
+{ \begin{array} { r l } & { + y = \operatorname { a r c c o s } x \Rightarrow y ^ { \prime } = { \frac { - 1 } { \sqrt { 1 - x ^ { 2 } } } } \forall x \in ( - 1 , 1 ) . } \\ & { + y = \arctan x \Rightarrow y ^ { \prime } = { \frac { 1 } { 1 + x ^ { 2 } } } \forall x \in \mathbb { R } . } \\ & { + y = \operatorname { a r c c o t } x \Rightarrow y ^ { \prime } = { \frac { - 1 } { 1 + x ^ { 2 } } } \forall x \in \mathbb { R } . } \end{array} }
+$$
+
+Vid 225 Ch ham so $\begin{array} { r } { f ( x ) = \Big ( x + \frac { 1 } { x } \Big ) ^ { 2 x + 1 } } \end{array}$ voi $x > 0$ Tim $f ^ { \prime } ( x )$ ：
+
+Giai $\begin{array} { r } { \ln f ( x ) = ( 2 x + 1 ) \ln ( x + \frac { 1 } { x } ) } \end{array}$ . Dao ham hai ve, ta c6
+
+$$
+\begin{array} { c } { { \displaystyle \frac 1 { f ( x ) } f ^ { \prime } ( x ) = 2 x \ln ( x + \frac 1 x ) + ( 2 x + 1 ) \frac 1 { x + \frac 1 x } ( 1 - \frac { 1 } { x ^ { 2 } } ) } } \\ { { = 2 x \ln ( 1 + x ) + \displaystyle \frac { ( 2 x + 1 ) ( x - 1 ) } { x ( x + 1 ) } . } } \end{array}
+$$
+
+Vay
+
+$$
+\begin{array} { l } { f ^ { \prime } ( x ) = f ( x ) \Big ( 2 x \ln ( 1 + x ) + \displaystyle \frac { ( 2 x + 1 ) ( x - 1 ) } { x ( x + 1 ) } \Big ) } \\ { = \Big ( x + \displaystyle \frac { 1 } { x } \Big ) ^ { 2 x + 1 } \Big ( 2 x \ln ( 1 + x ) + \displaystyle \frac { ( 2 x + 1 ) ( x - 1 ) } { x ( x + 1 ) } \Big ) . } \end{array}
+$$
+
+# 2.7. Vi phan cua ham só
+
+Cho ham $f ( x )$ kha vi tai $x$ , theo dinh nghia
+
+$$
+\operatorname* { l i m } _ { \Delta _ { x } \to 0 } { \frac { f ( x + \Delta _ { x } ) - f ( x ) } { \Delta _ { x } } } = f ^ { \prime } ( x ) .
+$$
+
+Dieu nay có nghia la
+
+$$
+f ( x + \Delta _ { x } ) - f ( x ) = f ^ { \prime } ( x ) \Delta _ { x } + o ( \Delta _ { x } ) .
+$$
+
+Tich so $f ^ { \prime } ( x ) \Delta _ { x }$ duoc goi la vi phan cua $f ( x )$ tai diem $x$ , ky hieu la $d f ( x )$ . Hay
+
+$$
+d f ( x ) = f ^ { \prime } ( x ) d x .
+$$
+
+Tuong tu nhu dao ham cüa ham so $f ( x )$ tai diem $x$ , ta có cac tinh chat cua vi phan. ?
+
+$$
+\begin{array} { r l } & { + d \Big ( f ( x ) + g ( x ) \Big ) = d \Big ( f ( x ) \Big ) + d \Big ( g ( x ) \Big ) , } \\ & { + d \Big ( f ( x ) - g ( x ) \Big ) = d \Big ( f ( x ) \Big ) - d \Big ( g ( x ) \Big ) . } \\ & { + d \Big ( f ( x ) . g ( x ) \Big ) = g ( x ) d \Big ( f ( x ) \Big ) + f ( x ) d \Big ( g ( x ) \Big ) . } \\ & { + d \Big ( \frac { f ( x ) } { g ( x ) } \Big ) = \frac { g ( x ) d \Big ( f ( x ) \Big ) - f ( x ) d \Big ( g ( x ) \Big ) } { g ^ { 2 } ( x ) } . } \end{array}
+$$
+
+# 2.8. Dao ham va vi phan cap cao
+
+# 2.8.1. Dinh nghia
+
+Cho ham $f ( x )$ xäc dinh tren mién $D$ ， $x \in D$ ：   
++ Neu $f ( x )$ kha vi tai $x$ ,thi $f ^ { \prime } ( x )$ duqc goi la dao ham cap $I$ cua $f ( x )$ .   
+$+ \ \mathrm { N e u }$ （204 $f ^ { \prime } ( x )$ kha vi tai $x$ ，thi $( f ^ { \prime } ( x ) ) ^ { \prime }$ duqc goi la dao ham cap 2 cua $f ( x )$ ,ky hieu la $f ^ { \prime \prime } ( x )$ ：   
+（20 $+ \ N \mathrm { { \hat { e } u } }$ （20 $f ^ { \prime \prime } ( x )$ kha vi tai $x$ ,thi $( f ^ { \prime \prime } ( x ) ) ^ { \prime }$ dugc goi la dao ham cap 3 cua $f ( x )$ ,ky hieu la $f ^ { ( 3 ) } ( x )$ ：   
++ Neu $f ^ { ( n - 1 ) } ( x )$ kha vi tai $x$ ,thi $( f ^ { ( n - 1 ) } ( x ) ) ^ { \prime }$ dugc goi la dao ham cap $n$ cua $f ( x )$ ， ky hieu la $f ^ { ( n ) } ( x )$ ：
+
+Tuong tu nhu vay, mot cach quy nap, vi phan cap $n$ cua ham $f ( x )$ , ky hieu $d ^ { n } f ( x )$ duqc xac dinh boi cong thuc
+
+$$
+d ^ { n } f ( x ) = d ( d ^ { n - 1 } f ( x ) ) = f ^ { ( n ) } ( x ) d x ^ { n } .
+$$
+
+# 2.8.2. Tinh chat
+
+Bang quy nap toan hoc, ta chung minh duoc các tinh chat sau: Voi dao ham cäp $n$ ：
+
+$$
+{ \begin{array} { l } { { \dot { + } } \left( { \dot { f } } ( x ) + g ( x ) \right) ^ { \dot { \mathbf { \alpha } } ( n ) } = \left( f ( x ) \right) ^ { ( n ) } + \left( g ( x ) \right) ^ { ( n ) } \cdot } \\ { + \left( f ( x ) - g ( x ) \right) ^ { ( n ) } = \left( f ( x ) \right) ^ { ( n ) } - \left( g ( x ) \right) ^ { ( n ) } \cdot } \\ { + \left( k f ( x ) \right) ^ { ( n ) } = k { \Bigl ( } f ( x ) { \Bigr ) } ^ { ( n ) } { \mathrm { ~ v { \dot { \alpha } } i ~ } } k = c o n s t . } \\ { + \left( u v \right) ^ { ( n ) } = \displaystyle \sum _ { k = 0 } ^ { n } C _ { n } ^ { k } u ^ { ( k ) } v ^ { ( n - k ) } { \mathrm { ~ v { \dot { \alpha } } i ~ } } u = u ( x ) , v = v ( x ) , u ^ { ( 0 ) } = u , v ^ { ( 0 ) } = } \end{array} }
+$$
+
+Vi du 2.26. Tim dao ham cap n cia ham s6
+
+$$
+f ( x ) = \sin ( a x + b ) { \nu } { \dot { o } } i { \ a } , b : c o n s t .
+$$
+
+Giai $\begin{array} { r } { f ^ { \prime } ( x ) = a \cos ( a x + b ) = a \sin ( a x + b + 1 . \frac { \pi } { 2 } ) . } \end{array}$ $\begin{array} { r } { f ^ { \prime \prime } ( x ) = - a ^ { 2 } \sin ( a x + b ) = a ^ { 2 } \sin ( a x + b + 2 . \frac { \pi } { 2 } ) . } \end{array}$ Bang quy nap toan hoc, $\mathrm { d } \tilde { \hat { \mathrm { e } } }$ dang chung minh duoc rang
+
+$$
+f ^ { ( n ) } ( x ) = a ^ { n } \sin ( a x + b + { \frac { n \pi } { 2 } } ) .
+$$
+
+Vi du 2.27. Tim dao ham cap n cua ham so
+
+$$
+f ( x ) = { \frac { 1 } { a x + b } } { \mathrm { ~ } } { \mathrm { ~ } } \nu \dot { o } i 0 \neq a { \mathrm { , ~ } } b : c o n s t { . }
+$$
+
+Giai $f ( x ) = ( a x + b ) ^ { - 1 } \Rightarrow f ^ { \prime } ( x ) = ( - 1 ) 1 ! a ^ { 1 } ( a x + b ) ^ { - 2 } .$ $f ^ { \prime \prime } ( x ) = ( - 1 ) ( - 2 ) a ^ { 2 } ( a x + b ) ^ { - 3 } = ( - 1 ) ^ { 2 } 2 ! a ^ { 2 } ( a x + b ) ^ { - 3 } .$
+
+Bang quy nap toan hoc, $\mathrm { d } \tilde { \hat { \mathrm { e } } }$ dang chung minh duoc rang
+
+$$
+f ^ { ( n ) } ( x ) = ( - 1 ) ^ { n } a ^ { n } ( a x + b ) ^ { - n - 1 } = { \frac { ( - 1 ) ^ { n } n ! a ^ { n } } { ( a x + b ) ^ { n + 1 } } } .
+$$
+
+Vi du 2.28. Tim dao ham cap n cua ham s6
+
+$$
+f ( x ) = \frac { x ^ { 2 } + 1 } { ( x - 1 ) ^ { 3 } ( x + 3 ) } .
+$$
+
+Giai Dong nhat he s6
+
+$$
+{ \frac { x ^ { 2 } + 1 } { 1 ) ^ { 3 } ( x + 3 ) } } = { \frac { A } { x + 3 } } + { \frac { B } { ( x - 1 ) ^ { 3 } } } + { \frac { C } { ( x - 1 ) ^ { 2 } } } + { \frac { D } { ( x - 1 ) } } \ \forall x \neq 1 , x \neq
+$$
+
+Ta nhan duoc
+
+$$
+A = - { \frac { 5 } { 3 2 } } , B = { \frac { 1 } { 2 } } , C = { \frac { 3 } { 8 } } , D = { \frac { 5 } { 3 2 } } .
+$$
+
+Nhu vay, $f ( x )$ duoc viet lai duoi dang
+
+$$
+f ( x ) = - { \frac { 5 } { 3 2 } } ( x + 3 ) ^ { - 1 } + { \frac { 1 } { 2 } } ( x - 1 ) ^ { - 3 } + { \frac { 3 } { 8 } } ( x - 1 ) ^ { - 2 } + { \frac { 5 } { 3 2 } } ( x - 1 ) ^ { - 1 } .
+$$
+
+Tuong tu nhu vi du 2.27, ta có
+
+$$
+\begin{array} { l } { { \displaystyle \left( ( x + 3 ) ^ { - 1 } \right) ^ { ( n ) } = ( - 1 ) ^ { n } n ! ( x + 3 ) ^ { - n - 1 } , } } \\ { { \displaystyle \left( ( x - 1 ) ^ { - 3 } \right) ^ { ( n ) } = \frac { 1 } { 2 } ( - 1 ) ^ { n } ( n + 2 ) ! ( x - 1 ) ^ { - n - 3 } , } } \\ { { \displaystyle \left( ( x - 1 ) ^ { - 2 } \right) ^ { ( n ) } = ( - 1 ) ^ { n } ( n + 1 ) ! ( x - 1 ) ^ { - n - 2 } , } } \\ { { \displaystyle \left( ( x - 1 ) ^ { - 1 } \right) ^ { ( n ) } = ( - 1 ) ^ { n } n ! ( x - 1 ) ^ { - n - 1 } . } } \end{array}
+$$
+
+Nhu vay
+
+$$
+\begin{array} { c } { { f ^ { ( n ) } ( x ) = - \displaystyle \frac { 5 } { 3 2 } ( - 1 ) ^ { n } n ! ( x + 3 ) ^ { - n - 1 } + \displaystyle \frac { 1 } { 4 } ( - 1 ) ^ { n } ( n + 2 ) ! ( x - 1 ) ^ { - n - 3 } , } } \\ { { + \displaystyle \frac { 3 } { 8 } ( - 1 ) ^ { n } ( n + 1 ) ! ( x - 1 ) ^ { - n - 2 } + \displaystyle \frac { 5 } { 3 2 } ( - 1 ) ^ { n } n ! ( x - 1 ) ^ { - n - 1 } . } } \end{array}
+$$
+
+Vi du 2.29. Tim dao ham cap n cua ham só
+
+$$
+f ( x ) = ( x ^ { 2 } - 3 x + 7 ) \cos ( 3 x ) .
+$$
+
+Giai $f ( x ) = ( x ^ { 2 } - 3 x + 7 ) \sin ( 3 x + { \frac { \pi } { 2 } } )$ . Theo cong thuc $( u v ) ^ { ( n ) } = \sum _ { k = 0 } ^ { n } C _ { n } ^ { k } u ^ { ( k ) } v ^ { ( n - k ) } ,$ ta c6 ?
+
+$$
+f ^ { ( n ) } ( x ) = \sum _ { k = 0 } ^ { n } C _ { n } ^ { k } ( x ^ { 2 } - 3 x + 7 ) ^ { ( k ) } \Big ( \sin ( 3 x + \frac { \pi } { 2 } ) \Big ) ^ { ( n - k ) }
+$$
+
+Tur vi du 2.26, suy ra
+
+$$
+\Big ( \sin ( 3 x + \frac { \pi } { 2 } ) \Big ) ^ { ( n - k ) } = 3 ^ { n - k } \sin ( 3 x + ( n - k + 1 ) \frac { \pi } { 2 } ) .
+$$
+
+D0
+
+$$
+- 3 x + 7 ) ^ { \prime } = 6 x - 3 , ( x ^ { 2 } - 3 x + 7 ) ^ { \prime \prime } = 6 , ( x ^ { 2 } - 3 x + 7 ) ^ { ( k ) } = 0 \forall k \geq
+$$
+
+nen
+
+$$
+\begin{array} { l } { { \ O = C _ { n } ^ { 0 } ( x ^ { 2 } - 3 x + 7 ) 3 ^ { n } \sin ( 3 x + ( n + 1 ) { \frac { \pi } { 2 } } ) + C _ { n } ^ { 1 } ( 2 x - 3 ) 3 ^ { n - 1 } \sin ( 3 x } } \\ { { \ O \qquad + \ 2 C _ { n } ^ { 2 } 3 ^ { n - 2 } \sin ( 3 x + ( n - 1 ) { \frac { \pi } { 2 } } ) . } } \end{array}
+$$
+
+Hay
+
+$$
+{ \begin{array} { l } { { \displaystyle { \boldsymbol { \it { c } } } ) = ( x ^ { 2 } - 3 x + 7 ) 3 ^ { n } \sin ( 3 x + n { \frac { \pi } { 2 } } ) + n ( 2 x - 3 ) 3 ^ { n - 1 } \sin ( 3 x + ( n - 1 } } \\ { { \displaystyle ~ + { \frac { n } { n - 1 } } 3 ^ { n - 2 } \sin ( 3 x + ( n - 2 ) { \frac { \pi } { 2 } } ) . } } \end{array} }
+$$
+
+# 2.8.3. Cac dinh ly ve ham khä vi
+
+Cho ham só $f ( x )$ xác dinh tren mien $D$ va $x _ { 0 } \in D$ ：
+
+$+ f ( x )$ duoc goi la dat cuc dai (con goi la cuc dai dia phuong) tai diem $x _ { 0 }$ ,néu tón tai $( x _ { 0 } - \delta , x _ { 0 } + \delta ) \subseteq D$ sao cho
+
+$$
+f ( x ) \leq f ( x _ { 0 } ) \forall x \in ( x _ { 0 } - \delta , x _ { 0 } + \delta ) .
+$$
+
+$+ f ( x )$ duqc goi la dat cuc tiéu (con goi la cuc tieu dia phuong) tai diem $x _ { 0 }$ ,neu t6n tai $( x _ { 0 } - \delta , x _ { 0 } + \delta ) \subseteq D$ sao cho 一
+
+$$
+f ( x ) \geq f ( x _ { 0 } ) \forall x \in ( x _ { 0 } - \delta , x _ { 0 } + \delta ) .
+$$
+
+$+ f ( x )$ duoc goi la dat cuc dai toan cuc (con goi la gia tri lon nhat) tai diem $x _ { 0 }$ ， néu 一
+
+$$
+f ( x ) \leq f ( x _ { 0 } ) \forall x \in D .
+$$
+
+$+ f ( x )$ duqc goi la dat cuc tiéu toan cuc (con goi la giá tri nho nhat) tai diem $x _ { 0 }$ ， neu
+
+$$
+f ( x ) \geq f ( x _ { 0 } ) \forall x \in D .
+$$
+
+（20 $+ f ( x )$ dat cuc tri tai $x _ { 0 }$ ,neu $f ( x )$ dat cuc dai hoac cuc tieu tai $x _ { 0 }$ ：
+
+Dinh ly 2.30. (Fermat²) Néu $f ( x )$ kha vi tai $x _ { 0 }$ va dat cuc tri tai $x _ { 0 }$ ,thi $f ^ { \prime } ( x _ { 0 } ) = 0$ ：
+
+Ching minh Gia sir $f ( x )$ xác dinh tren $D$ va dat cuc dai tai diem $x _ { 0 }$ , ton tai $\delta > 0$ （20 sao cho
+
+$$
+f ( x ) \leq f ( x _ { 0 } ) \forall x \in ( x _ { 0 } - \delta , x _ { 0 } + \delta ) \subseteq D .
+$$
+
+Suy ra
+
+$$
+\left\{ \begin{array} { l l } { f ^ { \prime } ( x _ { 0 } ) = f _ { + } ^ { \prime } ( x _ { 0 } ) = \displaystyle \operatorname* { l i m } _ { x \to x _ { 0 } ^ { + } } \frac { f ( x ) - f ( x _ { 0 } ) } { x - x _ { 0 } } \le 0 } \\ { f ^ { \prime } ( x _ { 0 } ) = f _ { - } ^ { \prime } ( x _ { 0 } ) = \displaystyle \operatorname* { l i m } _ { x \to x _ { 0 } ^ { - } } \frac { f ( x ) - f ( x _ { 0 } ) } { x - x _ { 0 } } \ge 0 } \end{array} \right. \Rightarrow f ^ { \prime } ( x _ { 0 } ) = 0 .
+$$
+
+217.8.1601-12.1.1665,Luat gia-nha Toan hoc Phap Pierre de Fermat có cac cong trinh nghien curu thuc cac linh vuc: Ly thuyet so,hinh hoc giai tich,buoc dau cua giai tich va ly thuyet xac suat, va mot sovan dé ve Vat ly nhu nguyén ly co bän cua Quang hinh hoc.
+
+Nhan xet 2.31. 1. Ham so $f ( x )$ dat cuc tri tai diem $x _ { 0 }$ chua chac da kha vi tai $x _ { 0 }$ ： Vi du nhu $f ( x ) = \left| x \right|$ dat cuc tieu tai $x _ { 0 } = 0$ , nhung $f ( x )$ khong kha vi tai $x _ { 0 }$ ：
+
+2. Nghiem $x _ { 0 }$ cüa phuong trinh $f ^ { \prime } ( x ) = 0$ duoc goi la diém ditng cua ham so $f ( x )$ . Diém $x _ { 0 }$ la diem dung cua ham so $f ( x )$ , nhung $x _ { 0 }$ c6 thé khong la diem cuc tri. Vi du nhu $f ( x ) = x ^ { 3 }$ khong có diém cuc tri, nhung $x _ { 0 } = 0$ la diem ding.
+
+Dinh ly 2.32. （Rolle3) Cho ham só $f ( x )$ lien tuc trén $[ a , b ]$ ,khd vi trong $( a , b )$ vd （20 $f ( a ) = f ( b )$ . Khi do, ton tai $c \in ( a , b )$ sao cho $f ^ { \prime } ( c ) = 0$ ，
+
+Chung minh Do $f ( x )$ lien tuc tren $[ a , b ]$ , nen ton tai $x _ { 1 } , x _ { 2 } \in [ a , b ]$ sao cho
+
+$$
+f ( x _ { 1 } ) = \operatorname* { m a x } _ { x \in [ a , b ] } f ( x ) { \mathrm { ~ } } { \mathrm { ~ v { \dot { a } } ~ } } f ( x _ { 2 } ) = \operatorname* { m i n } _ { x \in [ a , b ] } f ( x ) \Rightarrow f ( x _ { 2 } ) \leq f ( x _ { 1 } ) .
+$$
+
+Néu $f ( x _ { 1 } ) = f ( x _ { 2 } )$ ,thi $f ( x ) = f ( x _ { 1 } ) ( c o n s t ) \forall x \in [ a , b ]$ suy ra $\forall c \in ( a , b )$ . Néu $f ( x _ { 2 } ) < f ( x _ { 1 } )$ va tur $f ( a ) = f ( b )$ suy ra $x _ { 1 } \in ( a , b )$ hoac $x _ { 2 } \in ( a , b )$ . Gia sur $x _ { 1 } \in ( a , b )$ ,ton tai $( x _ { 1 } - \delta , x _ { 1 } + \delta ) \subseteq ( a , b )$ sao cho $f ( x _ { 1 } ) \geq f ( x ) \forall x \in$ $( x _ { 0 } - \delta , x _ { 0 } + \delta )$ . Do d6, $x _ { 1 }$ la diem cuc dai, theo Fermat, $f ^ { \prime } ( x _ { 1 } ) = 0 \Rightarrow c = x _ { 1 }$ ： V6i $x _ { 2 } \in ( a , b )$ bang tuong tu nhu truong hop $x _ { 1 } \in ( a , b )$ ， chon $c = x _ { 2 } $ ： □
+
+Vi du 2.33. Cho ham so $f ( x )$ lien tuc tren $[ a ; b ]$ , kha vi trén $( a ; b )$ va thoa man
+
+$$
+\left\{ \begin{array} { l l } { f ( a ) = f ( b ) = 0 } \\ { f _ { + } ^ { \prime } ( a ) > 0 } \\ { f _ { - } ^ { \prime } ( b ) < 0 . } \end{array} \right.
+$$
+
+Chitng minh rang: $c _ { 1 } , c _ { 2 } , c _ { 3 } \in ( a , b )$ sao cho
+
+$$
+\left\{ { \begin{array} { l } { c _ { 1 } < c _ { 2 } < c _ { 3 } } \\ { f ( c _ { 2 } ) = 0 } \\ { f ^ { \prime } ( c _ { 1 } ) = f ^ { \prime } ( c _ { 3 } ) = 0 . } \end{array} } \right.
+$$
+
+Gidi Theo dinh nghia dao ham, ta c6
+
+$$
+f _ { + } ^ { \prime } ( a ) = \operatorname* { l i m } _ { \Delta _ { x } \to 0 ^ { + } } \frac { f ( a + \Delta _ { x } ) - f ( a ) } { \Delta _ { x } } > 0
+$$
+
+$$
+\Rightarrow \exists \delta _ { 1 } > 0 : f ( x ) > 0 \forall x \in ( a , a + \delta _ { 1 } ) \Rightarrow f ( a + \frac { \delta _ { 1 } } { 2 } ) > 0 .
+$$
+
+$$
+f _ { - } ^ { \prime } ( b ) = \operatorname* { l i m } _ { \Delta _ { x } \to 0 ^ { - } } \frac { f ( b + \Delta _ { x } ) - f ( b ) } { \Delta _ { x } } < 0
+$$
+
+$$
+\Rightarrow \exists \delta _ { 2 } > 0 : f ( x ) < 0 \forall x \in ( b - \delta _ { 2 } , b ) \Rightarrow f ( b - \frac { \delta _ { 2 } } { 2 } ) < 0 .
+$$
+
+Nhu vay $\begin{array} { r } { f ( a + \frac { \delta _ { 1 } } { 2 } ) f ( b - \frac { \delta _ { 2 } } { 2 } ) < 0 \Rightarrow \exists c _ { 2 } \in ( a , b ) : f ( c _ { 2 } ) = 0 } \end{array}$ (do $f ( x )$ lien tuc). Theo dinh ly Rolle, tón tai $c _ { 1 } \in ( a , c _ { 2 } ) : f ^ { \prime } ( c _ { 1 } ) = 0$ va $c _ { 3 } \in ( c _ { 2 } , b ) : f ^ { \prime } ( c _ { 3 } ) = 0$ ， Vi du duoi day duoc xem nhu la mot su mó rong cua dinh ly Rolle.
+
+Vi du 2.34. Cho ham s6' $f ( x )$ lien tuc trén doan $[ a , b ]$ , kha vi phai va trai trén khoang $( a , b )$ ,vd $f ( a ) = f ( b )$ . Chitng minh rang ton tai $c \in ( a , b )$ sao cho
+
+$$
+f _ { + } ^ { \prime } ( c ) . f _ { - } ^ { \prime } ( c ) \leq 0 .
+$$
+
+Giai Dat
+
+$$
+f ( x _ { 1 } ) = \operatorname* { m i n } _ { x \in [ a , b ] } f ( x ) , f ( x _ { 2 } ) = \operatorname* { m a x } _ { x \in [ a , b ] } f ( x ) .
+$$
+
+-Neu $f ( x _ { 1 } = f ( x _ { 2 } )$ ,thi $f ( x ) = c o n s t \Rightarrow f _ { + } ^ { \prime } ( c ) . f _ { - } ^ { \prime } ( c ) = 0 .$
+
+-Néu $f ( x _ { 1 } ) < f ( x _ { 2 } )$ ,tu $f a ) = f ( b ) \Rightarrow x _ { 1 } \in ( a , b )$ hoac $x _ { 2 } \in ( a , b )$ , khong mat tinh tong quat, gia su $x _ { 1 } \in \left( a , b \right)$ . Khi d6
+
+$$
+\left\{ \begin{array} { l l } { f _ { + } ^ { \prime } ( x _ { 1 } ) = \displaystyle \operatorname* { l i m } _ { x \to x _ { 1 } ^ { + } } \frac { f ( x ) - f ( x _ { 1 } ) } { x - x _ { 1 } } \geq 0 } \\ { f _ { - } ^ { \prime } ( x _ { 1 } ) = \displaystyle \operatorname* { l i m } _ { x \to x _ { 1 } ^ { - } } \frac { f ( x ) - f ( x _ { 1 } ) } { x - x _ { 1 } } \leq 0 } \end{array} \right. \Rightarrow f _ { + } ^ { \prime } ( x _ { 1 } ) . f _ { - } ^ { \prime } ( x _ { 1 } ) \leq 0 \Rightarrow c = x _ { 1 } .
+$$
+
+Dinh ly 2.35. (Lagrange4) Cho ham $f ( x )$ lien tuc tren $[ a , b ]$ va kha vi tren $( a , b )$ ： Chitng minh rang: Ton tai $c \in ( a , b )$ sao cho
+
+$$
+{ \frac { f ( b ) - f ( a ) } { b - a } } = f ^ { \prime } ( c ) .
+$$
+
+![](images/30a1ac209c8ba0e86421bd3cc68d2630738942d874ad2c15def4fefd81c71f1f.jpg)  
+Hinh 1: Bieu dién hinh hoc cua dinh ly Lagrange
+
+Ynghia hinh hoc Tiep tuyen cua d6 thi ham so $y = f ( x )$ tai diem $c$ song cong voi duong thäng $A B$ ,voi $A { \big ( } a , f ( a ) { \big ) } , B { \big ( } b , f ( b ) { \big ) }$
+
+Ching minh Dat
+
+$$
+g ( x ) = f ( x ) - { \frac { f ( b ) - f ( a ) } { b - a } } ( x - a ) .
+$$
+
+Do $f ( x )$ lien tuc tren $[ a , b ]$ va kha vi tren $( a , b )$ ,nen $g ( x )$ cung lien tuc tren $[ a , b ]$ va kha vi tren $( a , b )$ . Hon nua $g ( a ) = f ( a ) = g ( b )$ . Theo dinh ly Rolle, voi ham $g ( x )$ tren $[ a , b ]$ ,ton tai $c \in ( a , b )$ sao cho $g ^ { \prime } ( c ) = 0$ .Ma
+
+$$
+g ^ { \prime } ( x ) = f ^ { \prime } ( x ) - { \frac { f ( b ) - f ( a ) } { b - a } } \Rightarrow g ^ { \prime } ( c ) = f ^ { \prime } ( c ) - { \frac { f ( b ) - f ( a ) } { b - a } } = 0 .
+$$
+
+Vi du 2.36. Cho ham $f ( x )$ lien tuc trén $[ a , b ]$ va kha vi trén $( a , b )$ tru ra $n$ diem. Ching minh rang ton tai $n + 1$ s6 duong $\alpha _ { 1 }$ ,a2，., $\alpha _ { n + 1 }$ va n +1 s6 $c _ { i }$ 0 $( i =$ $1 , 2 , . . . , n + 1 )$ sao cho
+
+$$
+\left\{ \begin{array} { l l } { \displaystyle { \sum _ { i = 1 } ^ { n + 1 } \alpha _ { i } = 1 } } \\ { \displaystyle a < c _ { 1 } < c _ { 2 } < . . . < c _ { n + 1 } < b } \\ { \displaystyle { \frac { f ( b ) - f ( a ) } { b - a } = \sum _ { i = 1 } ^ { n + 1 } \alpha _ { i } f ^ { \prime } ( c _ { i } ) } . } \end{array} \right.
+$$
+
+Gidi Gia sur $f ( x )$ khong kha vi tai $n$ diem tren khoang $( a , b ) : a < d _ { 1 } < d _ { 2 } <$ $\ldots < d _ { n } < b$ . Theo dinh ly Lagrange, tren các doan $[ a , d _ { 1 } ] , [ d _ { 1 } , d _ { 2 } ] , . . . , [ d _ { n } , b ]$ ta
+
+c6
+
+$$
+\left\{ \begin{array} { l l } { \exists c _ { 1 } \in ( a , d _ { 1 } ) : \frac { f ( d _ { 1 } ) - f ( a ) } { d _ { 1 } - a } = f ^ { \prime } ( c _ { 1 } ) \Rightarrow f ( d _ { 1 } ) - f ( a ) = ( d _ { 1 } - a ) f ^ { \prime } ( c _ { 1 } ) } \\ { \exists c _ { 2 } \in ( d _ { 1 } , d _ { 2 } ) : \frac { f ( d _ { 2 } ) - f ( d _ { 1 } ) } { d _ { 2 } - d _ { 1 } } = f ^ { \prime } ( c _ { 2 } ) \Rightarrow f ( d _ { 2 } ) - f ( d _ { 1 } ) = ( d _ { 2 } - d _ { 1 } ) f } \\ { \dots } \\ { \exists c _ { n + 1 } \in ( d _ { n } , b ) : \frac { f ( b ) - f ( d _ { n } ) } { b - d _ { n } } = f ^ { \prime } ( c _ { n + 1 } ) \Rightarrow f ( b ) - f ( d _ { n } ) = ( b - d _ { n } ) } \end{array} \right.
+$$
+
+Suy ra
+
+$$
+f ( b ) - f ( a ) = ( d _ { 1 } - a ) f ^ { \prime } ( c _ { 1 } ) + ( d _ { 2 } - d _ { 1 } ) f ^ { \prime } ( c _ { 2 } ) + \ldots + ( b - d _ { n } ) f ^ { \prime } ( c _ { n - 1 } ) 
+$$
+
+Hay
+
+$$
+{ \begin{array} { r l } { ) - f ( a ) } & { = { \cfrac { d _ { 1 } - a } { b - a } } f ^ { \prime } ( c _ { 1 } ) + { \cfrac { d _ { 2 } - d _ { 1 } } { b - a } } f ^ { \prime } ( c _ { 2 } ) + \ldots + { \cfrac { b - d _ { n } } { b - a } } f ^ { \prime } ( c _ { n + 1 } ) . } \\ { \displaystyle } & { = \sum _ { i = 1 } ^ { n + 1 } \alpha _ { i } f ^ { \prime } ( c _ { i } ) \quad { \mathrm { v } } { \dot { \mathsf { o i } } } \ d _ { 0 } = a , d _ { n + 1 } = b , \alpha _ { j } = { \cfrac { d _ { j } - d _ { j - 1 } } { b - a } } \ \forall j = } \end{array} }
+$$
+
+# Dinh ly 2.37. (Cauchy)
+
+Cho $f ( x ) , g ( x )$ la hai ham so lien tuc trén $[ a , b ]$ , khä vi trén khoang $( a , b )$ vd （20 $g ^ { \prime } ( x ) \neq 0 \forall x \in ( a , b )$ . Khi do tón tai $c \in ( a , b )$ sao cho
+
+$$
+{ \frac { f ( b ) - f ( a ) } { g ( b ) - g ( a ) } } = { \frac { f ^ { \prime } ( c ) } { g ^ { \prime } ( c ) } } .
+$$
+
+Ching minh Theo dinh ly Lagrange, ton tai $c _ { 0 } \in ( a , b )$ sao cho
+
+$$
+{ \frac { g ( b ) - g ( a ) } { b - a } } = g ^ { \prime } ( c _ { 0 } ) \neq 0 \Rightarrow g ( b ) \neq g ( a ) .
+$$
+
+Dat
+
+$$
+\varphi ( x ) = f ( x ) - f ( a ) - { \frac { f ( b ) - f ( a ) } { g ( b ) - g ( a ) } } [ g ( x ) - g ( a ) ] .
+$$
+
+Do $f ( x ) , g ( x )$ lien tuc tren $[ a , b ]$ , khä vi tren khoang $( a , b )$ nen $\varphi ( x )$ cung lien tuc tren $[ a , b ]$ va khä vi tren khoang $( a , b )$ . Ta c6 $\varphi ( a ) = 0 = \varphi ( b )$ , theo dinh ly Rolle, ton tai $c \in ( a , b )$ sao cho $\varphi ^ { \prime } ( c ) = 0$ .Tu
+
+$$
+\varphi ^ { \prime } ( x ) = f ^ { \prime } ( x ) - { \frac { f ( b ) - f ( a ) } { g ( b ) - g ( a ) } } g ^ { \prime } ( x ) ,
+$$
+
+suy ra
+
+$$
+\varphi ^ { \prime } ( c ) = f ^ { \prime } ( c ) - { \frac { f ( b ) - f ( a ) } { g ( b ) - g ( a ) } } g ^ { \prime } ( c ) = 0 \Rightarrow { \frac { f ( b ) - f ( a ) } { g ( b ) - g ( a ) } } = { \frac { f ^ { \prime } ( c ) } { g ^ { \prime } ( c ) } } .
+$$
+
+Trong truong hop dac biet: Neu $g ( x ) = x \forall x \in [ a , b ]$ , thi dinh ly Cauchy tró vé dinh ly Lagrange.
+
+Vi du 2.38. Cho ham $f ( x )$ kha vi trén $[ a , b ] \nu \dot { a } 0 < a < b$ . Ching minh rang: Ton tai $c \in ( a , b )$ sao cho
+
+$$
+{ \frac { a f ( b ) - b f ( a ) } { b - a } } = c f ^ { \prime } ( c ) - f ( c ) .
+$$
+
+Giai Ta c6
+
+$$
+{ \frac { a f ( b ) - b f ( a ) } { b - a } } = { \frac { { \frac { f ( b ) } { b } } - { \frac { f ( a ) } { a } } } { - { \frac { 1 } { b } } + { \frac { 1 } { a } } } } = { \frac { \varphi ( b ) - \varphi ( a ) } { \phi ( b ) - \phi ( a ) } } ,
+$$
+
+trong d6
+
+$$
+\varphi ( x ) = { \frac { f ( x ) } { x } } , \phi ( x ) = - { \frac { 1 } { x } }
+$$
+
+la cäc ham lien tuc tren $[ a , b ]$ va khä vi tren $( a , b )$ ： ${ \mathrm { V i ~ } } 0 < a < b$ ,nén các ham $\varphi ( x )$ va $\phi ( x )$ thóa man tat c' các dieu kien cua dinh ly Cauchy tren $[ a , b ]$ .Boi vay, tón tai $c \in ( a , b )$ sao cho 一
+
+$$
+{ \frac { \varphi ( b ) - \varphi ( a ) } { \phi ( b ) - \phi ( a ) } } = { \frac { \varphi ^ { \prime } ( c ) } { \phi ^ { \prime } ( c ) } } = c f ^ { \prime } ( c ) - f ( c ) .
+$$
+
+Vay
+
+$$
+{ \frac { a f ( b ) - b f ( a ) } { b - a } } = c f ^ { \prime } ( c ) - f ( c ) .
+$$
+
+Duoi day la mot vai ung dung cua các dinh ly gia tri trung binh.
+
+一
+
+# 2.9. Cong thuc Taylor5
+
+# 2.9.1. Da thuc Taylor
+
+Cho ham só $f ( x )$ kha vi den cap $n + 1$ trong lan can cua diem $x _ { 0 }$ . Khi d6, da thuc bac $n$ ， $P _ { n } ( x )$ dugc goi la da thic Taylor bac $n$ cua ham $f ( x )$ tai diem $x _ { 0 }$ khi va chi khi
+
+$$
+\left\{ \begin{array} { l l } { P _ { n } ( x _ { 0 } ) = f ( x _ { 0 } ) } \\ { P _ { n } ^ { \prime } ( x _ { 0 } ) = f ^ { \prime } ( x _ { 0 } ) } \\ { \dots } \\ { P _ { n } ^ { ( n ) } ( x _ { 0 } ) = f ^ { ( n ) } ( x _ { 0 } ) . } \end{array} \right.
+$$
+
+518.8.1685-29.12.1731,Brook Taylor $\mathrm { l \dot { a } \ m \hat { \varphi } t }$ nha Toan hoc nguoi Anh.
+
+Trong truong hop dac biet, néu $x _ { 0 } = 0$ thi $P _ { n } ( x )$ duoc goi la da thuc Maclaurin cua ham $f ( x )$ ：
+
+Dinh ly 2.39. Néu $P _ { n } ( x )$ la da thitc Taylor cia ham $f ( x )$ tai diem $x _ { 0 }$ ,thi
+
+$$
+x ) = f ( x _ { 0 } ) + { \frac { 1 } { 1 ! } } f ^ { \prime } ( x _ { 0 } ) ( x - x _ { 0 } ) ^ { 1 } + { \frac { 1 } { 2 ! } } f ^ { \prime \prime } ( x _ { 0 } ) ( x - x _ { 0 } ) ^ { 2 } + . . . + { \frac { 1 } { n ! } } f ^ { ( n ) } ( x _ { 0 } ) ( x - x _ { 0 } ) ^ { 3 } .
+$$
+
+Ching minh Do $P _ { n } ( x )$ la da thuc bac $n$ ,nen $P _ { n } ( x )$ bao gio cüng bieu dién duoc duoi dang
+
+$$
+P _ { n } ( x ) = A _ { 0 } + A _ { 1 } ( x - x _ { 0 } ) ^ { 1 } + A _ { 2 } ( x - x _ { 0 } ) ^ { 2 } + . . . + A _ { n } ( x - x _ { 0 } ) ^ { n } .
+$$
+
+- Thay $x = x _ { 0 }$ vao (2.1), ta có $A _ { 0 } = P _ { n } ( x _ { 0 } )$ . Tir dinh nghia cüa da thuc Taylor $P _ { n } ( x )$ , suy ra $A _ { 0 } = f ( x _ { 0 } )$ ：
+
+- Dao ham cap 1 hai ve cua (2.1), ta có
+
+$$
+P _ { n } ^ { \prime } ( x ) = A _ { 1 } + 2 A _ { 2 } ( x - x _ { 0 } ) ^ { 1 } + . . . + n A _ { n } ( x - x _ { 0 } ) ^ { n - 1 } .
+$$
+
+Thay $x = x _ { 0 }$ vao $P _ { n } ^ { \prime } ( x )$ ,ta ${ \textsf { c o } } A _ { 1 } = 1 ! P _ { n } ^ { \prime } ( x _ { 0 } )$ . Tir dinh nghia cua da thuc Taylor Pn(x), suy ra A1 = f'().
+
+- Dao ham cap $n$ hai ve cua (2.1), ta c6
+
+$$
+P _ { n } ^ { ( n ) } ( x ) = n ! A _ { n } \Rightarrow A _ { n } = \frac { P _ { n } ^ { ( n ) } ( x _ { 0 } ) } { n ! } .
+$$
+
+Tr dinh nghia cua dathc Taylor $P _ { n } ( x )$ , suy ra $\begin{array} { r } { A _ { n } = \frac { f ^ { ( n ) } ( x _ { 0 } ) } { n ! } } \end{array}$ （
+
+# 2.9.2. Phan du Taylor
+
+Cho $P _ { n } ( x )$ la da thuc Taylor bac $n$ tai $x _ { 0 }$ cua ham $f ( x )$ . Khi d6, phan du Taylor bac $n$ cua ham $f ( x )$ ,ky hieu ${ \cal R } _ { n } ( x )$ , duoc xac dinh boi
+
+$$
+R _ { n } ( x ) = f ( x ) - P _ { n } ( x ) .
+$$
+
+Dinh ly 2.40. Néu $f ( x )$ kha vi cap $n + 1$ trong lan can $( x _ { 0 } - \delta , x _ { 0 } + \delta )$ vd $x \in ( x _ { 0 } - \delta , x _ { 0 } + \delta )$ , thi tón tai so c nam giita hai so $x$ va $x _ { 0 }$ hay ton tai $c =$ （20 $x _ { 0 } + \lambda ( x - x _ { 0 } )$ voi $\lambda \in ( 0 , 1 )$ sao cho
+
+$$
+R _ { n } ( x ) = { \frac { 1 } { ( n + 1 ) ! } } f ^ { ( n + 1 ) } ( c ) ( x - x _ { 0 } ) ^ { n + 1 } .
+$$
+
+Ching minh Tu $f ( x )$ kha vi cap $n + 1$ ,suy ra $R _ { n } ( x )$ kha vi cap $n + 1$ va
+
+$$
+R _ { n } ^ { ( k ) } ( x ) = f ^ { ( k ) } ( x ) - P _ { n } ^ { ( k ) } ( x ) \forall k = 1 , 2 , . . , n .
+$$
+
+Khi d6
+
+$$
+R _ { n } ( x _ { 0 } ) = R _ { n } ^ { \prime } ( x _ { 0 } ) = \ldots = R _ { n } ^ { ( n ) } ( x _ { 0 } ) = 0 .
+$$
+
+Dat $g ( x ) = ( x - x _ { 0 } ) ^ { n + 1 }$ . Ta cung c6
+
+$$
+g ( x _ { 0 } ) = g ^ { \prime } ( x _ { 0 } ) = \ldots = g ^ { ( n ) } ( x _ { 0 } ) = 0 \ { \mathrm { ~ v \hat { a } ~ } } g ^ { ( n + 1 ) } ( x ) = ( n + 1 ) ! .
+$$
+
+Theo dinh ly Cauchy, ta có tón tai $c _ { 1 } = x _ { 0 } + \lambda _ { 1 } ( x - x _ { 0 } )$ voi $\lambda _ { 1 } \in ( 0 , 1 )$ sao cho
+
+$$
+{ \frac { R _ { n } ( x ) } { g ( x ) } } = { \frac { R _ { n } ( x ) - R _ { n } ( x _ { 0 } ) } { g ( x ) - g ( x _ { 0 } ) } } = { \frac { R _ { n } ^ { \prime } ( c _ { 1 } ) } { g ^ { \prime } ( c _ { 1 } ) } } .
+$$
+
+T6n tai $c _ { 2 } = x _ { 0 } + \lambda _ { 2 } ( c _ { 1 } - x _ { 0 } )$ voi $\lambda _ { 2 } \in ( 0 , 1 )$ sao cho
+
+$$
+{ \frac { R _ { n } ^ { \prime } ( c _ { 1 } ) } { g ^ { \prime } ( c _ { 1 } ) } } = { \frac { R _ { n } ^ { \prime } ( c _ { 1 } ) - R _ { n } ^ { \prime } ( x _ { 0 } ) } { g ^ { \prime } ( c _ { 1 } ) - g ^ { \prime } ( x _ { 0 } ) } } = { \frac { R _ { n } ^ { \prime \prime } ( c _ { 2 } ) } { g ^ { \prime \prime } ( c _ { 2 } ) } } .
+$$
+
+Ton tai $\mathrm { \dot { \mathbf { \varphi } } } _ { n + 1 } = x _ { 0 } + \lambda _ { n } ( c _ { n } - x _ { 0 } ) \mathrm { \ v o i } \lambda _ { n } \in ( 0 , 1 ) \Leftrightarrow c _ { n + 1 } = x _ { 0 } + \lambda ( x - x _ { 0 } )$ voi $\lambda \in ( 0 , 1 )$ sao cho 一
+
+$$
+\frac { R _ { n } ^ { ( n ) } ( c _ { n } ) } { g ^ { ( n ) } ( c _ { n } ) } = \frac { R _ { n } ^ { ( n ) } ( c _ { n } ) - R _ { n } ^ { ( n ) } ( x _ { 0 } ) } { g ^ { ( n ) } ( c _ { n } ) - g ^ { ( n ) } ( x _ { 0 } ) } = \frac { R _ { n } ^ { ( n + 1 ) } ( c _ { n + 1 } ) } { g ^ { ( n + 1 ) } ( c _ { n + 1 } ) } = \frac { R _ { n } ^ { ( n + 1 ) } ( c _ { n + 1 } ) } { ( n + 1 ) ! } .
+$$
+
+Nhu vay
+
+$$
+{ \frac { R _ { n } ( x ) } { g ( x ) } } = { \frac { R _ { n } ^ { ( n + 1 ) } ( c _ { n + 1 } ) } { ( n + 1 ) ! } } \Rightarrow R _ { n } ( x ) = { \frac { 1 } { ( n + 1 ) ! } } f ^ { ( n + 1 ) } ( c ) ( x - x _ { 0 } ) ^ { n + 1 } ,
+$$
+
+voi $\lambda \in ( 0 , 1 ) , \ c = c _ { n + 1 } = x _ { 0 } + \lambda ( x - x _ { 0 } ) .$ # 2.9.3. Cong thuc khai trien Taylor.
+
+Cho $f ( x )$ la mot ham khä vi cap $n + 1$ trong lan can cua diem $x _ { 0 }$ ， $P _ { n } ( x )$ la da thuc Taylor bac $n$ va $R _ { n } ( x )$ la phan du bac $n$ cua $f ( x )$ tai $x _ { 0 }$ . Khi d6
+
+$$
+f ( x ) = P _ { n } ( x ) + R _ { n } ( x )
+$$
+
+hay
+
+f(x） $= f ( x _ { 0 } ) + { \frac { f ^ { \prime } ( x _ { 0 } ) } { 1 ! } } ( x - x _ { 0 } ) ^ { 1 } + { \frac { f ^ { \prime \prime } ( x _ { 0 } ) } { 2 ! } } ( x - x _ { 0 } ) ^ { 2 } + \ldots + { \frac { f ^ { ( n ) } ( x _ { 0 } ) } { n ! } } ( x - x _ { 0 } ) ^ { n } + R _ { n }$ (x), voi $\begin{array} { r } { \lambda \in ( 0 , 1 ) , c = x _ { 0 } + \lambda ( x - x _ { 0 } ) , R _ { n } ( x _ { 0 } ) = \frac { 1 } { ( n + 1 ) ! } f ^ { ( n + 1 ) } ( c ) ( x - x _ { 0 } ) ^ { n + 1 } \circ } \end{array}$ duoc goi la khai trién Taylor bac $n$ cua ham $f ( x )$ tai diem $x _ { 0 }$ ：
+
+Nhan xet 2.41. 1. Trong truong hop dac biet $x _ { 0 } = 0$ , khai trien Taylor cua $f ( x )$ c6 dang
+
+$$
+f ( x ) = f ( 0 ) + { \frac { f ^ { \prime } ( 0 ) } { 1 ! } } x ^ { 1 } + { \frac { f ^ { \prime \prime } ( 0 ) } { 2 ! } } x ^ { 2 } + \ldots + { \frac { f ^ { ( n ) } ( 0 ) } { n ! } } x ^ { n } + R _ { n } ( 0 ) ,
+$$
+
+voi $\begin{array} { r } { \lambda \in \mathsf { \Gamma } ( 0 , 1 ) , c \ = \ \lambda x , R _ { n } ( 0 ) \ = \ \frac { 1 } { ( n + 1 ) ! } f ^ { ( n + 1 ) } ( c ) x ^ { n + 1 } } \end{array}$ duoc goi la khai trienMaclaurin bac $n$ cua ham $f ( x )$ ：
+
+2.Tur $\begin{array} { r } { R _ { n } ( x _ { 0 } ) = \frac { 1 } { ( n + 1 ) ! } f ^ { ( n + 1 ) } ( c ) ( x - x _ { 0 } ) ^ { n + 1 } \Rightarrow R _ { n } ( x _ { 0 } ) = o \big ( ( x - x _ { 0 } ) ^ { n } \big ) } \end{array}$ Vay khai trien Taylor cua $f ( x )$ con duoc viet duoi dang
+
+$$
+f ( x ) = f ( 0 ) + \frac { f ^ { \prime } ( 0 ) } { 1 ! } x ^ { 1 } + \frac { f ^ { \prime \prime } ( 0 ) } { 2 ! } x ^ { 2 } + \ldots + o \big ( ( x - x _ { 0 } ) ^ { n } \big ) .
+$$
+
+Cac khai trien quan trong nhat theo cong thuc Maclaurin la:
+
+$$
+\begin{array} { l } { { \displaystyle e ^ { x } = 1 + x + \frac { x ^ { 2 } } { 2 ! } + . . . + \frac { x ^ { n } } { n ! } + o ( x ^ { n } ) = \sum _ { k = 0 } ^ { n } \frac { x ^ { k } } { k ! } + o ( x ^ { n } ) . } } \\ { { \displaystyle . \sin x = x - \frac { x ^ { 3 } } { 3 ! } + . . . + ( - 1 ) ^ { n - 1 } \frac { x ^ { 2 n - 1 } } { ( 2 n - 1 ) ! } + o ( x ^ { 2 n + 1 } ) = \sum _ { k = 0 } ^ { n } ( - 1 ) ^ { k - 1 } \frac { x ^ { 2 k - 1 } } { ( 2 k - 1 ) ! } + } } \\ { { \displaystyle \mathrm { I . ~ c o s } x = 1 - \frac { x ^ { 2 } } { 2 ! } + . . . + ( - 1 ) ^ { n } \frac { x ^ { 2 n } } { ( 2 n ) ! } + o ( x ^ { 2 n + 2 } ) = \sum _ { k = 0 } ^ { n } ( - 1 ) ^ { k } \frac { x ^ { 2 k } } { ( 2 k ) ! } + o ( x - 1 ) ^ { n } \frac { x ^ { 2 k } } { ( 2 k ) ! } - } } \\ { { \displaystyle / . \ln ( 1 + x ) = x - \frac { x ^ { 2 } } { 2 } + . . . ( - 1 ) ^ { n - 1 } \frac { x ^ { n } } { n } + o ( x ^ { n + 1 } ) = \sum _ { k = 1 } ^ { n } ( - 1 ) ^ { k - 1 } \frac { x ^ { k } } { k } + o ( x - 1 ) ^ { n + 1 } } } \end{array}
+$$
+
+Vi du 2.42. Khai trien ham so
+
+$$
+f ( x ) = ( x - 2 ) e ^ { 3 x }
+$$
+
+theo cong thitc Maclaurin den so hang $o ( x ^ { n } )$
+
+Gidi Ta c6 $f ( x ) = x e ^ { 3 x } - 2 e ^ { 2 x }$ . Sir dung cong thuc I, ta thu duoc
+
+$$
+\begin{array} { l } { f ( x ) = x \Big ( \displaystyle \sum _ { k = 0 } ^ { n - 1 } \frac { 3 ^ { k } x ^ { k } } { k ! } + o ( x ^ { n - 1 } ) \Big ) - 2 \Big ( \displaystyle \sum _ { k = 0 } ^ { n } \frac { 3 ^ { k } x ^ { k } } { k ! } + o ( x ^ { n } ) \Big ) . } \\ { = \displaystyle \sum _ { k = 0 } ^ { n - 1 } \frac { 3 ^ { k } x ^ { k + 1 } } { k ! } - \displaystyle \sum _ { k = 0 } ^ { n } \frac { 2 . 3 ^ { k } x ^ { k } } { k ! } + o ( x ^ { n } ) . } \end{array}
+$$
+
+$\displaystyle \operatorname { V i } \sum _ { k = 0 } ^ { n - 1 } { \frac { 3 ^ { k } x ^ { k + 1 } } { k ! } } = \sum _ { k = 1 } ^ { n } { \frac { 3 ^ { k - 1 } } { ( k - 1 ) ! } } x ^ { k }$ ,nén ta có
+
+$$
+\begin{array} { l } { f ( x ) = \displaystyle - 2 + \sum _ { k = 1 } ^ { n } \frac { 3 ^ { k - 1 } } { ( k - 1 ) ! } x ^ { k } - \sum _ { k = 1 } ^ { n } \frac { 2 . 3 ^ { k } x ^ { k } } { k ! } + o ( x ^ { n } ) . } \\ { \displaystyle \qquad = - 2 + \sum _ { k = 1 } ^ { n } \Big ( \frac { 3 ^ { k - 1 } } { ( k - 1 ) ! } - \frac { 2 . 3 ^ { k } } { k ! } \Big ) x ^ { k } + o ( x ^ { n } ) . } \\ { \displaystyle \qquad = - 2 + \sum _ { k = 1 } ^ { n } \frac { ( k - 6 ) 3 ^ { k - 1 } } { k ! } x ^ { k } + o ( x ^ { n } ) . } \end{array}
+$$
+
+Vi du 2.43. Khai trien ham so
+
+$$
+f ( x ) = \ln ( 2 x - x ^ { 2 } + 3 )
+$$
+
+theo cong thitc Taylor tai diem $x _ { 0 } = 2$ den s6 hang $o { \big ( } ( x - 2 ) ^ { n } { \big ) }$
+
+Gidi Ta bieu dien $f ( x )$ duoi dang
+
+$$
+f ( x ) = \ln 3 + \ln { \bigl ( } 1 - ( x - 2 ) { \bigr ) } + \ln ( 1 + { \frac { x - 2 } { 3 } } ) ,
+$$
+
+va áp dung cong thuc IV ta thu duoc
+
+$$
+\begin{array} { l } { { \displaystyle ) = \ln 3 + \sum _ { k = 1 } ^ { n } \frac { ( - 1 ) ^ { k - 1 } } { k } ( x - 2 ) ^ { k } + \sum _ { k = 1 } ^ { n } \frac { ( - 1 ) ^ { k - 1 } } { k ^ { 3 k } } ( x - 2 ) ^ { k } + o \big ( ( x - 2 ) ^ { n } } } \\ { { \displaystyle = \ln 3 + \sum _ { k = 1 } ^ { n } \frac { ( - 1 ) ^ { k - 1 } ( 1 + 3 ^ { k } ) } { k ^ { 3 k } } ( x - 2 ) ^ { k } + o \big ( ( x - 2 ) ^ { n } \big ) . } } \end{array}
+$$
+
+# 2.10. Quy tac L'Hospital6
+
+Dinh ly 2.44. Cho hai ham só $f ( x )$ vd $g ( x )$ xác dinh va kha vi trén mot lan can cua diem $x _ { 0 }$ (có the trut diem $x _ { 0 }$ ) thoa man:
+
+i）li （2 $x { \to } x _ { 0 }$ $\operatorname* { m } _ { \to x _ { 0 } } f ( x ) = \operatorname* { l i m } _ { x \to x _ { 0 } } g ( x ) = 0$ ii) $g ^ { \prime } ( x ) \neq 0$ trong lan can da chi ra (co the tru diem $x _ { 0 }$ ）   
+ii)Ton tai gioi han lim f'() $\begin{array} { l } { { \displaystyle \sum _ { \gamma _ { 0 } } \frac { f ^ { \prime } ( x ) } { g ^ { \prime } ( x ) } = A } . } \\ { { \displaystyle n \operatorname* { l i m } _ { x  x _ { 0 } } \frac { f ( x ) } { g ( x ) } \nu \dot { a } } } \end{array}$   
+Khi dó,ton tai gioi ha
+
+$$
+\operatorname* { l i m } _ { x \to x _ { 0 } } { \frac { f ( x ) } { g ( x ) } } = \operatorname* { l i m } _ { x \to x _ { 0 } } { \frac { f ^ { \prime } ( x ) } { g ^ { \prime } ( x ) } } .
+$$
+
+Ching minh Dat $f ( x _ { 0 } ) = 0 = g ( x _ { 0 } )$ . Khi d6, cä $f ( x )$ va $g ( x )$ lien tuc tren lan can cua $x _ { 0 }$ . Theo dinh ly Cauchy ta có
+
+$$
+{ \frac { f ( x ) } { g ( x ) } } = { \frac { f ( x ) - f ( x _ { 0 } ) } { g ( x ) - g ( x _ { 0 } ) } } = { \frac { f ^ { \prime } ( c ) } { g ^ { \prime } ( c ) } } ,
+$$
+
+voi $c$ nam giua $x$ va $x _ { 0 }$ . Mat khac, theo dinh nghia cua $\operatorname* { l i m } _ { x  x _ { 0 } } { \frac { f ^ { \prime } ( x ) } { g ^ { \prime } ( x ) } } = A ;$
+
+$$
+\forall \epsilon > 0 , \exists \delta > 0 , \forall x : 0 < | x - x _ { 0 } | < \delta \Rightarrow | \frac { f ^ { \prime } ( x ) } { g ^ { \prime } ( x ) } - A | < \epsilon .
+$$
+
+Do vay
+
+$$
+\forall \epsilon > 0 , \exists \delta > 0 , \forall x : 0 < | x - x _ { 0 } | < \delta \Rightarrow | \frac { f ( x ) } { g ( x ) } - A | < \epsilon .
+$$
+
+Hay $\operatorname* { l i m } _ { x \to x _ { 0 } } { \frac { f ( x ) } { g ( x ) } } = A .$ Ta c6 the dé dang chung minh duoc nhan xet duoi day.
+
+Nhan xet 2.45. Neu ta thay $x \to x _ { 0 }$ bang $x \to \infty$ hoac gia thiet i) boi
+
+$$
+\operatorname* { l i m } _ { x \to x _ { 0 } } f ( x ) = \operatorname* { l i m } _ { x \to x _ { 0 } } g ( x ) = \infty ,
+$$
+
+thi ket qua cüa dinh 1y 2.44 khong thay doi.
+
+Vi du 2.46. Tim gioi han
+
+$$
+\begin{array} { l } { I _ { 1 } = \displaystyle \operatorname* { l i m } _ { x \to 1 } \frac { x ^ { x } - 1 } { \ln x + x - 1 } . } \\ { I _ { 2 } = \displaystyle \operatorname* { l i m } _ { x \to 0 } \frac { 1 } { x } \big ( \frac { 1 } { { t h } ~ x } - \frac { 1 } { \tan x } \big ) . } \\ { I _ { 3 } = \displaystyle \operatorname* { l i m } _ { x \to + \infty } \big ( x + \sqrt { x ^ { 2 } + 1 } \big ) ^ { \frac { 1 } { \ln x } } . } \end{array}
+$$
+
+Giai Theo cong thuc $x = e ^ { \ln x } \forall x > 0$ va quy tac L'Hospital, ta c6
+
+$$
+{ \begin{array} { r l } & { I _ { 1 } = \operatorname* { l i m } _ { x \to 1 } \displaystyle \frac { x ^ { x } - 1 } { \ln x + x - 1 } \ { \mathrm { ( d a n g : ~ } } { \frac { 0 } { 0 } } { \mathrm { ) } } } \\ & { \quad = \operatorname* { l i m } _ { x \to 1 } \displaystyle \frac { e ^ { x \ln x } - 1 } { \ln x + x - 1 } } \\ & { \quad = \operatorname* { l i m } _ { x \to 1 } \displaystyle \frac { e ^ { x \ln x } { \mathrm { ( l n ~ } } x + 1 { \mathrm { ) } } } { \frac { 1 } { x } + 1 } } \\ & { \quad = { \frac { 1 } { 2 } } . } \end{array} }
+$$
+
+$$
+\begin{array} { r l } & { I _ { 2 } = \underset { x  0 } { \operatorname* { l i m } } \frac { 1 } { x } \big ( \frac { 1 } { t h x } - \frac { 1 } { \tan x } \big ) } \\ & { \quad = \underset { x  0 } { \operatorname* { l i m } } \frac { \tan x - t h x } { x \cdot t h x } ~ ( \mathrm { d a n g : } ~ \frac { 0 } { 0 } ) } \\ & { \quad = \underset { x  0 } { \operatorname* { l i m } } \frac { \frac { 1 } { \cos ^ { 2 } x } - \frac { 1 } { \sqrt { t } } x } { t h x \tan x + \frac { x \tan x } { \cos ^ { 2 } x } + \frac { x \tan x } { \cos ^ { 2 } x } } } \\ & { \quad = 0 . } \\ & { \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad } \\ & { I _ { 3 } = \underset { x  \infty } { \operatorname* { l i m } } \big ( x + \sqrt { x ^ { 2 } + 1 } \big ) ^ { \frac { 1 } { \log } } = \underset { x  + \infty } { \operatorname* { l i m } } ~ e ^ { \frac { \tan ( x + \sqrt { x ^ { 2 } + 1 } ) } { \tan x } } . } \end{array}
+$$
+
+Theo quy täc L'Hospital, ta c6
+
+$$
+\operatorname* { l i m } _ { x \to + \infty } { \frac { \ln ( x + { \sqrt { x ^ { 2 } + 1 ) } } } { \ln x } } = \operatorname* { l i m } _ { x \to + \infty } { \frac { \frac { 1 } { \sqrt { x ^ { 2 } + 1 } } } { \frac { 1 } { x } } } = \operatorname* { l i m } _ { x \to + \infty } { \frac { x } { \sqrt { x ^ { 2 } + 1 } } } = 1 .
+$$
+
+Vay $I _ { 3 } = e$
+
+# 2.11. Ham loi (doc them)
+
+# 2.11.1. Dinh nghia
+
+Tap $D \subseteq \mathbb { R }$ duqc goi la täp loi khi va chi khi
+
+$$
+\forall x _ { 1 } , x _ { 2 } \in D , \lambda \in [ 0 , 1 ] \Rightarrow \lambda x _ { 1 } + ( 1 - \lambda ) x _ { 2 } \in D .
+$$
+
+- Ham só $f ( x )$ duoc goi la ham loi tren tap l6i $D$ ,neu
+
+$$
+\begin{array} { r } { \mathrm { \tilde { \rho } } _ { 2 } \in D , \forall \lambda \in [ 0 , 1 ] \Rightarrow f \big ( \lambda x _ { 1 } + ( 1 - \lambda ) x _ { 2 } \big ) \leq \lambda f ( x _ { 1 } ) + ( 1 - \lambda ) f ( x _ { 2 } ) . } \end{array}
+$$
+
+- Ham só $f ( x )$ dugc goi la ham loi chat tren tap loi $D$ ,neu
+
+$$
+, x _ { 2 } \in D , \forall \lambda \in ( 0 , 1 ) \Rightarrow f { \big ( } \lambda x _ { 1 } + ( 1 - \lambda ) x _ { 2 } { \big ) } < \lambda f ( x _ { 1 } ) + ( 1 - \lambda ) f { \big ( } x _ { 2 } { \big ) } ,
+$$
+
+- Ham só $f ( x )$ la ham lom tren mién $D$ ,néu $- f ( x )$ la ham loi tren $D$ ： - Ham só $f ( x )$ la ham lom chat tren mien $D$ ,neu $- f ( x )$ la ham loi chat tren $D$ ：
+
+# 2.11.2. Bat dang thuc Jensen
+
+Cho $f ( x )$ la ham loi tren $D$ , X1, χ2,, xn ∈ D va λ1,入2,.,入n ∈ [0,1] : λ1 + $\lambda _ { 2 } + \ldots + \lambda _ { n } = 1$ . Khi d6
+
+$$
+f ( \lambda _ { 1 } x _ { 1 } + \lambda _ { 2 } x _ { 2 } + . . . + \lambda _ { n } x _ { n } ) \leq \lambda _ { 1 } f ( x _ { 1 } ) + \lambda _ { 2 } f ( x _ { 2 } ) + . . . + \lambda _ { n } f ( x _ { n } ) .
+$$
+
+![](images/51ad5a7f47f74edeb7f628ca3f43f22fdb352409c8c49c00ecf225675b1fd114.jpg)  
+Hinh 2: Bieu dién hinh hoc cüa ham loi
+
+Ching minh Quy nap theo $n$ ：
+
+$+ \mathrm { \Delta V }$ 6i $n = 1 \Rightarrow ( 2 . 2 )$ dung. V6i $n = 2 \Rightarrow ( 2 . 2 )$ dung theo dinh nghia cua ham 16i.   
+$+ \ \mathrm { G i \overset { \cdot } { a } }$ sir tinh cht trn dun v i $n$ hayV1,2. 心 E D va $\lambda _ { 1 } , \lambda _ { 2 } , . . . , \lambda _ { n } \in$ $[ 0 , 1 ] : \ \lambda _ { 1 } + \lambda _ { 2 } + . . . + \lambda _ { n } = 1$ ta c6 1
+
+$$
+f ( \lambda _ { 1 } x _ { 1 } + \lambda _ { 2 } x _ { 2 } + . . . + \lambda _ { n } x _ { n } ) \leq \lambda _ { 1 } f ( x _ { 1 } ) + \lambda _ { 2 } f ( x _ { 2 } ) + . . . + \lambda _ { n } f ( x _ { n } ) .
+$$
+
+$+ \thinspace \mathrm { C } \dot { \mathrm { a n } }$ chuing minh tinh chat tren dung voi $n + 1$ ,hay $\forall \bar { x } _ { 1 } , \bar { x } _ { 2 } , . . . , \bar { x } _ { n } , \bar { x } _ { n + 1 } \in D$ va X1,X2,.,Xn, Xn+1 ∈[0,1] : $\bar { \lambda } _ { 1 } + \bar { \lambda } _ { 2 } + . . . + \bar { \lambda } _ { n } + \bar { \lambda } _ { n + 1 } = 1$ ,ta c6 $f ( { \bar { \lambda } } _ { 1 } { \bar { x } } _ { 1 } + { \bar { \lambda } } _ { 2 } { \bar { x } } _ { 2 } + . . . + { \bar { \lambda } } _ { n } { \bar { x } } _ { n } + { \bar { \lambda } } _ { n + 1 } { \bar { x } } _ { n + 1 } ) \leq { \bar { \lambda } } _ { 1 } f ( { \bar { x } } _ { 1 } ) + { \bar { \lambda } } _ { 2 } f ( { \bar { x } } _ { 2 } ) + . . . + { \bar { \lambda } }$ n+1.f(xn+1). Néu $\bar { \lambda } _ { 1 } = \bar { \lambda } _ { 2 } = . . . = \bar { \lambda } _ { n } = 0$ , thi bat dang thuc tren luon dung. Néu $\bar { \lambda } _ { 1 } ^ { 2 } + \bar { \lambda } _ { 2 } ^ { 2 } + . . . + \bar { \lambda } _ { n } ^ { 2 } > 0$ ,thi dat
+
+$$
+\mu = \bar { \lambda } _ { 1 } + \bar { \lambda } _ { 2 } + . . . + \bar { \lambda } _ { n } \Rightarrow \mu = 1 - \bar { \lambda } _ { n + 1 } \in [ 0 , 1 ] .
+$$
+
+Theo gia thiet quy nap, voi $\begin{array} { r } { \lambda _ { k } = \frac { \bar { \lambda } _ { k } } { \mu } \forall k = 1 , 2 , . . . , n . } \end{array}$
+
+$$
+\begin{array} { r } { \bar { x } _ { 1 } + \bar { \lambda } _ { 2 } \bar { x } _ { 2 } + . . . + \bar { \lambda } _ { n } \bar { x } _ { n } + \bar { \lambda } _ { n + 1 } \bar { x } _ { n + 1 } ) = f \bigl ( \mu \bigl ( \displaystyle \sum _ { k = 1 } ^ { n } \frac { \bar { \lambda } _ { k } } { \mu } x _ { k } \bigr ) + ( 1 - \mu ) x _ { n + 1 } } \\ { \leq \mu f \bigl ( \displaystyle \sum _ { k = 1 } ^ { n } \frac { \bar { \lambda } _ { k } } { \mu } x _ { k } \bigr ) + ( 1 - \mu ) f \bigl ( x _ { n + 1 } , \mu \bigr ) . } \end{array}
+$$
+
+$$
+\begin{array} { l } { { \displaystyle \leq \mu \sum _ { k = 1 } ^ { n } \frac { \bar { \lambda } _ { k } } { \mu } f ( x _ { k } ) + ( 1 - \mu ) f ( x _ { n + 1 } ) } } \\ { { \displaystyle = \sum _ { k = 1 } ^ { n + 1 } \bar { \lambda } _ { k } f ( x _ { k } ) } . } \end{array}
+$$
+
+Theo quy nap Toan hoc, bat dang thuc duoc chung minh.
+
+Dac biet: $\lambda _ { 1 } = \lambda _ { 2 } = . . . = \lambda _ { n } = { \frac { 1 } { n } }$ , bat dang thuc Jensen c6 dang:
+
+$$
+f ( { \frac { x _ { 1 } + x _ { 2 } + \ldots + x _ { n } } { n } } ) \leq { \frac { f ( x _ { 1 } ) + f ( x _ { 2 } ) + \ldots + f ( x _ { n } ) } { n } } .
+$$
+
+# 2.11.3. Dieu kien can va du cua ham loi
+
+Cho ham só $f ( x )$ xäc dinh tren mién loi $D$ ：
+
+Dinh ly 2.47. Ham so $f ( x )$ loi trén mien $D$ khi va chi khi
+
+$$
+\forall a \in D \Rightarrow g ( x ) = { \frac { f ( x ) - f ( a ) } { x - a } }
+$$
+
+tang tren mien $D _ { 1 } = \{ x \in D : \ x < a \}$ va $D _ { 2 } = \{ x \in D : x > a \}$ Ching minh $( \Rightarrow )$ V6i moi $x _ { 1 } , x _ { 2 } \in D _ { 1 } , a < x _ { 1 } < x _ { 2 }$ ,ton tai
+
+$$
+\lambda = \frac { x _ { 1 } - x _ { 2 } } { a - x _ { 2 } } \in ( 0 , 1 ) : x _ { 1 } = \lambda a + ( 1 - \lambda ) x _ { 2 } .
+$$
+
+Khi d6
+
+$$
+\Leftrightarrow f ( x _ { 1 } ) \leq { \frac { x _ { 1 } - x _ { 2 } } { a - x _ { 2 } } } f ( a ) + { \big ( } 1 - { \frac { x _ { 1 } - x _ { 2 } } { a - x _ { 2 } } } { \big ) } f ( x _ { 2 } )
+$$
+
+$$
+\begin{array} { r l } & { \Leftrightarrow ( a - x _ { 2 } ) f ( x _ { 1 } ) \leq ( x _ { 1 } - x _ { 2 } ) f ( a ) + ( a - x _ { 1 } ) f ( x _ { 2 } ) } \\ & { \Leftrightarrow ( x _ { 2 } - a ) f ( x _ { 1 } ) \leq ( x _ { 2 } - x _ { 1 } ) f ( a ) + ( x _ { 1 } - a ) f ( x _ { 2 } ) } \\ & { \Leftrightarrow \displaystyle \frac { f ( x _ { 1 } ) - f ( a ) } { x _ { 1 } - a } \leq \frac { f ( x _ { 2 } ) - f ( a ) } { x _ { 2 } - a } . } \end{array}
+$$
+
+Vay $g ( x )$ tang tren $D _ { 1 }$ , tuong tu ta cung c6 $f ( x )$ tang tren $D _ { 2 }$ .
+
+$( \Leftarrow )$ V6i moi $x _ { 1 } , x _ { 2 } \in D , x _ { 1 } < x _ { 2 } , \lambda \in ( 0 , 1 )$ dat $x _ { 3 } = \lambda x _ { 1 } + ( 1 - \lambda ) x _ { 2 } \Rightarrow x _ { 1 } <$ $x _ { 3 } < x _ { 2 }$ . theo gia thiet ham só
+
+$$
+g ( x ) = { \frac { f ( x ) - f ( x _ { 1 } ) } { x - x _ { 1 } } } \quad { \mathrm { t a n g ~ t r } } { \mathrm { t r } } { \mathrm { m } } { \mathrm { ~ m i } } { \hat { \epsilon } } { \mathrm { n } } D _ { 1 } = \{ x \in D : x > x _ { 1 } \} .
+$$
+
+Suy ra
+
+$$
+{ \frac { f ( x _ { 3 } ) - f ( x _ { 1 } ) } { x _ { 3 } - x _ { 1 } } } \leq { \frac { f ( x _ { 2 } ) - f ( x _ { 1 } ) } { x _ { 2 } - x _ { 1 } } } .
+$$
+
+Theo chung minh tren, dieu nay tuong duong voi
+
+$$
+f { \bigl ( } \lambda x _ { 1 } + ( 1 - \lambda ) x _ { 2 } { \bigr ) } \leq \lambda f ( x _ { 1 } ) + ( 1 - \lambda ) f ( x _ { 2 } ) .
+$$
+
+Nhu vay
+
+$$
+\begin{array} { r } { \big ( \lambda x _ { 1 } + ( 1 - \lambda ) x _ { 2 } \big ) \le \lambda f ( x _ { 1 } ) + ( 1 - \lambda ) f ( x _ { 2 } ) \ \forall x _ { 1 } , x _ { 2 } \in D , \lambda \in [ 0 , 1 ] . } \end{array}
+$$
+
+Dinh ly 2.48. Cho ham so $f ( x )$ khä vi trén mién loi $D$ . Khi d6 $f ( x )$ loi tren $D$   
+khi va chi khi ham so $f ^ { \prime } ( x )$ tang trén $D$ →
+
+Ching minh $( \Rightarrow )$ Gia sur $f ( x )$ l6i tren $D$ ,v6i moi $a , b \in D , a < b$ Theo dinh ly 2.47, ham só ■
+
+$$
+g ( x ) = { \frac { f ( x ) - f ( a ) } { x - a } }
+$$
+
+tang tren $D _ { 1 } = \{ x \in D : x > a \}$ va ham só
+
+$$
+g ( x ) = { \frac { f ( x ) - f ( b ) } { x - b } }
+$$
+
+tang tren mien $D _ { 2 } = \{ x \in D : x < b \}$ . Suy ra
+
+$$
+f ^ { \prime } ( a ) = \operatorname* { l i m } _ { x \to a ^ { + } } { \frac { f ( x ) - f ( a ) } { x - a } } \leq { \frac { f ( b ) - f ( a ) } { b - a } } \leq \operatorname* { l i m } _ { x \to b ^ { - } } { \frac { f ( x ) - f ( b ) } { x - b } } = f ^ { \prime } (
+$$
+
+Vay $f ^ { \prime } ( a ) \leq f ^ { \prime } ( b )$ hay $f ^ { \prime } ( x )$ tang tren $D$ .
+
+$( \Leftarrow )$ Gia sur $f ^ { \prime } ( x )$ tang tren $D$ . Voi moi $a , b \in D , a \textless b , \lambda \in [ 0 , 1 ]$ va $x =$ $\lambda a + ( 1 - \lambda ) b$ . Theo dinh ly Lagrange, ta c6
+
+$$
+f ( x ) - f ( a ) = ( x - a ) f ^ { \prime } ( c ) = ( 1 - \lambda ) ( b - a ) f ^ { \prime } ( c ) { \mathrm { ~ } } { \mathrm { ~ v \ddot { o } i ~ } } c \in [ a , x ] ,
+$$
+
+$$
+f ( b ) - f ( x ) = ( b - x ) f ^ { \prime } ( d ) = \lambda ( b - a ) f ^ { \prime } ( d ) \ \mathfrak { v } \dot { \mathfrak { o } } \mathbf { i } c \in [ x , b ] .
+$$
+
+Vi $f ^ { \prime } ( x )$ tang tren $D$ ,nen
+
+$$
+\begin{array} { c } { { f ^ { \prime } ( c ) \leq f ^ { \prime } ( d ) \Rightarrow \lambda \big ( f ( x ) - f ( a ) \big ) \leq ( 1 - \lambda ) \big ( f ( b ) - f ( x ) \big ) } } \\ { { \Leftrightarrow f ( x ) \leq \lambda f ( a ) + ( 1 - \lambda ) f ( b ) . } } \end{array}
+$$
+
+Vay $f ( x )$ loi tren $D$ ：
+
+He qua 2.49. Cho $f ( x )$ c6 dao ham cap 2 trén mién loi $D$ . Khi d6, $f ( x )$ loi tren mien $D$ khi va chi khi
+
+$$
+f ^ { \prime \prime } ( x ) \geq 0 \forall x \in D .
+$$
+
+Chung minh Theo dinh ly 2.48, $f ( x )$ loi tren $D$ khi va chi khi $f ^ { \prime } ( x )$ tang tren $D$ Ta da biet $f ^ { \prime } ( x )$ tang tren $D$ khi va chi khi $\left( f ^ { \prime } ( x ) \right) ^ { \prime } = f ^ { \prime \prime } ( x ) \ge 0 \forall x \in D .$
+
+# 2.11.4. Cuc tri cua ham loi
+
+Cho ham só $f ( x )$ loi tren mién l6i $D$ ：
+
+Dinh ly 2.50. i) Néu $f ( x )$ dat cuc tieu toan cuc trén $D$ , thi tap cac diem cuc tieu toan cuc la mot tap loi.
+
+ii) Neu $f ( x )$ la loi chat va co cuc tieu toan cuc trén $D$ , thi có duy nhat mot diém cuc tieu toan cuc.
+
+ii) Cho $f ( x )$ la loi chat, kha vi trén $D \nu \dot { a } \left( x _ { 0 } - \delta , x _ { 0 } + \delta \right) \subseteq D$ .Khi d6, $f ( x )$ dat cuc tieu toan cuc tai $x _ { 0 }$ khi va chi khi $f ^ { \prime } ( x _ { 0 } ) = 0$ ，
+
+Ching minh i) Gia sur $x _ { 1 } , x _ { 2 } \in \mathcal { D }$ sao cho
+
+$$
+f ( x _ { 1 } ) = f ( x _ { 2 } ) \leq f ( x ) \ \forall x \in D .
+$$
+
+Do $f ( x )$ loi tren $D$ ， ta co
+
+$$
+\forall \lambda \in [ 0 , 1 ] \Rightarrow f { \big ( } \lambda x _ { 1 } + ( 1 - \lambda ) x _ { 2 } { \big ) } \leq \lambda f ( x _ { 1 } ) + ( 1 - \lambda ) f ( x _ { 2 } ) = f ( x _ { 1 } ) - ( 1 - \lambda ) f ( x _ { 2 } ) = 0
+$$
+
+ii) (Phan ching) Gia sur nguqc lai rang ton tai $x _ { 1 } , x _ { 2 } \in D , x _ { 1 } \neq x _ { 2 }$ sao cho
+
+$$
+f ( x _ { 1 } ) = f ( x _ { 2 } ) \leq f ( x ) \ \forall x \in D .
+$$
+
+Do $f ( x )$ loi chat tren $D$ ,ta c6
+
+$$
+\forall \lambda \in ( 0 , 1 ) \Rightarrow f \big ( \lambda x _ { 1 } + ( 1 - \lambda ) x _ { 2 } \big ) < \lambda f ( x _ { 1 } ) + ( 1 - \lambda ) f ( x _ { 2 } ) = f \big ( x _ { 1 } ^ { \prime } \big ) ,
+$$
+
+Dieu nay có nghia la $x _ { 1 }$ khong phai la diem cuc tieu toan cuc,trai gia thiet. Vay tap cac diem cuc tieu neu ton tai thi tap diém dó có duy nhat mot phan tr.
+
+ii) Phan thuan dé dang duqc suy ra tur dinh ly Fermat. Dao lai, gia sur cho $f ^ { \prime } ( x _ { 0 } ) =$ 0. Theo dinh ly 2.48, $f ^ { \prime } ( x )$ tang tren mien $D$ .Vay $f ^ { \prime } ( x )$ doi dau tur $" - "  " + "$ （20 qua diem $x _ { 0 }$ .Vay $x _ { 0 }$ la diem cuc tieu toan cuc. □
+
+Vi du 2.51. (Bat dang thitc Cauchy)
+
+Cho $a _ { k } \ge 0 ~ \forall k = 1 , 2 , . . . , n$ . Ching minh rang
+
+$$
+{ \frac { a _ { 1 } + a _ { 2 } + . . . + a _ { n } } { n } } \geq { \sqrt [ { n } ] { a _ { 1 } a _ { 2 } . . . a _ { n } } } .
+$$
+
+Gidi Neu ton tai $k : a _ { k } = 0$ , thi bat dang thuc tren luon dung. Neu $a _ { k } > 0 \forall k = 1 , 2 , . . . , n$ , thi bat dang thuc tren có dang
+
+$$
+\ln { \frac { a _ { 1 } + a _ { 2 } + . . . + a _ { n } } { n } } \geq { \frac { 1 } { n } } { \big ( } \ln a _ { 1 } + \ln a _ { 2 } + . . . + \ln a _ { n } { \big ) }
+$$
+
+$$
+\ln \big ( { \frac { 1 } { n } } a _ { 1 } + { \frac { 1 } { n } } a _ { 2 } + \ldots + { \frac { 1 } { n } } a _ { n } \big ) \leq { \frac { 1 } { n } } ( - \ln a _ { 1 } ) + { \frac { 1 } { n } } ( - \ln a _ { 2 } ) + \ldots + { \frac { 1 } { n } } ( - \ln b _ { n } )
+$$
+
+$$
+( { \frac { 1 } { n } } a _ { 1 } + { \frac { 1 } { n } } a _ { 2 } + \ldots + { \frac { 1 } { n } } a _ { n } ) \leq { \frac { 1 } { n } } ( - \ln a _ { 1 } ) + { \frac { 1 } { n } } ( - \ln a _ { 2 } ) + \ldots + { \frac { 1 } { n } } ( - \ln a _ { n } )
+$$
+
+$$
+\Leftrightarrow f \bigl ( { \frac { 1 } { n } } a _ { 1 } + { \frac { 1 } { n } } a _ { 2 } + \ldots + { \frac { 1 } { n } } a _ { n } \bigr ) \leq { \frac { 1 } { n } } f ( a _ { 1 } ) + { \frac { 1 } { n } } f ( a _ { 2 } ) + \ldots + { \frac { 1 } { n } } f ( a _ { n } ) ,
+$$
+
+v6i $f ( x ) = - \ln { x }$ ：
+
+Mat khac $\textstyle f ( x ) = - \ln x \Rightarrow f ^ { \prime \prime } ( x ) = { \frac { 1 } { x ^ { 2 } } } > 0 \forall x \in ( 0 , + \infty )$ . Theo he qua 2.49, $f ( x )$ loi tren $( 0 , + \infty )$ . Theo bat dang thuc Jensen, bat dang thuc Cauchy duoc chung minh.
+
+Vi du 2.52. (Bat dang thitc Schwartz)
+
+Cho $b _ { k } > 0 \forall k = 1 , 2 , . . . , n .$ Ching minh rang
+
+$$
+\frac { a _ { 1 } ^ { 2 } } { b _ { 1 } } + \frac { a _ { 2 } ^ { 2 } } { b _ { 2 } } + . . . + \frac { a _ { n } ^ { 2 } } { b _ { n } } \geq \frac { ( a _ { 1 } + a _ { 2 } + . . . + a _ { n } ) ^ { 2 } } { b _ { 1 } + b _ { 2 } + . . . + b _ { n } } \forall a _ { 1 } , a _ { 2 } , . . . , a _ { n } .
+$$
+
+Ching minh Dat $b = \sum _ { k = 1 } ^ { n } b _ { k }$ . Khi d6
+
+$$
+\begin{array} { c } { { \displaystyle \frac { a _ { 1 } ^ { 2 } } { b _ { 1 } } + \frac { a _ { 2 } ^ { 2 } } { b _ { 2 } } + . . . + \frac { a _ { n } ^ { 2 } } { b _ { n } } \geq \frac { ( a _ { 1 } + a _ { 2 } + . . . + a _ { n } ) ^ { 2 } } { b _ { 1 } + b _ { 2 } + . . . + b _ { n } } } } \\ { { \mathrm { } } } \\ { { \displaystyle \Leftrightarrow b _ { 1 } \big ( \frac { a _ { 1 } } { b _ { 1 } } \big ) ^ { 2 } + b _ { 2 } \big ( \frac { a _ { 2 } } { b _ { 2 } } \big ) ^ { 2 } + . . . + b _ { n } \big ( \frac { a _ { n } } { b _ { n } } \big ) ^ { 2 } \geq b \big ( \frac { a _ { 1 } } { b _ { 1 } } + a _ { 1 } + . . . + a _ { n } \big ) ^ { 2 } } } \\ { { \ \displaystyle \Leftrightarrow \frac { b _ { 1 } } { b } \big ( \frac { a _ { 1 } } { b _ { 1 } } \big ) ^ { 2 } + \frac { b _ { 2 } } { b } \big ( \frac { a _ { 2 } } { b _ { 2 } } \big ) ^ { 2 } + . . . + \frac { b _ { n } } { b } \big ( \frac { a _ { n } } { b _ { n } } \big ) ^ { 2 } \geq \big ( \frac { b _ { 1 } } { b } \frac { a _ { 1 } } { b _ { 1 } } + \frac { b _ { 2 } } { b } \frac { a _ { 2 } } { b _ { 2 } } + . . . + \frac { b _ { n } } { b } \frac { a _ { n } } { b _ { n } } } } \\  { \ \displaystyle \Leftrightarrow \lambda _ { 1 } \big ( \frac { a _ { 1 } } { b _ { 1 } } \big ) ^ { 2 } + \lambda _ { 2 } \big ( \frac { a _ { 2 } } { b _ { 2 } } \big ) ^ { 2 } + . . . + \lambda _ { n } \big ( \frac { a _ { n } } { b _ { n } } \big ) ^ { 2 } \geq \big ( \lambda _ { 1 } \frac { a _ { 1 } } { b _ { 1 } } + \lambda _ { 2 } \frac { a _ { 2 } } { b _ { 2 } } + . . . + \lambda _ { n } \frac { a _ { n } } { b _ { n } } } \\ { { \displaystyle \Leftrightarrow \lambda _ { 1 } f ( x _ { 1 } ) + \lambda _ { 2 } f ( x _ { 2 } ) + . . + \lambda _ { n } f ( x _ { n } ) \geq f \big ( \lambda _ { 1 } x _ { 1 } + \lambda _ { 2 } x _ { 2 } + . . . + \lambda _ { n } x } } \end{array}
+$$
+
+trong d6
+
+$$
+= { \frac { b _ { k } } { b } } \in ( 0 , 1 ) : \lambda _ { 1 } + \lambda _ { 2 } + \ldots + \lambda _ { n } = 1 , x _ { k } = { \frac { a _ { k } } { b _ { k } } } , f ( x ) = x ^ { 2 } \forall k = 1 , 2
+$$
+
+Do $f ( x ) = x ^ { 2 }$ la ham loi tren $\mathbb { R }$ , nen bat däng thuc Schwartz duoc chung minh
+
+Vi du 2.53. (Bat dang thuc Minkowski7)
+
+Cho $a _ { k } > 0 , b _ { k } > 0 \forall k = 1 , 2 , . . . , n$ . Ching minh rang
+
+$$
+\sqrt [ n ] { a _ { 1 } a _ { 2 } . . . a _ { n } } + \sqrt [ n ] { b _ { 1 } b _ { 2 } . . . b _ { n } } \leq \sqrt [ n ] { \big ( a _ { 1 } + b _ { 1 } \big ) \big ( a _ { 2 } + b _ { 2 } \big ) . . . \big ( a _ { n } + b _ { n } \big ) } .
+$$
+
+Gidi Ta c6
+
+$$
+\begin{array} { r l r } & { } & { \sqrt [ n ] { a _ { 1 } a _ { 2 } . . . a _ { n } } + \sqrt [ n ] { b _ { 1 } b _ { 2 } . . . b _ { n } } \leq \sqrt [ n ] { ( a _ { 1 } + b _ { 1 } ) ( a _ { 2 } + b _ { 2 } ) . . . ( a _ { n } + b _ { n } ) } } \\ & { } & { \Leftrightarrow 1 + \sqrt [ n ] { \frac { b _ { 1 } } { a _ { 1 } } \frac { b _ { 2 } } { a _ { 2 } } . . . \frac { b _ { n } } { a _ { n } } } \leq \sqrt [ n ] { ( 1 + \frac { b _ { 1 } } { a _ { 1 } } ) ( 1 + \frac { b _ { 2 } } { a _ { 2 } } ) . . . ( 1 + \frac { b _ { n } } { a _ { n } } ) } } \end{array}
+$$
+
+$$
+\begin{array} { r l r } & { } & { \Leftrightarrow \ln \big ( 1 + \sqrt [ n ] { \frac { b _ { 1 } } { a _ { 1 } } \frac { b _ { 2 } } { a _ { 2 } } . . . \frac { b _ { n } } { a _ { n } } } \big ) \leq \frac { 1 } { n } \big ( \ln ( 1 + \frac { b _ { 1 } } { a _ { 1 } } ) + . . . + \ln ( 1 + \frac { b _ { n } } { a _ { n } } ) \big ) } \\ & { } & { \Leftrightarrow \ln \Big ( 1 + e ^ { \frac { 1 } { n } \big ( \ln \frac { a _ { 1 } } { b _ { 1 } } + . . . + \ln \frac { a _ { n } } { b _ { n } } \big ) } \Big ) \leq \frac { 1 } { n } \big ( \ln ( 1 + \frac { b _ { 1 } } { a _ { 1 } } ) + . . . + \ln ( 1 + \frac { b _ { n } } { a _ { n } } ) \big ) } \\ & { } & { \qquad \mathrm { ~ } \sin \Big ( 1 + e ^ { \frac { 1 } { n } \big ( \ln \frac { a _ { 1 } } { b _ { 1 } } + \ln \frac { a _ { 2 } } { b _ { 2 } } + . . . + \ln \frac { a _ { n } } { b _ { n } } \big ) } \Big ) \leq \frac { 1 } { n } \big ( \ln ( 1 + e ^ { \ln \frac { b _ { 1 } } { a _ { 1 } } } ) + . . . + \ln ( 1 + e ^ { \ln } }  \\ & { } & { \Leftrightarrow f ( \lambda _ { 1 } x _ { 1 } + \lambda _ { 2 } x _ { 2 } + . . . + \lambda _ { n } x _ { n } ) \leq \lambda _ { 1 } f ( x _ { 1 } ) + \lambda _ { 2 } f ( x _ { 2 } ) + . . . + \lambda _ { n } f ( x , } \end{array}
+$$
+
+D0 $\begin{array} { r } { f ^ { \prime \prime } ( x ) = \frac { e ^ { x } } { ( 1 + e ^ { x } ) ^ { 2 } } > 0 \forall x \in \mathbb { R } } \end{array}$ nen $f ( x )$ la ham loi tren $\mathbb { R }$ Vay bat dang thutc Minkowski duoc chung minh.
+
+# BAI TAP CHUONG 2
+
+Bai 2.1. Dung dinh nghia, chung minh rang
+
+1 $\begin{array} { l } { \displaystyle \operatorname* { l i m } _ { x  1 } ( 2 x + x ^ { 2 } ) = 3 , } \\ { \displaystyle \operatorname* { l i m } _ { x  1 ^ { + } } \sqrt { x ^ { 2 } - x } = 0 , } \end{array}$ $\begin{array} { l } { \displaystyle 2 ) \operatorname* { l i m } _ { x \to - 1 } \frac { 2 x + 7 } { x + 2 } = 5 , \ } \\ { \displaystyle 4 ) \operatorname* { l i m } _ { x \to 2 ^ { - } } ( \sqrt { 2 - x } + x ) = 2 . } \end{array}$   
+3 Bai 2.2. Tim cac gioi han sau:
+
+1 $\begin{array} { l } { \displaystyle { \operatorname* { l i m } _ { x \to - \infty } \frac { \sqrt { x ^ { 2 } - 3 x + 1 } + 2 x + 3 } { x } } } \\ { \displaystyle { ) \operatorname* { l i m } _ { x \to 0 } \frac { \sqrt { 1 + \alpha x } - 1 } { x } \mathrm { ~ v \textcircled { i } ~ } \alpha \neq 0 , n \geq 2 } } \\ { \displaystyle { ) \operatorname* { l i m } _ { x \to 0 } \frac { \sqrt { 1 + \alpha x } - \mathrm { ~ w } ( 1 + \beta x ) } { x } \mathrm { ~ v \textcircled { i } ~ } \alpha . \beta \neq 0 , n , m \geq 2 } } \\ { \displaystyle { ) \operatorname* { l i m } _ { x \to 0 } \frac { \sqrt { 1 + \alpha x } \mathrm { ~ v \textcircled { 1 + \beta x } - 1 } } { x } \mathrm { ~ v \textcircled { i } ~ } \alpha . \beta \neq 0 , n , m \geq 2 } } \end{array}$ ds : 1. ¥2 $\begin{array} { r l } & { \mathrm { { \bf ~ d s } : ~ } 1 . } \\ & { \mathrm { ~ d s : ~ } \displaystyle \frac { \alpha } { n } . } \\ & { \mathrm { ~ d s : ~ } \displaystyle \frac { \alpha } { n } - \frac { \beta } { m } . } \\ & { \mathrm { ~ d s : ~ } \displaystyle \frac { \alpha } { n } + \frac { \beta } { m } . } \end{array}$ ¥3   
+¥4
+
+Bai 2.3. Tim cac gioi han sau
+
+1) lim(√x²-3x +1+ x) 一 $\begin{array} { r } { \tiny \mathrm { d s } : \displaystyle \frac { 3 } { 2 } . } \\ { \tiny \mathrm { d s } : \displaystyle \frac { 1 } { 6 } . } \\ { \tiny \mathrm { d s } : \displaystyle \frac { 5 } { 6 } . } \end{array}$ 2) lim(√8x3+2x²+1-2x)   
+3) lim(Vx³+4x²+1-√x²+x-1)
+
+# Bai 2.4. Tim cac gioi han sau
+
+sin ax   
+1) lim ds: $a$ ： x-→0 X   
+2 im1-cos a $\begin{array} { l } { \displaystyle \mathrm { d } { \mathsf s } : \frac { a ^ { 2 } } { 2 } . } \\ { \displaystyle \mathrm { d } { \mathsf s } : \frac { n ( n + 1 ) ( 2 n + 1 ) } { 1 2 } . } \\ { \displaystyle \mathrm { d } { \mathsf s } : \frac { 2 b ^ { 2 } - 3 a ^ { 2 } } { 1 2 c } . } \end{array}$ 1 - cos x cos 2x... cos nx   
+3)lim x-→0 x2 Vcos ax - Vcos bx   
+4) lim voi c ≠ 0 x0 x sin cx
+
+Bai 2.5. Tim cac gioi han sau
+
+$$
+\begin{array} { r l } & { \underset { x  + \infty } { \operatorname* { l i m } } ( \frac { 2 x ^ { 2 } + x + 1 } { x ^ { 2 } - 3 x - 2 } ) ^ { \frac { x ^ { 3 } - 3 x } { 1 - x ^ { 2 } } } } \\ & { \underset { x  \infty } { \operatorname* { l i m } } ( \frac { 2 x + 1 } { 2 x - 3 } ) ^ { x } } \\ & { \underset { x  \infty } { \operatorname* { l i m } } ( \frac { 2 x ^ { 2 } + x - 1 } { 2 x ^ { 2 } - x - 2 } ) ^ { 1 - 3 x } } \\ & { \underset { x  0 } { \operatorname* { l i m } } ( \frac { 2 x ^ { 2 } - x - 2 } { x ^ { 3 } + \mathrm { i f } \mathrm { i m } } ) } \end{array}
+$$
+
+ds : 0.（ $\mathtt { d s } : e ^ { 2 }$ ds:e-3.$\mathrm { d } \mathrm { s } : e ^ { \frac { - a ^ { 2 } } { 2 b } }$ ：
+
+5 $\begin{array} { l } { \mathfrak { z } ) \operatorname* { l i m } _ { x  0 } \Big ( \frac { 1 + \tan x } { 1 + \sin x } \Big ) ^ { \frac { 1 } { \sin x } } } \\ { \mathfrak { z } ) \operatorname* { l i m } _ { x  0 } \frac { \log _ { 2 } ( 1 + x \sin 3 x ) } { 2 ^ { x ^ { 2 } } - 1 } } \end{array}$   
+(   
+7)_lim x√x(√x+1+ √x-1-2√x)   
+x→+8   
+8)lim ln(1+𝑥+𝑥²)+ln(1-𝑥+𝑥²)   
+x-→0 1 -cosx arcsin x - arctan x   
+9) lim   
+x-→0 ln(1 + x3) 1   
+10) lim 一 sin πx   
+x-→1 x
+
+ds : 1. $\begin{array} { l } { \displaystyle \mathrm { d s } : \frac { 3 } { \ln ^ { 2 } 2 } . } \\ { \displaystyle \mathrm { d s } : \frac { - 1 } { 4 } . } \end{array}$ ds : 2. 1 ds:- ds:e
+
+Bai 2.6. Tim cac ham so $f ( x )$ xac dinh tren $\mathbb { R }$ sao cho 1) $) f ( x ) f ( x ^ { 2 } - 1 ) = \sin { x } \ \forall x$ HD: Thay $x = 0$ va $x = - 1 \Rightarrow$ Khong ton tai.   
+$2 ) x f ( x ) + f ( 1 - x ) = x ^ { 3 } + 1 \forall x$ （20   
+HD: Thay x va $1 { \mathrm { - x } } \Rightarrow f ( x ) = x ^ { 2 } - x + 1 .$ （24   
+$3 ) f ( x + y ^ { 2 } ) = f ( x ^ { 2 } ) + f ( y ) \ \forall x , y$   
+HD: $f ( 0 ) = 0 , f ( y ^ { 2 } ) = f ( 0 + y ^ { 2 } ) , f ( 0 ) = f ( - y ^ { 2 } + y ^ { 2 } ) .$ $4 ) f ( x + y ) - f ( x - y ) = 2 y ( 3 x ^ { 2 } + y ^ { 2 } ) \ \forall x , y$   
+HD: $f ( X ) - f ( Y ) = X ^ { 3 } - Y ^ { 3 } \Rightarrow f ( x ) = x ^ { 3 } + f ( 0 ) .$
+
+Bai 2.7. Chung minh rang phuong trinh
+
+$$
+x ^ { 1 7 } = x ^ { 1 1 } + 1
+$$
+
+c6 it nhat mot nghiem $x > 0$ ：
+
+HD: Xet ham só $f ( x ) = x ^ { 1 7 } - x ^ { 1 1 } - 1 \Rightarrow f ( 0 ) . f ( 2 ) < 0$ va $f ( x )$ lien tuc tren [0,2].
+
+Bai 2.8. Cho hai ham so $f ( x ) , g ( x )$ lien tuc tren $[ 0 , 1 ]$ va
+
+$$
+f ( 0 ) = g ( 1 ) = 0 , f ( 1 ) = g ( 0 ) = 1 .
+$$
+
+Chung minh rang: Voi moi $\lambda \in \mathbb { R } , \lambda > 0$ , ton tai $x \in [ 0 , 1 ]$ sao cho $f ( x ) = \lambda g ( x )$ HD: Sir dung dinh ly 2.11 cho ham só $\varphi ( x ) = f ( x ) - \lambda g ( x )$ tren $[ 0 , 1 ]$ ：
+
+Bai 2.9. Chung minh rang: Ham so
+
+$$
+f ( x ) = \sin { \frac { \pi } { x } }
+$$
+
+lien tuc, nhung khong lien tuc deu tren tren khoang $( 0 , 1 )$ ：
+
+HD: $f ( x )$ khong lien tuc deu: $\begin{array} { r } { \epsilon \in ( 0 , 1 ) , \forall \delta > 0 , k \geq \frac { 1 } { \delta } , x = \frac { 1 } { 2 k + 1 } , x ^ { \prime } = \frac { 2 } { 1 + 4 k } . } \end{array}$
+
+Bai 2.10. Dung dinh nghia tim dao ham cüa các ham so sau
+
+im -3√2   
+1) $y = \sin { 3 x }$ ， ds : 2   
+2) $y = x | x |$ ， ds ： 0.   
+3)y= -c0sx voi x ≠ 0 Tim y'(0) ds： 1 0 vói x = 0. e²-1 voi x < 0   
+4)y = x Tim y+(0),y_(0) ds : y+(0)= -1,y_(0) = 1. x²-x voi x N 0.   
+5) $y = | x - 1 | e ^ { x }$ （20 $\mathrm { T i m } y _ { + } ^ { \prime } ( 1 ) , y _ { - } ^ { \prime } ( 1 ) \ \mathrm { ~ d s : } y _ { + } ^ { \prime } ( 1 ) = e , y _ { - } ^ { \prime } ( 1 ) = - e .$ （20
+
+Bai 2.11. Tim dao ham $y _ { x } ^ { \prime }$ cua cac ham so duoi dang tham so
+
+$$
+\begin{array} { r } { \mathrm { d } \mathrm { s } : y _ { x } ^ { \prime } = - 3 t ^ { 2 } e ^ { t } . } \end{array}
+$$
+
+$$
+\begin{array} { l } { { \ u { \cdot } } \left\{ \begin{array} { l } { x = e ^ { - t } } \\ { y = t ^ { 3 } , t \in \mathbb { R } . } \end{array} \right. } \\ { { \ u { \cdot } } \left\{ \begin{array} { l } { x = a ( t - \sin t ) } \\ { y = a ( 1 - \cos t ) , t \in \mathbb { R } . } \end{array} \right. } \end{array}
+$$
+
+$$
+\mathrm { d s } : y _ { x } ^ { \prime } = \cot { \frac { t } { 2 } } .
+$$
+
+# Bai 2.12. Tim dao ham cüa các ham so sau
+
+1) $y = ( 2 x + 1 ) \sin ^ { 2 } { 3 x }$ $\begin{array} { r l } & { \mathrm { d } \sin ^ { 2 } 3 x + 3 ( 2 x + 1 ) \sin 6 x , } \\ & { \mathrm { d } \sin \left( 2 x ^ { 3 } x ^ { 1 } \right) \sin 3 \left( 3 x ^ { 3 } x ^ { 3 } - 1 \right) , } \\ & { \mathrm { d } \sin \left( 2 x ^ { 2 } \operatorname* { l i m } ^ { 3 } x - \left( x ^ { 2 } + 1 \right) \operatorname { l i m } ^ { 3 } x ^ { 2 } + 1 \right) , } \\ & { \mathrm { d } \sin \left( x ^ { 3 } x ^ { 4 } \right) \cos ^ { 2 } \left( 1 - x \sin ^ { 2 } x \right) , } \\ & { \mathrm { d } \sin x \cos ^ { 2 } \left( \frac { \sin x } { x } - \sin x \sin x \right) , } \\ & { \mathrm { d } \sin \left( 2 x - \sin x \sin \left( 2 \cos x \right) \right) , } \\ & { \mathrm { d } \sin \left( \frac { 1 } { \sqrt { x ^ { 2 } + \alpha ^ { 2 } } } \right) } \\ & { \mathrm { d } \sin \left( \frac { 1 } { x } \right) \cos ^ { 2 } \left( 1 - \frac { 1 } { x ^ { 2 } - \alpha ^ { 2 } } \right) . } \end{array}$   
+2) y= e³² +xe   
+3 $y = \log _ { x } ( x ^ { 2 } + 1 ) , 0 < x \neq 1$ （20   
+4 $y = x ^ { \cos x } , \ x > 0$ （20   
+5 $y = \sin ^ { 2 } ( \cos x )$ （20   
+6 $y = \ln ( x + { \sqrt { x ^ { 2 } + \alpha ^ { 2 } } } )$   
+7) $y = { \frac { 1 } { 2 \alpha } } \ln { \bigg | } { \frac { x - \alpha } { x + \alpha } } { \bigg | } , \ x ^ { 2 } \neq \alpha ^ { 2 }$ （20
+
+8 $y = \sin { \big ( } \arcsin ( 2 x ) { \big ) } , \ x \in ( - { \frac { 1 } { 2 } } , { \frac { 1 } { 2 } } )$ ds : 2cos (arcsin(2x)) √1-4x² 9 $y = \arctan ( \tan x ) , x \neq { \frac { \pi } { 2 } } + k \pi ( k \in \mathbb { Z } )$ ds : 1. 西 10) $y = \mathrm { s h } ^ { 2 } ( x ^ { 2 } + 1 )$ ds : 2xsh(2x² + 2).
+
+Bai 2.13. Tim dao ham cap cao cua cac ham so sau
+
+1) $y = x ^ { 2 } e ^ { 2 x }$ tim y(4) $\begin{array} { r l } & { \mathrm { d } \mathrm { s } : 1 6 e ^ { 2 x } ( x ^ { 2 } + 4 x + 3 ) . } \\ & { \mathrm { d } \mathrm { s } : \frac { 1 . 3 . 5 . . 1 7 } { 2 ^ { 1 0 } x ^ { 9 } \sqrt { x } } . } \\ & { \mathrm { d } \mathrm { s } : \frac { 3 . 1 0 0 ! } { ( x - 1 ) ^ { 1 0 1 } } . } \\ & { \mathrm { d } \mathrm { s } : 1 2 x f ^ { \prime \prime } ( x ^ { 2 } + 1 ) + 8 x ^ { 3 } f ^ { ( 3 ) } ( x ^ { 2 } + 1 ) . } \end{array}$ 2) $y = { \sqrt { x } }$ （20 tim ?   
+3 $y = { \frac { 2 x + 1 } { x - 1 } }$ （20 tim y4 $y = f ( x ^ { 2 } + 1 )$ tim y(3)   
+5) $y = \sqrt [ 3 ] { a x + b }$ tim $y ^ { ( n ) }$ （20   
+$\begin{array} { r } { \mathtt { d s } : a ^ { n } \frac { 1 } { 3 } \big ( \frac { 1 } { 3 } - 1 \big ) \big ( \frac { 1 } { 3 } - 2 \big ) . . . \big ( \frac { 1 } { 3 } - ( n + 1 ) \big ) ( a x + b ) ^ { \frac { 1 } { 3 } - n } . } \end{array}$   
+6 $y = \ln ( a x + b ) { \mathrm { ~ t i m ~ } } y ^ { ( n ) }$ （20   
+（20 $\begin{array} { r } { \mathrm { d } \mathrm { s } : ( - 1 ) ^ { n - 1 } a ^ { n } ( n - 1 ) ! \frac { 1 } { ( a x + b ) ^ { n } } } \end{array}$ voi $a x + b > 0$ .   
+7）y=4²+8x-3.   
+s: $2 ^ { n + 1 } { \bigl ( } { \textstyle { \frac { 3 } { 2 } } } - 1 { \bigr ) } ( { \textstyle { \frac { 3 } { 2 } } } - 2 ) . . . ( { \textstyle { \frac { 3 } { 2 } } } - n + 1 ) ( 2 x + 1 ) ^ { { \frac { 3 } { 2 } } - n } - 2 ^ { n } 5 { \bigl ( } - { \textstyle { \frac { 1 } { 2 } } } - 1 { \bigr ) } ( - { \textstyle { \frac { 1 } { 2 } } } - 2 ) . . \qquad $ .(-- $n + 1 ) ( 2 x + 1 ) ^ { - { \frac { 1 } { 2 } } - n }$ ：   
+8 $y = \sin ^ { 3 } ( a x + b ) \ \mathrm { t i }$ m $y ^ { ( n ) }$ ：
+
+$$
+\begin{array} { r } { \mathrm { d } \mathrm { s } : \frac { 3 } { 4 } \sin ( a x + b + \frac { n \pi } { 2 } ) - \frac { 1 } { 4 } ( 3 a ) ^ { n } \sin ( 3 a x + 3 b + \frac { n \pi } { 2 } ) . } \end{array}
+$$
+
+$$
+\left\{ { \begin{array} { l } { x = a \cos ^ { 2 } t } \\ { y = b \sin ^ { 2 } t } \end{array} } \right.
+$$
+
+tim $\begin{array} { r } { y _ { x } ^ { ( n ) } \mathrm { ~ d s ~ } : y _ { x } ^ { \prime } = - \frac { b } { a } , y _ { x } ^ { ( n ) } = 0 \mathrm { ~ } n \geq 2 . } \end{array}$
+
+$$
+\left\{ { \begin{array} { l } { x = \frac { t } { t + 1 } } \\ { y = \frac { 2 t ^ { 2 } + t } { ( t + 1 ) ^ { 2 } } } \end{array} } \right.
+$$
+
+Bai 2.14. Chung minh rang
+
+1) $\begin{array} { r l } & { x y ^ { \prime 3 } = 1 + y ^ { \prime } \mathrm { {  ~ \ v \dot { o } ~ } } { \bf i } x = \frac { 1 + t } { t ^ { 3 } } , y = \frac { 3 } { 2 t ^ { 3 } } + \frac { 2 } { t } . } \\ & { y \sqrt { 1 + y ^ { \prime 2 } } = y ^ { \prime } \mathrm { {  ~ \ v \dot { o } ~ } } { \bf i } x = \frac { 1 } { 1 + t ^ { 2 } } - \ln \frac { 1 + \sqrt { 1 + t ^ { 2 } } } { t } , y = \frac { t } { \sqrt { 1 + t ^ { 2 } } } . } \end{array}$   
+2)   
+3) y.y' = 2xy² +1 voi x = 1+lnt, $\textstyle y = { \frac { 3 + 2 \ln t } { t } }$   
+4 $\begin{array} { r } { f ( 1 ) + \frac { f ^ { \prime } ( 1 ) } { 1 ! } + . . . + \frac { f ^ { ( n ) } ( 1 ) } { n ! } = 2 ^ { n } } \end{array}$ f(n)(1）=2n voi f(x）= =xm.
+
+# Bai 2.15. Chung minh rang:
+
+1） arctan $\begin{array} { r } { x = \arcsin \frac { x } { \sqrt { 1 + x ^ { 2 } } } . } \end{array}$   
+2)arcsin $\begin{array} { r } { x = \arctan \frac { x } { \sqrt { 1 - x ^ { 2 } } } . } \end{array}$   
+3 $\begin{array} { r } { x - \frac { x ^ { 2 } } { 2 } \leq \ln ( 1 + x ) \leq x \forall x \geq 0 . } \end{array}$   
+4 $\ln ( x ^ { 2 } + 1 ) \leq 2 x \arctan x \forall x .$ （  
+5) $\begin{array} { r } { e ^ { x } > 1 + x + \frac { x ^ { 2 } } { 2 } \forall x > 0 . } \end{array}$ （204
+
+Bai 2.16. Kiem tra dinh ly Rolle doi voi ham so
+
+$$
+f ( x ) = ( x - 1 ) ( x - 2 ) ( x - 3 )
+$$
+
+tren cac doan [1,2], [2,3].
+
+HD: Tren $\begin{array} { r } { [ 1 , 2 ] \Rightarrow c _ { 1 } = 2 - \frac { 1 } { \sqrt { 3 } } , { \mathrm { t r } } \hat { \mathbf { e } } \mathbf { n } \left[ 2 , 3 \right] \Rightarrow c _ { 2 } = 2 + \frac { 1 } { \sqrt { 3 } } . } \end{array}$
+
+Bai 2.17. Cho ham só $f ( x )$ kha vi cap $n$ tren $[ x _ { 0 } , x _ { n } ]$ va
+
+$$
+f ( x _ { 0 } ) = f ( x _ { 1 } ) = \ldots = f ( x _ { n } ) { \mathrm { ~ v o i ~ } } x _ { 0 } < x _ { 1 } < \ldots < x _ { n } .
+$$
+
+Chung minh rang: Ton tai it nhat mot diem $c \in ( x _ { 0 } , x _ { n } )$ sao cho $f ^ { ( n ) } ( c ) = 0$ ：
+
+Bai 2.18. Kiem tra dinh ly Lagrange doi voi ham só
+
+$$
+f ( x ) = { \left\{ \begin{array} { l l } { { \frac { 3 - x ^ { 2 } } { 2 } } } & { { \mathrm { n } } { \tilde { \in } } \mathbf { u } \ 0 \leq x \leq 1 } \\ { { \frac { 1 } { x } } } & { { \mathrm { n } } { \tilde { \in } } \mathbf { u } \ x > 1 . } \end{array} \right. }
+$$
+
+tren $[ 0 , 2 ]$ . Xac dinh diém trung binh $c$
+
+ds: $\begin{array} { r } { c _ { 1 } = \frac { 1 } { 2 } } \end{array}$ ， $c _ { 2 } = { \sqrt { 2 } }$
+
+Bai 2.19. Dung dinh ly Lagrange, chung minh cac bat däng thuc sau:
+
+$$
+\begin{array} { r l } & { \lvert \sin x - \sin y \rvert \le \lvert x - y \rvert \ \forall x , y . } \\ & { p y ^ { p - 1 } ( x - y ) \le x ^ { p } - y ^ { p } \le p x ^ { p - 1 } ( x - y ) \ \forall 0 < x < y , p > 0 . } \\ & { \lvert \arctan x - \arctan y \rvert \le \lvert x - y \rvert \ \forall x , y . } \\ & { \frac { a - b } { a } < \ln \frac { a } { b } < \frac { a - b } { b } \ \forall 0 < b < a . } \\ & { \frac { x - y } { \cos ^ { 2 } y } \le \tan x - \tan y \le \frac { x - y } { \cos ^ { 2 } x } \ \forall 0 < y \le x < \frac { \pi } { 2 } . } \end{array}
+$$
+
+Bai 2.20. Cho ham $f ( x )$ kha vi tren $( a , b )$ Dung dinh ly Lagrange, chung minh rang: Neu ham só $f ( x )$ c6 dao ham bi chan tren mien $( a , b )$ , thi $f ( x )$ lien tuc déu tren $( a , b )$ ：
+
+Bai 2.21. Cho ham só $f ( x ) \operatorname { l i e n }$ tuc tren $[ a , b ] , \mathrm { { k h } \vec { a } }$ vi tren $( a , b )$ va $f ( x ) \neq$ $m x + n \forall m , n$ . Chung minh rang: Ton tai it nhat $c \in ( a , b )$ sao cho
+
+$$
+\Big | \frac { f ( b ) - f ( a ) } { b - a } \Big | < | f ^ { \prime } ( c ) | .
+$$
+
+HD: Chia $[ a , b ]$ boi $a = x _ { 0 } < x _ { 1 } < . . . < x _ { n } = b$ va áp dung dinh ly Lagrange cho cac doan $[ x _ { k - 1 } , x _ { k } ] \forall k = 1 , 2 , . . . , n$
+
+# Bai 2.22.
+
+Khai trien Taylor cua cac ham so sau:
+
+1) $f ( x ) = \ln \cos x$ tai $x _ { 0 } = 0$ den so hang $o ( x ^ { 4 } )$ ：   
+ds: $\begin{array} { r } { f ( x ) = - \frac { x ^ { 2 } } { 2 } - \frac { x ^ { 4 } } { 1 2 } + o ( x ^ { 4 } ) . } \end{array}$   
+2) $f ( x ) = e ^ { x \cos x }$ tai $x _ { 0 } = 0$ den s6 hang $o ( x ^ { 3 } )$ .   
+ds: $\begin{array} { r } { f ( x ) = 1 + x + \frac { 1 } { 2 } x ^ { 2 } - \frac { 1 } { 3 } x ^ { 3 } + o ( x ^ { 3 } ) . } \end{array}$ （20   
+3 $f ( x ) = \arcsin x$ tai $x _ { 0 } = 0$ den só hang $o ( x ^ { 6 } )$   
+ds: $\begin{array} { r } { f ( x ) = x + \frac { 1 } { 6 } x ^ { 3 } + \frac { 3 } { 4 0 } x ^ { 5 } + o ( x ^ { 6 } ) . } \end{array}$ 4 $f ( x ) = ( x ^ { 2 } - 1 ) e ^ { 2 x }$ tai $x _ { 0 } = - 1$ den so hang $o \big ( ( x + 1 ) ^ { n } \big )$ ds: $f ( x ) = \sum _ { k = 0 } ^ { n } { \frac { e ^ { - 2 } 2 ^ { k - 2 } ( k - 5 ) } { ( k - 1 ) ! } } ( x + 1 ) ^ { k } + o { \bigl ( } ( x + 1 ) ^ { n } { \bigr ) } .$ （2
+
+5） f（x)=2²-3x+3 tai $x _ { 0 } = 3$ den s6 hang $o { \big ( } ( x - 3 ) ^ { n } { \big ) }$ ：ds: $f ( x ) = 3 + \sum _ { k = 0 } ^ { n } ( - 1 ) ^ { k } ( x - 3 ) ^ { k } + o { \big ( } ( x - 3 ) ^ { n } { \big ) } .$ Bai 2.23. Dung quy tac L'Hospital, tim cac gioi han sau:
+
+1) $\begin{array} { r l } & { \frac { \operatorname* { l i m } _ { \theta \to \infty } ^ { \infty } \sqrt { \frac { 1 } { \vartheta ^ { 1 } + 3 \pi ^ { 4 } } - \sqrt { \pi ^ { 1 } - 2 \pi } } } { \pi - \Theta } } \\ & { \frac { \operatorname* { l i m } _ { \theta \to \infty } ^ { \infty } \sqrt { \frac { 1 } { \vartheta ^ { 1 } + 1 } - \sqrt { \pi ^ { 1 } - 2 } } } { \pi } \quad \forall \widehat { \mathbf { u } } \ : \ : \ : \forall \widehat { \mathbf { u } } \ : \ : \ : \ : \forall } \\ & { \frac { \operatorname* { l i m } _ { \theta \searrow \infty } ^ { \infty } \sqrt { \frac { 1 } { \vartheta ^ { 1 } + \sigma } - \sqrt { \pi ^ { 1 } - 2 } } } { \pi } \forall \widehat { \mathbf { u } } \ : \ : \ : \forall \widehat { \mathbf { u } } \ : \ : \ : \ : \forall } \\ & { \frac { \operatorname* { l i m } _ { \theta \searrow \infty } ^ { \infty } } { \pi - \Theta } ( 2 \ln ( \sin \gamma ) ) } \\ & { \frac { \operatorname* { l i m } _ { \theta \searrow \infty } ^ { \infty } \sqrt { \frac { 1 } { \vartheta ^ { 1 } + 1 } + 2 \ln ( \sin \gamma ) } } { \pi ^ { 1 } } } \\ & { \frac { \operatorname* { l i m } _ { \theta \searrow \infty } ^ { \infty } } { \pi - \Theta } } \\ & { \frac { \operatorname* { l i m } _ { \theta \searrow \infty } ^ { \infty } } { \pi - \Theta } } \\ & { \frac { \operatorname* { l i m } _ { \theta \searrow \infty } ^ { \infty } } { \pi - \Theta } } \\ & { \frac { \operatorname* { l i m } _ { \theta \searrow \infty } ^ { \infty } } { \pi - \Theta } ( 2 \shuffle \chi ) ^ { \mathrm { { l u m } } \overset { \infty } { ) } } } \\ & { \frac { \operatorname* { l i m } _ { \theta \searrow \infty } ^ { \infty } } { \pi - \Theta } } \end{array}$ ds:-6. 2 $\begin{array} { r l } & { \mathrm { d s : } \frac { 2 \sqrt { a } } { n a } } \\ & { \mathrm { d s : } \frac { 1 } { 2 } . } \\ & { \mathrm { d s : } \frac { - 5 } { 2 } . } \\ & { \mathrm { d s : } \frac { 1 } { e } . } \end{array}$ （2 3   
+4)   
+5) 6 ds:e 7) ds:1. x→ e
+
+Bai 2.24. (Tim cuc tieu toan cuc cua ham so) Chi phi khi tau chay cä ngay va dem góm hai phan: Phan c6 dinh bang a dong, phan bien doi tang ty le voi lap phuong cua toc do. Hoi tau chay voi toc do $v$ nao thi kinh té nhat.
+
+HD: Goi thoi gian tau chay la $t$ ngay dem. Khi d6 chi phi la $R = a t + k t v ^ { 3 }$ （ $k$ la he s6 ty le). Vi $\begin{array} { r } { t = \frac { S } { v } } \end{array}$ suy ra
+
+$$
+R = { \frac { S a } { v } } + k S v ^ { 2 }  \operatorname* { m i n } \Leftrightarrow 0 = R ^ { \prime } \Leftrightarrow v = { \sqrt [ { 3 } ] { \frac { a } { 2 k } } } ,
+$$
+
+vi ham s6 $R$ la l0i tren $( 0 , + \infty )$ ：
+
+Bai 2.25. Cho $f ( x ) = - \ln ( \ln x )$ voi $x \in D = ( 0 , + \infty )$ ：
+
+a) Chung minh rang $f ( x )$ l6i tren $D$ ： b) Ti dó, chimg minh rang
+
+$$
+\ln { \frac { x + y } { 2 } } \geq { \sqrt { \ln x \ln y } } \forall x , y > 1 .
+$$
+
+Bai 2.26. Cho $f ( x ) = x \ln x$ voi $x \in D = ( 0 , + \infty )$ .
+
+a) Chung minh rang $f ( x )$ l6i tren $D$ ： b) Tu dó, chung minh rang
+
+$$
+x \ln { \frac { x } { a } } + y \ln { \frac { y } { b } } \geq ( x + y ) \ln { \frac { x + y } { a + b } } \forall a , b , x , y > 0 .
+$$
