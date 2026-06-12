@@ -4,6 +4,7 @@ Truy xuất data từ VectorDB
 """
 import os
 import re
+import unicodedata
 from typing import List
 from langchain_community.document_loaders import TextLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
@@ -13,11 +14,7 @@ from core.config import settings
 from core.mapping import get_mapped_paths
 import traceback
 
-# Map tên môn (dạng snake_case) sang tên hiển thị tiếng Việt
-SUBJECT_DISPLAY_MAP = {
-    "giai_tich_1": "Giải tích 1",
-    "triet_hoc_maclenin": "Triết học Mac-Lenin",
-}
+# Map tên môn (dạng snake_case) sang tên hiển thị tiếng Việt đã bị xóa vì thay thế bằng cấu hình động
 
 class RAGService:
     """
@@ -25,9 +22,10 @@ class RAGService:
     và tìm kiếm thông tin liên quan theo môn học.
     """
     def __init__(self):
-        # text-embedding-004: dùng chung GOOGLE_API_KEY trong .env, không cần key mới
+        # Multilingual embedding model hỗ trợ 50+ ngôn ngữ (bao gồm tiếng Việt)
+        # Dùng cosine distance: score gần 0 = rất liên quan, gần 2 = không liên quan
         self.embeddings = HuggingFaceEmbeddings(
-            model_name="bkai-foundation-models/vietnamese-bi-encoder"
+            model_name="sentence-transformers/paraphrase-multilingual-mpnet-base-v2"
         )
         # Thư mục lưu trữ cơ sở dữ liệu vector tại local
         self.persist_directory = os.path.join(settings.BASE_DIR, "data", "vector_db")
@@ -49,14 +47,29 @@ class RAGService:
             keep_separator=True,
         )
 
+    def _normalize_query(self, text: str) -> str:
+        """
+        Bỏ dấu tiếng Việt trong query để khớp với nội dung OCR không dấu trong DB.
+        Ví dụ: 'định nghĩa đạo hàm' → 'dinh nghia dao ham'
+        """
+        # NFD: tách ký tự + combining diacritics
+        nfd = unicodedata.normalize('NFD', text)
+        # Loại bỏ tất cả combining diacritical marks
+        ascii_text = ''.join(c for c in nfd if unicodedata.category(c) != 'Mn')
+        # Đ → D, d → d (chữ đ trong NFD không bị bỏ dấu bởi bước trên)
+        ascii_text = ascii_text.replace('đ', 'd').replace('Đ', 'D')
+        return ascii_text
+
     def _extract_section_from_chunk(self, text: str) -> str:
         """
-        Phân tích nội dung chunk để trích xuất heading Markdown gần nhất.
-        Trả về chuỗi mô tả vị trí, ví dụ: '1.1.2. Các tính chất của tập số thực'
+        Phân tích nội dung chunk để trích xuất heading Markdown.
+        Lấy heading ĐẦU TIÊN trong chunk (không phải cuối) để đảm bảo
+        section metadata phản ánh đúng nội dung chính của chunk đó.
+        Ví dụ: '2.1.2. Hàm số chẵn, lẻ'
         """
         headings = re.findall(r'^#{1,4}\s+(.+)$', text, re.MULTILINE)
         if headings:
-            return headings[-1].strip()
+            return headings[0].strip()  # heading ĐẦU TIÊN, không phải cuối
         return ""
 
     def _parse_chapter_from_filename(self, filename: str) -> str:
@@ -74,13 +87,12 @@ class RAGService:
             return "L\u1eddi n\u00f3i \u0111\u1ea7u"
         return ""
 
-    def _format_location_label(self, subject: str, filename: str, section: str) -> str:
+    def _format_location_label(self, subject_display: str, filename: str, section: str) -> str:
         """
         Tạo nhãn vị trí đầy đủ theo format:
         '[Tên môn] — [Chương X] — [Mục: ...]'
         Ví dụ: 'Giải tích 1 — Chương 1 — Mục: 1.1.2. Cac tinh chat cua tap so thuc'
         """
-        subject_display = SUBJECT_DISPLAY_MAP.get(subject, subject)
         chapter_display = self._parse_chapter_from_filename(filename)
 
         parts = [subject_display]
@@ -117,6 +129,12 @@ class RAGService:
                 section = self._extract_section_from_chunk(chunk.page_content)
                 if section:
                     current_section = section
+                else:
+                    # Chunk nhỏ không có heading riêng (bị merge với chunk trước/sau)
+                    # → Inject section header vào đầu nội dung để embedding model
+                    # có thể nhận diện đúng chủ đề khi tìm kiếm
+                    if current_section:
+                        chunk.page_content = f"[Mục: {current_section}]\n{chunk.page_content}"
                     
                 chunk.metadata["section"] = current_section
                 chunk.metadata["chapter"] = chapter_name
@@ -139,11 +157,14 @@ class RAGService:
             print(f"Lỗi nạp dữ liệu rag: {e}")
             return False
 
-    def query_context(self, subject: str, query: str, top_k: int = 4, threshold: float = 55.0) -> str:
+    def query_context(self, subject: str, query: str, top_k: int = 6, threshold: float = 1.2, display_subject: str = "") -> str:
         """
-        Tìm kiếm chunk liên quan nhất.
-        Model bkai-foundation-models/vietnamese-bi-encoder dùng L2 distance.
-        Score thực tế: 33-50 = liên quan tốt, > 55 = không liên quan.
+        Tìm kiếm chunk liên quan nhất trong toàn bộ collection của môn học.
+        Model sentence-transformers/paraphrase-multilingual-mpnet-base-v2 dùng cosine distance.
+        Score thực tế: 0.0-0.5 = liên quan tốt, > 1.2 = không liên quan.
+        
+        NOTE: Không filter theo chapter vì frontend chapters (5 chương) không tương ứng
+        với cấu trúc file text (4 chương sách) — thù dựa vào semantic search để tìm đúng nội dung.
         """
         try:
             safe_collection_name = f"subject_{subject}"
@@ -153,9 +174,16 @@ class RAGService:
                 collection_name=safe_collection_name,
             )
 
-            # Lấy kết quả kèm điểm similarity
+            # Normalize query: bỏ dấu tiếng Việt để khớp với nội dung OCR không dấu trong DB
+            normalized_query = self._normalize_query(query)
+            print(f"[RAG] Query gốc: '{query}'")
+            print(f"[RAG] Query sau normalize: '{normalized_query}'")
+
+            # Tìm kiếm trên toàn bộ collection, không filter chapter
+            # Lấy nhiều hơn (top_k * 3) để bù trừ duplicate section, sau đó deduplicate
+            raw_k = top_k * 3
             results_with_scores = vector_db.similarity_search_with_score(
-                query, k=top_k
+                normalized_query, k=raw_k
             )
 
             # Debug: in score để dễ điều chỉnh threshold
@@ -176,26 +204,34 @@ class RAGService:
 
             # Gộp tài liệu nếu lọt qua Threshold
             context_parts = []
+            seen_sections = set()  # Loại bỏ duplicate cùng section
             for doc in filtered:
                 source = doc.metadata.get("source", "")
                 section = doc.metadata.get("section", "")
-                # Ưu tiên lấy subject từ metadata, fallback về tham số subject
                 doc_subject = doc.metadata.get("subject", subject)
 
                 # Tạo nhãn vị trí theo format: Tên môn — Chương X — Mục: ...
                 location_label = self._format_location_label(
-                    subject=doc_subject,
+                    subject_display=display_subject if display_subject else doc_subject,
                     filename=source,
                     section=section
                 )
 
+                # Bỏ qua nếu cùng section đã có (tránh gửi nội dung trùng lặp cho AI)
+                if section and section in seen_sections:
+                    continue
+                seen_sections.add(section)
+
                 print(f"[RAG] ✓ {location_label}")
                 context_parts.append(f"[Nguồn: {location_label}]\n{doc.page_content}")
+
+                # Chỉ giữ lại top_k chunk đa dạng sau khi dedup
+                if len(context_parts) >= top_k:
+                    break
 
             context_text = "\n\n---\n\n".join(context_parts)
             return context_text
 
         except Exception as e:
-            # FIX: Log lỗi chi tiết để dễ debug
             print(f"[RAG] Query error: {str(e)}")
             return ""

@@ -1,0 +1,20 @@
+{
+    "Giải tích 1": {
+        "folder": "giai_tich_1",
+        "chapters": {
+            "Giới hạn của dãy số": "chuong_1",
+            "Hàm số một biến số": "chuong_2",
+            "Đạo hàm và vi phân": "chuong_3",
+            "Phép tính tích phân": "chuong_4",
+            "Lí thuyết chuỗi": "chuong_5"
+        }
+    },
+    "Triết học Mác - Lênin": {
+        "folder": "triet_hoc_maclenin",
+        "chapters": {
+            "Triết học và vai trò của triết học trong đời sống xã hội": "chuong_1",
+            "Chủ nghĩa duy vật biện chứng": "chuong_2",
+            "Chủ nghĩa duy vật lịch sử": "chuong_3"
+        }
+    }
+}

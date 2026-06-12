@@ -25,12 +25,17 @@ class Settings(BaseSettings):
 
     # 3. Cấu hình AI Model chính (Primary)
     GOOGLE_API_KEY: str = os.getenv("GOOGLE_API_KEY")
-    MODEL_NAME: str = os.getenv("MODEL_NAME", "gemini-2.5-flash")
+    MODEL_NAME: str = "gemini-2.5-flash"
     TEMPERATURE: float = float(os.getenv("TEMPERATURE", 0.1))
 
-    # 4. Cấu hình AI Model dự phòng (Fallback) - Groq
-    GROQ_API_KEY: str = os.getenv("GROQ_API_KEY")
-    FALLBACK_MODEL_NAME: str = os.getenv("FALLBACK_MODEL_NAME", "llama-3.3-70b-versatile")
+    # 4. Cấu hình AI Model cho Chẩn đoán (Agent 1) - Groq/OpenRouter
+    GROQ_API_KEY: str = os.getenv("GROQ_API_KEY", "")
+    DIAGNOSE_MODEL_NAME: str = "qwen/qwen3-32b"
+
+    # 5. Cấu hình AI Model dự phòng (Fallback) - Qwen qua OpenRouter (Free)
+    OPENROUTER_API_KEY: str = os.getenv("OPENROUTER_API_KEY", "")
+    FALLBACK_MODEL_NAME_GROQ: str = "llama-3.1-8b-instant"
+    FALLBACK_MODEL_NAME: str = "qwen/qwen3-next-80b-a3b-instruct:free"
 
     HUGGING_FACE_API_KEY: str = os.getenv("HUGGING_FACE_API_KEY")
 

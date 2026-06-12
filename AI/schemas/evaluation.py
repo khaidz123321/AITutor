@@ -24,25 +24,28 @@ class EmotionState(str, Enum):
     FRUSTRATED = "FRUSTRATED"               # Bực dọc, mất kiên nhẫn, thiếu động lực
     LACK_CONFIDENCE = "LACK_CONFIDENCE"     # Thiếu tự tin, tự ti ("Em kém quá", "Chắc lại sai")
 
-# CHẨN ĐOÁN TỔNG QUAN
-class StudentEvaluation(BaseModel):
+# KẾT QUẢ CHẨN ĐOÁN (Dành cho AI 1)
+class DiagnoseResult(BaseModel):
     cognitive_state: CognitiveState = Field(
         ..., 
-        description="The student's current cognitive state. STRICT RULE: You must output 'REVEAL_ANSWER' if the student has been stuck, provided incorrect answers, or shown continuous confusion for 3 or more consecutive attempts on the same step. Otherwise, classify into the appropriate correct or error states."
+        description="The student's current cognitive state. STRICT RULE: Output 'VAGUE_OR_OFFTOPIC' if the input is unrelated to the current subject/problem (e.g., hacking, chit-chat, writing code). Output 'REQUEST_THEORY' if they ask for a definition related to the subject. Output 'PROBLEM_COMPLETED' if they explicitly ask to skip or move to the next problem."
     )
     emotion_state: EmotionState = Field(
         ..., 
         description="Assess the student's emotional tone from their phrasing. Default to NEUTRAL if unclear."
     )
+    rag_search_query: str = Field(
+        default="", 
+        description="If cognitive_state is REQUEST_THEORY, CONCEPTUAL_ERROR, or INCOMPLETE, generate a concise academic search query (max 6 words) based on the problem context to query the vector DB. Otherwise, return an empty string."
+    )
+
+# KẾT QUẢ SINH VĂN BẢN (Dành cho AI 2)
+class GenerateResult(BaseModel):
     response: str = Field(
         ...,
-        description="The actual response/message to the student in natural, fluent Vietnamese. Maximum 5 sentences."
+        description="The actual response/message to the student in natural, fluent Vietnamese. MUST use LaTeX formatting."
     )
     source_citation: str = Field(
         default="",
-        description="If you answer a theory question, extract the source from [Nguồn: ...] in RAG_CONTEXT and format it EXACTLY as a hierarchical list using \\n. Example:\nGiáo trình: Giải tích 1\nChương 1\nBài 1.1 Số thực\nMục 1.1.2 Các tính chất số thực.\nIf some info is missing (like 'Bài'), just skip that line."
-    )
-    next_step: int = Field(
-        ...,
-        description="The current step number the student should focus on next (integer). If they complete the current step, increment this by 1. If they fail, keep it the same."
+        description="If you explain theory based on RAG_CONTEXT, extract the source from [Nguồn: ...] and format it as a hierarchical list using \\n."
     )

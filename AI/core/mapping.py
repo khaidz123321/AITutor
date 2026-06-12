@@ -3,38 +3,43 @@ File quản lý ánh xạ (Mapping) giữa tên hiển thị trên Frontend
 và tên thư mục/file thực tế trong Backend.
 """
 
-# Ánh xạ tên môn học sang tên thư mục (Snake Case)
-SUBJECT_MAP = {
-    "Giải tích 1": "giai_tich_1",
-    "Triết học Mác - Lênin": "triet_hoc_maclenin"
-}
+import json
+import os
+import re
+import unicodedata
+from core.config import settings
 
-# Ánh xạ tên chương sang tên file chuong_x.json
-# Tổ chức theo từng môn để tránh trùng lặp tên chương giữa các môn
-CHAPTER_MAP = {
-    "Giải tích 1": {
-        "Giới hạn của dãy số": "chuong_1",
-        "Hàm số một biến số": "chuong_2",
-        "Đạo hàm và vi phân": "chuong_3",
-        "Phép tính tích phân": "chuong_4",
-        "Lí thuyết chuỗi": "chuong_5"
-    },
-    "Triết học Mác - Lênin": {
-        "Triết học và vai trò của triết học trong đời sống xã hội": "chuong_1",
-        "Chủ nghĩa duy vật biện chứng": "chuong_2",
-        "Chủ nghĩa duy vật lịch sử": "chuong_3"
-    }
-}
+def remove_accents(input_str: str) -> str:
+    s = re.sub(r'[đĐ]', 'd', input_str)
+    s = unicodedata.normalize('NFKD', s).encode('ASCII', 'ignore').decode('utf-8')
+    return s
+
+def _get_default_folder_name(name: str) -> str:
+    """Tự động chuyển 'Giải tích 1' thành 'giai_tich_1' nếu không có trong JSON"""
+    clean_name = remove_accents(name).lower()
+    return re.sub(r'[^a-z0-9]+', '_', clean_name).strip('_')
 
 def get_mapped_paths(subject: str, chapter: str):
     """
-    Hàm tiện ích để lấy folder và file name từ tên tiếng Việt.
-    Nếu không tìm thấy, trả về chính tên đó (đã được xử lý lowercase) để tránh lỗi.
+    Đọc từ file subjects.json để lấy thông tin mapping linh hoạt.
+    Nếu admin up môn mới chưa có trong JSON, tự động bỏ dấu tiếng Việt để tạo tên folder.
     """
-    mapped_subj = SUBJECT_MAP.get(subject, subject.lower().replace(" ", "_"))
+    json_path = os.path.join(settings.BASE_DIR, "data", "subjects.json")
     
-    # Lấy map chương của môn học tương ứng
-    subj_chapters = CHAPTER_MAP.get(subject, {})
-    mapped_chap = subj_chapters.get(chapter, chapter.lower().replace(" ", "_"))
-    
+    # Mặc định tự sinh folder name
+    mapped_subj = _get_default_folder_name(subject)
+    mapped_chap = _get_default_folder_name(chapter)
+
+    try:
+        if os.path.exists(json_path):
+            with open(json_path, "r", encoding="utf-8") as f:
+                data = json.load(f)
+                subj_data = data.get(subject)
+                if subj_data:
+                    mapped_subj = subj_data.get("folder", mapped_subj)
+                    chapters_map = subj_data.get("chapters", {})
+                    mapped_chap = chapters_map.get(chapter, mapped_chap)
+    except Exception as e:
+        print(f"Lỗi đọc subjects.json: {e}")
+        
     return mapped_subj, mapped_chap

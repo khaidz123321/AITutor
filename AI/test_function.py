@@ -6,7 +6,7 @@ from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_chroma import Chroma
 
 embeddings = HuggingFaceEmbeddings(
-    model_name="bkai-foundation-models/vietnamese-bi-encoder"
+    model_name="sentence-transformers/paraphrase-multilingual-mpnet-base-v2"
 )
 
 vector_db = Chroma(
