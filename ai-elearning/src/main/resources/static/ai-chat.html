@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gia sư AI - PTIT E-Learning</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/ai-chat.css">
+    <!-- KaTeX for beautiful math rendering -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
+    <!-- marked.js for Markdown rendering -->
+    <script src="https://cdn.jsdelivr.net/npm/marked@9.1.6/marked.min.js"></script>
+    <!-- Noto Sans + Noto Color Emoji: full Unicode coverage (Vietnamese + Math + Emoji) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Noto+Sans+Math&family=Noto+Color+Emoji&display=swap">
+</head>
+<body class="chat-page">
+    <script src="components/header.js"></script>
+
+    <div class="chat-layout">
+        <!-- Sidebar -->
+        <div class="chat-sidebar">
+            <div class="chat-sidebar-header">
+                <div class="chat-sidebar-title">Đang học</div>
+                <div class="chat-course-name" id="chatCourseName">Khóa học</div>
+            </div>
+            <a href="course-detail.html" class="chat-sidebar-back" id="backBtn">&#8592; Trở lại khóa học</a>
+            <a href="#" class="chat-sidebar-back" id="goToExerciseBtn" style="background:#10b981; color:#fff; border-bottom:1px solid #059669; font-weight:700; transition: padding 0.2s ease;">📝 Làm bài tập chương</a>
+            <div class="chat-chapters" id="chatChapters"></div>
+        </div>
+
+        <!-- Main Chat -->
+        <div class="chat-main">
+            <div class="chat-header">
+                <div class="chat-header-avatar">AI</div>
+                <div class="chat-header-info">
+                    <div class="chat-header-name">Gia sư AI PTIT</div>
+                    <div class="chat-header-sub"><span class="chat-online-dot"></span>Sẵn sàng hỗ trợ — <span id="chatChapterName">Chương học</span></div>
+                </div>
+            </div>
+
+            <div class="chat-messages" id="chatMessages"></div>
+
+            <div class="quick-suggestions" id="quickSuggestions"></div>
+
+            <div class="chat-input-area">
+                <!-- Bảng công cụ toán học -->
+                <div class="math-toolbar" id="mathToolbar">
+                    <button type="button" class="math-btn" data-template-idx="0" title="Căn bậc hai (√)">√</button>
+                    <button type="button" class="math-btn" data-template-idx="1" title="Lũy thừa (x²)">x²</button>
+                    <button type="button" class="math-btn" data-template-idx="2" title="Chỉ số dưới (xᵢ)">xᵢ</button>
+                    <button type="button" class="math-btn" data-template-idx="3" title="Phân số (½)">½</button>
+                    <button type="button" class="math-btn" data-template-idx="4" title="Logarithm (log)">log</button>
+                    <button type="button" class="math-btn" data-template-idx="5" title="Hằng số Pi (π)">π</button>
+                    <button type="button" class="math-btn" data-template-idx="6" title="Hàm lượng giác sin">sin</button>
+                    <button type="button" class="math-btn" data-template-idx="7" title="Hàm lượng giác cos">cos</button>
+                    <button type="button" class="math-btn" data-template-idx="8" title="Hàm lượng giác tan">tan</button>
+                    <button type="button" class="math-btn" data-template-idx="9" title="Tổng (∑)">∑</button>
+                    <button type="button" class="math-btn" data-template-idx="10" title="Tích phân (∫)">∫</button>
+                    <button type="button" class="math-btn" data-template-idx="11" title="Vô cực (∞)">∞</button>
+                    <button type="button" class="math-btn" data-template-idx="12" title="Ký hiệu Alpha (α)">α</button>
+                    <button type="button" class="math-btn" data-template-idx="13" title="Ký hiệu Beta (β)">β</button>
+                    <button type="button" class="math-btn" data-template-idx="14" title="Ký hiệu Theta (θ)">θ</button>
+                </div>
+
+                <!-- Khung xem trước công thức toán học -->
+                <div class="math-preview-container" id="mathPreviewContainer" style="display: none;">
+                    <div class="math-preview-title">Xem trước công thức:</div>
+                    <div class="math-preview-content" id="mathPreview"></div>
+                </div>
+
+                <form class="chat-input-form" id="chatForm">
+                    <textarea class="chat-input-textarea" id="chatInput"
+                        placeholder="Đặt câu hỏi về bài học này..." rows="1"></textarea>
+                    <button type="submit" class="btn-send" id="sendBtn">&#10148;</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/index.js"></script>
+    <script src="js/ai-chat.js"></script>
+</body>
+</html>

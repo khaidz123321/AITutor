@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi tiết khóa học - PTIT E-Learning</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/course-detail.css">
+</head>
+<body>
+    <script src="components/header.js"></script>
+
+    <div class="container">
+        <div class="detail-layout">
+            <!-- Main Content -->
+            <div class="detail-main">
+                <div class="detail-hero" id="detailHero">
+                    <!-- Rendered by JS -->
+                </div>
+
+                <!-- Tabs -->
+                <div class="detail-tabs">
+                    <button class="tab-btn active" data-tab="overview">Tổng quan</button>
+                    <button class="tab-btn" data-tab="curriculum">Chương trình học</button>
+                    <button class="tab-btn" data-tab="reviews">Đánh giá</button>
+                </div>
+
+                <!-- Tab: Overview -->
+                <div class="tab-content active" id="tab-overview">
+                    <h3 style="font-size:18px;font-weight:700;margin-bottom:16px;">Bạn sẽ học được gì?</h3>
+                    <div class="learn-grid" id="learnGrid"></div>
+
+                    <h3 style="font-size:18px;font-weight:700;margin-bottom:16px;">Mô tả khóa học</h3>
+                    <p id="courseDesc" style="font-size:15px;color:var(--text-2);line-height:1.8;background:var(--bg-white);padding:24px;border-radius:var(--radius-lg);border:1px solid var(--border);"></p>
+
+                    <!-- PDF Lecture Document Section -->
+                    <div id="pdfLectureSection" style="display:none; margin-top:28px;">
+                        <h3 style="font-size:18px;font-weight:700;margin-bottom:16px;">Tài liệu / Bài giảng khóa học (Xem trước)</h3>
+                        <div class="pdf-preview-container" style="background:var(--bg-white);padding:24px;border-radius:var(--radius-lg);border:1px solid var(--border);margin-bottom:24px;">
+                            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px; flex-wrap:wrap; gap:12px;">
+                                <span style="font-size:15px; font-weight:600; color:var(--text-1); display:flex; align-items:center; gap:8px;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+                                    <span id="pdfFileName">bai_giang.pdf</span>
+                                </span>
+                                <a href="#" id="pdfDownloadLink" target="_blank" class="btn btn-outline-primary btn-sm" style="display:inline-flex; align-items:center; gap:6px; text-decoration:none;">
+                                    Tải về PDF
+                                </a>
+                            </div>
+                            <div class="pdf-iframe-wrapper" style="position:relative; width:100%; height:600px; border-radius:var(--radius-md); overflow:hidden; border:1px solid var(--border-light);">
+                                <iframe id="pdfIframe" src="" width="100%" height="100%" style="border:none;"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab: Curriculum -->
+                <div class="tab-content" id="tab-curriculum">
+                    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;">
+                        <h3 style="font-size:18px;font-weight:700;">Nội dung khóa học</h3>
+                        <span id="chaptersCount" style="font-size:14px;color:var(--text-3);"></span>
+                    </div>
+                    <div class="chapter-list" id="chapterList"></div>
+                </div>
+
+                <!-- Tab: Reviews -->
+                <div class="tab-content" id="tab-reviews">
+                    <div id="reviewsSection"></div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <aside class="detail-sidebar">
+                <div class="sidebar-card">
+
+                    <div class="sidebar-card-body">
+                        <div class="sidebar-progress-wrap" id="sidebarProgress" style="display:none;">
+                            <div class="sidebar-progress-label">
+                                <span>Tiến độ học tập</span>
+                                <span class="sidebar-progress-pct" id="progressPct">0%</span>
+                            </div>
+                            <div class="progress-bar-wrap">
+                                <div class="progress-bar-fill" id="progressFill" style="width:0%"></div>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-primary btn-block" id="startBtn" style="margin-bottom:12px;">&#9654; Bắt đầu học</a>
+                        <ul class="sidebar-meta" id="sidebarMeta"></ul>
+                    </div>
+                </div>
+
+                <!-- Chapter quick access -->
+                <div class="sidebar-card">
+                    <div style="padding:20px 24px;border-bottom:1px solid var(--border);font-weight:700;font-size:15px;">
+                        Danh sách chương
+                        <span id="chapterCountBadge" style="margin-left:8px;font-size:12px;font-weight:500;color:var(--text-3);"></span>
+                    </div>
+                    <div style="padding:16px;" id="sidebarChapters">
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <script src="components/footer.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/course-detail.js"></script>
+</body>
+</html>

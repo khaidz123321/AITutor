@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hệ thống Quản trị - PTIT E-Learning</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="db-body">
+    <div class="db-wrapper">
+        <!-- ===== SIDEBAR ===== -->
+        <aside class="db-sidebar">
+            <a href="index.html" class="db-brand">
+                <img src="assets/images/Logo-Hoc-Vien-Cong-Nghe-Buu-Chinh-Vien-Thong-PTITSimple.webp" alt="PTIT Logo" style="height: 30px; width: auto;">
+                <span>E-Learning</span>
+            </a>
+            
+            <nav class="db-nav">
+                <div class="db-nav-item active" data-panel="overviewPanel">Tổng quan</div>
+                <div class="db-nav-item" data-panel="coursesPanel" id="navCourses">Khóa học</div>
+                <div class="db-nav-item" data-panel="lessonsPanel" id="navLessons">Chương học</div>
+                <div class="db-nav-item" data-panel="exercisesPanel" id="navExercises">Bài tập Chương</div>
+                <div class="db-nav-item" data-panel="exercisesAiPanel" id="navExercisesAi">Bài tập AI</div>
+                <div class="db-nav-item" data-panel="usersPanel" id="navUsers">Người dùng</div>
+                <div class="db-nav-item" data-panel="reportsPanel" id="navReports">Báo cáo</div>
+                <div class="db-nav-item" data-panel="notificationsPanel" id="navNotifications">Thông báo</div>
+                <div class="db-nav-item" data-panel="reviewsPanel" id="navReviews">Đánh giá</div>
+            </nav>
+            
+            <div class="db-nav-user">
+                <div id="dbUserFullName" style="font-weight: 700; font-size: 14px; margin-bottom: 4px;">Đang tải...</div>
+                <div id="dbUserRole" style="font-size: 12px; color: #94a3b8; margin-bottom: 12px;">Vai trò</div>
+                <a href="#" id="dbLogoutBtn" style="color: #ef4444; font-size: 13px; text-decoration: none; font-weight: 600;">Đăng xuất</a>
+            </div>
+        </aside>
+
+        <!-- ===== MAIN CONTENT ===== -->
+        <main class="db-main">
+            <!-- Header -->
+            <header class="db-header">
+                <h2 style="font-size: 18px; font-weight: 800;" id="dbTitle">Tổng quan hệ thống</h2>
+                <div style="display: flex; align-items: center; gap: 16px;">
+                    <a href="index.html" class="btn btn-outline-primary btn-sm">Xem trang chủ</a>
+                </div>
+            </header>
+
+            <div class="db-content">
+                <!-- ================= PANEL: OVERVIEW ================= -->
+                <section class="db-panel active" id="overviewPanel">
+                    <div class="db-stats-grid">
+                        <div class="db-stat-card">
+                            <div class="lbl">Tổng số khóa học</div>
+                            <div class="val" id="statCourses">0</div>
+                        </div>
+                        <div class="db-stat-card">
+                            <div class="lbl">Tổng số chương học</div>
+                            <div class="val" id="statLessons">0</div>
+                        </div>
+                        <div class="db-stat-card">
+                            <div class="lbl">Tổng số học viên</div>
+                            <div class="val" id="statStudents">0</div>
+                        </div>
+                        <div class="db-stat-card">
+                            <div class="lbl">Tổng số lượt đăng ký học</div>
+                            <div class="val" id="statEnrollments">0</div>
+                        </div>
+                    </div>
+
+                    <div class="db-card">
+                        <div class="db-card-header">
+                            <h3 class="db-card-title">Các Khóa Học Mới Nhất</h3>
+                        </div>
+                        <div class="db-table-responsive">
+                            <table class="db-table">
+                                <thead>
+                                    <tr>
+                                        <th>Mã số</th>
+                                        <th>Tiêu đề</th>
+                                        <th>Giảng viên</th>
+                                        <th>Danh mục</th>
+                                        <th>Trạng thái</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="overviewCoursesTable">
+                                    <tr><td colspan="6" style="text-align: center; color: var(--text-3);">Đang tải dữ liệu...</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="db-form-grid" style="margin-top: 24px;">
+                        <div class="db-card">
+                            <div class="db-card-header">
+                                <h3 class="db-card-title">Phân Bố Học Viên Theo Khóa Học</h3>
+                            </div>
+                            <div style="padding: 20px; min-height: 320px; display: flex; align-items: center; justify-content: center;">
+                                <canvas id="overviewStudentsChart" style="max-height: 300px; width: 100%;"></canvas>
+                            </div>
+                        </div>
+                        <div class="db-card">
+                            <div class="db-card-header">
+                                <h3 class="db-card-title">Phân Loại Cấp Độ Khóa Học</h3>
+                            </div>
+                            <div style="padding: 20px; min-height: 320px; display: flex; align-items: center; justify-content: center;">
+                                <canvas id="overviewLevelsChart" style="max-height: 300px; width: 100%;"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ================= PANEL: COURSES ================= -->
+                <section class="db-panel" id="coursesPanel">
+                    <div class="db-card">
+                        <div class="db-card-header">
+                            <h3 class="db-card-title">Danh Sách Khóa Học</h3>
+                            <button class="btn btn-primary btn-sm" id="btnCreateCourse" style="display:none;">+ Thêm khóa học mới</button>
+                        </div>
+                        <div class="db-table-responsive">
+                            <table class="db-table">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Tiêu đề</th>
+                                        <th>Tên File</th>
+                                        <th>Trạng thái xử lý</th>
+                                        <th>Mô tả</th>
+                                        <th>Giảng viên</th>
+                                        <th>Số chương</th>
+                                        <th>Trạng thái</th>
+                                        <th>Hành động</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="coursesTableBody">
+                                    <tr><td colspan="9" style="text-align: center; color: var(--text-3);">Đang tải...</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ================= PANEL: LESSONS ================= -->
+                <section class="db-panel" id="lessonsPanel">
+                    <div style="margin-bottom: 24px; display: flex; gap: 16px; align-items: center;">
+                        <span style="font-weight: 700; font-size: 14px;">Chọn khóa học:</span>
+                        <select id="lessonCourseSelector" class="form-control" style="width: 250px;">
+                            <option value="">-- Vui lòng chọn khóa học --</option>
+                        </select>
+                    </div>
+
+                    <div class="db-card">
+                        <div class="db-card-header">
+                            <h3 class="db-card-title" id="lessonsCardTitle">Danh Sách Chương Học</h3>
+                            <button class="btn btn-primary btn-sm" id="btnCreateLesson" style="display:none;">+ Thêm chương học mới</button>
+                        </div>
+                        <div class="db-table-responsive">
+                            <table class="db-table">
+                                <thead>
+                                    <tr>
+                                        <th>Số chương</th>
+                                        <th>Tên chương</th>
+                                        <th>Môn học</th>
+                                        <th>Nội dung chương</th>
+                                        <th>Khóa (Locked)</th>
+                                        <th>Hành động</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="lessonsTableBody">
+                                    <tr><td colspan="6" style="text-align: center; color: var(--text-3);">Vui lòng chọn một khóa học phía trên để xem các chương học.</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ================= PANEL: USERS ================= -->
+                <section class="db-panel" id="usersPanel">
+                    <div class="db-card">
+                        <div class="db-card-header">
+                            <h3 class="db-card-title">Quản Lý Thành Viên Hệ Thống</h3>
+                        </div>
+                        <div class="db-table-responsive">
+                            <table class="db-table">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Tên tài khoản (username)</th>
+                                        <th>Họ tên đầy đủ</th>
+                                        <th>Email</th>
+                                        <th>Vai trò</th>
+                                        <th>Trạng thái hoạt động</th>
+                                        <th>Hành động</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="usersTableBody">
+                                    <tr><td colspan="7" style="text-align: center; color: var(--text-3);">Đang tải...</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ================= PANEL: REPORTS ================= -->
+                <section class="db-panel" id="reportsPanel">
+                    <div class="db-card">
+                        <div class="db-card-header">
+                            <h3 class="db-card-title">Báo Cáo: Danh Sách Khóa Học Thu Hút Nhất</h3>
+                        </div>
+                        <div class="db-table-responsive">
+                            <table class="db-table">
+                                <thead>
+                                    <tr>
+                                        <th>Mã khóa học</th>
+                                        <th>Tên khóa học</th>
+                                        <th>Giảng viên phụ trách</th>
+                                        <th>Số lượng học viên tham gia học</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="reportsTableBody">
+                                    <tr><td colspan="4" style="text-align: center; color: var(--text-3);">Đang tải dữ liệu thống kê...</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="db-form-grid" style="margin-top: 24px;">
+                        <div class="db-card">
+                            <div class="db-card-header">
+                                <h3 class="db-card-title">Tiến Độ Học Tập Trung Bình Theo Khóa Học (%)</h3>
+                            </div>
+                            <div style="padding: 20px; min-height: 320px; display: flex; align-items: center; justify-content: center;">
+                                <canvas id="reportProgressChart" style="max-height: 300px; width: 100%;"></canvas>
+                            </div>
+                        </div>
+                        <div class="db-card">
+                            <div class="db-card-header">
+                                <h3 class="db-card-title">Tỷ Lệ Hoàn Thành Khóa Học (Học viên)</h3>
+                            </div>
+                            <div style="padding: 20px; min-height: 320px; display: flex; align-items: center; justify-content: center;">
+                                <canvas id="reportCompletionChart" style="max-height: 300px; width: 100%;"></canvas>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="db-card" style="margin-top: 24px;">
+                        <div class="db-card-header">
+                            <h3 class="db-card-title">Tỷ Lệ Làm Đúng Bài Tập Theo Mức Độ Bloom Level (%)</h3>
+                        </div>
+                        <div style="padding: 20px; min-height: 340px; display: flex; align-items: center; justify-content: center;">
+                            <canvas id="reportBloomChart" style="max-height: 320px; width: 100%;"></canvas>
+                        </div>
+                    </div>
+                </section>
+                <!-- ================= PANEL: EXERCISES ================= -->
+                <section class="db-panel" id="exercisesPanel">
+                    <div style="margin-bottom: 24px; display: flex; gap: 16px; align-items: center; flex-wrap: wrap;">
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <span style="font-weight: 700; font-size: 14px;">Chọn khóa học:</span>
+                            <select id="exerciseCourseSelector" class="form-control" style="width: 250px;">
+                                <option value="">-- Chọn khóa học --</option>
+                            </select>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <span style="font-weight: 700; font-size: 14px;">Chọn chương học:</span>
+                            <select id="exerciseChapterSelector" class="form-control" style="width: 250px;">
+                                <option value="">-- Chọn chương học --</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="db-card">
+                        <div class="db-card-header">
+                            <h3 class="db-card-title">Danh Sách Bài Tập Kết Thúc Chương</h3>
+                            <button class="btn btn-primary btn-sm" id="btnCreateExercisePanel">+ Thêm bài tập mới</button>
+                        </div>
+                        <div class="db-table-responsive">
+                            <table class="db-table">
+                                <thead>
+                                    <tr>
+                                        <th>Mã số</th>
+                                        <th>Tên bài tập</th>
+                                        <th>Độ khó</th>
+                                        <th>Mức Bloom</th>
+                                        <th>Câu hỏi</th>
+                                        <th>Đáp án đúng</th>
+                                        <th>Hành động</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="exercisePanelTableBody">
+                                    <tr><td colspan="7" style="text-align: center; color: var(--text-3);">Vui lòng chọn khóa học và chương học phía trên để xem danh sách bài tập.</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ================= PANEL: EXERCISES AI ================= -->
+                <section class="db-panel" id="exercisesAiPanel">
+                    <div style="margin-bottom: 24px; display: flex; gap: 16px; align-items: center; flex-wrap: wrap;">
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <span style="font-weight: 700; font-size: 14px;">Chọn khóa học:</span>
+                            <select id="exerciseAiCourseSelector" class="form-control" style="width: 250px;">
+                                <option value="">-- Chọn khóa học --</option>
+                            </select>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <span style="font-weight: 700; font-size: 14px;">Chọn chương học:</span>
+                            <select id="exerciseAiChapterSelector" class="form-control" style="width: 250px;">
+                                <option value="">-- Chọn chương học --</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="db-card">
+                        <div class="db-card-header">
+                            <h3 class="db-card-title">Danh Sách Bài Tập AI</h3>
+                            <div style="display: flex; gap: 8px; align-items: center;">
+                                <button class="btn btn-sm" id="btnSyncExerciseAi" style="background:#f59e0b; color:white; border:none; padding: 6px 12px; font-weight: 500;" onclick="syncExercisesToAITutor()">Đồng bộ sang AI Tutor</button>
+                                <button class="btn btn-sm" id="btnCreateExerciseAiPanel" style="background:#8b5cf6; color:white; border:none; padding: 6px 12px; font-weight: 500;">Thêm bài tập AI mới</button>
+                                <button class="btn btn-sm" id="btnAutoGenerateExerciseAi" style="background:#ec4899; color:white; border:none; padding: 6px 12px; font-weight: 500;">Tự động sinh (AI)</button>
+                                <button class="btn btn-sm" id="btnUploadExerciseAiPdfPanel" style="background:#10b981; color:white; border:none; padding: 6px 12px; font-weight: 500;">Tự động dịch từ PDF (AI)</button>
+                            </div>
+                        </div>
+                        <div class="db-table-responsive">
+                            <table class="db-table">
+                                <thead>
+                                    <tr>
+                                        <th>Mã số</th>
+                                        <th>Tên bài tập</th>
+                                        <th>Độ khó</th>
+                                        <th>Mức Bloom</th>
+                                        <th>Câu hỏi</th>
+                                        <th>Đáp án đúng</th>
+                                        <th>Hành động</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="exerciseAiPanelTableBody">
+                                    <tr><td colspan="7" style="text-align: center; color: var(--text-3);">Vui lòng chọn khóa học và chương học phía trên để xem danh sách bài tập AI.</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ================= PANEL: NOTIFICATIONS ================= -->
+                <section class="db-panel" id="notificationsPanel">
+                    <div class="db-form-grid" id="adminNotiForms" style="display: none; margin-bottom: 24px;">
+                        <div class="db-card">
+                            <div class="db-card-header">
+                                <h3 class="db-card-title">Gửi thông báo cá nhân</h3>
+                            </div>
+                            <div style="padding: 20px;">
+                                <form id="panelDirectNotiForm">
+                                    <div class="form-group">
+                                        <label for="pdNotiRecipients">Mã người nhận (User IDs, cách nhau bằng dấu phẩy)</label>
+                                        <input type="text" id="pdNotiRecipients" class="form-control" placeholder="Ví dụ: 3, 5, 8" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="pdNotiType">Loại thông báo</label>
+                                        <select id="pdNotiType" class="form-control" required>
+                                            <option value="SYSTEM">Hệ thống (SYSTEM)</option>
+                                            <option value="ANNOUNCEMENT">Thông báo chung (ANNOUNCEMENT)</option>
+                                            <option value="PROGRESS">Tiến độ (PROGRESS)</option>
+                                            <option value="COURSE_UPDATE">Cập nhật khóa học (COURSE_UPDATE)</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="pdNotiMessage">Nội dung thông báo</label>
+                                        <textarea id="pdNotiMessage" class="form-control" rows="3" placeholder="Nhập nội dung thông báo..." required></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary btn-block">Gửi thông báo</button>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="db-card">
+                            <div class="db-card-header">
+                                <h3 class="db-card-title">Phát thông báo (Broadcast)</h3>
+                            </div>
+                            <div style="padding: 20px;">
+                                <form id="panelBroadcastNotiForm">
+                                    <div class="form-group">
+                                        <label for="pbNotiScope">Phạm vi phát thông báo</label>
+                                        <select id="pbNotiScope" class="form-control" required>
+                                            <option value="all">Toàn bộ người dùng hệ thống</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="pbNotiMessage">Nội dung thông báo</label>
+                                        <textarea id="pbNotiMessage" class="form-control" rows="5" placeholder="Nhập nội dung thông báo phát đi..." required></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary btn-block" style="background: #8b5cf6; border-color: #8b5cf6;">Phát thông báo</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="db-card">
+                        <div class="db-card-header">
+                            <h3 class="db-card-title">Hộp thư thông báo của bạn</h3>
+                            <button class="btn btn-outline-primary btn-sm" id="btnMarkAllReadPanel">Đánh dấu tất cả đã đọc</button>
+                        </div>
+                        <div class="db-table-responsive">
+                            <table class="db-table">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Loại</th>
+                                        <th>Nội dung</th>
+                                        <th>Thời gian</th>
+                                        <th>Trạng thái</th>
+                                        <th>Hành động</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="panelNotificationsTableBody">
+                                    <tr><td colspan="6" style="text-align: center; color: var(--text-3);">Đang tải dữ liệu...</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ================= PANEL: REVIEWS ================= -->
+                <section class="db-panel" id="reviewsPanel">
+                    <div class="db-card">
+                        <div class="db-card-header">
+                            <h3 class="db-card-title">Quản Lý Đánh Giá Hệ Thống</h3>
+                        </div>
+                        <div class="db-table-responsive">
+                            <table class="db-table">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Khóa học</th>
+                                        <th>Người đánh giá</th>
+                                        <th>Điểm số</th>
+                                        <th>Nhận xét</th>
+                                        <th>Ngày gửi</th>
+                                        <th>Trạng thái</th>
+                                        <th>Hành động</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="panelReviewsTableBody">
+                                    <tr><td colspan="8" style="text-align: center; color: var(--text-3);">Đang tải dữ liệu...</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- ===== MODAL: COURSE EDIT / CREATE ===== -->
+    <div class="db-modal" id="courseModal">
+        <div class="db-modal-content">
+            <span class="db-modal-close" onclick="closeCourseModal()">&times;</span>
+            <h3 style="font-size: 18px; font-weight: 800; margin-bottom: 24px;" id="courseModalTitle">Thông tin khóa học</h3>
+            <form id="courseForm">
+                <input type="hidden" id="modalCourseId">
+                <div class="form-group">
+                    <label for="mcTitle">Tiêu đề khóa học</label>
+                    <input type="text" id="mcTitle" class="form-control" placeholder="Giải tích 2..." required>
+                </div>
+                <div class="form-group">
+                    <label for="mcDescription">Mô tả tóm tắt</label>
+                    <textarea id="mcDescription" class="form-control" rows="3" placeholder="Nhập mô tả khóa học..."></textarea>
+                </div>
+                <div class="db-form-grid">
+                    <div class="form-group">
+                        <label for="mcTeacher">Giảng viên phụ trách</label>
+                        <select id="mcTeacher" class="form-control" required></select>
+                    </div>
+                    <div class="form-group">
+                        <label for="mcDuration">Thời lượng học (giờ)</label>
+                        <input type="number" id="mcDuration" class="form-control" min="0" required>
+                    </div>
+                </div>
+                <div class="db-form-grid">
+                    <div class="form-group">
+                        <label for="mcCategory">Danh mục</label>
+                        <select id="mcCategory" class="form-control" required>
+                            <option value="daicuong">Các môn đại cương</option>
+                            <option value="chuyennganh">Chuyên ngành CNTT</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="mcThumbLabel">Nhãn đại diện (2-4 ký tự)</label>
+                        <input type="text" id="mcThumbLabel" class="form-control" maxlength="4" placeholder="GT2" required>
+                    </div>
+                </div>
+                <div class="form-group" id="statusGroup" style="display:none;">
+                    <label for="mcStatus">Trạng thái khóa học</label>
+                    <select id="mcStatus" class="form-control">
+                        <option value="DRAFT">DRAFT (Bản nháp)</option>
+                        <option value="PUBLISHED">PUBLISHED (Công khai)</option>
+                        <option value="ARCHIVED">ARCHIVED (Lưu trữ ẩn)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="mcPdfFile">Tài liệu học tập (PDF)</label>
+                    <input type="file" id="mcPdfFile" class="form-control" accept=".pdf">
+                    <small class="form-text text-muted" id="mcPdfLinkContainer" style="display:none; margin-top:8px;">
+                        Tài liệu hiện tại: <a href="#" id="mcPdfLink" target="_blank" style="color:#10b981; font-weight:600; text-decoration:none;">Xem/Tải PDF</a>
+                    </small>
+                    <!-- Loading indicator & message for Course PDF Upload -->
+                    <div id="coursePdfUploadProgress" style="display:none; margin-top:16px; margin-bottom:8px;">
+                        <div style="font-size: 12px; margin-bottom: 4px; display: flex; justify-content: space-between;">
+                            <span id="coursePdfStatusText" style="font-weight:600; color:var(--primary);">Đang tải file lên...</span>
+                            <span id="coursePdfPercent">0%</span>
+                        </div>
+                        <div class="progress-bar-wrap">
+                            <div class="progress-bar-fill" id="coursePdfUploadBar" style="width:0%; background:var(--primary); height:6px;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ===== AI PERSONA SECTION ===== -->
+                <div class="db-form-grid">
+                    <div class="form-group">
+                        <label for="mcTeachingStyle">Giọng điệu giao tiếp</label>
+                        <select id="mcTeachingStyle" class="form-control">
+                            <option value="encouraging" title="Luôn khen ngợi và ghi nhận nỗ lực trước khi sửa lỗi. Chia nhỏ vấn đề, giải thích thật kỹ và nhẹ nhàng.">Khuyến khích & Nhẫn nại</option>
+                            <option value="strict" title="Ngôn ngữ học thuật, chuyên ngành, ngắn gọn và chính xác. Đánh giá khắt khe, không bỏ qua lỗi nhỏ.">Nghiêm khắc & Học thuật</option>
+                            <option value="friendly" title="Thân thiện, thoải mái, có thể dùng emoji tiết kiệm. Dùng ví dụ đời sống, dí dỏm để minh họa.">Hài hước & Gần gũi</option>
+                            <option value="storyteller" title="Liên kết khái niệm với câu chuyện lịch sử, bối cảnh thực tế sống động. Dẫn dắt bằng tình huống.">Người kể chuyện</option>
+                            <option value="peer" title="Ngôn ngữ Gen Z, xưng hô ngang hàng (cậu/tớ). Thái độ 'cùng nhau học, cùng nhau giải quyết'.">Bạn đồng trang lứa</option>
+                            <option value="zen" title="Ít chữ, sâu sắc, suy ngẫm. Trả lời cực ngắn, đặt câu hỏi sắc bén để sinh viên tự nhận thức.">Điềm tĩnh & Trầm ngâm</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="mcDetailLevel">Mức độ chi tiết</label>
+                        <select id="mcDetailLevel" class="form-control">
+                            <option value="detailed">Chi tiết — giải thích kỹ, có ví dụ</option>
+                            <option value="concise">Ngắn gọn — súc tích, gạch đầu dòng</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="mcExtraNotes">Ghi chú thêm cho AI (Tùy chọn)</label>
+                    <textarea id="mcExtraNotes" class="form-control" rows="2" placeholder='Ví dụ: "Không được giải thay sinh viên. Chỉ gợi ý 3 từ khóa khi sinh viên bị mắc kẹt..."'></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="button" id="btnGeneratePersona" onclick="autoGeneratePersona()" class="btn btn-secondary btn-sm">Tạo Prompt AI Tự Động</button>
+                </div>
+                <div class="form-group" id="personaPreviewGroup" style="display: none;">
+                    <label for="mcAiPersona">Prompt AI (có thể chỉnh sửa thêm)</label>
+                    <textarea id="mcAiPersona" class="form-control" rows="8"></textarea>
+                    <input type="hidden" id="mcAiPersonaHidden">
+                </div>
+                <!-- ===== END AI PERSONA SECTION ===== -->
+
+                <button type="submit" class="btn btn-primary btn-block">Lưu khóa học</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- ===== MODAL: CHAPTER EDIT / CREATE ===== -->
+    <div class="db-modal" id="lessonModal">
+        <div class="db-modal-content">
+            <span class="db-modal-close" onclick="closeLessonModal()">&times;</span>
+            <h3 style="font-size: 18px; font-weight: 800; margin-bottom: 24px;" id="lessonModalTitle">Thông tin chương học</h3>
+            <form id="lessonForm">
+                <input type="hidden" id="modalLessonId">
+                <div class="db-form-grid">
+                    <div class="form-group">
+                        <label for="mlTitle">Tên chương học</label>
+                        <input type="text" id="mlTitle" class="form-control" placeholder="Tính chất của hàm số..." required>
+                    </div>
+                    <div class="form-group">
+                        <label for="mlSubjectName">Tên môn học</label>
+                        <input type="text" id="mlSubjectName" class="form-control" placeholder="Giải tích 1..." required>
+                    </div>
+                </div>
+                <div class="db-form-grid">
+                    <div class="form-group">
+                        <label for="mlChapterNumber">Số chương (Chapter Number)</label>
+                        <input type="number" id="mlChapterNumber" class="form-control" min="1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="mlOrderIndex">Thứ tự sắp xếp (Order Index)</label>
+                        <input type="number" id="mlOrderIndex" class="form-control" min="1" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="mlTextContent">Nội dung chương học</label>
+                    <textarea id="mlTextContent" class="form-control" rows="4" placeholder="Nhập nội dung lý thuyết chương..." required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="mlIsLocked">Khóa chương học (Locked)</label>
+                    <select id="mlIsLocked" class="form-control">
+                        <option value="true">Có (Bị khóa mặc định)</option>
+                        <option value="false">Không (Mở khóa mặc định)</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Lưu chương học</button>
+            </form>
+        </div>
+    </div>
+
+
+
+    <!-- ===== MODAL: EXERCISE EDIT / CREATE ===== -->
+    <div class="db-modal" id="exerciseModal">
+        <div class="db-modal-content" style="max-width: 550px;">
+            <span class="db-modal-close" onclick="closeExerciseModal()">&times;</span>
+            <h3 style="font-size: 17px; font-weight: 800; margin-bottom: 20px;" id="exerciseModalTitle">Thông tin bài tập kết thúc chương</h3>
+            <form id="exerciseForm">
+                <input type="hidden" id="modalExerciseId">
+                <input type="hidden" id="modalExerciseChapterId">
+                <div class="db-form-grid">
+                    <div class="form-group">
+                        <label for="meCode">Mã bài tập (ví dụ: 1.1)</label>
+                        <input type="text" id="meCode" class="form-control" placeholder="1.1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="meName">Tên bài tập</label>
+                        <input type="text" id="meName" class="form-control" placeholder="Số thực số phức..." required>
+                    </div>
+                </div>
+                <div class="db-form-grid">
+                    <div class="form-group">
+                        <label for="meDifficulty">Độ khó</label>
+                        <select id="meDifficulty" class="form-control" required>
+                            <option value="EASY">Dễ (EASY)</option>
+                            <option value="MEDIUM">Trung bình (MEDIUM)</option>
+                            <option value="HARD">Khó (HARD)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="meBloom">Mức độ Bloom</label>
+                        <select id="meBloom" class="form-control" required>
+                            <option value="REMEMBERING">Nhớ (REMEMBERING)</option>
+                            <option value="UNDERSTANDING">Hiểu (UNDERSTANDING)</option>
+                            <option value="APPLYING">Áp dụng (APPLYING)</option>
+                            <option value="ANALYZING">Phân tích (ANALYZING)</option>
+                            <option value="EVALUATING">Đánh giá (EVALUATING)</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="meQuestion">Nội dung câu hỏi</label>
+                    <textarea id="meQuestion" class="form-control" rows="3" placeholder="Nhập nội dung câu hỏi bài tập..." required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="meCorrect">Đáp án đúng</label>
+                    <input type="text" id="meCorrect" class="form-control" placeholder="Nhập kết quả/đáp án đúng..." required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Lưu bài tập</button>
+            </form>
+        </div>
+    </div>
+
+
+
+    <!-- ===== MODAL: EXERCISE AI EDIT / CREATE ===== -->
+    <div class="db-modal" id="exerciseAiModal">
+        <div class="db-modal-content" style="max-width: 550px;">
+            <span class="db-modal-close" onclick="closeExerciseAiModal()">&times;</span>
+            <h3 style="font-size: 17px; font-weight: 800; margin-bottom: 20px;" id="exerciseAiModalTitle">Thông tin bài tập AI</h3>
+            <form id="exerciseAiForm">
+                <input type="hidden" id="modalExerciseAiId">
+                <input type="hidden" id="modalExerciseAiChapterId">
+                <div class="db-form-grid">
+                    <div class="form-group">
+                        <label for="meAiCode">Mã bài tập (ví dụ: AI-1.1)</label>
+                        <input type="text" id="meAiCode" class="form-control" placeholder="AI-1.1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="meAiName">Tên bài tập</label>
+                        <input type="text" id="meAiName" class="form-control" placeholder="AI thảo luận..." required>
+                    </div>
+                </div>
+                <div class="db-form-grid">
+                    <div class="form-group">
+                        <label for="meAiDifficulty">Độ khó</label>
+                        <select id="meAiDifficulty" class="form-control" required>
+                            <option value="EASY">Dễ (EASY)</option>
+                            <option value="MEDIUM">Trung bình (MEDIUM)</option>
+                            <option value="HARD">Khó (HARD)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="meAiBloom">Mức độ Bloom</label>
+                        <select id="meAiBloom" class="form-control" required>
+                            <option value="REMEMBERING">Nhớ (REMEMBERING)</option>
+                            <option value="UNDERSTANDING">Hiểu (UNDERSTANDING)</option>
+                            <option value="APPLYING">Áp dụng (APPLYING)</option>
+                            <option value="ANALYZING">Phân tích (ANALYZING)</option>
+                            <option value="EVALUATING">Đánh giá (EVALUATING)</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="meAiQuestion">Nội dung câu hỏi</label>
+                    <textarea id="meAiQuestion" class="form-control" rows="3" placeholder="Nhập nội dung câu hỏi bài tập AI..." required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="meAiCorrect">Đáp án đúng</label>
+                    <input type="text" id="meAiCorrect" class="form-control" placeholder="Nhập kết quả/đáp án đúng..." required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block" style="background:#8b5cf6; border-color:#8b5cf6;">Lưu bài tập AI</button>
+            </form>
+        </div>
+    </div>
+
+
+
+    <!-- ===== MODAL: UPLOAD COURSE LECTURE PDF ===== -->
+    <div class="db-modal" id="pdfUploadModal">
+        <div class="db-modal-content" style="max-width: 480px;">
+            <span class="db-modal-close" onclick="closePdfUploadModal()">&times;</span>
+            <h3 style="font-size: 18px; font-weight: 800; margin-bottom: 24px;">Tải lên bài giảng PDF</h3>
+            <form id="pdfUploadForm">
+                <input type="hidden" id="uploadPdfCourseId">
+                <div class="form-group">
+                    <label>Khóa học</label>
+                    <input type="text" id="uploadPdfCourseTitle" class="form-control" readonly style="background:var(--border-light);">
+                </div>
+                <div class="form-group">
+                    <label for="pdfFile">Chọn file PDF bài giảng</label>
+                    <input type="file" id="pdfFile" class="form-control" accept=".pdf" required>
+                    <div id="pdfCurrentFileLabel" style="font-size: 12px; margin-top: 6px; color: var(--primary); font-weight: 600;"></div>
+                </div>
+                <div id="pdfUploadProgress" style="display:none; margin-bottom:16px;">
+                    <div style="font-size: 12px; margin-bottom: 4px; display: flex; justify-content: space-between;">
+                        <span>Đang tải lên...</span>
+                        <span id="pdfUploadPercent">0%</span>
+                    </div>
+                    <div class="progress-bar-wrap">
+                        <div class="progress-bar-fill" id="pdfUploadBar" style="width:0%; background:var(--primary); height:6px;"></div>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Tải lên</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- ===== MODAL: UPLOAD EXERCISE AI PDF ===== -->
+    <div class="db-modal" id="exerciseAiPdfUploadModal">
+        <div class="db-modal-content" style="max-width: 480px;">
+            <span class="db-modal-close" onclick="closeExerciseAiPdfUploadModal()">&times;</span>
+            <h3 style="font-size: 18px; font-weight: 800; margin-bottom: 24px;">AI Tự Dịch Bài Tập Từ PDF</h3>
+            <form id="exerciseAiPdfUploadForm">
+                <div class="form-group">
+                    <label>Môn học/Khóa học</label>
+                    <input type="text" id="uploadExerciseAiPdfCourseTitle" class="form-control" readonly style="background:var(--border-light); margin-bottom: 12px;">
+                </div>
+                <div class="form-group">
+                    <label>Chương học</label>
+                    <input type="text" id="uploadExerciseAiPdfChapterTitle" class="form-control" readonly style="background:var(--border-light); margin-bottom: 12px;">
+                </div>
+                <div class="form-group">
+                    <label for="exerciseAiPdfFile">Chọn file PDF chứa câu hỏi & đáp án</label>
+                    <input type="file" id="exerciseAiPdfFile" class="form-control" accept=".pdf" required style="margin-bottom: 4px;">
+                    <small class="form-text text-muted" style="margin-top: 4px; display: block; margin-bottom: 16px;">
+                        AI sẽ tự động đọc, dịch và tạo các bài tập tương ứng cho chương này.
+                    </small>
+                </div>
+                
+                <!-- Loading indicator & message -->
+                <div id="exerciseAiPdfUploadProgress" style="display:none; margin-bottom:16px;">
+                    <div style="font-size: 12px; margin-bottom: 4px; display: flex; justify-content: space-between;">
+                        <span id="exerciseAiPdfStatusText" style="font-weight:600; color:var(--primary);">Đang tải file lên...</span>
+                        <span id="exerciseAiPdfPercent">0%</span>
+                    </div>
+                    <div class="progress-bar-wrap">
+                        <div class="progress-bar-fill" id="exerciseAiPdfUploadBar" style="width:0%; background:var(--primary); height:6px;"></div>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block" style="background:#8b5cf6; border-color:#8b5cf6;">Bắt đầu phân tích (AI)</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- ===== MODAL: LOADING PROGRESS cho AI Generate ===== -->
+    <div class="db-modal" id="aiLoadingModal" style="z-index: 10000;">
+        <div class="db-modal-content" style="max-width: 400px; text-align: center; padding: 30px;">
+            <div class="spinner" style="margin: 0 auto 20px auto; border: 4px solid #f3f3f3; border-top: 4px solid var(--primary); border-radius: 50%; width: 40px; height: 40px; animation: spin 1s linear infinite;"></div>
+            <style>@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }</style>
+            <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 15px;" id="aiLoadingTitle">AI đang xử lý...</h3>
+            <p style="font-size: 14px; color: var(--text-2); margin-bottom: 20px;" id="aiLoadingDesc">
+                Hệ thống AI đang đọc lý thuyết và suy luận (Multi-Agent).<br>Quá trình này có thể mất 30 - 60 giây.
+            </p>
+            <div class="progress-bar-wrap" style="height: 8px; background: #e2e8f0; border-radius: 4px; overflow: hidden;">
+                <div class="progress-bar-fill" id="aiLoadingBar" style="width: 0%; height: 100%; background: linear-gradient(90deg, #3b82f6, #8b5cf6); transition: width 0.5s ease;"></div>
+            </div>
+            <div style="font-size: 13px; font-weight: 600; color: var(--primary); margin-top: 8px;" id="aiLoadingPercent">0%</div>
+        </div>
+    </div>
+
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

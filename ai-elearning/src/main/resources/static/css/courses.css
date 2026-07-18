@@ -1,0 +1,226 @@
+/* =====================================================
+   COURSES PAGE - Premium Edition
+   ===================================================== */
+
+.courses-page-layout {
+    display: block;
+    padding: 40px 0 80px;
+}
+
+/* ── Filter Sidebar ─────────────────────────────────── */
+.filter-sidebar {
+    background: var(--bg-white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-xl);
+    padding: 24px;
+    height: fit-content;
+    position: sticky;
+    top: calc(var(--header-h) + 20px);
+    box-shadow: var(--shadow-sm);
+}
+.filter-title {
+    font-size: 16px;
+    font-weight: 800;
+    color: var(--text-1);
+    margin-bottom: 20px;
+    padding-bottom: 14px;
+    border-bottom: 1.5px solid var(--border);
+    letter-spacing: -.2px;
+}
+.filter-group { margin-bottom: 24px; }
+.filter-group-title {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-4);
+    margin-bottom: 12px;
+}
+.filter-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 9px 12px;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: all var(--transition);
+    font-size: 14px;
+    color: var(--text-2);
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    font-family: var(--font);
+}
+.filter-option:hover {
+    background: var(--primary-light);
+    color: var(--primary);
+    transform: translateX(3px);
+}
+.filter-option.active {
+    background: var(--primary-light);
+    color: var(--primary);
+    font-weight: 600;
+}
+.filter-option .count {
+    margin-left: auto;
+    font-size: 11px;
+    background: var(--border-light);
+    color: var(--text-3);
+    padding: 2px 8px;
+    border-radius: var(--radius-full);
+    font-weight: 600;
+    transition: all var(--transition);
+}
+.filter-option.active .count {
+    background: rgba(193,32,38,.15);
+    color: var(--primary);
+}
+.btn-reset-filter {
+    width: 100%;
+    padding: 10px;
+    border: 1.5px dashed var(--border);
+    border-radius: var(--radius);
+    background: none;
+    font-family: var(--font);
+    font-size: 13px;
+    color: var(--text-3);
+    cursor: pointer;
+    transition: all var(--transition);
+}
+.btn-reset-filter:hover { border-color: var(--primary); color: var(--primary); background: var(--primary-light); }
+
+/* ── Main Area ──────────────────────────────────────── */
+.courses-main {}
+
+.courses-topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    gap: 16px;
+    flex-wrap: wrap;
+    background: var(--bg-white);
+    padding: 16px 20px;
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-sm);
+}
+.courses-count { font-size: 14px; color: var(--text-3); }
+.courses-count strong { color: var(--text-1); font-weight: 700; }
+
+/* Search bar */
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--bg);
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius-full);
+    padding: 9px 16px;
+    flex: 1;
+    max-width: 400px;
+    transition: border-color var(--transition), box-shadow var(--transition), background var(--transition);
+}
+.search-bar:focus-within {
+    border-color: var(--primary);
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(193,32,38,.08);
+}
+.search-bar input {
+    border: none;
+    background: none;
+    outline: none;
+    font-family: var(--font);
+    font-size: 14px;
+    flex: 1;
+    color: var(--text-1);
+}
+.search-bar input::placeholder { color: var(--text-4); }
+
+/* Sort select */
+.sort-select {
+    padding: 9px 16px;
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius-full);
+    font-family: var(--font);
+    font-size: 14px;
+    color: var(--text-2);
+    outline: none;
+    background: var(--bg);
+    cursor: pointer;
+    transition: border-color var(--transition), background var(--transition);
+    font-weight: 500;
+}
+.sort-select:focus { border-color: var(--primary); background: #fff; }
+
+/* ── Category Label ─────────────────────────────────── */
+.category-label {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--text-1);
+    margin-bottom: 20px;
+    margin-top: 36px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    letter-spacing: -.3px;
+}
+.category-label:first-child { margin-top: 0; }
+.category-label-badge {
+    font-size: 12px;
+    font-weight: 700;
+    background: var(--primary);
+    color: #fff;
+    padding: 3px 10px;
+    border-radius: var(--radius-full);
+}
+
+/* ── Course Cards Override ──────────────────────────── */
+.course-grid {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 22px !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.course-card, .progress-card-link, .progress-card {
+    max-width: none !important;
+    width: 100% !important;
+    margin: 0 !important;
+}
+
+/* ── Empty State ────────────────────────────────────── */
+.empty-state {
+    text-align: center;
+    padding: 80px 20px;
+    color: var(--text-3);
+    background: var(--bg-white);
+    border: 1.5px dashed var(--border);
+    border-radius: var(--radius-xl);
+}
+.empty-state .empty-icon { font-size: 64px; margin-bottom: 20px; opacity: .5; }
+.empty-state h3 { font-size: 20px; font-weight: 700; color: var(--text-2); margin-bottom: 8px; }
+
+/* ── Responsive ─────────────────────────────────────── */
+@media (max-width: 1200px) {
+    .course-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+    }
+}
+@media (max-width: 1024px) {
+    .courses-page-layout { grid-template-columns: 1fr; }
+    .filter-sidebar { position: static; }
+    .course-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+@media (max-width: 768px) {
+    .course-grid {
+        grid-template-columns: 1fr !important;
+    }
+}

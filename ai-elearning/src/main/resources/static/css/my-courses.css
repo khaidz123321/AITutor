@@ -1,0 +1,273 @@
+/* =====================================================
+   MY COURSES PAGE - Premium Edition
+   ===================================================== */
+
+/* ── Filter Bar ─────────────────────────────────────── */
+.filter-container {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 36px;
+    padding: 16px 20px;
+    background: var(--bg-white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-sm);
+    flex-wrap: wrap;
+}
+.category-filter-wrap {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.category-filter-wrap label {
+    font-weight: 700;
+    color: var(--text-1);
+    font-size: 13px;
+    white-space: nowrap;
+    letter-spacing: .01em;
+}
+.category-select {
+    padding: 9px 16px;
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius-full);
+    outline: none;
+    font-size: 14px;
+    background: var(--bg);
+    min-width: 200px;
+    color: var(--text-2);
+    font-family: var(--font);
+    cursor: pointer;
+    transition: border-color var(--transition), background var(--transition);
+    font-weight: 500;
+}
+.category-select:focus { border-color: var(--primary); background: #fff; }
+
+.search-filter-wrap {
+    position: relative;
+    flex: 1;
+    min-width: 260px;
+    max-width: 460px;
+}
+.search-input {
+    width: 100%;
+    padding: 9px 40px 9px 16px;
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius-full);
+    outline: none;
+    font-size: 14px;
+    color: var(--text-2);
+    font-family: var(--font);
+    transition: border-color var(--transition), box-shadow var(--transition), background var(--transition);
+    background: var(--bg);
+}
+.search-input:focus {
+    border-color: var(--primary);
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(193,32,38,.08);
+}
+.search-icon-svg {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-3);
+    pointer-events: none;
+}
+
+/* ── Section Header Row ─────────────────────────────── */
+.section-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--border-light);
+    position: relative;
+}
+.section-header-row::before {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 48px;
+    height: 2px;
+    background: var(--primary);
+    border-radius: var(--radius-full);
+}
+.section-title-red {
+    color: var(--primary);
+    font-size: 17px;
+    font-weight: 800;
+    margin: 0;
+    letter-spacing: -.3px;
+}
+.section-stats-text {
+    color: var(--text-3);
+    font-size: 12px;
+    font-weight: 600;
+    background: var(--bg);
+    padding: 4px 12px;
+    border-radius: var(--radius-full);
+    border: 1px solid var(--border);
+}
+
+/* ── Progress Cards ─────────────────────────────────── */
+.progress-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+.progress-card {
+    background: var(--bg-white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+    position: relative;
+}
+.progress-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+    border-color: rgba(193,32,38,.18);
+}
+
+.progress-thumb {
+    aspect-ratio: 16/9;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    flex-shrink: 0;
+    position: relative;
+    overflow: hidden;
+}
+.progress-thumb::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,.3) 0%, transparent 50%);
+}
+.progress-card-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+.progress-card-title {
+    font-size: 15px;
+    font-weight: 800;
+    color: var(--text-1);
+    margin: 0 0 14px;
+    line-height: 1.4;
+    min-height: 42px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-family: var(--font);
+    letter-spacing: -.1px;
+}
+.stars {
+    color: #d1d5db;
+    font-size: 11px;
+    letter-spacing: 1px;
+    user-select: none;
+    margin-top: 2px;
+}
+.card-meta-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12.5px;
+    color: var(--text-3);
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+.blue-icon { color: var(--primary); flex-shrink: 0; }
+.last-access-text {
+    font-size: 10.5px;
+    color: var(--text-4);
+    margin-bottom: 14px;
+    font-style: italic;
+}
+
+/* Progress bar */
+.progress-bar-wrap {
+    background: var(--border-light);
+    border-radius: var(--radius-full);
+    height: 7px;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+.progress-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #10b981, #34d399);
+    border-radius: var(--radius-full);
+    position: relative;
+    transition: width .6s cubic-bezier(.4,0,.2,1);
+}
+.progress-bar-fill::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,.35) 50%, transparent 100%);
+    background-size: 200% auto;
+    animation: shimmer 2.5s linear infinite;
+}
+.progress-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-3);
+}
+.progress-labels span:last-child { color: #10b981; }
+
+/* ── Empty State ────────────────────────────────────── */
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    background: var(--bg-white);
+    border: 1.5px dashed var(--border);
+    border-radius: var(--radius-xl);
+    margin-bottom: 24px;
+    width: 100%;
+    transition: border-color var(--transition);
+}
+.empty-state:hover { border-color: rgba(193,32,38,.3); }
+.empty-text {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text-2);
+    margin-top: 10px;
+}
+
+/* ── Layout ──────────────────────────────────────────── */
+.my-courses-layout { padding: 40px 0 80px; }
+
+.course-grid {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 22px !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.progress-card-link, .progress-card {
+    max-width: none !important;
+    width: 100% !important;
+    margin: 0 !important;
+}
+
+/* ── Responsive ─────────────────────────────────────── */
+@media (max-width: 1200px) {
+    .course-grid { grid-template-columns: repeat(3, 1fr) !important; }
+}
+@media (max-width: 1024px) {
+    .course-grid { grid-template-columns: repeat(2, 1fr) !important; }
+}
+@media (max-width: 640px) {
+    .course-grid { grid-template-columns: 1fr !important; }
+}

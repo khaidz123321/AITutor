@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khóa học của tôi - PTIT E-Learning</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/my-courses.css">
+</head>
+
+<body>
+    <script src="components/header.js"></script>
+
+    <div class="container">
+        <div class="my-courses-layout">
+            <!-- Filter Container -->
+            <div class="filter-container">
+                <div class="category-filter-wrap">
+                    <label for="categoryFilter">Phân loại:</label>
+                    <select id="categoryFilter" class="category-select">
+                        <option value="">Tất cả môn học</option>
+                        <option value="daicuong">Đại Cương</option>
+                        <option value="chuyennganh">Chuyên ngành</option>
+                    </select>
+                </div>
+                <div class="search-filter-wrap">
+                    <input type="text" id="courseSearch" class="search-input" placeholder="Tìm kiếm khóa học của tôi...">
+                    <svg class="search-icon-svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Section: Active Courses -->
+            <div class="section-header-row">
+                <h2 class="section-title-red">Khóa học đang học</h2>
+                <span class="section-stats-text" id="activeStatsText">0 Khóa học | 0 Bài học</span>
+            </div>
+            <div class="course-grid" id="activeCoursesGrid"></div>
+
+            <!-- Section: Completed Courses -->
+            <div class="section-header-row" style="margin-top: 48px;">
+                <h2 class="section-title-red">Khóa học đã hoàn thành</h2>
+                <span class="section-stats-text" id="completedStatsText">0 Khóa học | 0 Bài học</span>
+            </div>
+            <div class="course-grid" id="completedCoursesGrid"></div>
+        </div>
+    </div>
+
+    <script src="components/footer.js"></script>
+    <script src="js/index.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const token = localStorage.getItem('ptit_token');
+            if (!token) { window.location.href = 'login.html'; return; }
+
+            let allEnrollments = [];
+            let coursesMap = {};
+
+            fetch('/api/v1/courses/enrolled', { headers: { 'Authorization': 'Bearer ' + token } })
+                .then(res => res.json())
+                .then(coursesRes => {
+                    if (coursesRes.success) {
+                        const coursesList = coursesRes.data || [];
+                        const profilePromises = coursesList.map(c => 
+                            fetch(`/api/v1/learning-profiles/me?courseId=${c.id}`, { headers: { 'Authorization': 'Bearer ' + token } })
+                                .then(res => res.json())
+                                .then(profRes => {
+                                    if (profRes.success) {
+                                        return {
+                                            courseId: c.id,
+                                            courseTitle: c.title,
+                                            progressPercent: profRes.data.progressPercent || 0,
+                                            category: c.level === 'BEGINNER' || c.level === 'INTERMEDIATE' ? 'daicuong' : 'chuyennganh',
+                                            course: c
+                                        };
+                                    }
+                                    return null;
+                                })
+                                .catch(() => null)
+                        );
+
+                        Promise.all(profilePromises).then(results => {
+                            allEnrollments = results.filter(r => r !== null);
+                            allEnrollments.forEach(e => {
+                                coursesMap[e.courseId] = e.course;
+                            });
+
+                            document.getElementById('categoryFilter')?.addEventListener('change', filterAndRender);
+                            document.getElementById('courseSearch')?.addEventListener('input', filterAndRender);
+
+                            filterAndRender();
+                        });
+                    }
+                })
+                .catch(err => {
+                    console.error(err);
+                    filterAndRender();
+                });
+
+            function filterAndRender() {
+                const catVal = document.getElementById('categoryFilter')?.value || '';
+                const searchVal = document.getElementById('courseSearch')?.value?.toLowerCase()?.trim() || '';
+
+                const filtered = allEnrollments.filter(e => {
+                    const matchesCat = !catVal || e.category === catVal;
+                    const matchesSearch = !searchVal || e.courseTitle.toLowerCase().includes(searchVal);
+                    return matchesCat && matchesSearch;
+                });
+
+                const active = filtered.filter(e => e.progressPercent < 100);
+                const completed = filtered.filter(e => e.progressPercent === 100);
+
+                const activeLessons = active.reduce((sum, e) => sum + (coursesMap[e.courseId]?.chapterCount || 12), 0);
+                document.getElementById('activeStatsText').textContent = `${active.length} Khóa học | ${activeLessons} Chương`;
+
+                const completedLessons = completed.reduce((sum, e) => sum + (coursesMap[e.courseId]?.chapterCount || 12), 0);
+                document.getElementById('completedStatsText').textContent = `${completed.length} Khóa học | ${completedLessons} Chương`;
+
+                renderSection('activeCoursesGrid', active);
+                renderSection('completedCoursesGrid', completed);
+            }
+
+            function renderSection(gridId, list) {
+                const grid = document.getElementById(gridId);
+                if (!grid) return;
+
+                if (list.length === 0) {
+                    grid.innerHTML = `
+                <div class="empty-state">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="120" height="90" viewBox="0 0 120 90" style="margin: 0 auto 12px; display: block;">
+                        <!-- Background paper -->
+                        <rect x="35" y="10" width="50" height="60" rx="3" fill="#e5e7eb" />
+                        <rect x="40" y="15" width="40" height="4" fill="#d1d5db" />
+                        <rect x="40" y="24" width="40" height="2" fill="#d1d5db" />
+                        <rect x="40" y="30" width="30" height="2" fill="#d1d5db" />
+                        
+                        <!-- Folder Back -->
+                        <path d="M20 40 L20 80 A 4 4 0 0 0 24 84 L96 84 A 4 4 0 0 0 100 80 L100 40 Z" fill="#1e88e5" opacity="0.8" />
+                        
+                        <!-- Open Front Flap -->
+                        <path d="M16 48 L24 85 A 4 4 0 0 0 28 88 L100 88 A 4 4 0 0 0 104 85 L96 48 Z" fill="#1976d2" />
+                        
+                        <!-- Magnifying glass lens -->
+                        <circle cx="75" cy="45" r="14" fill="none" stroke="#2196f3" stroke-width="3" />
+                        <line x1="85" y1="55" x2="95" y2="65" stroke="#2196f3" stroke-width="3" stroke-linecap="round" />
+                    </svg>
+                    <div class="empty-text">Không có khóa học</div>
+                </div>`;
+                    grid.style.display = 'block';
+                    return;
+                }
+
+                grid.style.display = 'grid';
+
+                grid.innerHTML = list.map((e, i) => {
+                    const course = coursesMap[e.courseId] || { title: e.courseTitle, id: e.courseId };
+                    return renderCourseCard(course, true);
+                }).join('');
+            }
+        });
+    </script>
+</body>
+
+</html>

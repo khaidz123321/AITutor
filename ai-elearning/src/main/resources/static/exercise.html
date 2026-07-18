@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luyện tập & Làm bài tập - PTIT E-Learning</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/exercise.css">
+</head>
+<body class="exercise-page">
+    <script src="components/header.js"></script>
+
+    <div class="exercise-layout">
+        <!-- Sidebar: Course & Chapter Info -->
+        <aside class="exercise-sidebar">
+            <div class="sidebar-header-premium">
+                <div class="course-badge">Khóa học</div>
+                <h2 class="course-name-title" id="courseNameText">...</h2>
+            </div>
+            
+            <a href="#" class="sidebar-back-link" id="backToChatBtn">
+                <span>&#8592;</span> Quay lại phòng Chat AI
+            </a>
+
+            <div class="sidebar-chapter-info">
+                <div class="info-label">Đang làm bài tập cho:</div>
+                <div class="chapter-name-title" id="chapterNameText">...</div>
+            </div>
+
+            <!-- Exercise Progress Sidebar -->
+            <div class="sidebar-progress-card">
+                <div class="progress-header">
+                    <span>Tiến độ chương</span>
+                    <span class="progress-percentage" id="progressPercentageText">0%</span>
+                </div>
+                <div class="progress-bar-wrap-ex">
+                    <div class="progress-bar-fill-ex" id="progressBarFill" style="width: 0%;"></div>
+                </div>
+                <div class="progress-summary" id="progressSummaryText">Đang tải thông tin bài tập...</div>
+            </div>
+        </aside>
+
+        <!-- Main Content Area: Exercises -->
+        <main class="exercise-main">
+            <!-- Active Exercise Card -->
+            <div class="exercise-card" id="exerciseCard">
+                <div class="exercise-card-header">
+                    <div class="exercise-meta">
+                        <span class="ex-code-badge" id="exCodeText">Bài tập</span>
+                        <span class="ex-difficulty-badge" id="exDifficultyText">Độ khó</span>
+                        <span class="ex-bloom-badge" id="exBloomText">Mức độ nhận thức</span>
+                    </div>
+                    <h3 class="exercise-title" id="exTitleText">Đang tải câu hỏi...</h3>
+                </div>
+
+                <div class="exercise-body">
+                    <div class="exercise-question" id="exQuestionText">
+                        Đang tải nội dung câu hỏi bài tập từ hệ thống...
+                    </div>
+
+                    <div class="exercise-answer-section">
+                        <label for="answerInput" class="answer-label">Đáp án của bạn:</label>
+                        <div class="answer-input-wrap">
+                            <input type="text" id="answerInput" class="answer-control" placeholder="Nhập câu trả lời của bạn..." autocomplete="off">
+                            <button type="button" class="btn-submit" id="btnSubmitAnswer">Nộp bài</button>
+                        </div>
+                        <div class="answer-status-msg" id="answerStatusMsg"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Celebration Screen (hidden initially) -->
+            <div class="celebration-card" id="celebrationCard" style="display: none;">
+                <div class="celebrate-icon">🎉</div>
+                <h1 class="celebrate-title">Hoàn Thành 100% Điểm!</h1>
+                <p class="celebrate-desc">
+                    Tuyệt vời! Bạn đã trả lời chính xác tất cả các bài tập của chương học này. Hệ thống đã ghi nhận kết quả và mở khóa kiến thức tiếp theo dành cho bạn.
+                </p>
+
+                <!-- Next Chapter Section -->
+                <div class="next-chapter-box" id="nextChapterBox" style="display: none;">
+                    <div class="next-chapter-label">🔓 CHƯƠNG TIẾP THEO ĐÃ MỞ KHÓA</div>
+                    <div class="next-chapter-name" id="nextChapterNameText">...</div>
+                </div>
+
+                <div class="action-buttons-wrap">
+                    <a href="#" class="btn-action-primary" id="btnNextChapterLink">
+                        Học chương tiếp theo &rarr;
+                    </a>
+                    <a href="index.html" class="btn-action-secondary">
+                        Về trang chủ
+                    </a>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/index.js"></script>
+    <script src="js/exercise.js"></script>
+</body>
+</html>
