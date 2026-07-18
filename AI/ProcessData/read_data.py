@@ -3,32 +3,14 @@ import os
 import re 
 from .mineru_service import MinerU
 
+# Đã bỏ tính năng tự động phát hiện toán/chữ, đồng nhất dùng MinerU + Ollama.
+
 class DataReader:
     def __init__(self):
         self.mineru_svc = MinerU()
-        self.math_heavy_subjects = ["giai_tich_1", "dai_so", "xac_suat_thong_ke"]
     
-    def _format_markdown(self, text: str) -> str:
-        """
-        Regex nâng cao: Khớp chính xác định dạng giáo trình Triết học PTIT
-        """
-        # 1. Cấp 1: I. CHƯƠNG 1 hoặc CHƯƠNG 1 (Cho phép có khoảng trắng hoặc ký tự La Mã ở đầu)
-        text = re.sub(r'^\s*([IVX\.]*\s*CHƯƠNG\s+[IVX\d]+.*)', r'# \1', text, flags=re.IGNORECASE | re.MULTILINE)
-        
-        # 2. Cấp 2: 1. TRIẾT HỌC... (Các mục 1 chữ số)
-        text = re.sub(r'^\s*(\d+\.\s+[A-ZĐỨÁÀẢÃẠÉÈẺẼẸÍÌỈĨỊÓÒỎÕỌÔỐỒỔỖỘƠỚỜỞỠỢÚÙỦŨỤƯỨỪỬỮỰ].*)', r'## \1', text, flags=re.MULTILINE)
-        
-        # 3. Cấp 3: 1.1. Khái lược... (Các mục 2 chữ số)
-        text = re.sub(r'^\s*(\d+\.\d+\.\s+.*)', r'### \1', text, flags=re.MULTILINE)
-        
-        # 4. Cấp 4: 1.1.1. Nguồn gốc... (Các mục 3 chữ số)
-        text = re.sub(r'^\s*(\d+\.\d+\.\d+\.\s+.*)', r'#### \1', text, flags=re.MULTILINE)
-        
-        # 5. Cấp 5: a) hoặc a. (Các điểm nhỏ)
-        text = re.sub(r'^\s*([a-z][\.\)]\s+.*)', r'##### \1', text, flags=re.MULTILINE)
-        
-        return text
-    
+
+
     def _normalize_mineru_output(self, text: str, file_name: str) -> str:
         """
         DỌN DẸP KẾT QUẢ MINERU:
@@ -83,29 +65,19 @@ class DataReader:
     def extract_file(self, pdf_path, subject):
         """
         Hàm điều phối trích xuất chính.
+        Đồng nhất sử dụng MinerU + Ollama cho tất cả các loại tài liệu (không tách chữ/toán nữa).
+        Returns: tuple (text: str, needs_llm: bool)
+            - needs_llm=True  → Cần Ollama LLM khôi phục dấu sau OCR
         """
-        # --- FIX: Khai báo file_name ở đây ---
         file_name = os.path.basename(pdf_path)
 
-        if subject in self.math_heavy_subjects:
-            raw_text = self.mineru_svc.process(pdf_path)
-            if raw_text.startswith("LỖI"):
-                return raw_text            
-            clean_text = self._normalize_mineru_output(raw_text, file_name)
-            return clean_text
-        else:
-            # Môn chữ (Triết): Xử lý tại chỗ bằng PyMuPDF
-            try:
-                doc = fitz.open(pdf_path)
-                text = ""
-                for page in doc:
-                    text += page.get_text()
-                doc.close()
-                formatted_text = self._format_markdown(text)
-                return formatted_text
-                
-            except Exception as e:
-                return f"Lỗi PyMuPDF cục bộ: {str(e)}"
+        # ĐỒNG NHẤT: Luôn dùng MinerU + Ollama cho mọi môn học
+        raw_text = self.mineru_svc.process(pdf_path)
+        if raw_text.startswith("LỖI"):
+            return raw_text, False
+            
+        clean_text = self._normalize_mineru_output(raw_text, file_name)
+        return clean_text, True   # Luôn cần Ollama LLM khôi phục dấu
 
     def get_file_metadata(self, pdf_path: str): 
         """

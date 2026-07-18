@@ -10,5 +10,6 @@
             ]
         }
     },
-    "terminal.integrated.defaultProfile.windows": "PowerShell Venv"
+    "terminal.integrated.defaultProfile.windows": "PowerShell Venv",
+    "java.compile.nullAnalysis.mode": "automatic"
 }

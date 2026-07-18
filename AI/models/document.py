@@ -5,7 +5,7 @@ from models.base import Base
 class Document(Base):
     __tablename__ = "documents"
     id = Column(Integer, primary_key=True, index=True)
-    user_id = Column(Integer, ForeignKey("users.id", ondelete="CASCADE"), index=True, nullable=False) 
+    user_id = Column(Integer, index=True, nullable=False) 
     # tên file gốc hiển thị -> Frontend
     filename = Column(String(255), nullable=False)
     # Phân loại tài liệu thuộc môn nào

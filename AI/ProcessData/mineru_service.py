@@ -3,7 +3,7 @@ import requests
 import time
 
 MAX_CONNECTION_ERRORS = 5
-MAX_POLL_ATTEMPTS     = 120  # 40 × 15s = 10 phút tối đa / lần upload
+MAX_POLL_ATTEMPTS     = 960  # 960 × 15s = 4 tiếng tối đa / lần upload
 
 class MinerU:
     def __init__(self):
@@ -16,8 +16,8 @@ class MinerU:
 
     def _upload_and_poll(self, pdf_path):
         """
-        Upload 1 file PDF lên Colab và poll đến khi xong.
-        Colab tự tách PDF nên không cần tách ở local nữa.
+        Upload 1 file PDF lên GPU Server và poll đến khi xong.
+        GPU Server tự tách PDF nên không cần tách ở local nữa.
         """
         file_name = os.path.basename(pdf_path)
         cache_path = os.path.join(self.cache_dir, file_name.replace(".pdf", ".txt"))
@@ -28,7 +28,7 @@ class MinerU:
                 return f.read()
 
         try:
-            print(f"Đang tải lên Colab: {file_name}")
+            print(f"Đang tải lên GPU Server: {file_name}")
 
             if not self.api_url:
                 return "LỖI: Biến COLAB_API_URL đang trống"
@@ -47,7 +47,7 @@ class MinerU:
                 return f"LỖI API {response.status_code}"
 
             file_id = response.json().get("file_id")
-            print(f"Đã tải lên, Colab đang xử lý: {file_name}")
+            print(f"Đã tải lên, GPU Server đang xử lý: {file_name}")
 
             connection_errors = 0
             poll_attempts = 0
@@ -78,7 +78,7 @@ class MinerU:
                             return clean_text
 
                         elif status == "error":
-                            return f"LỖI COLAB: {status_data.get('message')}"
+                            return f"LỖI GPU SERVER: {status_data.get('message')}"
 
                         else:
                             print(f"  ⏳ [{elapsed_m} phút] Đang xử lý {file_name}... (còn tối đa {remaining} phút)")
@@ -87,16 +87,16 @@ class MinerU:
                         connection_errors += 1
                         print(f"  Đường truyền gián đoạn ({connection_errors}/{MAX_CONNECTION_ERRORS})")
                         if connection_errors >= MAX_CONNECTION_ERRORS:
-                            return "LỖI: Mất kết nối Colab quá nhiều lần."
+                            return "LỖI: Mất kết nối GPU Server quá nhiều lần."
 
                 except requests.exceptions.ConnectionError:
                     connection_errors += 1
                     print(f"  Mất kết nối ({connection_errors}/{MAX_CONNECTION_ERRORS})")
                     if connection_errors >= MAX_CONNECTION_ERRORS:
-                        return "LỖI: Colab bị kill hoặc mất mạng."
+                        return "LỖI: GPU Server bị kill hoặc mất mạng."
 
             total_waited = MAX_POLL_ATTEMPTS * 15 // 60
-            return f"LỖI TIMEOUT: {file_name} xử lý quá {total_waited} phút. Restart Colab và thử lại."
+            return f"LỖI TIMEOUT: {file_name} xử lý quá {total_waited} phút. Restart GPU Server và thử lại."
 
         except requests.exceptions.ConnectionError:
             return f"LỖI KẾT NỐI: Không thể gọi tới {self.api_url}"
@@ -105,8 +105,6 @@ class MinerU:
 
     def process(self, pdf_path):
         """
-        Hàm chính: upload file gốc lên Colab.
-        Colab tự tách PDF bằng PyMuPDF của nó → tránh lỗi xref cross-version.
         """
         file_name = os.path.basename(pdf_path)
 

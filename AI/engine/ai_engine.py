@@ -87,18 +87,30 @@ class AItutor:
             print(f"Error finding first question: {str(e)}")
         raise ValueError(f"SYSTEM ERROR: Không tìm thấy bài tập nào cho môn '{subject}', chương '{chapter}'. Vui lòng kiểm tra lại cấu hình.")
     
-    def load_persona(self, subject: str) -> str:
-        """Tự động tìm file persona dựa theo bộ dịch Mapping"""
-        # Gọi bộ dịch (vì persona không cần chapter nên truyền chuỗi rỗng)
-        mapped_subj, _ = get_mapped_paths(subject, "") 
+    def load_persona(self, subject: str, ai_persona_override: str = None) -> str:
+        """Tải persona cho AI.
+        Ưu tiên: 1) ai_persona_override từ DB (do giảng viên cấu hình)
+                  2) File assignment_persona.txt tĩnh (cho môn cũ sẵn có)
+                  3) Default fallback
+        """
+        # Ưu tiên 1: Override từ DB nếu giảng viên đã cấu hình
+        if ai_persona_override and ai_persona_override.strip():
+            print(f"[Persona] Dùng AI Persona từ DB (override)")
+            return ai_persona_override.strip()
         
-        persona_path = os.path.join(settings.BASE_DIR, "prompts", mapped_subj, "assignment_persona.txt")
+        # Ưu tiên 2: File .txt tĩnh (cho môn giai_tich_1, triet_hoc_maclenin)
+        safe_subj = _get_default_folder_name(subject)
+        persona_path = os.path.join(settings.BASE_DIR, "prompts", safe_subj, "assignment_persona.txt")
         try: 
             with open(persona_path, "r", encoding="utf-8") as f:
+                print(f"[Persona] Dùng file .txt tĩnh cho môn: {safe_subj}")
                 return f.read()
         except FileNotFoundError:
-            print(f"Lỗi không tìm file Assignment cho môn: {mapped_subj}")
-            return "You are an AI Tutor. Guide the student step-by-step with patience."
+            pass
+        
+        # Ưu tiên 3: Fallback mặc định
+        print(f"[Persona] Dùng persona mặc định (không tìm thấy file hay override)")
+        return "You are an AI Tutor. Guide the student step-by-step with patience."
     
     def load_subject_scope(self, subject: str) -> str:
         """Đọc file subject_scope.txt để inject ngữ cảnh môn học vào diagnose prompt."""
@@ -322,11 +334,11 @@ class AItutor:
             "2. PROBLEM_COMPLETED → Congratulate them, summarize the key takeaways, and conclude the problem.\n"
             "3. INCOMPLETE → Explicitly acknowledge the correct portion, then ask a probing question to extract the missing condition or step.\n"
             "4. CALCULATION_ERROR → Point out the general area of the mistake (e.g., signs, arithmetic rules). DO NOT fix it for them.\n"
-            "5. CONCEPTUAL_ERROR → Use [RAG_CONTEXT] and common mistakes to formulate a Socratic question that exposes their misunderstanding.\n"
-            "6. VAGUE_OR_OFFTOPIC → Gently redirect the student's focus back to the current scaffolding objective. If the student asks WHERE the theory comes from or which chapter/section, look at the [Nguồn: ...] tags in [RAG_CONTEXT] and copy the EXACT label (e.g., 'Giải tích 1 — Chương 1 — Mục: 1.1.2...'). If [RAG_CONTEXT] has no [Nguồn] tag, say you cannot determine the exact location.\n"
+            "5. CONCEPTUAL_ERROR → Dựa vào nội dung lý thuyết đã được cung cấp trong phần RETRIEVED KNOWLEDGE ở trên và các lỗi thường gặp, hãy đặt một câu hỏi Socratic để giúp sinh viên nhận ra hiểu lầm của mình.\n"
+            "6. VAGUE_OR_OFFTOPIC → Nhẹ nhàng hướng sinh viên quay lại mục tiêu scaffolding hiện tại. Nếu sinh viên hỏi lý thuyết đến từ đâu, hãy tra cứu thẻ [Nguồn: ...] trong phần RETRIEVED KNOWLEDGE và copy chính xác nhãn đó (vd: 'Giải tích 1 — Chương 1 — Mục: 1.1.2...'). Nếu không có thẻ [Nguồn], hãy thành thật nói không xác định được vị trí chính xác.\n"
             "7. REQUEST_HINT → Provide a minimal, indirect hint to spark their thinking without giving away the exact operation.\n"
-            "8. REQUEST_THEORY → DO NOT copy-paste raw text from [RAG_CONTEXT]. Use it only as background knowledge to provide a concise explanation, then formulate a Socratic guiding question to connect it back to the current problem.\n"
-            "   You MUST cite the source by using the `source_citation` JSON field. Extract the location from the `[Nguồn: ...]` tag in [RAG_CONTEXT] and format it strictly as a multi-line hierarchical list.\n"
+            "8. REQUEST_THEORY → KHÔNG sao chép nguyên văn từ phần RETRIEVED KNOWLEDGE. Chỉ dùng nó làm kiến thức nền để giải thích ngắn gọn, sau đó đặt câu hỏi Socratic để kết nối lý thuyết với bài toán hiện tại.\n"
+            "   Bạn PHẢI trích dẫn nguồn vào trường JSON `source_citation`. Lấy vị trí từ thẻ `[Nguồn: ...]` trong phần RETRIEVED KNOWLEDGE và định dạng thành danh sách phân cấp nhiều dòng.\n"
             "9. REVEAL_ANSWER → DO NOT ask any more questions. Extract the correct solution from the [PROBLEM CONTEXT] for the current step, explain it clearly to the student, comfort them so they don't feel discouraged, and gently guide them to the next step.\n\n"
             "**Emotion Handling**: If the emotion_state is FRUSTRATED or LACK_CONFIDENCE, you MUST begin your `response` with an empathetic, encouraging sentence.\n\n"
             "## CONSTRAINTS\n"
@@ -335,6 +347,18 @@ class AItutor:
             "  + If cognitive_state is 'REQUEST_THEORY', 'CONCEPTUAL_ERROR', or 'REVEAL_ANSWER': There is NO sentence limit. Provide a detailed, step-by-step explanation.\n"
             "- SPACING RULE: Ensure clear readability by separating paragraphs with exactly ONE blank line. NEVER output a giant wall of text.\n"
             "- EMPHASIS RULE: Use **bold** (for key terms, critical steps) and *italics* (for subtle hints, nuances) to highlight important information that the student needs to remember.\n"
+            "- TACTICAL BULLET POINT RULE:\n"
+            "  Use Markdown bullet points (`-`) or numbered lists (`1.`) ONLY when it genuinely improves clarity:\n"
+            "  + USE bullets/numbering when:\n"
+            "    * Listing 2 or more parallel definitions, properties, or examples (e.g., listing AND vs OR).\n"
+            "    * Explaining a multi-step process where order matters (e.g., proof steps, algorithm steps).\n"
+            "    * Presenting multiple conditions that all apply simultaneously.\n"
+            "    * Comparing two or more concepts side by side.\n"
+            "  + DO NOT use bullets when:\n"
+            "    * The response is a single sentence or a short conversational reply.\n"
+            "    * You are praising or encouraging the student (keep it flowing prose).\n"
+            "    * The list would have only 1 item — write it as a sentence instead.\n"
+            "  + FORMATTING: After a bullet list, always add one blank line before the next paragraph.\n"
             "- MATH FORMATTING RULE:\n"
             "  + Use inline LaTeX (e.g., `$x = 5$`) for simple variables or short expressions embedded in text.\n"
             "  + Use block LaTeX on a separate new line (e.g., `$$ \\lim_{{x \\to 0}} \\frac{{\\sin x}}{{x}} = 1 $$`) ONLY for complex formulas, multi-step equations, or important final results.\n"
@@ -347,7 +371,8 @@ class AItutor:
             "  + Completing a problem: 🏆, ⭐\n"
             "  + DO NOT use emojis in the middle of math explanations or inside LaTeX expressions.\n"
             "  + DO NOT force an emoji into every single reply — use sparingly for maximum impact.\n"
-            "- CRITICAL JSON RULE: You MUST properly escape all double quotes inside strings (e.g., use \\\" instead of \"). Do not break the JSON structure!"
+            "- CRITICAL JSON RULE: You MUST properly escape all double quotes inside strings (e.g., use \\\" instead of \"). Do not break the JSON structure!\n"
+            "- PLACEHOLDER RULE: NEVER output literal placeholder strings like [RAG_CONTEXT], [STEP_DETAIL], [COMMON_MISTAKES], etc. in your response. These are internal system labels — if you reference them, the student sees confusing garbage text."
         )
 
         from schemas.evaluation import GenerateResult

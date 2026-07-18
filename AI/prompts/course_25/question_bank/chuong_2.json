@@ -1,0 +1,267 @@
+{
+    "subject": "course_25",
+    "chapter_number": "chuong_2",
+    "chapter_name": "chuong_2",
+    "questions": [
+        {
+            "id": "Q1",
+            "topic": "Hàm một biến thực",
+            "question_text": "Cho $X \\subseteq \\mathbb{R}, Y \\subseteq \\mathbb{R}$. Giải thích khái niệm về hàm số một biến.",
+            "scaffolding_steps": [
+                {
+                    "step_number": 1,
+                    "hint": "Bạn có biết khái niệm 'biến' trong toán học là gì không?",
+                    "step_detail": "Biến (variable) là đại diện cho các giá trị trong một tập hợp. Trong trường hợp này, $X$ và $Y$ là hai tập con của $\\mathbb{R}$. Mỗi biến này có thể thay đổi hoặc được gọi tên."
+                },
+                {
+                    "step_number": 2,
+                    "hint": "Hãy nghĩ về mối quan hệ giữa các phần tử trong $X$ và $Y$. Bạn có thể liên kết chúng như thế nào?",
+                    "step_detail": "Mỗi phần tử trong $X$ (gọi là đối số) được liên kết với một phần tử duy nhất trong $Y$ (gọi là giá trị hàm). Đây chính là ý niệm về ánh xạ."
+                }
+            ],
+            "common_mistakes": [
+                "Nhầm lẫn khái niệm hàm với quan hệ không chẻ.",
+                "Không hiểu rõ về miền xác định và ranhмаn của hàm số."
+            ],
+            "lesson_number": "2.1.1",
+            "lesson_name": "Phép tính vi phân của hàm một biến số",
+            "difficulty": "Easy",
+            "bloom_level": "Remembering",
+            "full_answer": "Hàm số một biến là ánh xạ $f : X \rightarrow Y$ với mỗi $x \\in X$ tương ứng một $y = f(x) \\in Y$. Tập $X$ gọi là miền xác định của hàm số $f$, ký hiệu $x$ là đối số và $y$ là giá trị hàm."
+        },
+        {
+            "id": "Q2",
+            "topic": "Hàm số chẵn, lẻ",
+            "question_text": "Cho hàm số $f(x) = x^4 \\sin x$. Giải thích tại sao hàm này là hàm số lẻ.",
+            "scaffolding_steps": [
+                {
+                    "step_number": 1,
+                    "hint": "Bạn có nhớ định nghĩa của hàm số lẻ không?",
+                    "step_detail": "Hàm số $f$ được gọi là lẻ nếu $f(-x) = -f(x)$ cho mọi $x$ trong miền xác định."
+                },
+                {
+                    "step_number": 2,
+                    "hint": "Tính $f(-x)$ và so sánh với $-f(x)$.",
+                    "step_detail": "Thay $-x$ vào hàm số: $f(-x) = (-x)^4 \\sin(-x)$. Simplify từng bước để xem kết quả."
+                }
+            ],
+            "common_mistakes": [
+                "Quên luật lũy thừa của số âm.",
+                "Nhầm lẫn $\\sin(-x)$ với $-\\sin(x)$."
+            ],
+            "lesson_number": "2.1.2",
+            "lesson_name": "Phép tính vi phân của hàm một biến số",
+            "difficulty": "Medium",
+            "bloom_level": "Understanding",
+            "full_answer": "Hàm số $f(-x) = (-x)^4 \\sin(-x) = x^4 (-\\sin x) = -x^4 \\sin x = -f(x)$, nên $f(x)$ là hàm số lẻ."
+        },
+        {
+            "id": "Q3",
+            "topic": "Hàm số tuần hoàn",
+            "question_text": "Tìm chu kỳ $T$ của hàm số $y = \\sin(ax + b)$ với $a > 0$.",
+            "scaffolding_steps": [
+                {
+                    "step_number": 1,
+                    "hint": "Bạn có nhớ chu kỳ của hàm sin(x) không?",
+                    "step_detail": "Chu kỳ 기본 của $\\sin(x)$ là $2\\pi$. Khi thay đổi biến, chu kỳ sẽ thay đổi theo."
+                },
+                {
+                    "step_number": 2,
+                    "hint": "Hãy xem cách thay đổi trong hàm sin(ax + b) ảnh hưởng đến chu kỳ.",
+                    "step_detail": "Biến đổi $ax$ làm nén hay giãn chu kỳ. Chu kỳ mới sẽ là $\\frac{2\\pi}{a}$."
+                }
+            ],
+            "common_mistakes": [
+                "Nhầm lẫn chu kỳ với tần số hoặc amplitude.",
+                "Quên chia cho hệ số thay đổi trong ngoặc."
+            ],
+            "lesson_number": "2.1.3",
+            "lesson_name": "Phép tính vi phân của hàm một biến số",
+            "difficulty": "Medium",
+            "bloom_level": "Understanding",
+            "full_answer": "Chu kỳ $T$ của hàm số $y = \\sin(ax + b)$ là $T = \frac{2\\pi}{a}$."
+        },
+        {
+            "id": "Q4",
+            "topic": "Giới hạn của hàm đơn điệu",
+            "question_text": "Tính giới hạn sau: $\\lim_{x \to 0} \\frac{x^2 - 1}{x - 1}$.",
+            "scaffolding_steps": [
+                {
+                    "step_number": 1,
+                    "hint": "Bạn có thể thay thế trực tiếp $x = 0$ vào được không?",
+                    "step_detail": "Thay $x=0$ cho thấy biểu thức trở thành $\\frac{-1}{-1} = 1$, nhưng đáp án đúng là $-1$. Vì vậy, cần xem xét phương pháp khác."
+                },
+                {
+                    "step_number": 2,
+                    "hint": "Hãy factor numerator và denominator.",
+                    "step_detail": "$x^2 - 1$ có thể được factor thành $(x - 1)(x + 1)$. Rồi cancel với $x - 1$ ở dưới."
+                }
+            ],
+            "common_mistakes": [
+                "Thay trực tiếp giá trị và không factor.",
+                "Sai trong việc factor hoặc cancel các term."
+            ],
+            "lesson_number": "2.2.4",
+            "lesson_name": "Phép tính vi phân của hàm một biến số",
+            "difficulty": "Medium",
+            "bloom_level": "Applying",
+            "full_answer": "Giới hạn bằng $-1$. Biểu thức này có thể hóa简 thành $\\lim_{x \to 0} \frac{(x - 1)(x + 1)}{x - 1} = \\lim_{x \to 0} (x + 1) = 1$."
+        },
+        {
+            "id": "Q5",
+            "topic": "Quan hệ giới hạn hàm và dãy số",
+            "question_text": "Giải thích quan hệ giữa giới hạn của một dãy số và giới hạn của hàm số.",
+            "scaffolding_steps": [
+                {
+                    "step_number": 1,
+                    "hint": "Bạn có hiểu gì về giới hạn của một dãy số không?",
+                    "step_detail": "Giới hạn của dãy số $x_n$ là giá trị mà các term $x_n$ tiếp cận khi $n$ tăng indefitely."
+                },
+                {
+                    "step_number": 2,
+                    "hint": "Liên kết này như thế nào với giới hạn hàm?",
+                    "step_detail": "Nếu $x_n \to L$, thì $f(x_n) \to f(L)$ nếu $f$ liên tục tại $L$. Đây là quan hệ giữa dãy và hàm."
+                }
+            ],
+            "common_mistakes": [
+                "Nhầm lẫn với khái niệmicontinuity.",
+                "Không hiểu rõ về tính liên tục của hàm số."
+            ],
+            "lesson_number": "2.2.2",
+            "lesson_name": "Phép tính vi phân của hàm một biến số",
+            "difficulty": "Hard",
+            "bloom_level": "Analyzing",
+            "full_answer": "Giới hạn của một dãy số $x_n$ và giới hạn của hàm số $f(x)$ liên kết qua việc xem xét giá trị của hàm tại các điểm trong dãy. Nếu $x_n \to L$, thì $f(x_n) \to f(L)$ nếu $f$ liên tục tại $L$."
+        },
+        {
+            "id": "Q6",
+            "topic": "Dạng vô cùng bé và vô cùng lớn",
+            "question_text": "So sánh hai dạng: $x^2$ và $e^{-1/x^2}$ khi $x \to 0.$",
+            "scaffolding_steps": [
+                {
+                    "step_number": 1,
+                    "hint": "Bạn có biết cách so sánh tốc độ趋向 0 của các hàm không?",
+                    "step_detail": "Các hàm này đều趋向 0 khi $x \to 0$, nhưng tốc độ khác nhau."
+                },
+                {
+                    "step_number": 2,
+                    "hint": "Hãy xem xét limit của $e^{-1/x^2}$ khi $x \to 0$.",
+                    "step_detail": "$e^{-1/x^2}$趋向 0 nhanh hơn $x^2$ do tính chất của hàm exponential."
+                }
+            ],
+            "common_mistakes": [
+                "Nhầm lẫn tốc độ của các hàm khác nhau.",
+                "Không hiểu rõ về khái niệm 'vô cùng bé nhanh'."
+            ],
+            "lesson_number": "2.3.1",
+            "lesson_name": "Phép tính vi phân của hàm một biến số",
+            "difficulty": "Medium",
+            "bloom_level": "Understanding",
+            "full_answer": "$e^{-1/x^2}$ là vô cùng bé nhanh hơn $x^2$,因为它趋近于0的速度更快."
+        },
+        {
+            "id": "Q7",
+            "topic": "Cực trị của hàm liên tục",
+            "question_text": "Cho hàm $f(x)$ liên tục trên đoạn $[a, b]$. Giải thích tại sao nó đạt được giá trị lớn nhất và nhỏ nhất.",
+            "scaffolding_steps": [
+                {
+                    "step_number": 1,
+                    "hint": "Bạn có nhớ về các định lý trong giải tích không?",
+                    "step_detail": "Định lý cực trị đảm bảo rằng hàm liên tục trên đoạn đóng đạt được max và min."
+                },
+                {
+                    "step_number": 2,
+                    "hint": "Tại sao điều này quan trọng?",
+                    "step_detail": "Bởi vì hàm bị chặn và tiếp cận mọi giá trị giữa các cận, nên nó phải đạt được max và min."
+                }
+            ],
+            "common_mistakes": [
+                "Quên rằng đoạn phải đóng và bị chặn.",
+                "Nhầm lẫn với các hàm không liên tục."
+            ],
+            "lesson_number": "2.4.3",
+            "lesson_name": "Phép tính vi phân của hàm một biến số",
+            "difficulty": "Hard",
+            "bloom_level": "Evaluating",
+            "full_answer": "Theo Định lý cực trị, hàm số連續 trên đoạn đóng sẽ có cả giá trị lớn nhất và nhỏ nhất do nó bị chặn và đạt mọi giá trị giữa các cận."
+        },
+        {
+            "id": "Q8",
+            "topic": "Dao hàm của hàm hợp thành",
+            "question_text": "Tính đạo hàm của hàm $f(x) = (x^2 + 1)^5$.",
+            "scaffolding_steps": [
+                {
+                    "step_number": 1,
+                    "hint": "Hãy xác định hàm này có cấu trúc nào?",
+                    "step_detail": "Hàm này là một hàm hợp thành, với hàm bên ngoài là $u^5$ và hàm bên trong là $x^2 + 1$."
+                },
+                {
+                    "step_number": 2,
+                    "hint": "Sử dụng quy tắc nào?",
+                    "step_detail": "Sử dụng đạo hàm鏈锁: đạo hàm của hàm ngoài nhân với đạo hàm của hàm trong. Kết quả là $5(x^2 +1)^4 \\cdot 2x = 10x(x^2 +1)^4$."
+                }
+            ],
+            "common_mistakes": [
+                "Quên nhân với đạo hàm của hàm trong.",
+                "Sai trong việc tính lũy thừa và hệ số."
+            ],
+            "lesson_number": "2.6.3",
+            "lesson_name": "Phép tính vi phân của hàm một biến số",
+            "difficulty": "Medium",
+            "bloom_level": "Applying",
+            "full_answer": "$f'(x) = 5(x^2 + 1)^4 \\cdot 2x = 10x(x^2 + 1)^4$."
+        },
+        {
+            "id": "Q9",
+            "topic": "Dao hàm và vi phân cấp cao",
+            "question_text": "Giải thích ý nghĩa của đạo hàm cấp hai.",
+            "scaffolding_steps": [
+                {
+                    "step_number": 1,
+                    "hint": "Bạn có hiểu về đạo hàm cấp một không?",
+                    "step_detail": "Đạo hàm cấp một cho thấy tốc độ thay đổi của hàm."
+                },
+                {
+                    "step_number": 2,
+                    "hint": "Tại sao lại quan tâm đến đạo hàm của đạo hàm?",
+                    "step_detail": "Đạo hàm cấp hai cho thấy cách tốc độ thay đổi đó đang thay đổi, liên quan đến concavity và inflection points."
+                }
+            ],
+            "common_mistakes": [
+                "Nhầm lẫn với ý nghĩa của đạo hàm cấp một.",
+                "Không hiểu rõ về ứng dụng trong xác định hình dạng đồ thị."
+            ],
+            "lesson_number": "2.8.3",
+            "lesson_name": "Phép tính vi phân của hàm một biến số",
+            "difficulty": "Hard",
+            "bloom_level": "Analyzing",
+            "full_answer": "Đạo hàm cấp hai cho thấy sự thay đổi của đạo hàm cấp một, liên quan đến độ concave và inflection points của hàm số."
+        },
+        {
+            "id": "Q10",
+            "topic": "Công thức Taylor",
+            "question_text": "Xác định phần dư trong khai triển Taylor của hàm $f(x) = e^x$ tại $a=0$.",
+            "scaffolding_steps": [
+                {
+                    "step_number": 1,
+                    "hint": "Bạn có biết về khai triển Taylor không?",
+                    "step_detail": "Khai triển Taylor cho thấy hàm số dưới dạng tổng của các term lũy thừa xung quanh một điểm a."
+                },
+                {
+                    "step_number": 2,
+                    "hint": "Phần dư trong Taylor được xác định như thế nào?",
+                    "step_detail": "Phần dư $R_n$ cho thấy sai số khi dừng lại sau n term. Đối với $e^x$, $R_n = \\frac{e^c}{(n+1)!} x^{n+1}$ với $c$ giữa 0 và x."
+                }
+            ],
+            "common_mistakes": [
+                "Nhầm lẫn các loại phần dư trong Taylor.",
+                "Không hiểu rõ về vai trò của $c$ trong biểu thức phần dư."
+            ],
+            "lesson_number": "2.9.3",
+            "lesson_name": "Phép tính vi phân của hàm một biến số",
+            "difficulty": "Hard",
+            "bloom_level": "Evaluating",
+            "full_answer": "Phần dư là $R_n = \frac{e^c}{(n+1)!} x^{n+1}$ với $c$ nằm giữa $0$ và $x$. Khi $|x| < 1$, phần dư này趋近于0 khi $n \to \\infty$, chứng minh tính chính xác của khai triển Taylor."
+        }
+    ]
+}

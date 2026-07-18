@@ -1,0 +1,1538 @@
+# CHƯƠNG 2. TÍCH PHÂN BỊ THAM SỐ
+
+## 2.1. Tích phân phụ thuộc tham số
+
+### 2.1.1. Tích phân xác định
+
+Cho hàm số $f ( x , y )$ xác định trên hình chữ nhật $[ a , b ] \times [ c , d ]$ thỏa mãn $f ( x , y )$ khả tích theo biến $x$ trên $[ a , b ]$ với mọi $y \in [ c , d ]$. Khi đó, hàm số
+
+$$
+g ( y ) : = \intop _ { a } ^ { b } f ( x , y ) d x
+$$
+
+được gọi là hàm tích phân phụ thuộc vào tham số $y$. Hàm số $g ( y )$ xác định trên $[ c , d ]$ và có các tính chất sau:
+
+Định lý 2.1. (Tính chất liên tục) Nếu hàm $f ( x , y )$ liên tục trên hình chữ nhật $[ a , b ] \times [ c , d ]$, thì hàm số $g ( y )$ liên tục trên đoạn $[ c , d ]$
+
+Chứng minh. Với mọi $y _ { 0 } \in ( c , d ) , \Delta _ { y } \in ( c , d )$ sao cho $y = y _ { 0 } + \Delta _ { y } \in ( c , d )$. Theo giả thiết $f ( x , y )$ liên tục trên hình chữ nhật $[ a , b ] \times [ c , d ]$ suy ra $f ( x , y )$ liên tục đều trên miền đó. Theo định nghĩa của hàm liên tục đều, với mọi $\epsilon > 0$ tồn tại $\delta > 0$, với mọi $\Delta _ { y }$ thỏa mãn $| \Delta _ { y } | < \delta$, ta có
+
+$$
+| f ( x , y _ { 0 } + \Delta _ { y } ) - f ( x , y _ { 0 } ) | < \frac { \epsilon } { b - a } ~ \forall x \in [ a , b ] .
+$$
+
+Khi đó,
+
+$$
+\begin{array} { r l }
+\| g(y) - g(y_0) \| = | g(y_0 + \Delta_y) - g(y_0) | \\
+& = \left| \int_c^b [ f(x, y_0 + \Delta_y) - f(x, y_0) ] dx \right| \\
+& \leq \int_c^b [ f(x, y_0 + \Delta_y) - f(x, y_0) ] dx \\
+& < \int_{b-a}^b \frac{c}{b-a} dx \\
+& = c.
+\end{array}
+$$
+
+Theo định nghĩa, hàm $g(y)$ liên tục tại $y_0$. Vậy, hàm số $g(y)$ liên tục trên $(c, d)$. Ta dễ dàng chứng minh được rằng $g(y)$ cũng liên tục phải tại $c$ và liên tục trái tại $d$ □
+
+Kết quả trên có thể được tổng quát hơn bởi định lý dưới đây.
+
+Chú ý 2.2. Nếu hàm $f(x, y)$ liên tục trên hình chữ nhật $[a, b] \times [c, d]$ , các hàm số $\alpha(y), \beta(y)$ liên tục trên $[c, d]$ và
+
+$$
+a \leq \alpha(y) \leq b, a \leq \beta(y) \leq b \quad \forall y \in [c, d]
+$$
+
+thì hàm số
+
+$$
+g(y) := \int_{\alpha(y)}^{\beta(y)} f(x, y) dx
+$$
+
+liên tục trên đoạn $[c, d]$.
+
+Ví dụ 2.3. Cho hàm số $f(x)$ liên tục trên $[0, 1]$. Chứng minh rằng
+
+$$
+g(y) := \int_0^1 \frac{y^2 f(x)}{x^2 + y^2} dx
+$$
+
+liên tục trên $(0, +\infty)$
+
+Bài giải: Giả sử $y_{0} > 0$, tồn tại số $c, d$ sao cho $0 < c < y_{0} < d < +\infty$. Ký hiệu $D := [0, 1] \times [c, d]$. Theo giả thiết, $f(x)$ liên tục trên $[0, 1]$, nên hàm dưới dấu tích phân $\frac{y^{2} f(x)}{x^{2} + y^{2}}$ liên tục trên $D$. Hàm số $g(y) = \int_{c}^{d} \frac{y^{2} f(x)}{x^{2} + y^{2}} dx$ liên tục tại $y_{0}$ và hàm số $g(y)$ khả vi trên khoảng $(0, +\infty)$.
+
+Định lý 2.4. (Tính chất khả vi) Cho hàm số $f(x, y)$ liên tục theo biến $x$ trên $[a, b]$ với mọi $y \in [c, d]$ và đạo hàm riêng $f_{y}^{\prime}(x, y)$ liên tục trên hình chữ nhật $D = [a, b] \times [c, d]$. Khi đó
+
+$$
+g(y) := \int_{a}^{b} f(x, y) dx \Rightarrow g^{\prime}(y) = \int_{a}^{b} f_{y}^{\prime}(x, y) dx.
+$$
+
+Chứng minh. Từ giả thiết $f_{y}^{\prime}(x, y)$ liên tục trên hình chữ nhật $D$, suy ra $f_{y}^{\prime}(x, y)$ liên tục đều trên miền $D$. Khi đó, với mọi $\epsilon > 0$ tồn tại $\delta > 0$ (số $\delta$ chỉ phụ thuộc vào $\epsilon$) sao cho
+
+$$
+|\Delta_{y}| < \delta, (x, y + \Delta_{y}) \in D \Rightarrow |f_{y}^{\prime}(x, y + \Delta_{y}) - f_{y}^{\prime}(x, y)| < \frac{\epsilon}{b - a}, \forall x \in [a, b], y \in [c, d],
+$$
+
+Theo công thức số gia giới hạn nội suy, ta có
+
+$$
+\begin{array} { r l }
+{ \frac { g ( y + \Delta _ { y } ) - g ( y ) } { \Delta _ { y } } - \displaystyle \int _ { x } ^ { x } \int _ { y } ^ { \xi } f ( x , y ) \hat { d x } \Big | - \displaystyle \int _ { x } ^ { y } \frac { f ( x , y + \Delta _ { y } ) - f ( x , y ) } { \Delta _ { y } } d x - \displaystyle \int _ { x } ^ { y } \int _ { y } ^ { \xi } f ( x , y ) } & { \mathrm { ~ d } y } \\
+{ \leq \displaystyle \int _ { x } ^ { x } \Big | \frac { f ( x , y + \Delta _ { x } ) - f ( x , y ) } { \Delta _ { y } } - \frac { f ( x , y ) } { \Delta _ { x } } ( x , y ) \Big | d x } & { } \\
+{ = \displaystyle \int _ { x } ^ { x } \Big | \frac { f ( x , y + \Delta _ { x } ) - f ( x , y ) } { \Delta _ { y } } \Big | d x } & { } \\
+{ \leq \displaystyle \int _ { x } ^ { x } \Big | \frac { f ( x , y + \Delta _ { x } ) - f ( x , y ) } { \Delta _ { y } } \Big | d x } & { } \\
+{ \leq \displaystyle \int _ { x } ^ { x } b _ { - a } d x } & { \mathrm { ~ d } y } \\
+{ = \displaystyle c . }
+\end{array}
+$$
+
+với $\theta \in ( 0 , 1 )$ . Do đó
+
+$$
+\operatorname* { lim }_{\Delta \to 0} { \frac { g ( y + \Delta _ { y } ) - g ( y ) } { \Delta _ { y } } } = \int _ { a } ^ { b } f _ { y } ^ { \prime } ( x , y ) d x
+$$
+
+hay
+
+Định lý 2.4 được tổng quát bởi kết quả dưới đây.
+
+Chú ý 2.5. Nếu hàm $f(x, y)$ có đạo hàm riêng $f_y'(x, y)$ liên tục trên hình chữ nhật $\boldsymbol{D} = [a, b] \times [c, d]$ và các hàm số $\alpha(y), \beta(y)$ khả vi trên $[c, d]$ với
+
+$$
+a \leq \alpha(y) \leq b, a \leq \beta(y) \leq b \quad \forall y \in [c, d]
+$$
+
+thì hàm số
+
+$$
+g(y) := \int_{\alpha(y)}^{\beta(y)} f(x, y) dx
+$$
+
+khả vi trên đoạn $[c, d]$ và
+
+$$
+g'(y) := \int_{\alpha(y)}^{\beta(y)} f_y'(x, y) dx + f(\beta(y), y). \beta'(y) - f(\alpha(y), y). \alpha'(y).
+$$
+
+Ví dụ 2.6. Tìm đạo hàm của hàm số
+
+$$
+g(y) = \int_0^{\frac{\pi}{2}} \ln(y^2 - \sin^2 x) dx \quad (y > 1).
+$$
+
+Bài giải: Hàm số $f(x, y) = \ln(y^2 - \sin^2 x)$ liên tục trên miền $\begin{array} { r } { D = [0, \frac{\pi}{2}] \times (1, +\infty)} \end{array}$ và có đạo hàm riêng
+
+$$
+f_y'(x, y) = \frac{2y}{y^2 - \sin^2 x}, \quad y > 1
+$$
+
+liên tục trên miền $D$. Khi đó theo định lý 2.4, hàm $g(y)$ khả vi trên $(1, +\infty)$ và
+
+$$
+g'(y) = \int_0^{\frac{\pi}{2}} \frac{2y}{y^2 - \sin^2 x} dx = 2y \int \frac{\frac{\pi}{2}}{(y^2 - 1) + \cos^2 x}.
+$$
+
+Đổi biến $t = \tan x$, ta có
+
+$$
+\begin{array} { c } { \displaystyle g ^ { \prime } ( y ) = \int _ { 0 } ^ { + \infty } \frac { d t } { y ^ { 2 } + ( y ^ { 2 } - 1 ) t ^ { 2 } } } \\ { = \displaystyle \frac { 1 } { y \sqrt { y ^ { 2 } - 1 } } \arctan \frac { \sqrt { y ^ { 2 } - 1 } t } { y } \Bigg| _ { 0 } ^ { + \infty } } \\ { = \displaystyle \frac { \pi } { 2 y \sqrt { y ^ { 2 } - 1 } } . }
+\end{array}
+$$
+
+Định lý 2.7. (Tích phân) Cho hàm $f(x, y)$ liên tục trên hình chữ nhật $D = [a, b] \times [c, d]$. Khi đó
+
+$$
+g(y) = \int _ { a } ^ { b } f(x, y) dx \Rightarrow \int _ { c } ^ { d } g(y) dy = \int _ { c } ^ { d } \left( \int _ { a } ^ { b } f(x, y) dx \right) dy = \int _ { a } ^ { b } \left( \int _ { c } ^ { d } f(x, y) dy \right) dx
+$$
+
+(Chứng minh của định lý này được trình bày trong phần tích phân kép).
+
+Ví dụ 2.8. Cho $0 < a < b$, hãy tính tích phân sau:
+
+$$
+I = \int _ { 0 } ^ { 1 } \frac { x ^ { b } - x ^ { a } } { \ln x } dx.
+$$
+
+Bài giải: Thay
+
+$$
+x ^ { b } - x ^ { a } = \ln x \int _ { a } ^ { b } x ^ { y } dy
+$$
+
+vào tích phân $I$, ta có
+
+$$
+I = \int _ { 0 } ^ { 1 } \left( \int _ { a } ^ { b } x ^ { y } dy \right) dx.
+$$
+
+Theo định lý 2.7, ta có
+
+$$
+I = \int _ { a } ^ { b } \left( \int _ { 0 } ^ { 1 } x ^ { y } dx \right) dy = \int _ { a } ^ { b } \frac { dy } { y + 1 } = \ln \frac { b + 1 } { a + 1 }.
+$$
+
+2.1.2. Tích phân suy rộng
+
+Cho hàm 2 biến $f(x, y)$ xác định trên $D = [a, +\infty) \times [c, d]$. Khi đó, hàm số
+
+$$
+g(y) = \int_{a}^{+\infty} f(x, y) dx
+$$
+
+được gọi là tích phân suy rộng phụ thuộc vào tham số $y$.
+
+· Hàm số $g(y)$ được gọi là hội tụ với mọi $y \in [c, d]$, nếu
+
+$$
+\forall \epsilon_y > 0, \exists n_0 = n_0(\epsilon_y) > 0, \forall b > n_0 \Rightarrow \left| \int_{b}^{+\infty} f(x, y) dx \right| < \epsilon_y.
+$$
+
+· Hàm số $g(y)$ được gọi là hội tụ đều trên đoạn $[c, d]$, nếu
+
+$$
+\forall \epsilon > 0, \exists n_0, \forall b > n_0 \Rightarrow \left| \int_{b}^{+\infty} f(x, y) dx \right| < \epsilon \quad \forall y \in [c, d].
+$$
+
+Định lý dưới đây cho ta điều kiện đủ về điều kiện hội tụ đều của hàm $g(y)$:
+
+Định lý 2.9. (Đầu hiệu Weierstrass) Nếu tích phân $\int_{+\infty} h(x) dx$ hội tụ và
+
+$$
+|f(x, y)| \leq h(x) \quad \forall (x, y) \in D,
+$$
+
+thì hàm số $g(y)$ hội tụ đều trên $[c, d]$.
+
+Chứng minh. Theo tính chất của tích phân suy rộng, ta có
+
+$$
+\left| \int_{+\infty} f(x, y) dx \right| \leq \int_{b}^{+\infty} |f(x, y)| dx \leq \int_{b}^{+\infty} h(x) dx.
+$$
+
+Vì $\int_{b}^{+\infty} h(x) dx$ hội tụ, nên
+
+$$
+\forall \epsilon > 0, \exists n _{0}, \forall b > n _{0} \Rightarrow \left| \int _{b} ^{ + \infty } h ( x ) dx \right| < \epsilon .
+$$
+
+Đó là cách:
+
+$$
+\forall \epsilon > 0, \exists n _{0}, \forall b > n _{0} \Rightarrow \left| \int _{b} ^{ + \infty } f (x, y) dx \right| < \epsilon .
+$$
+
+Ví dụ 2.10. Chứng minh rằng hàm số
+
+$$
+g(y) = \int _{0} ^{+ \infty} \frac{\sin (y + x)}{2 + 3x^2 + y^2} dx
+$$
+
+hội tụ đều trên $\mathbb{R}$.
+
+Bài giải: Ta có
+
+$$
+\left| \frac{\sin(x + y)}{2 + 3x^2 + y^2} \right| \leq \frac{1}{2 + 3x^2}.
+$$
+
+Mặt khác,
+
+$$
+\int _{0} ^{+ \infty} \frac{1}{2 + 3x^2} dx 
+$$
+
+hội tụ. Theo định lý 2.9, hàm số $g(y)$ hội tụ đều trên $\mathbb{R}$.
+
+Tính chất liên tục của hàm số $g(y)$ được chứng minh bởi định lý dưới đây.
+
+Định lý 2.11. Nếu hàm số $f(x, y)$ liên tục trên miền $D$ và hàm số $g(y)$ hội tụ đều trên đoạn $[c, d]$, thì $g(y)$ liên tục trên đoạn $[c, d]$.
+
+Chứng minh: Do $g(y)$ hội tụ đều trên $[c, d]$, nên
+
+$$
+\forall \epsilon > 0, \exists n _{0}, \forall b > n _{0} \Rightarrow \left| \int _{b} ^{+ \infty} f(x, y) dx \right| < \frac{\epsilon}{3} \quad \forall y \in [c, d].
+$$
+
+Theo Định lý 2.1, với $b \geqslant a$ hàm số $\textstyle \int f (x, y) dx$ liên tục trên $[c, d]$ hay với $y \in [c, d]$
+
+$$
+\forall \epsilon > 0 , \exists \delta > 0 \forall \Delta_y : y + \Delta_y \in [c, d], |\Delta_y| < \delta \Rightarrow \left| \int_a^b f(x, y + \Delta_y) dx - \int_a^b f(x, y) dx \right| < \epsilon
+$$
+
+Từ (2.1) và (2.2), suy ra
+
+$$
+\begin{array}{c l l}
+{\displaystyle |\Delta_y \big ) - g(y) \big | = \left| \int_a^{+\infty} f(x, y + \Delta_y) dx - \int_a^{+\infty} f(x, y) dx \right|}
+& {= \left| \int_a^b [f(x, y + \Delta_y) - f(x, y)] dx - \int_b^{+\infty} f(x, y) dx + \int_b^{+\infty} f(x, y + \Delta_y) dy \right|}
+\\
+{\displaystyle}
+& { \leq \left| \int_a^b [f(x, y + \Delta_y) - f(x, y)] dx \right| + \left| \int_b^{+\infty} f(x, y) dx \right| + \left| \int_b^{+\infty} f(x, y + \Delta_y) dy \right|}
+\\
+{\displaystyle}
+& { \leq \frac{c}{3} + \frac{c}{3} + \frac{c}{3} = c. }
+\end{array}
+$$
+
+Theo định nghĩa, hàm số $g(y)$ liên tục trên $[c, d]$
+
+$$
+g(y) = \int_1^{+\infty} \frac{dx}{2 + x^y}
+$$
+
+liên tục trên $(2, +\infty)$:
+
+Bài giải: Ta lấy $y_0 > 2$, tồn tại số thực $a$ sao cho $y_0 > a > 2$. Khi đó, với mọi $x \geq 1, y > a$ ta có
+
+$$
+{ \frac { x } { 2 + x ^ { y } } } \leq { \frac { x } { 2 + x ^ { a } } } .
+$$
+
+Mặt khác
+
+$$
+\operatorname * { lim } _ { x \to + \infty } ( { \frac { x } { 2 + x ^ { a } } } : { \frac { 1 } { x ^ { a - 1 } } } ) = 1 { \mathrm { ~ } } ( { \mathrm { vì ~} } a - 1 > 1 )
+$$
+
+$$
+\int _ { 1 } ^ { + \infty } { \frac { d x } { x ^ { a - 1 } } }
+$$
+
+và tích phân suy rộng hội tụ, theo dấu hiệu so sánh ta suy ra tích phân hội tụ. Do đó, theo Định lý 2.9 ta có $g(y)$ hội tụ đều trên $(2, +\infty)$.
+
+Hơn nữa hàm dưới dấu tích phân $\frac { x } { 2 + x ^ { y } }$ liên tục trên miền $[1, +\infty) \times [a, +\infty)$. Theo Định lý 2.11, hàm số $g(y)$ liên tục tại $y_0$. Do đó, $g(y)$ liên tục trên $(2, +\infty)$:
+
+Định lý 2.13. Nếu hàm số $f(x,y)$ liên tục trên miền $D$ và hàm số $g(y)$ hội tụ đều trên đoạn $[c,d]$, thì
+
+$$
+\int _ { c } ^ { d } g ( y ) d y = \int _ { c } ^ { d } \left( \int _ { a } ^ { + \infty } f(x,y) dx \right) dy = \int _ { a } ^ { + \infty } \left( \int _ { c } ^ { d } f(x,y) dy \right) dx .
+$$
+
+Chứng minh. Do hàm số $g(y)$ hội tụ đều trên $[c, d]$, nên
+
+$$
+\forall \epsilon > 0 , \exists n _ { 0 } , \forall b > n _ { 0 } \Rightarrow \left| \intop_{b}^{+\infty} f(x, y) dx \right| < \epsilon \quad \forall y \in [c, d].
+$$
+
+Khi đó, theo định lý 2.7 ta có
+
+$$
+\begin{array} { r l }
+{ \displaystyle \| ( ( \int _ { \varepsilon } ^ { \varepsilon } ( t ( x ) , t ) \tilde { \varepsilon } ) ) ^ { 2 } t - \frac { \varepsilon } { 2 } ( t ( x ) \tilde { \varepsilon } ) \| _ { \varepsilon } ^ { 2 } \| ( \int _ { \varepsilon } ^ { t } ( t ( x ) , t ) \tilde { \varepsilon } ) ^ { 2 } \phi _ { \varepsilon } - \int _ { \varepsilon } ^ { \varepsilon } \phi _ { \varepsilon } \mathrm { d } t ) ^ { 2 } \| } & {}
+\\
+& { = \displaystyle \| \int _ { \varepsilon } ^ { t } [ \int _ { \varepsilon } ^ { t } \int _ { t ( x ) \tilde { \varepsilon } \setminus \varepsilon ^ { \prime } } ^ { t } \phi _ { \varepsilon } - \phi _ { \varepsilon } \mathrm { d } t ] ^ { 2 } \mathrm { d } t ) }
+\\
+& { = \displaystyle \| \int _ { \varepsilon } ^ { t } [ \int _ { \varepsilon } ^ { t } \int _ { t ( x ) \tilde { \varepsilon } \setminus \varepsilon ^ { \prime } } ^ { t } \int _ { t ( x ) \tilde { \varepsilon } \setminus \varepsilon ^ { \prime } } ^ { t } \int _ { t ( x ) \tilde { \varepsilon } \setminus \varepsilon ^ { \prime } } ^ { t } \mathrm { d } t ] ^ { 2 } \mathrm { d } t }
+\\
+& { = - \displaystyle \| \int _ { \varepsilon } ^ { t } [ \int _ { \varepsilon } ^ { t } [ \int _ { t ( x ) \tilde { \varepsilon } \setminus \varepsilon ^ { \prime } } ^ { t } \mathrm { d } t ] \tilde { \varepsilon } ] ^ { 2 } \mathrm { d } t }
+\\
+& { \leq \displaystyle \int _ { \varepsilon } ^ { t } \| \int _ { \varepsilon } ^ { t } \int _ { t ( x ) \tilde { \varepsilon } \setminus \varepsilon ^{
+}
+
+$$
+\| \sigma^{\prime} \|^t_{\tilde{\varepsilon} \setminus \varepsilon^{\prime}} \\
+\leq \frac{\varepsilon}{2} \| \int_{\varepsilon}^{t} \mathrm{d} t \|_{\varepsilon}^2 \mathrm{d} t - \mathrm{c.c.}
+$$
+
+Theo định nghĩa của giới hạn, ta có
+
+$$
+\int _ { c } ^ { d } g ( y ) d y = \lim_{b \to +\infty} \int _ { a } ^ { b } [ \int _ { c } ^ { d } f ( x , y ) d y ] d x .
+$$
+
+Ví dụ 2.14. Cho $b > a > 0 ,$ tính tích phân sau:
+
+$$
+I = \int \limits _ { 0 } ^ { + \infty } \frac { e ^ { - a x } - e ^ { - b x } } { x } d x .
+$$
+
+Bài giải: Ta nhận thấy
+
+$$
+\frac { e ^ { - a x } - e ^ { - b x } } { x } = \int _ { a } ^ { b } e ^ { - y x } d y .
+$$
+
+Do vậy, ta có thể viết
+
+$$
+I = \int _ { 0 } ^ { + \infty } \left( \int _ { a } ^ { b } e ^ { - y x } d y \right) d x .
+$$
+
+Xét tích phân phụ thuộc tham số
+
+$$
+g ( y ) = \int _ { 0 } ^ { + \infty } e ^ { - y x } d x \quad \text{với} \ y \in [ a , b ] .
+$$
+
+Ta có $e ^ { - y x } \leq e ^ { - a x } \forall y \in [ a , b ] , x \in [ 0 , + \infty ) \ v \partial \int _ { 0 } ^ { + \infty } e ^ { - a x } d x = \frac { 1 } { a } \ ( a > 0 ).$ Theo định lý 2.9, tích phân $\begin{array}{c} \int_{0}^{+\infty} e^{-yx} dx \end{array}$ hội tụ đều trên $[ a , b ]$. Hơn nữa, hàm dưới dấu tích phân $e ^ { - y x }$ liên tục trên miền $[ 0 , + \infty ) \times [ a , b ]$, cho nên theo Định lý 2.13, ta có thể viết
+
+$$
+I = \int_{a}^{b} \left( \int_{0}^{+\infty} e^{-yx} dx \right) dy = \int_{a}^{b} \frac{dy}{y} = \ln{\frac{b}{a}}.
+$$
+
+Định lý 2.15. Cho hàm số $f(x, y)$ xác định trên miền $D$ thỏa mãn các giả thiết sau:
+
+- $f(x, y)$ liên tục theo biến $x$ trên $[a, +\infty)$ với mọi $y \in [c, d]$,
+- $f_{y}^{\prime}(x, y)$ liên tục trên miền $D$,
+- $g(y)$ hội tụ với mọi $y \in [c, d]$,
+- $\int_{+\infty} f_{y}^{\prime}(x, y) dx$ hội tụ đều trên đoạn $[c, d]$
+
+Khi đó
+
+$$
+g(y) = \int_{a}^{+\infty} f(x, y) dx \Rightarrow g^{\prime}(y) = \int_{a}^{+\infty} f_{y}^{\prime}(x, y) dx \quad \text{với mọi } y \in [c, d].
+$$
+
+Chứng minh. Theo giả thiết hàm số $f_{y}^{\prime}(x, y)$ thỏa mãn các giả thiết của định lý 2.13, nên
+
+$$
+\begin{array} { r l }
+& { \underset { c } { y } + \infty } \\
+& { \underset { c } { \overset { \quad } { \cap } } ( \int \int f _ { y } ^ { \prime } ( x , y ) d x ) d y = \displaystyle \int ( \int f _ { y } ^ { \prime } ( x , y ) d y ) d x } \\
+& { \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \alpha \quad \quad \quad } \\
+& { \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad } \\
+& { \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \alpha } \\
+& { \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \alpha } \\
+& { \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad } \\
+& { \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad } \\
+& { \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad } \\
+& { \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad }
+$$
+
+$$
+\begin{array}{c}
+\text{Định nghĩa:} \\
+\text{Cho } z = a + bi \in \mathbb{C}, \text{ ta gọi số } \overline{z} = a - bi \text{ là conjugate của } z. \\
+\text{Tính chất:} \\
+1. \quad \overline{\overline{z}} = z, \quad 2. \quad \overline{z_1 + z_2} = \overline{z_1} + \overline{z_2}, \quad 3. \quad \overline{z_1 z_2} = \overline{z_1} \cdot \overline{z_2}, \\
+4. \quad \overline{\frac{z_1}{z_2}} = \frac{\overline{z_1}}{\overline{z_2}}, \quad 5. \quad |z| = |\overline{z}|, \quad 6. \quad z + \overline{z} = 2\operatorname{Re}(z), \\
+7. \quad z - \overline{z} = 2i\operatorname{Im}(z).
+\end{array}
+$$
+
+trong định nghĩa $K = \int_{a}^{+\infty} f(x, c) dx$ (const) về $g(c)$ hội tụ. Lấy đạo hàm hai vế của đẳng thức trên, ta có
+
+$$
+\int_a^{+\infty} f_y'(x, y) dx = \left( \int_a^{+\infty} f(x, y) dx \right)'
+$$
+
+hay
+
+$$
+g'(y) = \int_{a}^{+\infty} f_y'(x, y) dx \quad \text{với } y \in [c, d].
+$$
+
+Ví dụ 2.16. Tìm đạo hàm của hàm số
+
+$$
+g(y) = \int_0^{+\infty} \frac{[1 - \cos(xy)] dx}{x e^{2x}} \quad \text{với } y \in (0, +\infty).
+$$
+
+Từ định nghĩa tính $g(y)$
+
+Bài giải: Đặt hàm số
+
+$$
+f(x, y) = \frac{1 - \cos(xy)}{x e^{2x}}.
+$$
+
+Khi đó,
+
+$$
+\lim_{x \to 0} \frac{1 - \cos(xy)}{x e^{2x}} = 0.
+$$
+
+Ta xác định thêm giá trị của hàm $f(x, y)$ tại điểm $x = 0$, bằng cách đặt $f(0, y) = 0$. Khi đó, $f(x, y)$ liên tục trên $D = [0, +\infty) \times (0, +\infty)$. Hơn nữa,
+
+$$
+f_y'(x, y) = e^{-2x} . \sin(xy), \quad | f_y'(x, y) | \leq e^{-2x} \forall (x, y) \in D.
+$$
+
+$$
+\int_{+\infty} e^{-2x} dx = 1
+$$
+
+Vì tích phân hội tụ, nên theo định lý 2.9, tích phân
+
+$$
+\intop_{0}^{+\infty} f'_{y}(x, y) dx = \intop_{0}^{+\infty} e^{-2x} . \sin{x y} dx
+$$
+
+Hỏi tu đều trên miền $[0, +\infty)$. Khi đó, theo định lý 2.15, ta có
+
+$$
+g'(y) = \int_{0}^{+\infty} f'_{y}(x, y) dx = \int_{0}^{+\infty} e^{-2x} \sin{x y} dx = \frac{y}{4 + y^2}.
+$$
+
+Lấy nguyên hàm hai vế, ta có
+
+$$
+g(y) = \frac{1}{2} \ln(4 + y^2) + C.
+$$
+
+Thay $y = 0$ vào $g(y)$, ta nhận được
+
+$$
+C = -\ln 2.
+$$
+
+$$
+g(y) = \frac{1}{2} \ln(4 + y^2) - \ln 2.
+$$
+
+### 2.2. Tích phân kép
+
+#### 2.2.1. Định nghĩa
+
+Cho hàm hai biến số $z = f(x, y)$ xác định trên miền đồng biến chẵn $D \subset \mathbb{R}^2$:
+
+- Chia miền $D$ tùy ý (ký hiệu $P$) thành $n$ mảnh nhỏ $D_1, D_2, ..., D_n$ có các diện tích tương ứng là $\Delta D_1, \Delta D_2, ..., \Delta D_n.$
+
+- Chọn một điểm tùy ý $(x_i, y_i) \in D_i \forall i = 1, 2, ..., n$
+
+Khi đó, tổng
+
+$$
+\sigma_n = \sum_{i=1}^{n} f(x_i, y_i) \Delta D_i
+$$
+
+được gọi là tổng tích phân của hàm $f(x, y)$ trên miền $D$. Ta định nghĩa đường kính của tập hợp $D_i$ được xác định bởi
+
+$$
+\operatorname{diam}(D_i) = \sup\{AB \colon A \in D_i, B \in D_i\}.
+$$
+
+Ký hiệu
+
+$$
+\Delta_{P} = \max \{ \text{diam}(D_1), \text{diam}(D_2), \ldots, \text{diam}(D_n) \}.
+$$
+
+Nếu giới hạn
+
+$$
+I = \lim_{\Delta_P \to 0} \sigma_P
+$$
+
+tồn tại, không phụ thuộc vào phép chia $P$ và phép chọn điểm $(x_i, y_i)$ thì $I$ được gọi là tích phân kép của hàm $f(x, y)$ trên miền $D$ và được ký hiệu là
+
+$$
+\iint_{D} f(x, y) \, dx \, dy.
+$$
+
+$D$ được gọi là miền lấy tích phân. Nếu tích phân trên tồn tại, ta nói rằng hàm số $f(x, y)$ khả tích  
+trên miền $D$. Người ta chứng minh được rằng, nếu $f(x, y)$ liên tục trên miền $D$ đồng và chỉ chặn  
+thì hàm $f(x, y)$ khả tích trên miền $D$.
+
+2.2.2. Điều kiện khả tích.
+
+Đặt
+
+$$
+m_i = \inf\{ f(x, y) : (x, y) \in D_i \}, ~ M_i = \sup\{ f(x, y) : (x, y) \in D_i \}.
+$$
+
+Khi đó
+
+$$
+m_P = \sum_{i=1}^{n} m_i \Delta D_i
+$$
+
+được gọi là tổng Darboux dưới của hàm $f(x, y)$ ứng với phép phân hoạch $P$:
+
+$$
+M_P = \sum_{i=1}^{n} M_i \Delta D_i
+$$
+
+được gọi là tổng Darboux trên của hàm $f(x, y)$ ứng với phép phân hoạch $P$.
+
+Định lý 2.17. Hàm số $f(x, y)$ khả tích trên miền $D$ khi và chỉ khi
+
+$$
+\lim_{\Delta_P \to 0} (M_P - m_P) = 0.
+$$
+
+Chứng minh. $(\Rightarrow)$ Giả sử $f(x,y)$ khả tích trên miền $D$. Hay tồn tại
+
+$$
+I = \lim_{\Delta_P \to 0} \sigma_P,
+$$
+
+tức là
+
+$$
+\forall \epsilon > 0, \exists \delta > 0, \forall P: |\Delta_P| < \delta \Rightarrow |\sigma_P - I| < \frac{\epsilon}{4}.
+$$
+
+Mặt khác, theo định nghĩa của inf và sup, tồn tại phân hoạch $P$ sao cho
+
+$$
+\sigma_P - \frac{\epsilon}{4} < m_P ~ \text{và} ~ M_P < \sigma_P + \frac{\epsilon}{4}.
+$$
+
+Khi đó
+
+$$
+I - \frac{\epsilon}{2} < \sigma_P - \frac{\epsilon}{4} < m_P \leq M_P < \sigma_P + \frac{\epsilon}{4} < I + \frac{\epsilon}{2}.
+$$
+
+Do vậy
+
+$|m_P - I| < \frac{\epsilon}{2}$ và $|M_P - I| < \frac{\epsilon}{2} \Rightarrow |M_P - m_P| = |M_P - I + I - m_P| \leq |M_P - I| + |I - m_P| < \epsilon.$
+
+$(\Leftarrow)$ Chứng minh $\lim_{\Delta_P \to 0}(M_P - m_P) = 0$. Đặt
+
+$$
+I_* = \sup\{m_P : P\}, \quad I^* = \inf\{M_P : P\}.
+$$
+
+Khi đó, ta có
+
+$$
+m_P \leq I_* \leq I^* \leq M_P \forall P.
+$$
+
+Suy ra $I^* = I_*$, đặt $I_* = I$. Theo định nghĩa,
+
+$$
+\forall \epsilon > 0 , \exists \delta > 0 , \forall P : | P | < \delta \Rightarrow I - \epsilon = I_{*} - \epsilon < m_P \leq \sigma_P \leq M_P < I^{*} + \epsilon = I + \epsilon ,
+$$
+
+Đo độ
+
+$$
+\forall \epsilon > 0 , \exists \delta > 0 , \forall P : | \Delta_P | < \delta \Rightarrow | \sigma_P - I | < \epsilon
+$$
+
+hay $\lim_{\Delta_P} \sigma_P = I$
+
+Hệ quả 2.18. Cho $D \subseteq \mathbb{R}^2$ là một tập compact. Nếu hàm số $f(x, y)$ liên tục trên miền $D$, thì $f$ sẽ khả tích trên miền $D$
+
+2.2.3. Các tính chất.
+
+Tích phân kép cũng có tính chất tương tự như tích phân xác định với các giả thiết là các tích phân dưới đây đều tồn tại.
+
+$$
+\begin{array} { l }
+{ \mathrm{Nếu} \ f(x, y) = 1, \ \mathrm{thì} \iint_{D} f(x, y) dx dy \ \mathrm{điềncích} \ D. } \\
+{ \iint [f(x, y) + g(x, y)] dx dy = \iint f(x, y) dx dy + \iint g(x, y) dx dy. } \\
+{ \iint [f(x, y) - g(x, y)] dx dy = \iint f(x, y) dx dy - \iint g(x, y) dx dy. } \\
+{ \iint k f(x, y) dx dy = k \iint f(x, y) dx dy \ \mathrm{với} \ k = const. } \\
+{ \mathrm{Nếu} \ f_{hi} \ \mathrm{a} \ \mathrm{thành} \ 2 \ m^2 \ \mathrm{nhỏ} \ \partial \ . \ \mathrm{cần} \ \mathrm{cho} \ D_1, D_2 = \emptyset \ \mathrm{nếu} }
+\end{array}
+$$
+
+· Nếu chia thành 2 miền nhỏ $D_1, D_2$ sao cho $\mathrm{int}(D_1 \cap D_2) = \emptyset$, thì
+
+$$
+\iint_{D} f(x, y) dx dy = \iint_{D_1} f(x, y) dx dy + \iint_{D_2} f(x, y) dx dy.
+$$
+
+· Nếu $f(x, y) \leq g(x, y) \ \forall (x, y) \in D$ thì
+
+$$
+\iint_{D} f(x, y) dx dy \leq \iint_{D} g(x, y) dx dy.
+$$
+
+· (Định lý giá trị trung bình) Nếu $f(x, y)$ liên tục trên miền $D$ đồng và bị chặn có diện tích $dt(D) \in (0, +\infty)$, thì tồn tại điểm $(x^0, y^0) \in D$ sao cho
+
+$$
+f(x^0, y^0) = \frac{1}{dt(D)} \iint f(x, y) dx dy.
+$$
+
+2.2.4. Định lý Fubini.
+
+Trong mục này, ta sẽ trình bày phương pháp tính tích phân kép, trước hết ta xét miền $D$ là một hình chữ nhật $D = [a, b] \times [c, d]$.
+
+Định lý 2.19. Cho hàm số $f(x, y)$ khả tích trên $D$. Khi đó
+
+i) Nếu hàm số $f(x, y)$ khả tích trên $[c, d]$ với mọi $x \in [a, b]$, thì
+
+$$
+\iint_D f(x, y) dx dy = \int_a^b \left( \int_c^d f(x, y) dy \right) dx.
+$$
+
+ii) Nếu hàm số $f(x, y)$ khả tích trên $[a, b]$ với mọi $y \in [c, d]$, thì
+
+$$
+\iint f(x, y) dx dy = \int_c^d \left( \int_a^b f(x, y) dx \right) dy.
+$$
+
+Chứng minh. i) Ta chia miền $D$ bằng phép chia
+
+$$
+a = x_0 < x_1 < x_2 < \ldots < x_n = b,
+c = y_0 < y_1 < y_2 < \ldots < y_m = d.
+$$
+
+Đặt
+
+$\Delta x_i = x_{i+1} - x_i, \Delta y_j = y_{j+1} - y_j, D_{ij} = [x_i, x_{i+1}] \times [y_j, y_{j+1}] \quad \forall i = 1, 2, ..., n-1, j = 1, 2, ..., m-1,$
+
+$$
+m _ { i j } = \operatorname*{inf} \{ f ( x , y ) : ~ ( x , y ) \in D _ { i j } \} , M _ { i j } = \operatorname*{sup} \{ f ( x , y ) : ~ ( x , y ) \in D _ { i j } \} .
+$$
+
+Ta có
+
+$$
+m _ { i j } \le f ( x , y ) \le M _ { i j } \forall ( x , y ) \in D _ { i j } .
+$$
+
+Lấy $x = \xi _ { i } \in [ x _ { i } , x _ { i + 1 } ]$, ta có
+
+$$
+m _ { i j } \le f ( \xi _ { i } , y ) \le M _ { i j } \forall y \in [ y _ { j } , y _ { j + 1 } ]
+$$
+
+và
+
+$$
+m _ { i j } \Delta y _ { j } \leq \int _ { y _ { j } } ^ { y _ { j + 1 } } f ( \xi _ { i } , y ) d y \leq M _ { i j } \Delta y _ { j } \forall j = 0 , 1 , \cdots , m - 1 .
+$$
+
+Cộng các bất đẳng thức trên, ta nhận được
+
+$$
+\sum _ { j = 0 } ^ { m - 1 } m _ { i j } \Delta y _ { j } \leq \int _ { c } ^ { d } f ( \xi _ { i } , y ) d y \leq \sum _ { j = 0 } ^ { m - 1 } M _ { i j } \Delta y _ { j } \forall i = 0 , 1 , . . . , n - 1 .
+$$
+
+Nhân các vế với $\Delta x _ { i }$ và cộng các bất đẳng thức trên, ta có
+
+$$
+\sum _ { i = 0 } ^ { n - 1 } \Delta x _ { i } \sum _ { j = 0 } ^ { m - 1 } m _ { i j } \Delta y _ { j } \leq \sum _ { i = 0 } ^ { n - 1 } \Delta x _ { i } \left( \int _ { c } ^ { d } f ( \xi _ { i } , y ) d y \right) \leq \sum _ { i = 0 } ^ { n - 1 } \Delta x _ { i } \sum _ { j = 0 } ^ { m - 1 } M _ { i j } \Delta y _ { j } .
+$$
+
+Ta đặt
+
+$$
+\begin{array} { r } { \Delta _ { x } = \operatorname* { max } \{ \Delta x _ { 0 } , \Delta x _ { 1 } , . . . , \Delta x _ { n - 1 } \} , \Delta _ { y } = \{ \Delta y _ { 0 } , \Delta y _ { 1 } , . . . , \Delta y _ { m - 1 } \} , \Delta _ { P } = \operatorname* { max } \{ \Delta _ { x } , \Delta y _ { 0 } \} . } \end{array}
+$$
+
+Khi đó,
+
+$$
+\operatorname* { lim } _ { \Delta _ { P } \to 0 } m _ { P } \leq \operatorname* { lim } _ { \Delta _ { x } \to 0 } \sum _ { i = 0 } ^ { n - 1 } \Delta x _ { i } \left( \int _ { c } ^ { d } f ( \xi _ { i } , y ) d y \right) \leq \operatorname* { lim } _ { \Delta _ { P } \to 0 } M _ { P } .
+$$
+
+Vì $f ( x , y )$ khả tích trên $D$, nên theo Định lý 2.17, ta có
+
+$$
+\iint _ { D } f ( x , y ) d x d y = \int _ { a } ^ { b } \left( \int _ { c } ^ { d } f ( x , y ) d y \right) d x .
+$$
+
+ii) Được chứng minh tương tự.
+
+Chú ý 2.20. Nếu hàm số $f ( x , y )$ liên tục trên miền $D$, thì $f(x, y)$ liên tục trên $[ a , b ]$ với mọi $y \in [ c , d ]$ và trên $[ c , d ]$ với mọi $x \in [ a , b ]$. Khi đó, theo Định lý 2.19, ta có
+
+$$
+\iint f ( x , y ) d x d y = \int _ { a } ^ { b } \left( \int _ { c } ^ { d } f ( x , y ) d y \right) d x = \int _ { c } ^ { d } \left( \int _ { a } ^ { b } f ( x , y ) d x \right) d y .
+$$
+
+Như vậy Định lý 2.7 được chứng minh.
+
+Ví dụ 2.21. Tính tích phân
+
+$$
+I = \iint _ { D } x ^ { 2 } y d x d y ,
+$$
+
+trong đó $D = [ 0 , 1 ] \times [ 0 , 2 ]$:
+
+Bài giải: Theo Định lý 2.19, ta có
+
+$$
+I = \int _ { D } \int x ^ { 2 } y d x d y = \int _ { 0 } ^ { 1 } \left( \int _ { 0 } ^ { 2 } x ^ { 2 } y d y \right) d x = \int _ { 0 } ^ { 1 } x ^ { 2 } \frac{y ^ { 2 }}{2} \Big|_{0}^{2} d x
+$$
+
+$$
+\boldsymbol{\tau} = \int _ { 0 } ^ { 1 } 2 x ^ { 2 } d x = \frac { 2 } { 3 } .
+$$
+
+Hệ quả 2.22. Giả sử miền
+
+$$
+D = \{ ( x , y ) : a \leq x \leq b, \phi(x) \leq y \leq \varphi(x) \}
+$$
+
+biến chia và các hàm số $\phi(\boldsymbol{x}), \varphi(\boldsymbol{x})$ khả tích trên $[a, b]$, $\phi(x) \leq \varphi(x) \forall x \in [a, b]$, hàm số $f(x, y)$ khả tích trên $D$ và khả tích trên $[\phi(x), \varphi(x)]$ với mọi $x \in [c, d]$. Khi đó
+
+$$
+\int _ { D } \int f ( x , y ) d x d y = \int _ { a } ^ { b } \left( \int _ { \phi ( x ) } ^ { \varphi ( x ) } f ( x , y ) d y \right) d x .
+$$
+
+Chứng minh. Giả sử cho $\phi(\boldsymbol{x}), \varphi(\boldsymbol{x})$ biến chia trên $[a, b]$, nên tồn tại $c, d$ sao cho $c \leq \phi(x) \leq \varphi(x) \forall x \in [a, b]$. Khi đó, ta đặt $E = [a, b] \times [c, d]$ và
+
+$$
+F ( x , y ) = \left\{ 
+\begin{array}{ll}
+f ( x , y ) & \text{nếu } (x,y) \in D, \\
+0 & \text{nếu } (x,y) \in E \setminus D.
+\end{array} 
+\right.
+$$
+
+Rõ ràng $F(x, y)$ khả tích trên $E$. Theo định lý 2.19, ta có
+
+$$
+\iint _ { D } f ( x , y ) d x d y = \iint _ { E } F ( x , y ) d x d y = \int _ { a } ^ { b } \left( \int _ { c } ^ { d } F ( x , y ) d y \right) d x .
+$$
+
+Nhưng với mọi $x \in [a, b]$, ta có
+
+$$
+F(x, y) = \begin{cases} 
+f(x, y) & \text{nếu } y \in [\phi(x), \varphi(x)], \\
+0 & \text{nếu } y \notin [\phi(x), \varphi(x)].
+\end{cases}
+$$
+
+Do đó
+
+$$
+\iint _ { D } f ( x , y ) d x d y = \int _ { a } ^ { b } \left( \int _ { c } ^ { d } F ( x , y ) d y \right) d x + \int _ { a } ^ { b } \left( \int _ { c } F ( x , y ) d y \right) d x + \int _ { a } ^ { b } \left( \int _ { \varphi(x) } ^ { d } F ( x , y ) d y \right) d x + \int _ { a } ^ { b } \left( \int _ { \varphi(x) } ^ { d } F ( x , y ) d y \right) d x
+$$
+
+$$
+= \int _ { a } ^ { b } \left( \int _ { \phi(x) } ^ { \varphi(x) } F ( x , y ) d y \right) d x = \int _ { a } ^ { b } \left( \int _ { \phi(x) } ^ { \varphi(x) } f ( x , y ) d y \right) d x .
+$$
+
+Ví dụ 2.23. Tính tích phân
+
+$$
+I = \iint _ { D } \frac{x^2}{y^2} dx dy, \quad D \text{ được giới hạn bởi các đường } x=2, y=x, xy=1.
+$$
+
+Bài giải: Ta nhận thấy rằng miền $D$ được viết dưới dạng:
+
+$$
+D = \left\{ (x, y) : 1 \leq x \leq 2, \frac{1}{x} \leq y \leq x \right\}.
+$$
+
+Theo Hệ quả 2.22, ta có
+
+$$
+I = \iint _ { D } { \frac { x ^ { 2 } } { y ^ { 2 } } } d x d y = \int _ { 1 } ^ { 2 } \left( \int { \frac { x } { y ^ { 2 } } } { \frac { x ^ { 2 } } { y ^ { 2 } } } d y \right) d x = \int _ { 1 } ^ { 2 } ( x ^ { 3 } - x ) d x = \frac { 9 } { 4 } .
+$$
+
+Hệ quả 2.24. Giả sử miền
+
+$$
+D = \{ ( x , y ) : c \leq y \leq d , \phi ( y ) \leq x \leq \varphi ( y ) \}
+$$
+
+bi chia và các hàm số $\phi(y), \varphi(y)$ khả tích trên $[c, d], \phi(y) \leq \varphi(y) \forall y \in [c, d]$, hàm số $f(x, y)$ khả tích trên $D$ và khả tích trên $[\phi(y), \varphi(y)]$ với mọi $y \in [c, d]$. Khi đó
+
+$$
+\int \displaylimits _ { D } f ( x , y ) d x d y = \int \displaylimits _ { c } ^ { d } \left( \int \displaylimits _ { \phi ( y ) } ^ { \varphi ( y ) } f ( x , y ) d x \right) d y .
+$$
+
+Chứng minh tương tự như Hệ quả 2.22.
+
+Ví dụ 2.25. Tính tích phân
+
+$$
+I = \int _ { 0 } ^ { 2 } \left( \int _ { 0 } ^ { 4 - x ^ { 2 } } \frac { x e ^ { 2 y } d y } { 4 - y } \right) d x .
+$$
+
+Bài giải: Nếu tính tích phân $\begin{array} { c } { 1 - x ^ { 2 } } \\ { \int } \\ { 0 } \end{array} \frac { x e ^ { 2 y } d y } { 4 - y }$ thì rất khó. Tích phân $I$ thoả mãn các giả thiết của Hệ quả 2.22 và 2.24. Do đó, ta dùng cách tính thông qua việc đổi thứ tự của tích phân. Ta có
+
+$$
+D = \{ ( x , y ) : ~ 0 \leq x \leq 2 , 0 \leq y \leq 4 - x ^ { 2 } \}
+$$
+
+có thể được viết lại dưới dạng
+
+$$
+D = \{ ( x , y ) : ~ 0 \leq y \leq 4 , 0 \leq x \leq \sqrt { 4 - y } \} .
+$$
+
+Khi đó
+
+$$
+I = \iint _ { D } { \frac { x e ^ { 2 y } } { 4 - y } } d x d y = \int _ { 0 } ^ { 4 } \left( \int { \frac { x e ^ { 2 y } } { 4 - y } } d x \right) \bigg|_{x=0}^{x=\sqrt{4-y}} d y
+$$
+
+$$
+= \int _ { 0 } ^ { 4 } \left( \frac { e ^ { 2 y } } { 4 - y } \cdot \frac { x ^ { 2 } } { 2 } \right) \bigg|_{x=0}^{x=\sqrt{4-y}} d y = \int _ { 0 } ^ { 4 } \left( \frac { e ^ { 2 y } } { 4 - y } \cdot \frac { (4-y)} { 2 } \right) d y
+$$
+
+$$
+= \int _ { 0 } ^ { 4 } \frac { 1 } { 2 } e ^ { 2 y } d y = \left[ \frac { e ^ { 2 y } } { 4 } \right]_{y=0}^{y=4} = \frac { e ^ { 8 } - 1 } { 4 } .
+$$
+
+2.2.5. Công thức đổi biến.
+
+Xét tích phân kép
+
+$$
+I = \iint _ { D } f ( x , y ) d x d y ,
+$$
+
+với hàm $f ( x , y )$ liên tục trên miền $D$. Giả sử phép đổi biến
+
+$$
+( x , y ) \to ( u , v ) : \quad \left\{ \begin{array} { l } { x = x ( u , v ) } \\ { y = y ( u , v ) , } \end{array} \right.
+$$
+
+thỏa mãn các giả thiết:
+
+i) Phép đổi biến trên là một song ánh từ $D ^ { \prime }$ vào miền $D$, hay $( x , y ) \in D \Leftrightarrow ( u , v ) \in D ^ { \prime }.$
+
+ii) Các hàm số $x ( u , v )$ và $y ( u , v )$ liên tục trên miền $D ^ { \prime }$ của hệ trục tọa độ $( O ^ { \prime } u v )$.
+
+iii) Định thức Jacobi
+
+$$
+J = \left| \begin{array} { l l } { x _ { u } ^ { \prime } } & { x _ { v } ^ { \prime } } \\ { y _ { u } ^ { \prime } } & { y _ { v } ^ { \prime } } \end{array} \right| \neq 0 \forall ( u , v ) \in D ^ { \prime } .
+$$
+
+Khi đó
+
+$$
+I = \iint _ { D } f ( x , y ) d x d y = \iint _ { D ^ { \prime } } f \big ( x ( u , v ) , y ( u , v ) \big ) | J | d u d v .
+$$
+
+Chứng minh. Thực hiện phép phân hoạch $P ^ { \prime }$ miền $D ^ { \prime }$ gồm các đường thẳng song song với các trục $O ^ { \prime } u$ và $O ^ { \prime } v$ thành các mảnh nhỏ $D _ { 1 } ^ { \prime } , D _ { 2 } ^ { \prime } , . . . , D _ { n } ^ { \prime }$ với độ dài phân hoạch $\Delta _ { P ^ { \prime } }$, chọn điểm tùy ý $( u _ { i } , v _ { i } ) \in D _ { i } ^ { \prime } \ \forall i = 1 , 2 , . . . , n$. Qua song ánh, phân hoạch $P ^ { \prime }$ thành phân hoạch $P$ của miền $D$ với độ dài phân hoạch $\Delta _ { P }$ và điểm $( u _ { i } , v _ { i } )$ thành điểm $( x _ { i } , y _ { i } ) \in D _ { i }$. Khi đó, theo định nghĩa ta có
+
+$$
+I = \iint _ { D } f ( x , y ) d x d y = \lim_{\Delta _ { P }  \to 0} \sum _ { i = 1 } ^ { n } f ( x _ { i } , y _ { i } ) S _ { D _ { i } },
+$$
+
+trong đó $\boldsymbol{S}_{D_i}$ là diện tích của miền $D_{i}$.
+
+Bây giờ, ta xét mối quan hệ giữa $\boldsymbol{S}_{D_i}$ và diện tích của miền $\boldsymbol{S}_{D_i^{\prime}}$. Không mất tính tổng quát, ta giả sử rằng $D_i^{\prime}$ được tạo bởi hình chữ nhật có 4 đỉnh $(a,b), (a+\Delta_u, b), (a+\Delta_u, b+\Delta_v), (a, b+\Delta_v)$. Qua song ánh, miền $D_i$ có 4 đỉnh tương ứng $(x_1, y_1), (x_2, y_2), (x_3, y_3), (x_4, y_4)$ hay
+
+Khi đọc,
+
+$$
+\left\{ \begin{array} { l l } { x _ { 2 } = x ( a + \Delta _ { u } , b ) } & { \left\{ x _ { 3 } = x ( a + \Delta _ { u } , b + \Delta _ { v } ) \quad \right. } \\ { y _ { 2 } = y ( a + \Delta _ { u } , b ) } & { \left. \begin{array} { l } { y _ { 3 } = y ( a + \Delta _ { u } , b + \Delta _ { v } ) } \\ { y _ { 3 } = y ( a + \Delta _ { u } , b + \Delta _ { v } ) } \end{array} \right. } \end{array} \right\} x _ { 4 } = x ( a , b + \Delta _ { v } )
+$$
+
+$$
+\begin{array} { l l } { \displaystyle \mathfrak { z } _ { 1 } = x ( a , b ) } & { \displaystyle y _ { 1 } = y ( a , b ) } \\ { \displaystyle \mathfrak { z } _ { 2 } \approx x ( a , b ) + \frac { \partial x } { \partial u } ( a , b ) \Delta _ { u } } & { \displaystyle y _ { 2 } = y ( a , b ) + \frac { \partial y } { \partial u } ( a , b ) \Delta _ { u } } \\ { \displaystyle \mathfrak { z } _ { 3 } \approx x ( a , b ) + \frac { \partial x } { \partial u } ( a , b ) \Delta _ { u } + \frac { \partial x } { \partial v } ( a , b ) \Delta _ { v } } & { \displaystyle y _ { 3 } = y ( a , b ) + \frac { \partial y } { \partial u } ( a , b ) \Delta _ { u } + \frac { \partial y } { \partial v } ( a , b ) \Delta _ { v } } \\ { \displaystyle \mathfrak { z } _ { 4 } \approx x ( a , b ) + \frac { \partial x } { \partial v } ( a , b ) \Delta _ { v } } & { \displaystyle y _ { 4 } = y ( a , b ) + \frac { \partial y } { \partial v } ( a , b ) \Delta _ { v } . } \end{array}
+$$
+
+$$
+\begin{array} { r l } { x _ { 2 } - x _ { 1 } \approx x _ { 3 } - x _ { 4 } \quad } & { x _ { 4 } - x _ { 1 } \approx x _ { 3 } - x _ { 2 } } \\ { y _ { 2 } - y _ { 1 } \approx y _ { 3 } - y _ { 4 } \quad } & { y _ { 4 } - y _ { 1 } \approx y _ { 3 } - y _ { 2 } . } \end{array}
+$$
+
+Diện tích của $D_{i}$ được tính xấp xỉ bằng trị tuyệt đối của
+
+$$
+\begin{array} { r }
+\left| 
+x_{2} - x_{1} \quad x_{3} - x_{2} 
+\right|
+= \left| 
+\frac{\partial x}{\partial u}(a, b) \quad \frac{\partial x}{\partial v}(a, b)
+\right| \Delta_{u} \Delta_{v} = J \Delta_{u} \Delta_{v}.
+\\
+\left|
+y_{2} - y_{1} \quad y_{3} - y_{2}
+\right|
+= \left| 
+\frac{\partial y}{\partial u}(a, b) \quad \frac{\partial y}{\partial v}(a, b)
+\right|
+\end{array}
+$$
+
+Như vậy $S_{D_{i}} = |J| S_{D'_{i}}$. Thay $\boldsymbol{S}_{D_{i}}$ vào tích phân $I$, ta nhận được
+
+$$
+\lim _{\Delta_{P} \to 0} \sum_{i=1}^{n} f(x_{i}, y_{i}) S_{D_{i}} = \lim _{\Delta_{P''} \to 0} \sum_{i=1}^{n} f\left( x(u_{i}, v_{i}), y(u_{i}, v_{i}) \right) |J| S_{D'_{i}} = \iint f(u, v) |J| d u
+$$
+
+Ví dụ 2.26. Tính tích phân
+
+$$
+I = \int _{D} \int x y dx dy,
+$$
+
+trong domain miền $D$ được giới hạn bởi các đường cong
+
+$$
+y = x , \ y = 2x , \ y^2 = x , \ y^2 = 3x.
+$$
+
+Bài giải: Đặt thấy rằng, miền $D$ có thể được viết đúng dưới dạng:
+
+$$
+D = \{ ( x , y ) : \ 0 < x \leq y \leq 2x , \ x \leq y^2 \leq 3x \} ,
+$$
+
+$$
+D = \{ ( x , y ) : 1 \leq \frac { y } { x } \leq 2 , 1 \leq \frac { y^2 } { x } \leq 3 \} .
+$$
+
+Khi đó, đặt
+
+$$
+\begin{array}{c}
+u = \frac { y^2 } { x } \quad \text{hay} \quad x = \frac { u } { v^2 } \\
+v = \frac { y } { x },
+\end{array} 
+$$
+
+Ta có các hàm số $x ( u , v ) , y ( u , v )$ thỏa mãn các giả thiết của công thức (2.3) với $D' = [ 1 , 3 ] \times [ 1 , 2 ]$ và $\begin{array} { r } { | J | = | \frac { u } { v^4 } | } \end{array}$.
+
+$$
+I = \int _ { 1 } ^ { 3 } ( \int \frac { u^3 dv } { v^7 } ) du = \frac { 105 } { 32 }.
+$$
+
+### Công thức đổi biến trong tọa độ cực.
+
+Trong mục này, ta xét một trường hợp đặc biệt của phương pháp đổi biến
+
+$$
+\left\{ 
+\begin{array} { l }
+x = r \cos \varphi \\
+y = r \sin \varphi .
+\end{array}
+\right.
+$$
+
+Định thức $J$ được xác định bởi
+
+$$
+J = | \frac { \partial x } { \partial r } ( r , \varphi )  \frac { \partial y } { \partial \varphi } ( r , \varphi ) - \frac { \partial y } { \partial r } ( r , \varphi )  \frac { \partial x } { \partial \varphi } ( r , \varphi ) | = | r \cos \varphi \quad -r \sin \varphi | = r.
+$$
+
+Ta biến đổi
+
+$$
+( x , y ) \in D \Leftrightarrow ( r , \varphi ) \in D' .
+$$
+
+Khi đó, ta có
+
+$$
+I = \int _ { D } \int \frac { d x d y } { \sqrt { 1 + x ^ { 2 } + y ^ { 2 } } } ,
+$$
+
+trong đố $D = \{ ( x , y ) : \ x \geq 0 , y \geq 0 , x ^ { 2 } + y ^ { 2 } \leq 1 \}$
+
+Bài giải: Chuyển sang hệ trục tọa độ cực
+
+$$
+\left\{
+\begin{array}{l}
+x = r \cos \varphi \\
+y = r \sin \varphi 
+\end{array} 
+\right.
+$$
+
+Khi đó
+
+$$
+\begin{array}{c}
+\left\{
+\begin{array}{ll}
+x \geq 0 & \\
+y \geq 0 & \\
+x ^ { 2 } + y ^ { 2 } \leq 1 
+\end{array} 
+\right.
+\Leftrightarrow
+\left\{
+\begin{array}{ll}
+\cos \varphi \geq 0 & \\
+\sin \varphi \geq 0 & \\
+0 \leq r \leq 1 
+\end{array} 
+\right.
+\left\{ 0 \leq \varphi \leq \frac { \pi } { 2 } \right.  
+\end{array}
+$$
+
+Theo công thức (2.4), ta có
+
+$$
+\int _ { D } \int \frac { d x d y } { \sqrt { 1 + x ^ { 2 } + y ^ { 2 } } } = \int _ { 0 } ^ { \frac { \pi } { 2 } } ( \int _ { 0 } ^ { 1 } \frac { r d r } { \sqrt { 1 + r ^ { 2 } } } ) d \varphi = \frac { \pi } { 2 } \int _ { 0 } ^ { 1 } \frac { r d r } { \sqrt { 1 + r ^ { 2 } } } = \frac { \pi } { 2 } \int _ { 0 } ^ { 1 } \frac { d ( r ^ { 2 } + 1 ) } { 2 \sqrt { 1 + r ^ { 2 } } } = \frac { \pi } { 2 } ( \sqrt { 1 + r ^ { 2 } } ) \bigg| _ { 0 } ^ { 1 } = \frac { \pi } { 2 } ( \sqrt { 2 } - 1 )
+$$
+
+· Tính thể tích.
+
+Thể tích của vật thể hình trụ tạo bởi mặt \( z = f(x, y) \geq 0 \forall (x, y) \in D \), liên tục trên miền \( D \) và các đường sinh song song với \( Oz \) được tính bằng công thức
+
+\[
+V = \int \displaylimits_{D} \int f(x, y) dx dy.
+\]
+
+Vi dụ 2.28. Tính thể tích của hình tạo bởi các mặt:
+
+\[
+\left\{ 
+\begin{array}{ll}
+z = x^2 + y \\
+y = x^2, \\
+y = 1, \\
+z = 0.
+\end{array} 
+\right.
+\]
+
+Bài giải: Theo giả thiết, ta xác định
+
+\[
+D = \{(x, y) : y = x^2, y = 1\}, \quad f(x, y) = x^2 + y.
+\]
+
+Theo công thức (2.5), ta có
+
+\[
+V = \int_{D} f(x, y) dx dy = \int_{0}^{1} dy \int_{-\sqrt{y}}^{\sqrt{y}} (x^2 + y) dx = \int_{0}^{1} 2 \left( \frac{1}{3} y^{\frac{3}{2}} + y^2 \sqrt{y} \right) dy = \frac{88}{105}.
+\]
+
+· Tính diện tích hình phẳng.
+
+Theo định nghĩa của tích phân, ta thấy rằng diện tích miền \( D \subset \mathbb{R}^2 \) được xác định bằng công thức
+
+\[
+S_D = \int \int dx dy.
+\]
+
+Vi dụ 2.29. Tính diện tích của miền \( D \) tạo bởi các đường cong:
+
+$$
+( D ) \left\{ \begin{array} { l l } { ( x - 1 ) ^ { 2 } + y ^ { 2 } = 1, } \\ { ( x - 2 ) ^ { 2 } + y ^ { 2 } = 4, } \\ { y = x, } \\ { y = 0. } \end{array} \right.
+$$
+
+![](images/ecdb3ff24e8b00b7d7c4e609bbf4675dce7b3958a8ced95b877109873e400120.jpg)  
+Hình 1: Hình vẽ của ví dụ 2.29
+
+Bài giải: Chuyển sang hệ trục tọa độ cực
+
+Để nhận thấy rằng $( x , y ) \in D$ khi và chỉ khi
+
+$$
+( r , \varphi ) \in \{ ( r , \varphi ) : 0 \leq \varphi \leq \frac { \pi } { 4 }, 2 \cos \varphi \leq r \leq 4 \cos \varphi \} .
+$$
+
+Khi đó, theo công thức đổi biến trong hệ tọa độ cực, ta có
+
+$$
+S _ { D } = \int \int d x d y = \int _ { 0 } ^ { \frac { \pi } { 4 } } d \varphi \int _ { 2 \cos \varphi } ^ { 4 \cos \varphi } r d r = 6 \int \cos ^ { 2 } \varphi d \varphi = \frac { 3 ( \pi + 2 ) } { 4 } .
+$$
+
+· Tính diện tích mặt cong.
+
+Như cách xây dựng định nghĩa của tích phân kép trên miền $D$ , diện tích của mặt cong $( S )$ được tính như sau
+
+Định lý 2.30. Cho mặt cong $( S ) : z = f ( x , y ) ( x , y ) \in D$ có các đạo hàm riêng $f _ { x } ^ { \prime }, f _ { y } ^ { \prime }$ tồn tại và liên tục trên miền $D$. Khi đó,
+
+$$
+d t ( S ) = \int _ { D } \int \sqrt { 1 + { f _ { x } ^ { \prime } } ^ { 2 } + { f _ { y } ^ { \prime } } ^ { 2 } } d x d y .
+$$
+
+Ví dụ 2.31. Cho $a > 0$ , tính diện tích của mặt cong
+
+Bài giải: Đặt $\begin{array} { r } { f ( x , y ) = \frac { x y } { a } } \end{array}$. Khi đó $\begin{array} { r } { f _ { x } ^ { \prime } ( x , y ) = \frac { y } { a } } \end{array}$, $\begin{array} { r } { f _ { y } ^ { \prime } ( x , y ) = \frac { x } { a } } \end{array}$. Theo định lý 2.30, diện tích mặt $(S)$ được tính như sau:
+
+$$
+d t ( S ) = \int \int \sqrt { 1 + f _ { x } ^ { \prime 2 } + f _ { y } ^ { \prime 2 } } d x d y = \int \int _ { D } \sqrt { 1 + { ( \frac { x } { a } ) } ^ { 2 } + { ( \frac { y } { a } ) } ^ { 2 } } d x d y .
+$$
+
+Đổi biến sang hệ tọa độ cực
+
+$$
+\left\{ { \begin{array} { l } { x = r \cos \varphi , } \\ { y = r \sin \varphi . } \end{array} } \right.
+$$
+
+Khi đó
+
+$$
+( x , y ) \in D \Leftrightarrow ( r , \varphi ) \in D _ { 0 } = \{ ( r , \varphi ) : \ 0 \leq r \leq a , 0 \leq \varphi \leq 2 \pi \} .
+$$
+
+Theo công thức đổi biến sang hệ tọa độ cực, ta có
+
+$$
+\begin{array} { l } { \displaystyle dt(S) = \frac{1}{a} \int \int \sqrt{a^2 + r^2} r dr d\varphi = \frac{1}{a} \int d\varphi \int \sqrt{a^2 + r^2} r dr = \frac{2\pi}{a} \int \sqrt{a^2 + r^2} r dr } \\ { \displaystyle \qquad = \frac{\pi}{a} \int (a^2 + r^2)^{\frac{1}{2}} d(a^2 + r^2) = \frac{3\pi}{2a} (a^2 + r^2)^{\frac{3}{2}} \Big|_0^a = \frac{3a^2\pi(2\sqrt{2} - 1)}{2}. } \end{array}
+$$
+
+· Ý nghĩa cơ học của tích phân kép.
+
+Cho bản mặt không đồng chất $D$ trong mặt phẳng $(Oxy)$ có khối lượng riêng $\rho(x, y)$ là một hàm số liên tục trên miền $D$. Khi đó:
+
+$+$ Khối lượng của bản mặt $D$ được xác định bởi
+
+$$
+m_D = \iint_{D} \rho(x, y) dx dy.
+$$
+
+$+$ Momen quán tính của bản mặt $D$ đối với trục $Ox$ là
+
+$$
+I_x = \iint_{D} y^2 \rho(x, y) dx dy.
+$$
+
+$+$ Momen quán tính của bản mặt $D$ đối với trục $Oy$ là
+
+$$
+I_y = \iint_{D} x^2 \rho(x, y) dx dy.
+$$
+
+$+$ Momen quán tính của bản mặt $D$ đối với trục gốc tọa độ $O$ là
+
+$$
+I_O = \iint_{D} (x^2 + y^2) \rho(x, y) dx dy.
+$$
+
+$+$ Toạ độ trong tâm $G ( x_{g}, y_{G} )$ được xác định bởi:
+
+$$
+\begin{array}{l}
+x_{G} = \frac{1}{m} \int \int x \rho(x, y) d x d y , \\
+y_{G} = \frac{1}{m} \int \int y \rho(x, y) d x d y . \\
+\qquad D
+\end{array}
+$$
+
+Ví dụ 2.32. Cho bản mặt
+
+$$
+D = \{(x, y): x^{2} + y^{2} \leq 1, x \geq 0, y \geq 0\}
+$$
+
+có khối lượng riêng $\rho(x, y) = \sqrt{x^{2} + y^{2}}$. Tính:
+
+i) Khối lượng riêng $m_{D}$
+
+ii) Toạ độ trong tâm của $D$
+
+iii) Momen quán tính của $D$ đối với các trục $Ox$, $Oy$ và điểm $O$：
+
+Bài giải: i) Khối lượng của bản mặt $D$ được xác định bởi công thức
+
+![](images/1ce9ba513877e74ce202815b3d9ce0bfdfc25042a3f1a13a41292d7111c8a5a5.jpg)  
+Hình 2: Hình vẽ của ví dụ 2.32
+
+$$
+m_{D} = \int \int_{D} \rho(x, y) d x d y = \int \int_{D} \sqrt{x^{2} + y^{2}} d x d y .
+$$
+
+Đổi biến sang hệ toạ độ cực
+
+$$
+\left\{
+\begin{array}{l}
+x = r \cos \varphi , \\
+y = r \sin \varphi .
+\end{array}
+\right.
+$$
+
+Khi đó
+
+$$
+(x, y) \in D \Leftrightarrow (r, \varphi) \in D_{0} = \{(r, \varphi): 0 \leq r \leq 1, 0 \leq \varphi \leq \frac{\pi}{2}\}.
+$$
+
+Theo công thức đổi biến sang hệ toạ độ cực, ta có
+
+$$
+m_{D} = \int \int r^{2} dr d\varphi = \int_{0}^{1} dr \int_{0}^{\frac{\pi}{2}} r^{2} d\varphi = \frac{\pi}{2} \int r^{2} dr = \frac{\pi}{6}.
+$$
+
+ii) Theo công thức tọa độ trong tâm $G (x_{g}, y_{G})$ được xác định bởi:
+
+$$
+x_{G} = \frac{1}{m} \iint x \rho(x, y) dx dy = \frac{6}{\pi} \iint x \sqrt{x^{2} + y^{2}} dx dy.
+$$
+
+Bằng cách đổi sang hệ tọa độ cực như i), ta có
+
+$$
+x_{G} = \frac{6}{\pi} \int \int r^{3} \cos \varphi dr d\varphi = \frac{3}{2\pi} \int \cos \varphi d\varphi = \frac{3}{2\pi} \sin \varphi \bigg|_{0}^{\frac{\pi}{2}} = \frac{3}{2\pi}.
+$$
+
+$$
+y_{G} = \frac{1}{m} \int_{D} y \rho(x, y) dx dy = \frac{3}{2\pi} \int_{0}^{\frac{\pi}{2}} \sin \varphi d\varphi = -\frac{3}{2\pi} \cos \varphi \Big|_{0}^{\frac{\pi}{2}} = \frac{3}{2\pi}.
+$$
+
+Như vậy, tọa độ trong tâm của bản mặt $D$ là $\begin{array}{r} G \left( \frac{3}{2\pi}, \frac{3}{2\pi} \right) \end{array}$.
+
+iii) Bằng cách áp dụng các công thức tính $I_{x}, I_{y}, I_{O}$ và sử dụng công thức đổi sang hệ trục tọa độ cực, ta có
+
+Momen quán tính của bản mặt $D$ đối với truc $O x$ là
+
+$$
+\begin{array} { l } { I _ { x } = \displaystyle \iint y ^ { 2 } \rho ( x , y ) d x d y = \displaystyle \iint y ^ { 2 } \sqrt { x ^ { 2 } + y ^ { 2 } } d x d y = \displaystyle \iint r ^ { 4 } \sin ^ { 2 } \varphi d r d \varphi } \\ { D } \\ { = \frac { \pi / 2 } { 5 } \displaystyle \int \sin ^ { 2 } \varphi d \varphi = \displaystyle \frac { 1 } { 10 } \displaystyle \int _ { 0 } ^ { \pi / 2 } ( 1 - \cos 2 \varphi ) d \varphi = \displaystyle \frac { 1 } { 10 } ( \varphi - \frac { 1 } { 2 } \sin 2 \varphi ) \Big | _ { 0 } ^ { \pi / 2 } = \displaystyle \frac { \pi } { 20 } . }
+\end{array}
+$$
+
+Bằng cách tính tương tự, ta có:
+
+$+$ Momen quán tính của bản mặt $D$ đối với trục $O y$ là
+
+$$
+I _ { y } = \iint _ { D } x ^ { 2 } \rho ( x , y ) d x d y = \frac { \pi } { 20 } .
+$$
+
+$+$ Momen quán tính của bản mặt $D$ đối với trục gốc tọa độ $O$ là
+
+$$
+I _ { O } = \iint _ { D } ( x ^ { 2 } + y ^ { 2 } ) \rho ( x , y ) d x d y = \frac { \pi } { 10 } .
+$$
+
+2.3. Tích phân ba.
+
+2.3.1. Định nghĩa.
+
+Cho hàm 3 biến số $f ( x , y , z )$ xác định trên miền khối $D \subseteq \mathbb{R} ^ { 3 }$ đồng và bị chặn.
+
+$+$ Phân hoạch $P$ khối $D$ thành các khối nhỏ $D _ { 1 } , D _ { 2 } , . . . , D _ { n }$. Ký hiệu $\Delta V _ { i }$ là thể tích của khối $D _ { i } \ (i = 1, 2, . . . , n)$ và đường kính $D _ { i }$ là đường kinh của khối $D _ { i }$ theo nghĩa
+
+$$
+\operatorname{diam} D_i = \sup \{| | u - v || : u, v \in D_i \}.
+$$
+
+Khi đó độ dài phân hoạch được xác định bởi
+
+$$
+\Delta_P = \max \{\operatorname{diam} D_1, \operatorname{diam} D_2, ..., \operatorname{diam} D_n \}.
+$$
+
+$^+$ Chọn một điểm bất kỳ $M_i (x_i, y_i, z_i) \in D_i, i = 1, 2, ..., n.$
+
+Khi đó, tổng
+
+$$
+\sigma_P = \sum_{i=1}^{n} f(M_i) \Delta_{D_i}
+$$
+
+được gọi là tổng tích phân bội $3$ của hàm $f(x, y, z)$ trên khối $D$. Nếu giới hạn
+
+$$
+I = \lim_{\Delta_P \to 0} \sigma_P
+$$
+
+tồn tại, không phụ thuộc vào phân hoạch $P$ và phép chọn điểm $M_i$, thì $I$ được gọi là tích phân bội $3$ của hàm số $f(x, y, z)$ trên miền khối $D$ và được ký hiệu bởi
+
+$$
+I = \int\underset{D}{\iiint} f(x, y, z) dx dy dz.
+$$
+
+Chú ý 2.33. Nếu hàm số $f(x, y, z)$ liên tục trên miền $D$ đồng và bị chặn trên Oxyz, thì tồn tại $I$ (hay ta còn nói hàm $f(x, y, z)$ khả tích trên $D$).
+
+2.3.2. Công thức tính.
+
+Nếu miền $D$ được cho bởi:
+
+$$
+D = \{(x, y, z) : ~ (x, y) \in D_0, \phi_1(x, y) \leq z \leq \phi_2(x, y)\}
+$$
+
+Khi đó
+
+$$
+\iiint_D f(x, y, z) dx dy dz = \iint dx dy \quad \int_{\phi_1(x, y)}^{\phi_2(x, y)} f(x, y, z) dz.
+$$
+
+Trong trường hợp đặc biệt: Nếu miền $D$ được cho bởi
+
+$$
+D = \{ (x, y, z) : a \leq x \leq b, \varphi_1(x) \leq y \leq \varphi_2(x), \phi_1(x, y) \leq z \leq \phi_2(x, y) \}
+$$
+
+Ta có
+
+$$
+\iiint_D f(x, y, z) dx dy dz = \int_a^b dx \int_{\varphi_1(x)}^{\varphi_2(x)} dy \int_{\phi_1(x, y)}^{\phi_2(x, y)} f(x, y, z) dz.
+$$
+
+Các công thức tương tự, khi giao hoán vị trí của $x, y, z$:
+
+Ví dụ 2.34. Tính
+
+$$
+I = \int\displaylimits_D \iint (2z^3 + z) dx dy dz,
+$$
+
+trong domain $D = \{ (x, y, z) : 0 \leq z \leq \sqrt{4 - x^2 - y^2} \}$.
+
+Bài giải: Đặt $D_0$ là hình chiếu của $D$ trên Oxy. Khi đó
+
+![](images/9092a481c2ec969e23226902a047693436cf99357b5975bc00dd19bcf0acba20.jpg)
+Hình 3: Hình vẽ của ví dụ 2.34
+
+$$
+D_0 = \{ (x, y) : x^2 + y^2 \leq 4 \}.
+$$
+
+Theo công thức (2.7), ta có
+
+$$
+I = \iint_{D_0} dx dy \int_0^{\sqrt{4 - x^2 - y^2}} (2z^3 + z) dz = \left.\iint\left(\frac{1}{2}z^4 + \frac{1}{2}z^2\right)\right|_{0}^{\sqrt{4 - x^2 - y^2}} dx dy
+$$
+
+$$
+= \frac{1}{2} \iint_{D_0} \left( (4 - x^2 - y^2)^2 + 4 - x^2 - y^2 \right) dx dy.
+$$
+
+Đổi biến sang hệ tọa độ cực
+
+$$
+\left\{ 
+\begin{array} { l }
+x = r \cos \varphi, \\
+y = r \sin \varphi.
+\end{array}
+\right.
+$$
+
+Khi đó
+
+$$
+( x , y ) \in D _ { 0 } \Leftrightarrow ( r , \varphi ) \in D _ { 1 } = \{ ( r , \varphi ) : 0 \leq r \leq 2, 0 \leq \varphi \leq 2\pi \}.
+$$
+
+Theo công thức đổi biến sang hệ tọa độ cực, ta có
+
+$$
+I = \frac { 1 } { 2 } \int \int _ { D _ { 1 } } \left( ( 4 - r ^ { 2 } ) ^ { 2 } + 4 - r ^ { 2 } \right) r d r d \varphi = \pi \int _ { 0 } ^ { 2 } ( r ^ { 5 } - 9 r ^ { 3 } + 10 r ) d r
+$$
+
+$$
+= \pi \left( \frac { 1 } { 6 } r ^ { 6 } - \frac { 9 } { 4 } r ^ { 4 } + 10 r ^ { 2 } \right) \Big | _ { 0 } ^ { 2 } = \frac { 44\pi } { 3 }.
+$$
+
+2.3.3 Phương pháp đổi biến.
+
+Vấn đề đặt ra là: Nếu ta đổi biến từ $( x , y , z ) \to ( u , v , w )$ bằng công thức
+
+$$
+\left\{ 
+\begin{array} { l }
+x = x ( u , v , w ), \\
+y = y ( u , v , w ), \\
+z = z ( u , v , w ).
+\end{array}
+\right.
+$$
+
+thì tích phân ba
+
+$$
+I = \int \int \int f ( x , y , z ) d x d y d z
+$$
+
+được thay đổi như thế nào? Sự thay đổi của $I$ được khảng định bởi định lý dưới đây.
+
+Định lý 2.35. Nếu các hàm số $x, y, z$ theo các biến $( u , v , w )$ thỏa mãn các điều kiện:
+
+i) Tồn tại một song ánh $G : ( u , v , w ) \in D _ { 0 } \mapsto ( x , y , z ) \in D.$
+
+ii) Các hàm số $x, y, z$ liên tục trên tập mở chật $D _ { 0 }$.
+
+iii) Định thức Jacobi
+
+$$
+J = \left| \begin{array} { c c c } { x _ { u } ^ { \prime } } & { x _ { v } ^ { \prime } } & { x _ { w } ^ { \prime } } \\ { y _ { u } ^ { \prime } } & { y _ { v } ^ { \prime } } & { y _ { w } ^ { \prime } } \\ { z _ { u } ^ { \prime } } & { z _ { v } ^ { \prime } } & { z _ { w } ^ { \prime } } \end{array} \right| \neq 0 ~ \forall ( u , v , w ) \in D _ { 0 } .
+$$
+
+Khi đổi biến
+
+$$
+\begin{array} { c } { I = \displaystyle \int \int \int f ( x , y , z ) | J | d u d v d w , } \\ { D _ { 0 } } \\ { x = x ( u , v , w ) , y = y ( u , v , w ) , z = z ( u , v , w ) . } \end{array}
+$$
+
+Chú ý 2.36: Trong trường hợp đổi biến đặc biệt $( u , v , w ) \equiv ( r , \varphi , z )$ và
+
+$$
+\left\{ \begin{array} { l l } { x = r \cos \varphi } \\ { y = r \sin \varphi } \\ { z = z, } \end{array} \right.
+$$
+
+(con gọi là công thức đổi biến từ hệ tọa độ vuông góc sang hệ tọa độ trụ). Khi đó, ta được dạng tính được $J = r$. Do vậy, ta có công thức
+
+$$
+\iiint _ { D } f ( x , y , z ) d x d y d z = \iiint f ( r \cos \varphi , r \sin \varphi , z ) r d r d \varphi d z .
+$$
+
+$$
+D = \{ ( x , y , z ) : 4 \geq z \geq \sqrt { x ^ { 2 } + y ^ { 2 } } \}
+$$
+
+Tính tích phân
+
+$$
+I = \int \int _ { D } \int ( 3 x ^ { 2 } + 3 y ^ { 2 } + 2 z ^ { 2 } ) d x d y d z .
+$$
+
+Bài giải: Sử dụng công thức đổi biến sang hệ tọa độ trụ
+
+$$
+\left\{ \begin{array} { l l } { x = r \cos \varphi } \\ { y = r \sin \varphi } \\ { z = z . } \end{array} \right.
+$$
+
+Ta có
+
+$$
+( x , y , z ) \in D \Leftrightarrow ( r , \varphi , z ) \in \{ ( r , \varphi , z ) : 0 \leq r \leq 2 , 0 \leq \varphi \leq 2 \pi , r \leq z \leq 4 \} .
+$$
+
+Do đó
+
+$$
+I = \int \displaylimits _ { 0 } ^ { 2 } d r \int \displaylimits _ { 0 } ^ { 2 \pi } d \varphi \int \displaylimits _ { r } ^ { 4 } ( 3 r ^ { 2 } + 2 z ^ { 2 } ) r d z = 2 \pi \int \displaylimits _ { 0 } ^ { 2 } d r \int \displaylimits _ { r } ^ { 4 } ( 3 r ^ { 2 } + 2 z ^ { 2 } ) r d z
+$$
+
+$$
+= 2 \pi \int _ { 0 } ^ { 2 } \left( 3 r ^ { 3 } z + \frac{2}{3} r z ^ { 3 } \right) \biggl| _ { r } ^ { 4 } d r = 2 \pi \int _ { 0 } ^ { 2 } \left( - \frac{11}{3} r ^ { 4 } + 6 r ^ { 3 } + \frac{16 r}{3} \right) d r = \frac{336 \pi}{15} .
+$$
+
+Chú ý 2.38. Trong trường hợp đổi biến đặc biệt $( u , v , w ) \equiv ( r , \varphi , \theta )$ và
+
+$$
+\left\{ \begin{array} { l l } { x = r \sin \varphi \cos \theta } \\ { y = r \sin \varphi \sin \theta } \\ { z = r \cos \varphi , } \end{array} \right.
+$$
+
+(còn gọi là công thức đổi biến từ hệ tọa độ笛式到坐标系). 当前内容是关于数学中的坐标变换和积分计算，已经按照要求纠正了越南语的拼写错误，并保持了原有的公式和结构。如果有进一步需要翻译或解释的地方，请告知。
+
+$$
+D = \{ ( x , y , z ) : \ 0 \leq z \leq \sqrt { 4 - x ^ { 2 } - y ^ { 2 } } \}
+$$
+
+Tính tích phân
+
+$$
+I = \int \int _ { D } \int ( x ^ { 2 } + y ^ { 2 } + 2 z ^ { 2 } ) d x d y d z .
+$$
+
+Bài giải: Sử dụng công thức đổi biến sang hệ tọa độ cầu
+
+$$
+\left\{ 
+\begin{array} { l l }
+x = r \sin \varphi \cos \theta \\
+y = r \sin \varphi \sin \theta \\
+z = r \cos \varphi ,
+\end{array}
+\right.
+$$
+
+$$
+( x , y , z ) \in D \Leftrightarrow ( r , \varphi , \theta ) \in \{ ( r , \varphi , \theta ) : \ 0 \leq \varphi \leq \frac { \pi } { 2 } , 0 \leq \theta \leq \frac { \pi } { 2 } , 0 \leq r \leq 2 \} .
+$$
+
+Do vậy
+
+$$
+\begin{array} { r l }
+& { I = \displaystyle \frac {\hat{\lambda}} {\hat{\mu}_0} \int_0^\infty \hat{\mu} \int_{\mathbb{R}^2}^\infty \hat{\mu}(x^0) \hat{\psi}(x^0) dx^0 e^{-i \left( 2\sigma^2\nu \log^2(\hat{\psi}^1) \right) \cdot \| x_0 \hat{\psi} \|_{\mathbb{R}^2}^2 } }
+\\ & { \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad }
+\end{array}
+$$
+
+d
+
+\begin{array}{l}
+\quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \\
+\quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \\
+\quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \\
+\quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \\
+\quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \\
+\quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad
+\end{array}

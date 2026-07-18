@@ -9,6 +9,9 @@ class ChatRequest(BaseModel):
     chapter: str = Field(..., description="The unique identifier for the specific chapter or learning module. Use lowercase snake_case to match data file naming conventions (e.g., 'chuong_1', 'bai_hoc_2')")
     # tránh rỗng khi đưa vào dtb
     message: str = Field(..., min_length=1, description="The actual query or question provided by the student")
+    # Tính cách AI được cấu hình bởi giảng viên cho từng khóa học (tùy chọn)
+    # Nếu có → override file assignment_persona.txt tĩnh
+    ai_persona: str | None = Field(default=None, description="Custom AI persona configured by teacher for this course")
 
 # Schema định dạng dữ liệu ĐẦU RA (Backend -> Frontend)
 class ChatResponse(BaseModel):

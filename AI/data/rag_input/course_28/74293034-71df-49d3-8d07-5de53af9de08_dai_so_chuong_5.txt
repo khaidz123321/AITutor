@@ -1,0 +1,2445 @@
+# CHƯƠNG 5 ÁNH XA TUYẾN TÍNH
+
+Ánh xạ tuyến tính (phép biến đổi tuyến tính) từ không gian véc tơ vào không gian véc tơ là một ánh xạ bảo toàn phép cộng véc tơ và phép nhân một số với véc tơ. Ánh xạ tuyến tính là một nội dung chính của đại số tuyến tính. Một ánh xạ tuyến tính từ một không gian véc tơ vào chính không gian đó được gọi là tự đồng cấu tuyến tính (gọi tắt là tự đồng cấu) hay toàn ánh tuyến tính. Nhà toán học Peano (Italia) là người đầu tiên đưa ra khái niệm ánh xạ tuyến tính (1888).
+
+Ánh xạ tuyến tính và đơn ánh được gọi là đơn cấu, toàn ánh được gọi là toàn cấu, song ánh được gọi là đẳng cấu. Nếu tồn tại một đẳng cấu từ không gian này lên không gian kia thì ta nói hai không gian đó đẳng cấu. Có những tiêu chuẩn riêng để nhận biết một ánh xạ tuyến tính là toàn cấu, đơn cấu hay đẳng cấu. Một ánh xạ tuyến tính là toàn cấu khi và chỉ khi hạng của nó bằng chiều của không gian đích. Một ánh xạ tuyến tính là đơn cấu khi và chỉ khi nhân của nó chỉ gồm véc tơ khác không. Ánh xạ tuyến tính từ một không gian véc tơ vào một không gian véc tơ cùng chiều là toàn cấu khi và chỉ khi là đơn cấu (do đó là đẳng cấu), điều này cũng giống như ánh xạ giữa hai tập hợp hữu hạn có cùng số phần tử.
+
+Một ánh xạ tuyến tính hoàn toàn được xác định bằng ảnh của cơ sở bất kỳ qua ánh xạ này, vì vậy để chứng minh một ánh xạ tuyến tính thỏa mãn điều kiện nào đó ta chỉ cần kiểm tra thỏa mãn điều kiện đó trên một cơ sở. Chẳng hạn, khi đã cho cơ sở $\mathcal{B} = \left\{ e_1, . . . , e_n \right\}$ của $V$ và cơ sở ${\mathcal{B}}'$ của $W$, thì ánh xạ tuyến tính $f : V \to W$ hoàn toàn được xác định bằng ma trận của hệ véc tơ $\left\{ f(e_1), . . . , f(e_n) \right\}$ viết trong cơ sở ${\mathcal{B}}'$. Điều này giải thích tại sao đại số tuyến tính thường được xem là lý thuyết ma trận. Ma trận của tổng hai ánh xạ tuyến tính bằng tổng hai ma trận, ma trận của tích một số với một ánh xạ tuyến tính bằng tích của số đó với ma trận xác định ánh xạ tuyến tính, ma trận của hợp hai ánh xạ tuyến tính bằng tích hai ma trận của chúng. Nói cách khác, tương ứng giữa ánh xạ tuyến tính và ma trận của nó là một dạng cấu bảo phép cộng, phép nhân một số với ma trận và phép nhân hai ma trận. Hạng của ánh xạ tuyến tính bằng hạng của ma trận của nó. Ma trận của một ma trận đồng dạng trong hai cơ sở khác nhau là đồng dạng. Chính vì lý do này nên bài toán về ma trận có thể giải quyết bằng phương pháp ánh xạ tuyến tính và ngược lại.
+
+Công thức xác định ảnh của một ánh xạ tuyến tính có biểu thức là một hệ phương trình tuyến tính. Tìm véc tơ thuộc không gian ảnh tương ứng với tìm điều kiện của vé để hệ phương trình tuyến tính có nghiệm. Nhân của ánh xạ tuyến tính là không gian nghiệm của hệ phương trình tuyến tính thuận nhất tương ứng với ánh xạ đó.
+
+Một bài toán quan trọng của lý thuyết ma trận là chéo hóa ma trận, đó là tìm một ma trận đồng dạng của ma trận cho trước mà ma trận đồng dạng này có các phần tử không trên đường chéo bằng không. Vấn đề này tương đương với việc tìm một cơ sở gồm các véc tơ riêng của tu động cấu xác định bởi ma trận đã cho. Thuật toán chéo hóa sẽ giúp học viên giải quyết được bài toán dạng này. Bài toán chéo hóa ma trận có rất nhiều ứng dụng. Bài toán chéo hóa trực giao ma trận được xét trong chương 6.
+
+# 5.1. KHAI NIỆM ÁNH XA TUYẾN TÍNH 5.1.1. Định nghĩa và ví dụ
+
+Định nghĩa 5.1: Ánh xạ $f$ từ không gian véc tơ $V$ vào không gian $W$ thỏa mãn: với mọi $u, \nu \in V$, với mọi $\alpha \in \mathbb{R}$,
+
+$$
+\left\{
+\begin{array}{c}
+f(u + \nu) = f(u) + f(\nu) \\
+f(\alpha u) = \alpha f(u)
+\end{array}
+\right.
+$$
+
+được gọi là ánh xạ tuyến tính (động cáu tuyến tính hay gọi tắt là động cáu) từ $V$ vào $W$.
+
+Khi $V = W$ thì $f$ được gọi là tự đồng cấu.
+
+Ví dụ 5.1: Xét các ánh xạ sau:
+
+1) Ánh xạ không $0 : V \to W$
+
+$$
+u \mapsto 0(u) = \mathbf{0}
+$$
+
+2) Phép biến đổi đồng nhất (20 $\mathbf { I d } _ { V } : V \to V$
+
+$$
+u \mapsto \operatorname { I d } _ { V } ( u ) = u
+$$
+
+3) Phép vị thuần tỉ số $k \in \mathbb { R }$, $f : V \to V$
+
+$$
+u \mapsto f ( u ) = k u
+$$
+
+4) Phép tịnh tiến theo véc-tơ $\nu _ { 0 } \in V, f : V \to V$
+$$
+u \mapsto u + \nu _ { 0 }
+$$
+
+5) Cho ma trận $A = \left[ a _ { i j } \right] _ { m \times n }$, để kiểm tra ô hàng cột
+
+$$
+A \left( \alpha \left[ \begin{array} { c } { x _ { 1 } } \\ { \vdots } \\ { x _ { n } } \end{array} \right] + \beta \left[ \begin{array} { c } { x _ { 1 } ^ { \prime } } \\ { \vdots } \\ { x _ { n } ^ { \prime } } \end{array} \right] \right) = \alpha A \left[ \begin{array} { c } { x _ { 1 } } \\ { \vdots } \\ { x _ { n } } \end{array} \right] + \beta A \left[ \begin{array} { c } { x _ { 1 } ^ { \prime } } \\ { \vdots } \\ { x _ { n } ^ { \prime } } \end{array} \right].
+$$
+
+Đối đa tuýng ứng $\cdot f \colon \mathbb { R } ^ { n } \to \mathbb { R } ^ { m }$ (20
+
+$$
+( x _ { 1 } , . . . , x _ { n } ) \mapsto f ( x _ { 1 } , . . . , x _ { n } ) = ( y _ { 1 } , . . . , y _ { m } )
+$$
+
+xác định bởi
+
+$$
+\left[ \begin{array} { c } { y _ { 1 } } \\ { \vdots } \\ { y _ { m } } \end{array} \right] = A \left[ \begin{array} { c } { x _ { 1 } } \\ { \vdots } \\ { x _ { n } } \end{array} \right]
+$$
+
+Hoặc
+
+$$
+\left\{ \begin{array} { l l } { y _ { 1 } = a _ { 1 1 } x _ { 1 } + a _ { 1 2 } x _ { 2 } + \dots + a _ { 1 n } x _ { n } } \\ { \dots \dots \dots \dots \dots \dots \dots \dots \dots \dots \dots \dots \dots \dots \dots \dots \dots } \\ { y _ { m } = a _ { m 1 } x _ { 1 } + a _ { m 2 } x _ { 2 } + \dots + a _ { m n } x _ { n } } \end{array} \right.
+$$
+
+là một ảnh xạ tuyến tính.
+
+Ngược lại ta có thể chứng minh được (xem mục 5.4) mọi ảnh xạ tuyến tính từ $\mathbb{R}^n$ vào $\mathbb{R}^m$ đều có dạng như trên.
+
+Chẳng hạn $f : \mathbb{R}^3 \to \mathbb{R}^2$ có công thức xác định ảnh
+
+nhưng $f(x, y, z) = (2x^2 - 3y, 4x + y + 3z)$
+
+$f(x, y, z) = (2\sqrt{x} - 3y, 4x + y + 3z),$ 
+
+$f(x, y, z) = (2x - 3y + 6, 4x + y + 3z)$ không phải là ảnh xạ tuyến tính.
+
+Phép quay $\sec \theta, f : \mathbb{R}^2 \to \mathbb{R}^2$
+
+$$
+(x, y) \mapsto f(x, y) = (x\cos \theta - y\sin \theta, x\sin \theta + y\cos \theta)
+$$
+
+Thỏa mãn công thức (5.2) do đó là tự đồng cấu.
+
+Ảnh xạ 1), 2), 3), 5), 6) là ảnh xạ tuyến tính.
+2), 3), 6) là tự đồng cấu.
+4) không phải là ảnh xạ tuyến tính nếu $\nu_0 \neq \mathbf{0}$:
+
+# 5.1.2. Các tính chất
+
+Định lý 5.1: Ảnh xạ $f : V \to W$ là ảnh xạ tuyến tính khi và chỉ khi:
+
+$$
+\forall u , \nu \in V , \forall \alpha , \beta \in \mathbb{R} : \ f (\alpha u + \beta \nu) = \alpha f(u) + \beta f(\nu)
+$$
+
+Chứng minh: Với mỗi $u, \nu \in V$, với mọi $\alpha, \beta \in \mathbb{R}$ ta chứng minh điều kiện (5.1) tương đương điều kiện (5.3).
+
+$$
+\begin{array}{ll}
+{(5.1) \Rightarrow (5.3):} & {f(\alpha u + \beta \nu) = f(\alpha u) + f(\beta \nu) = \alpha f(u) + \beta f(\nu).} \\
+{(5.3) \Rightarrow (5.1):} & {\left\{ \begin{array}{ll}
+{f(u + \nu) = f(1u) + f(1\nu) = 1f(u) + 1f(\nu) = f(u) + f(\nu)} \\
+{f(\alpha u) = f(\alpha u + 0\nu) = \alpha f(u) + 0f(\nu) = \alpha f(u).}
+\end{array} \right. }
+\end{array}
+$$
+
+Định lý 5.2: Nếu $f : V \to W$ là ánh xạ tuyến tính thì
+
+(i) $f({\bf 0}) = {\bf 0}.$
+
+(ii) Với mọi $\nu \in V : f(-\nu) = -f(\nu)$，
+
+$$
+f \left( \sum_{i=1}^{n} \alpha_i \nu_i \right) = \sum_{i=1}^{n} \alpha_i f(\nu_i), \ \forall \alpha_1, ..., \alpha_n \in \mathbb{R}, \forall \nu_1, ..., \nu_n \in V.
+$$
+
+Chứng minh: (i) $f({\bf 0}) = f(0 \cdot {\bf 0}) = 0 f({\bf 0}) = {\bf 0}$：
+
+$$
+f(\nu) + f(-\nu) = f(\nu + (-\nu)) = f({\bf 0}) = {\bf 0} \Longrightarrow f(-\nu) = -f(\nu).
+$$
+
+(i) $\mathrm{D}émonstración$ bằng cách quy nạp theo $n$
+
+Nhận xét 5.1: Cho $f : V \to W$ là một ánh xạ tuyến tính, $\mathcal{B} = \left\{ e_{1}, . . . , e_{n} \right\}$ là một cơ sở của $V$, khi đó mọi $u \in V : u = x_{1}e_{1} + . . . + x_{n}e_{n}$. Theo Định lý 5.2 ta có
+
+$$
+f(u) = f(x_{1}e_{1} + . . . + x_{n}e_{n}) = x_{1}f(e_{1}) + . . . + x_{n}f(e_{n}).
+$$
+
+Vì vậy ánh xạ tuyến tính $f$ hoàn toàn được xác định bởi $\left\{ f(e_{1}), . . . , f(e_{n}) \right\}$, là ảnh của cơ sở $\mathcal{B}$ qua $f$. Điều này được khẳng định trong định lý và hệ quả sau.
+
+Định lý 5.3: Mọi ánh xạ tuyến tính từ $V$ vào $W$ hoàn toàn được xác định bởi ảnh của một cơ sở của $V$; nghĩa là với cơ sở $\mathcal{B} = \left\{ e_{1}, . . . , e_{n} \right\}$ cho trước của $V$, khi đó với mọi hệ vector $u_{1}, . . . , u_{n} \in W$ tồn tại duy nhất ánh xạ tuyến tính $f : V \to W$ thỏa mãn $f(e_{i}) = u_{i}$, $i = 1, . . . , n$:
+
+$$
+\forall \{ e_{1}, . . . , e_{n} \} \text{ cơ sở của } V, \forall u_{1}, . . . , u_{n} \in W, \exists ! f : V \to W : f(e_{i}) = u_{i}, i = 1, . . . , n.
+$$
+
+Chứng minh:
+
+*) Tồn tại: Với mỗi $\nu \in V$, giả sử $(x_1, . . . , x_n)$ là tọa độ $\hat{\mathbf{d}}\hat{\mathbf{0}}$ của $\nu$ trong cơ sở $\mathcal{B}$, nghĩa là $\nu = x_1 e_1 + . . . + x_n e_n$. Khi đó $f(\nu) = x_1 u_1 + . . . + x_n u_n \in W.$
+
+Ta có thể kiểm chứng được rằng tương ứng $\nu \mapsto f(\nu)$ xác định như trên là một ánh xạ tuyến tính thỏa mãn $f(e_i) = u_i$, với mọi $i = 1, . . . , n$:
+
+*) Duy nhất: Giả sử $g : V \to W$ là ánh xạ tuyến tính sao cho $g(e_i) = u_i$, với mọi $i = 1, . . . , n$. Khi đó, với bất kỳ $\nu \in V$, $\nu = x_1 e_1 + . . . + x_n e_n$, ta có:
+$$
+g(\nu) = g(x_1 e_1 + . . . + x_n e_n) = x_1 g(e_1) + . . . + x_n g(e_n) = x_1 u_1 + . . . + x_n u_n = f(\nu).
+$$
+Vậy $g = f$.
+
+Hệ quả 5.4: $f, g : V \to W$ là hai ánh xạ tuyến tính. $\mathcal{B} = \left\{ e_1, . . . , e_n \right\}$ là một cơ sở của $V$. Khi đó
+$$
+f = g \Leftrightarrow f(e_i) = g(e_i); \forall i = 1, . . . , n.
+$$
+
+# 5.1.3. Các phép toán của các ánh xạ tuyến tính
+
+## 5.1.3.1 Hom(V,W)
+
+Cho hai không gian véc tơ V, W. Tập các ánh xạ tuyến tính từ V vào W được ký hiệu là ${\mathrm{Hom}}(V, W)$ (homomorphism).
+
+Với $f, g \in {\mathrm{Hom}}(V, W)$,
+
+Tương ứng: $V \to W$
+
+$$
+\nu \mapsto f(\nu) + g(\nu)
+$$
+
+là một ánh xạ tuyến tính, được ký hiệu là $f + g$ và gọi là tổng của $f$ và $g$:
+
+Tương tự, với $\boldsymbol{k} \in \mathbb{R}$,
+
+tương ứng: $V \to W$
+
+$$
+\nu \mapsto k f(\nu)
+$$
+
+(5.7)
+
+là ánh xạ tuyến tính được ký hiệu là $kf$.
+
+Vậy ta đã xác định hai phép toán: cộng hai ánh xạ tuyến tính, nhân một số thực với ánh xạ tuyến tính. Với hai phép toán này thì $(\mathrm{Hom}(V, W), +, \cdot)$ có cấu trúc không gian véc tơ và
+
+$$
+\dim \operatorname{Hom}(V, W) = \dim V \cdot \dim W.
+$$
+
+Ví dụ 5.2: Cho hai ánh xạ tuyến tính $f, g : \mathbb{R}^3 \to \mathbb{R}^2$ có cong như sau:
+
+$$
+\begin{array}{rl}
+& f(x, y, z) = (3x - 5y + 2z, 4x + y - 6z), \\
+& g(x, y, z) = (2x + 6y - 7z, x - 5z), \\
+& 3f(x, y, z) = (9x - 15y + 6z, 12x + 3y - 18z), \\
+& 2g(x, y, z) = (4x + 12y - 14z, 2x - 10z), \\
+& (3f - 2g)(x, y, z) = (5x - 27y + 20z, 10x + 3y - 8z).
+\end{array}
+$$
+
+# 5.1.3.2. EndV
+
+Gia sư cho ánh xạ $f : V \to V'$ và $g : V' \to V''$ là hai ánh xạ tuyến tính. Có thể chứng minh được rằng ánh xạ hợp $g \circ f : V \to V''$ cũng là một ánh xạ tuyến tính.
+
+Ký hiệu tập các tự đồng cấu của $V$ là End$(V)$ (endomorphism).
+
+Với hai phép toán cộng và hợp ánh xạ $(\text{End} V, +, \circ)$ có cấu trúc đại số không giao hoán, có đơn vị, không nguyên.
+
+Ngoài ra với hai phép toán (5.6), (5.7) thì $\left(\text{End} V, +, \cdot\right)$ còn là một không gian véc tơ.
+
+Vậy End$(V)$ vừa có cấu trúc đại số, vừa có cấu trúc không gian véc tơ.
+
+Cho $f \in \text{End}(V)$ và $p(t) = a_0 + \cdots + a_n t^n$ là một đa thức bậc $n$, ta ký hiệu
+
+$$
+p(f) = a_0 \mathrm{Id}_V + \cdots + a_n f^n ; \quad \text{trong đó} \quad f^0 = \mathrm{Id}_V, f^1 = f, f^n = \underbrace{f \circ \cdots \circ f}_{n \text{lần}}.
+$$
+
+Vi dụ 5.3: Cho ánh xạ tuyến tính $f : \mathbb{R}^2 \to \mathbb{R}^2$ xác định như sau:
+
+$$
+f(x, y) = (3x - 5y, 4x + y).
+$$
+
+a) $f^2(x, y) = f \circ f(x, y) = (-11x - 20y, 16x - 19y)$  
+b) Xét đa thức $p(t) = 50 - 9t + 2t^2$
+
+$$
+\begin{array} { r l }
+& { p ( f ) ( x , y ) = \Bigl ( 50 \operatorname { Id }_{V} - 9 f + 2 f ^ { 2 } \Bigr ) ( x , y ) = 50 ( x , y ) - 9 f ( x , y ) + 2 f ^ { 2 } ( x , y ) } \\
+& { \qquad = ( x + 5 y , - 4 x + 3 y ) . }
+\end{array}
+$$
+
+# 5.2. NHÂN VÀ ẢNH CỦA ẢNH XẠ TIẾN HÌNH
+
+Định lý 5.5: Giả sử $f : V \to W$ là ảnh xạ tuyến tính, khi đó:
+
+(i) Nếu $V_1$ là không gian con của $V$ thì $f(V_1)$ là không gian con của $W$. Nếu $S$ là một hệ sinh của $V_1$ thì $f(S)$ là một hệ sinh của $f(V_1).$ Do đó $\dim f(V_1) \leq \dim V_1$
+
+(ii) Nếu $W_1$ là không gian con của $W$ thì $f^{-1}(W_1)$ là không gian con của $V$. Ngoài ra, nếu $W_1 \subset f(V)$ thì $\dim W_1 \leq \dim f^{-1}(W_1).$
+
+# Chứng minh:
+
+(i) $\bullet$ Với mỗi $u_1, u_2 \in f(V_1)$ tồn tại $\nu_1, \nu_2 \in V_1$ sao cho $u_1 = f(\nu_1), u_2 = f(\nu_2):$ Do đó với mỗi $\alpha, \beta \in \mathbb{R},$
+
+$$
+\alpha u_1 + \beta u_2 = \alpha f(\nu_1) + \beta f(\nu_2) = f(\alpha \nu_1 + \beta \nu_2) \in f(V_1).
+$$
+
+· Với mọi $u \in f(V_1)$, tồn tại $\nu \in V_1$ sao cho $f(\nu) = u$:  
+Giả sử $\{e_1, . . . , e_n\}$ là một hệ sinh của $V_1$, khi đó: $\nu = x_1\nu_1 + . . . + x_n\nu_n \Rightarrow u = f(\nu) = f(x_1e_1 + . . . + x_ne_n) = x_1f(e_1) + . . . + x_nf(e_n)$  
+$\implies \{f(e_1), . . . , f(e_n)\}$ là một hệ sinh của $f(V_1)$:  
+Điều này suy ra $\dim f(V_1) \leq \dim V_1$:  
+
+$$
+f(\alpha\nu_1 + \beta\nu_2) = \alpha f(\nu_1) + \beta f(\nu_2) \in W_1 \Rightarrow \alpha\nu_1 + \beta\nu_2 \in f^{-1}(W_1).
+$$
+
+· Giả sử $\{u_1, . . . , u_n\}$ là một hệ độc lập tuyến tính của $W_1$. Theo điều kiện $W_1 \subset f(V)$ suy ra tồn tại $\nu_1, . . . , \nu_n$ sao cho $f(\nu_i) = u_i$:  
+
+Rõ ràng $\{\nu_1, . . . , \nu_n\} \subset f^{-1}(W_1)$ vì dễ dàng chứng minh được $\{\nu_1, . . . , \nu_n\}$ cũng độc lập tuyến tính.
+
+$$
+\mathrm{Vậy dim } W_1 \leq \mathrm{dim } f^{-1}(W_1).
+$$
+
+Định nghĩa 5.2: Với ánh xạ tuyến tính $f : V \to W$ ta ký hiệu và định nghĩa
+
+$$
+\mathrm{Ker} \: f = f^{-1} \big\{\mathbf{0}\big\}, \quad \mathrm{Im} f = f(V)
+$$
+
+là hạt nhân và là ánh xạ $f$ ·
+
+${\mathrm{Vậy Ker}} f = \left\{\nu \in V { \big| } f(\nu) = \mathbf{0}\right\}$ là một không gian vector con của $V$ ：
+
+$$
+\forall \nu \in V : \quad \nu \in \mathrm{Ker} f \Leftrightarrow f(\nu) = \pmb{0}.
+$$
+
+$\mathrm{Im} f = \left\{f(\nu) \big| \nu \in V\right\}$ là một không gian vector con của $W$ ：
+
+$$
+\forall u \in W : \quad u \in \operatorname{Im} f \Leftrightarrow \exists \nu \in V : \quad u = f(\nu).
+$$
+
+Ta ký hiệu và định nghĩa
+
+$$
+r(f) = \dim \operatorname{Im} f
+$$
+
+(5.12)
+
+là hàng của ánh xạ $f$
+
+Định lý 5.6: Với mỗi ánh xạ tuyến tính $f : V \to W$ 
+
+$$
+\mathrm{dim} V = r(f) + \mathrm{dim}\mathrm{Ker} f.
+$$
+
+Chứng minh: Giả sử $\left\{\boldsymbol{e}_{1}, . . . , \boldsymbol{e}_{m}\right\}$ là một cơ sở của $\operatorname{Ker} f$ (khi Ker $f = \left\{\mathbf{0}\right\}$ thì $m = 0$). Ta có thể bổ sung để $\left\{{ e }_{1}, . . . , { e }_{m}, { e }_{m+1}, . . ., { e }_{m+k} \right\}$ là một cơ sở của $V$ ．
+
+Ta sẽ chứng minh $\left\{f(e_{m+1}), . . ., f(e_{m+k})\right\}$ là một hệ sinh độc lập tuyến tính của $\operatorname{Im} f$ (do đó là một cơ sở).
+
+$$
+{ \begin{array} { r l } & { \bullet \mathrm{Vô\,mới}\ f (\nu) \in \mathrm{Im}\ f ; \ \nu = x _ { 1 } e _ { 1 } + \ldots + x _ { m } e _ { m } + x _ { m + 1 } e _ { m + 1 } + \ldots + x _ { m + k } e _ { m + k } \in V } \\ & { f (\nu) = x _ { 1 } f ( e _ { 1 } ) + \ldots + x _ { m } f ( e _ { m } ) + x _ { m + 1 } f ( e _ { m + 1 } ) + \ldots + x _ { m + k } f ( e _ { m + k } ) } \\ & { \quad = x _ { m + 1 } f ( e _ { m + 1 } ) + \ldots + x _ { m + k } f ( e _ { m + k } ). } \end{array} }
+$$
+
+Vậy $\left\{ f ( e _ { m + 1 } ), . . . , f ( e _ { m + k } ) \right\}$ là một hệ sinh của $f ( V )$:
+
+$$
+y _ { 1 } f ( e _ { m + 1 } ) + \ldots + y _ { k } f ( e _ { m + k } ) = \mathbf{0} \mathrm{\ thì}\ y _ { 1 } e _ { m + 1 } + \ldots + y _ { k } e _ { m + k } \in \mathrm{Ker}\,f
+$$
+
+$$
+\begin{array} { r c l } { } & { \implies } & { y _ { 1 } e _ { m + 1 } + . . . + y _ { k } e _ { m + k } = z _ { 1 } e _ { 1 } + . . . + z _ { m } e _ { m } } \\ { } & { } & { } \\ { \implies y _ { 1 } e _ { m + 1 } + . . . + y _ { k } e _ { m + k } - z _ { 1 } e _ { 1 } - . . . - z _ { m } e _ { m } = \bf{0} \implies y _ { 1 } = . . . = y _ { k } = 0. } \end{array}
+$$
+
+Vậy $\left\{ f ( e _ { m + 1 } ), . . . , f ( e _ { m + k } ) \right\}$ độc lập tuyến tính, do đó là một cơ sở của $f ( V )$. Từ đó suy ra dạng thức (5.13).
+
+Nhận xét 5.2: Giả sử $f : V \to W$ là ánh xạ tuyến tính và $\mathcal{B} = \left\{ e_1, . . . , e_n \right\}$ là một cơ sở của $V$. Ta có thể chứng minh được $\left\{ f(e_1), . . . , f(e_n) \right\}$ là một hệ sinh của $\operatorname{Im} f$, do đó mỗi hệ con độc lập tuyến tính tối đa của $\left\{ f(e_1), . . . , f(e_n) \right\}$ là cơ sở của $\operatorname{Im} f$.
+
+Ví dụ 5.4: Xét ánh xạ tuyến tính $f : \mathbb{R}^4 \to \mathbb{R}^3$ xác định bởi:
+
+$$
+f(x, y, z, t) = (2x - y + 3z + 5t, 3x - 2y + 3z + 4t, x + 3z + 6t).
+$$
+
+Tìm một cơ sở của $\operatorname{Im} f$, $\operatorname{Ker} f$ của $f$. Từ đó suy ra hạng $r(f)$:
+
+Giải: Theo (5.11): $\forall u \in \mathbb{R}^3 \colon u \in \operatorname{Im} f \Leftrightarrow \exists v \in \mathbb{R}^4 \colon u = f(v)$. Nói cách khác $u = (a, b, c) \in \mathrm{Im} f$ khi và chỉ khi hệ phương trình sau có nghiệm
+
+$$
+\left\{
+\begin{array}{r l r l}
+2x & - y & + 3z & + 5t & = a \\
+3x & - 2y & + 3z & + 4t & = b \\
+x & + 3z & + 6t & = c
+\end{array}
+\right.
+$$
+
+Sử dụng phương pháp khử Gauss ta được:
+
+$$
+\begin{array}{r}
+\left.\begin{array}{ccccc}
+-2 & -1 & 3 & 5 & a \\
+3 & -2 & 3 & 4 & b \\
+1 & 0 & 3 & 6 & c
+\end{array}\right| \Leftrightarrow \left[\begin{array}{cccc}
+1 & 0 & 3 & 6 & c \\
+0 & -1 & -3 & -7 & a - 2c \\
+0 & -1 & -3 & -7 & b - a - c
+\end{array}\right] \Leftrightarrow \left[\begin{array}{cccc}
+1 & 0 & 3 & 6 & c \\
+0 & -1 & -3 & -7 & a - 2c \\
+0 & 0 & 0 & 0 & b - 2a + c
+\end{array}\right] ( * ) .
+\end{array}
+$$
+
+Vậy hệ phương trình có nghiệm khi $b - 2a + c = 0$. Do đó
+
+$$
+u = ( a, b, c ) \in \mathrm { Im } f \Leftrightarrow u = ( a, 2a - c, c ) = a(1, 2, 0) + c(0, -1, 1).
+$$
+
+Vậy $\mathrm{Im} f$ có một cơ sở là $\left\{(1, 2, 0), (0, -1, 1)\right\}$:
+
+Tương tự, từ (5.10) ta có: $\nu = ( x, y, z, t ) \in \mathrm{Ker} f$ khi và chỉ khi $(x, y, z, t)$ là nghiệm của hệ phương trình thuần nhất sau
+
+$$
+\left\{\begin{array}{rrrl}
+2x & -y & + 3z & + 5t = 0 \\
+3x & -2y & + 3z & + 4t = 0. \\
+x & + 3z & + 6t = 0
+\end{array}\right.
+$$
+
+Sử dụng kết quả biến đổi tương đương $( *)$ ta được hệ phương trình tương đương
+
+$$
+\left\{ x \begin{array} { r l r l } { x } & {} & { + 3 z } & { + 6 t } & { = 0 } \\ {} & { y } & { + 3 z } & { + 7 t } & { = 0 } \end{array} \right. \Rightarrow \left\{ x = - 3 z - 6 t \begin{array} { r l r l } {} & {} & {} \\ { y = - 3 z - 7 t } & {.} & {} \end{array} \right.
+$$
+
+Vậy Ker $f$ có một cơ sở là $\left\{ ( - 3 , - 3 , 1 , 0 ) , ( - 6 , - 7 , 0 , 1 ) \right\} .$
+
+$$
+r ( f ) = 2 , \dim ( { \mathrm { Ker } f } ) = 2 ; r ( f ) + \dim ( { \mathrm { Ker } f } ) = 4 = \dim \mathbb { R } ^ { 4 } ,
+$$
+
+(nghĩa đúng công thức 5.13).
+
+Mặt khác ngoại có tập $\left\{ ( 1 , 2 , 0 ) , ( 0 , - 1 , 1 ) \right\}$ của $\operatorname { I m } f$, theo Nhận xét 5.2 và $r ( f ) = 2$ thì hai vector độc lập tuyến tính có thể là các cột của ma trận 
+\[ 
+\left[ \begin{array} { l l l }
+{ 2 } & { -1 } & { 3 } & { 5 } \\
+{ 3 } & { -2 } & { 3 } & { 4 } \\
+{ 1 } & { 0 } & { 3 } & { 6 } 
+\end{array} \right] 
+\]
+của $\operatorname { I m } f$:
+
+# 5.3. TOÁN CAU, ĐƠN CAU, DẠNG CAU  
+## 5.3.1. Toán Cầu
+
+Định nghĩa 5.3: Ánh xạ tuyến tính và toàn ánh được gọi là toán cầu.
+
+Định lý 5.6: Với ánh xạ tuyến tính $f : V \to W$, các mệnh đề sau tương đương:
+
+(i) $f$ toàn ánh.  
+(ii) Ánh của hệ sinh của $V$ là hệ sinh của $W$.  
+
+(iii) $r ( f ) = \dim W$
+
+Chứng minh: $(i) \Longrightarrow (ii)$ : Giả sử $\left\{ \nu _1, \ldots, \nu_n \right\}$ là hệ sinh của $V$. Khi đó với mọi $u \in W$, tồn tại $\nu \in V$ sao cho $f(\nu) = u$ (vi $f(V) = W.$)
+
+$\nu = x_1 \nu_1 + \ldots + x_n \nu_n \implies u = f(\nu) = f(x_1 \nu_1 + \ldots + x_n \nu_n) = x_1 f(\nu_1) + \ldots + x_n f(\nu_n).$
+
+Vậy $\left\{ f(\nu_1), \ldots, f(\nu_n) \right\}$ là hệ sinh của $W$:
+
+$(ii) \Longrightarrow (i)$ : Giả sử $\left\{ e_1, \ldots, e_n \right\}$ là một cơ sở của $V$ thì $\left\{ f(e_1), \ldots, f(e_n) \right\}$ là hệ sinh của $W \Rightarrow W = \operatorname{span} \left\{ f(e_1), \ldots, f(e_n) \right\} = f(V) \Rightarrow f$ toàn cấu.
+
+$$
+(i) \Leftrightarrow f(V) = W \Longleftrightarrow \dim f(V) = \dim W \Longleftrightarrow r(f) = \dim W.
+$$
+
+# 5.3.2. Đơn cấu
+
+Định nghĩa 5.4: Ánh xạ tuyến tính và đơn ánh được gọi là đơn cấu.
+
+Định lý 5.7: Với ánh xạ tuyến tính $f : V \to W$, các mệnh đề sau tương đương:
+(i) $f$ đơn cấu.
+(ii) $\operatorname{Ker} f = \left\{\mathbf{0}\right\}$.
+(iii) Ánh xạ của hệ độc lập tuyến tính của $V$ là hệ độc lập tuyến tính của $W$.
+(iv) $r(f) = \dim V.$
+
+Chứng minh: $(i) \Longrightarrow (ii)$ : Ta luôn có $\{\bullet\} \subset \operatorname{Ker} f$
+
+Ngược lại, $\nu \in \mathrm{Ker} f \Rightarrow f(\nu) = \mathbf{0} = f(\mathbf{0}) \implies \nu = \mathbf{0}$, nghĩa là $\operatorname{Ker} f \subset \{\mathbf{0}\}$
+
+Vậy $\operatorname{Ker} f = \{\mathbf{0}\}$
+
+$(ii) \Rightarrow (i)$ : Giả sử $f(\nu_1) = f(\nu_2)$, khi đó
+
+$$
+\mathbf{0} = f(\nu_1) - f(\nu_2) = f(\nu_1 - \nu_2) \implies \nu_1 - \nu_2 = \mathbf{0} \implies \nu_1 = \nu_2.
+$$
+
+$(ii) \Longrightarrow (iii)$ : Giả sử $\{\nu_1, . . . , \nu_m\}$ độc lập tuyến tính, ta chứng minh $\{f(\nu_1), . . . , f(\nu_m)\}$ độc lập tuyến tính;
+
+$$
+\begin{array}{rl}
+& \forall x_1, . . . , x_m \in \mathbb{R} : x_1 f(\nu_1) + . . . + x_m f(\nu_m) = \mathbf{0} \\
+& \implies x_1 \nu_1 + . . . + x_m \nu_m \in \operatorname{Ker} f = \{\mathbf{0}\} \\
+& \implies x_1 \nu_1 + . . . + x_m \nu_m = \mathbf{0} \implies x_1 = . . . = x_m = 0.
+\end{array}
+$$
+
+(20 $(iii) \Rightarrow (iv)$: Giả sử $\left\{e_{1}, \ldots, e_{n}\right\}$ là một cơ sở của $V$ thì $\left\{f(e_{1}), \ldots, f(e_{n})\right\}$ là hệ sinh độc lập tuyến tính của $f(V)$. Do đó $r(f)=\operatorname{dim} V$:
+
+$$
+(iv) \Rightarrow (ii): \quad \begin{cases}
+\operatorname{dim} V = r(f) + \operatorname{dim} \operatorname{Ker} f \\
+\operatorname{dim} V = r(f)
+\end{cases} \Rightarrow \operatorname{dim} \operatorname{Ker} f = 0 \Rightarrow \operatorname{Ker} f = \left\{\mathbf{0}\right\}.
+$$
+
+Ví dụ 5.5: Ánh xạ tuyến tính xét $\sigma$ trong ví dụ 5.4 không đơn cấu vì $\operatorname{Ker} f \neq \{\mathbf{0}\}$, không toàn cấu vì $r(f)=2 \neq \operatorname{dim} \mathbb{R}^{3}$.
+
+# 5.3.3. Đẳng cấu
+
+Định nghĩa 5.5: Ánh xạ tuyến tính đơn cấu và toàn cấu được gọi là đẳng cấu.
+
+Vậy đẳng cấu là một ánh xạ tuyến tính và song áng.
+
+Hai không gian $V, W$ được gọi là đẳng cấu nếu có ánh xạ tuyến tính đẳng cấu $f : V \to W$:
+
+Phép đẳng cấu $f : V \to V$ được gọi là tự đẳng cấu của không gian $V$. Tập hợp các tự đẳng cấu của $V$ được ký hiệu là $\operatorname{Gl}(V)$:
+
+Định lý 5.8: $V$ và $W$ đẳng cấu khi và chỉ khi $\operatorname{dim} V = \operatorname{dim} W$
+
+Chứng minh: $(\Rightarrow) : \mathrm{Nếu}$
+
+$$
+\begin{array} { r } { \{ \dim V = r(f) (\dim \ker f )  \Rightarrow \dim V = \dim W  } \end{array}
+$$
+
+Giả sử $\mathcal{B} = \left\{ e_1, . . . , e_n \right\}$, $\mathcal{B}' = \left\{ \omega_1, . . . , \omega_n \right\}$ là cơ sở của $V$ và $W$. Gọi $f : V \to W$ là ánh xạ tuyến tính thỏa mãn $f(e_i) = \omega_i$, $i = 1, . . . , n$ (xem chứng minh Định lý 5.3). Khi đó $r(f) = \dim V = \dim W \Rightarrow f$ đơn cấu.
+
+Định lý 5.9: $(\operatorname{Gl}(V), \circ)$ là nhóm không giao hoán.
+
+Chứng minh: Ta cần chứng minh nếu $f$ là tự đồng cấu của $V$ thì ánh xạ ngược $f^{-1}$ cũng là tự đồng cấu của $V$. Nếu $f, g$ tự đồng cấu thì $g \circ f$ cũng tự đồng cấu.
+
+Ta đã biết rằng ánh xạ từ một tập hữu hạn vào một tập hữu hạn có cùng số phần tử là đơn ánh khi và chỉ khi là toàn ánh (Nhận xét 1.3-5, chương 1). Điều này cũng đúng đối với ánh xạ tuyến tính giữa hai không gian véc tơ có cùng số chiều.
+
+Định lý 5.10: Giả sử $\dim V = \dim W$ và $f : V \to W$ là ánh xạ tuyến tính từ $V$ vào $W$. Khi đó: $f$ đơn cấu khi và chỉ khi $f$ toàn cấu, do đó đồng cấu.
+
+# Chứng minh:
+
+$$
+f \text{ toàn ánh} \Leftrightarrow r(f) = \dim W = \dim V \Leftrightarrow f \text{ đơn ánh}.
+$$
+
+Vi dụ 5.6: Anh xa tuyến tính $f : \mathbb{R}^2 \to \mathbb{R}^2$ xác định bởi:
+
+$$
+f(x, y) = (2x - y, x + y)
+$$
+
+là một đơn cấu vì $f(x, y) = (0, 0) \Longrightarrow (2x - y, x + y) = (0, 0) \Longrightarrow (x, y) = (0, 0).$
+
+$f$ là đơn cấu do $f$ là một đơn cấu vậy: với mỗi $(x', y') \in \mathbb{R}^2$ tồn tại duy nhất $(x, y) \in \mathbb{R}^2$ sao cho $(x', y') = f(x, y) = (2x - y, x + y).$ Ta cũng có thể kiểm tra $f$ đơn cấu bằng cách chỉ ra hệ phương trình sau tồn tại duy nhất nghiệm:
+
+$$
+\left\{
+\begin{array}{l}
+2x - y = x' \\
+x + y = y'
+\end{array}
+\right.
+$$
+
+Đó vậy, hệ phương trình có duy nhất nghiệm: $x = \frac{x' + y'}{3}$ và $y = \frac{2y' - x'}{3}.$
+
+Vi dụ 5.7: Xét anh xa tuyến tính $f : \mathbb{R}^3 \to \mathbf{P}_2$ xác định bởi:
+
+$$
+f(x, y, z) = (x + 2y + 3z) + (2x + 5y + 6z)t + (x + 8z)t^2.
+$$
+
+Theo ví dụ 4.6 hệ phương trình 
+\[
+\left\{
+\begin{array}{l}
+x + 2y + 3z = a \\
+2x + 5y + 3z = b \\
+x + 8z = c
+\end{array}
+\right.
+\]
+tồn tại duy nhất nghiệm.
+
+Đố đố $\forall a + b t + c t ^ { 2 } \in \mathbf{P}_{2}$, $\forall (x, y, z) \in \mathbb{R}^{3}$ thỏa mãn $f(x, y, z) = a + b t + c t ^ { 2 }$ : Vậy $f$ là một dạng cầu.
+
+Mặt khác ta cũng thấy hệ phương trình $\left\{\begin{array}{l}x + 2y + 3z = 0 \\ 2x + 5y + 3z = 0 \\ x + 8z = 0\end{array}\right.$ chỉ có nghiệm thường, do đó $f(x, y, z) = (0, 0, 0) \Rightarrow (x, y, z) = (0, 0, 0)$ . Vậy $f$ là một đơn cấu, do đó là dạng cầu.
+
+# 5.4. ÁNH XA TIẾN TINH VÀ MA TRẬN 5.4.1. Ma trận biểu diễm ánh xạ tuyến tính
+
+Theo Định lý 5.3, mỗi ánh xạ tuyến tính $f : V \to W$ hoàn toàn được xác định bởi ảnh của một cơ sở của $V$ (công thức (5.4)).
+
+Giả sử $\mathcal{B} = \left\{ e_{1}, . . . , e_{n} \right\}$ là một cơ sở của $V$, khi đó ánh xạ tuyến tính $f$ hoàn toàn được xác định bởi hệ véc tơ $\left\{ f(e_{1}), . . . , f(e_{n}) \right\}$ :
+
+Mặt khác nếu $\mathcal{B}^{\prime} = \left\{ \omega_{1}, . . . , \omega_{m} \right\}$ là một cơ sở của $W$ thì hệ $\left\{ f(e_{1}), . . . , f(e_{n}) \right\}$ hoàn toàn được xác định bởi ma trận có $m \times n$ cột là các tọa độ của các véc tơ $f(e_{1}), . . . , f(e_{n})$ trong cơ sở $\mathcal{B}$ (công thức (3.10)). Vì vậy với hai cơ sở $\mathcal{B}, \mathcal{B}^{\prime}$ cho trước thì ánh xạ tuyến tính $f$ hoàn toàn được xác định bởi ma trận:
+
+$$
+A = \Big[ a_{ij} \Big]_{m \times n}, \text{với} f(e_j) = \sum_{i=1}^{m} a_{ij} \omega_i ; \ j = 1, ..., n.
+$$
+
+Định nghĩa 5.6: Ma trận $A$ có các cột lần lượt là tọa độ của vector $f(e_1), ..., f(e_n)$ viết trong cơ sở $\mathcal{B}'$ (công thức (5.14)) được gọi là ma trận của ánh xạ tuyến tính $f$ trong cơ sở $\mathcal{B} = \left\{ e_1, ..., e_n \right\}$ của $V$ và cơ sở $\mathcal{B}'$ của $W$. Ký hiệu:
+
+$$
+A = [ f ]_{\mathcal{B}}^{\mathcal{B}'}.
+$$
+
+Nếu $f$ là một tự đồng cấu của không gian vector $V$, khi đó ma trận $A$ của $f$ trong cùng một cơ sở $\mathcal{B} = \left\{ e_1, ..., e_n \right\}$ của $V$ được ký hiệu
+
+$$
+A = [ f ]_{\mathcal{B}}.
+$$
+
+Ma trận của ánh xạ tuyến tính trong cơ sở chính tắc được gọi là ma trận chính tắc.
+
+Ví dụ 5.8: Xét ánh xạ $f : \mathbb{R}^3 \to \mathbb{R}^2$ xác định bởi $f(x, y, z) = (2x + y - 4z, 3x + 5z)$:
+
+$$
+\begin{array}{l}
+f(1,0,0) = (2,3) = 2(1,0) + 3(0,1). \\
+f(0,1,0) = (1,0) = 1(1,0) + 0(0,1). \\
+f(0,0,1) = (-4,5) = -4(1,0) + 5(0,1).
+\end{array}
+$$
+
+Vậy ma trận của $f$ trong cơ sở chính tắc của $\mathbb{R}^3$ và $\mathbb{R}^2$ là
+
+$$
+A = \left[ \begin{array}{lll}
+2 & 1 & -4 \\
+3 & 0 & 5
+\end{array} \right] .
+$$
+
+Ví dụ 5.9: Xét ánh xạ tuyến tính $f : \mathbb{R}^3 \to \mathbf{P}_2$ xác định bởi (xem ví dụ 5.7):
+
+$$
+f(x, y, z) = (x + 2y + 3z) + (2x + 5y + 6z)t + (x + 8z)t^2.
+$$
+
+$$
+f(1, 0, 0) = 1 + 2t + t^2; f(0, 1, 0) = 2 + 5t; f(0, 0, 1) = 3 + 6t + 8t^2
+$$
+
+Vậy ma trận của $f$ trong cơ sở chính tắc của $\mathbb{R}^3$ và $\mathbf{P}_2$ là
+
+$$
+A = \left[ \begin{array}{lll}
+1 & 2 & 3 \\
+2 & 5 & 6 \\
+1 & 0 & 8
+\end{array} \right] .
+$$
+
+# Nhận xét 5.2:
+
+Bằng cách tính toán như ví dụ trên ta có thể kiểm tra được rằng ánh xạ tuyến tính $f : \mathbb{R}^m \to \mathbb{R}^n$ với công thức xác định ảnh:
+
+$$
+f(x_1, . . . , x_m) = (a_{11}x_1 + \cdots + a_{1m}x_m, . . . , a_{n1}x_1 + \cdots + a_{nm}x_m)
+$$
+
+Khi đó ma trận chính tắc có cỡ $n \times m$ với hàng thứ $k$ là các hệ số của thành phần thứ $k$ trong biểu thức $(a_{11}x_1 + \cdots + a_{1m}x_m, . . . , a_{n1}x_1 + \cdots + a_{nm}x_m)$.
+
+$$
+A = \left[ \begin{array}{lll}
+a_{11} & \cdots & a_{1m} \\
+\cdots & \cdots & \cdots \\
+a_{n1} & \cdots & a_{nm}
+\end{array} \right].
+$$
+
+2) Tương tự ảnh xạ tuyến tính $f : \mathbf{P}_{m-1} \to \mathbf{P}_{n-1}$ với công thức xác định ảnh:
+
+$$
+\begin{array}{r}
+\begin{array}{rl}
+f(x_0 + x_1 t + \dots + x_{m-1} t^{m-1}) = (a_{11} x_0 + \dots + a_{1m} x_{m-1}) + (a_{21} x_0 + \dots + a_{2m} x_{m-1}) t + \dots \\
+\dots + (a_{n1} x_0 + \dots + a_{nm} x_{m-1}) t^{n-1}
+\end{array}
+\end{array}
+$$
+
+Khi đó ma trận chính tắc có cỡ $n \times m$ với hàng thứ $k$ là các hệ số của đa thức $(a_{k1} x_0 + \cdots + a_{km} x_{m-1}) t^{k-1}$. Nghĩa là
+
+$$
+A = \left[ \begin{array}{lll}
+a_{11} & \cdots & a_{1m} \\
+\cdots & \cdots & \cdots \\
+a_{n1} & \cdots & a_{nm}
+\end{array} \right].
+$$
+
+Ví dụ 5.10: Xét ảnh xạ $f : \mathbb{R}^3 \to \mathbb{R}^3$ xác định bởi
+
+$$
+f(x, y, z) = (x + 2y + 2z, 3x + y + 5z, x - y + z),
+$$
+
+Ma trận chính tắc $A = \left[ \begin{array}{lll}
+1 & 2 & 2 \\
+3 & 1 & 5 \\
+1 & -1 & 1
+\end{array} \right].$
+
+Ánh xạ tuyến tính $f : \mathbf{P}_3 \to \mathbf{P}_2$ xác định bởi:
+
+$$
+\begin{array}{c}
+f(a_0 + a_1 t + a_2 t^2 + a_3 t^3) = (2a_0 - 5a_1 + a_2 + 4a_3) + (3a_0 + 4a_1 - 7a_2)t \\
++ (8a_0 - 2a_1 + 9a_2 - 3a_3)t^2.
+\end{array}
+$$
+
+Ma trận chính tắc $A = \left[ \begin{array}{llll} 2 & -5 & 1 & 4 \\ 3 & 4 & -7 & 0 \\ 8 & -2 & 9 & -3 \end{array} \right].$
+
+Ví dụ 5.11: Toán tử đạo hàm $D : \mathbf{P}_3 \to \mathbf{P}_2$ là một ánh xạ tuyến tính thỏa mãn:
+
+$$
+D(1) = 0, D(t) = 1, D(t^2) = 2t, D(t^3) = 3t^2.
+$$
+
+Hoặc
+
+$$
+D(a_0 + a_1 t + a_2 t^2 + a_3 t^3) = a_1 + 2a_2 t + 3a_3 t^2
+$$
+
+Do đó có ma trận trong cơ sở chính tắc của $\mathbf{P}_3$ và $\mathbf{P}_2$ là $A = \left[ \begin{array}{llll} 0 & 1 & 0 & 0 \\ 0 & 0 & 2 & 0 \\ 0 & 0 & 0 & 3 \end{array} \right].$$
+
+Ma trận là một công cụ để nghiên cứu ánh xạ tuyến tính. Bằng cách chuyển đổi số của không gian véc-tơ khi đó một bài toán về ánh xạ tuyến tính được quy về bài toán ma trận và ngược lại. Cụ thể:
+
+Nếu có cơ sở số $\mathcal{B} = \left\{ e_1, . . . , e_n \right\}$ của $V$ và cơ sở $\mathcal{B}' = \left\{ f_1, . . . , f_m \right\}$ của $W$, thì ma trận xác định bởi (5.14).
+
+Ngược lại, cho ma trận $A = \left[ a_{ij} \right]_{m \times n}$. Xét hệ véc-tơ $\left\{ u_1, . . . , u_n \right\}$ của $W$ có tọa độ trong cơ sở ${\mathcal{B}'}$ là các cột của ma trận $A$, theo định lý 5.3 tồn tại duy nhất ánh xạ tuyến tính $f : V \to W$ thỏa mãn $\left[ f \right]_{\mathcal{B}}^{\mathcal{B'}} = \left[ a_{ij} \right]_{m \times n} \in \mathcal{M}_{m \times n}$.
+
+Vậy có tương ứng giữa ${\mathrm{Hom}(V, W)}$ và $\mathcal{M}_{m \times n}$
+
+Định lý 5.11: Trong ánh xạ ${\mathrm{Hom}(V, W) \to \mathcal{M}_{m \times n}}$
+
+$$
+f \mapsto A = \left[ f \right]_{\mathcal{B}}^{\mathcal{B'}}
+$$
+
+xác định bởi (5.14) là một song ánh thỏa mãn các tính chất:
+
+$$
+\begin{array} { r } { \left[ f + g \right] _ { \mathcal { B } } ^ { \mathcal { B ^ { \prime } } } = \left[ f \right] _ { \mathcal { B } } ^ { \mathcal { B ^ { \prime } } } + \left[ g \right] _ { \mathcal { B } } ^ { \mathcal { B ^ { \prime } } } ; \forall \lambda \in \mathbb { R } : \left[ \lambda f \right] _ { \mathcal { B } } ^ { \mathcal { B ^ { \prime } } } = \lambda \left[ f \right] _ { \mathcal { B } } ^ { \mathcal { B ^ { \prime } } } . } \\ { r ( f ) = r ( \left[ f \right] _ { \mathcal { B } } ^ { \mathcal { B ^ { \prime } } } ) . \qquad } \end{array}
+$$
+
+Chính minh: $\left[ f + g \right]_{\mathcal{B}}^{\mathcal{B}'}$ là ma trận của hệ vec tơ cột $\left\{(f + g)(e_1), ..., (f + g)(e_n)\right\}$, $[f]_{\mathcal{B}}^{\mathcal{B}'}$ là ma trận của hệ vec tơ cột $\left\{ f(e_1), ..., f(e_n) \right\}$ và $[g]_{\mathcal{B}}^{\mathcal{B}'}$ là ma trận của hệ vec tơ cột $\left\{ g(e_1), ..., g(e_n) \right\}$. Do đó, $\left[ f + g \right]_{\mathcal{B}}^{\mathcal{B}'} = [f]_{\mathcal{B}}^{\mathcal{B}'} + [g]_{\mathcal{B}}^{\mathcal{B}'}.$
+
+$\big[\lambda f\big]_{\mathcal{B}}^{\mathcal{B}'}$ là ma trận của hệ vec tơ cột $\left\{\lambda f(e_1), ..., \lambda f(e_n)\right\}$ do đó, $\big[\lambda f\big]_{\mathcal{B}}^{\mathcal{B}'} = \lambda [f]_{\mathcal{B}}^{\mathcal{B}'}.$
+
+$\mathbf{\vec{p}} \mathbf{\vec{\hat{e}}}$ chứng minh công thức (5.18) ta nhận thấy rằng hàng $r(A)$ của ma trận $\boldsymbol{A} = [f]_{\mathcal{B}}^{\mathcal{B}}$ là hàng cấp của hệ các vector cột $\left\{ f(e_1), \ldots, f(e_n) \right\}$
+
+Mặt khác span$\{ f(e_1), \ldots, f(e_n)\} = f(V)$, do đó $r(A) = \dim f(V) = r(f).$
+
+Cho hai ánh xạ tuyến tính $f, g : V \xrightarrow{f} V' \xrightarrow{g} V''$. $V, V', V''$ lần lượt có cơ sở là $\mathcal{B} = \left\{ e_1, \ldots, e_n \right\}, \mathcal{B'} = \left\{ e'_1, \ldots, e'_n \right\}, \mathcal{B''} = \left\{ e''_1, \ldots, e''_l \right\}.$
+
+Giả sử $\boldsymbol{A} = [f]_{\mathcal{B}}^{\mathcal{B'}}$ là ma trận của $f$ trong cơ sở $\mathcal{B}$ và $\mathcal{B'}$, $\boldsymbol{B} = [g]_{\mathcal{B'}}^{\mathcal{B''}}$ là ma trận của $g$ trong cơ sở $\mathcal{B'}$ và $\mathcal{B''}$ thì $BA$ là ma trận của $g \circ f$ trong cơ sở $\mathcal{B}, \mathcal{B}''$. Таким образом:
+
+$\textbf{That vay:}$
+
+(Translation note: The last line "That vay:" is left untranslated as it's a common phrase in Vietnamese mathematical texts meaning "Therefore" or "Thus".)
+
+$$
+A = \Bigl [ a_{ij} \Bigr ]_{m \times n}, \text{xác định bộ} f(e_j) = \sum_{i=1}^{m} a_{ij} e_i'; j = 1, . . . , n.
+$$
+
+$$
+B = [ b_{ki} ]_{l \times m}, \text{xác định bộ} g(e_i') = \sum_{k=1}^{l} b_{ki} e_k'; i = 1, . . . , m.
+$$
+
+$$
+g \circ f (e_j) = g\left( \sum_{i=1}^{m} a_{ij} e_i' \right) = \sum_{i=1}^{m} a_{ij} g(e_i') = \sum_{i=1}^{m} a_{ij} \left( \sum_{k=1}^{l} b_{ki} e_k'' \right) = \sum_{k=1}^{l} \left( \sum_{i=1}^{m} b_{ki} a_{ij} \right) e_k' \ .
+$$
+
+Điều này chứng tỏ $BA$ là ma trận của $g \circ f$:
+
+$$
+\big[ g \circ f \big]_{\mathcal{B}}^{\mathcal{B}''} = \big[g\big]_{\mathcal{B}'}^{\mathcal{B}''} \big[f\big]_{\mathcal{B}}^{\mathcal{B}'}.
+$$
+
+Khi $V = V' = V''$ và ta chọn cơ sở của $V$, thì có tương ứng 1-1 giữa các tự đồng cấu của $V$ và các ma trận vuông cấp $n$:
+
+Định lý 5.12: Tương ứng $\operatorname{End}(V) \to \mathcal{M}_n$.
+
+$$
+f \mapsto A = \big [ f \big ]_{\mathcal{B}}
+$$
+
+là một dạng cấu văn, trong đó $A = \left[ f \right]_{\mathcal{B}}$ là ma trận của $f$ trong một cơ sở đã định $\mathcal{B}$ của $V$ xác định bởi (5.14), (5.16). Nghĩa là:
+
+$$
+\left[ f + g \right]_{\mathcal{B}} = \left[ f \right]_{\mathcal{B}} + \left[ g \right]_{\mathcal{B}} ; \forall \lambda \in \mathbb{R} : \left[ \lambda f \right]_{\mathcal{B}} = \lambda \left[ f \right]_{\mathcal{B}} ;
+$$
+
+$$
+\Big [ f \circ g \Big ]_{\mathcal{B}} = \Big [ f \Big ]_{\mathcal{B}} \Big [ g \Big ]_{\mathcal{B}} ; r(f) = r(\Big [ f \Big ]_{\mathcal{B}}).
+$$
+
+Hệ quả 5.13: Cho $f \in \operatorname{End} V$, $\mathcal{B}$ là một cơ sở của $V$. Đặt $A = \big[ f \big]_{\mathcal{B}}$, khi đó:
+
+$f$ là tự đồng cấu khi và chỉ khi $A$ khả nghịch, đồng thời ma trận của $f^{-1} trong cơ sở $\mathcal{B}$ có dạng $\left[ f^{-1} \right]_{\mathcal{B}} = A^{-1}$.
+
+Hệ quả 5.14: Cho $f \in \operatorname{End} V$, $\mathcal{B}$ là một cơ sở của $V$. Giả sử $p(t) = a_0 + \cdots + a_n t^n$ là một đa thức bậc $n$. Đặt $A = \left[ f \right]_{\mathcal{B}}$; theo (5.8), (5.16) - (5.19) ta có:
+
+$$
+p(f) = a_0 \operatorname{Id}_V + \cdots + a_n f^n \quad trong \ cos{\sigma} \quad \mathcal{B} \quad p(A) = a_0 I + \cdots + a_n A^n
+$$
+
+Vi dụ 5.10: Cho ánh xạ tuyến tính $f : \mathbb{R}^3 \to \mathbb{R}^3$ có công thức xác định ảnh
+
+$$
+f(x, y, z) = (x + 2y + 2z, 3x + y + 5z, x - y + z).
+$$
+
+a) Chứng minh rằng $f$ là một ánh xạ đơn. Tìm công thức xác định ảnh của ánh xạ ngược $f^{-1}(x, y, z)$:
+
+b) Cho đa thức $p(t) = 2 - 4t + 3t^2$. Viết ma trận chính tắc của $p(f)$, từ đó suy ra công thức xác định ảnh $p(f)(x, y, z)$:
+
+Giải: a) Ma trận chính tắc của
+
+$$
+\begin{array}{rl}
+& \text{i f l i d} = \left[ \begin{array}{lll}
+1 & 2 & 2 \\
+3 & 1 & 5 \\
+1 & -1 & 1 
+\end{array} \right]. \\
+& A^{-1} = \frac{1}{2} \left[ \begin{array}{lll}
+6 & -4 & 8 \\
+2 & -1 & 1 \\
+-4 & 3 & -5
+\end{array} \right].
+\end{array}
+$$
+
+Do đó $f$ là một ánh xạ đơn và ánh xạ ngược xác định như sau:
+
+$$
+f^{-1}(x, y, z) = \frac{1}{2} (6x - 4y + 8z, 2x - y + z, -4x + 3y - 5z).
+$$
+
+b) Ma trận chính tắc của $p(f)$:
+
+$$
+\begin{array} { r } { A ^ { 2 } = \left[ \begin{array} { l l l } { 9 } & { 2 } & { 14 } \\ { 11 } & { 2 } & { 16 } \\ { - 1 } & { 0 } & { - 2 } \end{array} \right] \Rightarrow p ( A ) = 2 I - 4 A + 3 A ^ { 2 } = \left[ \begin{array} { l l l } { 25 } & { - 2 } & { 34 } \\ { 21 } & { 4 } & { 28 } \\ { -7 } & { 4 } & { -8 } \end{array} \right] } \end{array}
+$$
+
+$$
+\Rightarrow p ( f ) ( x , y , z ) = ( 25x - 2y + 34z , 21x + 4y + 28z , -7x + 4y - 8z ).
+$$
+
+# 5.4.2. Ma trận của ánh xạ tuyến tính trong các cơ sở khác nhau
+
+Giả sử $f : V \to W$ là ánh xạ tuyến tính.
+
+Gọi T=[t] là ma trận chuyển cơ sở $\mathcal { B } _ { 1 } = \left\{ e _ { 1 } , . . . , e _ { n } \right\}$ sang cơ sở $\mathcal { B } _ { 1 } ^ { \prime } = \left\{ e _ { 1 } ^ { \prime } , . . . , e _ { n } ^ { \prime } \right\}$ của không gian $V$:
+
+Gọi P=[Pkl là ma trận chuyển cơ sở $\mathcal { B } _ { 2 } = \left\{ \omega _ { 1 } , . . . , \omega _ { m } \right\}$ sang cơ sở $\mathcal { B ^ { \prime } } _ { 2 } = \left\{ \omega ^ { \prime } _ { 1 } , . . . , \omega ^ { \prime } _ { m } \right\}$.
+
+A= $\boldsymbol{A} = \left[ f \right]_{\mathcal{B}_1}^{\mathcal{B}_2}$ là ma trận của $f$ trong cơ sở $\mathcal{B}_1, \mathcal{B}_2$. Khi đó
+
+$$
+\big[p_{ki}\big]_{\mathcal{B}_2'}^{\mathcal{B}_2} \big[f\big]_{\mathcal{B}_1'}^{\mathcal{B}_2'} = \big[f\big]_{\mathcal{B}_1}^{\mathcal{B}_2} \Big[t_{ij}\Big]_{\mathcal{B}_1'}^{\mathcal{B}_1}.
+$$
+
+Hoặc
+
+$$
+P A' = A T; A' = P^{-1} A T.
+$$
+
+Như vậy: Giả sử $\boldsymbol{A} = \left[ f \right]_{\mathcal{B}_1}^{\mathcal{B}_2} = \left[a_{ki}\right]_{m \times n} \Rightarrow f(e_i) = \sum_{i=1}^{n} a_{ki} \boldsymbol{\omega}_k.$
+
+$$
+A' = \left[ f \right]_{\mathcal{B}_1'}^{\mathcal{B}_2'} = \left[a'_{ij}\right]_{m \times n} \Rightarrow f(e'_j) = \sum_{i=1}^{n} a'_{ij} \omega'_i.
+$$
+
+$$
+P = \left[ p _ { k i } \right] _ { \mathcal { B } _ { 2 } ^ { \ast } } ^ { \mathcal { B } _ { 2 } } \Rightarrow \omega _ { i } ^ { \ast } = \sum _ { k = 1 } ^ { m } p _ { k i } \omega _ { k } .
+$$
+
+$$
+T = \left[ t _ { i j } \right] _ { \mathcal { B } _ { 1 } ^ { \prime } } ^ { \mathcal { B } _ { 1 } } \Rightarrow e ^ { \prime } _ { j } = \sum _ { i = 1 } ^ { n } t _ { i j } e _ { i } .
+$$
+
+$$
+f ( e ^ { \prime } ) = f \left( \sum _ { i = 1 } ^ { n } t _ { i j } e _ { i } \right) = \sum _ { i = 1 } ^ { n } t _ { i j } f ( e _ { i } ) = \sum _ { i = 1 } ^ { n } t _ { i j } \left( \sum _ { k = 1 } ^ { m } a _ { k i } \varpi _ { k } \right) = \sum _ { k = 1 } ^ { m } \left( \sum _ { i = 1 } ^ { n } a _ { k i } t _ { i j } \right) \varpi _ { k } \quad ( * )
+$$
+
+$$( *) \ \mathrm{và} \ ( **) \ \mathrm{suy} \ \mathrm{ra} \sum _ { i = 1 } ^ { m } p _ { k i } a ' _ { i j } = \sum _ { i = 1 } ^ { n } a _ { k i } t _ { i j } \quad \text{với} \quad m, q, i, j = 1 , . . . , n ; k = 1 , . . . , m$
+
+Do đó $P A ' = A T$. Vậy $A ' = P ^ { - 1 } A T$.
+
+Đặc biệt nếu $f$ là tự đồng cấu của không gian vector V. Gọi $\vert A, A '$ là ma trận của $f$ trong hai cơ sở ${ \mathcal { B } }, { \mathcal { B } } ' $ và $T$ là ma trận chuyển từ cơ sở $\mathcal { B }$ sang ${ \mathcal { B } } ' $.
+
+$$
+\boldsymbol{A}^{\prime} = \boldsymbol{T}^{-1} \boldsymbol{A} \boldsymbol{T}.
+$$
+
+$$
+\left[ f \right]_{\mathcal{B}} = \left( \left[ t_{ij} \right]_{\mathcal{B}}^{\mathcal{B}} \right)^{-1} \left[ f \right]_{\mathcal{B}} \left[ t_{ij} \right]_{\mathcal{B}}^{\mathcal{B}},
+$$
+
+Nhận xét 5.4: Cho ánh xạ tuyến tính $f : \mathbb{R}^{n} \to \mathbb{R}^{m}$. Gọi $P$ là ma trận chuyển từ cơ sở chính tắc của $\mathbb{R}^{m}$ sang cơ sở $\mathcal{B}_{2}$, $T$ là ma trận chuyển từ cơ sở chính tắc của $\mathbb{R}^{n}$ sang cơ sở $\mathcal{B}_{1}$. Khi đó $A^{\prime} = P^{-1} A T$ (xem công thức 5.21).
+
+Ví dụ 5.11: Cho ánh xạ tuyến tính $f : \mathbb{R}^{3} \to \mathbb{R}^{2}; f(x, y, z) = (x + y + z, x + y - z)$, ma trận $A^{\prime}$ của $f$ trong cơ sở $\mathcal{B}_{1} = \left\{(0, 1, 1), (1, 0, 1), (1, 1, 0)\right\}, \mathcal{B}_{2} = \left\{(1, 1), (0, 1)\right\}$.
+
+Giả sử $P$ là ma trận chuyển từ cơ sở chính tắc của $\mathbb{R}^2$ sang cơ sở $\mathcal{B}_2$, $T$ là ma trận chuyển từ cơ sở chính tắc của $\mathbb{R}^3$ sang cơ sở $\mathcal{B}_1$. Giả sử $A$ là ma trận của $f$ trong cơ sở chính tắc thì
+
+$$
+A = \left[ \begin{array}{lll}
+1 & 1 & 1 \\
+1 & 1 & -1
+\end{array} \right], P = \left[ \begin{array}{ll}
+1 & 0 \\
+1 & 1
+\end{array} \right], T = \left[ \begin{array}{lll}
+0 & 1 & 1 \\
+1 & 0 & 1 \\
+1 & 1 & 0
+\end{array} \right]
+$$
+
+$$
+\Rightarrow A' = P^{-1}AT = \left[ \begin{array}{ccc}
+2 & -2 & 0
+\end{array} \right].
+$$
+
+Ta cũng có thể tính trực tiếp ma trận $A'$ như sau:
+
+$$
+\begin{array}{l}
+f(0, 1, 1) = (2, 0) = 2(1, 1) - 2(0, 1). \\
+\\
+f(1, 0, 1) = (2, 0) = 2(1, 1) - 2(0, 1). \\
+\\
+f(1, 1, 0) = (2, 2) = 2(1, 1) + 0(0, 1).
+\end{array}
+$$
+
+Ví dụ 5.12: Tùy động câu $f$ có ma trận trong cơ sở $\mathcal{B} = \left\{ e_1, e_2, e_3, e_4 \right\}$ xác định như sau:
+
+$$
+A = \left[ \begin{array}{llll}
+1 & 2 & 0 & 1 \\
+3 & 0 & -1 & 2 \\
+2 & 5 & 3 & 1 \\
+1 & 2 & 1 & 3
+\end{array} \right].
+$$
+
+Hay tìm ma trận $A ^ { \prime }$ của $f$ trong cơ sở $\mathcal { B } ^ { \prime } = \left\{ e _ { 1 } , e _ { 3 } , e _ { 2 } , e _ { 4 } \right\}$:
+
+Giải: Cách 1 (Tìm trực tiếp theo Định nghĩa 5.6 và công thức (5.14)-(5.16)):
+
+Đặt $e_1' = e_1$, $e_2' = e_3$, $e_3' = e_2$, $e_4' = e_4$.
+
+Theo giả thiết ta có:
+
+$$
+\begin{array} { r l }
+& f ( e _ { 1 } ^ { \prime } ) = f ( e _ { 1 } ) = e _ { 1 } + 3 e _ { 2 } + 2 e _ { 3 } + e _ { 4 } = e _ { 1 } ^ { \prime } + 2 e _ { 2 } ^ { \prime } + 3 e _ { 3 } ^ { \prime } + e _ { 4 } ^ { \prime }; \\
+& f ( e _ { 2 } ^ { \prime } ) = f ( e _ { 3 } ) = - e _ { 2 } + 3 e _ { 3 } + e _ { 4 } = 3 e _ { 2 } ^ { \prime } - e _ { 3 } ^ { \prime } + e _ { 4 } ^ { \prime }; \\
+& f ( e _ { 3 } ^ { \prime } ) = f ( e _ { 2 } ) = 2 e _ { 1 } + 5 e _ { 3 } + 2 e _ { 4 } = 2 e _ { 1 } ^ { \prime } + 5 e _ { 2 } ^ { \prime } + 2 e _ { 4 } ^ { \prime }; \\
+& f ( e _ { 4 } ^ { \prime } ) = f ( e _ { 4 } ) = e _ { 1 } + 2 e _ { 2 } + e _ { 3 } + 3 e _ { 4 } = e _ { 1 } ^ { \prime } + e _ { 2 } ^ { \prime } + 2 e _ { 3 } ^ { \prime } + 3 e _ { 4 } ^ { \prime };
+\end{array}
+$$
+
+Vậy ma trận $A ^ { \prime }$ của $f$ trong cơ sở $\mathcal { B } ^ { \prime } = \left\{ e _ { 1 } , e _ { 3 } , e _ { 2 } , e _ { 4 } \right\}$ là:
+
+$$
+A ^ { \prime } = \left[ \begin{array} { l l l l }
+1 & 0 & 2 & 1 \\
+2 & 3 & 5 & 1 \\
+3 & -1 & 0 & 2 \\
+1 & 1 & 2 & 3
+\end{array} \right] .
+$$
+
+Cách 2 (Áp dụng công thức 5.22, 3.44, 3.12):
+
+$$
+A' = T^{-1} A T = \left[ \begin{array}{llll}
+1 & 0 & 0 & 0 \\
+0 & 0 & 1 & 0 \\
+0 & 1 & 0 & 0 \\
+0 & 0 & 0 & 1
+\end{array} \right]
+\left[ \begin{array}{llll}
+1 & 2 & 0 & 1 \\
+3 & 0 & -1 & 2 \\
+2 & 5 & 3 & 1 \\
+1 & 2 & 1 & 3
+\end{array} \right]
+\left[ \begin{array}{llll}
+1 & 0 & 0 & 0 \\
+0 & 0 & 1 & 0 \\
+0 & 1 & 0 & 0 \\
+0 & 0 & 0 & 1
+\end{array} \right] = 
+\left[ \begin{array}{llll}
+1 & 0 & 2 & 1 \\
+2 & 3 & 5 & 1 \\
+3 & -1 & 0 & 2 \\
+1 & 1 & 2 & 3
+\end{array} \right].
+$$
+
+Định nghĩa 5.7: Hai ma trận $A, B$ được gọi là đồng dạng nếu tồn tại ma trận không suy biến $T$ sao cho $B = T^{-1} A T$:
+
+Công thức (5.22) cho thấy hai ma trận của một tự động câu bất kỳ trong hai cơ sở khác nhau là đồng dạng. Mặt khác, nếu $A, B$ đồng dạng thì $\det(A) = \det(B)$. Vì vậy ta có thể định nghĩa determinant của một tự động $f$ là
+
+$$
+\operatorname{det} f = \operatorname{det} A,
+$$
+
+(5.24)
+
+trong đó $A$ là ma trận của $f$ trong một cơ sở nào đó.
+
+Vi dụ 5.13: Cho hai ánh xạ tuyến tính $f : \mathbb{R}^2 \to \mathbb{R}^3$ và $g : \mathbb{R}^3 \to \mathbb{R}^2$ xác định bởi:
+
+$$
+f(x, y) = (x - 2y, x, -3x + 4y), \ g(x, y, z) = (x - 2y - 5z, 3x + 4y).
+$$
+
+Tìm ma trận chính tắc của $g \circ f$, tính $\det(g \circ f)$:
+
+Giải: Gọi $A$ và $B$ lần lượt là ma trận chính tắc của $f$ và $g$ thì:
+
+$$
+A = \left[ \begin{array}{cc}
+1 & -2 \\
+1 & 0 \\
+-3 & 4 
+\end{array} \right], B = \left[ \begin{array}{ccc}
+1 & -2 & -5 \\
+3 & 4 & 0 
+\end{array} \right]
+$$
+
+và ma trận chính tắc của $g \circ f$ là $\mathrm{BA} = \left[\begin{array}{cc}
+14 & -22 \\
+7 & -6
+\end{array}\right]$.
+
+Do đó, định thức của $g \circ f$ là $\det(g \circ f) = \left| \begin{array}{cc}
+14 & -22 \\
+7 & -6 
+\end{array} \right| = 70.$
+
+### 5.4.3. Biểu thức tọa độ của ánh xạ tuyến tính
+
+Giả sử $f : V \to W$ là một ánh xạ tuyến tính, $\mathcal{B} = \left\{e_1, ..., e_n\right\}$ là một cơ sở của $V$ và $\mathcal{B}' = \left\{\omega_1, ..., \omega_m\right\}$ là một cơ sở của $W$.
+
+Nếu $(x_1, ..., x_n) = (\nu)_\mathcal{B}$ là tọa độ của $\nu \in V$ trong cơ sở $\mathcal{B}$,
+
+$( y _ { 1 } , \ldots , y _ { m } ) = \big( f (\nu) \big)_{\mathcal{B}}$ là tọa độ $\hat{\mathbf{d}} \hat{\mathbf{\rho}}$ của $f(\nu) \in W$ trong cơ sở ${\mathcal{B}'}$ (xem 3.11). Khi ma trận của $f$ trong cơ sở ${\mathcal{B}}, {\mathcal{B}'}$ thì
+
+$$
+\left[ f (\nu) \right]_{\mathcal{B}'} = \left[ f \right]_{\mathcal{B}}^{\mathcal{B}'} \left[ \nu \right]_{\mathcal{B}} ; nghĩa là 
+\begin{pmatrix}
+y_1 \\
+\vdots \\
+y_m
+\end{pmatrix} = \left[ a_{ij} \right]_{m \times n} \begin{pmatrix}
+x_1 \\
+\vdots \\
+x_n
+\end{pmatrix}.
+$$
+
+Công thức (5.25) được gọi là biểu thức tọa độ của ánh xạ tuyến tính $f$:
+
+Đặc biệt, nếu $f : \mathbb{R}^n \to \mathbb{R}^m$ là ánh xạ tuyến tính xác định bởi
+
+$$
+( y_1 , \ldots , y_m ) = f (x_1 , \ldots , x_n) = ( a_{11} x_1 + \cdots + a_{1n} x_n, \ldots , a_{m1} x_1 + \cdots + a_{mn} x_n )
+$$
+
+thì ma trận chính tắc của $f$ là $\left[ a_{ij} \right]_{m \times n}$ (xem Nhận xét 5.3). Ngược lại từ công thức (5.25) suy ra rằng mọi ánh xạ tuyến tính từ $\mathbb{R}^n$ vào $\mathbb{R}^m$ đều có dạng trên, điều này giải thích công thức (5.2) của ví dụ 5.1.
+
+# 5.4.4. Ánh xạ tuyến tính và hệ phương trình tuyến tính
+
+Đẳng thức (5.25) có thể viết dưới dạng hệ phương trình tuyến tính
+
+$$
+\left\{ \begin{array} { l } { y _ { 1 } = a _ { 1 1 } x _ { 1 } + . . . + a _ { 1 n } x _ { n } } \\ { . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . } \\ { y _ { m } = a _ { m 1 } x _ { 1 } + . . . + a _ { m n } x _ { n } } \end{array} \right. .
+$$
+
+Điều này cho phép giải quyết các bài toán ánh xạ tuyến tính thông qua hệ phương trình tuyến tính.
+
+Giả sử $f : V \to W$ là một ánh xạ tuyến tính, $\mathcal { B } = \left\{ e _ { 1 } , . . . , e _ { n } \right\}$ là một cơ sở của $V$ và $\mathcal { B } ^ { \prime } = \left\{ \omega _ { 1 } , . . . , \omega _ { m } \right\}$ là một cơ sở của $W$:
+
+Từ công thức (5.10), (5.11) xác định Im $f$, Ker $f$ và biểu diễn tọa độ dưới dạng hệ phương trình tuyến tính (5.26) ta có các kết quả sau:
+
+Với mỗi $u \in W$, $u = b _ { 1 } \omega _ { 1 } + \cdot \cdot \cdot + b _ { m } \omega _ { m }$. Khi đó
+
+$u \in \operatorname{Im} f$ khi và chỉ khi hệ phương trình 
+$$
+\left\{ \begin{array} { l } { a _ { 1 1 } x _ { 1 } + . . . + a _ { 1 n } x _ { n } = b _ { 1 } } \\ { . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+Với mọi $\nu = x_{1} e_{1} + \dots + x_{n} e_{n} \in V ; \ \nu \in \mathrm{Ker} f$ khi và chỉ khi $(x_{1}, . . . , x_{n})$ là nghiệm của phương trình tuyến tính thuần nhất
+
+$$
+\left\{
+\begin{array}{l}
+a_{11} x_{1} + \dots + a_{1 n} x_{n} = 0 \\
+\dots \dots \dots \dots \dots \dots \dots \dots \dots \\
+a_{m1} x_{1} + \dots + a_{mn} x_{n} = 0
+\end{array}
+\right.
+$$
+
+Ví dụ 5.14: Cho ánh xạ tuyến tính $f : \mathbf{P}_{3} \rightarrow \mathbf{P}_{2}$ có công thức xác định ảnh
+
+$$
+\begin{array}{c}
+f(a_{0} + a_{1} t + a_{2} t^{2} + a_{3} t^{3}) = (5a_{0} + 2a_{1} - 3a_{2} + a_{3}) + (4a_{0} + a_{1} - 2a_{2} + 3a_{3})t \\
++ (a_{0} + a_{1} - a_{2} - 2a_{3}) t^{2}.
+\end{array}
+$$
+
+a) Viết biểu thức tọa độ của $f$ trong cơ sở chính tắc.
+
+b) Tìm mặt số của Ker $f$ và $\operatorname{Im} f$:
+
+Giải: a) Đặt $f(a_{0} + a_{1} t + a_{2} t^{2} + a_{3} t^{3}) = b_{0} + b_{1} t + b_{2} t^{2}$, biểu thức tọa độ (5.25) của $f$ trong cơ sở chính tắc có dạng ma trận
+
+$$
+\left[ \begin{array}{l}
+b_{0} \\
+b_{1} \\
+b_{2}
+\end{array} \right]
+=
+\left[ \begin{array}{llll}
+5 & 2 & -3 & 1 \\
+4 & 1 & -2 & 3 \\
+1 & 1 & -1 & -2
+\end{array} \right]
+\left[ \begin{array}{l}
+a_{0} \\
+a_{1} \\
+a_{2} \\
+a_{3}
+\end{array} \right].
+$$
+
+Đẳng phương trình (5.26):
+
+$$
+\left\{
+\begin{array}{ll}
+b_{0} = 5 a_{0} + 2 a_{1} - 3 a_{2} + a_{3} \\
+b_{1} = 4 a_{0} + a_{1} - 2 a_{2} + 3 a_{3} \\
+b_{2} = a_{0} + a_{1} - a_{2} - 2 a_{3}
+\end{array}
+\right.
+$$
+
+$$
+q = b_{0} + b_{1} t + b_{2} t^{2} \in \operatorname{Im} f \Longleftrightarrow \exists p = a_{0} + a_{1} t + a_{2} t^{2} + a_{3} t^{3} : f(p) = q.
+$$
+
+Điều này trong đường dẫn đến hệ phương trình (với các ẩn $a_{0}, a_{1}, a_{2}, a_{3}$) sau có nghiệm:
+
+$$
+\left\{
+\begin{array}{ll}
+5 a_{0} + 2 a_{1} - 3 a_{2} + a_{3} = b_{0} \\
+4 a_{0} + a_{1} - 2 a_{2} + 3 a_{3} = b_{1} \\
+a_{0} + a_{1} - a_{2} - 2 a_{3} = b_{2}
+\end{array}
+\right.
+$$
+
+Sử dụng phương pháp khử Gauss ta được:
+
+$$
+\begin{array} { r } {  \begin{array} { c c c c c } { \cdot } & { 2 } & { - 3 } & { 1 } & { b _ { 0 } } \\ { 4 } & { 1 } & { - 2 } & { 3 } & { b _ { 1 } } \\ { 1 } & { 1 } & { - 1 } & { - 2 } & { b _ { 2 } } \end{array} |  [ \begin{array} { c c c c c } { 1 } & { 1 } & { - 1 } & { - 2 } & { b _ { 2 } } \\ { 3 } & { 0 } & { - 1 } & { 5 } & { b _ { 1 } - b _ { 2 } } \\ { 0 } & { 0 } & { 0 } & { 0 } & { b _ { 2 } + b _ { 1 } - b _ { 0 } } \end{array} ]  [ \begin{array} { c c c c c } { - 2 } & { 1 } & { 0 } & { - 7 } & { 2 b _ { 2 } - b _ { 1 } } \\ { 3 } & { 0 } & { - 1 } & { 5 } & { b _ { 1 } - b _ { 2 } } \\ { 0 } & { 0 } & { 0 } & { 0 } & { b _ { 2 } + b _ { 1 } - b _ { 0 } } \end{array} ] ( \ast ) } \end{array}
+$$
+
+Vậy hệ phương trình có nghiệm khi $b _ { 2 } + b _ { 1 } - b _ { 0 } = 0 \Longleftrightarrow b _ { 0 } = b _ { 2 } + b _ { 1 }$
+
+Do đó $q = b _ { 0 } + b _ { 1 } t + b _ { 2 } t ^ { 2 } \in \operatorname{Im} f \Leftrightarrow q = ( b _ { 1 } + b _ { 2 } ) + b _ { 1 } t + b _ { 2 } t ^ { 2 } = b _ { 1 } ( 1 + t ) + b _ { 2 } ( 1 + t ^ { 2 } ).$ Vậy Imf có một cơ sở là $\left\{ q _ { 1 } = 1 + t , q _ { 2 } = 1 + t ^ { 2 } \right\}$
+
+Theo Nhận xét 5.2 và tương tự Ví dụ 5.4 ta cũng nhận thấy rằng hai vector 
+\[
+\begin{array}{c}
+\hat{\mathrm{~co\dot{b}dtki}\hat{y}cia\mathrm{ma}trian}\left[\hat{\bar{\bf{\Psi}}}\hat{\bar{\bf{\Psi}}}2\mathrm{~c\hat{3}~}\hat{\mathrm{~\Sigma~}}{\bf\Sigma}^{1}\right]\hat{\mathrm{d}}\hat{\mathrm{~\hat{o}t}}\mathrm{~l\hat{a}~c\hat{3}~cia~c\dot{c}c\check{a}esecectrong}
+\\
+1\mathrm{~c\cdot}1 - 1\mathrm{~c\cdot}2\mathrm{~\Sigma}
+\end{array}
+\]
+mà tạo thành cơ sở của $\operatorname{Im} f$ ：
+
+$\mathrm{Chương 4.1}$ $\left\{ r_{1}, r_{2} \right\}, \left\{ r_{1}, r_{3} \right\}, \left\{ r_{1}, r_{4} \right\}, \left\{ r_{2}, r_{3} \right\}, \left\{ r_{2}, r_{4} \right\}, \left\{ r_{3}, r_{4} \right\}$ là các cơ sở của $\operatorname{Im} f$, trong đó $r_{1} = 5 + 4t + t^{2}, r_{2} = 2 + t + t^{2}, r_{3} = -3 - 2t - t^{2}, r_{4} = 1 + 3t - 2t^{2}.$
+
+$p = a_{0} + a_{1}t + a_{2}t^{2} + a_{3}t^{3} \in \mathrm{Ker} f$ khi và chỉ khi $a_{0}, a_{1}, a_{2}, a_{3}$ là nghiệm của hệ phương trình thuần nhất:
+
+$$
+\left\{
+\begin{array}{c}
+5a_{0} + 2a_{1} - 3a_{2} + a_{3} = 0 \\
+4a_{0} + a_{1} - 2a_{2} + 3a_{3} = 0 \\
+a_{0} + a_{1} - a_{2} - 2a_{3} = 0
+\end{array}
+\right.
+$$
+
+Sử dụng kết quả trong ma trận biến đổi tương đương $(^{*})$ ta được hệ tương đương:
+
+$$
+\left\{
+\begin{array}{c}
+-2a_{0} + a_{1} - 7a_{3} = 0 \\
+3a_{0} - a_{2} + 5a_{3} = 0
+\end{array}
+\right.
+$$
+
+$$
+\begin{array} { c } { p = a _ { 0 } + a _ { 1 } t + a _ { 2 } t ^ { 2 } + a _ { 3 } t ^ { 3 } \in \mathrm { Ker } f \Leftrightarrow p = a _ { 0 } + ( 2 a _ { 0 } + 7 a _ { 3 } ) t + ( 3 a _ { 0 } + 5 a _ { 3 } ) t ^ { 2 } + a _ { 3 } t ^ { 3 } } \\ { \Leftrightarrow p = a _ { 0 } ( 1 + 2 t + 3 t ^ { 2 } ) + a _ { 3 } ( 7 t + 5 t ^ { 2 } + t ^ { 3 } ) . } \end{array}
+$$
+
+Vậy Ker $f$ có một cơ sở là $\left\{ p _ { 1 } = 1 + 2 t + 3 t ^ { 2 }, p _ { 2 } = 7 t + 5 t ^ { 2 } + t ^ { 3 } \right\}$
+
+# Nhận xét 5.5:
+
+a) Từ hai Định lý $5 . 1 1 , 5 . 1 2$ và các định lý qua 5.13, 5.14 và các ví dụ trên ta thấy rằng một bài toán về ánh xạ tuyến tính có thể chuyển sang bài toán ma trận, hệ phương trình tuyến tính và ngược lại. Chẳng hạn để chứng minh định thức của ma trận $A$ khác O ta chỉ cần chứng minh cho dãy đồng cấu tuyến tính $f$ với $A = \left[ f \right] _ { \mathcal { B } }$ là đơn cấu hoặc toàn cấu, hay hệ phương trình tuyến tính tương ứng (5.25), (5.26) có duy nhất nghiệm.
+
+b) dim Ker $f$ là chiều của không gian nghiệm của hệ phương trình thuận nhât (5.28), hạng của ma trận hệ số bằng hạng của $f$. Ứng dụng Định lý 4.5-b) ta nhận được dạng thức (5.13) của Định lý 5.6: $\mathrm { dim } V = r ( f ) + \mathrm { dim } \mathrm { Ker } f$
+
+# 5.5. CHÉO HÓA MA TRẬN
+
+Trong phần này ta giải quyết bài toán: Với tự động câu tuyến tính $f$ của không gian $V$, hãy tìm một cơ sở của $V$ để ma trận của $f$ trong cơ sở này có dạng chéo:
+
+$$
+\begin{bmatrix}
+\lambda_1 & \cdots & 0 \\
+\vdots & \ddots & \vdots \\
+0 & \cdots & \lambda_n 
+\end{bmatrix}.
+$$
+
+Bài toán trên tương đương với bài toán: Cho ma trận $A$ tìm ma trận không suy biến $T$ sao cho ${ T } ^ { - 1 } A T$ có dạng chéo.
+
+Ta sẽ chỉ ra khi nào bài toán này có lời giải, cách tìm cơ sở để ma trận của $f$ trong cơ sở này có dạng chéo hay cách tìm ma trận $T$ sao cho ${ T } ^ { - 1 } A T$ có dạng chéo.
+
+# 5.5.1. Không gian con bất biến
+
+Định nghĩa 5.8: Không gian con $W$ của không gian vector $V$ được gọi là bất biến đối với tự động câu $f$ của $V$ nếu $f(W) \subset W$:
+
+Giả sử $\left\{ \boldsymbol { e } _ { 1 } , . . . , \boldsymbol { e } _ { k } \right\}$ là một cơ sở của $W$, ta bổ sung để $\left\{ \boldsymbol { e } _ { 1 } , . . . , \boldsymbol { e } _ { k } , \boldsymbol { e } _ { k + 1 } , . . . , \boldsymbol { e } _ { n } \right\}$ là cơ sở của $V$. Với cơ sở này ma trận của $f$ có dạng
+
+$$
+\begin{array}{l}
+\left[ \begin{array}{l}
+\left[ \begin{array}{l}
+\left[ \begin{array}{l}
+\left[ \begin{array}{l}
+\left[ \begin{array}{l}
+\left[ \begin{array}{l}
+\left[ \begin{array}{l}
+1 \\
+1
+\end{array} \right]
+\end{array} \right]
+\end{array} \right]
+\end{array} \right]
+\end{array} \right] 
+\\
+\left[ \begin{array}{l}
+\left[ \begin{array}{r l}
+\left[ \begin{array}{l}
+\left[ \begin{array}{l}
+1 \\
+\left[ 1 \right]
+\end{array} \right]
+\end{array} \right]
+\end{array} \right] 
+\end{array} \right].
+\end{array}
+$$
+
+Nếu $V = W _ { 1 } \oplus W _ { 2 }$, $W _ { 1 } , W _ { 2 }$ bất biến đối với $f$ thì có thể chọn cơ sở để ma trận của $f$ có dạng
+
+![](images/db62d1a3f23f255dd23c41cd6461aed8203eeeba2c582ffdf818840da03a1e77.jpg)  
+$k \quad n-k$
+
+# 5.5.2. Véc tơ riêng, giá trị riêng
+
+Định nghĩa 5.9: $\lambda$ được gọi là giá trị riêng của ma trận $A = \left[ a _ { i j } \right] _ { n \times n }$ nếu tồn tại $x _ { 1 } , . . . , x _ { n }$ không đồng thời bằng O sao cho
+
+$$
+A { \left[ \begin{array} { l } { x _ { 1 } } \\ { \vdots } \\ { x _ { n } } \end{array} \right] } = \lambda { \left[ \begin{array} { l } { x _ { 1 } } \\ { \vdots } \\ { x _ { n } } \end{array} \right] } { \mathrm { ~ hay ~ } } \left( A - \lambda I \right) { \left[ \begin{array} { l } { x _ { 1 } } \\ { \vdots } \\ { x _ { n } } \end{array} \right] } = { \left[ \begin{array} { l } { 0 } \\ { \vdots } \\ { 0 } \end{array} \right] } .
+$$
+
+Khi đó $\nu = ( x _ { 1 } , . . . , x _ { n } ) \in \mathbb { R } ^ { n } , \nu \neq \mathbf { 0 }$ được gọi là vector riêng trung với giá trị riêng $\lambda$:
+
+Như vậy các vector riêng trung với giá trị riêng $\lambda$ là các nghiệm khác không của phương trình thuần nhất (5.30). Không gian nghiệm của (5.30) được gọi là không gian riêng ứng với giá trị riêng $\lambda$:
+
+Định nghĩa 5.10: $\lambda$ được gọi là một giá trị riêng của tự đồng cấu $f$ nếu tồn tại vector $\nu \in V$ :
+
+$\nu$ là vector riêng ứng với giá trị riêng $\lambda$ :
+
+# Ví dụ 5.15:
+
+a) Xét ánh xạ đồng nhất $\operatorname { Id } _ { V } : V \to V$. Với mỗi $\nu \in V$, ${ \mathrm { Id } } _ { V } ( \nu ) = \nu$:
+
+Vậy 1 là một giá trị riêng của $\mathrm { Id } _ { V }$, và mọi $\pm \mathbf { 0 }$ là vector riêng tương ứng.
+
+b) $f : \mathbb { R } ^ { 2 } \to \mathbb { R } ^ { 2 }$ xác định bởi: $f ( x , y ) = ( 3 x - y , - 2 x + 4 y ) .$
+
+Đề dạng thay $f(x, x) = 2x^2$. Vậy 2 là một giá trị riêng và mọi vector $\boldsymbol{\nu} = (x, x)$: $x \neq 0$ là vector riêng tương ứng.
+
+b) Phép quay góc $\theta$ (Ví dụ 5.1) $f_{\theta}: \mathbb{R}^2 \to \mathbb{R}^2; (x, y) \mapsto f_{\theta}(x, y) = (x \cos \theta - y \sin \theta, x \sin \theta + y \cos \theta)$
+
+· Khi $\scriptstyle \theta = 0$， $f_{\theta}$ là ảnh xạ đồng nhất $\mathrm{Id}_{\mathbb{R}^2}$: chỉ có giá trị riêng là 1.
+
+· Khi $\theta = \pi$， $f_{\theta}$: chỉ có giá trị riêng là -1.
+
+· Khi $\theta \neq 0, \pi$，$f_{\theta}$ không có giá trị riêng.
+
+![](images/ba9ae71b4019e4d0b17e847d1a346f34eef5bda4d4264e9e7b383e36bafa43b7.jpg)
+
+Định nghĩa 5.11: Cho tự đồng cấu $f$ của $V$. Với mỗi $\lambda \in \mathbb{R}$, ký hiệu
+
+$$
+V_{\lambda} = \left\{\nu \in V \big| f(\nu) = \lambda \nu \right\} = \mathrm{Ker}\big(f - \lambda \mathrm{Id}_V\big).
+$$
+
+Rõ ràng $V_{\lambda}$ là không gian con của $V$. Nếu $\lambda$ là giá trị riêng thì $V_{\lambda}$ được gọi là không gian riêng ứng với giá trị riêng $\lambda$.
+
+Định nghĩa 5.15: 
+1) $\lambda$ là giá trị riêng của $f$ khi và chỉ khi $V_{\lambda} \neq \left\{\mathbf{0}\right\}$:
+2) Nếu $\lambda$ là giá trị riêng của $f$ thì mọi vector $\boldsymbol{\nu} \neq \mathbf{0}$ của $V_{\lambda}$ đều là vector riêng ứng với giá trị riêng $\lambda$.
+
+3) Với mọi $\lambda$, không gian con $\boldsymbol{V}_{\lambda}$ bất biến đối với $f$:
+
+Chứng minh: 1), 2) suy ra trực tiếp từ định nghĩa. Ta chứng minh 3):
+
+· Trong trường hợp $\lambda$ không phải là giá trị riêng thì $V_{\lambda} = \left\{ \mathbf{0} \right\}$, khi đó $f(V_{\lambda}) = \left\{ f(\mathbf{0}) \right\} \subset V_{\lambda}$. · Trường hợp $\lambda$ là giá trị riêng thì $\nabla V_{\lambda}$ là không gian riêng: Với mọi $\nu \in V_{\lambda} \Longrightarrow f(\nu) = \lambda \nu \Longrightarrow f(f(\nu)) = f(\lambda \nu) = \lambda f(\nu) \Longrightarrow f(\nu) \in V_{\lambda}$.
+
+Nhận xét 5.6: Giả sử $A = [f]_{\mathcal{B}}$ là ma trận của tu động cấu $f$ trong cơ sở $\mathcal{B}$. Khi đó $\nu \in V$ là vector riêng ứng với giá trị riêng $\lambda$ của $f$ khi và chỉ khi $(\nu)_{\mathcal{B}}$ là vector riêng ứng với giá trị riêng $\lambda$ của $A$. Nghĩa là:
+
+$$
+\nu \in V ; (\nu)_{\mathcal{B}} = (x_1, . . . , x_n), \nu \neq \mathbf{0} : f(\nu) = \lambda \nu \Leftrightarrow (A - \lambda I)\left[\begin{array}{l}
+x_1 \\
+\vdots \\
+x_n
+\end{array}\right] = \left[\begin{array}{l}
+0 \\
+\vdots \\
+0
+\end{array}\right].
+$$
+
+# 5.5.3. Đa thức đặc trưng
+
+Định nghĩa 5.12: $A$ là một ma trận vuông cấp $n$. Định thức
+
+$$
+\mathscr{P}(\lambda) = \mathrm{det}(A - \lambda I)
+$$
+
+(5.34)
+
+là một đa thức bậc $n$ của $\lambda$ được gọi là đa thức đặc trưng của $A$.
+
+Nếu $f$ là một tự đồng cấu trong không gian vector $V$ có ma trận $A = [f]_{\mathcal{B}}$ trong một cơ sở $\mathcal{B}$ nào đó của $V$. Khi đó định thức
+
+$$
+\mathscr{P}(\lambda) = \operatorname*{det}\bigl(f - \lambda \mathbf{I d}_V\bigr) = \operatorname*{det}(A - \lambda I)
+$$
+
+không phụ thuộc vào cơ sở của $V$, và được gọi là đa thức đặc trưng của $f$.
+
+Định lý 5.16: $\lambda_0$ là giá trị riêng của $A$ (tương ứng của $f$) khi và chỉ khi $\lambda_0$ là nghiệm của đa thức đặc trưng của $A$ (tương ứng của $f$).
+
+Chứng minh: $\lambda_0$ là giá trị riêng khi và chỉ khi $V_{\lambda_0} \neq \{\mathbf{0}\}$. Điều này tương đương với các điều sau:
+
+· Ảnh xạ $f - \lambda_0 \operatorname{I d}_V$ không đơn cấu,
+
+· Hệ phương trình tuyến tính thuần nhất (5.33) có nghiệm không tầm thường. Vậy $\lambda_0$ là giá trị riêng khi và chỉ khi $r\big(f - \lambda_0 \mathbf{I d}_V\big) < n$; do đó det$(f - \lambda \operatorname{Id}_V)= 0$ hoặc det$\left(A - \lambda_0 I\right) = 0$. Nghĩa là $\mathcal{S}(\lambda_0) = 0$.
+
+Vi dụ 5.16: Tìm vector riêng và giá trị riêng của tự đồng cấu trong $\mathbb{R}^2$ có ma trận chính tắc là $A = \left[ { \begin{array}{ll}
+3 & -1 \\
+-2 & 4
+\end{array}} \right]$. Đặt đặc trưng
+
+$$
+\mathscr{P}(\lambda) = \left| \begin{array}{ll}
+3 - \lambda & -1 \\
+-2 & 4 - \lambda
+\end{array} \right| = (2 - \lambda)(5 - \lambda) = 0
+$$
+
+có các nghiệm $\lambda_1 = 2, \lambda_2 = 5$:
+
+* Vector riêng $\boldsymbol{\nu} = (x, y)$ ứng với giá trị riêng $\lambda_1 = 2$ là nghiệm khác O của hệ
+
+$$
+(A - \lambda_1 I) \left[ { \begin{array}{l}
+x \\
+y
+\end{array}} \right] = \left[ { \begin{array}{l}
+0 \\
+0
+\end{array}} \right]
+\quad \text{hay} \quad
+\left[ { \begin{array}{ll}
+1 & -1 \\
+-2 & 2
+\end{array}} \right] \left[ { \begin{array}{l}
+x \\
+y
+\end{array}} \right] = \left[ { \begin{array}{l}
+0 \\
+0
+\end{array}} \right].
+$$
+
+Hệ phương trình tương đương với phương trình $x - y = 0 \Rightarrow y = x$:
+
+$$
+\nu = (x, x) = x(1, 1), x \neq 0.
+$$
+
+${*}_{\mathrm{Vec}}$ tới riêng $\boldsymbol{\nu} = (x, y)$ ứng với giá trị riêng $\lambda_{2} = 5$ là nghiệm khác $0$ của hệ
+
+$$
+\left( A - \lambda_{2} I \right) \begin{bmatrix}
+x \\
+y
+\end{bmatrix} = \begin{bmatrix}
+0 \\
+0
+\end{bmatrix} \quad \text{hay} \quad \begin{bmatrix}
+-2 & -1 \\
+-2 & -1
+\end{bmatrix} \begin{bmatrix}
+x \\
+y
+\end{bmatrix} = \begin{bmatrix}
+0 \\
+0
+\end{bmatrix}.
+$$
+
+$\mathrm{H}$ phương trình tương đương với phương trình $2x + y = 0 \Rightarrow y = -2x$:
+
+$$
+\sqrt{\hat{\operatorname{ay}} \nu} = (x, -2x) = x(1, -2); \quad x \neq 0.
+$$
+
+Ví dụ 5.17: Phép quay góc $\theta$ (ví dụ 5.1, 5.14-c) $f_{\theta} \colon \mathbb{R}^{2} \to \mathbb{R}^{2}$ có công thức xác định ảnh $f_{\theta}(x, y) = (x \cos \theta - y \sin \theta, x \sin \theta + y \cos \theta),$
+
+Đa thức đặc trưng:
+
+$$
+\mathcal{P}(\lambda) = \operatorname*{det}\left(f_{\theta} - \lambda I d_{V}\right) = \begin{vmatrix}
+\cos \theta - \lambda & -\sin \theta \\
+\sin \theta & \cos \theta - \lambda
+\end{vmatrix} = (\cos \theta - \lambda)^2 + \sin^2 \theta.
+$$
+
+Do đó $f_{\theta}$ chỉ có giá trị riêng là $\lambda$ thỏa mãn
+
+$$
+\left( \cos \theta - \lambda \right) ^ { 2 } + \sin ^ { 2 } \theta = 0 \Longleftrightarrow \left\{ \begin{array} { l l } { \left( \cos \theta - \lambda \right) ^ { 2 } = 0 } \\ { \sin ^ { 2 } \theta = 0 } \end{array} \right\} \big \{ \lambda = \cos \theta \Longrightarrow \left\{ \begin{array} { l l } { \displaystyle \beta \theta = 0 } \\ { \displaystyle \lambda = 1 } \\ { \displaystyle \sin \theta = 0 } \end{array} \right\} \left\{ \begin{array} { l l } { \displaystyle \theta = 0 } \\ { \displaystyle \lambda = 1 } \\ { \displaystyle \sin \theta = 0 } \end{array} \right\} \left\{ \begin{array} { l l } { \displaystyle \theta = 0 } \\ { \displaystyle \lambda = 1 } \\ { \displaystyle \sin \theta = 0 } \end{array} \right\} .
+$$
+
+Định lý 5.17: Mọi tự động cầu $f$ trong không gian thực $n$ chiều $( n \geq 1 )$ đều có ít nhất một không gian con bất biến một chiều hoặc hai chiều.
+
+Chứng minh: Giả sử $A$ là ma trận của tự động cầu $f$ trong cơ sở $\left\{ \boldsymbol { e } _ { 1 } , . . . , \boldsymbol { e } _ { n } \right\}$. Đa thức đặc trưng $\mathscr { P } ( \lambda ) = \left| A - \lambda I \right|$ là đa thức bậc $n$ của $\lambda$：
+
+Trường hợp phương trình $\mathcal { P } ( \lambda ) = 0$ có nghiệm thực $\lambda _ { 0 }$，theo Định lý 5.16 và Định nghĩa 5.10 tồn tại $\mathbf { v } \neq \mathbf { 0 }$ sao cho $f ( \mathbf { v } ) = \lambda _ { 0 } \mathbf { v }$. Không gian con một chiều sinh bởi $\left\{ \mathbf { v } \right\}$ bất biến đối với $f$：
+
+Trường hợp phương trình $\mathcal{P}(\lambda) = 0$ không có nghiệm thực thì ít nhất một nghiệm phức $\lambda_1 = a + ib$ (xem Phụ lục 2).
+
+Xét hệ phương trình tuyến tính phức
+
+$$
+\left[ A - \lambda_1 I \right] \left[ \begin{array}{l} z_1 \\ \vdots \\ z_n \end{array} \right] = \left[ \begin{array}{l} 0 \\ \vdots \\ 0 \end{array} \right].
+$$
+
+Rõ ràng hệ phương trình này không thể có nghiệm thực, vì nếu $z_1, \ldots, z_n$
+
+$$
+A \left[ \begin{array}{l} z_1 \\ \vdots \\ z_n \end{array} \right] \text{ thuoc nhung } \lambda_1 \left[ \begin{array}{l} z_1 \\ \vdots \\ z_n \end{array} \right] \text{ phíc, vì l là số phức.}
+$$
+
+Mặt khác, vì $\det(A - \lambda_1 I) = 0$ nên hệ phương trình (5.36) tồn tại nghiệm $(z_1, \ldots, z_n)$ không đồng thời bằng 0.
+
+Giả sử $z_1 = x_1 + iy_1$, …, $z_n = x_n + iy_n$ thì:
+
+》 $x_{1}, \ldots, x_{n}$ không thể đồng thời bằng 0 (vì nếu $x_{1} = \ldots = x_{n} = 0$ thì $y_{1}, \ldots, y_{n}$ là nghiệm thực của phương trình).   
+Và ($y_{1}, \ldots, y_{n}$ không thể đồng thời bằng 0 (vì nếu $y_{1} = \ldots = y_{n} = 0$ thì $x_{1}, \ldots, x_{n}$ là nghiệm thực của phương trình).   
+》 $x_{1}, \ldots, x_{n}$ và $y_{1}, \ldots, y_{n}$ không tỷ lệ. Vậy, nếu $x_{1} = k y_{1}, \ldots, x_{n} = k y_{n}$ thì $(z_{1}, \ldots, z_{n}) = (k + i)(y_{1}, \ldots, y_{n})$ 
+\[
+\begin{array}{r}
+\big [ A - \lambda _ { 1 } I \big ] \left[ \begin{array} { l } { z _ { 1 } } \\ { \vdots } \\ { z _ { n } } \end{array} \right] = \big [ A - \lambda _ { 1 } I \big ] ( k + i ) \left[ \begin{array} { l } { y _ { 1 } } \\ { \vdots } \\ { y _ { n } } \end{array} \right] = \left[ \begin{array} { l } { 0 } \\ { \vdots } \\ { 0 } \end{array} \right] \Rightarrow \big [ A - \lambda _ { 1 } I \big ] \left[ \begin{array} { l } { y _ { 1 } } \\ { \vdots } \\ { y _ { n } } \end{array} \right] = \left[ \begin{array} { l } { 0 } \\ { \vdots } \\ { 0 } \end{array} \right]
+\end{array}
+\]
+
+điều này chứng tỏ $y_{1}, \ldots, y_{n}$ là nghiệm thực của hệ, vô lý.
+
+Đặt ${ \boldsymbol \nu } = x _ { 1 } e _ { 1 } + . . . + x _ { n } e _ { n } , \ u = y _ { 1 } e _ { 1 } + . . . + y _ { n } e _ { n } ,$ với $x _ { 1 } , . . . , x _ { n } ; \ y _ { 1 } , . . . , y _ { n }$ không đồng thời bằng O và không tỉ lệ với hai véc tơ $\left\{ \nu , u \right\}$ độc lập.
+
+Mặt khác bằng cách đồng nhất phần thực và phần ảo của số phức ta suy ra
+
+$$
+A { \left[ \begin{array} { l } { x _ { 1 } } \\ { \vdots } \\ { x _ { n } } \end{array} \right] } = a { \left[ \begin{array} { l } { x _ { 1 } } \\ { \vdots } \\ { x _ { n } } \end{array} \right] } - b { \left[ \begin{array} { l } { y _ { 1 } } \\ { \vdots } \\ { y _ { n } } \end{array} \right] } ; A { \left[ \begin{array} { l } { y _ { 1 } } \\ { \vdots } \\ { y _ { n } } \end{array} \right] } = b { \left[ \begin{array} { l } { x _ { 1 } } \\ { \vdots } \\ { x _ { n } } \end{array} \right] } + a { \left[ \begin{array} { l } { y _ { 1 } } \\ { \vdots } \\ { y _ { n } } \end{array} \right] } .
+$$
+
+$$
+\left\{ { \begin{array} { l } { f ( \nu ) = a \nu - b u } \\ { f ( u ) = b \nu + a u } \end{array} } \right. .
+$$
+
+Do đó $W = \operatorname { span } \left\{ \nu , u \right\}$ là không gian con hai chiều bất biến đối với $f$：
+
+# 5.5.4. Tùy động cấu hình hóa được
+
+Định nghĩa 5.13: 1) Tự đồng cấu $f$ trong không gian vector V chéo hóa được nếu tồn tại một cơ sở của $V$ để ma trận của $f$ trong cơ sở này có dạng chéo.
+
+Từ định nghĩa suy ra rằng $f$ chéo hóa được khi và chỉ khi tồn tại một cơ sở của $V$ gồm các vector riêng của $f$:
+
+2) Ma trận vuông $A$ chéo hóa được nếu tồn tại ma trận không suy biến $T$ sao cho ${ \boldsymbol { T } } ^ { - 1 } { \boldsymbol { A } } { \boldsymbol { T } }$ là ma trận chéo.
+
+Định lý 5.18: Nếu $\nu _ { 1 } , . . . , \nu _ { m }$ là các vector riêng ứng với các giá trị riêng phân biệt $\lambda _ { 1 } , . . . , \lambda _ { m }$ của tự đồng cấu $f$ (hoặc ma trận $A$) thì hệ vector $\left\{ \nu _ { 1 } , . . . , \nu _ { m } \right\}$ độc lập tuyến tính.
+
+Chứng minh: Ta chứng minh quy nạp theo $k$ rằng hệ $\left\{ \nu _ { 1 } , . . . , \nu _ { k } \right\}$ độc lập tuyến tính với $1 \leq k \leq m$:
+
+* Khi $k = 1$, hệ một vector $\nu _ { 1 } \neq \mathbf{0}$ là độc lập tuyến tính.
+
+* Giả sử hệ $\left\{ \nu _ { 1 } , . . . , \nu _ { k } \right\}$ độc lập tuyến tính với $1 \leq k \leq m - 1$. Ta chứng minh hệ $\left\{\nu_1, ..., \nu_k, \nu_{k+1}\right\}$ độc lập. Đặt
+
+$$
+\begin{array} { c } { x _ { 1 } \nu _ { 1 } + . . . + x _ { k } \nu _ { k } + x _ { k + 1 } \nu _ { k + 1 } = { \bf 0 } \left( ^ { * } \right) } \\ { \Rightarrow f ( x _ { 1 } \nu _ { 1 } + . . . + x _ { k } \nu _ { k } + x _ { k + 1 } \nu _ { k + 1 } ) = { \bf 0 } } \\ { \Rightarrow \lambda _ { 1 } x _ { 1 } \nu _ { 1 } + . . . + \lambda _ { k } x _ { k } \nu _ { k } + \lambda _ { k + 1 } x _ { k + 1 } \nu _ { k + 1 } = { \bf 0 } . \left( ^ { * * } \right) } \end{array}
+$$
+
+Nhân $\lambda _ { k + 1 }$ vào $(^*)$ rồi trừ cho $(^{**})$ ta được
+
+$$
+( \lambda _ { k + 1 } - \lambda _ { 1 } ) x _ { 1 } \nu _ { 1 } + . . . + ( \lambda _ { k + 1 } - \lambda _ { k } ) x _ { k } \nu _ { k } = { \bf 0 } .
+$$
+
+Vì $\left\{ \nu _ { 1 } , . . . , \nu _ { k } \right\}$ độc lập và các $\lambda _ { 1 } , . . . , \lambda _ { m }$ khác nhau từng đôi một suy ra
+
+$$
+x _ { 1 } = . . . = x _ { k } = 0 \Longrightarrow x _ { k + 1 } = 0 .
+$$
+
+Hệ quả 5.19: Nếu đa thức đặc trưng của tự đồng cấu $f$ trong không gian $n$ chiều $V$ (hoặc ma trận vuông $A$) có đúng $n$ nghiệm thực phân biệt thì $f$ (tương ứng ma trận $A$) chéo hóa được.
+
+Chứng minh: Vì đa thức đặc trưng có $n$ nghiệm phân biệt nên $n$ véc tơ riêng tương ứng với $n$ giá trị riêng này là một hệ độc lập, do đó là mặt cắt của $V$ gồm các véc tơ riêng của $f$. $\mathrm{V}$ chéo hóa được.
+
+Hệ quả 5.20: Giá trị đặc trưng của tự động câu $f$ (hoặc ma trận $A$ vuông cấp $n$) chỉ có các nghiệm thực:
+
+$$
+\mathcal { P } ( \lambda ) = ( - 1 ) ^ { n } ( \lambda - \lambda _ { 1 } ) ^ { m _ { 1 } } . . . ( \lambda - \lambda _ { k } ) ^ { m _ { k } } ,
+$$
+
+với $m _ { 1 } + . . . + m _ { k } = n$ và các $\lambda _ { 1 } , . . . , \lambda _ { k }$ khác nhau trực đối một.
+
+Khi đó $f$ (tương ứng ma trận $A$) chéo hóa được khi và chỉ khi chiều của không gian riêng ứng với giá trị riêng $\lambda _ { i }$ bằng độ bội $m _ { i }$ của nghiệm. Nghĩa là
+
+$$
+\begin{array} { r } { \forall i = 1 , . . . , k : \mathrm { dim } V _ { \lambda _ { i } } = m _ { i } . } \end{array}
+$$
+
+Chứng minh: $( \Longleftarrow )$ : Trong mỗi $V _ { \lambda _ { i } }$ ta chọn $\mathrm { m } _ { i }$ vector. $\mathrm { H }$ các vector góp lại tạo thành cơ sở của $V$ gồm các vector riêng của $f$. Do đó, $f$ chéo hóa được.
+
+$( \Rightarrow )$ : Giả sử $f$ chéo hóa được, khi đó tồn tại cơ sở các vector riêng để ma trận $f$ có dạng chéo
+
+$$
+\left[ \begin{array} { l } { \mu _ { 1 } } \\ { \hphantom { - } O ^ { ' } \mu _ { n } } \end{array} \right] .
+$$
+
+$$
+\implies \mathcal{P}(\lambda) = (-1)^n (\lambda - \mu_1) \ldots (\lambda - \mu_n).
+$$
+
+Suy ra các giá trị riêng $\mu_1, . . . , \mu_n$ phải trùng với $\lambda_1, . . . , \lambda_k$
+
+Vậy có đúng $m_i$ giá trị riêng trong các $\mu_1, . . . , \mu_n$ bằng $\lambda_i$, $i = 1, . . . , k$. Do đó có đúng $m_i$ vector riêng độc lập với giá trị riêng $\lambda_i$, nghĩa là $\mathrm{dim} V_{\lambda_i} = m_i$:
+
+# 5.5.5. Thuật toán chéo hóa
+
+Bài toán 1: Cho tự động cấu $f$ trên không gian $V$. Hay tìm cơ sở của $V$ để ma trận $f$ trong cơ sở này có dạng chéo.
+
+Bài toán 2: Cho ma trận $A$ vuông cấp $n$. Tìm ma trận không suy biến $T$ sao cho ${\boldsymbol{T}}^{-1} {\boldsymbol{A}} {\boldsymbol{T}}$ có dạng chéo.
+
+Cho tự động cấu $f$ trong không gian vector $V$. Giả sử $\mathcal{B} = \left\{ e_1, . . . , e_n \right\}$ là một cơ sở trong $V$ và ma trận của $f$ trong cơ sở $\mathcal{B}$ là $A = \left[ f \right]_{\mathcal{B}}$. Khi đó bài toán 1 trở thành bài toán 2. Ngược lại, cho ma trận vuông $A$ ta xét ánh xạ tuyến tính $f : \mathbb{R}^n \rightarrow \mathbb{R}^n$ có ma trận trong cơ sở chính tắc là $A$. Khi đó bài toán 2 trở thành bài toán 1.
+
+Vì vậy, để giải hai bài toán này ta cần tìm cơ sở $\mathcal{B}' = \left\{ e_1', ..., e_n' \right\}$ gồm các véc-tơ riêng của $f$ và ma trận cần tìm $T$ chính là ma trận chuyển từ cơ sở $\mathcal{B}$ sang $\mathcal{B}':$
+
+Ta cần thực hiện các bước sau:
+
+Buộc 1: Viết đa thức đặc trưng dạng:
+
+$$
+\mathcal{P}(\lambda) = (\lambda_1 - \lambda)^{m_1} ... (\lambda_k - \lambda)^{m_k} Q(\lambda),
+$$
+
+trong đó $Q(\lambda)$ là đa thức không có nghiệm thực.
+
+Nếu $m_1 + \cdots + m_k < n$ (khi bậc của $Q(\lambda) \geq 2): f$ không chéo hóa được.
+
+Nếu $m_1 + \cdots + m_k = n$ thì $\lambda_1, ..., \lambda_k$ là các giá trị riêng phân biệt; tiếp tục bước 2.
+
+Buộc 2: Với mỗi giá trị riêng $\lambda_i$, tìm mặt cơ sở của không gian riêng $V_{\lambda_i}$. Các véc-tơ riêng $\nu = x_1 e_1 + ... + x_n e_n$ có $(x_1, ..., x_n)$ là nghiệm khác O của hệ phương trình thuận nhất:
+
+$$
+[A - \lambda_i I] \left[ \begin{array}{l}
+x_1 \\
+\vdots \\
+x_n 
+\end{array} \right]
+= \left[ \begin{array}{l}
+0 \\
+\vdots \\
+0 
+\end{array} \right].
+$$
+
+$$
+\mathrm{dim} V_{\lambda_i} = d_i = n - r(A - \lambda_i I).
+$$
+
+》Nếu $d_{i} < m_{i}$ với $i$ nào đó, $1 \leq i \leq k$ thì $f$ không hợp chế dụng.
+
+》Nếu $d_{i} = m_{i}$, $\forall i : 1 \leq i \leq k$. Tiếp tục bước 3.
+
+Bước 3: Với giá trị riêng $\lambda_{i}$, $i = 1, ..., k$ ta đã chọn được $m_{i}$ véc tơ riêng độc lập tuyến tính. Gộp tất cả các véc tơ này ta được hệ gồm $m_{1} + ... + m_{k} = n$ véc tơ riêng độc lập, đó là cơ sở $\mathcal{B}'$ cần tìm. Ma trận $T$ có các cột là toạ độ của hệ véc tơ $\mathcal{B}'$.
+
+Ví dụ 5.18: Chéo hoá ma trận $A = \left[ \begin{array} { l l l } { 2 } & { - 1 } & { 0 } \\ { 9 } & { 4 } & { 6 } \\ { - 8 } & { 0 } & { - 3 } \end{array} \right]$.
+
+Đại thức đặc trưng của $A : \mathcal{P}(\lambda) = \left| \begin{array} { c c c } { 2 - \lambda } & { - 1 } & { 0 } \\ { 9 } & { 4 - \lambda } & { 6 } \\ { - 8 } & { 0 } & { - 3 - \lambda } \end{array} \right| = (3 - \lambda) \left| \begin{array} { c c c } { 1 } & { 0 } & { 0 } \\ { 9 } & { - 5 - \lambda } & { - 3 } \\ { - 8 } & { 8 } & { 5 - \lambda } \end{array} \right| = (\lambda + 1)(\lambda - 1)(3 - \lambda)$.
+
+A có ba giá trị riêng phân biệt $\lambda_{1} = -1$, $\lambda_{2} = 1$, $\lambda_{3} = 3$ nên chéo hoá được.
+
+*) Vector riêng $\nu = (x, y, z) \neq \mathbf{0}$ ứng với giá trị riêng $\lambda_1 = -1$ là nghiệm khác không của hệ phương trình
+
+$$
+\left[ A - \lambda_1 I \right] \begin{bmatrix} x \\ y \\ z \end{bmatrix} = \begin{bmatrix} 3 & -1 & 0 \\ 9 & 5 & 6 \\ -8 & 0 & -2 \end{bmatrix} \begin{bmatrix} x \\ y \\ z \end{bmatrix} = \begin{bmatrix} 0 \\ 0 \\ 0 \end{bmatrix}.
+$$
+
+$$
+\begin{array}{r}
+\left[ \begin{array}{ccc} 3 & -1 & 0 \\ 9 & 5 & 6 \\ -8 & 0 & -2 \end{array} \right] \sim \left[ \begin{array}{ccc} 3 & -1 & 0 \\ 0 & 0 & 0 \\ -8 & 0 & -2 \end{array} \right] \sim \left[ \begin{array}{ccc} 3 & -1 & 0 \\ 0 & 0 & 0 \\ 4 & 0 & 1 \end{array} \right].
+\end{array}
+$$
+
+Vậy hệ phương trình trên đồng dư với hệ $\left\{\begin{array}{l} 3x - y = 0 \\ 4x + z = 0 \end{array}\right.$ $\Rightarrow \left\{\begin{array}{l} y = 3x \\ z = -4x \end{array}\right.$.
+
+$$
+\nu \in V_{\lambda_1} \Leftrightarrow \nu = (x, 3x, -4x) = x(1, 3, -4) \text{ cho } e'_1 = (1, 3, -4).
+$$
+
+**) Vector riêng $\nu = (x, y, z) \neq \mathbf{0}$ ứng với giá trị riêng $\lambda_2 = 1$ là nghiệm khác không của hệ phương trình
+
+$$
+\left[ A - \lambda_2 I \right] \left[ \begin{array}{l} x \\ y \\ z \end{array} \right] = \left[ \begin{array}{lll} 1 & -1 & 0 \\ 9 & 3 & 6 \\ -8 & 0 & -4 \end{array} \right] \left[ \begin{array}{l} x \\ y \\ z \end{array} \right] = \left[ \begin{array}{l} 0 \\ 0 \\ 0 \end{array} \right].
+$$
+
+Ta có:
+
+$$
+\left[ \begin{array}{lll} 1 & -1 & 0 \\ 9 & 3 & 6 \\ -8 & 0 & -4 \end{array} \right] \left[ \begin{array}{lll} 1 & -1 & 0 \\ 0 & 0 & 0 \\ -2 & 0 & -1 \end{array} \right].
+$$
+
+$$
+\operatorname{V} \hat{\mathbf{a}} \operatorname{y} \operatorname{híc} \operatorname{phụng} \operatorname{trình} \operatorname{tuyến} \operatorname{tụcông} \operatorname{ducông} \operatorname{v\coth} \hat{\mathbf{e}}: \left| \begin{array}{ll} x & -y \\ 2x & +z = 0 \end{array} \right| \overset{y = x}{\underset{z = -2x}{\sum}}.
+$$
+
+$$
+\nu \in V_{\lambda_2} \Leftrightarrow \nu = (x, x, -2x) = x(1, 1, -2) \text{ chọn } e'_2 = (1, 1, -2).
+$$
+
+Giá trị riêng $\lambda_3 = 3$ có vector riêng $\boldsymbol{\nu} = (x, y, z)$ là nghiệm khác không.
+
+[-1 -1 0][x] [0]
+$\begin{bmatrix} 9 & 1 & 6 \\ -8 & 0 & -6 \end{bmatrix} \begin{bmatrix} y \\ z \end{bmatrix} = \begin{bmatrix} 0 \\ 0 \end{bmatrix}$
+
+Ta có ${\begin{array}{ccc}
+-1 & -1 & 0 \\
+9 & 1 & 6 \\
+-8 & 0 & -6
+\end{array}}$ và ${\begin{array}{ccc}
+1 & 1 & 0 \\
+0 & 0 & 0 \\
+4 & 0 & 3
+\end{array}}.$
+
+Vậy hệ phương trình trên đồng dạng với hệ:
+
+$$
+\begin{array}{c} 
+\left\{
+\begin{array}{l}
+x + y = 0 \\ 
+4x + 3z = 0 
+\end{array}
+\right.
+\Rightarrow \left\{
+\begin{array}{l}
+y = -x \\
+z = \frac{-4}{3} x
+\end{array}
+\right. .
+\end{array}
+
+$$
+
+Cơ sở mới $\mathrm {gồm}$ các vector riêng $\mathcal { B } ^ { \prime } = \left\{ e _ { 1 } ^ { \prime } , e _ { 2 } ^ { \prime } , e _ { 3 } ^ { \prime } \right\}$
+
+$$
+T = \begin{bmatrix} 
+1 & 1 & 3 \\ 
+3 & 1 & -3 \\ 
+-4 & -2 & -4 
+\end{bmatrix}, \mathrm {thì} T^{-1} A T = \begin{bmatrix}
+-1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 3
+\end{bmatrix}.
+$$
+
+Ví dụ 5.19: Xét tự đồng cấu $f : \mathbb { R } ^ { 3 } \to \mathbb { R } ^ { 3}$ xác định bởi:
+
+$$
+f ( x , y , z ) = ( 3x - 2y, -2x + 3y, z ).
+$$
+
+Tìm một cơ sở của $\mathbb { R } ^ { 3 }$ để ma trận của $f$ trong cơ sở này có dạng chéo.
+
+Ma trận chính tắc của $f : A = \left[ \begin{array} { l l l } { 3 } & { - 2 } & { 0 } \\ { - 2 } & { 3 } & { 0 } \\ { 0 } & { 0 } & { 1 } \end{array} \right] .$
+
+Đa thức đặc trưng
+
+$$
+\overset{\triangledown}{\boldsymbol{\varphi}}(\lambda) = \left| \begin{array} { l l l } { 3 - \lambda } & { - 2 } & { 0 } \\ { - 2 } & { 3 - \lambda } & { 0 } \\ { 0 } & { 0 } & { 1 - \lambda } \end{array} \right| = \left| \begin{array} { l l l } { 1 - \lambda } & { - 2 } & { 0 } \\ { 1 - \lambda } & { 3 - \lambda } & { 0 } \\ { 0 } & { 0 } & { 1 - \lambda } \end{array} \right| = \left| \begin{array} { l l l } { 1 - \lambda } & { - 2 } & { 0 } \\ { 0 } & { 5 - \lambda } & { 0 } \\ { 0 } & { 0 } & { 1 - \lambda } \end{array} \right| = (5 - \lambda)(1 - \lambda)^2
+$$
+
+Do đó $A$ có các giá trị riêng $\lambda_1 = 5$ và $\lambda_2 = 1~(\text{kề p})$
+
+* Giá trị riêng $\lambda_1 = 5$ có véc tơ riêng $\boldsymbol{\nu} = (x, y, z)$ là nghiệm khác không của hệ phương trình: 
+$$\left[ \begin{array} { r r r } { -2 } & { -2 } & { 0 } \\ { -2 } & { -2 } & { 0 } \\ { 0 } & { 0 } & { -4 } \end{array} \right] \left[ \begin{array} { l } { x } \\ { y } \\ { z } \end{array} \right] = \left[ \begin{array} { l } { 0 } \\ { 0 } \\ { 0 } \end{array} \right],$$
+
+c G ${ \left\{ \begin{array} { l l } { x + y } & { = 0 } \\ { z = 0 } & { } \end{array} \right. } \Rightarrow { \left\{ \begin{array} { l l } { y = - x } \\ { z = 0 } \end{array} \right. } .$
+
+$$
+\nu = \left( - y , y , 0 \right) = y ( - 1 , 1 , 0 ) \mathrm { cho } e ^ { \prime } _ { 1 } = \left( - 1 , 1 , 0 \right) .
+$$
+
+\*\*) Giá trị riêng $\mathscr{λ}_{2} = 1$ có vector riêng $\boldsymbol{\nu} = ( x , y , z )$ là nghiệm khác không của hệ phương trình
+
+$$
+{ \left[ \begin{array} { l l l } { 2 } & { - 2 } & { 0 } \\ { - 2 } & { 2 } & { 0 } \\ { 0 } & { 0 } & { 0 } \end{array} \right] } { \left[ \begin{array} { l } { x } \\ { y } \\ { z } \end{array} \right] } = { \left[ \begin{array} { l } { 0 } \\ { 0 } \\ { 0 } \end{array} \right] } .
+$$
+
+(2) Hệ phương trình trên tương đương với phương trình: $x - y = 0$, $z$ tùy ý.
+
+$\nu = (x, x, z) = x(1, 1, 0) + z(0, 0, 1)$ chọn $e_{2}' = (1, 1, 0), e_{3}' = (0, 0, 1).$ Chọn cơ sở $\mathcal{B}' = \left\{ e_{1}', e_{2}', e_{3}' \right\}; f(e_{1}') = 5e_{1}', f(e_{2}') = e_{2}', f(e_{3}') = e_{3}'.$ Ma trận của $f$ trong cơ sở $\mathcal{B}'$ có dạng $A' = [f]_{\mathcal{B}'} = \left[ \begin{array}{ccc}
+5 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 1
+\end{array} \right].$
+
+Ví dụ 5.20: Cho tự đồng cấu $f : \mathbf{P}_{2} \to \mathbf{P}_{2}$ có công thức xác định ảnh
+
+$$
+f(a_{0} + a_{1}t + a_{2}t^{2}) = (-a_{0} + a_{1} + a_{2}) + (a_{0} - a_{1} + a_{2})t + (a_{0} + a_{1} - a_{2})t^{2}.
+$$
+
+Tìm ma trận cơ sở của $\mathbf{P}_{2}$ để ma trận của $f$ trong cơ sở này có dạng chéo.
+
+Ma trận chính tắc của $f : A = \left[ \begin{array}{ccc}
+-1 & 1 & 1 \\
+1 & -1 & 1 \\
+1 & 1 & -1
+\end{array} \right].$
+
+Đa thức đặc trưng của $A$ (20)
+
+$$
+\mathcal { P } ( \lambda ) = \left| \begin{array} { c c c } { - 1 - \lambda } & { 1 } & { 1 } \\ { 1 } & { - 1 - \lambda } & { 1 } \\ { 1 } & { 1 } & { - 1 - \lambda } \end{array} \right| = \left| \begin{array} { c c c } { 1 - \lambda } & { 1 } & { 1 } \\ { 1 - \lambda } & { - 1 - \lambda } & { 1 } \\ { 1 - \lambda } & { 1 } & { - 1 - \lambda } \end{array} \right|
+$$
+
+$$
+\begin{array} { c c c }
+{ 1 - \lambda } & { 1 } & { 1 } \\
+{ = ( 1 - \lambda ) \left| \begin{array}{cc}
+-2-\lambda & 0 \\
+0 & -2-\lambda
+\end{array} \right| } \\
+{ 0 } & { -2-\lambda } & { 0 } \\
+{ 0 } & { 0 } & { -2-\lambda }
+\end{array} = ( 1 - \lambda ) ( \lambda + 2 ) ^ { 2 } .
+$$
+
+Đa thức đặc trưng có nghiệm $\lambda _ { 1 } = 1$ và $\lambda _ { 2 } = - 2 ~ (\text{kép}) .$ 
+
+Véc tơ riêng $p = a _ { 0 } + a _ { 1 } t + a _ { 2 } t ^ { 2 } \neq \mathbf{0}$ ứng với giá trị riêng $\lambda _ { 1 } = 1$ là nghiệm khác không của hệ phương trình thuận nhât
+
+$$
+\left[ \begin{array} { c c c }
+- 2 & 1 & 1 \\
+1 & - 2 & 1 \\
+1 & 0 & - 2 
+\end{array} \right]
+\left[ \begin{array} { l }
+a _ { 0 } \\
+a _ { 1 } \\
+a _ { 2 }
+\end{array} \right] = 
+\left[ \begin{array} { c }
+0 \\
+0 \\
+0
+\end{array} \right].
+$$
+
+$$
+\mathrm{Tác} \diamond [ { \begin{array} { c c c } { - 2 } & { 1 } & { 1 } \\ { 1 } & { - 2 } & { 1 } \\ { 1 } & { 1 } & { - 2 } \end{array} } ] [ { \begin{array} { c c c } { - 2 } & { 1 } & { 1 } \\ { 3 } & { - 3 } & { 0 } \\ { 0 } & { 0 } & { 0 } \end{array} } ] [ { \begin{array} { c c c } { - 1 } & { 0 } & { 1 } \\ { 1 } & { - 1 } & { 0 } \\ { 0 } & { 0 } & { 0 } \end{array} } ] .
+$$
+
+$$
+\mathrm{Vậy hệ phương trình trền trong trường đồng dạng với vế phải;}\left\{ \begin{array} { l l } { - a _ { 0 } + a _ { 2 } = 0 } \\ { a _ { 0 } - a _ { 1 } } & { = 0 } \end{array} \right. \Longrightarrow \left\{ \begin{array} { l l } { a _ { 0 } = a _ { 2 } } \\ { a _ { 0 } = a _ { 1 } } \end{array} \right. .
+$$
+
+$$
+p \in V _ { \lambda _ { 1 } } \Leftrightarrow p = a _ { 0 } + a _ { 0 } t + a _ { 0 } t ^ { 2 } = a _ { 0 } ( 1 + t + t ^ { 2 } ) \mathrm{~chọn~} p _ { 1 } ^ { \prime } = 1 + t + t ^ { 2 } .
+$$
+
+Véc tơ riêng $p = a _ { 0 } + a _ { 1 } t + a _ { 2 } t ^ { 2 } \neq \mathbf{0}$ trong với giá trị riêng $\lambda _ { 2 } = - 2$ là nghiệm khác không của hệ phương trình thuần nhất.
+
+$$
+{ \begin{array} { r } { { \left[ \begin{array} { l l l } { 1 } & { 1 } & { 1 } \\ { 1 } & { 1 } & { 1 } \\ { 1 } & { 1 } & { 1 } \end{array} \right] } { \left[ \begin{array} { l } { a _ { 0 } } \\ { a _ { 1 } } \\ { a _ { 2 } } \end{array} \right] } = { \left[ \begin{array} { l } { 0 } \\ { 0 } \\ { 0 } \end{array} \right] } . } \end{array} }
+$$
+
+Hệ phương trình trên tương đương với phương trình: $a _ { 0 } + a _ { 1 } + a _ { 2 } = 0$.
+
+（20 $p \in V _ { \lambda _ { 2 } } \Longleftrightarrow p = - a _ { 1 } - a _ { 2 } + a _ { 1 } t + a _ { 2 } t ^ { 2 } = a _ { 1 } ( - 1 + t ) + a _ { 2 } ( - 1 + t ^ { 2 } ).$   
+Chọn $p'_{2} = - 1 + t, p'_{3} = - 1 + t ^ { 2 }.$ （20
+
+Xét cơ sở $\begin{array} { r } { \cdot \mathcal { B } ' = \left\{ p _ { 1 } ', p _ { 2 } ', p _ { 3 } ' \right\}; f ( p _ { 1 } ') = p _ { 1 } ', f ( p _ { 2 } ') = - 2 p _ { 2 } ', f ( p _ { 3 } ') = - 2 p _ { 3 } '. } \end{array}$
+
+Ma trận của $f$ trong cơ sở $\mathcal { B } '$ có dạng $A' = [ f ]_{\mathcal { B } '} = \left[ \begin{array} { c c c } { 1 } & { 0 } & { 0 } \\ { 0 } & { - 2 } & { 0 } \\ { 0 } & { 0 } & { - 2 } \end{array} \right] .$
+
+Vi dụ 5.21: Chéo hóa ma trận $A = \left[ \begin{array} { l l l } { 1 } & { - 3 } & { 4 } \\ { 4 } & { - 7 } & { 8 } \\ { 6 } & { - 7 } & { 7 } \end{array} \right] .$
+
+Đa thức đặc trưng của $A$
+
+$$
+\varphi ( \lambda ) = \left| \begin{array} { l l l } { 1 - \lambda } & { - 3 } & { 4 } \\ { 4 } & { - 7 - \lambda } & { 8 } \\ { 6 } & { - 7 } & { 7 - \lambda } \end{array} \right| = \left| \begin{array} { l l l } { 1 - \lambda } & { - 3 } & { 4 } \\ { 2 + 2 \lambda } & { - 1 - \lambda } & { 0 } \\ { 6 } & { - 7 } & { 7 - \lambda } \end{array} \right| = ( 1 + \lambda ) \left| \begin{array} { l l l } { - 5 - \lambda } & { - 3 } & { 4 } \\ { 0 } & { - 1 } & { 0 } \\ { - 8 } & { - 7 } & { 7 - \lambda } \end{array} \right|
+$$
+
+$$
+= ( 1 + \lambda ) \left| \begin{array} { l l l } { - 1 - \lambda } & { - 3 } & { 4 } \\ { 0 } & { - 1 } & { 0 } \\ { - 1 - \lambda } & { - 7 } & { 7 - \lambda } \end{array} \right| = ( 1 + \lambda ) \left| \begin{array} { l l l } { - 1 - \lambda } & { - 3 } & { 4 } \\ { 0 } & { - 1 } & { 0 } \\ { 0 } & { - 4 } & { 3 - \lambda } \end{array} \right| = ( 3 - \lambda ) ( \lambda + 1 ) ^ { 2 } .
+$$
+
+Đa thức đặc trưng có nghiệm $\lambda _ { 1 } = - 1 (\text{kép})$ và $\lambda _ { 2 } = 3$:
+
+Giá trị riêng $\lambda _ { 1 } = - 1$ có véc tơ riêng $\boldsymbol{ \nu } = ( x, y, z )$ là nghiệm khác không của hệ phương trình
+
+$$
+\begin{array}{r}
+\left[ \begin{array}{lll}
+2 & -3 & 4 \\
+4 & -6 & 8 \\
+6 & -9 & 8
+\end{array} \right]
+\left[ \begin{array}{l}
+x \\
+y \\
+z
+\end{array} \right] = 
+\left[ \begin{array}{l}
+0 \\
+0 \\
+0
+\end{array} \right].
+\end{array}
+$$
+
+Biến đổi ta được hệ phương trình tương đương:
+
+$$
+\begin{array}{r}
+\left\{
+\begin{array}{l}
+2x - 3y + 4z = 0 \\
+y - 2z = 0 
+\end{array} \right.
+\Rightarrow 
+\left\{
+\begin{array}{l}
+x = z \\
+y = 2z
+\end{array} \right.
+\Rightarrow \nu = (x, 2x, x) = x(1, 2, 1).
+\end{array}
+$$
+
+Không gian riêng $V_{\lambda_2} = \left\{ x(1, 2, 1) \mid x \in \mathbb{R} \right\}$ có $\dim V_{\lambda_2} = 1 < 2$ nên ma trận A không chéo hóa được.
+
+# CHƯƠNG 5
+
+## 5.1. a), c), e) là ánh xạ tuyến tính.
+
+## 5.2. a) là ánh xạ tuyến tính.
+
+$$
+A = \left[ \begin{array}{lll}
+1 & 3 & 4 \\
+1 & 0 & -7 
+\end{array} \right] ~ . ~ \mathbf{b}) ~ f(x, y, z) = (x + 3y + 4z, x - 7z).
+$$
+
+5.4. $f ( x , y ) = f ( x e _ { 1 } + y e _ { 2 } ) = x f ( e _ { 1 } ) + y f ( e _ { 2 } )$
+$= x ( a e _ { 1 } + c e _ { 2 } ) + y ( b e _ { 1 } + d e _ { 2 } ) = ( a x + b y , c x + d y ) .$
+$f: \mathbb{R}^n \rightarrow \mathbb{R}^m$
+$( x _ { 1 } , \ldots, x _ { n } ) \mapsto f ( x _ { 1 } , \ldots, x _ { n } ) = ( y _ { 1 } , \ldots, y _ { m } )$ xác định bởi
+$\left[ \begin{array} { l } { y _ { 1 } } \\ { \vdots } \\ { y _ { m } } \end{array} \right] = \left[ a _ { i j } \right] \left[ \begin{array} { l } { x _ { 1 } } \\ { \vdots } \\ { x _ { n } } \end{array} \right] .$
+
+5.5.
+a) $( 5 , 10 ) \in \operatorname{Ker} f$
+
+b) $( a , b ) \in \operatorname{Im} f$ khi và chỉ khi hệ phương trình
+$\left\{ \begin{array}{ll}
+2x - y = a \\
+-8x + 4y = b 
+\end{array} \right.$ có nghiệm. Xảy ra khi $b = -4a$. Vậy $(1,-4), (-3,12) \in \operatorname{Im} f$
+
+$$
+\mathrm{Ker} f = \left\{ \begin{bmatrix}
+a & 0 \\
+0 & -a 
+\end{bmatrix} \mid a \in \mathbb{R} \right\};
+\quad \mathrm{Im} f = \left\{ \begin{bmatrix}
+x & y \\
+y & x + y
+\end{bmatrix} \mid x, y \in \mathbb{R} \right\}.
+$$
+
+5.7. Cách 1: Gọi ${ \cal T } \mathrm{~là~ma~trân~chuyể~nê~cộ~s\vec{\sigma}~}$ $T = \left[ \begin{array}{llll}
+{1} & {1} & {1} & {1} \\
+{0} & {1} & {1} & {1} \\
+{0} & {0} & {1} & {1} \\
+{0} & {0} & {0} & {1}
+\end{array} \right]$
+$\Rightarrow A' = T^{-1}AT = \left[ \begin{array}{cccc}
+{-2} & {0} & {1} & {0} \\
+{1} & {-4} & {-8} & {-7} \\
+{1} & {4} & {6} & {4} \\
+{1} & {3} & {4} & {7}
+\end{array} \right] .$
+
+Cách 2: Đặt $e_{1}' = e_1, e_{2}' = e_1 + e_2, e_{3}' = e_1 + e_2 + e_3, e_{4}' = e_1 + e_2 + e_3 + e_4.$
+
+$$
+\Rightarrow e_1 = e_1', e_2 = e_2' - e_1', e_3 = e_3' - e_2', e_4 = e_4' - e_3'.
+$$
+
+$$
+f(e_{1}') = f(e_1) = e_1 + 3e_2 + 2e_3 + 3e_4 = -2e_{1}' + e_{2}' + e_{3}' + e_{4}' ;
+$$
+
+$f (e_{2}^{\prime}) = f(e_{1} + e_{2}) = 3e_{1} + 3e_{2} + 7e_{3} + 3e_{4} = 0e_{1}^{\prime} - 4e_{2}^{\prime} + 4e_{3}^{\prime} + 3e_{4}^{\prime};$ $f(e_{3}^{\prime}) = f(e_{1} + e_{2} + e_{3}) = 3e_{1} + 2e_{2} + 5e_{3} + 4e_{4} = e_{1}^{\prime} - 8e_{2}^{\prime} + 6e_{3}^{\prime} + 4e_{4}^{\prime};$ $f(e_{4}^{\prime}) = f(e_{1} + e_{2} + e_{3} + e_{4}) = 4e_{1} + 4e_{2} + 11e_{3} + 7e_{4} = 0e_{1}^{\prime} - 7e_{2}^{\prime} + 4e_{3}^{\prime} + 7e_{4}^{\prime};$
+
+{ \ 4 } ^ { \prime } + 4 e _ { 4 } ^ { \prime } + 4 e _ { 4 } ^ { \prime } + 4 e _ { 4 } ^ { \prime } + 4 e _ { 4 } ^ { \prime } + 4 e _ { 4 } ^ { \prime } + 4 e _ { 4 } ^ { \prime } + 4 e _ { 4 } ^ { \prime } + 4 e _ { 4 } ^ { \prime } + 4 e _ { 4 } ^ { \prime } + 4 e _ { 4 } ^ { \prime } + 4 e _ { 4 } ^ { \prime } + 4 e _ { 4 } ^ { \prime }$
+
+5.8.a) $A = \left[ { \begin{array} { r r r } { 1 } & { - 1 } & { 3 } \\ { 5 } & { 6 } & { - 4 } \\ { 7 } & { 4 } & { 2 } \end{array} } \right]$
+
+$$
+\operatorname{Ker} f = \left\{ t (-14, 19, 11) \big| t \in \mathbb{R} \right\}, \quad \operatorname{Im} f = \left\{ a (1, 0, 2) + b (0, 1, 1) \big| a, b \in \mathbb{R} \right\}.
+$$
+
+$$
+A = { \left[ \begin{array} { l l l } { 2 } & { 0 } & { - 1 } \\ { - 1 } & { 0 } & { 2 } \\ { 0 } & { 0 } & { 0 } \end{array} \right] },
+$$
+
+$$
+\operatorname{Ker} f = \left\{ t (0, 1, 0) \big| t \in \mathbb{R} \right\},
+$$
+
+$$
+\operatorname{Im} f = \left\{ a (1, 0, 0) + b (0, 0, 1) \big| a, b \in \mathbb{R} \right\}.
+$$
+
+$$
+A = { \left[ \begin{array} { l l l } { 2 } & { 2 } & { - 8 } \\ { 1 } & { 6 } & { 1 } \\ { 3 } & { 6 } & { - 9 } \\ { 1 } & { 5 } & { 0 } \end{array} \right] }, \quad \operatorname{Ker} f = \left\{ z (5, -1, 1) \big| z \in \mathbb{R} \right\},
+$$
+
+$$
+\operatorname{Im} f = \left\{ b (-8, 1, -9, 0) + d (10, 0, 12, 1) \big| b, d \in \mathbb{R} \right\}.
+$$
+
+$$
+A = { \left[ \begin{array} { l l l l } { 1 } & { 4 } & { 5 } & { 9 } \\ { 3 } & { - 2 } & { 1 } & { - 1 } \\ { - 1 } & { - 1 } & { 0 } & { - 1 } \\ { 2 } & { 3 } & { 5 } & { 8 } \end{array} \right] }, \quad \operatorname{Ker} f = \left\{ t (0, -1, -1, -1) \big| t \in \mathbb{R} \right\},
+$$
+
+$$
+\mathrm{Im} f = \left\{ a(14, 0, 0, 13) + b(0, 14, 0, 5) + c(0, 0, 1, 0) \big| a, b, c \in \mathbb{R} \right\}.
+$$
+
+5.9. $\mathrm{Cách 1:} A^{\prime} = T^{-1}AT = \left[ \begin{array}{ccc}
+3 & 3 & 3 \\
+-6 & -6 & -2 \\
+6 & 5 & -1
+\end{array} \right], T = \left[ \begin{array}{ccc}
+1 & 1 & 1 \\
+1 & 1 & 0 \\
+1 & 0 & 0
+\end{array} \right], T^{-1} = \left[ \begin{array}{ccc}
+0 & 0 & 1 \\
+0 & 1 & -1 \\
+1 & -1 & 0
+\end{array} \right].$
+
+$\underline{\mathrm{Cách 2:}} \colon (\text{Xem bài tap 7}) : e_{1}^{\prime} = e_1 + e_2 + e_3 \qquad \Longrightarrow e_2^{\prime} = e_2 - e_3, \quad e_3^{\prime} = e_1$
+
+$f(e_{\iota}^{\prime}) = f(e_{\iota} + e_{\iota} + e_{\lambda}) = 3e_{\iota} - 2e_{\iota} + 3e_{\lambda} = 3e_{\iota}$
+
+$^{\prime} - 6e_{\iota}^{\prime} + 6e_{\iota}^{\prime}; \\ f(e_{\iota}^{\prime}) = f(e_{\iota} + e_{\iota}) = 3e_{\iota}^{\prime} - 6e_{\iota}^{\prime} + 5e_{\iota}^{\prime}; \\ f(e_{\iota}^{\prime}) = f(e_{\iota}) = 3e_{\iota}^{\prime} - 2e_{\iota}^{\prime} - e_{\iota}^{\prime}.$
+
+5.10.a) $\left\{ \nu _ { 1 } , \nu _ { 2 } , \nu _ { 3 } \right\}$ độc lập tuyến tính do độ dài là một cơ sở.
+
+b) Từ hệ phương trình 
+$\left\{ \begin{array} { l l }
+{ f ( e _ { 1 } ) + 2 f ( e _ { 2 } ) + 3 f ( e _ { 3 } ) = e _ { 1 } ^ { \prime } } \\
+{ 2 f ( e _ { 1 } ) + 5 f ( e _ { 2 } ) + 3 f ( e _ { 3 } ) = e _ { 2 } ^ { \prime } } \\
+{ f ( e _ { 1 } ) + 10 f ( e _ { 3 } ) = e _ { 2 } ^ { \prime } }
+\end{array} \right.$
+suy ra $f ( e _ { 1 } ) = ( 3 0 , - 9 ) , f ( e _ { 2 } ) = ( - 1 0 , 3 ) , f ( e _ { 3 } ) = ( - 3 , 1 )$
+$\Rightarrow f ( x , y , z ) = ( 3 0 x - 1 0 y - 3 z , - 9 x + 3 y + z ).$ Hoặc $A ^ { \prime } = A T , T ^ { - 1 } = \left[ \begin{array} { l l l }
+{ 1 } & { 2 } & { 1 } \\
+{ 2 } & { 5 } & { 0 } \\
+{ 3 } & { 3 } & { 1 0 }
+\end{array} \right] \Rightarrow T = \left[ \begin{array} { l l l }
+{ 3 0 } & { - 1 7 } & { - 5 } \\
+{ - 2 0 } & { 7 } & { 2 } \\
+{ - 9 } & { 3 } & { 1 }
+\end{array} \right].$
+
+5.11. $p ( f ) ( x , y ) = ( 4 x - y , - 2 x + 5 y )$
+
+5.13. a) $\left[ f (\nu_1) \right]_{\mathcal{B}} = (1, 2, 6), \left[ f(\nu_2) \right]_{\mathcal{B}} = (3, 0, -2), \left[ f(\nu_3) \right]_{\mathcal{B}} = (-1, 5, 4).$  
+b) $f(\nu_1) = 16 + 5x + 19x^2, f(\nu_2) = -6 - 5x + 5x^2,$  
+$f(\nu_3) = 7 + 40x + 15x^2.$  
+c) $f(1 + x^2) = f(\nu_1 - \nu_2) = 22 + 56x + 14x^2.$
+
+5.14.a) Xét $\mathbb{R}^n \xrightarrow{\ B\ } \mathbb{R}^n \xrightarrow{\ A\ } \mathbb{R}^n$
+
+$\mathrm{Im}(AB) = \mathrm{Im}\,A \Longrightarrow r(AB) \leq r(A)$  
+Đặt $A' = A|_{\mathrm{Im}\,B}: \mathrm{Im}\,B \longrightarrow \mathbb{R}^n$ thì $AB = A'B \Rightarrow \operatorname{Im}(AB) = \operatorname{Im}(A'B)$  
+$\Rightarrow r(AB) = r(A'B) = r(A') = r(B) - \dim\mathrm{Ker}(A').$  
+(\*) $\alpha \Longrightarrow r(AB) \leq \min(r(A), r(B)).$  
+$r(AB) \geq r(B) - \dim\mathrm{Ker}\,A \geq r(B) - (n - r(A)) = r(A) + r(B) - n.$
+
+b $(A + B) (\mathbb{R}^n) \subset A(\mathbb{R}^n) + B(\mathbb{R}^n)$  
+$\begin{array}{rl}
+&\Rightarrow \dim(A + B)(\mathbb{R}^n) \leq \dim(A(\mathbb{R}^n) + B(\mathbb{R}^n)) \leq \dim A(\mathbb{R}^n) + \dim B(\mathbb{R}^n) \\
+&\Rightarrow r(A + B) \leq r(A) + r(B).
+\end{array}$
+
+$$
+\mathbb{R}^n \xrightarrow{\quad C \quad} \mathbb{R}^n \xrightarrow{\quad B \quad} \mathbb{R}^n \xrightarrow{\quad A \quad} \mathbb{R}^n
+$$
+
+5.15. Đặt $A' = A\big|_{\mathrm{Im}\,BC}$ thì $AB = A'B$ và $A''BC = A'B C = ABC$  
+$r(BC) = r(A') + \mathrm{dim}\,\mathrm{Ker}(A') = r(ABC) + \mathrm{dim}\,\mathrm{Ker}(A')$  
+$\begin{array}{rl}
+&\qquad \leq r(ABC) + \dim\,\mathrm{Ker}(A') = r(ABC) + (r(B) - r(A B)) \\
+&\qquad \leq r(BC) + r(AB) \leq r(ABC) + r(B).
+\end{array}$
+
+5.16. $A^2 = I \Rightarrow$ det $A \neq 0 \Rightarrow r(A) = n$ và $(A + I)(A - I) = \mathbf{0}$  
+$\Rightarrow n = r(2A) = r(A + I + A - I) \leq r(A + I) + r(A - I) = n.$
+
+5.17. Xét $\mathbb{R}^p {\xrightarrow{\Delta}} \mathbb{R}^n {\xrightarrow{\Delta}} \mathbb{R}^m$
+
+(2 a) Đặt $A' = A { \Big| }_{\mathrm{Im}\, B} : \mathrm{Im}\, B \longrightarrow \mathbb{R}^n$ thì $AB = A'B$. 
+
+$$
+\begin{array}{rl}
+& \left\{ (BX)^t \in \mathbb{R}^n \big| A' BX = ABX = \mathbf{0} \right\} = \operatorname{Ker}\, A' \\
+& \Rightarrow \dim \left\{ (BX)^t \in \mathbb{R}^n \big| ABX = \mathbf{0} \right\} = r(B) - r(A'B) = r(B) - r(AB).
+\end{array}
+$$
+
+(2 b) $r(AB) = r(B) \Leftrightarrow \dim \left\{ (BX)^t \in \mathbb{R}^n \big| ABX = \mathbf{0} \right\} = 0$
+
+$$
+\Leftrightarrow \left\{ (BX)^t \in \mathbb{R}^n \big| ABX = \mathbf{0} \right\} = \left\{\mathbf{0}\right\} \Leftrightarrow (ABX = \mathbf{0} \Rightarrow BX = \mathbf{0}).
+$$
+
+5.18. Gọi \( k_0 \) là số nguyên dương bé nhất sao cho \( A^{k_0} = \mathbf{0} \Rightarrow \forall \nu \in V \) sao cho \( A^{k_0 - 1}(\nu) \neq \mathbf{0} \Rightarrow \left\{\nu, A(\nu), \ldots, A^{k_0 - 1}(\nu)\right\} \) là tập độc lập tuyến tính \(\Rightarrow k_0 \leq n.\)
+
+5.19. \( f^j(e_j) = \mathbf{0} \Rightarrow f^n(e_j) = \mathbf{0}. \)
+
+5.20. a) \(\det(f) = \left| { 1 \atop 3 } \begin{array}{ccc} 2 & 0 & -1 \\ 2 & -4 & 0 \\ 3 & -3 & 1 \end{array} \right| = -11.\)
+
+\(\det(f) = \left| { \begin{array}{cccc} a & 0 & c & 0 \\ 0 & a & 0 & c \\ b & 0 & d & 0 \\ 0 & b & 0 & d \end{array} } \right| = a^2d^2 + b^2c^2 - 2abcd.\)
+
+5.21. a) Nếu tồn tại \( g : W \to V \) sao cho \( f \circ g = \operatorname{Id}_W \) thì \( f \) toàn cấu.
+
+Ngược lại, giả sử $f$ toàn cấu, giả sử $\left\{ \boldsymbol{e}_{1}, \ldots, \boldsymbol{e}_{n} \right\}$ là một cơ sở của $W$. Tồn tại các vector $\left\{\nu_{1}, \ldots, \nu_{n}\right\}$ của $V$ sao cho $f(\nu_{i}) = e_{i}; i = 1, \ldots, n$. Theo Định lý 4.3 tồn tại duy nhất ánh xạ tuyến tính $g : W \to V$ sao cho $g(e_{i}) = \nu_{i}$, $i = 1, \ldots, n$. Khi đó $f \circ g$ là ánh xạ tuyến tính thỏa mãn $f \circ g(e_{i}) = e_{i}; i = 1, \ldots, n \Rightarrow f \circ g = \mathrm{Id}_{W}$.
+
+b) Giả sử $\left\{\nu_{1}, \ldots, \nu_{m}\right\}$ là một cơ sở của $V$. Nếu $f$ đơn cấu thì $\left\{f(\nu_{1}), \ldots, f(\nu_{m})\right\}$ là một hệ độc lập tuyến tính của $W$. Bổ sung thêm để $\left\{f(\nu_{1}), \ldots, f(\nu_{m}), u_{m+1}, \ldots, u_{n}\right\}$ là một cơ sở của $W$. Xét ánh xạ tuyến tính $h : W \to V$ xác định
+$$
+\begin{array}{l}
+h(f(\nu_{i})) = \nu_{i}; i = 1, \ldots, m \\
+h(u_{j}) = 0; j = m + 1, \ldots, n
+\end{array}
+$$
+thì $h \circ f = \mathrm{Id}_{V}.$
+
+5.22.a) Nếu tồn tại $h : V_{2} \to V_{3}$ sao cho $h \circ f = g$ thì
+
+$$
+\nu \in \mathrm{Ker} f \Rightarrow f(\nu) = \mathbf{0} \Longrightarrow g(\nu) = h(f(\nu)) = \mathbf{0}.
+$$
+
+Ngược lại, giả sử $\operatorname{Ker} f \subseteq \operatorname{Ker} g$, giả sử $\{\boldsymbol{e}_1, . . . , \boldsymbol{e}_k\}$ là một cơ sở của $\operatorname{Ker} f$. Bổ sung thêm để $\{\boldsymbol{e}_1, . . . , \boldsymbol{e}_k, \boldsymbol{e}_{k+1}, . . . , \boldsymbol{e}_n\}$ là một cơ sở của $V_1$. Tập $\left\{ f(e_{k+1}), . . . , f(e_n) \right\}$ độc lập tuyến tính nên ta có thể bổ sung thêm để $\left\{ f(e_{k+1}), . . . , f(e_n), u_{n-k+1}, . . . , u_m \right\}$ là một cơ sở của $V_2$. Theo Định lý 4.3 tồn tại duy nhất ánh xạ tuyến tính $h: V_2 \to V_3$ xác định bởi $h(f(e_i)) = g(e_i); i = k+1, . . . , n$, $h(u_j) = 0; j = n-k+1, . . . , m$. Khi đó $h \circ f$ là ánh xạ tuyến tính thỏa mãn $h \circ f (e_i) = g(e_i); i = 1, . . . , n \Rightarrow h \circ f = g.$
+
+b) $g \left( V_{1} \right) = f \left( h \left( V_{1} \right) \right) \subseteq f \left( V_{2} \right). \operatorname{Nếu như lại, giả sử} \left\{\mathbf{\alpha} e_{1}, . . . , e_{n}\right\} \text{ là m một cơ sở của } V_{1}$ khi đó tồn tại hệ véc tơ $\left\{ u_{1}, . . . , u_{n} \right\}$ của $V_{2}$ sao cho $f (u_{i}) = g(e_{i}); i = 1, . . . , n$. Xét ánh xạ tuyến tính $h : V_{1} \to V_{2}$ xác định bởi $h(e_{i}) = u_{i}; i = 1, . . . , n$. Khi đó $f \circ h$ là ánh xạ tuyến tính thỏa mãn $f \circ h (e_{i}) = g(e_{i}); i = 1, . . . , n \Rightarrow f \circ h = g.$
+
+5.23. Xét $A : \mathbb{R}^{n} \to \mathbb{R}^{n}$, $B : \mathbb{R}^{n} \to \mathbb{R}^{n}$ và áp dụng câu a) của bài 18).
+
+$$
+(i) \Longrightarrow (ii) \colon \text{ Cho } f: V \to V \text{ với } \operatorname{Im} f = W_{1}, \operatorname{Ker} f = W_{2}.
+$$
+
+Giả sử $\left\{ \boldsymbol{e}_{1}, \ldots, \boldsymbol{e}_{m} \right\}$ là một cơ sở của $W_{2}$ ta bổ sung thêm được $\left\{ e_{1}, \ldots, e_{m}, e_{m+1}, \ldots, e_{n} \right\}$ là một cơ sở của $V$. Đặt $W_{3} = \mathrm{span}\left\{ e_{m+1}, \ldots, e_{n} \right\}$. Thì $V = W_{2} \oplus W_{3}$ và $f^{\prime} = f|_{W_{3}} : W_{3} \to W_{1}$ là một đẳng cấu.
+
+$(ii) \Rightarrow (i)$: Giả sử $V = W_{2} \oplus W_{3}$ và $h : W_{3} \to W_{1}$ là một đẳng cấu. Giả sử $\left\{ e_{1}, \ldots, e_{m} \right\}$ là một cơ sở của $W_{2}$, $\left\{ e_{m+1}, \ldots, e_{n} \right\}$ là một cơ sở của $W_{3}$.
+
+(2 $\left\{ { e_{1} }, ..., { e_{m} }, { e_{m+1} }, ..., { e_{n} }\right\}$ là một cơ sở của $V$. Xét ánh xạ tuyến tính $f : V \to V$ xác định bởi $f (e_i) = \left\{ \begin{array}{ll} 0 & i = 1, ..., m \\ h(e_i) & i = m+1, ..., n \end{array} \right.$ $\mathrm {~ với ~ Im f = W_1 ~ Ker f = W_2. }$
+
+5.25.Cho $f : V \to W$, giả sử $\big\{ e_{1}, ..., e_{k} \big\}$ là một cơ sở của Ker $f$. Bổ sung thêm để $\left\{ e_{1}, ..., e_{k}, e_{k+1}, ..., e_{n} \right\}$ là một cơ sở của $V$. Theo đó, $\left\{ f(e_{k+1}), ..., f(e_{n}) \right\}$ độc lập tuyến tính nên ta có thể bổ sung thêm để $\left\{ { f(e_{k+1}), ..., f(e_{n}), u_{n+1}, ..., u_{n+m} } \right\}$ là một cơ sở của $W$. Theo Định lý 4.3 tồn tại duy nhất ánh xạ tuyến tính $g : W \to V$ xác định bởi
+
+$$
+\left\{ \begin{array}{ll}
+g(f(e_i)) = e_i & i = k+1, ..., n \\
+g(u_j) = 0 & j = n+1, ..., n+m 
+\end{array} \right.
+\operatorname{thì} \quad f \circ g \circ f (e_{j}) = f(e_{j}); j = 1, ..., n.
+$$
+
+a $\left\{ \begin{array} { l l } { g \circ f \circ g \left( f ( e _ { i } ) \right) = f ( e _ { i } ) ; i = k + 1 , \ldots , n } \\ { g \circ f \circ g ( u _ { j } ) = 0 = g ( u _ { j } ) ; j = n + 1 , \ldots , n + m } \end{array} \right. \Rightarrow f \circ g \circ f = f$
+
+$g \circ f \circ g = g$
+
+5.26. a) $\mathcal{P}(\lambda) = -\lambda(2-\lambda)^{2}; \lambda=0, \nu_{1}=(1,-1,1); \lambda=2, \nu_{2}=(1,0,1).$
+
+b) 
+$\begin{array}{r}
+\mathsf{c}\hat{\mathsf{9}}\mathsf{t} 1 - \mathsf{c}\hat{\mathsf{9}}\mathsf{t} 3 \to \mathsf{c}\hat{\mathsf{9}}\mathsf{t} 1 \Rightarrow \mathcal{P}(\lambda) = (8-\lambda)(1+\lambda)^{2}; \\
+\lambda=-1, \nu_{1}=(1,-2,0), \nu_{2}=(0,-2,1); \lambda=8, \nu_{3}=(2,1,2).
+\end{array}$
+
+c) 
+$\begin{array}{r}
+\mathsf{c}\hat{\mathsf{o}}\mathsf{t} 2 + \mathsf{c}\hat{\mathsf{o}}\mathsf{t} 3 - \mathsf{c}\hat{\mathsf{o}}\mathsf{t} 3 \Rightarrow \mathcal{P}(\lambda) = -(3-\lambda)(2+\lambda)(1-\lambda); \\
+\lambda=-2, \nu_{1}=(0,1,-1); \lambda=3, \nu_{2}=(5,1,4); \lambda=1, \nu_{3}=(3,-1,2).
+\end{array}$
+
+d) 
+$\begin{array}{r}
+\mathsf{hang 1 - hang 2 + hang 3 \Rightarrow hang 1} \\
+\mathcal{S}(\lambda) = (3-\lambda)(1+\lambda)^{2}; \\
+\lambda=-1, \nu_{1}=(1,2,1); \lambda=3, \nu_{2}=(1,2,2).
+\end{array}$
+
+e)
+$\begin{array}{r}
+\mathsf{c}\hat{\Theta}\mathsf{t} 1 - \mathsf{c}\hat{\Theta}\mathsf{t} 3 \to \mathsf{c}\hat{\Theta}\mathsf{t} 1 \Rightarrow \mathcal{P}(\lambda) = -(1+\lambda)(1-\lambda).
+\end{array}$
+
+$bda)^{2};}$ \(\end{array}\) \(20 \lambda = -1, \nu_{1} = (3, 5, 6); \lambda = 1, \nu_{2} = (2, 1, 0), \nu_{3} = (0, 1, 2).\)
+
+$f \mid \mathcal{P}(\lambda) = (2 - \lambda)^{4}; \lambda = 2; \nu_{1} = (1, 1, -1, 0), \nu_{2} = (0, 0, 1, 1).\)
+
+5.27.a) $A = \left[ \begin{array} { l l l l } { 0 } & { 1 } & { \cdots } & { 0 } \\ { \vdots } & { \vdots } & { \ddots } & { \vdots } \\ { 0 } & { 0 } & { \cdots } & { n } \\ { 0 } & { 0 } & { \cdots } & { 0 } \end{array} \right] , \operatorname*{det}(D) = 0, \mathcal{P}(\lambda) = (-\lambda)^{n+1},$  
+b) $A = \left[ \begin{array} { l l l } { 1 } & { 0 } & { 0 } \\ { 0 } & { 2 } & { 0 } \\ { 0 } & { 0 } & { 3 } \end{array} \right] , \operatorname*{det}(D) = 6, \mathcal{P}(\lambda) = (1 - \lambda)(2 - \lambda)(3 - \lambda),$  
+c) $A = \left[ \begin{array} { l l } { 0 } & { 1 } \\ { -1 } & { 0 } \end{array} \right] , \operatorname*{det}(D) = 1, \mathcal{P}(\lambda) = 1 + \lambda^2.$
+
+5.28. a) $\mid \mathcal{P}(\lambda) = (2 - \lambda)^{3}; V_{2} = \left\{\left.x(1, 2, 0)\right| x \in \mathbb{R}\right\}, \dim V_{2} = 1 < 3.$
+
+b) $\cot 1 + \cot 2 + \cot 3 \to \cot 3 \Rightarrow \mathcal{S}(\lambda) = -(1 + \lambda)^{3};$
+
+$V_{-1} = \left\{\left.y(-2, 1, 0) + z(5, 0, 1)\right| y, z \in \mathbb{R}\right\}, \dim V_{-1} = 2 < 3.$
+
+c) $\cot 1 + 2 \cot 2 \to \cot 1; -3 \cot 3 + \cot 2 \to \cot 2 \implies \mathcal{P}(\lambda) = -\lambda^{3};$
+
+$V_{0} = \left\{\left.x(1, 0, 6) + y(0, 1, -3)\right| x, y \in \mathbb{R}\right\}, \dim V_{0} = 2 < 3.$
+
+d) $\cot 1 + \cot 2 + \cot 3 \to \cot 1 \Rightarrow \mathcal{P}(\lambda) = (1 - \lambda)^{3};$
+
+$V_{1} = \left\{\left.x(1, 0, -6) + y(0, 1, 3)\right| x, y \in \mathbb{R}\right\}, \dim V_{1} = 2 < 3.$
+
+$\alpha_{\{S\}}(\lambda) = (1 - \lambda)\lambda^2;$
+
+$V_0 = \left\{\left.y(1, 2, 3)\right| y \in \mathbb{R}\right\}, \dim V_0 = 1 < 2.$
+
+$$
+P = { \left[ \begin{array} { l l l } { 1 } & { 1 } & { 1 } \\ { 1 } & { 0 } & { 1 } \\ { 0 } & { - 1 } & { 2 } \end{array} \right] } , \ P ^ { - 1 } A P = { \left[ \begin{array} { l l l } { - 2 } & { 0 } & { 0 } \\ { 0 } & { - 2 } & { 0 } \\ { 0 } & { 0 } & { 4 } \end{array} \right] } .
+$$
+
+b) $\left| B - \lambda I \right| = ( 4 - \lambda ) ( 2 + \lambda ) ^ { 2 }$, không chéo hóa được.
+
+5.30.a) $\mathrm { h } 1 + \mathrm { h } 2 - \mathrm { h } 3 \Rightarrow \mathcal { P } ( \lambda ) = ( 1 - \lambda ) ( 2 - \lambda ) ( 3 - \lambda ) ;$
+
+$$
+P = { \left[ \begin{array} { l l l } { 2 } & { 1 } & { 1 } \\ { 1 } & { 1 } & { - 1 } \\ { 3 } & { 2 } & { - 1 } \end{array} \right] } , P ^ { - 1 } A P = { \left[ \begin{array} { l l l } { 1 } & { 0 } & { 0 } \\ { 0 } & { 2 } & { 0 } \\ { 0 } & { 0 } & { 3 } \end{array} \right] } .
+$$
+
+$$
+\mathfrak { d } \mathrm { ~ c ~ l ~ } + \mathrm { c } 2 + \mathrm { c } 3 \Rightarrow \mathcal { P } ( \lambda ) = - ( 1 + \lambda ) ( 1 - \lambda ) ^ { 2 } ;
+$$
+
+$$
+P = { \left[ \begin{array} { l l l } { 2 } & { - 1 } & { 3 } \\ { 1 } & { 0 } & { 5 } \\ { 0 } & { 1 } & { 6 } \end{array} \right] } , \ P ^ { - 1 } A P = { \left[ \begin{array} { l l l } { 1 } & { 0 } & { 0 } \\ { 0 } & { 1 } & { 0 } \\ { 0 } & { 0 } & { - 1 } \end{array} \right] } .
+$$
+
+$$
+\mathrm { ~ c ) \ h 1 - h 2 + h 3 \Rightarrow \mathcal { P } ( \lambda ) = ( 1 - \lambda ) ( 2 - \lambda ) ( 3 - \lambda ) ;
+$$
+
+$$
+P = \left[ \begin{array} { l l l } { 1 } & { 1 } & { 1 } \\ { 2 } & { 1 } & { 2 } \\ { 1 } & { 0 } & { 1 } \end{array} \right] , \ P ^ { - 1 } A P = \left[ \begin{array} { l l l } { 1 } & { 0 } & { 0 } \\ { 0 } & { 2 } & { 0 } \\ { 0 } & { 0 } & { 3 } \end{array} \right] .
+$$
+
+$$
+\begin{array} { r } { d) h_1 - h_2 + h_3 \Rightarrow h_1 \Rightarrow \mathcal{P}(\lambda) = (4 - \lambda)(2 + \lambda)^2; } \end{array}
+$$
+
+$$
+P = \left[ \begin{array} { l l l } { 1 } & { 1 } & { 0 } \\ { 1 } & { 1 } & { 1 } \\ { 2 } & { 0 } & { 1 } \end{array} \right] , P ^ { - 1 } A P = \left[ \begin{array} { l l l } { 4 } & { 0 } & { 0 } \\ { 0 } & { -2 } & { 0 } \\ { 0 } & { 0 } & { -2 } \end{array} \right] .
+$$
+
+$$
+\begin{array} { r } { c_1 + c_2 + c_3 \Rightarrow c_1 \Rightarrow \mathcal{P}(\lambda) = (1 - \lambda)(2 - \lambda)^2; } \end{array}
+$$
+
+$$
+P = \left[ \begin{array} { l l l } { 1 } & { 1 } & { 3 } \\ { 1 } & { 0 } & { 1 } \\ { 1 } & { 3 } & { -3 } \end{array} \right] , \ P ^ { - 1 } A P = \left[ \begin{array} { l l l } { 1 } & { 0 } & { 0 } \\ { 0 } & { 2 } & { 0 } \\ { 0 } & { 0 } & { 2 } \end{array} \right] .
+$$
+
+$$
+\left| { \begin{array} { c c c } { 1 - \lambda } & { - 1 } & { 0 } \\ { 2 } & { 3 - \lambda } & { 2 } \\ { 1 } & { 1 } & { 2 - \lambda } \end{array} } \right| = \left| { \begin{array} { c c c } { 1 - \lambda } & { - 1 } & { 0 } \\ { 0 } & { 3 - \lambda } & { 2 } \\ { \lambda - 1 } & { 1 } & { 2 - \lambda } \end{array} } \right| = \left| { \begin{array} { c c c } { 1 - \lambda } & { - 1 } & { 0 } \\ { 0 } & { 3 - \lambda } & { 2 } \\ { 0 } & { 0 } & { 2 - \lambda } \end{array} } \right| .
+$$
+
+$$
+\begin{array} { r } { \gamma _ { 1 } = ( 1 , 0 , - 1 ) , \nu _ { 2 } = ( - 2 , 2 , 1 ) , \nu _ { 3 } = ( 1 , - 2 , - 1 ) ; \ f ( \nu _ { 1 } ) = \nu _ { 1 } , \ f ( \nu _ { 2 } ) = 2 \nu _ { 2 } , \ f ( \nu _ { 3 } ) = 3 \nu _ { 3 } . } \end{array}
+$$
+
+$$
+\bf b) \left| \begin{array} { c c c } { 3 - \lambda } & { 1 } & { 1 } \\ { 2 } & { 4 - \lambda } & { 2 } \\ { 1 } & { 1 } & { 3 - \lambda } \end{array} \right| = ( 6 - \lambda ) \left| \begin{array} { c c c } { 1 } & { 1 } & { 1 } \\ { 2 } & { 4 - \lambda } & { 2 } \\ { 1 } & { 1 } & { 3 - \lambda } \end{array} \right| = ( 6 - \lambda ) \left| \begin{array} { c c c } { 1 } & { 1 } & { 1 } \\ { 0 } & { 2 - \lambda } & { 0 } \\ { 0 } & { 0 } & { 2 - \lambda } \end{array} \right| .
+$$
+
+$$
+\nu _ { 1 } = ( 1 , 2 , 1 ) , \nu _ { 2 } = ( 1 , 0 , - 1 ) , \nu _ { 3 } = ( 0 , 1 , - 1 ) ~ ; ~ f ( \nu _ { 1 } ) = 6 \nu _ { 1 } , ~ f ( \nu _ { 2 } ) = 2 \nu _ { 2 } , ~ f ( \nu _ { 3 } ) = 2 \nu _ { 3 } ~ .
+$$
+
+$$
+\mathbf{c}) \left| \begin{array} { l l l } { 1 - \lambda } & { 2 } & { 2 } \\ { 1 } & { 2 - \lambda } & { - 1 } \\ { 0 } & { 3 - \lambda } & { 3 - \lambda } \end{array} \right| = ( 3 - \lambda ) \left| \begin{array} { l l l } { 1 - \lambda } & { 0 } & { 2 } \\ { 1 } & { 3 - \lambda } & { - 1 } \\ { 0 } & { 0 } & { 1 } \end{array} \right| .
+$$
+
+$$
+\nu _ { 1 } = ( 2 , - 1 , 1 ) , \nu _ { 2 } = ( 1 , 1 , 0 ) , \nu _ { 3 } = ( 1 , 0 , 1 ) ~ ; ~ f ( \nu _ { 1 } ) = \nu _ { 1 } , ~ f ( \nu _ { 2 } ) = 3 \nu _ { 2 } , ~ f ( \nu _ { 3 } ) = 3 \nu _ { 3 } ~ .
+$$
+
+$$
+\begin{array}{c} 
+\left| \begin{array} { c c c } { 1 - \lambda } & { 1 } & { 1 } \\ { 0 } & { 2 - \lambda } & { 1 } \\ { 0 } & { 2 } & { 3 - \lambda } \end{array} \right| = ( 1 - \lambda ) \left| \begin{array} { c c } { 2 - \lambda } & { 1 } \\ { 2 } & { 3 - \lambda } \end{array} \right| = ( 1 - \lambda ) ^ { 2 } ( 4 - \lambda ) .
+\end{array}
+$$
+
+$$
+\nu _{1} = (1, 1, 2), \nu _{2} = (1, 0, 0), \nu _{3} = (0, 1, -1) ; \quad f(\nu _{1}) = 4\nu _{1}, \quad f(\nu _{2}) = \nu _{2}, \quad f(\nu _{3}) = \nu _{3}.
+$$
+
+5.34. $\nu \in \mathrm{Ker} f \Rightarrow f(g(\nu)) = g(f(\nu)) = 0 \Longrightarrow g(\nu) \in \mathrm{Ker} f$. V∈Imf⇒v ∈V:u=f(v).
+
+$$
+\Rightarrow g(u) = g(f(\nu)) = f(g(\nu)) \in \mathrm{Im} f.
+$$
+
+5.35. Ma trận $A$ có dạng $A = \left[ \begin{array}{ccc}
+2 & a & b \\
+0 & 2 & c \\
+0 & 0 & 2
+\end{array} \right], \scriptstyle{\mathrm{tìm~}} a, b, c$ thỏa mãn $\boldsymbol{B} = \boldsymbol{A}^3$:
+
+5.37. Với mọi $\nu \in V : \nu = \nu _1 + . . . + \nu _n, \nu_i \in W_i$
+
+$$
+\nu \in \mathrm{Ker} f \Leftrightarrow f(\nu) = f(\nu_1) + . . . + f(\nu_n) = {\bf 0}.
+$$
+
+$$
+\iff \nu_1 \in \operatorname{Ker} f_1, . . . , \nu_n \in \operatorname{Ker} f_n \iff \nu \in \bigoplus_{i=1}^{n} \operatorname{Ker} f_i.
+$$
+
+$$
+\nu \in \mathrm{Im} f \Leftrightarrow \exists u = u_1 + . . . + u_n ; \nu_i = f(u_i) \Leftrightarrow \nu \in \bigoplus_{i=1}^{n} \mathrm{Im} f_i.
+$$
+
+5.38. Đa thức đặc trưng $\mathscr{P}(\lambda) = -(6-\lambda)(2-\lambda)(1-\lambda)(1+\lambda)$ có các giá trị riêng phân biệt nên tồn tại ma trận $P$ sao cho
+
+$$
+P^{-1}AP = \left[ \begin{array}{llll}
+-1 & 0 & 0 & 0 \\
+0 & 1 & 0 & 0 \\
+0 & 0 & 2 & 0 \\
+0 & 0 & 0 & 6
+\end{array} \right]
+\Rightarrow f(A) = \left[ \begin{array}{llll}
+f(-1) & 0 & 0 & 0 \\
+0 & f(1) & 0 & 0 \\
+0 & 0 & f(2) & 0 \\
+0 & 0 & 0 & f(6)
+\end{array} \right].
+$$
+
+$$
+\Rightarrow \operatorname*{det}f(A) = f(-1)f(1)f(2)f(6) = (2^{100} + 1)(6^{100} + 35).
+$$
+
+5.39. A có 3 giá trị riêng phân biệt là $1/2, 1/3, 1/5$ nên tồn tại ma trận $P$ sao cho
+
+$$
+P^{-1}AP = \left[ \begin{array}{lll}
+1/2 & 0 & 0 \\
+0 & 1/3 & 0 \\
+0 & 0 & 1/5
+\end{array} \right]
+\Rightarrow A^n = P \left[ \begin{array}{lll}
+(1/2)^n & 0 & 0 \\
+0 & (1/3)^n & 0 \\
+0 & 0 & (1/5)^n
+\end{array} \right] P^{-1}.
+$$
+
+$$
+\begin{array} { r l }
+& { P = [ t _ { i j } ] , P ^ { - 1 } = [ s _ { i j } ] \Longrightarrow a _ { i j } ( n ) = t _ { i 1 } s _ { 1 j } ( 1 / 2 ) ^ { n } + t _ { i 2 } s _ { 2 j } ( 1 / 3 ) ^ { n } + t _ { i 3 } s _ { 3 j } ( 1 / 5 ) ^ { n } . } \\
+& { \implies \underset { n \to \infty } { \operatorname* { lim } } a _ { i j } ( n ) = 0 \mathrm { ~với mọi~} i , j = 1 , 2 , 3 .
+}
+\end{array}
+$$
+
+5.40. $\mathscr { P } ( \lambda ) = \lambda ^ { 2 } - ( a + d ) \lambda + ad - bc$ . Nếu $A$ có hai giá trị riêng phân biệt khi và chỉ khi $\Delta = \left( a - d \right) ^ { 2 } + 4bc > 0$ . Nếu $A$ có hai giá trị riêng trùng nhau bằng $\lambda$ và theo đó được hiệud là $A = P \left[ \begin{array} { l l }
+{ \lambda } & { 0 } \\
+{ 0 } & { \lambda }
+\end{array} \right] P ^ { - 1 } = \lambda \left[ \begin{array} { l l }
+{ 1 } & { 0 } \\
+{ 0 } & { 1 }
+\end{array} \right] \Rightarrow \left\{
+\begin{array} { l l }
+{ a = d = \lambda } \\
+{ b = c = 0 }
+\end{array}
+\right. .$
+
+Vậy $A$ chéo hóa được khi và chỉ khi $\left( a - d \right) ^ { 2 } + 4bc > 0 \mathrm { hay } \left\{ a = d \right.$
+
+5.41. Giả sử $f ( \nu _ { i } ) = \lambda _ { i } \nu _ { i } ; i = 1 , . . . , n ; \lambda _ { i } \neq \lambda _ { j } \mathrm { khi } i \neq j$
+
+$$
+\begin{array} { r l }
+& f(g(\nu_i)) = g(f(\nu_i)) = g(\lambda_i\nu_i) = \lambda_i g(\nu_i). \\
+& \\
+& \Rightarrow g(\nu_i) \in \mathrm{Ker}(f - \lambda_i Id) = V_{\lambda_i} \Rightarrow g(\nu_i) = \alpha_i \nu_i \ ; i = 1, . . . , n.
+\end{array}
+$$
+
+Vậy $\left\{\nu_1, . . . , \nu_n\right\}$ cũng là một cơ sở gồm các véc tơ riêng của $g$ nên $g$ chéo hóa được.
+
+5.42. Giả sử $\left\{e_1, . . . , e_n\right\}$ là cơ sở chính tắc của $\mathbb{R}^n$. Đặt $W_1 = \operatorname{span}\left\{\boldsymbol{e}_1, . . . , \boldsymbol{e}_m\right\}$ và $W_2 = \operatorname{span}\left\{e_{m+1}, . . . , e_n\right\}$ thì $\mathbb{R}^n = W_1 \oplus W_2$ và $A(W_1) \subseteq W_1, A(W_2) \subseteq W_2$. Giả sử $\lambda$ là một giá trị riêng của $A \Rightarrow \exists \nu = \nu_1 + \nu_2 \neq 0$ sao cho $A(\nu) = \lambda\nu \Rightarrow A(\nu_1) = \lambda\nu_2, A(\nu_2) = \lambda\nu_1$. Đặt $u = \nu_1 - \nu_2 \neq \mathbf{0}$ thì $A(u) = -\lambda u$ .
+
+5.43. a) $f (\nu) = e_{n-1}, f^2(\nu) = e_{n-2}, ..., f^{n-1}(\nu) = e_1.$
+
+b) Giả sử $\left\{ \nu _ { 1 } , . . . , \nu _ { n } \right\}$ là một cơ sở gồm các vector riêng: $f (\nu_i) = \lambda_i \nu_i$
+
+$$
+\nu = x_1 \nu_1 + ... + x_n \nu_n \Rightarrow f^k(\nu) = x_1 \lambda_1^k \nu_1 + ... + x_n \lambda_n^k \nu_n ; k = 1, ..., n.
+$$
+
+$$
+\mathrm{a}) \quad \Longrightarrow \left| \begin{array} { c c c c } { x _ { 1 } } & { x _ { 2 } } & { \ldots } & { x _ { n } } \\ { x _ { 1 } \lambda _ { 1 } } & { x _ { 2 } \lambda _ { 2 } } & { \ldots } & { x _ { n } \lambda _ { n } } \\ { \ldots } & { \ldots } & { \ldots } & { \ldots } \\ { x _ { 1 } \lambda _ { 1 } ^ { n - 1 } } & { x _ { 2 } \lambda _ { 2 } ^ { n - 1 } } & { \ldots } & { x _ { n } \lambda _ { n } ^ { n - 1 } } \end{array} \right| \neq 0
+$$
+
+Do đó các giá trị $\lambda_i$ khác nhau.
+
+$$
+r(f + g) = \dim (f + g)(V) \leq \dim \bigl( f(V) + g(V) \bigr)
+\leq \dim f(V) + \dim g(V) = r(f) + r(g).
+$$
+
+$$
+\begin{array}{c} { \mathrm{phản tính chất xẩy ra} } \Longleftrightarrow \left\{ { \begin{array} { l } { { f ( V ) \cap g ( V ) = \big \{ { \bf 0 } \big \} \qquad { \mathrm{(bất dang phản tích 1)} } } \\ { { ( f + g ) ( V ) = f ( V ) + g ( V ) { \mathrm{ (bất dang phản tích 2) } } } \end{array} } } \right.
+$$
+
+$$
+\begin{array} { r l } & { \Leftrightarrow \left\{ \underset { \mathrm{dim} V - \mathrm{dim} K\mathrm{er}( f + g ) = 2 \mathrm{dim} V - \mathrm{dim} K\mathrm{er} f - \mathrm{dim} K\mathrm{er} g } { \mathrm{for} N } \right. } \\ & { \Leftrightarrow \left\{ \underset { \mathrm{dim}( \mathrm{Ker} f + \mathrm{Ker} g ) + \mathrm{dim}( \mathrm{Ker} f \cap \mathrm{Ker} g ) = \mathrm{dim} V + \mathrm{dim} K\mathrm{er}( f + g ) } { \mathrm{for} N } \right. } \\ & { \quad \Leftrightarrow \left\{ \underset { \mathrm{Ker} f + \mathrm{Ker} g = V } { \mathrm{for} N } . \right. } \end{array}
+$$
+
+vi $\operatorname{Im} f \cap \operatorname{Im} g = \left\{ \mathbf{0} \right\}$ nên $\operatorname{Ker} f \cap \operatorname{Ker} g = \operatorname{Ker}( f + g ).$
+
+5.45. $( I + A ) X = \mathbf{0} \Rightarrow A X = -X \Rightarrow \left( A X \right)^t = X^t A^t = -X^t A$ 
+$\Rightarrow -X^t X = \left( A X \right)^t X = \left( -X^t A \right) X = -X^t (A X) = X^t X \Rightarrow X = \mathbf{0}.$
+
+5.46.b) $p : V \to V$ sao cho $p \circ p = p$. Đặt $W_1 = \operatorname{Im} p, W_2 = \operatorname{Ker} p$:
+
+$$
+\begin{array}{rl}
+&{\forall \nu \in V: p(\nu - p(\nu)) = \mathbf{0} \Rightarrow \nu - p(\nu) \in W_2 \Rightarrow V = W_1 + W_2.}\\
+&{\forall \nu \in W_1 \cap W_2 \Rightarrow \nu = p(\nu) = \mathbf{0} \Longrightarrow V = W_1 \oplus W_2.}
+\end{array}
+$$
+
+5.48. $A = \left[ \begin{array}{ll} 1 & 1 \\ 0 & 1 \end{array} \right]$ có giá trị riêng là $\lambda = 1$, không gian riêng span $\left\{(1, 0)\right\}$ 
+$A^t = \left[ \begin{array}{ll} 1 & 0 \\ 1 & 1 \end{array} \right]$ có giá trị riêng là $\lambda = 1$, không gian riêng span $\big\{(0, 1)\big\}$.
+
+5.49. $\nu \in W$, $f(g(\nu)) = g(f(\nu)) = g(\lambda\nu) = \lambda g(\nu) \Rightarrow g(\nu) \in W$. Vì vậy, $g(W) \subset W.$
+
+5.50. Hdir: Sử dụng bài tập 49.
+
+5.52. $A(e_i) = e_{i+1}, i = 1, . . . , n - 1; A(e_n) = -a_0e_1 - a_1e_2 - \cdots - a_{n-1}e_n.$
+$A^i(e_1) = e_{i+1}, i = 1, . . . , n - 1; A^n(e_1) = -a_0e_1 - a_1e_2 - \cdots - a_{n-1}e_n.$
+$p(A)(e_1) = A^n(e_1) + a_{n-1}A^{n-1}(e_1) + \dots + a_1A(e_1) + a_0e_1 = \mathbf{0}.$
+$p(A)(e_{i+1}) = p(A)(A^i(e_1)) = A^i(p(A)(e_1)) = A^i(\mathbf{0}) = \mathbf{0}.$
+
+01.0: 0 05.53. i) $\widetilde{f}^k(f^i(\nu)) = f^{k+i}(\nu) = 0$, ∀i≥0.
+
+iv) 0 0 1 00 0[00 0: 0 05.54. $\mathscr{P}_A(\lambda) = \left| A - \lambda I \right| = \left| \begin{array}{cccc} a_{11} - \lambda & a_{12} + 0 & \cdots & a_{1n} + 0 \\ a_{21} + 0 & a_{22} - \lambda & \cdots & a_{2n} + 0 \\ \vdots & \vdots & \ddots & \vdots \\ a_{n1} + 0 & a_{n2} + 0 & \cdots & a_{nn} - \lambda \end{array} \right| .$
+
+Áp dụng tính chất của định thức, ta tách mỗi cột thành tổng 2 định thức cuối cùng ta có định thức cần tính bằng tổng của $2^n$ định thức, trong đó:
+
+$$
+\bullet \ \text{Định thức của ma trận: } \left| \begin{array}{llll} -\lambda & 0 & \cdots & 0 \\ 0 & -\lambda & \cdots & 0 \\ \vdots & \vdots & \ddots & \vdots \\ 0 & 0 & \cdots & -\lambda \end{array} \right| = (-\lambda)^n.
+$$
+
+· Có n định thức với $n-1$ cột chứa $\lambda$.
+
+$$
+\begin{array}{c} \begin{array} { r l } & { a _ { 1 1 } \quad 0 \quad \cdots \quad 0 } \\ & { a _ { 2 1 } \quad - \lambda \quad \cdots \quad 0 } \\ & { \vdots \quad \vdots \quad \ddots \quad \vdots } \\ & { a _ { n 1 } \quad 0 \quad \cdots \quad - \lambda } \end{array} | + | \begin{array} { l l l l l } { - \lambda } & { a _ { 1 2 } \quad \cdots \quad 0 } \\ { 0 \quad a _ { 2 2 } \quad \cdots \quad 0 } \\ { \vdots \quad \vdots \quad \ddots \quad \vdots } \\ { 0 \quad a _ { n 2 } \quad \cdots \quad - \lambda } \end{array} | + \cdots + | \begin{array} { l l l l l } { - \lambda } & { 0 } & { \cdots } & { a _ { 1 n } } \\ { 0 \quad - \lambda } & { \cdots } & { a _ { 2 n } } \\ { \vdots \quad \vdots \quad \ddots \quad \ddots } & { \vdots } \\ { 0 \quad 0 \quad \cdots \quad a _ { n n } } \end{array} | = ( - \lambda ) ^ { n - 1 } \operatorname { tr } ( A ) .  \end{array}
+$$
+
+$C_{n}^{n-k}$ định thức với $k$ cột chứa $\lambda$
+
+Khai triển Laplace theo $k$ cột chứa $\lambda$ của định thức "loại $k$ cột chứa $\lambda$", từ đó suy ra tổng các định thức "loại $k$ cột chứa $\lambda$" bằng $C_{n-k} (-\lambda)^{k}$, trong đó $C_{n-k}$ là tổng tất cả các định thức con chính bậc $n - k$ của $A$ (định thức con chính là định thức con có các chỉ số hàng và chỉ số cột bằng nhau).
+
+■ Có duy nhất một định thức không chứa cột có $\lambda$ là định thức của ma trận $A$. Điều này suy ra dạng thức cần chứng minh.

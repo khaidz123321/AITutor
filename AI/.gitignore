@@ -3,3 +3,4 @@
 __pycache__/
 engine/__pycache__/
 data/vector_db/
+multilingual-e5-large-finetuned/

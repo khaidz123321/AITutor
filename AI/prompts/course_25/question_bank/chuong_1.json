@@ -1,0 +1,787 @@
+{
+    "subject": "Giải tích 1 - PTIT",
+    "chapter_number": 1,
+    "chapter_name": "Số phức và giới hạn của dãy số",
+    "questions": [
+        {
+            "id": "GT1_C1_1.2_001",
+            "lesson_number": "1.2",
+            "lesson_name": "Định nghĩa và các phép toán",
+            "topic": "Phép cộng",
+            "difficulty": "Easy",
+            "bloom_level": "Remembering",
+            "question_text": "Hãy cho biết cách diễn tả hình học của phép cộng hai số phức z1 = 2 + i và z2 = 3 - i.",
+            "full_answer": "Phép cộng hai số phức được thực hiện bằng cách cộng các phần thực và các phần ảo tương ứng. Đường thẳng từ đầu mút vectơ z1 đến đầu mút vectơ z2 (theo thứ tự) sẽ biểu diễn vectơ z1 + z2.",
+            "scaffolding_steps": [
+                {
+                    "step_number": 1,
+                    "hint": "Số phức có thể được biểu diễn như thế nào dưới dạng vectơ trong mặt phẳng?",
+                    "step_detail": "Số phức z = a + bi tương ứng với một điểm (a, b) hoặc vectơ từ gốc tọa độ đến điểm đó."
+                },
+                {
+                    "step_number": 2,
+                    "hint": "Phép cộng hai vectơ được thực hiện như thế nào?",
+                    "step_detail": "Cộng các phần tương ứng của vectơ: (a1, b1) + (a2, b2) = (a1+a2, b1+b2)."
+                },
+                {
+                    "step_number": 3,
+                    "hint": "Áp dụng phép cộng này vào z1 và z2.",
+                    "step_detail": "Cộng phần thực: 2 + 3 = 5; Cộng phần ảo: i - i = 0. Kết quả là vectơ từ đầu mút z1 đến đầu mút z2."
+                }
+            ],
+            "common_mistakes": [
+                "Lấy nhầm phần thực và phần ảo để cộng.",
+                "Quên rằng phép cộngvectơ được áp dụng theo chiều thẳng hàng."
+            ]
+        },
+        {
+            "id": "GT1_C1_1.3_002",
+            "lesson_number": "1.3",
+            "lesson_name": "Tính chất",
+            "topic": "Giới hạn của dãy số",
+            "difficulty": "Medium",
+            "bloom_level": "Understanding",
+            "question_text": "Giả sử (a_n) là một dãy số và a_n → l khi n → ∞. Hãy cho biết giới hạn của dãy số (2a_n + 3).",
+            "full_answer": "Giới hạn của dãy số này là 2l + 3.",
+            "scaffolding_steps": [
+                {
+                    "step_number": 1,
+                    "hint": "Giới hạn của một dãy số khi được nhân với một hằng số?",
+                    "step_detail": "Giới hạn của k*a_n là k*l, trong đó k là hằng số."
+                },
+                {
+                    "step_number": 2,
+                    "hint": "Giới hạn của tổng hai dãy số?",
+                    "step_detail": "Giới hạn của (a_n + b_n) là giới hạn a_n cộng giới hạn b_n."
+                }
+            ],
+            "common_mistakes": [
+                "Nhầm lẫn với quy tắc khác trong tính toán giới hạn.",
+                "Quên rằng hằng số 3 cũng ảnh hưởng đến giới hạn."
+            ]
+        },
+        {
+            "id": "GT1_C1_1.4_003",
+            "lesson_number": "1.4",
+            "lesson_name": "Biểu diễn hình học",
+            "topic": "Bài toán có sự thay đổi modulus",
+            "difficulty": "Hard",
+            "bloom_level": "Analyzing",
+            "question_text": "Hãy chỉ ra các số phức z sao cho |z| = 2 và arg(z) = π/4.",
+            "full_answer": "Các số phức z có dạng z = 2(cos(π/4) + i sin(π/4)) = √2 + i√2.",
+            "scaffolding_steps": [
+                {
+                    "step_number": 1,
+                    "hint": "Biểu diễn của một số phức khi biết modulus và argument?",
+                    "step_detail": "Sử dụng dạng cực坐标: z = r(cosθ + i sinθ)."
+                },
+                {
+                    "step_number": 2,
+                    "hint": "Áp dụng giá trị modulus và argument cho trường hợp này.",
+                    "step_detail": "r = 2, θ = π/4. Vậy z = 2(cos(π/4) + i sin(π/4))."
+                }
+            ],
+            "common_mistakes": [
+                "Lấy nhầm giá trị cos và sin cho góc π/4.",
+                "Quên rằng modulus là một hằng số dương."
+            ]
+        },
+        {
+            "id": "GT1_C1_1.5_004",
+            "lesson_number": "1.5",
+            "lesson_name": "Công thức Moivre",
+            "topic": "Sử dụng công thức",
+            "difficulty": "Medium",
+            "bloom_level": "Applying",
+            "question_text": "Tìm z^n, với z = 1 + i và n = 3.",
+            "full_answer": "z^3 = (1 + i)^3 = -2 + 2i.",
+            "scaffolding_steps": [
+                {
+                    "step_number": 1,
+                    "hint": "Cách biểu diễn số phức trong dạng cực?",
+                    "step_detail": "Tính modulus và argument của z."
+                },
+                {
+                    "step_number": 2,
+                    "hint": "Sử dụng công thức Moivre để tính z^n.",
+                    "step_detail": "(r(cosθ + i sinθ))^n = r^n (cos(nθ) + i sin(nθ))."
+                }
+            ],
+            "common_mistakes": [
+                "Tính nhầm modulus hoặc argument ban đầu.",
+                "Quên rằng cần nhân n vào argument."
+            ]
+        },
+        {
+            "id": "GT1_C1_1.6_005",
+            "lesson_number": "1.6",
+            "lesson_name": "Căn bậc n của số phức",
+            "topic": "Tìm căn bậc 4",
+            "difficulty": "Hard",
+            "bloom_level": "Evaluating",
+            "question_text": "Tìm các căn bậc 4 của số phức z = 16.",
+            "full_answer": "Các căn bậc 4 là 2, -2, 2i, và -2i.",
+            "scaffolding_steps": [
+                {
+                    "step_number": 1,
+                    "hint": "Số phức có modulus bằng bao nhiêu?",
+                    "step_detail": "Modulus là 16, argument ban đầu là 0 (vì nằm trên trục thực)."
+                },
+                {
+                    "step_number": 2,
+                    "hint": "Các căn bậc n của một số phức được tìm như thế nào?",
+                    "step_detail": "Sử dụng công thức căn bậc n: r^{1/n} e^{i(θ + 2kπ)/n}, k = 0, 1, ..., n-1."
+                }
+            ],
+            "common_mistakes": [
+                "Không xem xét đủ các giá trị k.",
+                "Lấy nhầm modulus hoặc argument ban đầu."
+            ]
+        },
+        {
+            "id": "GT1_C1_1.7_006",
+            "lesson_number": "1.7",
+            "lesson_name": "Công thức Euler",
+            "topic": "Biểu diễn số phức",
+            "difficulty": "Easy",
+            "bloom_level": "Remembering",
+            "question_text": "Hãy viết lại số phức z = 1 - i trong dạng Euler.",
+            "full_answer": "z = √2 e^{-iπ/4}.",
+            "scaffolding_steps": [
+                {
+                    "step_number": 1,
+                    "hint": "Cách chuyển đổi từ dạng algebraic sang Euler?",
+                    "step_detail": "Tính modulus và argument của z."
+                },
+                {
+                    "step_number": 2,
+                    "hint": "Áp dụng công thức Euler.",
+                    "step_detail": "z = r e^{iθ}, trong đó r là modulus và θ là argument."
+                }
+            ],
+            "common_mistakes": [
+                "Lấy nhầm dấu của argument.",
+                "Quên rằng modulus phải dương."
+            ]
+        },
+        {
+            "id": "GT1_C1_1.3_007",
+            "lesson_number": "1.3",
+            "lesson_name": "Các phép toán về giới hạn",
+            "topic": "Sử dụng法则",
+            "difficulty": "Medium",
+            "bloom_level": "Applying",
+            "question_text": "Tìm lim_{n→∞} (2^n + (-1)^n).",
+            "full_answer": "Giới hạn không tồn tại do 2^n tăng không giới hạn và (-1)^n震荡.",
+            "scaffolding_steps": [
+                {
+                    "step_number": 1,
+                    "hint": "Phân tích từng thành phần trong tổng.",
+                    "step_detail": "Xem xét giới hạn của 2^n và (-1)^n riêng rẽ."
+                },
+                {
+                    "step_number": 2,
+                    "hint": "Giới hạn của tổng hai dãy số?",
+                    "step_detail": "Nếu một trong hai dãy diverge, tổng có thể diverge hoặc oscillate."
+                }
+            ],
+            "common_mistakes": [
+                "Nhầm lẫn với giới hạn hữu hạn.",
+                "Không xem xét hành vi của từng thành phần."
+            ]
+        },
+        {
+            "id": "GT1_C1_1.5_008",
+            "lesson_number": "1.5",
+            "lesson_name": "Dãy đơn điệu",
+            "topic": "Chứng minh dãy tăng",
+            "difficulty": "Hard",
+            "bloom_level": "Analyzing",
+            "question_text": "Hãy chứng minh rằng dãy a_n = 1 + 1/n là một dãy tăng.",
+            "full_answer": "Sử dụng đạo hàm hoặc so sánh a_{n+1} - a_n > 0.",
+            "scaffolding_steps": [
+                {
+                    "step_number": 1,
+                    "hint": "Cách chứng minh một dãy tăng?",
+                    "step_detail": "Chứng minh rằng a_{n+1} - a_n > 0 cho mọi n."
+                },
+                {
+                    "step_number": 2,
+                    "hint": "Tính hiệu a_{n+1} - a_n.",
+                    "step_detail": "a_{n+1} = 1 + 1/(n+1), a_n = 1 + 1/n. Hiệu là -1/(n(n+1)) < 0, nên dãy giảm."
+                }
+            ],
+            "common_mistakes": [
+                "Lấy nhầm hiệu theo chiều ngược lại.",
+                "Không xem xét kỹ kết quả của hiệu."
+            ]
+        },
+        {
+            "id": "GT1_C1_1.7_009",
+            "lesson_number": "1.7",
+            "lesson_name": "Dãy Cauchy",
+            "topic": "Tính chất của dãy",
+            "difficulty": "Medium",
+            "bloom_level": "Understanding",
+            "question_text": "Giả sử (a_n) là một dãy Cauchy. Hãy cho biết a_n có phải hội tụ không?",
+            "full_answer": "Có, vì trong ℝ, mọi dãy Cauchy đều收敛.",
+            "scaffolding_steps": [
+                {
+                    "step_number": 1,
+                    "hint": "Thuộc tính nào của dãy Cauchy trong ℝ?",
+                    "step_detail": "Mọi dãy Cauchy trong ℝ đều收敛 đến một giới hạn."
+                }
+            ],
+            "common_mistakes": [
+                "Nhầm lẫn với trường hợp trong không gian khác.",
+                "Không xem xét tính chất riêng của ℝ."
+            ]
+        },
+        {
+            "id": "GT1_C1_1.2_010",
+            "lesson_number": "1.2",
+            "lesson_name": "Tính chất",
+            "topic": "Tìm căn bậc 3",
+            "difficulty": "Hard",
+            "bloom_level": "Evaluating",
+            "question_text": "Tìm các căn bậc 3 của số phức z = -8i.",
+            "full_answer": "Các căn là 2√2 e^{i(3π/4 + 2kπ)/3} với k=0,1,2.",
+            "scaffolding_steps": [
+                {
+                    "step_number": 1,
+                    "hint": "Biểu diễn z trong dạng cực?",
+                    "step_detail": "z = 8 e^{i(3π/2 + 2kπ)} cho k nguyên."
+                },
+                {
+                    "step_number": 2,
+                    "hint": "Tìm các căn bậc 3.",
+                    "step_detail": "Căn bậc 3 có modulus là 2 và argument là (3π/4 + 2kπ)/3 cho k=0,1,2."
+                }
+            ],
+            "common_mistakes": [
+                "Không xem xét đủ các giá trị k.",
+                "Lấy nhầm modulus hoặc argument ban đầu."
+            ]
+        },
+        {
+            "id": "GT1_C1_1.1_Easy_Remembering",
+            "lesson_number": "1.1",
+            "lesson_name": "Số thực",
+            "topic": "Tập các số tự nhiên",
+            "difficulty": "Easy",
+            "bloom_level": "Remembering",
+            "question_text": "Viết lại định nghĩa của tập các số tự nhiên.",
+            "full_answer": "Tập các số tự nhiên được xác định là N = {0, 1, 2, …}.",
+            "scaffolding_steps": [
+                {
+                    "step_number": 1,
+                    "hint": "Bạn có thể bắt đầu bằng cách nhắc đến khái niệm cơ bản về số tự nhiên trong toán học.",
+                    "step_detail": "Số tự nhiên là gì? Chúng được sử dụng để干什么 trong toán học."
+                },
+                {
+                    "step_number": 2,
+                    "hint": "Xem xét cách định nghĩa chính thức của chúng.",
+                    "step_detail": "Có bao nhiêu số tự nhiên và chúng được ký hiệu như thế nào?"
+                }
+            ],
+            "common_mistakes": [
+                "Nhầm lẫn với các loại số khác như nguyên, thực hoặc phức.",
+                "Không rõ ràng về việc có hay không bao gồm số 0."
+            ]
+        },
+        {
+            "id": "GT1_C1_1.2_Medium_Understanding",
+            "lesson_number": "1.2",
+            "lesson_name": "Số phức",
+            "topic": "Định nghĩa và các phép toán",
+            "difficulty": "Medium",
+            "bloom_level": "Understanding",
+            "question_text": "Giải thích ý nghĩa của số phức trong hệ tọa độ笛卡尔.",
+            "full_answer": "Số phức có thể được biểu diễn dưới dạng cặp trật tự (a, b) trên mặt phẳng.Cartesian, gọi là mặt phẳng Argand, giúp xử lý các phép toán như cộng, trừ và nhân.",
+            "scaffolding_steps": [
+                {
+                    "step_number": 1,
+                    "hint": "Bạn có thể nghĩ về cách biểu diễn số phức dưới dạng cặp số.",
+                    "step_detail": "Số phức được viết như thế nào và chúng liên quan đến tọa độ笛卡尔 ra sao?"
+                },
+                {
+                    "step_number": 2,
+                    "hint": "Xem xét mặt phẳng Argand và vai trò của nó trong biểu diễn số phức.",
+                    "step_detail": "Mặt phẳng này có tên gọi gì và nó giúp做什么 với số phức?"
+                }
+            ],
+            "common_mistakes": [
+                "Nhầm lẫn giữa các phần thực và ảo trong tọa độ.",
+                "Không hiểu rõ ý nghĩa của mặt phẳng Argand."
+            ]
+        },
+        {
+            "id": "GT1_C1_1.3_Hard_Evaluating",
+            "lesson_number": "1.3",
+            "lesson_name": "Dãy số thực",
+            "topic": "Tính chất và giới hạn",
+            "difficulty": "Hard",
+            "bloom_level": "Evaluating",
+            "question_text": "Đánh giá tính đúng của tuyên bố: 'Mỗi dãy đơn điệu đều có giới hạn.'",
+            "full_answer": "Tuyên bố này không đúng, vì chỉ những dãy đơn điệu và bị chặn mới chắc chắn có giới hạn.",
+            "scaffolding_steps": [
+                {
+                    "step_number": 1,
+                    "hint": "Bạn nên xem xét điều kiện cần thiết để một dãy có giới hạn.",
+                    "step_detail": "Các dãy nào thường hội tụ và tại sao?"
+                },
+                {
+                    "step_number": 2,
+                    "hint": "Liên hệ đến các ví dụ cụ thể về dãy đơn điệu.",
+                    "step_detail": "Ví dụ: Dãy tăng không bị chặn có xu hướng như thế nào?"
+                }
+            ],
+            "common_mistakes": [
+                "Nhầm lẫn giữa dãy tăng/giảm và dãy bị chặn.",
+                "Không xem xét đầy đủ các điều kiện hội tụ."
+            ]
+        },
+        {
+            "id": "GT1_C1_1.2_Medium_Applying",
+            "lesson_number": "1.2",
+            "lesson_name": "Số phức",
+            "topic": "Công thức Euler",
+            "difficulty": "Medium",
+            "bloom_level": "Applying",
+            "question_text": "Áp dụng công thức Euler để biểu diễn e^(iπ).",
+            "full_answer": "e^(iπ) = -1, theo công thức Euler.",
+            "scaffolding_steps": [
+                {
+                    "step_number": 1,
+                    "hint": "Bạn có thể nhắc đến công thức Euler và cách nó liên quan đến số phức.",
+                    "step_detail": "Công thức Euler được viết như thế nào và ứng dụng của nó trong số phức?"
+                },
+                {
+                    "step_number": 2,
+                    "hint": "Xem xét giá trị cụ thể của π trong công thức.",
+                    "step_detail": "Khi π được thay vào, kết quả sẽ ra sao?"
+                }
+            ],
+            "common_mistakes": [
+                "Nhầm lẫn các bước trong việc áp dụng công thức Euler.",
+                "Không hiểu rõ ý nghĩa của e^(iπ) trong số phức."
+            ]
+        },
+        {
+            "id": "GT1_C1_1.3_Medium_Analyzing",
+            "lesson_number": "1.3",
+            "lesson_name": "Dãy số thực",
+            "topic": "Dãy con và giới hạn",
+            "difficulty": "Medium",
+            "bloom_level": "Analyzing",
+            "question_text": "Phân tích xem một dãy số có tính chất nào khi nó có dãy con hội tụ.",
+            "full_answer": "Mỗi dãy số đều có ít nhất một dãy con hội tụ, theo Định lý Bolzano-Weierstrass.",
+            "scaffolding_steps": [
+                {
+                    "step_number": 1,
+                    "hint": "Bạn nên nghĩ đến các định lý liên quan đến dãy và dãy con.",
+                    "step_detail": "Có bất kỳ định lý nào nói về sự tồn tại của dãy con hội tụ không?"
+                },
+                {
+                    "step_number": 2,
+                    "hint": "Liên hệ đến Bolzano-Weierstrass và xem xét tính chất của dãy.",
+                    "step_detail": "Bolzano-Weierstrass nói gì về ℝ^n?"
+                }
+            ],
+            "common_mistakes": [
+                "Nhầm lẫn giữa dãy hội tụ và dãy có dãy con hội tụ.",
+                "Không áp dụng đúng các định lý trong phân tích."
+            ]
+        },
+        {
+            "id": "GT1_C1_1.2_Easy_Remembering",
+            "lesson_number": "1.2",
+            "lesson_name": "Số phức",
+            "topic": "Biểu diễn hình học",
+            "difficulty": "Easy",
+            "bloom_level": "Remembering",
+            "question_text": "Viết lại tên của mặt phẳng được sử dụng để biểu diễn số phức.",
+            "full_answer": "Mặt phẳng Argand.",
+            "scaffolding_steps": [
+                {
+                    "step_number": 1,
+                    "hint": "Bạn có thể nghĩ đến các phương pháp biểu diễn số phức.",
+                    "step_detail": "Số phức được biểu diễn dưới dạng gì và trên mặt phẳng nào?"
+                },
+                {
+                    "step_number": 2,
+                    "hint": "Tên của mặt phẳng này gắn liền với ai?",
+                    "step_detail": "Ai đã đề xuất phương pháp này và tên gọi như thế nào?"
+                }
+            ],
+            "common_mistakes": [
+                "Nhầm lẫn với các hệ tọa độ khác.",
+                "Không nhớ chính xác tên của mặt phẳng."
+            ]
+        },
+        {
+            "id": "GT1_C1_1.3_Hard_Evaluating",
+            "lesson_number": "1.3",
+            "lesson_name": "Dãy số thực",
+            "topic": "Dãy Cauchy",
+            "difficulty": "Hard",
+            "bloom_level": "Evaluating",
+            "question_text": "Xác định tính đúng của tuyên bố: 'Mỗi dãy Cauchy đều hội tụ.'",
+            "full_answer": "Tuyên bố này không đúng, vì chỉ những dãy đơn điệu và bị chặn mới chắc chắn có giới hạn.",
+            "scaffolding_steps": [
+                {
+                    "step_number": 1,
+                    "hint": "Bạn nên xem xét định nghĩa của một dãy Cauchy.",
+                    "step_detail": "Dãy Cauchy được đặc trưng như thế nào?"
+                },
+                {
+                    "step_number": 2,
+                    "hint": "Liên hệ đến không gian mà dãy này sinh sống.",
+                    "step_detail": "Trong không gian nào thì mỗi dãy Cauchy đều hội tụ?"
+                }
+            ],
+            "common_mistakes": [
+                "Nhầm lẫn giữa các không gian complete và不完备.",
+                "Không xem xét đầy đủ điều kiện của tuyên bố."
+            ]
+        },
+        {
+            "id": "GT1_C1_1.2_Medium_Understanding",
+            "lesson_number": "1.2",
+            "lesson_name": "Số phức",
+            "topic": "Căn bậc n của số phức",
+            "difficulty": "Medium",
+            "bloom_level": "Understanding",
+            "question_text": "Giải thích cách tìm căn bậc hai của một số phức.",
+            "full_answer": "Số phức có thể được biểu diễn dưới dạng cặp trật tự (a, b) trên mặt phẳng.Cartesian, gọi là mặt phẳng Argand, giúp xử lý các phép toán như cộng, trừ và nhân.",
+            "scaffolding_steps": [
+                {
+                    "step_number": 1,
+                    "hint": "Bạn có thể nghĩ đến việc biểu diễn số phức dưới dạng cực.",
+                    "step_detail": "Số phức được viết trong dạng cực như thế nào?"
+                },
+                {
+                    "step_number": 2,
+                    "hint": "Xem xét cách tính căn bậc hai từ đó.",
+                    "step_detail": "Công thức để tìm căn bậc hai của một số phức trong dạng cực là gì?"
+                }
+            ],
+            "common_mistakes": [
+                "Nhầm lẫn các bước trong việc tính căn bậc n.",
+                "Không hiểu rõ về phương pháp sử dụng dạng cực."
+            ]
+        },
+        {
+            "id": "GT1_C1_1.3_Medium_Applying",
+            "lesson_number": "1.3",
+            "lesson_name": "Dãy số thực",
+            "topic": "Các phép toán về giới hạn",
+            "difficulty": "Medium",
+            "bloom_level": "Applying",
+            "question_text": "Tính giới hạn của dãy a_n = (2n + 1)/(n + 3).",
+            "full_answer": "Giới hạn là 2.",
+            "scaffolding_steps": [
+                {
+                    "step_number": 1,
+                    "hint": "Bạn có thể chia cả tử số và mẫu số cho n.",
+                    "step_detail": "Khi chia cho n, các hạng sẽ ra sao?"
+                },
+                {
+                    "step_number": 2,
+                    "hint": "Xem xét giới hạn khi n趋向 infinity.",
+                    "step_detail": "Giới hạn của (2 + 1/n)/(1 + 3/n) là gì?"
+                }
+            ],
+            "common_mistakes": [
+                "Không chia cho n và nhầm lẫn các bước tính.",
+                "Không xem xét đúng giới hạn khi n增大."
+            ]
+        },
+        {
+            "id": "GT1_C1_1.3_Hard_Evaluating",
+            "lesson_number": "1.3",
+            "lesson_name": "Dãy số thực",
+            "topic": "Hai dãy kề nhau",
+            "difficulty": "Hard",
+            "bloom_level": "Evaluating",
+            "question_text": "Đánh giá tính đúng của tuyên bố: 'Nếu hai dãy kề nhau thì chúng cùng hội tụ hoặc cùng không hội tụ.'",
+            "full_answer": "Tuyên bố này không đúng, vì chỉ những dãy đơn điệu và bị chặn mới chắc chắn có giới hạn.",
+            "scaffolding_steps": [
+                {
+                    "step_number": 1,
+                    "hint": "Bạn nên xem xét định nghĩa về sự hội tụ và khoảng cách giữa các phần tử của hai dãy.",
+                    "step_detail": "Hai dãy kề nhau có ý nghĩa gì trong việc hội tụ?"
+                },
+                {
+                    "step_number": 2,
+                    "hint": "Liên hệ đến các ví dụ cụ thể để kiểm tra tuyên bố.",
+                    "step_detail": "Có bất kỳ trường hợp nào vi phạm tuyên bố này không?"
+                }
+            ],
+            "common_mistakes": [
+                "Nhầm lẫn giữa sự kề nhau và tính hội tụ.",
+                "Không xem xét đầy đủ các trường hợp có thể."
+            ]
+        },
+        {
+            "id": "GT1_C1_1.1_001",
+            "lesson_number": "1.1",
+            "lesson_name": "Số thực và số phức - Giới thiệu",
+            "topic": "Xác định tính chất của số",
+            "difficulty": "Medium",
+            "bloom_level": "Understanding",
+            "question_text": "Phân biệt đâu là số có decimal expansion hữu hạn hay vô hạn tuần hoàn:",
+            "full_answer": "0.5(4) là số thập phân vô hạn tuần hoàn, do đó nó là một số hữu tỷ (rational).",
+            "scaffolding_steps": [
+                {
+                    "step_number": 1,
+                    "hint": "Bạn có thể nhớ được rằng các số hữu tỷ (rational numbers) có hai loại decimal expansion: hữu hạn hoặc vô hạn tuần hoàn.",
+                    "step_detail": "Các số hữu tỷ có thể biểu diễn dưới dạng分数 với mẫu số là幂 của 2 và/hoặc 5, hoặc chúng có decimal expansion vô hạn nhưng tuần hoàn."
+                },
+                {
+                    "step_number": 2,
+                    "hint": "Xem xét ví dụ: 0.5(4). Bạn có nhận thấy rằng phần decimals này đang lặp lại không?",
+                    "step_detail": "Phần decimals '4' đang lặp lại sau khi đã có một số digits cố định (trong trường hợp này là 0.5). Điều này cho thấy đây là một decimal expansion vô hạn tuần hoàn."
+                }
+            ],
+            "common_mistakes": [
+                "Nhầm lẫn decimal expansion hữu hạn với vô hạn.",
+                "Không nhận ra được tính chất lặp của decimal expansion."
+            ]
+        },
+        {
+            "id": "GT1_C1_1.1_002",
+            "lesson_number": "1.1",
+            "lesson_name": "Số thực và số phức - Giới thiệu",
+            "topic": "Xác định tính chất của số",
+            "difficulty": "Medium",
+            "bloom_level": "Understanding",
+            "question_text": "Xác định loại số sau: √(2² * 5)",
+            "full_answer": "√(20) là một số vô tỷ (irrational).",
+            "scaffolding_steps": [
+                {
+                    "step_number": 1,
+                    "hint": "Bạn có thể đơn giản hóa biểu thức này không?",
+                    "step_detail": "√(20) có thể được viết lại như √(4*5) = √4 * √5 = 2√5."
+                },
+                {
+                    "step_number": 2,
+                    "hint": "Sau khi đơn giản hóa, bạn có nghĩ rằng kết quả này là hữu tỷ không?",
+                    "step_detail": "Kết quả là 2√5, và √5 là một số vô tỷ. Do đó, 2√5 vẫn là một số vô tỷ."
+                }
+            ],
+            "common_mistakes": [
+                "Nhầm lẫn việc đơn giản hóa biểu thức với việc xác định tính chất của số.",
+                "Không nhận ra rằng √5 là một số vô tỷ."
+            ]
+        },
+        {
+            "id": "GT1_C1_1.1_003",
+            "lesson_number": "1.1",
+            "lesson_name": "Số thực và số phức - Giới thiệu",
+            "topic": "Xác định tính chất của số",
+            "difficulty": "Medium",
+            "bloom_level": "Understanding",
+            "question_text": "Xác định loại số sau: π + 1",
+            "full_answer": "π + 1 là một số vô tỷ (irrational).",
+            "scaffolding_steps": [
+                {
+                    "step_number": 1,
+                    "hint": "Bạn có nhớ rằng π là một số vô tỷ không?",
+                    "step_detail": "π được biết đến như một trong những số vô tỷ nổi tiếng nhất."
+                },
+                {
+                    "step_number": 2,
+                    "hint": "Khi bạn cộng một số hữu tỷ (trong trường hợp này là 1) với một số vô tỷ (π), kết quả sẽ ra sao?",
+                    "step_detail": "Cộng của một số hữu tỷ và một số vô tỷ vẫn là một số vô tỷ."
+                }
+            ],
+            "common_mistakes": [
+                "Nhầm lẫn rằng cộng hai số có thể biến một số vô tỷ thành hữu tỷ.",
+                "Không nhận ra tính chất của π."
+            ]
+        },
+        {
+            "id": "GT1_C1_1.1_004",
+            "lesson_number": "1.1",
+            "lesson_name": "Số thực và số phức - Giới thiệu",
+            "topic": "Xác định tính chất của số",
+            "difficulty": "Medium",
+            "bloom_level": "Understanding",
+            "question_text": "Xác định loại số sau: ln(2) + ln(8)",
+            "full_answer": "ln(16) = 4 ln(2), là một số vô tỷ (irrational).",
+            "scaffolding_steps": [
+                {
+                    "step_number": 1,
+                    "hint": "Bạn có thể sử dụng luật logarit để kết hợp hai logarit này không?",
+                    "step_detail": "ln(2) + ln(8) = ln(2*8) = ln(16)."
+                },
+                {
+                    "step_number": 2,
+                    "hint": "Liệu ln(16) có phải là một số hữu tỷ không?",
+                    "step_detail": "ln(16) bằng 4 ln(2), và ln(2) là một số vô tỷ. Do đó, ln(16) vẫn là một số vô tỷ."
+                }
+            ],
+            "common_mistakes": [
+                "Không biết cách sử dụng luật logarit để kết hợp.",
+                "Nhầm lẫn rằng ln(16) có thể là hữu tỷ."
+            ]
+        },
+        {
+            "id": "GT1_C1_1.1_005",
+            "lesson_number": "1.1",
+            "lesson_name": "Số thực và số phức - Giới thiệu",
+            "topic": "Xác định tính chất của số",
+            "difficulty": "Medium",
+            "bloom_level": "Understanding",
+            "question_text": "Xác định loại số sau: e²",
+            "full_answer": "e² là một số vô tỷ (irrational).",
+            "scaffolding_steps": [
+                {
+                    "step_number": 1,
+                    "hint": "Bạn có nhớ rằng e là một số vô tỷ không?",
+                    "step_detail": "e, hay hằng số Euler, là một trong những số vô tỷ nổi tiếng."
+                },
+                {
+                    "step_number": 2,
+                    "hint": "Khi bạn nâng e lên một幂, kết quả sẽ như thế nào?",
+                    "step_detail": "e² vẫn là một số vô tỷ vì bất kỳ幂 nào của e (trừ e^0 = 1) đều không phải là hữu tỷ."
+                }
+            ],
+            "common_mistakes": [
+                "Nhầm lẫn rằng các幂 của e có thể trở thành hữu tỷ.",
+                "Không nhận ra tính chất của e."
+            ]
+        },
+        {
+            "id": "GT1_C1_1.1_006",
+            "lesson_number": "1.1",
+            "lesson_name": "Số thực và số phức - Giới thiệu",
+            "topic": "Xác định tính chất của số",
+            "difficulty": "Medium",
+            "bloom_level": "Understanding",
+            "question_text": "Xác định loại số sau: √3 / 2",
+            "full_answer": "√3 / 2 vẫn là một số vô tỷ (irrational).",
+            "scaffolding_steps": [
+                {
+                    "step_number": 1,
+                    "hint": "Bạn có thể đơn giản hóa biểu thức này không?",
+                    "step_detail": "√3 là một số vô tỷ, và chia nó cho 2 (một số hữu tỷ) vẫn sẽ giữ nguyên tính chất của nó."
+                },
+                {
+                    "step_number": 2,
+                    "hint": "Liệu kết quả có phải là hữu tỷ không?",
+                    "step_detail": "Không, vì một số vô tỷ chia cho một số hữu tỷ vẫn là một số vô tỷ."
+                }
+            ],
+            "common_mistakes": [
+                "Nhầm lẫn rằng chia một số vô tỷ cho một số hữu tỷ sẽ biến nó thành hữu tỷ.",
+                "Không nhận ra tính chất của √3."
+            ]
+        },
+        {
+            "id": "GT1_C1_1.1_007",
+            "lesson_number": "1.1",
+            "lesson_name": "Số thực và số phức - Giới thiệu",
+            "topic": "Xác định tính chất của số",
+            "difficulty": "Medium",
+            "bloom_level": "Understanding",
+            "question_text": "Xác định loại số sau: √5 + √6",
+            "full_answer": "√5 + √6 là một số vô tỷ (irrational).",
+            "scaffolding_steps": [
+                {
+                    "step_number": 1,
+                    "hint": "Cả hai số này đều là vô tỷ, bạn có nghĩ rằng tổng của chúng vẫn là vô tỷ không?",
+                    "step_detail": "Có, vì tổng của hai số vô tỷ không nhất thiết phải là hữu tỷ."
+                },
+                {
+                    "step_number": 2,
+                    "hint": "Liệu có trường hợp nào tổng của hai số vô tỷ lại là hữu tỷ không?",
+                    "step_detail": "Trong một số ít trường hợp, nhưng trong đa số các trường hợp, tổng vẫn là vô tỷ. Trong trường hợp này, √5 + √6 vẫn là vô tỷ."
+                }
+            ],
+            "common_mistakes": [
+                "Nhầm lẫn rằng tổng của hai số vô tỷ luôn là hữu tỷ.",
+                "Không nhận ra tính chất của các căn bậc hai."
+            ]
+        },
+        {
+            "id": "GT1_C1_1.1_008",
+            "lesson_number": "1.1",
+            "lesson_name": "Số thực và số phức - Giới thiệu",
+            "topic": "Xác định tính chất của số",
+            "difficulty": "Medium",
+            "bloom_level": "Understanding",
+            "question_text": "Xác định loại số sau: 3^π",
+            "full_answer": "3^π là một số vô tỷ (irrational).",
+            "scaffolding_steps": [
+                {
+                    "step_number": 1,
+                    "hint": "Bạn có thể hiểu được ý nghĩa của biểu thức này không?",
+                    "step_detail": "3^π là một số mũ, với π là một số vô tỷ."
+                },
+                {
+                    "step_number": 2,
+                    "hint": "Liệu kết quả này có phải là hữu tỷ không?",
+                    "step_detail": "Không, vì bất kỳ số nào được nâng lên một幂 của π (một số vô tỷ) đều không phải là hữu tỷ."
+                }
+            ],
+            "common_mistakes": [
+                "Nhầm lẫn rằng các幂 của số nguyên có thể trở thành hữu tỷ.",
+                "Không nhận ra tính chất của π."
+            ]
+        },
+        {
+            "id": "GT1_C1_1.1_009",
+            "lesson_number": "1.1",
+            "lesson_name": "Số thực và số phức - Giới thiệu",
+            "topic": "Xác định tính chất của số",
+            "difficulty": "Medium",
+            "bloom_level": "Understanding",
+            "question_text": "Xác định loại số sau: √(7³)",
+            "full_answer": "√(343) = 7√7 là một số vô tỷ (irrational).",
+            "scaffolding_steps": [
+                {
+                    "step_number": 1,
+                    "hint": "Bạn có thể đơn giản hóa biểu thức này không?",
+                    "step_detail": "√(343) = 7^(3/2) = 7 * √7."
+                },
+                {
+                    "step_number": 2,
+                    "hint": "Liệu kết quả này có phải là hữu tỷ không?",
+                    "step_detail": "Không, vì √7 là một số vô tỷ và khi nhân với 7 (một số hữu tỷ), kết quả vẫn là vô tỷ."
+                }
+            ],
+            "common_mistakes": [
+                "Nhầm lẫn rằng đơn giản hóa biểu thức sẽ biến nó thành hữu tỷ.",
+                "Không nhận ra tính chất của √7."
+            ]
+        },
+        {
+            "id": "GT1_C1_1.1_010",
+            "lesson_number": "1.1",
+            "lesson_name": "Số thực và số phức - Giới thiệu",
+            "topic": "Xác định tính chất của số",
+            "difficulty": "Medium",
+            "bloom_level": "Understanding",
+            "question_text": "Xác định loại số sau: (√2)^5",
+            "full_answer": "(√2)^5 = 4√2 là một số vô tỷ (irrational).",
+            "scaffolding_steps": [
+                {
+                    "step_number": 1,
+                    "hint": "Bạn có thể đơn giản hóa biểu thức này không?",
+                    "step_detail": "(√2)^5 = (2^(1/2))^5 = 2^(5/2) = 2^2 * √2 = 4√2."
+                },
+                {
+                    "step_number": 2,
+                    "hint": "Liệu kết quả này có phải là hữu tỷ không?",
+                    "step_detail": "Không, vì √2 là một số vô tỷ và khi nhân với 4 (một số hữu tỷ), kết quả vẫn là vô tỷ."
+                }
+            ],
+            "common_mistakes": [
+                "Nhầm lẫn rằng đơn giản hóa biểu thức sẽ biến nó thành hữu tỷ.",
+                "Không nhận ra tính chất của √2."
+            ]
+        }
+    ]
+}

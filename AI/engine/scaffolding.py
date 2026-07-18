@@ -31,7 +31,7 @@ class LearningScaffold:
             scaffolding_steps = data.get("scaffolding_steps", [])
             
             # 2. Tìm khối dữ liệu của bước hiện tại
-            target_step = next((s for s in scaffolding_steps if s.get("step") == current_step), None)
+            target_step = next((s for s in scaffolding_steps if s.get("step_number") == current_step), None)
 
             # Nếu không tìm thấy bước (ví dụ sinh viên đã làm xong bước cuối cùng)
             if not target_step:

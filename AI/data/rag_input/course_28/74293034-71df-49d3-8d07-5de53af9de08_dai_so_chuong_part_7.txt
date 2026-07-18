@@ -1,0 +1,473 @@
+# Bài tập Chương 3
+
+3.1. Cho $A = \left[ \begin{array}{ll}
+1 & 3 \\
+-1 & 2 \\
+3 & 4
+\end{array} \right], B = \left[ \begin{array}{ll}
+0 & 1 \\
+3 & 2 \\
+-2 & 3
+\end{array} \right], C = \left[ \begin{array}{ll}
+2 & -3 \\
+1 & 2 \\
+4 & -1
+\end{array} \right]$. Tính:
+a) $(A + B) + C$;
+b) $A + (B + C)$;
+c) $A^t, B^t, C^t$.
+d) $A^t B$.
+e) $BC^t.$
+
+3.2. Cho $A = \left[ \begin{array}{lll}
+2 & -5 & 1 \\
+3 & 0 & -4
+\end{array} \right], B = \left[ \begin{array}{lll}
+1 & -2 & -3 \\
+0 & -1 & 5
+\end{array} \right], C = \left[ \begin{array}{lll}
+0 & 1 & -2 \\
+1 & -1 & -1
+\end{array} \right]$. Tính $3A + 4B - 2C$,
+
+3.3. Trong không gian vector $\mathcal{M}_2$ các ma trận vuông cấp 2. Ba ma trận sau được cho là: 
+$A = \left[ \begin{array}{ll}
+1 & 1 \\
+1 & 1
+\end{array} \right], B = \left[ \begin{array}{ll}
+1 & 0 \\
+0 & 1
+\end{array} \right], C = \left[ \begin{array}{ll}
+1 & 1 \\
+0 & 0
+\end{array} \right].$
+
+3.4. Trong không gian vector $\mathcal{M}_2$ các ma trận vuông cấp 2. Tìm tọa độ $\hat{\mathbf{d}} \hat{\mathbf{0}}$ của ma trận $A = \left[ \begin{array}{ll} 2 & 3 \\ 4 & -7 \end{array} \right]$ trong cơ sở $\left[ \begin{array}{ll} 1 & 1 \\ 1 & 1 \end{array} \right], \left[ \begin{array}{ll} 0 & -1 \\ 1 & 0 \end{array} \right], \left[ \begin{array}{ll} 1 & -1 \\ 0 & 0 \end{array} \right], \left[ \begin{array}{ll} 1 & 0 \\ 0 & 0 \end{array} \right].$
+
+3.5. Cho các ma trận
+
+$$
+A = \left[ \begin{array}{lll}
+1 & -1 & 2 \\
+0 & 3 & 4
+\end{array} \right], \ B = \left[ \begin{array}{lll}
+4 & 0 & -3 \\
+-1 & -2 & 3
+\end{array} \right], \ C = \left[ \begin{array}{llll}
+2 & -3 & 0 & 1 \\
+5 & -1 & -4 & 2 \\
+-1 & 0 & 0 & 3
+\end{array} \right], \ D = \left[ \begin{array}{l}
+2 \\
+-1 \\
+3
+\end{array} \right].
+$$
+
+a) Tính $A + B, A + C, 3A - 4B$,
+
+b) Tính $AB, AC, AD, BC, BD, CD$.
+
+c) Tính $A^t, A^tC, D^tA^t, B^tA, D^tD, DD^t.$
+
+$$
+\left[ \begin{array} { c c } 2 & 3 \\ 5 & 7 \end{array} \right] \left[ \begin{array} { c c } -7 & 3 \\ 5 & -2 \end{array} \right] \quad \mathbf{b)} \left[ \begin{array} { c c } 2 & 3 \\ 5 & 7 \end{array} \right] \left[ \begin{array} { c c } 2 & 0 \\ 0 & 3 \end{array} \right] \left[ \begin{array} { c c } -7 & 3 \\ 5 & -2 \end{array} \right] \quad \mathbf{c)} \left[ \begin{array} { l } 17 \\ -6 \end{array} \right]^t.
+$$
+
+3.7. Cho $A = \left[ \begin{array} { c c } 1 & 2 \\ 4 & -3 \end{array} \right].$
+
+a) Cho $f(x) = 2x^3 - 4x + 5$, tính $f(A)$:
+
+3.8. Cho $A = \left[ \begin{array} { c c } 2 & 0 \\ 0 & 3 \end{array} \right]$ và $B = \left[ \begin{array} { r r } 7 & 0 \\ 0 & 11 \end{array} \right]$. Tính:
+
+a) $A + B$, b) $AB$, c) $A^2$, d) $A^n$, e) $p(A)$, trong đó $p(t)$ là một đa thức.
+
+3.9. Chứng minh nếu $AB = BA$ thì với mọi số tự nhiên $n > 0$
+
+$$
+\left( A + B \right)^n = A^n + nA^{n-1}B + \frac{n(n-1)}{2}A^{n-2}B^2 + ... + B^n = \sum_{k=0}^{n} C_n^k A^{n-k} B^k.
+$$
+
+3.10. Tính:
+a) $\left[ { \begin{array} { l l } { 1 } & { - 2 } \\ { 3 } & { - 4 } \end{array} } \right] ^ { 5 }$,
+b) $\left[ { \begin{array} { l l } { 2 } & { - 1 } \\ { 3 } & { - 2 } \end{array} } \right] ^ { n }$,
+c) $\left[ { \begin{array} { l l } { 0 } & { 1 } \\ { - 1 } & { 0 } \end{array} } \right] ^ { 1999 }$,
+
+$$
+\mathrm { d ) } \left[ \begin{array} { r r } { \cos \alpha } & { - \sin \alpha } \\ { \sin \alpha } & { \cos \alpha } \end{array} \right] ^ { n } , \quad \mathrm { e ) } \left[ \begin{array} { r r } { \lambda _ { 1 } } & { 0 } \\ { 0 } & { \lambda _ { k } } \end{array} \right] ^ { n } , \quad \quad \mathrm { f ) } \left[ \begin{array} { r r } { \lambda } & { 1 } \\ { 0 } & { \lambda } \end{array} \right] ^ { n } .
+$$
+
+3.11. Cho $J = \left[ \begin{array} { l l l l } { 0 } & { 0 } & { 1 } & { 0 } \\ { 0 } & { 0 } & { 0 } & { 1 } \\ { 1 } & { 0 } & { 0 } & { 0 } \\ { 0 } & { 1 } & { 0 } & { 0 } \end{array} \right] .$
+a) Tính $J ^ { 2 }$:
+b) Xét ma trận $A = \alpha I + \beta J$, chứng minh $A ^ { n }$ có dạng $A ^ { n } = \alpha _ { n } I + \beta _ { n } J$: Tính $\alpha _ { n }$, $\beta _ { n }$ theo $\alpha, \beta, n$:
+
+3.12. * Tính $\boldsymbol{A}^{100}$ với:
+
+$$
+A = \left[ \begin{array} { l l l } { 1 } & { - 2 } & { 1 } \\ { - 1 } & { 1 } & { 0 } \\ { - 2 } & { 0 } & { 1 } \end{array} \right] , \qquad b) \ A = \left[ \begin{array} { l l l } { 2 } & { 1 } & { 2 } \\ { 0 } & { 1 } & { 0 } \\ { 0 } & { 0 } & { 2 } \end{array} \right] ,
+$$
+
+$$
+A = \left[ \begin{array} { l l } { 0 } & { 2 } \\ { - 3 } & { 5 } \end{array} \right] ,
+$$
+
+$$
+c) \ A = \left[ \begin{array} { l l } { 1 } & { 1 } \\ { - 1 } & { 3 } \end{array} \right] .
+$$
+
+3.13. Cho ma trận $A$ khác a) Tìm $\alpha, \beta$ sao cho $P = \alpha A + \beta I$ thỏa mãn $P^2 = I$: b) Viết cụ thể $P$ trong các trường hợp $n = 3, n = 4$:
+
+3.14. Cho ma trận vuông $A = [a_{ij}]$. Ta gọi tr $A = a_{11} + a_{22} + \ldots + a_{nn}$ (tổng các phần tử trên đường chéo chính) là迹住输出中的非中文部分，只保留越南语内容。
+
+b) Chứng minh ${ \boldsymbol{A} }^k = 0$ với $\mathbf{s} \geq 0$ nguyên dương $k \geq 2$ khi và chỉ khi $\mathbf{A}^2 = 0$:
+
+3.16. Cho $D = { \left[ \begin{array}{ll}
+3 & 0 \\
+0 & 3
+\end{array} \right] }$, ${ A = { \left[ \begin{array}{llll}
+a_1 & a_2 & \cdots & a_n \\
+b_1 & b_2 & \cdots & b_n
+\end{array} \right] }}$, ${ B = { \left[ \begin{array}{ll}
+c_1 & d_1 \\
+c_2 & d_2 \\
+\vdots & \vdots \\
+c_n & d_n
+\end{array} \right] } }$.
+
+Tính $DA$ và $BD$:
+
+3.17. Hai ma trận $A, B$ được gọi là giao hoán nếu $AB = BA$. Chứng minh rằng $A$ giao hoán với mọi ma trận vuông cùng cấp khi và chỉ khi $A$ là ma trận vô hướng (nghĩa là $A = kI$).
+
+3.18. Tìm tất cả các ma trận $X$ giao hoán với $[0, 1]$.
+
+3.19. Chứng minh rằng tập hợp tất cả các ma trận đối xứng vuông cấp $n \left( A^t = A \right)$ là không gian véc tơ con của không gian véc tơ $\mathcal{M}_n$ các ma trận vuông cấp $n$. Tìm một cơ sở của không gian véc tơ con này.
+
+3.20. Tìm các ma trận $A = { \left[ \begin{array}{ll}
+a & b \\
+c & d
+\end{array} \right] }$ trong các trường hợp sau: a) $\mathbf{A}^2 = 0$. b) $\boldsymbol{A}^2 = \boldsymbol{I}$. c) $c = 0$ và $\boldsymbol{A}^n = \boldsymbol{I}$ với $n$ nào đó.
+
+3.21. Ma trận vuông $A$ được gọi là lũy đẳng nếu $\boldsymbol{A}^2 = \boldsymbol{A}$. Chứng minh rằng tổng của hai ma trận lũy đẳng $A, B$ là lũy đẳng khi và chỉ khi $AB + BA = 0$：
+
+3.22. Cho $A, B$ là hai ma trận có kích thước $m \times n$. Chứng minh rằng $r(A + B) \leq r(A) + r(B)$：
+
+3.23. Tìm các ví dụ về hai ma trận vuông cấp 2 thỏa mãn điều kiện sau:
+
+a) $r(A + B) < \min\{r(A), r(B)\}.$
+
+b) $r(A + B) = r(A) = r(B).$
+
+c) $r(A + B) > \max\{r(A), r(B)\}.$
+
+[1 21] 3.24. Tính tích ma trận $AB$ bằng cách sử dụng phép nhân ma trận cho $A=\begin{bmatrix} 3 & 4 \\ 0 & 2 \end{bmatrix}$ và $B = \left[\begin{array}{llll} 1 & 2 & 3 & 1 \\ 4 & 5 & 6 & 1 \\ 0 & 0 & 0 & 1 \end{array}\right]$. 
+
+Trong trường hợp, cho ma trận $A = \left[\begin{array}{cc} E & F \\ 0 & G \end{array}\right], B = \left[\begin{array}{cc} R & S \\ 0 & T \end{array}\right]$, trong đó:
+
+$$
+E = { \left[ \begin{array} { l l } { 1 } & { 2 } \\ { 3 } & { 4 } \end{array} \right] } , \ F = { \left[ \begin{array} { l } { 1 } \\ { 0 } \\ { 0 } \end{array} \right] } , \ G = { \left[ \begin{array} { l } { 2 } \end{array} \right] } , \ R = { \left[ \begin{array} { l l l } { 1 } & { 2 } & { 3 } \\ { 4 } & { 5 } & { 6 } \end{array} \right] } , \ S = { \left[ \begin{array} { l } { 1 } \\ { 1 } \end{array} \right] } , \ T = { \left[ 1 \right] } .
+$$
+
+3.25. Cho hai phép thay đổi $\sigma = { \left[ \begin{array} { l l l l l } { 1 } & { 2 } & { 3 } & { 4 } & { 5 } \\ { 2 } & { 4 } & { 5 } & { 1 } & { 3 } \end{array} \right] }$ và $\mu = { \left[ \begin{array} { l l l l l } { 1 } & { 2 } & { 3 } & { 4 } & { 5 } \\ { 4 } & { 1 } & { 3 } & { 5 } & { 2 } \end{array} \right] } .$
+
+a) Xác định $\sigma \circ \mu , \mu \circ \sigma , \sigma ^ { - 1 }$.
+
+b) Xác định dấu: $\mathrm{s g n} \sigma, \mathrm{s g n} \mu, \mathrm{s g n} ( \sigma \circ \mu ), \mathrm{s g n} ( \mu \circ \sigma ), \mathrm{s g n} \sigma ^ { - 1 }.$
+
+3.26. Tính các định thức sau:
+
+$$
+\mathrm{a)} \left| \begin{array}{ccc}
+1 & 1 & 1 \\
+-1 & 0 & 1 \\
+-1 & -1 & 0 
+\end{array} \right|,
+$$
+
+$$
+\mathrm{c)} \left| \begin{array}{rrr}
+-2 & -1 & 4 \\
+6 & -3 & -2 \\
+4 & 1 & 2 
+\end{array} \right|.
+$$
+
+$$
+\begin{array} { r l }
+& { \mathrm { ~ b ~ } \biggr | 2 } \\
+& { \mathrm { ~ b ~ } \biggr | 0 } \\
+& { \biggr | 1 \quad - 3 \quad 4 \biggr | } \\
+& { \biggr | 1 \quad 6 \quad 5 \biggr | } \\
+& { \mathrm { ~ d ~ } \biggr | 3 \quad 2 \quad 1 \biggr | . }
+\end{array}
+$$
+
+3.27. Tính các định thức sau:
+
+3.28. Tính định thức ${ \left| \begin{array} { l l } { a - b } & { \quad a } \\ { a } & { \quad a + b } \end{array} \right| } .$
+
+3.29. Tính các định thức
+
+$$
+\begin{array} { r }
+{ a ) } \left. { t - 2 \ - 3 } \atop { - 4 \ } \right. _ { t - 1 } \vert ,
+\end{array}
+$$
+
+$$
+\mathsf { b } ) \left| \begin{array} { l l } { t - 5 } & { \quad 7 } \\ { - 1 } & { \quad t + 3 } \end{array} \right| .
+$$
+
+3.30. Tìm các giá trị của $k$ sao cho $\left| { \begin{array} { c c } { k } & { k } \\ { 4 } & { 2 k } \end{array} } \right| = 0 .$
+
+3.31. Tính định thức của các ma trận sau:
+
+$$
+A = { \left[ \begin{array} { l l l } { 1 / 2 } & { - 1 } & { - 1 / 3 } \\ { 3 / 4 } & { 1 / 2 } & { - 1 } \\ { 1 } & { - 4 } & { 1 } \end{array} \right] } , \qquad B = { \left[ \begin{array} { l l l l } { 3 } & { - 2 } & { - 5 } & { 4 } \\ { - 5 } & { 2 } & { 8 } & { - 5 } \\ { - 2 } & { 4 } & { 7 } & { - 3 } \\ { 2 } & { - 3 } & { - 5 } & { 8 } \end{array} \right] } ,
+$$
+
+$$
+O = { \left[ \begin{array} { l l l } { t + 3 } & { - 1 } & { 1 } \\ { 5 } & { t - 3 } & { 1 } \\ { 6 } & { - 6 } & { t + 4 } \end{array} \right] } .
+$$
+
+3.32. Tính định thức của các ma trận sau:
+
+$$
+A = \left[ \begin{array}{lll}
+t - 2 & 4 & 3 \\
+1 & t + 1 & -2 \\
+0 & 0 & t - 4
+\end{array} \right] , 
+B = \left[ \begin{array}{lll}
+t - 1 & 3 & -3 \\
+-3 & t + 5 & -3 \\
+-6 & 6 & t - 4
+\end{array} \right]
+$$
+
+$$
+C = \left[ \begin{array}{lll}
+t + 3 & -1 & 1 \\
+7 & t - 5 & 1 \\
+6 & -6 & t + 2
+\end{array} \right] .
+$$
+
+3.33. Giải phương trình: $\left| { \begin{array}{cccc}
+1 & x & x ^ { 2 } & x ^ { 3 } \\
+1 & 2 & 4 & 8 \\
+1 & 3 & 9 & 27 \\
+1 & 4 & 16 & 64
+\end{array} } \right| = 0 ~ .$
+
+3.34. Biết $299,966,161$ chia hết cho $23$. Chứng minh $966,161$ chia hết cho $23$.
+
+3.35. Không cần tính định thức, chứng minh các dạng thức sau:
+
+$$
+\begin{array}{c}
+a) \\
+\left| \begin{array}{lll}
+a _ { 1 } & b _ { 1 } & a _ { 1 } x + b _ { 1 } y + c _ { 1 } \\
+a _ { 2 } & b _ { 2 } & a _ { 2 } x + b _ { 2 } y + c _ { 2 } \\
+a _ { 3 } & b _ { 3 } & a _ { 3 } x + b _ { 3 } y + c _ { 3 }
+\end{array} \right|
+= 
+\left| \begin{array}{ll}
+a _ { 1 } & b _ { 1 } \\
+a _ { 2 } & b _ { 2 }
+\end{array} \right|
+\cdot
+\left| \begin{array}{ll}
+b _ { 1 } & c _ { 1 } \\
+b _ { 2 } & c _ { 2 }
+\end{array} \right|
+\end{array},
+$$
+
+$$
+\left. \begin{array}{c}
+\mathbf{\rho} \\
+\mathbf{b}) \\
+\left| a_{2} + b_{2} x \quad a_{2} - b_{2} x \quad c_{2} \right| = - 2 x \left| a_{2} \quad b_{2} \quad c_{2} \right|, \\
+a_{3} + b_{3} x \quad a_{3} - b_{3} x \quad c_{3} \right|
+\qquad
+\left| a_{3} \quad b_{3} \quad c_{3} \right|
+\end{array}
+\right.
+$$
+
+$$
+c) 
+\left| 1 \begin{array}{ll}
+a & {b c} \\
+a^{2} & {a^{3}} \\
+b^{2} & {b^{3}}
+\end{array} \right|
+\leqslant
+\left| 1 \begin{array}{ll}
+a & a^{2} \\
+b & b^{2} \\
+c & c^{2}
+\end{array} \right|,
+\qquad
+d) 
+\left| 1 \begin{array}{ccc}
+a & {a a^{3}} \\
+1 & {b} & {b^{3}} \\
+1 & {c} & {c^{3}}
+\end{array} \right|
+\leqslant
+\left| 1 \begin{array}{lll}
+a & a^{2} \\
+b & b^{2} \\
+c & c^{2}
+\end{array} \right|
+$$
+
+$$
+\scriptstyle \operatorname { e } ) { \left| \begin{array} { l l l } { 1 } & { a ^ { 2 } } & { a ^ { 3 } } \\ { 1 } & { b ^ { 2 } } & { b ^ { 3 } } \\ { 1 } & { c ^ { 2 } } & { c ^ { 3 } } \end{array} \right| } = ( a b + b c + c a ) { \left| \begin{array} { l l l } { 1 } & { a } & { a ^ { 2 } } \\ { 1 } & { b } & { b ^ { 2 } } \\ { 1 } & { c } & { c ^ { 2 } } \end{array} \right| } .
+$$
+
+3.36. Cho định thức Vandermonde $D _ { n } = { \left| \begin{array} { l l l l } { 1 } & { 1 } & { \dots } & { 1 } \\ { x _ { 1 } } & { x _ { 2 } } & { \dots } & { x _ { n } } \\ { \dots } & { \dots } & { \dots } & { \dots } \\ { x _ { 1 } ^ { n - 1 } } & { x _ { 2 } ^ { n - 1 } } & { \dots } & { x _ { n } ^ { n - 1 } } \end{array} \right| } .$
+
+Chứng minh: $D _ { n } = \prod _ { 1 \leq j < i \leq n } ( x _ { i } - x _ { j } ) = \prod _ { k = 2 } ^ { n } \left( \prod _ { i = 1 } ^ { k - 1 } ( x _ { k } - x _ { i } ) \right) = \prod _ { i = 1 } ^ { n - 1 } \left( \prod _ { k = i + 1 } ^ { n } ( x _ { k } - x _ { i } ) \right) .$
+
+$D _ { n } = { \left| \begin{array} { l l l l l } { a _ { 1 } } & { x } & { x } & { \dots } & { x } \\ { x } & { a _ { 2 } } & { x } & { \dots } & { x } \\ { x } & { x } & { a _ { 3 } } & { \dots } & { x } \\ { \dots } & { \dots } & { \dots } & { \dots } & { \dots } \\ { x } & { x } & { x } & { \dots } & { a _ { n } } \end{array} \right| } .$
+
+3.38. Chứng minh  
+a) $\scriptstyle { \left| \begin{array} { l l l l } { a } & { b } & { c } & { d } \\ { - b } & { a } & { d } & { - c } \\ { - c } & { - d } & { a } & { b } \\ { - d } & { c } & { - b } & { a } \end{array} \right| } = ( a ^ { 2 } + b ^ { 2 } + c ^ { 2 } + d ^ { 2 } ) ^ { 2 } ,$
+
+$$
+\mathbf { b } ) \left| { \begin{array} { c c c c } { a } & { - b } & { - a } & { b } \\ { b } & { a } & { - b } & { - a } \\ { c } & { - d } & { c } & { - d } \\ { d } & { c } & { d } & { c } \end{array} } \right| = 4 ( a ^ { 2 } + b ^ { 2 } ) ( c ^ { 2 } + d ^ { 2 } ) .
+$$
+
+$$
+3.39.\* ) {\mathrm{Chứng minh}} { \left| \begin{array} { l l l l } { 1 + a _ { 1 } } & { a _ { 2 } } & { \dots } & { a _ { n } } \\ { a _ { 1 } } & { 1 + a _ { 2 } } & { \dots } & { a _ { n } } \\ { \dots } & { \dots } & { \dots } & { \dots } \\ { a _ { 1 } } & { a _ { 2 } } & { \dots } & { 1 + a _ { n } } \end{array} \right| } = 1 + a _ { 1 } + a _ { 2 } + \ldots + a _ { n } .
+$$
+
+3.40.\*） Cho định thức $D _ { n } = \det \left[ a _ { i j } \right]$ với $a _ { i j }$ bằng 1 hoặc $-1$, với mọi $i, j = 1, . . . , n$:  
+a) Chứng minh $D _ { n }$ là một số chẵn;  
+b) Tìm giá trị lớn nhất của các định thức $D _ { 3 }$.  
+c) Chứng minh $D _ { n } \leq ( n - 1 ) ( n - 1 ) !$ với mọi $n \geq 3$.
+
+3.41.\*) Tính định thức của các ma trận vuông cấp $n$ trong các trường hợp sau:
+
+a) $a _ { i j } = \operatorname*{min} ( i , j )$, b) $a _ { i j } = \operatorname*{max} ( i , j )$. C) $a _ { i j } = \left| i - j \right|$, d) $a _ { i j } = \frac { 1 } { ( i + j - 1 ) ! }.$
+
+3.42. Tính $D _ { n } = \left| { \begin{array} { c c c c c } { 1 } & { 2 } & { . . . } & { n - 1 } & { n } \\ { n } & { 1 } & { . . . } & { n - 2 } & { n - 1 } \\ { n - 1 } & { n } & { . . . } & { n - 3 } & { n - 2 } \\ { . . . } & { . . . } & { . . . } & { . . . } & { . . . } \\ { 2 } & { 3 } & { . . . } & { n } & { 1 } \end{array} } \right| .$
+
+$$
+\mathrm{Chứng minh} \frac { d } { d x } \Big | a _ { i j } ( x ) \Big | = \sum _ { i , j = 1 } ^ { n } a _ { { \dot { i } } j } ^ { \prime } ( x ) A _ { i j } ( x ) ~ .
+$$
+
+3.44. Tìm $\lambda$ để các véc tơ sau phụ thuộc tuyến tính:
+
+$$
+u = \left( \lambda , \frac { - 1 } { 2 } , \frac { - 1 } { 2 } \right) , \ : \ : \nu = \left( \frac { - 1 } { 2 } , \lambda , \frac { - 1 } { 2 } \right) , \ : \ : w = \left( \frac { - 1 } { 2 } , \frac { - 1 } { 2 } , \lambda \right) .
+$$
+
+3.45. Tìm hạng của các ma trận sau:
+
+$$
+A = \left[ \begin{array} { l l l l l } { 2 } & { - 1 } & { 3 } & { - 2 } & { 4 } \\ { 4 } & { - 2 } & { 5 } & { 1 } & { 7 } \\ { 2 } & { - 1 } & { 1 } & { 8 } & { 2 } \end{array} \right] , \qquad B = \left[ \begin{array} { l l l l l } { 4 } & { 3 } & { - 5 } & { 2 } & { 3 } \\ { 8 } & { 6 } & { - 7 } & { 4 } & { 2 } \\ { 8 } & { 3 } & { - 8 } & { 2 } & { 7 } \\ { 4 } & { 3 } & { 1 } & { 2 } & { - 5 } \\ { 8 } & { 6 } & { - 1 } & { 4 } & { - 6 } \end{array} \right] ,
+$$
+
+3.46. Các ma trận sau có khả nghịch không, nếu khả nghịch hay tìm ma trận nghịch đảo:
+
+$$
+A = \left[ \begin{array} { l l l } { 2 } & { 1 } & { - 1 } \\ { 0 } & { 1 } & { 3 } \\ { 2 } & { 1 } & { 1 } \end{array} \right] , \qquad B = \left[ \begin{array} { l l l } { 1 } & { 4 } & { 2 } \\ { - 1 } & { 0 } & { 1 } \\ { 2 } & { 2 } & { 3 } \end{array} \right] ,
+$$
+
+$$
+C = \left[ \begin{array} { c c c } { 1 } & { - 1 } & { 2 } \\ { - 1 } & { 2 } & { 1 } \\ { 2 } & { - 3 } & { 2 } \end{array} \right] , \qquad D = \left[ \begin{array} { c c c } { 1 } & { 1 } & { 2 } \\ { 2 } & { 3 } & { 2 } \\ { 1 } & { 3 } & { - 1 } \end{array} \right] ,
+$$
+
+$$
+E = \left[ \begin{array} { l l l l } { 1 } & { 1 } & { 1 } & { 1 } \\ { 1 } & { 1 } & { - 1 } & { - 1 } \\ { 1 } & { - 1 } & { 1 } & { - 1 } \\ { 1 } & { - 1 } & { - 1 } & { 1 } \end{array} \right] .
+$$
+
+3.47. Cho \( A = { \left[ \begin{array} { l l l } { t - 1 } & { ~ 3 } & { ~ - 3 } \\ { - 3 } & { t + 5 } & { ~ - 3 } \\ { - 6 } & { ~ 6 } & { ~ t - 4 } \end{array} \right] } ,\)
+
+a) Tìm các giá trị của \( t \) để \( A \) khả nghịch.
+
+b) Khi \( t = 3 \) tìm \( A ^ { - 1 } \).
+
+3.48. Cho \( A = { \left[ \begin{array} { l l l } { t + 1 } & { 7 } & { 3 } \\ { - 1 } & { t - 1 } & { - 2 } \\ { t - 5 } & { 2 t - 5 } & { t - 6 } \end{array} \right] } ,\)
+
+a) Tìm các giá trị của \( t \) để \( A \) khả nghịch.
+
+b) Khi \( t = 2 \) tìm \( A ^ { - 1 } .\)
+
+3.49. Giả sử \( A \) là ma trận chéo và \( B \) là ma trận tam giác có dạng:
+
+$$
+A = { \left[ \begin{array} { l l l l } { a _ { 1 } } & { 0 } & { \cdots } & { 0 } \\ { 0 } & { a _ { 2 } } & { \cdots } & { 0 } \\ { \cdots } & { \cdots } & { \cdots } & { \cdots } \\ { 0 } & { 0 } & { \cdots } & { a _ { n } } \end{array} \right] } , \ B = { \left[ \begin{array} { l l l l } { b _ { 1 } } & { c _ { 12 } } & { \cdots } & { c _ { 1n } } \\ { 0 } & { b _ { 2 } } & { \cdots } & { c _ { 2n } } \\ { \cdots } & { \cdots } & { \cdots } & { \cdots } \\ { 0 } & { 0 } & { \cdots } & { b _ { n } } \end{array} \right] } .
+$$
+
+a) Chứng tỏ ma trận phụ hợp của \( A \) có dạng chéo và ma trận phụ hợp của \( B \) có dạng tam giác.
+
+b) Chứng tỏ rằng $B$ khả nghịch khi và chỉ khi $b_i \neq 0, \forall i = 1, ..., n$; do đó $A$ khả nghịch khi và chỉ khi mỗi $a_i \neq 0, \forall i = 1, ..., n$.
+
+c) Chứng tỏ rằng nếu $A$, $B$ khả nghịch thì ma trận nghịch đảo tương ứng có dạng:
+
+$$
+A^{-1} = \left[ \begin{array}{llll}
+a_1^{-1} & 0 & \cdots & 0 \\
+0 & a_2^{-1} & \cdots & 0 \\
+\cdots & \cdots & \cdots & \cdots \\
+0 & 0 & \cdots & a_n^{-1}
+\end{array} \right], 
+B^{-1} = \left[ \begin{array}{llll}
+b_1^{-1} & d_{12} & \cdots & d_{1n} \\
+0 & b_2^{-1} & \cdots & d_{2n} \\
+\cdots & \cdots & \cdots & \cdots \\
+0 & 0 & \cdots & b_n^{-1}
+\end{array} \right].
+$$
+
+3.50. Chứng tỏ ma trận vuông $I_p$ khả nghịch, với $A \in \mathcal{M}_{q \times p}$. Tìm ma trận $A$ là nghịch đảo.
+
+3.51.\*) Chứng tỏ rằng nếu $P^{-1}AP = Q^{-1}BQ$ thì tồn tại các ma trận $R$ và $S$ sao cho $A = RS$, $B = SR$,
+
+3.52. Chứng tỏ rằng mỗi ma trận vuông phân đối xứng $(A^t = -A)$ cấp lẻ là suy biến. Ma trận vuông phân đối xứng cấp chẵn có suy biến không? Chứng minh rằng ma trận nghịch đảo của ma trận phân đối xứng cũng là ma trận phân đối xứng.
+
+3.53.\*) Tìm ma trận nghịch đảo của các ma trận vuông cấp $n$ sau:
+
+$$
+A = \left[ \begin{array} { l l l l l } { 1 } & { 1 } & { 1 } & { \dots } & { 1 } \\ { 1 } & { 0 } & { 1 } & { \dots } & { 1 } \\ { 1 } & { 1 } & { 0 } & { \dots } & { 1 } \\ { \dots } & { \dots } & { \dots } & { \dots } & { \dots } \\ { 1 } & { 1 } & { 1 } & { \dots } & { 0 } \end{array} \right] ,
+$$
+
+$$
+B = \left[ \begin{array} { c c c c c c } { 0 } & { 1 } & { 1 } & { \ldots } & { 1 } \\ { 1 } & { 0 } & { 1 } & { \ldots } & { 1 } \\ { 1 } & { 1 } & { 0 } & { \ldots } & { 1 } \\ { \ldots } & { \ldots } & { \ldots } & { \ldots } & { \ldots } \\ { 1 } & { 1 } & { 1 } & { \ldots } & { 0 } \end{array} \right] ,
+$$
+
+$$
+C = \left[ \begin{array} { c c c c c c } { \lambda } & { 1 } & { 0 } & { 0 } & { 0 } \\ { 0 } & { \lambda } & { 1 } & { 0 } & { 0 } \\ { 0 } & { 0 } & { \lambda } & { 1 } & { 0 } \\ { \ldots } & { \ldots } & { \ldots } & { \ldots } & { \ldots } \\ { 0 } & { 0 } & { 0 } & { \ldots } & { \lambda } \end{array} \right] ,
+$$
+
+$$
+D = \left[ \begin{array} { c c c c c c } { 1 } & { a } & { a ^ { 2 } } & { \ldots } & { a ^ { n } } \\ { 0 } & { 1 } & { a } & { \ldots } & { a ^ { n - 1 } } \\ { 0 } & { 0 } & { 1 } & { \ldots } & { a ^ { n - 2 } } \\ { \ldots } & { \ldots } & { \ldots } & { \ldots } & { \ldots } \\ { 0 } & { 0 } & { 0 } & { \ldots } & { 1 } \end{array} \right] .
+$$
+
+3.54.\*) Chứng minh nếu $\boldsymbol{A}^k = 0$ thì $I + A, I - A$ khả nghịch.
+
+3.55.\*) Chứng minh nếu $\boldsymbol{A}^n = \boldsymbol{0}$, $\boldsymbol{B}^m = 0$ và $AB = BA$ thì $I + A + B$ khả nghịch.
+
+3.56.\*) Chứng minh rằng nếu $(I + A)^k = 0$ thì $\det(A) \neq 0$
+
+3.57.\*) Chứng minh nếu $I + AB$ khả nghịch thì $I + BA$ cũng khả nghịch.
+
+3.58.\*) Tìm tất cả các ma trận vuông cấp $n$ dạng tam giác $A = [a_{ij}]$, $a_{ij} \geq 0$ có $(A^{-1} = [b_{ij}], b_{ij} \geq 0)$
+
+3.59.\*) Giả sử ma trận $A$ vuông cấp $n$ thỏa mãn $(XA)^2 = 0$ với mọi ma trận $X$ vuông cấp $n$. Chứng minh $A = 0$
+
+3.60.\*) Chứng minh đẳng thức Wagner đúng với mọi ma trận $A, B, C$ vuông cấp 2:
+$$
+(A B - B A)^{2} C - C (A B - B A)^{2} = 0.
+$$
+
+3.61.\*) Cho hai ma trận $A, B$ vuông cấp $n$ thỏa mãn tính chất $AB - BA = B$
+
+a) Chứng minh $AB^k = B^k(A + kI)$ với mọi $k$: b) Từ đó suy ra $\det(B) = 0$:
+
+3.62. Cho ma trận khối $M = \left[ \begin{array}{ll} A & B \\ 0 & C \end{array} \right]$ trong đó $A, C$ là hai ma trận vuông. Chứng minh rằng $\vert M \vert = \vert A \vert \vert C \vert$:

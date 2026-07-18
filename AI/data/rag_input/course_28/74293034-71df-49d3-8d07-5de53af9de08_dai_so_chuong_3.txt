@@ -1,0 +1,2287 @@
+# CHUƠNG 3 MẢ TRẬN VÀ ĐỊNH THỨC
+
+ Lý thuyết mảng ma trận có mặt khắp nơi, trong toán học cũng như trong các ngành khoa học khác. Vì vậy chúng ta đã làm tương đối lâu với lý thuyết ma trận nhưng thực tế lý thuyết này mới ra đời đầu thế kỷ 19, mặc dù nhiều loại bảng số có tính chất đặc biệt đã được biết đến từ hàng trăm năm nay. Các ma trận vuông xuất hiện đầu tiên ở đầu thế kỷ 19 trong các công trình về đại phương hay về các toán tử tuyến tính. Phép nhân hai ma trận vuông cấp 3 được Gauss (Gau-xo) đưa ra vào năm 1801. Tên gọi ma trận được nhà toán học Anh Sylvester (Synvét) đưa ra năm 1850. Cayley (Ké-li) là người đầu tiên mô tả một cách tổng quát các phép tính với các ma trận bất kỳ và ma trận nghịch đảo (1858). Peano là người đầu tiên đưa ra cách biểu diễn một ánh xạ tuyến tính qua ma trận. Gauss là người đầu tiên sử dụng ma trận để nghiên cứu các dạng phương trình đại số.
+
+Ký hiệu ma trận có dòng, rất hữu ích và thuận tiện trong khi thực hiện các phép biến đổi tuyến tính (chương 5) và cho phép ta phát triển mặt phương pháp hoàn chỉnh để giải các hệ phương trình vi phân tuyến tính. Sự quan tâm của các nhà vật lý đối với lý thuyết ma trận, đặc biệt tăng lên sau khi Heisenberg, Born, Jordan vào năm 1925 đã dùng nó trong các bài toán của cơ học lượng tử. Sự phát triển của máy tính hiện đại thực hiện được dang nhing phép tính ma trận cơ bản càng thúc đẩy sự ứng dụng rộng rãi ma trận vào những lĩnh vực khác.
+
+Cố người ví ma trận như là số học của toán cao cấp. Cách ví von này hoàn toàn hợp lý vì ma trận được sử dụng rộng rãi trong các chuyên ngành khác nhau của toán học. Với tư cách là sự biểu diễn của các phép biến đổi tuyến tính, ma trận được sử dụng trong các bài toán cực trị của hàm nhiều biến, đạo hàm hợp, ma trận Jacobi trong phép đổi số, giải các hệ phương trình vi phân tuyến tính. Các ma trận còn được sử dụng để biểu diễn các đặc trưng của véc tơ ngẫu nhiên, biểu diễn xác suất chuyển của chuỗi Markov trong lý thuyết xác suất. Ma trận con được sử dụng để giải các bài toán quy hoạch tuyến tính, phân loại các đường, mặt bậc hai.
+
+Chương trình phần mềm MATLAB (Matrix laboratory) hỗ trợ cho việc tính toán, đồ họa và mô phỏng cũng được thực hiện trong môi trường ma trận.
+
+Nắm vững khái niệm ma trận giúp học viên học tốt các chương tiếp theo.
+
+Trong chương này ta chỉ xét khái niệm ma trận cùng với các phép toán cộng ma trận, nhân một số với ma trận, nhân hai ma trận, ma trận chuyển vị và ma trận nghịch đảo.
+
+Tập hợp các ma trận cùng với phép cộng ma trận và phép nhân một số với ma trận là một không gian véc tơ. Tập hợp các ma trận vuông cấp với phép cộng ma trận và phép nhân ma trận với ma trận là một vòng có đơn vị, không giao hoán và không nguyên.
+
+Sử dụng khái niệm không gian véc tơ ta có các khái niệm: Ma trận của một hệ véc tơ trong một cơ sở nào đó; Ma trận chuyển cơ sở; Công thức đổi toạ độ viết dưới dạng ma trận. Hàng của ma trận là hàng của hệ véc tơ cat.
+
+Má trận trực giao và bài toán chéo hóa trực giao của một ma trận được xét trong chương 6 bằng cách sử dụng tích vô hướng.
+
+Ma trận và định nghĩa luôn liên quan đến nhau và ai cũng nghĩ rằng khái niệm định nghĩa phải ra đời sau khái niệm ma trận, nhưng thực tế ngược lại. Định nghĩa hình thành là nhằm giải các hệ phương trình tuyến tính mà việc làm này đã có mặt lịch sử lâu đời trước đó.
+
+Khái niệm định nghĩa lần đầu tiên được Leibniz (Lébnitz) đưa ra vào năm 1693 khi bàn đến việc giải hệ phương trình tuyến tính. Định nghĩa được tiếp tục phát triển và nghiên cứu qua các công trình của Cramer (Cramer), Vandermonde (Vandermonde), Laplace, Jacobi (Jacobi)... Người đầu tiên nghiên cứu khái niệm định nghĩa một cách hệ thống là Cauchy (Cauchy) (Pháp).
+
+Ngoài ứng dụng để giải hệ phương trình tuyến tính, định nghĩa còn được sử dụng để nghiên cứu các vấn đề của ma trận như: ma trận nghịch đảo, hạng của ma trận, tìm giá trị riêng... Khảo sát tính chất độc lập tuyến tính của một hệ véc tơ. Định nghĩa Jacobi được sử dụng trong phép đối biến số của tích phân nhiều lớp. Định nghĩa Wronski (Wronsky) dùng để kiểm tra tính chất độc lập tuyến tính của các nghiệm của phương trình vi phân tuyến tính thuần nhất.
+
+Để định nghĩa định thức ta sử dụng khái niệm phép thay đổi là một song ánh từ một tập có n phần tử vào chính nó, ảnh của phép thay đổi là hoán vị. Khái niệm phép thay đổi, hoán vị ta đã gặp trong mục giải tích hợp của chương 1.
+
+Trong chương này ta xét đến hai ứng dụng của định nghĩa đó là tìm ma trận nghịch đảo và tìm hạng của ma trận bằng cách tính các định thức con. Trong chương 4 ta sẽ ứng dụng định nghĩa để giải hệ phương trình tuyến tính. Trong chương 5 ta sẽ ứng dụng định thức để tìm giá trị riêng của ma trận hoặc tự động câu tuyến tính.
+
+# 3.1. KHAI NIỆM MA TRẬN
+
+Định nghĩa 3.1: Một bảng số có m hàng n cột có dạng
+
+$$
+A = \left[ \begin{array} { c c c c } { a _ { 1 1 } } & { a _ { 1 2 } } & { \ldots } & { a _ { 1 n } } \\ { a _ { 2 1 } } & { a _ { 2 2 } } & { \ldots } & { a _ { 2 n } } \\ { \vdots } & { \vdots } & { \ddots } & { \vdots } \\ { a _ { m 1 } } & { a _ { m 2 } } & { \ldots } & { a _ { m n } } \end{array} \right]
+$$
+
+được gọi là một ma trận có $m \times n$:
+
+$a_{ij}$ là phần tử hàng thứ i và cột j:
+
+Khi $a_{ij} \in \mathbb{Z}, \forall i, j$ thì $A$ được gọi là ma trận nguyên, $a_{ij} \in \mathbb{C}, \forall i, j$ thì $A$ được gọi là ma trận phức. Nếu không chỉ rõ $a_{ij}$ thì ta quy ước $A$ là ma trận thực.
+
+Ma trận $A$ có $m \times n$ có thể được viết tắt dạng
+
+$$
+A = \left[ a _ { i j } \right] _ { j = 1 , n } ^ { i = \overline{1, m} } \quad \text{hay} \quad A = \left[ a _ { i j } \right] _ { m \times n }.
+$$
+
+Khi $m = n$ ta nói $A$ là ma trận vuông cấp $n$:
+
+Tập hợp tất cả các ma trận có $m \times n$ được ký hiệu $\mathcal{M}_{m \times n}$: Tập hợp tất cả các ma trận vuông cấp $n$ được ký hiệu $\mathcal{M}_n$
+
+$$
+\underline{\mathrm{\bf 1.3.1}} : \left[ \begin{array}{lll}
+0 & -1 & \pi \\
+-3 & 2 & \sqrt{5} 
+\end{array} \right] \text{ là ma trận cỡ } 2 \times 3.
+$$
+
+Hai ma trận $A = [a_{ij}]_{m \times n}$ và $B = [b_{ij}]_{m' \times n'}$ bằng nhau khi và chỉ khi:
+
+$$
+\Big[ a_{ij} \Big]_{m \times n} = \Big[ b_{ij} \Big]_{m' \times n'} \iff 
+\left\{ 
+\begin{array}{ll}
+m = m' \\
+n = n' \\
+a_{ij} = b_{ij}, \forall i = \overline{1, m}; j = \overline{1, n}
+\end{array} 
+\right.
+.
+$$
+
+$$
+\Rightarrow \left\{
+\begin{array}{l}
+3x = x + 4 \\
+3y = x + y + 6 \\
+3z = z + w - 1 \\
+3w = 2w + 3 
+\end{array} 
+\right. 
+\Rightarrow \left\{
+\begin{array}{l}
+2x = 4 \\
+2y = x + 6 \\
+2z = w - 1 \\
+w = 3
+\end{array} 
+\right.
+\Rightarrow \left\{
+\begin{array}{l}
+x = 2 \\
+y = 4 \\
+z = 1 \\
+w = 3
+\end{array} 
+\right. .
+$$
+
+# 3.2. Các phép toán ma trận
+
+## 3.2.1. Phép cộng ma trận
+
+Cho hai ma trận $A = \left[ a_{ij} \right]_{m \times n}, B = \left[ b_{ij} \right]_{m \times n}.$
+
+Tổng của hai ma trận $A, B$ là ma trận cùng có được ký hiệu và định nghĩa bằng
+
+$$
+A + B = \left[ c_{ij} \right]_{m \times n}, c_{ij} = a_{ij} + b_{ij} \text{ với mọi } i = \overline{1, m}; j = \overline{1, n}.
+$$
+
+$$
+\underline{\mathrm{d}}\underline{\mathrm{u}}3.3 \colon \left[ \begin{array}{ccc}
+2 & -3 & 0 \\
+9 & 4 & -1
+\end{array} \right] + \left[ \begin{array}{ccc}
+0 & 8 & 5 \\
+-3 & 1 & 7
+\end{array} \right] = \left[ \begin{array}{ccc}
+2 & 5 & 5 \\
+6 & 5 & 6
+\end{array} \right].
+$$
+
+# 3.2.2. Phép nhân một số với ma trận
+
+Cho ma trận $A = \left[ a_{ij} \right]_{m \times n}$ và số thực $k$ ghi ý số tích
+
+$$
+k A = \left[ k a_{ij} \right]_{m \times n}.
+$$
+
+Vi dụ 3.4: ${ \frac { 1 } { 2 } } { \left[ \begin{array} { l l l } { 1 / 2 } & { - 1 } & { 0 } \\ { 3 } & { - 8 } & { 10 } \end{array} \right] } = { \left[ \begin{array} { l l l } { 1 / 4 } & { - 1 / 2 } & { 0 } \\ { 3 / 2 } & { - 4 } & { 5 } \end{array} \right] } .$
+
+Vi dụ 3.5: Cho $x, y, z$ và $w$ thoả mãn: 
+\[ 3 \left[ \begin{array} { l l } { x } & { y } \\ { z } & { w } \end{array} \right] = \left[ \begin{array} { l l } { x } & { 6 } \\ { - 1 } & { 2 w } \end{array} \right] + \left[ \begin{array} { l l } { 4 } & { x + y } \\ { z + w } & { 3 } \end{array} \right]. \]
+
+Giải: Theo (3.4) và (3.5), ta được 
+\[ { \left[ \begin{array} { l l } { 3 x } & { 3 y } \\ { 3 z } & { 3 w } \end{array} \right] } = { \left[ \begin{array} { l l } { x + 4 } & { x + y + 6 } \\ { z + w - 1 } & { 2 w + 3 } \end{array} \right] }. \]
+
+Theo Vi dụ 3.2 ta có $x = 2, y = 4, z = 1, w = 3$.
+
+Tính chất 3.1: Các tính chất sau đây đúng đối với các ma trận cùng cỡ:
+
+1) $A + ( B + C ) = ( A + B ) + C ;$
+
+2) Ma trận có các phần tử đều bằng O gọi là ma trận không và ký hiệu 0. Khi đó: $A + \mathbf{0} = \mathbf{0} + A = A;$
+
+3) $A + (-A) = 0,$ trong đó $-A$ là ma trận đối của $A;$
+
+4) $A + B = B + A.$
+
+Vậy $(\mathcal{M}_{m \times n}, +)$ là một nhóm Abel.
+
+Ta cũng kiểm chứng các tính chất sau đúng với mọi số thực \( k, h \) với mỗi ma trận \( A = \left[ a_{ij} \right]_{m \times n} \), \( B = \left[ b_{ij} \right]_{m \times n} \):
+
+5) \( k(A + B) = kA + kB \)
+
+6) \( (k + h)A = kA + hA \)
+
+7) \( k(hA) = (kh)A \)
+
+8) \( 1A = A \)
+
+Với 8 tính chất này, tập \(\mathcal{M}_{m \times n}\) là không gian véc tơ.
+
+Ký hiệu \( E_{ij} \) là ma trận có kích thước \( m \times n \) có các phần tử đều bằng 0 ngoại trừ phần tử ở hàng \( i \), cột \( j \) bằng 1. Hệ các ma trận \(\left\{ E_{ij} \mid i = \overline{1, m}; j = \overline{1, n} \right\}\) là một cơ sở của \(\mathcal{M}_{m \times n}\):
+
+$$
+\mathrm{Vậy} \ \mathrm{dim.} \ \mathcal{M}_{m \times n} = m \cdot n.
+$$
+
+Ví dụ 3.6: Ma trận có kích thước \(2 \times 3\) bất kỳ có thể biểu diễn duy nhất thành tổ hợp tuyến tính:
+
+$$
+\begin{array}{c}
+\begin{array}{rl}
+\biggl[ a_{11} & a_{12} \quad a_{13} \\
+a_{21} \quad a_{22} \quad a_{23}
+\end{array}
+\biggr] = a_{11} \left[
+\begin{array}{lll}
+1 & 0 & 0 \\
+0 & 0 & 0
+\end{array}
+\right]
++ a_{12} \left[ 0 \quad 1 \quad 0 \right]
++ a_{13} \left[
+\begin{array}{lll}
+0 & 0 & 1 \\
+0 & 0 & 0
+\end{array}
+\right] 
+\\
+= \mathbf{0} \quad 0 \quad [0 \quad 1][0 \quad 0]
+& [0 \quad 0]
+\\
+[0 \quad 0 \quad 0]
+\end{array}
+\biggr] = 
+\begin{array}{rl}
+[0 & 0 \\
+1 & 0 \\
+0 & 0
+\end{array}
+$$
+
+$$
++ a_{21} \left[
+\begin{array}{lll}
+0 & 0 & 0 \\
+1 & 0 & 0
+\end{array}
+\right]
++ a_{22} \left[
+\begin{array}{lll}
+0 & 0 & 0 \\
+0 & 1 & 0
+\end{array}
+\right]
++ a_{23} \left[
+\begin{array}{lll}
+0 & 0 & 0 \\
+0 & 0 & 1
+\end{array}
+\right] .
+$$
+
+$$
+\begin{array} { r } { \mathrm { V } \hat{\mathrm{a}} \mathbf{y} \left\{ \left[ \begin{array} { l l l } { 1 } & { 0 } & { 0 } \\ { 0 } & { 0 } & { 0 } \end{array} \right] , \left[ \begin{array} { l l l } { 0 } & { 1 } & { 0 } \\ { 0 } & { 0 } & { 0 } \end{array} \right] , \ldots , \left[ \begin{array} { l l l } { 0 } & { 0 } & { 0 } \\ { 0 } & { 0 } & { 1 } \end{array} \right] \right\} \mathrm{l} \hat{\mathbf{\rho}} \mathrm{m} \hat{\mathbf{\rho}} \mathrm{t} \mathrm{c} \mathrm{o} \mathrm{s} \bar{\mathrm{o}} \mathrm{c} \mathrm{i} \mathrm{a} \ \mathcal{M}_{2 \times 3}. } \end{array}
+$$
+
+# 3.2.3. Phép nhân ma trận
+
+$A = \left[ a_{ij} \right]_{m \times p}$ và $B = \left[ b_{ij} \right]_{p \times n}$ là ma trận cỡ $m \times n$ được định nghĩa bởi $AB = \left[ c_{ij} \right]_{m \times n}$, trong đó
+
+$$
+c_{ij} = \sum_{k=1}^{p} a_{ik} b_{kj} \quad \forall i = \overline{1,m}; j = \overline{1,n}.
+$$
+
+Vậy phần tử $\sigma$ hàng thứ $i$ và cột thứ $j$ của $AB$ bằng tổng tích các phần tử tương ứng của hàng thứ $i$ của $A$ với các phần tử tương ứng của cột thứ $j$ của $B$ ：
+
+![](images/3700539f61715a2144a1de2788afb037b35abcd2313294aca26ea7c96da9a69c.jpg)
+
+$$
+\begin{array} { r } { \frac { \bar { \mathfrak { r } } ^ { -- } \bar { 1 } ^ { -- } \bar { 2 } ^ { -- } \bar { 3 } ^ { - } \bar { 3 } ^ { - } \bar { 1 } ^ { - } } { \left[ \begin{array} { l l } { \bar { 1 } ^ { - } \bar { 1 } ^ { - } } & { 3 } \\ { \bar { 1 } ^ { -- } \bar { 2 } ^ { -- } \bar { 3 } ^ { - } } \\ { - 1 } & { 2 } \end{array} \right] \bar { \mathfrak { z } } - \bar { 1 } _ { 4 } ^ { - } } \ 0 \left[ \begin{array} { l l } { \bar { 9 } \dot { 2 } ; } & { 1 5 } \\ { - 7 } & { 1 7 } \end{array} \right] . } \end{array}
+$$
+
+$$
+{ \biggl [ } 2 { \biggr ] } [ 1 4 - 2 ] = { \biggl [ } 2 8 - 4 { \biggr ] } .
+$$
+
+$$
+{ \left[ \begin{array} { l l } { 1 } & { 3 } \\ { - 1 } & { 0 } \\ { 2 } & { 4 } \end{array} \right] } { \left[ \begin{array} { l l } { x } & { y } \\ { z } & { w } \end{array} \right] } = { \left[ \begin{array} { l l } { x + 3 z } & { y + 3 w } \\ { - x } & { - y } \\ { 2 x + 4 z } & { 2 y + 4 w } \end{array} \right] } .
+$$
+
+Ta thấy rằng tích của hai ma trận $A$ và $B$ được định nghĩa khi số cột của $A$ bằng số hàng của $B$. Vì vậy có thể định nghĩa $AB$ nhưng không định nghĩa được $BA$ nếu số cột của $B$ không bằng số hàng của $A$:
+
+Khi $A, B$ là hai ma trận vuông cùng cấp thì ta có đồng thời $AB$ và $BA$. Mặc dù vậy chưa chắc có đẳng thức $AB = BA$, nói cách khác tích ma trận không có tính giao hoán. Chẳng hạn, xét
+
+$$
+A = \left[ { \begin{array} { c c c c c } { - 1 } & { 0 } & { 0 } & { \ldots } & { 0 } \\ { 2 } & { 3 } & { 0 } & { \ldots } & { 0 } \\ { 0 } & { 0 } & { 0 } & { \ldots } & { 0 } \\ { \vdots } & { \vdots } & { \vdots } & { \ddots } & { \vdots } \\ { 0 } & { 0 } & { 0 } & { 0 } & { 0 } \end{array} } \right] , \qquad B = \left[ { \begin{array} { c c c c c } { 1 } & { 2 } & { 0 } & { \ldots } & { 0 } \\ { 3 } & { 0 } & { 0 } & { \ldots } & { 0 } \\ { 0 } & { 0 } & { 0 } & { \ldots } & { 0 } \\ { \vdots } & { \vdots } & { \vdots } & { \ddots } & { \vdots } \\ { 0 } & { 0 } & { 0 } & { 0 } & { 0 } \end{array} } \right] .
+$$
+
+$$
+A B = { \left[ \begin{array} { l l l l l l } { - 1 } & { - 2 } & { 0 } & { \ldots } & { 0 } \\ { 11 } & { 4 } & { 0 } & { \ldots } & { 0 } \\ { 0 } & { 0 } & { 0 } & { \ldots } & { 0 } \\ { \vdots } & { \vdots } & { \vdots } & { \ddots } & { \vdots } \\ { 0 } & { 0 } & { 0 } & { 0 } & { 0 } \end{array} \right] } \quad \neq \quad B A = { \left[ \begin{array} { l l l l l l } { 3 } & { 6 } & { 0 } & { \ldots } & { 0 } \\ { - 3 } & { 0 } & { 0 } & { \ldots } & { 0 } \\ { 0 } & { 0 } & { 0 } & { \ldots } & { 0 } \\ { \vdots } & { \vdots } & { \vdots } & { \ddots } & { \vdots } \\ { 0 } & { 0 } & { 0 } & { 0 } & { 0 } \end{array} \right] } .
+$$
+
+Tính chất 3.2: Giả sử $A, B, C$ là các ma trận với số cột và số hàng thích hợp để các phép toán sau xác định được thì ta có các dạng thực:
+
+1) $A (B C) = (A B) C$ tính kết hợp.
+
+2) $A ( B + C ) = A B + A C$ tính phân phối bên trái phép nhân ma trận với phép cộng.
+
+3) $( B + C ) A = B A + C A$ tính phân phối bên phải phép nhân ma trận với phép cộng.
+
+4) Với mỗi $k \in \mathbb{R}$, ta có $k ( A B ) = ( k A ) B = A ( k B ).$
+
+5) Với mỗi số tự nhiên dương $n$, ta xét ma trận $I_n$ vuông cấp $n$ có các phần tử trên đường chéo bằng 1 và các phần tử khác đều bằng 0.
+
+$$
+I _ { n } = \left[ \begin{array}{cccc}
+1 & 0 & \cdots & 0 \\
+0 & 1 & \cdots & 0 \\
+\vdots & \vdots & \ddots & \vdots \\
+0 & 0 & \cdots & 1
+\end{array} \right].
+$$
+
+Khi đó, với mỗi ma trận $A$ có kích thước $m \times n$, ta có
+
+$$
+I _ { m } A = A = A I _ { n }.
+$$
+
+Ma trận $I_n$ được gọi là ma trận đơn vị cấp $n$.
+
+Chẳng hạn, ma trận $A$ có kích thước $2 \times 3$:
+
+$$
+A = \left[ a_{11} \quad a_{12} \quad a_{13} \right].
+$$
+
+$$
+\begin{array} { r l }
+& { A I _ { 3 } = \left[ \begin{array} { l l l } { a _ { 1 1 } } & { a _ { 1 2 } } & { a _ { 1 3 } } \\ { a _ { 2 1 } } & { a _ { 2 2 } } & { a _ { 2 3 } } \end{array} \right] \left[ \begin{array} { l l l } { 1 } & { 0 } & { 0 } \\ { 0 } & { 1 } & { 0 } \\ { 0 } & { 0 } & { 1 } \end{array} \right] = \left[ \begin{array} { l l l } { a _ { 1 1 } } & { a _ { 1 2 } } & { a _ { 1 3 } } \\ { a _ { 2 1 } } & { a _ { 2 2 } } & { a _ { 2 3 } } \end{array} \right] = A , } \\
+& { I _ { 2 } A = \left[ \begin{array} { l l } { 1 } & { 0 } \\ { 0 } & { 1 } \end{array} \right] \left[ \begin{array} { l l l } { a _ { 1 1 } } & { a _ { 1 2 } } & { a _ { 1 3 } } \\ { a _ { 2 1 } } & { a _ { 2 2 } } & { a _ { 2 3 } } \end{array} \right] = \left[ \begin{array} { l l l } { a _ { 1 1 } } & { a _ { 1 2 } } & { a _ { 1 3 } } \\ { a _ { 2 1 } } & { a _ { 2 2 } } & { a _ { 2 3 } } \end{array} \right] = A . }
+\end{array}
+$$
+
+Từ các tính chất trên ta thấy tập hợp các ma trận vuông cấp $n \geq 2$ cùng với phép cộng và nhân ma trận $( \mathcal{M}_n, +, )$ là một vănh không giao hoán, có đơn vị và không nguyên tố có ước của O. Chẳng hạn
+
+$$
+A = \left[ \begin{array}{lllll}
+1 & 2 & 0 & \ldots & 0 \\
+2 & 4 & 0 & \ldots & 0 \\
+0 & 0 & 0 & \ldots & 0 \\
+\vdots & \vdots & \vdots & \ddots & \vdots \\
+0 & 0 & 0 & 0 & 0
+\end{array} \right], \quad B = \left[ \begin{array}{lllll}
+2 & -6 & 0 & \ldots & 0 \\
+-1 & 3 & 0 & \ldots & 0 \\
+0 & 0 & 0 & \ldots & 0 \\
+\vdots & \vdots & \vdots & \ddots & \vdots \\
+0 & 0 & 0 & 0 & 0
+\end{array} \right].
+$$
+
+$A, B \neq \mathbf{0}$ nhưng $AB = \mathbf{0}$:
+
+# 3.2.4. Đa thức ma trận
+
+$$
+p(t) = a_0 + a_1 t + \cdots + a_k t^k \text{ là đa thức bậc } k.
+$$
+
+Với mỗi ma trận $A$ vuông cấp $n$. Ta định nghĩa đa thức của ma trận $A$ như sau:
+
+$$
+p(A) = a_0 I + a_1 A + \cdots + a_k A^k.
+$$
+
+Quy ước $A^0 = I, A^1 = A$:
+
+Ví dụ 3.8: Cho $A = \left[ \begin{array}{rr}
+1 & 2 \\
+4 & -3
+\end{array} \right]$ và đa thức $p(t) = 5 - 4t + t^3$. Ta có:
+
+$$
+A ^ { 3 } = \left[ { \begin{array} { r r } { - 7 } & { 22 } \\ { 60 } & { - 67 } \end{array} } \right] , p ( A ) = 5 \left[ { \begin{array} { r r } { 1 } & { 0 } \\ { 0 } & { 1 } \end{array} } \right] - 4 \left[ { \begin{array} { r r } { 1 } & { 2 } \\ { 4 } & { - 3 } \end{array} } \right] + \left[ { \begin{array} { r r } { 1 } & { 2 } \\ { 4 } & { - 3 } \end{array} } \right] ^ { 3 } = \left[ { \begin{array} { r r } { - 6 } & { 30 } \\ { 44 } & { - 50 } \end{array} } \right] .
+$$
+
+# 3.2.5. Ma trận chuyển vị
+
+Định nghĩa 3.3: Cho ma trận A có $m \times n$, nếu ta đổi các hàng của ma trận A thành các cột (và do đó các cột thành các hàng) thì ta được ma trận mới có $n \times m$, gọi là ma trận chuyển vị của ma trận trên $A$, ký hiệu $\boldsymbol{A}^t$:
+
+$$
+A ^ { t } = \left[ c _ { i j } \right] _ { n \times m } : c _ { i j } = a _ { j i } \forall i = \overline { 1 , n }; j = \overline { 1 , m }.
+$$
+
+$$
+\begin{array} { r }
+\underline{\mathfrak{i}\ \mathbf{dụ}}\ 3.9: A = \left[ \begin{array} { l l } { -4 } & { 1 } \\ { 2 } & { 0 } \\ { 5 } & { 9 } \end{array} \right] ; A ^ { t } = \left[ \begin{array} { l l l } { -4 } & { 2 } & { 5 } \\ { 1 } & { 0 } & { 9 } \end{array} \right].
+\end{array}
+$$
+
+# Tính chất 3.3:
+
+1) $\left( \boldsymbol{A} + \boldsymbol{B} \right)^t = \boldsymbol{A}^t + \boldsymbol{B}^t.$   
+2) $(k\boldsymbol{A})^t = k\boldsymbol{A}^t$ ：  
+3) $\left( \boldsymbol{AB} \right)^t = \boldsymbol{B}^t \boldsymbol{A}^t$
+
+# Định nghĩa 3.4:
+
+1) Ma trận $A$ được gọi là ma trận đối xứng nếu $A = A^t$ (trong đó $A$ là ma trận vuông có các phần tử đối xứng nhau qua đường chéo thứ nhất).
+
+2) Ma trận $A$ được gọi là ma trận反对称如果 $A = -A^t$ （其中 $A$ 是一个方阵，其对角线第一行的元素互为相反数，并且对角线上面的元素都等于0）。
+
+# 3.3. 矩阵表示
+
+# 3.3.1. 定义向量组的矩阵表示
+
+假设 $V$ 是一个 $n$ 维空间，有一个基 $\mathcal{B} = \left\{ e_1, ..., e_n \right\}$。给定一组 $m$ 个向量 $\left\{\nu_1, ..., \nu_m\right\}$ 属于 $V$。
+
+假设 $\nu_j = \sum_{i=1}^{n} a_{ij}e_i; j = \overline{1,m}$，此时矩阵 $A = [a_{ij}]_{n\times m}$ 的各列是向量组 $\left\{\nu_1, ..., \nu_m\right\}$ 在基 $\mathcal{B}$ 中的坐标。这样的矩阵 $A$ 被称为向量组 $\left\{\nu_1, ..., \nu_m\right\}$ 在基 $\mathcal{B}$ 下的矩阵表示：
+
+$$
+A = [a_{ij}]_{n\times m}; \nu_j = \sum_{i=1}^{n} a_{ij}e_i, j = \overline{1,m}.
+$$
+
+Ngược lại, với ma trận $A$ có $n \times m$ cho trước sẽ xác định duy nhất hệ $m$ véc tơ cơ sở $\hat{\mathrm{d}}\hat{\mathrm{0}}$ của nó trong cơ sở $\mathcal{B}$ là các cột của $A$.
+
+Vậy khi có định cơ sở $\mathcal{B} = \left\{ e_{1}, \ldots, e_{n} \right\}$ của không gian véc tơ $V$ thì có tương ứng 1-1 giữa các ma trận có $n \times m$ với các hệ $m$ véc tơ của $V$:
+
+Nói riêng, nếu $u = x_{1} e_{1} + \ldots + x_{n} e_{n}$ theo (2.9) ta ký hiệu toạ $\mathbf{d}\hat{\mathbf{\rho}}$ của $u$ trong cơ sở $\mathcal{B}$ là
+
+$$
+\big( \boldsymbol{u} \big)_{\mathcal{B}} = (x_{1}, \ldots, x_{n}) .
+$$
+
+Ma trận của $u$ trong cơ sở $\mathcal{B}$ là
+
+$$
+{\left[ u \right]_{\mathcal{B}}} = {\left[\begin{array}{l}
+x_{1} \\
+\vdots \\
+x_{n}
+\end{array}\right]} .
+$$
+
+Ví dụ 3.10: Ma trận của hệ véc tơ $\nu_{1} = (4, 1, 3, -2)$, $\nu_{2} = (1, 2, -3, 2)$, $v_3=(x,y,z,t)$ trong cơ sở chính tắc của $\mathbb{R}^{4}$ là
+
+$$
+{\left[\begin{array}{lll}
+4 & 1 & x \\
+1 & 2 & y \\
+3 & -3 & z \\
+-2 & 2 & t
+\end{array}\right]} .
+$$
+
+# 3.3.2. Ma trận chuyển cơ sở
+
+Gia sươr $\mathcal{B} = \left\{ e_{1}, \ldots, e_{n} \right\}$, $\mathcal{B'} = \left\{ e'_{1}, \ldots, e'_{n} \right\}$ là hai cơ sở của $V$. Ma trận của hệ vec tơ $\mathcal{B'}$ trong cơ sở $\mathcal{B}$ được gọi là ma trận chuyển từ cơ sở $\mathcal{B}$ sang cơ sở $\mathcal{B'}$. Nghĩa là nếu
+
+$$
+e'_{j} = \sum_{i=1}^{n} t_{ij} e_{i}, \quad j = \overline{1, n}
+\ldots \mathrm{thì}
+$$
+
+$$
+T = \left[ t_{ij} \right]_{\mathcal{B}}^{\mathcal{B'}},
+$$
+
+là ma trận chuyển từ cơ sở $\mathcal{B}$ sang $\mathcal{B'}$.
+
+Khi đó với vec tơ bất kỳ $u \in V; u = \sum_{i=1}^{n} x_{i} e_{i} = \sum_{i=1}^{n} x'_{i} e'_{i}$ ta có:
+
+$$
+\left[ x_{i} \right]_{n \times 1} = \left[ t_{ij} \right]_{n \times n} \left[ x'_{j} \right]_{n \times 1}.
+$$
+
+Nghĩa là
+
+$$
+\left[ u \right]_{\mathcal{B}} = T \left[ u \right]_{\mathcal{B'}}.
+$$
+
+(3.15)
+
+Công thức (3.14), (3.15) được gọi là công thức đổi tọa độ.
+
+Nếu A, $A^{\prime}$ lần lượt là ma trận của $\left\{ \nu_{1}, \ldots, \nu_{m} \right\}$ trong cơ sở $\mathcal{B}$, $\mathcal{B'}$ thì
+
+$$
+A = \Big[ t_{ij} \Big]_{\mathcal{B}}^{\mathcal{B}}, A'.
+$$
+
+(3.16)
+
+Ví dụ 3.11: Xét hai cơ sở của không gian vector $\boxed { \begin{array}{rcl}
+\boxed{1 \leq m \leq n} & \boxed{1} & \boxed{1 \leq m \leq n} \\
+\overline{\leq} & \boxed{1} & \boxed{1}
+\end{array}}$ : $\mathcal{B} = \left\{ e_{1}, e_{2} \right\}$, $\mathcal{B'} = \left\{ e'_{1}, e'_{2} \right\}$, với $e_{1} = (1, 0)$, $e_{2} = (0, 1)$ và $e'_{1} = (1, 1)$, $\boldsymbol{e'}_{2} = (4, 3)$:
+
+Theo công thức (2.10)
+
+$$
+\begin{array}{rl}
+& : \forall u = (x, y) \in \mathbb{R}^{2}: u = x e_{1} + y e_{2} = (4y - 3x)e'_{1} + (x - y)e'_{2}; \\
+& (u)_{\mathcal{B}} = (x, y); (u)_{\mathcal{B'}} = (4y - 3x, x - y).
+\end{array}
+$$
+
+Ma trận chuyển từ cơ sở $\mathcal { B }$ sang $\mathcal { B ^ { \prime } }$ là $T = \left[ \begin{array} { l l } { 1 } & { 4 } \\ { 1 } & { 3 } \end{array} \right]$. Do đó
+
+$$
+\begin{array}{r}
+\left[ \begin{array} { l } { x } \\ { y } \end{array} \right]
+= \left[ \begin{array} { l l } { 1 } & { 4 } \\ { 1 } & { 3 } \end{array} \right] 
+\left[ \begin{array} { l } { 4 y - 3 x } \\ { x - y } \end{array} \right].
+\end{array}
+$$
+
+$$
+u = (x, y), \quad (u)_{\mathcal { B ^ { \prime } }} = (4y - 3x, x - y)
+\Longrightarrow 
+(e_1)_{\mathcal { B ^ { \prime } }} = (-3, 1); \quad
+(e_2)_{\mathcal { B ^ { \prime } }} = (4, -1).
+$$
+
+Ma trận chuyển từ cơ sở $\mathcal { B ^ { \prime } }$ sang $\mathcal { B }$ là $T' = \left[ \begin{array} { l l } { - 3 } & { 4 } \\ { 1 } & { - 1 } \end{array} \right]$; do đó
+
+$$
+\begin{array}{r}
+\left[ \begin{array} { c } { 4 y - 3 x } \\ { x - y } \end{array} \right]
+= \left[ \begin{array} { l l } { - 3 } & { 4 } \\ { 1 } & { - 1 } \end{array} \right] 
+\left[ \begin{array} { c } { x } \\ { y } \end{array} \right].
+\end{array}
+$$
+
+# 3.4. Hạng của ma trận
+
+## 3.4.1. Định nghĩa và tìm hạng của ma trận bằng phép biến đổi tương đương
+
+Định nghĩa 3.5: Cho ma trận $A = \left[ a _ { i j } \right] _ { m \times n }$. Ta gọi hàng của n vector cột của A (trong không gian $\mathbb{R} ^ { m }$) là hàng của ma trận $A$, ký hiệu $r(A)$.
+
+# Phương pháp tìm hạng của ma trận bằng phép biến đổi trong dãy
+
+Hạng $r(S)$ của một hệ véc tơ $S$ của không gian $V$ là số véc tơ của một hệ con độc lập tuyến tính tối đa của S hay là chiều của span $S$ (xem Định lý 2.16 chương 2). Vì vậy khi ta thực hiện liên tiếp các phép biến đổi sau, gọi là các phép biến đổi tương đương, thì span $S$ không đổi do độ hạng của hệ không thay đổi:
+
+1) Đổi chỗ cho nhau hai véc tơ của hệ.
+2) Nhân vào một véc tơ của hệ một số khác 0.
+3) Cộng vào một véc tơ của hệ một tổ hợp tuyến tính các véc tơ khác của hệ.
+
+Vì vậy để tìm hạng của một ma trận ta thực hiện các biến đổi tương đương lên các cột (sau này ta sẽ chứng minh được rằng ta cũng có thể biến đổi theo các hàng) để đưa ma trận về dạng tam giác hoặc hình bậc thang có các phần tử trên bậc thang bằng 0 (xem Nhận xét 2.2, cách 1). Khi đó số các véc tơ cột khác 0 là hạng của ma trận.
+
+# Ví dụ 3.12:
+
+$$
+A = \left[ \begin{array} { l l l l } { 1 } & { - 3 } & { 4 } & { 2 } \\ { 2 } & { 1 } & { 1 } & { 4 } \\ { - 1 } & { - 2 } & { 1 } & { - 2 } \end{array} \right] c_1 + c_2 \to c_2 \left[ \begin{array} { l l l l } { 1 } & { 0 } & { 0 } & { 0 } \\ { 2 } & { 7 } & { - 7 } & { 0 } \\ { - 1 } & { - 5 } & { 5 } & { 0 } \end{array} \right]
+$$
+
+$$
+\begin{array}{r}
+\mathrm{c}_{1} \quad \mathrm{c}_{1} \\
+\mathrm{c}_{2} \quad \mathrm{c}_{2} \\
+\mathrm{c}_{2} + \mathrm{c}_{3} \quad \mathrm{c}_{3} \\
+1 \quad 5 \quad 0 \quad 0
+\end{array}
+\left[
+\begin{array}{cccc}
+1 & 0 & 0 & 0 \\
+2 & 7 & 0 & 0 \\
+-5 & -5 & 0 & 0
+\end{array}
+\right].
+$$
+
+Vậy $r(A) = 2$:
+
+# Ví dụ 3.13:
+
+$$
+B = \left[
+\begin{array}{lllll}
+-1 & 2 & 1 & -1 & 1 \\
+a & -1 & 1 & -1 & -1 \\
+1 & a & 0 & 1 & 1 \\
+1 & 2 & 2 & -1 & 1
+\end{array}
+\right]
+c_{2} \overset{c_{1} + c_{4}}{\rightarrow}
+\left[
+\begin{array}{lllll}
+1 & -1 & 1 & -1 & 2 \\
+a & -1 & 1 & -1 & -1 \\
+1 & -1 & -1 & a & -1 \\
+0 & 1 & 1 & 1 & a
+\end{array}
+\right]
+c_{1} + c_{2}
+$$
+
+$$
+\begin{array} { l l l l l l l } { 1 } & { 0 } & { 0 } & { 0 } & { 0 } \\ { 1 } & { 0 } & { - 2 } & { a + 1 } & { - 3 } \\ { 0 } & { 1 } & { 1 } & { 1 } & { a } \\ { 2 } & { 1 } & { - 1 } & { 3 } & { - 2 } \end{array} 
+\xrightarrow[c_1]{c_1 c_5}
+\begin{array} { l l l l l l } { 1 } & { 0 } & { 0 } & { 0 } & { 0 } \\ { 1 } & { - 2 } & { 0 } & { 0 } & { 0 } \\ { 0 } & { 1 } & { 1 } & { 0 } & { 0 } \\ { 2 } & { - 1 } & { 1 } & { 2 - 2 a } & { 2 - 2 a } \end{array} .
+$$
+
+$$
+\hat{\sf a}\{\Psi\} \quad r(B) = 
+\left\{
+\begin{array}{ll}
+4 & \text{nếu } a \neq 1 \\
+3 & \text{nếu } a = 1 
+\end{array}
+\right.
+.
+$$
+
+# 3.4.2. Các ma trận tương ứng với các phép biến đổi số cấp
+
+Xét các ma trận vuông cấp $n$ sau:
+
+![](images/702840b3ebe846f2eff592bf6ece8bdea8212c0fb3f9fed708d0f7710d998a33.jpg)
+
+![](images/3c65e491845dcd386a85b6ad0a42dcdb2c10a9c5fb667ae32aeabc072cad3854.jpg)
+
+$$
+\begin{array} { c c } 
+{} & {} \\
+{ a_{kl} = \left\{
+\begin{array}{cc}
+1 & k = l \\
+\lambda & k = i, l = j 
+\end{array}\right. }
+\end{array}
+$$
+
+Tính chất 3.4: Ta dễ dàng kiểm tra được:
+
+a) Nếu nhân $R(k,\lambda)$ vào bên phải của ma trận $A$ thì ma trận tích $AR(k,\lambda)$ có thể được bằng cách thêm $\lambda$ vào cột $k$ của ma trận $A$.
+
+$$
+{ \left[ \begin{array} { l l l } { a } & { b } & { c } \\ { a ^ { \prime } } & { b ^ { \prime } } & { c ^ { \prime } } \\ { a ^ { \prime \prime } } & { b ^ { \prime \prime } } & { c ^ { \prime \prime } } \end{array} \right] } { \left[ \begin{array} { l l l } { 1 } & { 0 } & { 0 } \\ { 0 } & { \lambda } & { 0 } \\ { 0 } & { 0 } & { 1 } \end{array} \right] } = { \left[ \begin{array} { l l l } { a } & { \lambda b } & { c } \\ { a ^ { \prime } } & { \lambda b ^ { \prime } } & { c ^ { \prime } } \\ { a ^ { \prime \prime } } & { \lambda b ^ { \prime \prime } } & { c ^ { \prime \prime } } \end{array} \right] } .
+$$
+
+b) Nếu nhân $P ( i , j )$ vào bên phải của ma trận $A$ thì ma trận tích $A P ( i , j )$ được bằng cách đổi chỗ hai cột $i$ và $j$ của $A$ cho nhau.
+
+$$
+{ \left[ \begin{array} { l l l } { a } & { b } & { c } \\ { a ^ { \prime } } & { b ^ { \prime } } & { c ^ { \prime } } \\ { a ^ { \prime \prime } } & { b ^ { \prime \prime } } & { c ^ { \prime \prime } } \end{array} \right] } { \left[ \begin{array} { l l l } { 0 } & { 1 } & { 0 } \\ { 1 } & { 0 } & { 0 } \\ { 0 } & { 0 } & { 1 } \end{array} \right] } = { \left[ \begin{array} { l l l } { b } & { a } & { c } \\ { b ^ { \prime } } & { a ^ { \prime } } & { c ^ { \prime } } \\ { b ^ { \prime \prime } } & { a ^ { \prime \prime } } & { c ^ { \prime \prime } } \end{array} \right] } .
+$$
+
+c) Nếu nhân $Q ( i , j , \lambda )$ vào bên phải của ma trận $A$ thì ma trận tích $A Q ( i , j , \lambda )$ được bằng cách nhân $\lambda$ vào cột $i$ và cộng vào cột $j$ của ma trận $A$.
+
+$$
+\left[ \begin{array} { l l l } { a } & { b } & { c } \\ { a ^ { \prime } } & { b ^ { \prime } } & { c ^ { \prime } } \\ { a ^ { \prime \prime } } & { b ^ { \prime \prime } } & { c ^ { \prime \prime } } \end{array} \right] 
+\left[ \begin{array} { l l l } { 1 } & { 0 } & { 0 } \\ { 0 } & { 1 } & { 0 } \\ { \lambda } & { 0 } & { 1 } \end{array} \right] 
+= \left[ \begin{array} { l l l } { a + \lambda c } & { b } & { c } \\ { a ^ { \prime } + \lambda c ^ { \prime } } & { b ^ { \prime } } & { c ^ { \prime } } \\ { a ^ { \prime \prime } + \lambda c ^ { \prime \prime } } & { b ^ { \prime \prime } } & { c ^ { \prime \prime } } \end{array} \right] .
+$$
+
+d) Nếu nhân $P, Q, R$ vào bên trái của ma trận $A$ thì ta có các kết quả tương tự như trên, trong đó tác động lên hàng đổi thành tác động lên cột và ngược lại. Chẳng hạn
+
+$$
+\left[ \begin{array} { l l l } { 1 } & { 0 } & { 0 } \\ { 0 } & { \lambda } & { 0 } \\ { 0 } & { 0 } & { 1 } \end{array} \right] 
+\left[ \begin{array} { l l l } { a } & { b } & { c } \\ { a ^ { \prime } } & { b ^ { \prime } } & { c ^ { \prime } } \\ { a ^ { \prime \prime } } & { b ^ { \prime \prime } } & { c ^ { \prime \prime } } \end{array} \right] 
+= \left[ \begin{array} { l l l } { a } & { b } & { c } \\ { \lambda a ^ { \prime \prime } } & { \lambda b ^ { \prime \prime } } & { \lambda c ^ { \prime \prime } } \\ { a ^ { \prime \prime } } & { b ^ { \prime \prime } } & { c ^ { \prime \prime } } \end{array} \right] .
+$$
+
+$$
+{ \left[ \begin{array} { l l l } { 1 } & { 0 } & { 0 } \\ { 0 } & { 1 } & { 0 } \\ { 0 } & { \lambda } & { 1 } \end{array} \right] } { \left[ \begin{array} { l l l } { a } & { b } & { c } \\ { a ^ { \prime } } & { b ^ { \prime } } & { c ^ { \prime } } \\ { a ^{\prime\prime}} & { b ^ {\prime\prime}} & { c ^ {\prime\prime}} \end{array} \right] } = { \left[ \begin{array} { l l l } { a } & { b } & { c } \\ { a ^ { \prime } } & { b ^ { \prime } } & { c ^ { \prime } } \\ { \lambda a ^{\prime\prime} + a ^{\prime\prime}} & { \lambda b ^ {\prime} + b ^{\prime\prime}} & { \lambda c ^ {\prime} + c ^{\prime\prime}} \end{array} \right] } .
+$$
+
+# 3.5. KHAỊ NIỆM ĐỊNH THỨC 3.5.1. Hoán vị và phép thế
+
+# Định nghĩa 3.6:
+
+1) Mối song ánh $\sigma : \{ 1 , 2 , . . . , n \} \rightarrow \{ 1 , 2 , . . . , n \}$ được gọi là một phép thế bậc $n$.
+
+Ta thường ký hiệu mỗi phép thế bằng mặt ma trận có hàng thứ nhất là các số $1,2,\ldots,n$ sắp theo thứ tự tăng dần và hàng thứ hai là ảnh tương ứng:
+
+$$
+\sigma = { \left[ \begin{array} { l l l l } { 1 } & { 2 } & { \ldots } & { n } \\ { \sigma ( 1 ) } & { \sigma ( 2 ) } & { \ldots } & { \sigma ( n ) } \end{array} \right] } .
+$$
+
+2) Ảnh của một phép thế được gọi là hoán vị. Với phép thế $\tau$ có hoán vị tương ứng
+
+$$
+\left[ \sigma ( 1 ) \quad \sigma ( 2 ) \quad \ldots \quad \sigma ( n ) \right] .
+$$
+
+3) Dấu của phép thế:
+
+Mỗi cặp $i < j$ mà $\sigma(i) > \sigma(j)$ được gọi là một nghịch thứ của phép thế $\sigma$. Giả sử $k$ là số các nghịch thứ của $\sigma$, ta định nghĩa và ký hiệu dấu của phép thế $\sigma$ là
+
+$$
+\operatorname{sgn} \sigma = (-1)^k
+$$
+
+Như vậy phép thế lấy dấu $+$ hoặc $-$ nếu số các nghịch thứ tương ứng là chẵn hoặc lẻ.
+
+Ta dễ dàng kiểm chứng được rằng tập các phép thế bậc $n$ với luật hợp thành là phép hợp của hai ánh xạ tạo thành một nhóm không giao hoán, gọi là nhóm đối xứng bậc $n$, ký hiệu $S_n$:
+
+Trong chương 1 ta đã biết tập $S_n$ có đúng $n!$ phần tử. Chẳng hạn $S_2$ có 2 phần tử, $S_3$ có 6 phần tử...
+
+Ví dụ 3.14: Cho phép thế $\sigma = \left[ { \begin{array}{ccc} 1 & 2 & 3 \\ 1 & 3 & 2 \end{array} } \right]$. Nhận thấy cặp (2,3). Vậy sgn $\sigma = (-1)^1 = -1$:
+
+Trong trường hợp tổng quát ta có thể tìm số các nghịch thứ $k$ của phép thế $\sigma$ bằng cách thực hiện các bước sau:
+
+Trong hoán vị $\left[ \sigma(1) \quad \sigma(2) \quad \ldots \quad \sigma(n) \right]$, $i_1$ là giá trị sao cho $\sigma(i_1) = 1$:
+
+(20 $\cdot$ GQi $k_{1}$ là số các số trong $\left[ \sigma ( 1 ) \quad \sigma ( 2 ) \quad \ldots \quad \sigma ( n ) \right]$ dứng trc $\sigma ( i _ { 1 } ) = 1 ; k_{1}$ là số các nghịch thứ với 1).
+
+$\cdot$ Xóa số $\sigma ( i _ { 1 } ) = 1$, tồn tại $i _ { 2 }$ sao cho $\sigma ( i _ { 2 } ) = 2$, gọi $k_{2}$ là số các số còn lại trong $\left[ \sigma ( 1 ) \quad \sigma ( 2 ) \quad \ldots \quad \sigma ( n ) \right]$ dứng trc $\sigma ( i _ { 2 } ) = 2 ; k_{2}$ là số các nghịch thứ với 2).
+
+$\cdot$ Xóa số $\sigma ( i _ { 2 } ) = 2$ và tiếp tục đếm như thế ...
+
+Cuối cùng số các nghịch thứ của $\sigma$ là:
+
+$$
+k = k_{1} + k_{2} + \ldots + k_{n-1}.
+$$
+
+Ví dụ 3.15: 1) Hoán vị $\left[ 3 \quad 4 \quad 2 \quad 1 \right]$ có $k_{1} = 3, k_{2} = 2, k_{3} = 0.$ 
+
+$$
+k = k_{1} + k_{2} + k_{3} = 3 + 2 + 0 = 5 \text{ do dấu } sgn \sigma = ( - 1 ) ^ { 5 } = - 1
+$$
+
+2) Hoán vị $\left[4 \quad 2 \quad 5 \quad 1 \quad 3\right]$ có $k_{1} = 3$, xóa 1, $2 \Rightarrow k_{3} = 2$, $k_{4} = 0$. Vậy $k = k_{1} + k_{2} + k_{3} + k_{4} = 6 \text{ do dấu } sgn \sigma = ( - 1 ) ^ { 6 } = 1$.
+
+# Tính chất 3.5:
+
+1) Cặp $(i, j), i \neq j$ là một nghịch điều của phép thay $\sigma$ (nghĩa là $i < j$ và $\sigma(i) > \sigma(j)$) khi và chỉ khi dấu của $\frac{\sigma(i) - \sigma(j)}{i - j} \mathrm{~bản~cân} -1$. 
+
+$$
+\operatorname{sgn} \sigma = \prod_{1 \leq i \neq j \leq n} \left( \frac{\sigma(i) - \sigma(j)}{i - j} \right).
+$$
+
+2) Phép thay chuyển vị $\begin{array}{rl}\sigma &= [i_0] & [j_0]\end{array}$ là phép thay chỉ biến đổi hai phần tử $i_0, j_0$ cho nhau và giữ nguyên các phần tử còn lại:
+
+$$
+\sigma = \left[ \begin{array}{lllllllll} 1 & 2 & \dots & i_0 & \dots & j_0 & \dots & n \\ 1 & 2 & \dots & j_0 & \dots & i_0 & \dots & n \end{array} \right].
+$$
+
+Để đếm được: $k_1 = \ldots = k_{i_0 - 1} = 0$, $k_{i_0} = j_0 - i_0$,
+
+$$
+k_{i_0 + 1} = \ldots = k_{j_0 - 1} = 1, k_{j_0} = \ldots = k_n = 0 \Rightarrow k = 2(j_0 - i_0) - 1
+$$
+
+Vậy $\operatorname{sgn} \sigma = (-1)^k = -1$.
+
+$$
+k_{i_0 + 1} = \ldots = k_{j_0 - 1} = 1, k_{j_0} = \ldots = k_n = 0 \Rightarrow k = 2(j_0 - i_0) - 1
+$$
+
+Vậy $\operatorname{sgn} \sigma = (-1)^k = -1$:
+
+3) Với mỗi $\sigma, \mu \in S_n$:
+
+$$
+\operatorname{sgn}(\sigma \circ \mu) = \operatorname{sgn}\sigma \cdot \operatorname{sgn}\mu.
+$$
+
+Thế nên, khi $(i, j)$ chạy khắp tập $\left\{1, 2, \ldots, n\right\} \times \left\{1, 2, \ldots, n\right\} \setminus \left\{(1, 1), \ldots, (n, n)\right\}$ thì
+
+$(\mu(i), \mu(j))$ cũng chạy khắp tập này. Do đó:
+
+$$
+\operatorname{sgn}\sigma = \prod_{1 \leq i \neq j \leq n} \mathrm{dia} \left( \frac{\sigma(i) - \sigma(j)}{i - j} \right) = \prod_{1 \leq \mu(i) \neq \mu(j) \leq n} \mathrm{dia} \left( \frac{\sigma(\mu(i)) - \sigma(\mu(j))}{\mu(i) - \mu(j)} \right)
+$$
+
+$$
+= \prod_{1 \leq i \neq j \leq n} \operatorname{dau} \left( \frac{\sigma(\mu(i)) - \sigma(\mu(j))}{\mu(i) - \mu(j)} \right).
+$$
+
+$$
+\Rightarrow \operatorname{sgn}\sigma \cdot \operatorname{sgn}\mu = \prod_{1 \leq i \neq j \leq n} \mathrm{dia} \left( \frac{\sigma(\mu(i)) - \sigma(\mu(j))}{\mu(i) - \mu(j)} \right) \cdot \prod_{1 \leq i \neq j \leq n} \mathrm{dia} \left( \frac{\mu(i) - \mu(j)}{i - j} \right)
+$$
+
+$$
+= \prod _ { 1 \leq i \neq j \leq n } \mathrm{d} \tilde{\mathbf{a}} \Bigg ( \frac { \sigma ( \mu ( i ) ) - \sigma ( \mu ( j ) ) } { i - j } \Bigg ) = \mathrm{sgn} \big ( \sigma \circ \mu \big ) \ .
+$$
+
+4) Với mỗi phép thay đổi vị trí $\left[ i _ { 0 } \ j _ { 0 } \right]$ (xem 3.3) và phép hoán vị $\sigma$:
+
+$$
+\operatorname{sgn} \sigma \circ \left[ i _ { 0 } \ j _ { 0 } \right] = - \operatorname{sgn} \sigma .
+$$
+
+# 3.5.2. Định nghĩa determinant
+
+Trước hết ta liên hệ đến khái niệm determinant cấp 2 đã biết khi giải hệ phương trình tuyến tính 
+\[
+\left\{
+\begin{array}{ll}
+a x + b y = c \\
+a' x + b' y = c'
+\end{array}
+\right.
+\]
+
+$$
+D = \left| \begin{array} { l l } { a } & { b } \\ { a' } & { b' } \end{array} \right| = ab' - ba', D _ { x } = \left| \begin{array} { l l } { c } & { b } \\ { c' } & { b' } \end{array} \right| = cb' - bc', D _ { y } = \left| \begin{array} { l l } { a } & { c } \\ { a' } & { c' } \end{array} \right| = ac' - ca'.
+$$
+
+Các determinant này được xác định là tích 2 phần tử của đường chéo thứ nhất trừ đi tích 2 phần tử của đường chéo thứ hai.
+
+Như vậy định nghĩa của ma trận $A = \left[ \begin{array} { l l } { a _ { 1 1 } } & { a _ { 1 2 } } \\ { a _ { 2 1 } } & { a _ { 2 2 } } \end{array} \right]$ với cấp 2 là
+
+$$
+\left| A \right| = \left| \begin{array} { c c } { a _ { 1 1 } } & { a _ { 1 2 } } \\ { a _ { 2 1 } } & { a _ { 2 2 } } \end{array} \right| = a _ { 1 1 } a _ { 2 2 } - a _ { 1 2 } a _ { 2 1 } .
+$$
+
+Mặt khác, doixingS62phan $\sigma_1 = \left[ \begin{array} { l l } { 1 } & { 2 } \\ { 1 } & { 2 } \end{array} \right]$ vào $v=[21]$ có dấu $\operatorname{s g n} \sigma _ { 1 } = 1$, $\operatorname{s g n} \sigma _ { 2 } = - 1$. Vậy (3.24) có thể viết lại
+
+$$
+\begin{array} { l }
+\left| A \right| = \left| \begin{array} { l l } { a _ { 1 1 } } & { a _ { 1 2 } } \\ { a _ { 2 1 } } & { a _ { 2 2 } } \end{array} \right| = a _ { 1 1 } a _ { 2 2 } - a _ { 1 2 } a _ { 2 1 } \\
+\qquad = \mathrm{s g n} \sigma _ { 1 } a _ { 1 \sigma _ { 1 } ( 1 ) } a _ { 2 \sigma _ { 1 } ( 2 ) } + \mathrm{s g n} \sigma _ { 2 } a _ { 1 \sigma _ { 2 } ( 1 ) } a _ { 2 \sigma _ { 2 } ( 2 ) } = \sum _ { \sigma \in S _ { 2 } } \mathrm{s g n} \sigma a _ { 1 \sigma ( 1 ) } a _ { 2 \sigma ( 2 ) } .
+\end{array}
+$$
+
+Bằng cách mở rộng công thức này ta có thể định nghĩa định nghĩa của ma trận vuông cấp $n$ bất kỳ như sau:
+
+Định nghĩa 3.7: Định thức của ma trận vuông $A = \left[ a _ { i j } \right] _ { n \times n }$ được ký hiệu là det $A$ hay $\left| A \right|$ và định nghĩa bằng biểu thức:
+
+$$
+\operatorname{det} A = \sum _ { \sigma \in S _ { n } } \operatorname{sgn} \sigma \cdot a _ { 1 \sigma ( 1 ) } . . . a _ { n \sigma ( n ) }
+$$
+
+Như vậy, định thức của ma trận vuông $A = \left[ a _ { i j } \right] _ { n \times n }$ là tổng của $n!$ số hạng, mỗi số hạng là tích $\operatorname{g} o m n$ phần tử trên $n$ hàng khác nhau của ma trận $A$ và nhân với dấu của phép hoán vị.
+
+Ví dụ 3.16: Nhóm đối xứng 6 phần tử là (xem ví dụ 1.23 chương 1)
+
+$$
+\sigma _ { 1 } = \left[ \begin{array} { l l l } { 1 } & { 2 } & { 3 } \\ { 1 } & { 2 } & { 3 } \end{array} \right] , \ \sigma _ { 2 } = \left[ \begin{array} { l l l } { 1 } & { 2 } & { 3 } \\ { 2 } & { 3 } & { 1 } \end{array} \right] \ , \ \sigma _ { 3 } = \left[ \begin{array} { l l l } { 1 } & { 2 } & { 3 } \\ { 3 } & { 1 } & { 2 } \end{array} \right] \ ,
+$$
+
+$$
+\sigma _ { 4 } = \left[ \begin{array} { l l l } { 1 } & { 2 } & { 3 } \\ { 1 } & { 3 } & { 2 } \end{array} \right] , \sigma _ { 5 } = \left[ \begin{array} { l l l } { 1 } & { 2 } & { 3 } \\ { 3 } & { 2 } & { 1 } \end{array} \right] , \sigma _ { 6 } = \left[ \begin{array} { l l l } { 1 } & { 2 } & { 3 } \\ { 2 } & { 1 } & { 3 } \end{array} \right] .
+$$
+
+cố đạo sgn $\sigma_{1} = \operatorname{sgn} \sigma_{2} = \operatorname{sgn} \sigma_{3} = 1$, $\operatorname{sgn} \sigma_{4} = \operatorname{sgn} \sigma_{5} = \operatorname{sgn} \sigma_{6} = -1$. 
+
+$$
+\begin{array}{r}
+\left| \begin{array}{ccc}
+a_{11} & a_{12} & a_{13} \\
+a_{21} & a_{22} & a_{23} \\
+a_{31} & a_{32} & a_{33}
+\end{array} \right| = \displaystyle \sum_{\sigma \in S_{3}} \operatorname{sgn} \sigma \ a_{1\sigma(1)} a_{2\sigma(2)} a_{3\sigma(3)} \\
+\quad \quad \quad = a_{11} a_{22} a_{33} + a_{12} a_{23} a_{31} + a_{13} a_{21} a_{32} \\
+\quad \quad \quad - a_{11} a_{23} a_{32} - a_{12} a_{21} a_{33} - a_{13} a_{22} a_{31}
+\end{array}
+$$
+
+Nhận xét 3.1: Định nghĩa của ma trận vuông cấp 3 có 6 số hạng, công thức (3.26), trong đó:
+
+· Có ba số hạng mang dấu $+$:
+$$
+a_{11} a_{22} a_{33} + a_{12} a_{23} a_{31} + a_{13} a_{21} a_{32}
+$$
+là tích các phần tử trên đường chéo chính hoặc đỉnh của tam giác có cạnh song song với đường chéo chính.
+
+$$
+\begin{array} { r } { a _ { 1 1 } \qquad a _ { 1 2 } \qquad - \frac { a _ { 1 3 } } { 7 } } \\ { \underset { r A _ { 3 1 } \wedge r } { } \div \frac { r } { a _ { 2 2 } } \underset { } { \sim } \frac { r } { \rho } \underset { } { \le } 2 3 \ . } \\ { \underset { r A _ { 3 1 } ^ { \prime } } { \sim } \sim \bar { a } _ { 3 3 } \stackrel { } { \sim } \frac { r } { \rho } \underset { } { \sim } a _ { 3 3 } } \end{array}
+$$
+
+· Cố ba số hàng mang dấu -:
+
+$$
+- a _ { 1 1 } a _ { 2 3 } a _ { 3 2 } - a _ { 1 2 } a _ { 2 1 } a _ { 3 3 } - a _ { 1 3 } a _ { 2 2 } a _ { 3 1 }
+$$
+
+là tích các phần tử trên đường chéo thứ hai hoặc trên đỉnh của tam giác có cạnh song song với đường chéo thứ hai.
+
+$$
+{ \scriptstyle { \frac { \prime \mathbf { i } \mathbf { d u } 3 . 1 7 : } { x } } } \left| { \begin{array} { l l l } { 2 } & { 5 } & { x } \\ { 3 } & { y } & { 4 } \\ { z } & { 1 } & { 6 } \end{array} } \right| = 1 2 y + 3 x + 2 0 z - x y z - 8 - 9 0 = 3 x + 1 2 y + 2 0 z - x y z - 9 8 .
+$$
+
+Ví dụ 3.18: Tính định thức của ma trận vuông $A = \left[ a _ { i j } \right] _ { n \times n }$ có các phần tử bên dưới đường chéo chính bằng 0, nghĩa là $a _ { i j } = 0$ nếu $i > j$.
+
+$$
+\operatorname*{det}(A) = \left| \begin{array}{ccccc} a_{11} & a_{12} & a_{13} & \ldots & a_{1n} \\  & a_{22} & a_{23} & \ldots & a_{2n} \\  &  & a_{33} & \ldots & a_{3n} \\  &  &  & \ddots & \vdots \\  &  &  &  & a_{nn} \end{array} \right|.
+$$
+
+Xét phép thế $\sigma_0 = \left[ \begin{array}{llll} 1 & 2 & \ldots & n \\ 1 & 2 & \ldots & n \end{array} \right]$, $\mathrm{sgn}\, \sigma_0 = (-1)^0 = 1.$
+
+Với mỗi $\sigma \in S_n$, nếu $\sigma \neq \sigma_0$ thì tồn tại $k$ sao cho $\sigma(k) \neq k \Rightarrow$ tồn tại $k'$ sao cho $\sigma(k') < k' \Rightarrow a_{k'\sigma(k')} = 0 \Rightarrow a_{1\sigma(1)} \ldots a_{n\sigma(n)} = 0.$
+
+Vậy
+
+$$
+\operatorname*{det}(A) = \sum_{\sigma \in S_n} \mathrm{sgn}\, \sigma \cdot a_{1\sigma(1)} \ldots a_{n\sigma(n)} = \mathrm{sgn}\, \sigma_0 \cdot a_{11} \ldots a_{nn} = a_{11} \ldots a_{nn}.
+$$
+
+Tương tự
+
+$$
+\left| \begin{array} { l l l l } { a _ { 1 1 } } & & & & \\ { a _ { 2 1 } } & { a _ { 2 2 } } & & & \\ { a _ { 3 1 } } & { a _ { 3 2 } } & { a _ { 3 3 } } & & \\ { \vdots } & { \vdots } & { \vdots } & { \ddots } & \\ { a _ { n 1 } } & { a _ { n 2 } } & { a _ { n 3 } } & { \ldots } & { a _ { n n } } \end{array} \right| = a _ { 1 1 } \ldots a _ { n n } .
+$$
+
+Vi dụ 3.19: Tính định thức của ma trận vuông $A = \left[ a _ { i j } \right] _ { n \times n }$ có phần tử trên đường chéo thứ hai bằng 0, nghĩa là $a _ { i j } = 0$ nếu $i + j < n + 1$:
+
+$$
+\operatorname*{det}(A) = \left| \begin{array} { l l l l l } & { \bigcirc } & & { a _ { 1 n } } \\ & { \bigcirc } & & { a _ { 2 , n - 1 } } & { a _ { 2 n } } \\ & { . ^ { . } } & { \vdots } & { \vdots } \\ & { a _ { n - 1 , 2 } } & { . . . } & { . . . } & { a _ { n - 1 n } } \\ { a _ { n 1 } } & { a _ { n 2 } } & { . . . } & { . . . } & { a _ { n n } } \end{array} \right| .
+$$
+
+Xét phép hoán vị $\sigma _ { 1 } = \left[ { \begin{array} { c c c c } { 1 } & { 2 } & { \ldots } & { n } \\ { n } & { n - 1 } & { \ldots } & { 1 } \end{array} } \right] { \mathrm { ~ thoả mãn ~ } } \sigma _ { 1 } ( k ) + k = n + 1 , \ \forall k = 1 , \ldots , n .$ Ta đặt $k _ { 1 } = n - 1 , k _ { 2 } = n - 2 , . . . , k _ { n - 1 } = 1$   
+$\Rightarrow k = 1 + . . . + ( n - 1 ) = \frac{n(n-1)}{2} \Rightarrow \operatorname { s g n } \sigma _ { 1 } = ( - 1 ) ^ { \frac { n ( n - 1 ) } { 2 } } .$   
+Mặt khác, với mỗi $\sigma \in S _ { n }$ ，nếu $\sigma \neq \sigma _ { 1 }$ thì tồn tại $k$ sao cho $\sigma ( k ) + k < n + 1$
+
+$\Rightarrow a _ { k \sigma ( k ) } = 0 \Rightarrow a _ { 1 \sigma ( 1 ) } . . . a _ { n \sigma ( n ) } = 0 .$
+
+$$
+\operatorname* { det } ( A ) = \sum _ { \sigma \in S _ { n } } \operatorname { s g n } \sigma \cdot a _ { 1 \sigma ( 1 ) } . . . a _ { n \sigma ( n ) } = \operatorname { s g n } \sigma _ { 1 } \cdot a _ { n 1 } . . . a _ { k , n - k } . . . a _ { 1 n } ,
+$$
+
+$$
+\operatorname * { det } ( A ) = ( - 1 ) ^ { \frac { n ( n - 1 ) } { 2 } } a _ { n 1 } . . . a _ { k , n - k } . . . a _ { 1 n } .
+$$
+
+Tương tự
+
+$$
+\left| { \begin{array} { l l l l } { a _ { 1 1 } } & { a _ { 1 2 } } & { \ldots } & { a _ { 1 n - 1 } } & { a _ { 1 n } } \\ { a _ { 2 1 } } & { a _ { 2 2 } } & { \ldots } & { a _ { 2 n - 1 } } \\ { \vdots } & { \vdots } & { \ldots } & \\ { \vdots } & { \ldots } & & \\ { a _ { n 1 } } & & & { \bigcirc } \end{array} } \right| = ( - 1 ) ^ { \frac { n ( n - 1 ) } { 2 } } a _ { n 1 } . . . a _ { k , n - k } . . . a _ { 1 n } .
+$$
+
+# Nhận xét 3.2:
+
+· Theo Ví dụ 3.18 ta thấy ma trận vuông có các phần tử bên dưới đường chéo chính hoặc bên trên đường chéo chính bằng O thì định thức của nó bằng tích các phần tử của đường chéo chính và không phụ thuộc các phần tử còn lại.
+
+· Theo Ví dụ 3.19 ta thấy ma trận vuông cấp n có các phần tử bên dưới đường chéo thứ hai hoặc bên trên đường chéo thứ hai bằng O thì định thức của nó bằng tích các $\underline { { n ( n - 1 ) } }$ (20 phần tử của đường chéo thứ hai cùng với dấu $(-1)^{\frac{n(n-3)}{2}}$ và không phụ thuộc các phần tử còn lại.
+
+$$
+\scriptstyle { \frac { | 2 \quad { \begin{array} { l l l l } { a } & { b } & { c } \\ { 0 } & { - 7 } & { d } & { e } \\ { 0 } & { 0 } & { - 1 } & { f } \\ { 0 } & { 0 } & { 0 } & { 3 } \end{array} } } } = 2 \cdot ( - 7 ) \cdot ( - 1 ) \cdot 3 = 4 2 .
+$$
+
+$$
+{ \left| \begin{array} { l l l } { a } & { b } & { x } \\ { c } & { y } & { 0 } \\ { z } & { 0 } & { 0 } \end{array} \right| } = ( - 1 ) ^ { { \frac { 3 \cdot 2 } { 2 } } } x y z = - x y z \ .
+$$
+
+Vi dụ 3.22: Giả sử $A$ là ma trận vuông cấp $n$ có tính chất mỗi hàng mỗi cột có đúng một phần tử bằng 1 còn các phần tử khác đều bằng 0. Tính định thức của $A$.
+
+Giải: Trên hàng thứ $i$ có phần tử duy nhất ở cột $j_i$ bằng 1 còn các phần tử khác đều bằng 0. Vì mỗi hàng có đúng một phần tử bằng 1 nên các phần tử $j_i$ ứng với các hàng khác nhau là khác nhau, nói cách khác $\left[ j_1 \ j_2 \ldots j_n \right]$ là mặt hoán vị của $\{1, . . . , n\}$. Khi đó $\mathrm {det}(A) = \mathrm {sgn}\sigma_A.$
+
+Định nghĩa 3.8: Định nghĩa ma trận $A = [a_{ij}]_{n\times n}$ cho các vector $\{\nu_1, . . . , \nu_n\}$ ứng với cơ sở $\mathcal{B}$ trong không gian vector $n$ chiều $V$ được gọi là định thức của hệ vector $\{\nu_1, . . . , \nu_n\}$ trong cơ sở $\mathcal{B}$ và ký hiệu $D_{\mathcal{B}}\{\nu_1, . . . , \nu_n\}$. Vậy
+
+$$
+D_{\mathcal{B}}\{\nu_1, . . . , \nu_n\} = \operatorname* {det} A.
+$$
+
+Vi dụ 3.23: $\mathrm {H}\hat{\mathbf{e}}$ vectơ $\nu_{1}=(2,4,1)$, $\nu_{2}=(3,6,-2)$, $\nu_{3}=(-1,5,2)$ có ma trận trong $\pi_{\sigma}$ chính tắc $A=\left[\begin{array}{ccc}2 & 3 & -1 \\ 4 & 6 & 5 \\ 1 & -2 & 2\end{array}\right]$. Vậy: $D_{\mathcal{B}}\{\nu_{1}, \nu_{2}, \nu_{3}\}=\operatorname*{det} A=49.$
+
+# 3.5.3. Các tính chất cơ bản của định thức
+
+# Tính chất 3.6:
+
+1) Nếu đổi chỗ hai hàng của ma trận thì định thức đổi dấu:
+
+$$
+A = \left[ a_{ij} \right]_{n \times n}, A^{*} = \left[ a^{*}_{ij} \right]_{n \times n}, a^{*}_{ij} = \left\{ 
+\begin{array}{ll}
+a_{ij} & \mathrm{nếu}\ i \neq k, m \\
+a_{kj} & \mathrm{nếu}\ i = m \\
+a_{mj} & \mathrm{nếu}\ i = k
+\end{array} \right.
+\quad \operatorname{thì} \operatorname*{det} A^{*} = - \operatorname*{det} A
+$$
+
+Thật vậy:
+
+$$
+\begin{array} { l } { \displaystyle \operatorname* { det } A ^ { \prime } = \sum _ { \sigma \in S _ { n } } \operatorname { s g n } \sigma \cdot a _ { 1 \sigma ( 1 ) } ^ { \prime } \dots a _ { k \sigma ( k ) } ^ { \prime } \dots a _ { m \sigma ( m ) } ^ { \prime } \dots a _ { n \sigma ( n ) } ^ { \prime } } \\ { \displaystyle = \sum _ { \sigma \in S _ { n } } \operatorname { s g n } \sigma \cdot a _ { 1 \sigma ( 1 ) } \dots a _ { m \sigma ( k ) } \dots a _ { k \sigma ( m ) } \dots a _ { n \sigma ( n ) } } \\ { \displaystyle = \sum _ { \sigma \in S _ { n } } \operatorname { s g n } \sigma \cdot a _ { 1 \sigma ( 1 ) } \dots a _ { k \sigma ( k ) } \dots a _ { m \sigma ( m ) } \dots a _ { n \sigma ^ { \prime } ( n ) } } \\ { \displaystyle = - \sum _ { \sigma \in S _ { n } } \operatorname { s g n } \sigma \cdot a _ { 1 \sigma ( 1 ) } \dots a _ { k \sigma ( k ) } \dots a _ { m \sigma ( m ) } \dots a _ { n \sigma ^ { \prime } ( n ) } } \\ { \displaystyle = - \sum _ { \sigma \in S _ { n } } \operatorname { s g n } \sigma ^ { \prime } a _ { 1 \sigma ( 1 ) } \dots a _ { m \sigma ( k ) } \dots a _ { k \sigma ( m ) } \dots a _ { n \sigma ( n ) } = - \operatorname { det } A } \end{array}
+$$
+
+trong đố $\sigma ^ { \prime } = \sigma \circ \left[ k \quad m \right]$ ：
+
+$\begin{array}{c} \frac{\text{Ví dụ 3.24:}}{a} \\ \left| \begin{array}{lll} a & b & c \\ a' & b' & c' \\ a'' & b'' & c'' \end{array} \right| = a'' \left| \begin{array}{cc} a' & b'' \\ a & b \end{array} \right| \\ \text{(d)} \\ \text{(di)} \\ \text{hàng 1 và hàng 3 cho nhau thay thế).} \end{array}$
+
+Nếu định thức của ma trận sau khi thay thế như trên không đổi.
+
+2) Định nghĩa tính chất tuyến tính đối với mỗi hàng:
+
+Cho hai ma trận $A = [a_{ij}]_{n \times n}$, $B = [b_{ij}]_{n \times n}$ và ma trận $C = [c_{ij}]_n$ có hàng thứ $k$ là tổ hợp tuyến tính của hàng thứ $k$ của $A$ và $B$, các hàng khác hàng thứ $k$ của ba ma trận này bằng nhau.
+
+Nghĩa là 
+\[
+\begin{array}{l}
+\displaystyle c_{ij} = a_{ij} = b_{ij} \quad \text{nếu } i \neq k \\
+\displaystyle c_{kj} = \alpha a_{kj} + \beta b_{kj} \quad ; \qquad \forall j = 1, \ldots, n.
+\end{array}
+\]
+thì $\det C = \alpha \det A + \beta \det B$.
+
+$$
+\begin{array} { r l }
+{ tC = \sum _ { \sigma \in S _ { n } } \operatorname { s g n } \sigma \cdot c _ { 1 \sigma ( 1 ) } \dots c _ { k \sigma ( k ) } \dots c _ { n \sigma ( n ) } } \\
+{ = \displaystyle \sum _ { \sigma \in S _ { n } } \operatorname { s g n } \sigma \cdot a _ { 1 \sigma ( 1 ) } \dots ( \alpha a _ { k \sigma ( k ) } + \beta b _ { k \sigma ( k ) } ) \dots a _ { n \sigma ( n ) } } \\
+{ = \displaystyle \alpha \sum _ { \sigma \in S _ { n } } \operatorname { s g n } \sigma \cdot a _ { 1 \sigma ( 1 ) } \dots a _ { k \sigma ( k ) } \dots a _ { n \sigma ( n ) } + \beta \sum _ { \sigma \in S _ { n } } \operatorname { s g n } \sigma \cdot b _ { 1 \sigma ( 1 ) } \dots b _ { k \sigma ( k ) } \dots b _ { n \sigma ( n ) } }
+\end{array}
+$$
+
+$$
+\scriptstyle { \frac { \gamma _ { \mathbf { i } } ^ { \prime } \mathbf { d u } 3.25; } { \left| \alpha a _ { 1 } ^ { \prime } + \beta a _ { 2 } \quad \alpha b _ { 1 } + \beta b _ { 2 } \quad \alpha c _ { 1 } + \beta c _ { 2 } \right| } } = { \boldsymbol { \alpha } } { \left| \alpha ^ { \prime } \begin{array} { l l l }
+{ a } & { b } & { c } \\
+{ a ^ { \prime } } & { b ^ { \prime } } & { c ^ { \prime } } \\
+{ a _ { 1 } } & { b _ { 1 } } & { c _ { 1 } }
+\end{array} \right| } .
+$$
+
+3) Từ 1) và 2) suy ra rằng trong một định thức có hai hàng tỷ lệ thì định thức bằng 0.
+
+$$
+\scriptstyle { \frac { \mathrm { Vi } \ du \ 3 . 2 6 } { \left| \begin{array} { l l l l } { a } & { b } & { c } & { d } \\ { 2 } & { 0 } & { - 5 } & { 3 } \\ { - 4 } & { 0 } & { 1 0 } & { - 6 } \\ { x } & { y } & { z } & { t } \end{array} \right| } } = 0 \ { \mathrm { ( v i ~ h a n g ~ t h \ ' ~ 2 ~ v a ~ h a n g ~ t h \ ' ~ 3 ~ t i ~ l \hat { i } ) } } .
+$$
+
+4) Nếu ta cộng vào một hàng một tổ hợp tuyến tính các hàng khác thì định thức không thay đổi.
+
+$$
+\scriptstyle \underline { { 2 . 2 7 } } \cdot \left| \begin{array} { c c c } { a } & { b } & { c } \\ { a ^ { \prime } } & { b ^ { \prime } } & { c ^ { \prime } } \\ { a ^ { \prime \prime } + \alpha a + \beta a ^ { \prime } } & { b ^ { \prime } + \alpha b + \beta b ^ { \prime } } & { c ^ { \prime \prime } + \alpha c + \beta c ^ { \prime } } \end{array} \right| = \left| \begin{array} { l l l } { a } & { b } & { c } \\ { a ^ { \prime } } & { b ^ { \prime } } & { c ^ { \prime } } \\ { a ^ { \prime \prime } } & { b ^ { \prime \prime } } & { c ^ { \prime \prime } } \end{array} \right| .
+$$
+
+5) Định thức của ma trận chuyển vị bằng định thức của ma trận đó:
+
+Gia sư giả $A = \left[ a_{ij} \right]_{n \times n}, A^t = \left[ a_{ij}' \right]_{n \times n}, a_{ij}' = a_{ji}, i, j = 1, \ldots, n$. Ta có $\det(A^t) = \det(A)$.
+
+$$\mathsf{t}A^t = \sum_{\sigma \in S_n} \mathsf{sgn}\sigma \cdot a'_{\pi_1\sigma(1)} \ldots a'_{\pi_k\sigma(k)} \ldots a'_{\pi_n\sigma(n)} = \sum_{\sigma \in S_n} \mathsf{sgn}\sigma \cdot a_{\sigma(1)1} \ldots a_{\sigma(k)k} \ldots a_{\sigma(n)n}$$
+$$= \sum_{\sigma \in S_n} \operatorname{sgn}\sigma \cdot a_{1\sigma^{-1}(1)} \dots a_{k\sigma^{-1}(k)} \dots a_{n\sigma^{-1}(n)} = \sum_{\sigma \in S_n} \operatorname{sgn}\sigma^{-1} \cdot a_{1\sigma^{-1}(1)} \dots a_{k\sigma^{-1}(k)} \dots a_{n\sigma^{-1}(n)}$$
+$$= \sum_{\rho \in S_n} \operatorname{sgn}\rho \cdot a_{1\rho(1)} \dots a_{n\rho(n)} = \det(A)$$
+
+Vì $\mathsf{sgn}\sigma = \mathsf{sgn}\sigma^{-1}$.
+
+Ví dụ 3.28:
+\[
+\begin{pmatrix}
+a' & b' & c' \\
+b'' & b' & b'' \\
+c'' & c' & c''
+\end{pmatrix}
+\]
+
+6) Từ (5) suy ra rằng các tính chất của định thức đúng với hàng thì cũng đúng với cột và ngược lại. Với tính chất này, tất cả các kết quả của định thức đúng đối với hàng có thể chuyển thành tính chất đúng đối với cột. Chẳng hạn, tính chất 4) chuyển thành tính chất đối với cột như sau: nếu ta cộng vào một cột một hợp tuyến tính các cột khác thì định thức không thay đổi.
+
+$$
+D _ { n } = \left| \begin{array} { l l l l l l l } { a } & { 1 } & { 1 } & { \dots } & { 1 } \\ { 1 } & { a } & { 1 } & { \dots } & { 1 } \\ { 1 } & { 1 } & { a } & { \dots } & { 1 } \\ { \vdots } & { \vdots } & { \vdots } & { \ddots } & { \vdots } \\ { 1 } & { 1 } & { 1 } & { \dots } & { a } \end{array} \right| = \left| \begin{array} { l l l l l l } { a + n - 1 } & { 1 } & { 1 } & { \dots } & { 1 } \\ { a + n - 1 } & { a } & { 1 } & { \dots } & { 1 } \\ { a + n - 1 } & { 1 } & { a } & { \dots } & { 1 } \\ { \vdots } & { \vdots } & { \vdots } & { \ddots } & { \vdots } \\ { a + n - 1 } & { 1 } & { 1 } & { \dots } & { a } \end{array} \right|
+$$
+
+(cộng các cột vào cột 1)
+
+$$
+\begin{array} { r } { \mathbf { \Lambda } = ( a + n - 1 ) \left| \begin{array} { c c c c c c } { 1 } & { 1 } & { 1 } & { \dots } & { 1 } \\ { 1 } & { a } & { 1 } & { \dots } & { 1 } \\ { 1 } & { 1 } & { a } & { \dots } & { 1 } \\ { \vdots } & { \vdots } & { \vdots } & { \ddots } & { \vdots } \\ { 1 } & { 1 } & { 1 } & { \dots } & { a } \end{array} \right| \mathbf { 1 } = ( a + n - 1 ) \left| \begin{array} { c c c c c c } { 1 } & { 0 } & { 0 } & { \dots } & { 0 } \\ { 1 } & { a - 1 } & { 0 } & { \dots } & { 0 } \\ { 1 } & { 0 } & { a - 1 } & { \dots } & { 0 } \\ { \vdots } & { \vdots } & { \vdots } & { \ddots } & { \vdots } \\ { 1 } & { 0 } & { 0 } & { \dots } & { a - 1 } \end{array} \right| \mathbf { 2 } } \end{array}
+$$
+
+$$
+\Rightarrow D _ { n } = ( a + n - 1 ) ( a - 1 ) ^ { n - 1 } .
+$$
+
+7) Định nghĩa của mỗi hệ $n$ véc tơ phụ thuộc tuyến tính của không gian véc tơ $n$ chiều đều bằng 0.
+
+Nếu hệ $\left\{ \nu _ { 1 } , . . . , \nu _ { n } \right\}$ phụ thuộc tuyến tính thì có một véc tơ là hợp tuyến tính của các véc tơ con lại, chẳng hạn $\nu_n = \alpha_1\nu_1 + \dots + \alpha_{n-1}\nu_{n-1}.$
+
+$$
+D _ { \mathcal { B } } \left\{ \nu _ { 1 } , . . . , \nu _ { n - 1 } , \nu _ { n } \right\} = D _ { \mathcal { B } } \left\{ \nu _ { 1 } , . . . , \nu _ { n - 1 } , \alpha _ { 1 } \nu _ { 1 } + . . . + \alpha _ { n - 1 } \nu _ { n - 1 } \right\} .
+$$
+
+Tách cột cuối thành tổng của $n-1$ định thức ta được
+
+$$
+D _ { \mathcal { B } } \left\{ \nu _ { 1 } , . . . , \nu _ { n - 1 } , \nu _ { n } \right\} = \alpha _ { 1 } D _ { \mathcal { B } } \left\{ \nu _ { 1 } , . . . , \nu _ { n - 1 } , \nu _ { 1 } \right\} + . . . + \alpha _ { n - 1 } D _ { \mathcal { B } } \left\{ \nu _ { 1 } , . . . , \nu _ { n - 1 } , \nu _ { n - 1 } \right\} = 0 .
+$$
+
+$$
+\overline{\operatorname{det}(A)} (\operatorname{mod} p) = \sum_{\sigma \in S_n} \operatorname{sgn} \sigma \overline{a}_{1\sigma(1)} . . . \overline{a}_{n\sigma(n)} = \left| \begin{array}{lll}
+\overline{a}_{11} & ... & \overline{a}_{1n} \\
+\vdots & \ddots & \vdots \\
+\overline{a}_{n1} & ... & \overline{a}_{nn}
+\end{array} \right| ~ .
+$$
+
+Ví dụ 3.30: $A = \left[ a _ { i j } \right] _ { n \times n }$ với $a _ { i j }$ là các số nguyên lẻ.
+
+$$
+\operatorname{det}(A) = \sum_{\sigma \in S_n} \operatorname{sgn} \sigma \cdot a _ { 1 \sigma ( 1 ) } . . . a _ { n \sigma ( n ) } \cdot
+$$
+
+Các số hàng từ dòng 1 đến dòng $n$ là lẻ và chẵn do đó tổng số lần chẵn của các số lẻ là một số chẵn.
+
+Mặt khác sử dụng công thức (3.32) ta cũng có:
+
+$$
+{ \overline {\operatorname*{det}(A)} }( \mathrm{mod} 2 ) = \left| \begin{array}{lll}
+\overline{1} & \dots & \overline{1} \\
+\vdots & \ddots & \vdots \\
+\overline{1} & \dots & \overline{1}
+\end{array} \right| = \overline{0} ( \mathrm{mod} 2 ) \Longrightarrow \operatorname*{det} A \ \mathrm{ch} \tilde{\tilde{\mathrm{a}}} \mathrm{n}.
+$$
+
+# 3.6. CÁC CACH TÍNH ĐỊNH THỨC  
+3.6.1. Khai triển theo hàng, theo cột  
+
+Nếu ta nhóm theo cột thứ $j$ công thức (3.25) thì ta được:
+
+$$
+\begin{array}{rl}
+{\iota = a_{1,j} \left( \sum_{\sigma \in S_n, \sigma(1) = j} \operatorname{sgn} \sigma \cdot a_{2,\sigma(2)} a_{3,\sigma(3)} \dots a_{n,\sigma(n)} \right) + } \\
+& {+ a_{2,j} \left( \sum_{\sigma \in S_n, \sigma(2) = j} \operatorname{sgn} \sigma \cdot a_{1,\sigma(1)} a_{3,\sigma(3)} \dots a_{n,\sigma(n)} \right) + \dots } \\
+& {+ a_{n,j} \left( \sum_{\sigma \in S_n, \sigma(n) = j} \operatorname{sgn} \sigma \cdot a_{1,\sigma(1)} a_{2,\sigma(2)} \dots a_{n-1,\sigma(n-1)} \right). }
+\end{array}
+$$
+
+Vì vậy định thức của ma trận $A$ được viết lại dưới dạng
+
+$$
+\operatorname*{det} A = a_{1j} A_{1j} + . . . + a_{nj} A_{nj}
+$$
+
+gọi là công thức khai triển của $A$ theo cột thứ $j$.
+
+$A_{ij}$ được gọi là phần bù đại số của $a_{ij}$.
+
+Định lý 3.1: Ký hiệu $M_{ij}$ là định thức của ma trận cấp $n-1$ được dùng bằng cách xóa hàng i và cột j của ma trận $A$ thì
+
+$$
+A_{ij} = (-1)^{i+j} M_{ij}
+$$
+
+Chứng minh: Trước hết ta chứng minh $A_{11} = M_{11}$. Ta có:
+
+$$
+A_{11} = \sum_{\sigma \in S_n, \sigma(1) = 1} \operatorname{sgn} \sigma a_{2\sigma(2)}...a_{n\sigma(n)} = \sum_{\sigma' \in S_{n-1}} \operatorname{sgn} \sigma' a_{2\sigma'(2)}...a_{n\sigma'(n)} = M_{11}
+$$
+
+Trong trường hợp $A_{ij}$ bất kỳ, ta thực hiện $i-1$ lần đổi chỗ các hàng và $j-1$ lần đổi chỗ các cột để đưa về hàng 1 cột 1.
+
+$$
+A_{ij} = (-1)^{(i-1) + (j-1)} M_{ij} = (-1)^{i+j} M_{ij}.
+$$
+
+Công thức khai triển theo hàng i được suy ra từ tính chất 3.7: 6)
+
+$$
+\operatorname{det} A = a_{i1}A_{i1} + ... + a_{in}A_{in}
+$$
+
+(3.35)
+
+Nhận xét 3.3: Công thức (3.33) khai triển theo cột thứ $j$ và công thức (3.35) khai triển theo hàng $i$ cho phép tính định thức cấp $n$ theo tổng các định thức cấp $n - 1$ dạng $a_{ij}A_{ij}$, trong đó việc chọn hàng thứ $i$ và cột thứ $j$ là tùy ý. Nếu hàng thứ $i$ hoặc cột $j$ có phần tử bằng $0$ thì $a_{ij}A_{ij} = 0$. Vì vậy để tính định thức ta thực hiện các bước sau:
+
+Chọn hàng $i$ (hoặc cột $j$) có nhiều phần tử bằng $0$ hoặc để triệt tiêu. Nếu chọn hàng $i$ thì ta tiếp tục thực hiện các phép biến đổi theo cột (cộng vào mặt cột một tổ hợp tuyến tính của các cột khác) để triệt tiêu các phần tử trên hàng $i$ sao cho chỉ còn mặt phần tử khác $0$, giả sử phần tử đó ở hang $i$ cột $j$. Khi đó
+
+$$
+\operatorname{det} A = a_{i1}A_{i1} + \ldots + a_{in}A_{in} = a_{ij}A_{ij}.
+$$
+
+Để tính phụ bù số $A_{ij} = (-1)^{i+j}M_{ij}$, ta chú ý:
+
+· $M_{ij}$ là định thức của ma trận cấp $n - 1$ được bằng cách xóa hàng $i$ và cột $j$ của ma trận $A$.
+
+· Dấu $( - 1 )^{i + j}$ có thể tính dựa vào vị trí của $( i, j )$ như sau:
+
+$$
+\left| { \begin{array} { c c c c c } { + } & { - } & { + } & { \cdots } \\ { - } & { + } & { - } & { \cdots } \\ { + } & { - } & { + } & { \cdots } \\ { \vdots } & { \vdots } & { \vdots } & { \ddots } \end{array} } \right|.
+$$
+
+Chọn cột thứ $j$ để khai triển cũng được thực hiện tương tự.
+
+Vi dụ 3.31: Tính định thức \( D = \left| \begin{array}{cccc} 1 & 2 & 3 & 4 \\ 1 & 0 & 1 & 2 \\ 3 & -1 & -1 & 0 \\ 1 & 2 & 0 & -5 \end{array} \right|. \) Ta chọn hàng thứ 2.
+
+Nhân \( ^{-1} \) vào cột 1 cộng vào cột 3, nhân \( ^{-2} \) vào cột 1 cộng vào cột 4 ta được:
+
+\[
+D = \left| \begin{array}{cccc} 1 & 2 & 3 & 4 \\ 1 & 0 & 1 & 2 \\ 3 & -1 & -1 & 0 \\ 1 & 2 & 0 & -5 \end{array} \right|^{\text{-c}_1 + c_3 \to c_3} = \left| \begin{array}{cccc} 1 & 2 & 2 & 2 \\ -2c_1 + c_4 \to c_4 \\ 1 & 3 & 0 & 0 \\ 3 & -1 & -4 & -6 \\ 1 & 2 & -1 & -7 \end{array} \right|.
+\]
+
+Khai triển theo hàng thứ 2 ta được
+
+Tiếp tục triệt tiêu hàng đầu tiên của định thức trên ta có
+
+\[
+D = - \left| \begin{array}{ccc} 2 & 0 & 0 \\ -1 & -3 & -5 \\ 2 & -3 & -9 \end{array} \right| = -2 \left| \begin{array}{cc} -3 & -5 \\ -3 & -9 \end{array} \right| = (-2)(-3) \left| \begin{array}{cc} 1 & -5 \\ 1 & -9 \end{array} \right| = 6(-9 + 5) = -24.
+\]
+
+# 3.6.2. Định lý khai triển Laplace (theo \( k \) hàng \(\pmb{k}\))
+
+Ngoài phương pháp khai triển theo một hàng hoặc một cột ta có thể khai triển đồng thời theo $k$ hàng hoặc $k$ cột nào đó.
+
+Từ ma trận $A=[a_{ij}]$, ta đẻ ý $k$ hàng: $i _ { 1 } < \ldots < i _ { k }$ và $k$ cột: $j _ { 1 } < \ldots < j _ { k }$:
+
+Giao của $k$ hàng, $k$ cột này là một ma trận cấp $k$. Định thức của ma trận này được ký hiệu là $M_{i_1,\dots,i_k}^{j_1,\dots,j_k}$.
+
+Nếu từ ma trận $A$ ta xóa đi $k$ hàng $i _ { 1 } , \ldots , i _ { k }$ và $k$ cột $j _ { 1 } , \ldots , j _ { k }$ thì ta có ma trận con cấp $n-k$. Định thức của ma trận này được ký hiệu là $\overline{M}_{i_1,\dots,i_k}^{j_1,\dots,j_k}$ và
+
+$$
+A_{i_1, \dots, i_k}^{j_1, \dots, j_k} = (-1)^{i_1 + \ldots + i_k + j_1 + \ldots + j_k} \overline{M}_{i_1,\dots,i_k}^{j_1,\dots,j_k}
+$$
+
+được gọi là phần bù đại số của $M_{i_1,\dots,i_k}^{j_1,\dots,j_k}$.
+
+$$
+A = \left[ \begin{array} { c c c c c c c } { \cdot } & { \boxed { a _ { 1 1 } } } & { \boxed { a _ { 1 2 } } } & { \ldots } & { a _ { 1 3 } } & { \ldots } & { \boxed { a _ { 1 5 } } } \\ { a _ { 2 1 } } & { \boxed { a _ { 2 2 } } } & { a _ { 2 3 } } & { a _ { 2 4 } } & { \boxed { a _ { 2 5 } } } \\ { \ldots } & { \boxed { a _ { 3 1 } } } & { \ldots } & { a _ { 3 3 } } & { \ldots } & { \boxed { a _ { 3 5 } } } \\ { a _ { 4 1 } } & { \boxed { a _ { 4 2 } } } & { a _ { 4 3 } } & { a _ { 4 4 } } & { a _ { 4 5 } } \\ { a _ { 5 1 } } & { \boxed { a _ { 5 2 } } } & { a _ { 5 3 } } & { a _ { 5 4 } } & { \boxed { a _ { 5 5 } } } \end{array} \right] .
+$$
+
+Chọn hàng 1, hàng 3 và cột 2, cột 5 ta có:
+
+$$
+M _ { 1 3 } ^ { 2 5 } = \left| { a _ { 1 2 } \atop a _ { 3 2 } } \quad a _ { 3 5 } \right| ,
+$$
+
+$$
+A _ { 1 3 } ^ { 2 5 } = ( - 1 ) ^ { 1 + 3 + 2 + 5 } { \left| \begin{array} { l l l } { a _ { 2 1 } } & { a _ { 2 3 } } & { a _ { 2 4 } } \\ { a _ { 4 1 } } & { a _ { 4 3 } } & { a _ { 4 4 } } \\ { a _ { 5 1 } } & { a _ { 5 3 } } & { a _ { 5 4 } } \end{array} \right| } = - { \left| \begin{array} { l l l } { a _ { 2 1 } } & { a _ { 2 3 } } & { a _ { 2 4 } } \\ { a _ { 4 1 } } & { a _ { 4 3 } } & { a _ { 4 4 } } \\ { a _ { 5 1 } } & { a _ { 5 3 } } & { a _ { 5 4 } } \end{array} \right| } .
+$$
+
+# Định lý 3.2 (Laplace):
+
+1) Công thức khai triển theo $k$ hàng $i _ { 1 } < \ldots < i _ { k }$:
+
+$$
+\operatorname*{det} A = \sum_{1 \leq j_1 < \ldots < j_k \leq n} M^{j_1, \ldots, j_k}_{i_1, \ldots, i_k} A^{j_1, \ldots, j_k}_{i_1, \ldots, i_k}
+$$
+
+Định thức của $A$ bằng tổng tất cả các định thức con cấp $k$ nằm trên $k$ hàng $1 \leq i_1 < \ldots < i_k \leq n$ nhân với phần bù đại số tương ứng của nó.
+
+2) Công thức khai triển theo $k$ cột $j_1 < \ldots < j_k$:
+
+$$
+\operatorname*{det} A = \sum_{1 \leq i_1 < \ldots < i_k \leq n} M^{j_1, \ldots, j_k}_{i_1, \ldots, i_k} A^{j_1, \ldots, j_k}_{i_1, \ldots, i_k}
+$$
+
+Định thức của $A$ bằng tổng tất cả các định thức con cấp $k$ nằm trên $k$ cột $j_1 < \ldots < j_k$ nhân với phần bù đại số tương ứng của nó.
+
+Đặc biệt khi $k = 1$ ta có công thức khai triển theo hàng (3.33) và theo cột (3.35).
+
+Chứng minh: Trường hợp $i_1 = 1, \ldots, i_k = k$:
+
+$$
+M^{1, \ldots, k}_{1, \ldots, k} = \sum_{\sigma \in S_k} \mathsf{sgn}(\sigma) \cdot a_{1\sigma(1)} \ldots a_{k\sigma(k)}
+$$
+
+$$
+\overline{M}_{1, \ldots, k}^{1, \ldots, k} = \sum_{\sigma' \in S_{n-k}} \operatorname{sgn} \sigma' \cdot a_{k+1 \sigma'(k+1)} \cdots a_{n \sigma'(n)} = A_{1, \ldots, k}^{1, \ldots, k}
+$$
+
+Với mỗi phép thế $\sigma$ của tập $\{ 1 , \ldots , k \}$ và $\sigma'$ của $\left\{ k + 1 , \ldots , n \right\}$ thì phép thế $\mu = [\sigma(1), \ldots, \sigma(k), \sigma'(k+1), \ldots, \sigma'(n)]$ có số các nghịch thế bằng tổng số các nghịch thế của $\sigma$ cộng với số các nghịch thế của $\sigma'$. Do đó $\operatorname{sgn} \mu = \operatorname{sgn} \sigma \cdot \operatorname{sgn} \sigma'$. Vì vậy mỗi tích
+
+$$
+\operatorname{sgn} \sigma \cdot a_{1 \sigma(1)} \cdots a_{k \sigma(k)} \cdot \operatorname{sgn} \sigma' \cdot a_{k+1 \sigma'(k+1)} \cdots a_{n \sigma'(n)}
+$$
+
+là ma trận trong định nghĩa của det $A$. Ní chứa các hạng tử của det $A$; nó là một phần trong biểu thức tổng của det $A$. Trường hợp tổng quát $M_{i_1, \dots , i_k}^{j_1, \dots , j_k}$, ta biến đổi hàng và cột của ma trận $A$ để đưa $M_{i_1, \dots , i_k}^{j_1, \dots , j_k}$ về định thức con bậc $k$ góc trên bên trái. Ta thực hiện $i_1 - 1$ lần đổi chỗ hàng thứ $i_1$ để đưa về hàng thứ $i_1$, ..., $i_k - 1$ lần đổi chỗ hàng thứ $i_k$ để đưa về hàng thứ $k$. Tương tự đổi cho $j_1 - 1, \dots , j_k - 1$ lần để đưa các cột $j_1, \dots , j_k$ về các cột $1, \dots , k$. Vì vậy định thức đi đầu
+
+$$
+(-1)^{(i_1 - 1) + \dots + (i_k - 1) + (j_1 - 1) + \dots + (j_k - 1)} = (-1)^{i_1 + \dots + i_k + j_1 + \dots + j_k}.
+$$
+
+Khi đổi vị trí như vậy định thức bị của $M_{i_1, \dots , i_k}^{j_1, \dots , j_k}$ vẫn là Mi.
+
+Độ $A _ { i _ { 1 } , \dots , i _ { k } } ^ { j _ { 1 } , \dots , j _ { k } } = ( - 1 ) ^ { i _ { 1 } + \dots + i _ { k } + j _ { 1 } + \dots + j _ { k } } \overline { M } _ { i _ { 1 } , \dots , i _ { k } } ^ { j _ { 1 } , \dots , j _ { k } }$, như vậy các hàng tích của $M _ { i _ { 1 } , . . . , i _ { k } } ^ { j _ { 1 } , . . . , j _ { k } } \cdot A _ { i _ { 1 } , . . . , i _ { k } } ^ { j _ { 1 } , . . . , j _ { k } }$ chính chỉ là các hàng tích của det $A$:
+
+Mặt khác, mỗi $M _ { i _ { 1 } , . . . , i _ { k } } ^ { j _ { 1 } , . . . , j _ { k } } \cdot A _ { i _ { 1 } , . . . , i _ { k } } ^ { j _ { 1 } , . . . , j _ { k } }$ có $k ! ( n - k ) !$ hàng tích. Số các định thức con $M _ { i _ { 1 } , . . . , i _ { k } } ^ { j _ { 1 } , . . . , j _ { k } }$ trên $k$ hàng $i _ { 1 } , . . . , i _ { k }$ bằng số các tổ hợp $n$ chọn $k$ và bằng $C _ { n } ^ { k }$:
+
+Các hàng tích của $M _ { i _ { 1 } , . . . , i _ { k } } ^ { j _ { 1 } , . . . , j _ { k } } \cdot A _ { i _ { 1 } , . . . , i _ { k } } ^ { j _ { 1 } , . . . , j _ { k } }$ với $M _ { i _ { 1 } , . . . , i _ { k } } ^ { j ^ { \prime } _ { 1 } , . . . , j _ { k } ^ { \prime } } \cdot A _ { i _ { 1 } , . . . , i _ { k } } ^ { j ^ { \prime } _ { 1 } , . . . , j _ { k } ^ { \prime } }$ khác nhau theo đúng một nếu $\left\{ j _ { 1 } , . . . , j _ { k } \right\} \neq \left\{ j _ { 1 } ^ { \prime } , . . . , j _ { k } ^ { \prime } \right\}$
+
+Đo tổng ∑Mác6 $C _ { n } ^ { k } k ! ( n - k ) !$ = $n!$ hàng tur phân biệt $1 \leq j < . . . < j _ { k } \leq n$ của định thức $A$ nhưng định thức $A$ cũng chỉ có $n!$ hàng tur. Vậy mỗi hàng tur của định thức $A$ đều là hàng tuyến tính tổ hợp của $M _ { i _ { 1 } , . . . , i _ { k } } ^ { j _ { 1 } , . . . , j _ { k } } \cdot A _ { i _ { 1 } , . . . , i _ { k } } ^ { j _ { 1 } , . . . , j _ { k } }$ $1 \leq j _ { 1 } < . . . < j _ { k } \leq n$. Vậy ta có dạng thức (3.37).
+
+Công thức khai triển theo cột (3.38) được chứng minh trực tiếp hoàn toàn tương tự cách trên hoặc có thể suy ra từ kết quả trên và áp dụng tính chất định thức $\boldsymbol { A } = \operatorname*{det} \boldsymbol { A } ^ { t }$：
+
+## Ví dụ 3.33:
+
+$$
+D _ { n } = \left| \begin{array} { c c c c c c c } { a _ { 1 1 } } & { \ldots } & { a _ { 1 k } } & { \ldots } & { 0 } & { \ldots } & { 0 } \\ { \vdots } & { \ddots } & { \vdots } \\ { a _ { k 1 } } & { \ldots } & { a _ { k k } } & { \ldots } & { 0 } \\ { a _ { k + 1 1 } } & { \ldots } & { a _ { k + 1 k } } & { \left| \begin{array} { c c c c c c } { 0 } & { \ldots } & { 0 } \\ { 0 } & { \ldots } & { 0 } \\ { a _ { k + 1 k + 1 } } & { \ldots } & { a _ { k + 1 n } } \end{array} \right| = \left| \begin{array} { c c c c c c } { a _ { 1 1 } } & { \ldots } & { a _ { 1 k } } & { \ldots } & { a _ { k + 1 n } } \\ { \vdots } & { \ddots } & { \vdots } \\ { a _ { k 1 } } & { \ldots } & { a _ { k k } } \end{array} \right| \left| \begin{array} { c c c c c } { a _ { k + 1 k + 1 } } & { \ldots } & { a _ { k + 1 n } } \\ { \vdots } & { \ddots } & { \vdots } \\ { a _ { k 1 } } & { \ldots } & { a _ { k k } } \end{array} \right| . } \end{array} \right.
+$$
+
+Giải:
+
+Từ điều kiện $1 \leq j _ { 1 } < \ldots < j _ { k } \leq n \Rightarrow j _ { k } \geq k .$
+
+Nếu $j _ { k } > k$ thì $M _ { 1 , . . . , k } ^ { j _ { 1 } , . . . , j _ { k } } = 0$ vì định thức này có ít nhất một cột bằng 0. Nếu $j _ { k } = k$ thì $j _ { m } = m, \forall m = 1, . . . , k$, do đó
+
+$$
+M _ { 1 , \dots , k } ^ { j _ { 1 } , \dots , j _ { k } } = M _ { 1 , \dots , k } ^ { 1 , \dots , k } = { \left| \begin{array} { l l l } { a _ { 1 1 } } & { \dots } & { a _ { 1 k } } \\ { \vdots } & { \ddots } & { \vdots } \\ { a _ { k 1 } } & { \dots } & { a _ { k k } } \end{array} \right| }
+$$
+
+$$
+A _ { 1 , \ldots , k } ^ { 1 , \ldots , k } = ( - 1 ) ^ { 1 + \cdots + k + 1 + \cdots + k } { \left| \begin{array} { l l l } { a _ { k + 1 k + 1 } } & { \ldots } & { a _ { k + 1 n } } \\ { \vdots } & { \ddots } & { \vdots } \\ { a _ { n k + 1 } } & { \ldots } & { a _ { n n } } \end{array} \right| } .
+$$
+
+$$
+D _ { n } = \left| \begin{array} { c c c } { a _ { 1 1 } } & { \ldots } & { a _ { 1 k } } \\ { \vdots } & { \ddots } & { \vdots } \\ { a _ { k 1 } } & { \ldots } & { a _ { k k } } \end{array} \right| \left| \begin{array} { c c c } { a _ { k + 1 k + 1 } } & { \ldots } & { a _ { k + 1 n } } \\ { \vdots } & { \ddots } & { \vdots } \\ { a _ { n k + 1 } } & { \ldots } & { a _ { n n } } \end{array} \right| .
+$$
+
+$$
+D_{n} = \left| \begin{array}{lllll}
+a & b & 0 & 0 & 0 \\
+c & d & 0 & 0 & 0 \\
+e & f & 2 & 2 & 2 \\
+g & h & -1 & -4 & -6 \\
+i & j & 2 & -1 & -7
+\end{array} \right| = \left| \begin{array}{lll}
+a & b \\
+c & d \\
+c & d
+\end{array} \right| \left| \begin{array}{lll}
+2 & 2 & 2 \\
+-1 & -4 & -6 \\
+2 & -1 & -7
+\end{array} \right| = 24 (ad - bc) ; \text{(Xem Lemma)}
+$$
+
+Ví dụ 3.29).
+
+Ta cũng có:
+
+$$
+D_{n}^{\prime} = \left| \begin{array}{lllll}
+0 & a & b & 0 & 0 \\
+2 & e & f & 2 & 2 \\
+-1 & g & h & -4 & -6 \\
+0 & c & d & 0 & 0 \\
+2 & i & j & -1 & -7
+\end{array} \right| = (-1)^{1+4+2+3} \left| \begin{array}{ll}
+a & b \\
+c & d \\
+c & d
+\end{array} \right| \left| \begin{array}{lll}
+2 & 2 & 2 \\
+-1 & -4 & -6 \\
+2 & -1 & -7
+\end{array} \right| = 24 (ad - bc).
+$$
+
+Ví dụ 3.35: Với hai ma trận vuông cùng cấp $A, B$ bất kỳ luôn có
+
+(3.40)
+
+Thật vậy, giả sử $A = [a_{ij}]_{n \times n}, B = [b_{ij}]_{n \times n},$
+
+Khai triển Laplace theo $n$ hàng đầu ta có $D_{2n} = \det A\det B$ (xem Ví dụ 3.39). Mặt khác, nhân $b_{11}$ với cột 1, $b_{21}$ với cột 2, ..., $b_{n1}$ với cột $n$ của $D_{2n}$ xong cộng tất cả vào cột $n+1$ thì định thức $D_{2n}$ trở thành:
+
+$$
+D _ { 2 n } = \left| \begin{array} { c c c c c } { a _ { 1 1 } } & { \ldots } & { a _ { 1 n } \vdots c _ { 1 1 } } & { 0 } & { 0 } \\ { \vdots \ddots \vdots } & { \vdots \downarrow \vdots } & { \ddots } & { \vdots } \\ { - 1 \ldots } & { \ldots } & { a _ { m } \downarrow c _ { n 1 } } & { 0 } & { 0 } \\ { \ldots \ddots } & { b _ { 1 2 } } & { b _ { 1 n } } \\ { \big | } & { \ddots \vdots } & { \big \vdots } & { \ddots } \\ { \alpha } & { \ddots \vdots } & { \big \vdots } & { b _ { n 2 } } & { b _ { n n } } \end{array} \right|
+$$
+
+Tiếp tục biến đổi đối tượng như trên cuối cùng được:
+
+$$
+\begin{array}{c} D _ { 2 n } = \left| \begin{array} { l l l } { a _ { 1 1 } } & { \ldots } & { a _ { 1 n } } \\ { \vdots } & { \ddots } & { \vdots } \\ { a _ { n 1 } } & { \ldots } & { a _ { n n } } \end{array} \right| c _ { n 1 }  & { \ldots } & { c _ { n n } } \\ { \ldots } & { \bigcup } & { \bigcup } \\ { \bigoplus } & { \ldots } & { \left| { \begin{array} { c } { 0 } \\ { 0 } \end{array} } \right| } \end{array}  \left| \begin{array} { l } { 0 } \\ { \vdots } \\ { \ddots } \\ { 0 } \end{array} \right|
+$$
+
+Khai triển Laplace theo $n$ hàng cuối ta được:
+
+$$
+D _ { 2 n } = ( - 1 ) ^ { 1 + 2 + \ldots + n + n + 1 + \ldots + 2 n } \left| \begin{array} { l l l } { - 1 } & { \ldots } & { c _ { 1 n } } \\ { \vdots } & { \ddots } & { \vdots } \\ { c _ { n 1 } } & { \ldots } & { c _ { n n } } \end{array} \right|
+$$
+
+$$
+= ( - 1 ) ^ { \frac { 2 n ( 2 n + 1 ) } { 2 } + n } \cdot \operatorname*{det} C = \operatorname*{det} C = \operatorname*{det}( A B ).
+$$
+
+# 3.7. ỨNG DỤNG ĐỊNH THỨC ĐỂ TÌM MA TRẬN NGHỊCH ĐẢO  
+## 3.7.1. Định nghĩa ma trận nghịch đảo
+
+Ta đã biết rằng $( \mathcal{M}_n, + , \cdot )$ các ma trận vuông cấp $n$ là một trường, vì vậy với ma trận vuông khác không cho trước chưa chắc đã có ma trận nghịch đảo đối với phép nhân ma trận.
+
+Định nghĩa 3.9: Ma trận vuông $A$ được gọi là khả nghịch nếu tồn tại ma trận vuông cùng cấp $B$ sao cho $AB = BA = I$.
+
+Phép nhân ma trận có tính kết hợp nghĩa là nếu phép nhân $(B \sigma)$ định nghĩa trên tồn tại thì duy nhất, ta gọi ma trận này là ma trận nghịch đảo của $A$, ký hiệu $\boldsymbol{A}^{-1}$
+
+# 3.7.2. Điều kiện cần và đủ để tồn tại ma trận nghịch đảo
+
+Định lý 3.3: (điều kiện cần) Nếu A khả nghịch thì det $A \neq 0$ (ta nói ma trận A không suy biến).
+
+Chứng minh: $A A^{-1} = I \Rightarrow \operatorname*{det} A \operatorname*{det} A^{-1} = \operatorname*{det} AA^{-1} = \operatorname*{det} I = 1.$ Do đó det $A = \frac{1}{\operatorname*{det} A^{-1}} \neq 0$:
+
+Định nghĩa 3.10: Ma trận $B = [A_{ij}]_{n \times n}$, trong đó $A_{ij}$ là phần bù đại số của phần tử $a_{ij}$ của ma trận $A = [a_{ij}]_{n \times n}$, được gọi là ma trận phụ hợp của $A$:
+
+Định lý 3.4: (điều kiện đủ) Nếu det $A \neq 0$ thì $A$ khả nghịch và
+
+$$
+\boldsymbol{A}^{-1} = \frac{1}{\operatorname*{det}\boldsymbol{A}} \boldsymbol{B}^{t},
+$$
+
+với $B$ là ma trận phụ hợp của $A$:
+
+Chứng minh: Khai triển định thức của ma trận $A$ theo hàng thứ $k$ ta được:
+
+$$
+a_{k1} A_{k1} + ... + a_{kn} A_{kn} = \operatorname*{det} A.
+$$
+
+Vì vậy, tổng $a _ { i 1 } A _ { k 1 } + \ldots + a _ { i n } A _ { k n }$ là khai triển theo hàng thứ $k$ của định thức của ma trận được bằng cách thay hàng thứ $k$ của $A$ bởi hàng thứ $i$ của $A$, do đó bằng 0 (vì hàng thứ $k$ và hàng thứ $i$ bằng nhau). Vậy
+
+$$
+a _ { i 1 } A _ { k 1 } + \ldots + a _ { i n } A _ { k n } = 
+\begin{cases} 
+\operatorname*{det}A & \text{nếu } i = k \\
+0 & \text{nếu } i \neq k
+\end{cases}
+\Rightarrow AB^t = (\operatorname*{det}A)I.
+$$
+
+Tương tự, khai triển theo cột ta có:
+
+$$
+a _ { 1 i } A _ { 1 k } + \ldots + a _ { n i } A _ { n k } =
+\begin{cases}
+\operatorname*{det}A & \text{nếu } i = k \\
+0 & \text{nếu } i \neq k
+\end{cases}
+\Rightarrow B^tA = (\operatorname*{det}A)I.
+$$
+
+Từ công thức (3.42)-(3.43) suy ra kết quả (3.41).
+
+Hệ quả 3.1: Nếu $BA=I$ hoạc $AB=I$ thì tồn tại $\boldsymbol{A}^{-1}$ và $\boldsymbol{A}^{-1} = \boldsymbol{B}$.
+
+Chứng minh: $BA=I \Rightarrow \operatorname*{det}A \neq 0 \Rightarrow \exists A^{-1}$ và
+
+$$
+B = B(AA^{-1}) = (BA)A^{-1} = A^{-1}.
+$$
+
+Hề quả 3.2: Ma trận $A = { \left[ \begin{array} { l l } { a } & { b } \\ { c } & { d } \end{array} \right] }$ vuông cấp 2 với định thức $\left| A \right| = ad - bc \neq 0$ có ma trận nghịch đảo $A^{-1}= \frac{1}{ad-bc} \left[ \begin{array} { l l } { d } & { - c } \\ { - b } & { a } \end{array} \right] ^t = \frac{1}{ad-bc} \left[ \begin{array} { l l } { d } & { - b } \\ { - c } & { a } \end{array} \right].$
+
+Ví dụ 3.36: $A = { \left[ \begin{array} { l l } { 5 } & { 7 } \\ { 3 } & { 9 } \end{array} \right] }$ có ma trận nghịch đảo $A^{-1}= \frac{1}{ad-bc} \left[ \begin{array} { l l } { 9 } & { -7 } \\ { -3 } & { 5 } \end{array} \right].$
+
+Ví dụ 3.37: Ma trận $A = { \left[ \begin{array} { l l l } { 1 } & { 2 } & { 3 } \\ { 2 } & { 5 } & { 3 } \\ { 1 } & { 0 } & { 8 } \end{array} \right] }$ có định thức $A = -1.$
+
+$$
+A_{11} = ( - 1 ) ^ { 1 + 1 } \left| { \begin{array} { l l } { 5 } & { 3 } \\ { 0 } & { 8 } \end{array} } \right| = 40 ~ , ~ A_{12} = ( - 1 ) ^ { 1 + 2 } \left| { \begin{array} { l l } { 2 } & { 3 } \\ { 1 } & { 8 } \end{array} } \right| = - 13 ~ , ~ A_{13} = ( - 1 ) ^ { 1 + 3 } \left| { \begin{array} { l l } { 2 } & { 5 } \\ { 1 } & { 0 } \end{array} } \right| = - 5 ~ ,
+$$
+
+$$
+A _ { 2 1 } = \left( - 1 \right) ^ { 2 + 1 } \left| \begin{array} { l l } { { 2 } } & { { 3 } } \\ { { 0 } } & { { 8 } } \end{array} \right| = - 16 ~ , ~ A _ { 2 2 } = \left( - 1 \right) ^ { 2 + 2 } \left| \begin{array} { l l } { { 1 } } & { { 3 } } \\ { { 1 } } & { { 8 } } \end{array} \right| = 5 ~ , ~ A _ { 2 3 } = \left( - 1 \right) ^ { 2 + 3 } \left| \begin{array} { l l } { { 1 } } & { { 2 } } \\ { { 1 } } & { { 0 } } \end{array} \right| = 2 ~ ,
+$$
+
+$$
+A _ { 3 1 } = \left( - 1 \right) ^ { 3 + 1 } \left| \begin{array} { l l } { { 5 } } & { { 3 } } \\ { { 2 } } & { { 3 } } \end{array} \right| = - 9 ~ , ~ A _ { 3 2 } = \left( - 1 \right) ^ { 3 + 2 } \left| \begin{array} { l l } { { 5 } } & { { 3 } } \\ { { 1 } } & { { 3 } } \end{array} \right| = 3 ~ , ~ A _ { 3 3 } = \left( - 1 \right) ^ { 3 + 3 } \left| \begin{array} { l l } { { 5 } } & { { 2 } } \\ { { 1 } } & { { 2 } } \end{array} \right| = 1 ~ ,
+$$
+
+$$
+A ^ { - 1 } = \frac { 1 } { - 1 } \left[ \begin{array} { l l l } { 40 } & { - 13 } & { - 5 } \\ { - 16 } & { 5 } & { 2 } \\ { - 9 } & { 3 } & { 1 } \end{array} \right] ^ { t } = - \left[ \begin{array} { l l l } { 40 } & { - 16 } & { - 9 } \\ { - 13 } & { 5 } & { 3 } \\ { - 5 } & { 2 } & { 1 } \end{array} \right] = \left[ \begin{array} { l l l } { - 40 } & { 16 } & { 9 } \\ { 13 } & { - 5 } & { - 3 } \\ { 5 } & { - 2 } & { - 1 } \end{array} \right] .
+$$
+
+Vi dụ 3.38: Ma trận $A = \left[ \begin{array}{lll} 2 & 5 & 3 \\ 7 & 3 & 2 \\ 4 & 1 & 3 \end{array} \right]$. $\operatorname*{det} A = -56.$
+
+$$
+A_{11} = (-1)^{1+1} \left| \begin{array}{l} 3 \\ 1 \end{array} \quad \begin{array}{l} 3 \end{array} \right| = 7, \ A_{12} = (-1)^{1+2} \left| \begin{array}{l} 7 \\ 4 \end{array} \quad \begin{array}{l} 3 \end{array} \right| = -13, \ A_{13} = (-1)^{1+3} \left| \begin{array}{l} 7 \\ 4 \end{array} \quad \begin{array}{l} 3 \end{array} \right| = -5,
+$$
+
+$$
+A_{21} = (-1)^{2+1} \left| \begin{array}{l} 5 \\ 1 \end{array} \quad \begin{array}{l} 3 \end{array} \right| = -14, \ A_{22} = (-1)^{2+2} \left| \begin{array}{l} 4 \\ 3 \end{array} \quad \begin{array}{l} 3 \end{array} \right| = 2, \ A_{23} = (-1)^{2+3} \left| \begin{array}{l} 2 \\ 7 \end{array} \quad \begin{array}{l} 5 \end{array} \right| = -18,
+$$
+
+$$
+A_{31} = (-1)^{3+1} \left| \begin{array}{l} 5 \\ 3 \end{array} \quad \begin{array}{l} 1 \end{array} \right| = 7, \ A_{32} = (-1)^{3+2} \left| \begin{array}{l} 2 \\ 7 \end{array} \quad \begin{array}{l} 2 \end{array} \right| = -3, \ A_{33} = (-1)^{3+3} \left| \begin{array}{l} 2 \\ 7 \end{array} \quad \begin{array}{l} 5 \\ 3 \end{array} \right| = -29.
+$$
+
+$$
+A^{-1} = \frac{1}{-56} \left[ \begin{array}{lll} 7 & -13 & -5 \\ -14 & 2 & 18 \\ 7 & 3 & -29 \end{array} \right]^t = -\frac{1}{56} \left[ \begin{array}{lll} 7 & -14 & 7 \\ -13 & 2 & 3 \\ -5 & 18 & -29 \end{array} \right].
+$$
+
+# 3.7.3. Tìm ma trận nghịch đảo theo phương pháp Gauss-Jordan
+
+Mục 3.4.2 chỉ ra rằng: việc thực hiện liên tiếp các phép biến đổi trong dọc lên các hàng của ma trận $A$ để đưa $A$ về ma trận đơn vị trong trường với việc nhân bên trái của $A$ các ma trận $E _ { 1 } , . . . , E _ { k }$ dạng $R ( k , \lambda )$, $P ( i , j )$, $Q ( i , j , \lambda )$ (xem công thức 3.17, 3.18, 3.19) sao cho $E _ { 1 } . . . E _ { k } A = I$. Theo định lý 3.1 ta có $\boldsymbol{A}^{-1} = E _ { 1 } . . . E _ { k }$:
+
+Cùng với lập luận như trên ta có: $E _ { 1 } . . . E _ { k } = E _ { 1 } . . . E _ { k } I$ là ma trận được bằng cách thực hiện bởi cùng các phép biến đổi tương đương từ bên phải như đã thực hiện đối với ma trận $A$ lên các hàng của ma trận đơn vị $I$. Vì vậy để tìm ma trận $\boldsymbol{A}^{-1}$ ta thực hiện các bước sau:
+
+1) Viết ma trận đơn vị $I$ bên phải ma trận $A$: $AI$
+
+2) Thực hiện các phép biến đổi tương đương dòng đồng thời lên các hàng của $A \big| I$ để đưa ma trận $A$ ở bên trái về ma trận đơn vị $I$:
+
+3) Khi bên trái trở thành ma trận đơn vị thì bên phải chính là ma trận $\boldsymbol{A}^{-1}$:
+
+$$
+A \big| I \to . . . . . . . . . . . . . .
+$$
+
+Ví dụ 3.39: Tìm $\boldsymbol{A}^{-1}$ với $A = \begin{pmatrix} 2 & 5 \\ 3 & 8 \end{pmatrix}$ (ví dụ 3.37)
+
+$$
+\begin{array} { r l r l r l r l r l } { { 1 } } & { { 2 } } & { { 3 \big | 1 } } & { { 0 } } & { { 0 } } & { { } } & { { } } & { { 1 } } & { { 2 } } & { { 3 \big | ~ 1 } } & { { 0 } } & { { 0 } } \\ { { 2 } } & { { 5 } } & { { 3 \big | 0 } } & { { 1 } } & { { 0 } } & { { \begin{array} { l l l l l l l } { - 2 h _ { 1 } ^ { h } + \vec { h } _ { 2 } ^ { r } h _ { 1 } ^ { r } } & { 1 } & { 2 } & { } & { 3 } & { { 3 \big | 1 } } & { 0 } & { 0 } \\ { - h _ { 1 } ^ { r } + h _ { 3 } ^ { r } \to h _ { 3 } ^ { r } } & { 0 } & { 1 } & { - 3 \big | - 2 } & { 1 } & { 0 } & { } \end{array} } } \\ { { 1 } } & { { 0 } } & { { 8 \big | 0 } } & { { 0 } } & { { 1 } } & { { \begin{array} { l l l l l l l } { 1 } & { } & { } & { } & { } & { 0 } & { - 2 } & { 5 \big | - 1 } & { 0 } & { 1 } \end{array} } } \end{array}
+$$
+
+$$
+\begin{array}{r l}
+h_{1} h_{1} \quad 1 \quad 2 \quad 3 || \begin{array}{l l l l l l l l}
+1 & 0 & 0 & h_{1} h_{1} & 1 & 2 & 3
+\end{array} || \begin{array}{l l l l l l l}
+1 & 0 & 0 & 0 & h_{1} h_{1} & 0 & 1 & 2 & 3 \\
+h_{2} h_{2} & 0 & 1 & -3 | -2 \quad 1 & 0 & -h_{3} h_{3} & 0 & 1 & -3 | -2 \quad 1 & 0
+\end{array} || \\
+2 h_{2} \quad \gamma_{*} \quad 0 \quad 0 \quad 0 \quad -1 | -5 & 2 & 1 & {} & 0 & 0 & 1 | \begin{array}{l l l l l l l}
+5 & -2 & -1 & 0 & 0 & 0 & 1
+\end{array} |
+\end{array}
+$$
+
+$$
+\begin{array}{c}
+\begin{array}{r l}
+-3 h_{3} + h_{1} h_{1} \quad 2 & 0 | -14 \\
+3 h_{3} + h_{2} h_{2} \quad 0 & 1 | -5 \\
+h_{3} \xrightarrow{} h_{3} \quad 0 & 0 | 5
+\end{array}
+\begin{array}{r l}
+6 & 3 \\
+-3 h_{2} + h_{1} h_{1} \quad 1 \quad 0 \quad 0 | -40 \quad 16 \quad 9 \\
+-5 & -3
+\end{array} \\
+\overset{\mathrm{( )}}{} & 0 \quad 0 \quad 1 | 5 \quad -2 \quad -1
+\end{array}
+$$
+
+$$
+\stackrel{\wedge}{a} y \quad A^{-1} = \left[ \begin{array}{ccc}
+-40 & 16 & 9 \\
+13 & -5 & -3 \\
+5 & -2 & -1
+\end{array} \right] .
+$$
+
+Nhận xét 3.4: Tìm $A^{-1}$ theo phương pháp Gauss-Jordan sẽ dễ dàng khi các phần tử của $\boldsymbol{A}^{-1}$ là các số nguyên (thường gặp khi det $A = \pm 1$).
+
+# 3.8. SỬ DỤNG ĐỊNH THỨC TÌM HÀNG CỦA MA TRẬN
+
+Xét định thức của hệ $n$ véc tơ trong không gian véc tơ $n$ chiều ta có các kết quả sau:
+
+Định thức của một hệ phụ thuộc tuyến tính bằng 0 (xem Tính chất 3.2-7). Do đó, nếu định thức $D_{\mathcal{B}} \left\{\nu_1, . . . , \nu_n\right\} \neq 0$ thì hệ $\left\{\nu_1, . . . , \nu_n\right\}$ độc lập tuyến tính.
+
+Ngược lại, nếu hệ $\left\{\nu_1, . . . , \nu_n\right\}$ độc lập tuyến tính thì $D_{\mathcal{B}} \left\{\nu_1, . . . , \nu_n\right\} \neq 0$. Thật vậy, giả sử hệ $\left\{\nu_1, . . . , \nu_n\right\}$ có ma trận trong cơ sở số $\mathcal{B} = \left\{e_1, . . . , e_n\right\}$ là $A = [a_{ij}]$, nghĩa là $\nu_j = \sum_{i=1}^{n} a_{ij} e_i$. Ta có det $A = D_{\mathcal{B}} \left\{\nu_1, . . . , \nu_n\right\}$:
+
+Mặt khác, hệ $\left\{\nu_{1}, \ldots, \nu_{n}\right\}$ độc lập tuyến tính thì nó cũng là một cơ sở của $V$ ：$\mathrm{Vậy} ta có $e_{j}=\sum_{i=1}^{n} b_{ij} \nu_{i}$. Ma trận $B = [b_{ij}]$, ta có thể kiểm tra được $AB = I \Rightarrow \operatorname*{det} A \neq 0$ ：
+
+Định lý 3.5: Hệ $\left\{\nu_{1}, \ldots, \nu_{n}\right\}$ độc lập tuyến tính khi và chỉ khi $D_{\mathcal{B}}\left\{\nu_{1}, \ldots, \nu_{n}\right\} \neq 0$ ：
+
+Nhận xét: Nếu ma trận $T = [t_{ij}]_{\mathcal{B}}^{\mathcal{B}}$ là ma trận chuyển từ cơ sở $\mathcal{B}$ sang $\mathcal{B}'$ thì ma trận chuyển từ cơ sở $\mathcal{B'}$ sang $\mathcal{B}$ là $T^{-1}$ ：
+
+$$
+\begin{array}{r}
+T = \left[t_{ij}\right]_{\mathcal{B}}^{\mathcal{B}}, \Rightarrow \left[t'_{ij}\right]_{\mathcal{B}}^{\mathcal{B}'} = T^{-1}.
+\end{array}
+$$
+
+Vi dụ 3.40: (Xem Vi dụ 2.16 Chương 2) Hai hệ véc tơ $\mathcal{B} = \left\{ e_1, e_2 \right\}, \mathcal{B}' = \left\{ e_1', e_2' \right\}$ với $e_1 = (1, 0)$, $e_2 = (0, 1)$ và $\boldsymbol{e}_1' = (1, 1)$, $e_2' = (4, 3)$ là hai cơ sở của $\mathbb{R}^2$. Theo công thức (2.10): 
+\[
+\forall u = (x, y) \in \mathbb{R}^2 \colon u = x e_1 + y e_2 = (4y - 3x)e_1' + (x - y)e_2';
+\]
+\[
+(u)_\mathcal{B} = (x, y); ~ (u)_{\mathcal{B}'} = (4y - 3x, x - y).
+\]
+
+Má trận chuyển tạ số $\mathcal{B}$ sang $\mathcal{B'}$ là: 
+\[ T = \left[ \begin{array} { l l } { 1 } & { 4 } \\ { 1 } & { 3 } \end{array} \right] .\]
+
+Từ công thức $u = (x, y), \left( u \right) _{\mathscr{B'} } = \left( 4y - 3x, x - y \right) \Longrightarrow \left( e_1 \right)_{\mathscr{B'}} = \left( -3, 1 \right); \left( e_2 \right)_{\mathscr{B'}} = \left( 4, -1 \right).$
+
+Do đó ma trận chuyển từ cơ số $\mathcal{B'}$ sang $\mathcal{B}$ là:
+\[ T' = \left[ \begin{array} { l l } { -3 } & { 4 } \\ { 1 } & { -1 } \end{array} \right] .\]
+
+Để dàng nhận thấy $T' = T^{-1}$:
+
+Định lý 3.6: Giả sử $A = [a_{ij}]_{m \times n}$ là một ma trận có kích thước $m \times n$. Nếu tồn tại định thức con cấp $p$ của $A$ khác $0$ và mọi định thức con cấp $_{p+1}$ bao quanh nó đều bằng $0$ thì $r(A) = p$:
+
+Chứng minh: Không mất tính tổng quát ta có thể giả thiết định thức con cấp $p$ góc trái $M_{1, \ldots, p}^{1, \ldots, p} \neq 0$. Khi đó $p$ véc tơ cột còn lại là độc lập tuyến tính (Dinh lý 3.5), do đó $r(A) \geq p$. Ta cần chứng minh bất đẳng thức ngược lại.
+
+Với mỗi $k = 1, \ldots, m$: $s = p + 1, \ldots, n$; Xét ma trận cấp $(p+1) \times (p+1)$:
+
+$$
+B = \left[ \begin{array} { c c c c c } { a _ { 1 1 } } & { \ldots } & { a _ { 1 p } } & { a _ { 1 s } } \\ { a _ { 2 1 } } & { \ldots } & { a _ { 2 p } } & { a _ { 2 s } } \\ { \vdots } & { \vdots } & { \vdots } & { \vdots } \\ { a _ { p 1 } } & { \ldots } & { a _ { p p } } & { a _ { p s } } \\ { a _ { k 1 } } & { \ldots } & { a _ { k p } } & { a _ { k s } } \end{array} \right]
+$$
+
+Khi $k \leq p$, ma trận $B$ có hai hàng bằng nhau, do đó $\det(B) = 0$. Khi $k > p$, ta có $\det(B)$ là định thức cấp $(p+1) M_{1,\ldots,p}^{1,\ldots,p}$.
+
+Mặt khác khai triển theo hàng cuối ta được dạng sau:
+
+$$
+a _ { k 1 } \mu _ { 1 } + \ldots + a _ { k p } \mu _ { p } + a _ { k s } M_{1, \dots , p}^{1, \dots , p} = 0
+$$
+
+$$
+\Rightarrow a _ { k s } = \lambda _ { 1 } a _ { k 1 } + \ldots + \lambda _ { p } a _ { k p }, \quad \text{với mọi } k = 1, 2, \ldots, m.
+$$
+
+Vì vậy vec tơ cột $\nu_s$ là tổ hợp tuyến tính của $p$ vec tơ cột đầu. Vậy $r(A) \leq p$.
+
+Hệ quả 3.3: Nếu $A$ là một ma trận có kích thước $m \times n$, thì $r(A) = r(A^t) \leq \min(m, n)$,
+
+Nhận xét 3.6: $\boldsymbol{\mathrm{\mathbf{\mathit{p}}\acute{\hat{\mathrm{e}}}}}$ tìm hạng ma trận $A$ ta tìm định thức con cấp 2 khác O. Bao định thức này bằng các định thức con cấp 3. Nếu tất cả các định thức cấp 3 bao quanh đều bằng O thì $r(A) = 2$. Nếu có định thức con cấp 3 khác O thì ta tiếp tục bao định thức cấp 3 này bằng các định thức cấp 4...
+
+Ví dụ 3.41: Ma trận $A = \left[ \begin{array}{llll} 2 & 1 & -2 & 3 \\ -2 & 9 & -4 & 7 \\ -4 & 3 & 1 & -1 \end{array} \right]$: 
+
+$$
+\left| \begin{array}{ll} 2 & 1 \\ -2 & 9 \end{array} \right| = 20, \ \left| \begin{array}{lll} 2 & 1 & -2 \\ -2 & 9 & -4 \\ -4 & 3 & 1 \end{array} \right| = \left| \begin{array}{lll} 2 & 1 & 3 \\ -2 & 9 & 7 \\ -4 & 3 & -1 \end{array} \right| = 0 \ .
+$$
+
+Vậy $r(A) = 2$.
+
+$\underline{\mathbf{Ví}đụ 3.42}: \mathrm{Má}trận \ B = \left[ \begin{array}{llll}
+2 & 1 & 0 & 4 \\
+-4 & -2 & 1 & -7 \\
+3 & 1 & -1 & 4 \\
+1 & -4 & 3 & -4
+\end{array} \right]$
+$\left| \begin{array}{cc}
+2 & 1 \\
+-4 & -2
+\end{array} \right| = 0 \mathrm{~nhưng~} \left| \begin{array}{cc}
+1 & 0 \\
+-2 & 1
+\end{array} \right| = 1.$
+
+Bảo địnghthức nàybởi địnghthức cấp 3: $\left| \begin{array}{ccc}
+-4 & -2 & 1 \\
+3 & 1 & -1 \\
+1 & 1 & 1
+\end{array} \right| = 1.$
+
+Địnhthức cấp 4 chính là địnhthức $\left| B \right| = 0$
+
+Vậy $r(B) = 3$：
+
+Vi dụ 3.43: Tìm hạng của ma trận $A = { \left[ \begin{array}{llll}
+a & 1 & 1 & 1 \\
+1 & a & 1 & 1 \\
+1 & 1 & a & 1 \\
+1 & 1 & 1 & a
+\end{array} \right] }$
+
+Ta có $\vert A \vert = ( a + 3 ) ( a - 1 ) ^ { 3 }$：
+
+Vậy: · Khi $a \neq - 3, a \neq 1$ thì $r(A) = 4$, 
+· Khi $a = 1$ thì $r(A) = 1$
+· $\bullet \mathrm{~Khi~} a = - 3, \left| \begin{array}{ccc}
+1 & -3 & 1 \\
+1 & 1 & -3 \\
+1 & 1 & 1
+\end{array} \right| \neq 0 \Rightarrow r(A) = 3.$
+
+Trong thực hành ta có thể kết hợp phương pháp này với phương pháp biến đổi số hàng các cột ma trận thì quá trình tìm hạng ma trận sẽ nhanh hơn.
+
+# CHUONG 3
+
+3.1. a) $( A + B ) + C = A + ( B + C ) = \left[ \begin{array} { l l } { 3 } & { 1 } \\ { 3 } & { 6 } \\ { 5 } & { 6 } \end{array} \right] , \qquad \mathrm { d } ) A ^ { t } B = \left[ \begin{array} { l l } { - 9 } & { 8 } \\ { - 2 } & { 19 } \end{array} \right] ,$ e) $B C ^ { t } = \left[ \begin{array} { l l l } { - 3 } & { 2 } & { - 1 } \\ { 0 } & { 7 } & { 10 } \\ { - 13 } & { 4 } & { - 11 } \end{array} \right] .$   
+3.2. $3 A + 4 B - 2 C = \left[ \begin{array} { l l l } { 10 } & { - 25 } & { - 5 } \\ { 7 } & { - 2 } & { 10 } \end{array} \right] .$
+
+3.3. Độc lập.
+
+3.4. $[ A ] = ( - 7 , 11 , - 21 , 30 )$
+
+3.5. a) $A + B = \left[ \begin{array}{lll}
+5 & -1 & -1 \\
+-1 & 1 & 7
+\end{array} \right]$, $A + C$ không xác định, $3A - 4B = \left[ \begin{array}{lll}
+-13 & -3 & 18 \\
+4 & 17 & 0
+\end{array} \right]$.
+
+b) $AB$, $CD$. Có $AC = \left[ \begin{array}{llll}
+-5 & -2 & 4 & 5 \\
+11 & -3 & -12 & 18
+\end{array} \right]$, $AD = \left[ \begin{array}{l}
+9 \\
+9
+\end{array} \right]$.
+
+$BC = \left[ \begin{array}{llll}
+11 & -12 & 0 & -5 \\
+-15 & 5 & 8 & 4
+\end{array} \right]$, $BD = \left[ \begin{array}{l}
+-1 \\
+9
+\end{array} \right]$.
+
+c) $A^t = \left[ \begin{array}{ll}
+1 & 0 \\
+-1 & 3 \\
+2 & 4
+\end{array} \right]$, $A^t C$ không xác định, $D^t A^t = [9 \quad 9]$, $B^t A = \left[ \begin{array}{lll}
+4 & -7 & 4 \\
+0 & -6 & -8 \\
+-3 & 12 & 6
+\end{array} \right]$.
+
+$D^t D = 14$, $DD^t = \left[ \begin{array}{ccc}
+4 & -2 & 6 \\
+-2 & 1 & -3 \\
+6 & -3 & 9
+\end{array} \right]$.
+
+\[ \left[ \begin{array}{ll}
+7 & 0 \\
+5 & 7
+\end{array} \right]
+\left[ \begin{array}{ll}
+-7 & 3 \\
+5 & -2
+\end{array} \right] = 
+\left[ \begin{array}{ll}
+1 & 0 \\
+0 & 1
+\end{array} \right]
+b) \Longrightarrow 
+\left[ \begin{array}{ll}
+2 & 3 \\
+5 & 7
+\end{array} \right]
+\left[ \begin{array}{ll}
+2 & 0 \\
+0 & 2
+\end{array} \right] + 
+\left[ \begin{array}{ll}
+0 & 0 \\
+0 & 1
+\end{array} \right]
+\left[ \begin{array}{ll}
+-7 & 3 \\
+5 & -2
+\end{array} \right] = 
+\left[ \begin{array}{ll}
+2 & 0 \\
+0 & 2
+\end{array} \right] + 
+\left[ \begin{array}{ll}
+0 & 3 \\
+0 & 7
+\end{array} \right]
+\left[ \begin{array}{ll}
+-7 & 3 \\
+5 & -2
+\end{array} \right] = 
+\left[ \begin{array}{ll}
+17 & -6 \\
+35 & -12
+\end{array} \right].
+c) ~ 
+\left[ \begin{array}{ll}
+17 & -6 \\
+35 & -12
+\end{array} \right]^5 = 
+\left[ \begin{array}{ll}
+2 & 3 \\
+5 & 7
+\end{array} \right]
+\left[ \begin{array}{ll}
+2 & 0 \\
+0 & 3
+\end{array} \right]^5
+\left[ \begin{array}{ll}
+-7 & 3 \\
+5 & -2
+\end{array} \right] 
+\]
+
+$$
+= { \left[ \begin{array} { l l } { 2 } & { 3 } \\ { 5 } & { 7 } \end{array} \right] } { \left[ \begin{array} { l l } { 2 ^ { 5 } } & { 0 } \\ { 0 } & { 3 ^ { 5 } } \end{array} \right] } { \left[ \begin{array} { l l } { - 7 } & { 3 } \\ { 5 } & { - 2 } \end{array} \right] } = { \left[ \begin{array} { l l } { 15 \cdot 3 ^ { 5 } - 14 \cdot 2 ^ { 6 } } & { 6 ( 2 ^ { 5 } - 3 ^ { 5 } ) } \\ { 35 \cdot ( 3 ^ { 5 } - 2 ^ { 5 } ) } & { 15 \cdot 2 ^ { 5 } - 14 \cdot 3 ^ { 5 } } \end{array} \right] } .
+$$
+
+$$
+\mathrm{khi c}. \left[ \begin{array} { l l } { 17 } & { -6 } \\ { 35 } & { -12 } \end{array} \right] ^ { 5 } = \left[ \begin{array} { l l } { 2 } & { 3 } \\ { 5 } & { 7 } \end{array} \right] \left( \left[ \begin{array} { l l } { 32 } & { 0 } \\ { 0 } & { 32 } \end{array} \right] + \left[ \begin{array} { l l } { 0 } & { 0 } \\ { 0 } & { 211 } \end{array} \right] \right) \left[ \begin{array} { l l } { -7 } & { 3 } \\ { 5 } & { -2 } \end{array} \right]
+$$
+
+$$
+= { \left[ \begin{array} { l l } { 32 } & { 0 } \\ { 0 } & { 32 } \end{array} \right] } + { \left[ \begin{array} { l l } { 0 } & { 633 } \\ { 0 } & { 1477 } \end{array} \right] } { \left[ \begin{array} { l l } { -7 } & { 3 } \\ { 5 } & { -2 } \end{array} \right] } = { \left[ \begin{array} { l l } { 3197 } & { -1266 } \\ { 7385 } & { -2922 } \end{array} \right] } .
+$$
+
+$$
+f(A) = \left[ { \begin{array} { c c } { -13 } & { 52 } \\ { 104 } & { -117 } \end{array} } \right] ; \ g(x) = x^2 + 2x - 11, \ g(A) = 0.
+$$
+
+3. $A + B = \left[ \begin{array} { l l } { 9 } & { 0 } \\ { 0 } & { 14 } \end{array} \right] . \qquad \mathrm{b)} AB = \left[ \begin{array} { l l } { 14 } & { 0 } \\ { 0 } & { 33 } \end{array} \right] .$ $) A^2 = \left[ \begin{array} { l l } { 4 } & { 0 } \\ { 0 } & { 9 } \end{array} \right] . \qquad A^n = \left[ 2^n 0 \right] . \qquad \mathrm{e)} p(A) = \left[ p(2) 0 \right].$
+
+3.9. Quy nạp theo $n$ ：
+
+3.10.a Giả sử $A = \left[ \begin{array}{ll} 1 & -2 \\ 3 & -4 \end{array} \right], B = \left[ \begin{array}{ll} 2 & -2 \\ 3 & -3 \end{array} \right]$. Khi đó, $A = -I + B$, và $B^2 = -B.$ (2) Áp dụng câu 3), suy ra $\boldsymbol{A}^5 = -\boldsymbol{I} + 31\boldsymbol{B} = \left[ \begin{array}{ll} 61 & -62 \\ 93 & -94 \end{array} \right].$
+
+b) Đặt $A = \left[ \begin{array}{ll} 2 & -1 \\ 3 & -2 \end{array} \right], B = \left[ \begin{array}{ll} 1 & -1 \\ 3 & -3 \end{array} \right]$. Khi đó, $A = I + B$, và $B^2 = -2B.$ (2) Áp dụng câu 3), suy ra $A^n = I + \left( \sum_{k=1}^{n} C_n^k (-2)^k \right) B = \left[ \begin{array}{ll} 1 & 0 \\ 0 & 1 \end{array} \right] + 2\left( 1 + (-1)^{n+1} \right) \left[ \begin{array}{ll} 1 & -1 \\ 3 & -3 \end{array} \right].$
+
+c) Ta có $\left[ \begin{array}{ll} 0 & 1 \\ -1 & 0 \end{array} \right]^4 = I$. Do đó, $\left[ \begin{array}{ll} 0 & 1 \\ -1 & 0 \end{array} \right]^{1999} = \left( \left[ \begin{array}{ll} 0 & 1 \\ -1 & 0 \end{array} \right]^4 \right)^{499} \cdot \left[ \begin{array}{ll} 0 & 1 \\ -1 & 0 \end{array} \right]^3 = \left[ \begin{array}{ll}
+
+$$
+\left[ \begin{array}{cc}
+0 & -1 \\
+1 & 0
+\end{array} \right]
+.$$
+
+(2 $\mathrm{d}) \left[ \begin{array}{cc}
+\cos \alpha & -\sin \alpha \\
+\sin \alpha & \cos \alpha
+\end{array} \right] ^ { n } = \left[ \begin{array}{cc}
+\cos n \alpha & -\sin n \alpha \\
+\sin n \alpha & \cos n \alpha
+\end{array} \right]
+.$$
+
+$$
+\mathrm{e}) \left[ \begin{array}{cccc}
+\lambda _ { 1 } &&& \\
+& \ddots && \\
+&&& \lambda _ { k }
+\end{array} \right] ^ { n } = \left[ \begin{array}{cccc}
+\lambda _ { 1 } ^ { n } &&& \\
+& \ddots && \\
+&&& \lambda _ { k } ^ { n }
+\end{array} \right]
+$$
+
+$$
+\mathrm{d}) \left[ \begin{array}{cc}
+\lambda & 1 \\
+0 & \lambda
+\end{array} \right] ^ { n } = \left[ \begin{array}{cc}
+\lambda ^ { n } & n \lambda ^ { n - 1 } \\
+0 & \lambda ^ { n }
+\end{array} \right]
+.$$
+
+3.11. a) $\boldsymbol{J}^2 = \boldsymbol{I}$:
+
+$$
+A^n = (\alpha I + \beta J)^n = \sum_{k=0}^{n} C_n^k (\alpha I)^{n-k} (\beta J)^k
+$$
+
+$$
+= \left( \sum_{k=0}^{\left[ n / 2 \right]} C_n^{2k} \alpha^{n-2k} \beta^{2k} \right) I + \left( \sum_{k=0}^{\left[ (n - 1) / 2 \right]} C_n^{2k+1} \alpha^{n-2k-1} \beta^{2k+1} \right) J.
+$$
+
+3.12. a) $A = I + B$, với $B = \left[ \begin{array} { l l l } { 0 } & { - 2 } & { 1 } \\ { - 1 } & { 0 } & { 0 } \\ { - 2 } & { 0 } & { 0 } \end{array} \right]$, $B ^ { 2 } = \left[ \begin{array} { l l l } { 0 } & { 0 } & { 0 } \\ { 0 } & { 2 } & { - 1 } \\ { 0 } & { 4 } & { - 2 } \end{array} \right]$, $B ^ { 3 } = \mathbf { 0 }.$
+
+$\Rightarrow A ^ { n } = \sum _ { k = 0 } ^ { n } C _ { n } ^ { k } B ^ { k } = I + n B + \frac{n(n-1)}{2} B ^ { 2 }.$
+
+b) $A = 2I + B$, với $B = \left[ \begin{array} { c c c } { 0 } & { 1 } & { 0 } \\ { 0 } & { - 1 } & { 0 } \\ { 0 } & { 0 } & { 0 } \end{array} \right]$, $B ^ { k } = -(1)^{k-1} B,$
+
+$\Rightarrow A ^ { n } = \sum _ { k = 0 } ^ { n } C _ { n } ^ { k } 2^{n-k} B ^ { k } = I - \sum _ { k = 1 } ^ { n } C _ { n } ^ { k } 2^{n-k} (-1)^{k} B ^ { k } = I + (2^n - 1) B.$
+
+$A = 2I + B$, với $B = \left[ \begin{array} { l l } { - 2 } & { 2 } \\ { - 3 } & { 3 } \end{array} \right]$, $B ^ { 2 } = B,$
+
+$\Rightarrow A ^ { n } = \sum _ { k = 0 } ^ { n } C _ { n } ^ { k } 2^{n-k} B ^ { k } = 2^n I + \sum _ { k = 1 } ^ { n } C _ { n } ^ { k } 2^{n-k} B = 2^n I + (3^n - 2^n) B.$
+
+3.13. \(A^2 = \left[ \begin{array} { c c c c } { n - 1 } & { n - 2 } & { \ldots } & { n - 2 } \\ { n - 2 } & { n - 1 } & { \ldots } & { n - 2 } \\ { \ldots } & { \ldots } & { \ldots } & { \ldots } \\ { n - 2 } & { n - 2 } & { \ldots } & { n - 1 } \end{array} \right] , P^2 = \alpha^2 A^2 + 2\alpha\beta A + \beta^2 I.\)
+
+\(\Rightarrow P^2 = I \Leftrightarrow \left\{ \begin{array} { l l } { ( n - 1 ) \alpha^2 + \beta^2 = 1 ~ (^{*}) } & {} \\ { ( n - 2 ) \alpha^2 + 2\alpha\beta = 0 ~ (^{**}) } & {} \end{array} \right.\)
+
+\((^{**}) \Leftrightarrow [ \beta = - \frac{n-2}{2} \alpha \quad \text{thay} \quad \beta = - \frac{n-2}{2} \alpha \quad \text{vào} (^{*}) \quad \text{được} \quad \alpha^2 = \frac{4}{n^2} .\)
+
+Vậy \(P^2 = I \Leftrightarrow \left\{ \begin{array} { l } { \alpha = 0, \beta = \pm 1 } \\ { \alpha = \frac{2}{n}, \beta = - \frac{n-2}{n} } \\ { \alpha = - \frac{2}{n}, \beta = \frac{n-2}{n} } \end{array} \right. .\)
+
+\(\mathrm{tr}(AB) = \sum_{i=1}^{n} \left( \sum_{k=1}^{n} a_{ik} b_{ki} \right) = \sum_{k=1}^{n} \left( \sum_{i=1}^{n} b_{ki} a_{ik} \right) = \mathrm{tr}(BA).\)
+
+$$
+\mathrm{tr} B = \operatorname{tr}\left(P^{-1} A P\right) = \operatorname{tr}\left((P^{-1} A) P\right) = \operatorname{tr}\left(P (P^{-1} A)\right) = \operatorname{tr}\left((P P^{-1}) A\right) = \operatorname{tr} A.
+$$
+
+d) Không tồn tại $A, B$ vì $\Upsilon(A B - B A) = 0$ nhưng tr $I = n \neq 0$
+
+3.15
+\[
+\begin{array}{rl}
+& {;} \quad \operatorname{a}) A^2 - (a + d) A = A \left( A - (a + d) I \right) = (bc - ad)I \\
+& \Rightarrow A^2 - (a + d) A + (ad - bc) I = \mathbf{0}.
+\end{array}
+\]
+b) Nếu $\boldsymbol{A}^2 = \mathbf{0}$ thì với mọi $k \geq 2 \colon A^k = \mathbf{0}$.
+
+Ngược lại, giả sử tồn tại $k$ sao cho $\boldsymbol{A}^k = \mathbf{0}$ thì $\det A = ad - bc = 0$ và theo a) ta có $A^2 + (a + d) A = \mathbf{0} \Rightarrow A^k = (-1)^{k-1}(a+d)^{k-1} A, \forall k \geq 2.$
+
+$\cdot$ Nếu $a + d = 0$ thì $\boldsymbol{A}^2 = \mathbf{0}$.
+
+$\cdot$ Nếu $a + d \neq 0$ thì $A = \mathbf{0} \Rightarrow A^2 = \mathbf{0}$
+
+3.16. $DA = 3A$ và $BD = 3B$：
+
+3.18. Chỉ các ma trận $\operatorname{tr}\hat{\mathbf{a}}\ln\operatorname{dang} \left[ \begin{array}{ll}
+a & b \\
+0 & a
+\end{array} \right]$.
+
+3.19. Xét các ma trận đối xứng cấp $n$ có dạng $E _ { i j } = \left[ a _ { k l } \right]$ trong đó
+
+$$
+a _ { k l } = \left\{ 
+\begin{array} { l l }
+{ 1 } & { \text{nếu } k = i , l = j \quad \text{hoặc } k = j , l = i } \\
+{ 0 } & { \text{trong các trường hợp khác} }
+\end{array}
+\right. .
+$$
+
+Hệ $\left\{ E _ { i j } \big | 1 \leq i \leq j \leq n \right\}$ là một cơ sở của không gian các ma trận đối xứng cấp $n$, do đó có số chiều bằng $n ( n + 1 ) / 2$.
+
+3.20. $A ^ { 2 } = \mathbf{0} \Leftrightarrow a ^ { 2 } + b c = ( a + d ) b = ( a + d ) c = b c + d ^ { 2 } = 0$
+$\Leftrightarrow a ^ { 2 } + b c = ( a + d ) b = ( a + d ) c = ( a + d ) ( a - d ) = 0 \Leftrightarrow \left\{ 
+\begin{array} { l }
+a = - d \\
+a ^ { 2 } + b c = 0
+\end{array}
+\right.$
+
+$A^2 = I \Leftrightarrow \begin{cases}
+a^2 + bc = bc + d^2 = 1 \\
+ab + bd = ac + dc = 0 \\
+(a + d)(a - d) = 0 \\
+b = c = 0 
+\end{cases} \Leftrightarrow
+\begin{cases}
+a^2 + bc = 1 \\
+(a + d)b = (a + d)c = 0 \Leftrightarrow
+\begin{cases}
+a^2 + bc = 1 \\
+a^2 + bc = 1 \\
+a = d = \pm 1 \\
+b = c = 0 
+\end{cases} 
+\end{cases}$
+
+$c = 0 \Longrightarrow A^2 = \left[ \begin{array}{ll}
+a^2 & b(a + d) \\
+0 & d^2
+\end{array} \right]$
+
+$A^n = \left[ \begin{array}{ll}
+a^n & * \\
+0 & d^n
+\end{array} \right]$
+
+$A^n = I \quad \Rightarrow \quad a^n = d^n = 1 \quad \Rightarrow \quad a = \pm 1, d = \pm 1.$
+
+$a = d = \pm 1 \Longrightarrow A^n = \left[ \begin{array}{ll}
+1 & \pm nb \\
+0 & 1
+\end{array} \right] \Rightarrow b = 0.$
+
+$a = -d = \pm 1 \Rightarrow A^2 = \left[ \begin{array}{ll}
+1 & 0 \\
+0 & 1
+\end{array} \right] \Rightarrow b = 0.$
+
+3.22. $\{\nu_1 + u_1, ..., \nu_n + u_n\} \subset \mathrm{span}\{\nu_1, ..., \nu_n\} + \mathrm{span}\{u_1, ..., u_n\}$
+
+$r ( A + B ) = \mathrm{dim\ span}\left\{\nu_{1} + u_{1}, \ldots, \nu_{n} + u_{n}\right\}$ $\leq \dim \operatorname{span}{\big \{} \nu_{1}, \ldots, \nu_{n} {\big \}} + \dim \operatorname{span}{\big \{} u_{1}, \ldots, u_{n} {\big \}} = r ( A ) + r ( B ).$
+
+3.2.3) $A = \left[ \begin{array}{ll} 1 & 1 \\ 0 & 0 \end{array} \right], B = \left[ \begin{array}{ll} -1 & -1 \\ 0 & 0 \end{array} \right]$. 
+
+b) $A = \left[ \begin{array}{ll} 1 & 0 \\ 0 & 0 \end{array} \right], B = \left[ \begin{array}{ll} 0 & 2 \\ 0 & 0 \end{array} \right]$. 
+
+$A = \left[ \begin{array}{ll} 1 & 0 \\ 0 & 0 \end{array} \right], B = \left[ \begin{array}{ll} 0 & 0 \\ 0 & 1 \end{array} \right]$. 
+
+$AB = \left[ \begin{array}{ll} ER & ES + FT \\ 0 & GT \end{array} \right] = \left[ \begin{array}{lll} \left[ \begin{array}{lll} 9 & 12 & 15 \\ 19 & 26 & 33 \end{array} \right] & \left[ \begin{array}{l} 3 \\ 7 \end{array} \right] + \left[ \begin{array}{l} 1 \\ 0 \end{array} \right] \\ \left[ \begin{array}{lll} 0 & 0 & 0 \end{array} \right] & \left[ \begin{array}{l} 2 \end{array} \right] \end{array} \right] = \left[ \begin{array}{llll} 9 & 12 & 15 & 4 \\ 19 & 26 & 33 & 7 \\ 0 & 0 & 0 & 2 \end{array} \right]$.
+
+3.25. a $\mathfrak{o o} \mu = \left[ \begin{array}{ccccc}
+1 & 2 & 3 & 4 & 5 \\
+1 & 2 & 5 & 3 & 4
+\end{array} \right], \mu \circ \sigma = \left[ \begin{array}{ccccc}
+1 & 2 & 3 & 4 & 5 \\
+1 & 5 & 2 & 4 & 3
+\end{array} \right]$, $\sigma^{-1} = \left[ \begin{array}{ccccc}
+1 & 2 & 3 & 4 & 5 \\
+4 & 1 & 5 & 2 & 3
+\end{array} \right]$.
+
+b) sgn $\sigma = (-1)^{5}$, $\operatorname{sgn} \mu = (-1)^{5}$, $\operatorname{sgn} (\sigma \circ \mu) = (-1)^{2}$
+
+$$
+\operatorname{sgn} (\mu \circ \sigma) = (-1)^{4}, \operatorname{sgn} \sigma^{-1} = (-1)^{5}.
+$$
+
+3.26. a) 1. b) 21. c) 100. d) 0.
+
+3.27. a) -3. b) -9. c) -10. d) 100.
+
+$$
+\left| \begin{array}{cc}
+-a & a \\
+-b & a + b
+\end{array} \right| = (-b) \left| \begin{array}{cc}
+1 & a \\
+1 & a + b
+\end{array} \right| = -b^2.
+$$
+
+3.29. a) $(t - 5)(t + 2)$, b) $(t + 2)(t - 4)$.
+
+$$
+6 \cdot 4 \big | A \big | = 28 \Rightarrow \big | A \big | = \frac{7}{6} ~ \mathrm{b)} \big | B \big | = -54 ~ \mathrm{c)} \big | C \big | = (t + 2)(t - 2)(t + 4).
+$$
+
+$$
+\big | A \big | = ( t + 2 ) ( t - 3 ) ( t - 4 ) ~ \mathrm { b } ) \big | B \big | = ( t + 2 ) ^ { 2 } ( t - 4 ) ~ \mathrm { c } ) \big | C \big | = ( t + 2 ) ^ { 2 } ( t - 4 ).
+$$
+
+3.33. Cách 1: Khai triển theo hàng thứ nhất ta được đa thức bậc 3: $\begin{array} { r } {-2 x ^ { 3 } + a _ { 2 } x ^ { 2 } + a _ { 1 } x + a _ { 0 } = 0 \mathrm { có } \mathrm { các } \mathrm { nghiệm } \mathrm { là } x _ { 1 } = 2 , x _ { 2 } = 3 , x _ { 3 } = 4 .} \end{array}$
+
+Cách 2: Định thức trong bài có dạng định thức Vandermonde bằng:
+
+$$
+( 2 - x ) ( 3 - x ) ( 4 - x ).
+$$
+
+$$
+\left| \begin{array} { l l l } { 2 } & { 9 } & { 9 } \\ { 9 } & { 6 } & { 6 } \\ { 1 } & { 6 } & { 1 } \end{array} \right| = \left| \begin{array} { l l l } { 2 } & { 9 } & { 27 } \\ { 9 } & { 6 } & { 54 } \\ { 1 } & { 6 } & { 1 } \end{array} \right| = 23 \left| \begin{array} { l l l } { 2 } & { 9 } & { k _ { 1 } } \\ { 9 } & { 6 } & { k _ { 2 } } \\ { 1 } & { 6 } & { k _ { 3 } } \end{array} \right| = 23k.
+$$
+
+$$
+{ \left| \begin{array} { l l l } { 1 } & { a } & { bc } \\ { 1 } & { b } & { ca } \\ { 1 } & { c } & { ab } \end{array} \right| } = { \left| \begin{array} { l l l } { 1 } & { a } & { bc + a ( a + b + c ) - ( ab + bc + ca ) } \\ { 1 } & { b } & { ca + b ( a + b + c ) - ( ab + bc + ca ) } \\ { 1 } & { c } & { ab + c ( a + b + c ) - ( ab + bc + ca ) } \end{array} \right| } = { \left| \begin{array} { l l l } { 1 } & { a } & { a ^ { 2 } } \\ { 1 } & { b } & { b ^ { 2 } } \\ { 1 } & { c } & { c ^ { 2 } } \end{array} \right| } .
+$$
+
+$$
+{ \mathrm{d)} } \left| { \begin{array} { c c c } { 1 } & { a } & { a ^ { 3 } } \\ { 1 } & { b } & { b ^ { 3 } } \\ { 1 } & { c } & { c ^ { 3 } } \end{array} } \right| = \left| { \begin{array} { c c c } { 1 } & { a } & { a ^ { 3 } + a ( ab + bc + ca ) - abc } \\ { 1 } & { b } & { b ^ { 3 } + b ( ab + bc + ca ) - abc } \\ { 1 } & { c } & { c ^ { 3 } + c ( ab + bc + ca ) - abc } \end{array} } \right| = ( a + b + c ) \left| { \begin{array} { l l } { 1 } & { b } \\ { 1 } & { b ^ { 2 } } \end{array} } \right| .
+$$
+
+$$
+{ \begin{array} { r l } { \Theta ) } & { a ^ { 2 } \quad a ^ { 3 } } \\ { \Theta ) } & { b ^ { 2 } \quad b ^ { 3 } = \left| 1 \quad - b ^ { 3 } \quad b ^ { 2 } \right| = \left| 1 \quad - b ^ { 3 } - b ^ { 2 } a - b ^ { 2 } c + a ^ { 2 } b + a ^ { 2 } c \quad b ^ { 2 } \right|. } \\ { \left| 1 \quad c ^ { 2 } \quad c ^ { 3 } \right| \quad \left| 1 \quad - c ^ { 3 } \quad c ^ { 2 } \right| \quad \left| 1 \quad - c ^ { 3 } - c ^ { 2 } a - c ^ { 2 } b + c ^ { 2 } a + c ^ { 2 } b \quad c ^ { 2 } \right| } \end{array} }
+$$
+
+$$
+{ \begin{array} { r l r l } { | 1 } & { a ( a b + b c + c a ) - a b c - a ^ { 2 } ( a + b + c ) } & { a ^ { 2 } } \\ { = | 1 } & { b ( a b + b c + c a ) - a b c - b ^ { 2 } ( a + b + c ) } & { b ^ { 2 } | = ( a b + b c + c a ) | 1 } & { b } & { b ^ { 2 } | . } \\ { | 1 } & { c ( a b + b c + c a ) - a b c - c ^ { 2 } ( a + b + c ) } & { c ^ { 2 } | } & { c } & { c ^ { 2 } } \end{array} }
+$$
+
+3.36. Nhân $- x _ { 1 }$ với hàng $j - 1$ và cộng vào hàng $j$ với $j = 2, 3, ..., n$ suy ra:
+
+$$
+D _ { n } = ( x _ { 2 } - x _ { 1 } ) \ldots ( x _ { n } - x _ { 1 } ) { \left| \begin{array} { l l l l } { 1 } & { 1 } & { \ldots } & { 1 } \\ { x _ { 2 } } & { x _ { 3 } } & { \ldots } & { x _ { n } } \\ { \vdots } & { \vdots } & { \vdots } & { \vdots } \\ { x _ { 2 } ^ { n - 2 } } & { x _ { 3 } ^ { n - 2 } } & { \ldots } & { x _ { n } ^ { n - 2 } } \end{array} \right| } .
+$$
+
+Tiếp tục quá trình này với $- x _ { 2 }, - x _ { 3 }, ..., - x _ { n - 1 }$ ta được
+
+$$
+D_{n} = \prod_{i=1}^{n-1} \left( \prod_{k=i+1}^{n} (x_{k} - x_{i}) \right) = \prod_{k=2}^{n} \left( \prod_{i=1}^{k-1} (x_{k} - x_{i}) \right).
+$$
+
+$$
+\begin{array}{rl}
+\left| a_{1} \quad x \quad x \quad x \quad \ldots \quad x \right| & = \left| 
+\begin{array}{lllll}
+a_{1} & x & x & \ldots & x \\
+x - a_{1} & a_{2} - x & 0 & \ldots & 0 \\
+x - a_{1} & 0 & a_{3} - x & \ldots & 0 \\
+\ldots & \ldots & \ldots & \ldots & \ldots \\
+x - a_{1} & 0 & 0 & \ldots & a_{n} - x 
+\end{array}
+\right|
+\end{array}
+$$
+
+$$
+\begin{array} { r } { \left| \frac { a _ { 1 } } { a _ { 1 } - x } \cdot \frac { x } { a _ { 2 } - x } \cdot \frac { x } { a _ { 3 } - x } \cdots \frac { x } { a _ { n } - x } \right| } \\ { = ( a _ { 1 } - x ) ( a _ { 2 } - x ) \cdots ( a _ { n } - x ) = \left| \begin{array} { c c c c c } { - 1 } & { 1 } & { 0 } & { \dots } & { 0 } \\ { - 1 } & { 0 } & { 1 } & { \dots } & { 0 } \\ { \vdots } & { \vdots } & { \vdots } & { \ddots } & { \vdots } \\ { - 1 } & { 0 } & { 0 } & { \dots } & { 1 } \end{array} \right| } \end{array}
+$$
+
+$$
+= x ( a _ { 1 } - x ) ( a _ { 2 } - x ) \cdots ( a _ { n } - x ) \left( \frac { 1 } { x } + \frac { 1 } { a _ { 1 } - x } + \cdots + \frac { 1 } { a _ { n } - x } \right) \text{ ( vì } \frac { a _ { 1 } } { a _ { 1 } - x } = 1 + \frac { x } { a _ { 1 } - x } \text{ ) } .
+$$
+
+$$
+\begin{array}{c} 
+{ \left| a _ { 1 } \right|} & { x } & { x } & { \ldots } & { x } \\ 
+{ x } & { a _ { 2 } } & { x } & { \ldots } & { x } \\ 
+{ \mathrm{a\,c\,h\,2:}} \\
+{ \ldots } & { x } & { x } & { \ldots } & { x } \\ 
+{ x } & { x } & { x } & { \ldots } & { a _ { n } } 
+\end{array}  
+$$
+
+$$
+\begin{array}{l}
+\displaystyle = ( a _ { 1 } - x ) ( a _ { 2 } - x ) \ldots ( a _ { n } - x ) + \sum _ { k = 1 } ^ { n } \frac { x ( a _ { 1 } - x ) ( a _ { 2 } - x ) \ldots ( a _ { n } - x ) } { ( a _ { k } - x ) } \\
+= x ( a _ { 1 } - x ) ( a _ { 2 } - x ) \ldots ( a _ { n } - x ) \left( \frac { 1 } { x } + \frac { 1 } { a _ { 1 } - x } + \ldots + \frac { 1 } { a _ { n } - x } \right) .
+\end{array}
+$$
+
+3.38. a) $\left| A \right|^2 = \left| AA^t \right| = (a^2 + b^2 + c^2 + d^2)^4$ ; Với $b, c, d$ tùy ý có định không đồng thời bằng 0, xét $f(a) = |A|$. $\forall a$, $f(a) \neq 0$ và liên tục. Mặt khác
+
+$f(0) = (b^2 + c^2 + d^2)^2 > 0 \Rightarrow f(a) \geq 0 \Rightarrow |A| = f(a) = (a^2 + b^2 + c^2 + d^2)^2 \geq 0.$
+
+$\left| A \right|^2 = \left| AA^t \right| = \left(4(a^2 + b^2)(c^2 + d^2)\right)^2$. Chứng minh tương tự ta được $\left| A \right| = 4(a^2 + b^2)(c^2 + d^2).$
+
+3.39.Cách 1: Cộng các cột vào cột thứ nhất, đặt thừa số chung cột thứ nhất ra ngoài dấu định thức. Nhân $(-1)$ với hàng thứ nhất và cộng lần lượt vào các hàng khác suy ra: 
+$D = 1 + a + \ldots + a^n :$
+
+Cách 2: Tách theo trục cột thành tổng của hai định thức, nhưng các định thức trong đó có ít nhất hai cột chứa $a_k, a_j$ thì hai cột này tạo thành hai cột tỷ lệ với nhau nên bằng 0.
+
+3.40. Ta có $\overline{D_n} (\mathrm{mod}\ p) = \mathrm{det} [\overline{a}_{ij}] (\mathrm{mod}\ p)$ trong trường modulo $p.$
+
+$$
+D_3 \mathrm{\ không\ thể\ bằng\ } 6 \Rightarrow D_3 \leq 4 ; \quad D = \left| \begin{array}{ccc}
+-1 & 1 & 1 \\
+1 & -1 & 1 \\
+1 & 1 & -1
+\end{array} \right| = 4 \Rightarrow D_{\mathrm{max}} = 4.
+$$
+
+c) Chứng minh quy nạp theo \( n \). Giả sử \( D_{n} \leq (n-1)(n-1)! \):
+
+\[
+D_{n+1} = a_{11}A_{11} + \ldots + a_{1,n+1}A_{1,n+1} \leq (n+1)D_n \leq (n+1)(n-1)(n-1)! \leq n \cdot n!.
+\]
+
+3.41. a) Trừ cột 1 vào các cột khác ta có \( D_{n} = D_{n-1} \Rightarrow D_{n} = 1 \)
+
+\[
+\mathrm{Hóa}\ D_n = \left| \left( \begin{array}{llll}
+1 & 0 & \ldots & 0 \\
+1 & 1 & \ldots & 0 \\
+\ldots & \ldots & \ldots & \ldots \\
+1 & 1 & \ldots & 1
+\end{array} \right) \left( \begin{array}{llll}
+1 & 1 & \ldots & 1 \\
+0 & 1 & \ldots & 1 \\
+\ldots & \ldots & \ldots & \ldots \\
+0 & 0 & \ldots & 1
+\end{array} \right) \right| = 1.
+\]
+
+b) Trừ cột \( j-1 \) vào cột \( j \) (\( j = 2, \ldots, n \)) suy ra \( D_{n} = (-1)^{n+1} n \)
+
+c) Trừ hàng $j-1$ vào hàng $j \ ( j = 2 , . . . , n )$ và cộng cột cuối vào mỗi cột suy ra $D _ { n } = ( - 1 ) ^ { n - 1 } ( n - 1 ) 2 ^ { n - 2 } .$
+
+$$
+\mathrm{4)} \ D _ { n } = { \frac { ( n - 1 ) ! \ldots 1 ! } { n ! \ldots ( 2 n - 1 ) ! } } { \left| \begin{array} { l l l l l } { C _ { n } ^ { 1 } } & { C _ { n } ^ { 2 } } & { \ldots } & { C _ { n } ^ { n } } \\ { C _ { n + 1 } ^ { 2 } } & { C _ { n + 1 } ^ { 3 } } & { \ldots } & { C _ { n + 1 } ^ { n + 1 } } \\ { \ldots } & { \ldots } & { \ldots } & { \ldots } \\ { C _ { 2 n - 1 } ^ { n } } & { C _ { 2 n - 1 } ^ { n + 1 } } & { \ldots } & { C _ { 2 n - 1 } ^ { 2 n - 1 } } \end{array} \right| } { \mathrm{vì} } \ C _ { m + 1 } ^ { k + 1 } = C _ { m } ^ { k } + C _ { m } ^ { k + 1 }
+$$
+
+$$
+D _ { n } = { \frac { ( n - 1 ) ! \ldots 1 ! } { n ! \ldots ( 2 n - 1 ) ! } } { \left| \begin{array} { l l l l l } { C _ { n } ^ { 1 } } & { C _ { n } ^ { 2 } } & { \ldots } & { C _ { n } ^ { n } } \\ { C _ { n } ^ { 2 } } & { C _ { n } ^ { 3 } } & { \ldots } & { C _ { n } ^ { n + 1 } } \\ { \ldots } & { \ldots } & { \ldots } & { \ldots } \\ { C _ { n } ^ { n } } & { C _ { n } ^ { n + 1 } } & { \ldots } & { C _ { n } ^ { 2 n - 1 } } \end{array} \right| } = ( - 1 ) ^ { n ( n - 1 ) / 2 } { \frac { ( n - 1 ) ! \ldots 1 ! } { n ! \ldots ( 2 n - 1 ) ! } } .
+$$
+
+3.42. Cộng tất cả các cột vào cột thứ nhất và đặt tích chung ra ngoài dấu định thức. Trượt hàng j vào hàng $\mathrm{j}+1$. Xong khai triển theo cột thứ nhất. Nhân hàng thứ nhất với $(-1)$ và cộng lần lượt vào các hàng còn lại. Khai triển theo cột cuối ta được $D_n = \frac{n + 1}{2} (-n)^{n - 1}$.
+
+$$
+\frac { d } { d x } \Bigl | a _ { i j } ( x ) \Bigr | = \frac { d } { d x } \Biggl( \sum _ { \sigma \in S _ { n } } \operatorname{sgn} \sigma a _ { 1 \sigma ( 1 ) } ( x ) . . . a _ { n \sigma ( n ) } ( x ) \Biggr)
+$$
+
+$$
+\begin{array}{l}
+= \sum _ { \sigma \in S _ { n } } \sum _ { i = 1 } ^ { n } \operatorname{sgn} \sigma a _ { 1 \sigma ( 1 ) } ( x ) . . . \frac { d } { d x } \Bigl( a _ { i \sigma ( i ) } ( x ) \Bigr) . . a _ { n \sigma ( n ) } ( x ) \\
+= \sum _ { i = 1 } ^ { n } \sum _ { \sigma \in S _ { n } } \operatorname{sgn} \sigma a _ { 1 \sigma ( 1 ) } ( x ) . . . \frac { d } { d x } \Bigl( a _ { i \sigma ( i ) } ( x ) \Bigr) . . a _ { n \sigma ( n ) } ( x )
+\end{array}
+$$
+
+Khai triển theo hàng thứ $i$ ta được
+
+$\sum _ { \sigma \in S _ { n } } \operatorname{sgn} \sigma a _ { 1 \sigma ( 1 ) } ( x ) \ldots \frac { d } { d x } \Bigl( a _ { i \sigma ( i ) } ( x ) \Bigr) \ldots a _ { n \sigma ( n ) } ( x ) = \sum _ { j = 1 } ^ { n } \frac { d } { d x } \Bigl( a _ { i j } ( x ) \Bigr) A _ { i j } ( x ).$
+
+$\frac { d } { d x } \big| a _ { i j } ( x ) \big| = \sum _ { i = 1 } ^ { n } \sum _ { \sigma \in S _ { n } } \operatorname{sgn} \sigma a _ { 1 \sigma ( 1 ) } ( x ) \ldots \frac { d } { d x } \Big( a _ { i \sigma ( i ) } ( x ) \Big) \ldots a _ { n \sigma ( n ) } ( x ) = \sum _ { i = 1 } ^ { n } \sum _ { j = 1 } ^ { n } \frac { d } { d x } \Big( a _ { i j } ( x ) \Big) A _ { i j } ( x ).$
+
+3.44. Cách 1:
+
+$$
+\begin{array}{rrr}
+\lambda & -1/2 & -1/2 \\
+-1/2 & \lambda & -1/2 \\
+-1/2 & -1/2 & \lambda 
+\end{array} 
+\left| 
+\begin{array}{lll}
+1 & 1 & 1 \\
+-1/2 & \lambda & -1/2 \\
+-1/2 & -1/2 & \lambda 
+\end{array} 
+\right|
+= (\lambda - 1) 
+\left| 
+\begin{array}{lll}
+1 & 1 & 1 \\
+0 & \lambda + 1/2 & 0 \\
+0 & 0 & \lambda + 1/2
+\end{array} 
+\right|
+$$
+
+$= (\lambda - 1) (\lambda + 1/2).$
+
+Hãy chứng minh được khi $\lambda \neq 1, \lambda \neq -1/2$.
+
+Vậy hệ thức phụ thuoc tuyễn tính khi $\lambda = 1$ hoặc $\lambda = -\frac{1}{2}$:
+
+$$
+3.45.\mathrm{a}) r(A) = 2 \quad \mathrm{b}) r(B) = 3 \quad \mathrm{c}) r(C) = \left\{
+\begin{array}{ll}
+3 & \text{nếu } m \neq 0 \\
+2 & \text{nếu } m = 0
+\end{array} \right. \quad \mathrm{d}) r(D) = \left\{
+\begin{array}{ll}
+3 & \text{nếu } m \neq 0 \\
+4 & \text{nếu } m = 0
+\end{array} \right.
+$$
+
+$$
+A^{-1} = \frac{1}{4} \left[ \begin{array}{ccc}
+-2 & -2 & 4 \\
+6 & 4 & -6 \\
+-2 & 0 & 2
+\end{array} \right]. \quad \mathrm{b}) B^{-1} = \frac{1}{14} \left[ \begin{array}{ccc}
+-2 & -8 & 4 \\
+5 & -1 & -3 \\
+-2 & 6 & 4
+\end{array} \right].
+$$
+
+$$
+\boldsymbol{\mathfrak{C}}^{-1} = \left[ \begin{array}{ccc}
+7 & -4 & -5 \\
+4 & -2 & -3 \\
+-1 & 1 & 1
+\end{array} \right] . 
+\quad \mathrm{d ~ } \boldsymbol{D}^{-1} = \left[ \begin{array}{ccc}
+-9 & 7 & -4 \\
+4 & -3 & 2 \\
+3 & -2 & 1
+\end{array} \right] .
+\quad \mathrm{e ~ } \boldsymbol{E}^{-1} = \frac{1}{4} \left[ \begin{array}{cccc}
+1 & 1 & 1 & 1 \\
+1 & 1 & -1 & -1 \\
+1 & -1 & 1 & -1 \\
+1 & -1 & -1 & 1
+\end{array} \right] .
+$$
+
+3.47. a) ${ |A| } = ( t + 2 ) ^ { 2 } ( t - 4 ) .$
+b) $A ^ { - 1 } = \frac { 1 } { - 25 } \left[ \begin{array} { l l l } { 10 } & { - 15 } & { 15 } \\ { 15 } & { - 20 } & { 15 } \\ { 30 } & { - 30 } & { 25 } \end{array} \right] .$
+
+3.48. a) $\left| A \right| = ( t + 2 ) ( t - 3 ) ( t - 4 ) .$
+b) $A ^ { - 1 } = \frac { 1 } { 8 } \left[ \begin{array} { c c c } { - 6 } & { 25 } & { - 17 } \\ { 2 } & { - 3 } & { 3 } \\ { 4 } & { - 18 } & { 10 } \end{array} \right] .$
+
+$3.50.$ $\operatorname*{det}{\left[ \begin{array} { l l } { I _ { p } } & { 0 } \\ { A } & { I _ { q } } \end{array} \right]} = 1 , \quad {\left[ \begin{array} { l l } { I _ { p } } & { 0 } \\ { A } & { I _ { q } } \end{array} \right]} ^ { - 1 } = {\left[ \begin{array} { l l } { I _ { p } } & { 0 } \\ { - A } & { I _ { q } } \end{array} \right]} .$
+
+3.51. Đặt $U = P ^ { - 1 } A P = Q ^ { - 1 } B Q \Rightarrow A = P ^ { - 1 } U P , \quad B = Q ^ { - 1 } U Q .$
+
+$$
+R = P Q ^ { - 1 } , \quad S = Q U P ^ { - 1 } \Rightarrow R S = A , \quad S R = B .
+$$
+
+3.52. $\left| A \right|^2 = \left| AA^t \right| = (-1)^n \left| A^2 \right| = (-1)^n \left| A \right|^2.$ Nếu $n$ lẻ thì $\left| A \right| = 0$. Nếu $n$ chẵn thì $\left| A \right| \neq 0$, chẳng hạn $\left|\begin{matrix} 0 & 1 \\ -1 & 0 \end{matrix}\right| = 1;$
+
+3.53. Bằng cách giải hệ phương trình (xem nhận xét 5.1 và công thức (5.8)) hoặc dùng phép khử Gauss được:
+
+$$
+\left| \mathbf{\Lambda} \right| ^{-1} = \left[ \begin{array}{lllll}
+2 - n & 1 & 1 & \ldots & 1 \\
+1 & -1 & 0 & \ldots & 0 \\
+1 & 0 & -1 & \ldots & 0 \\
+\ldots & \ldots & \ldots & \ldots & \ldots \\
+1 & 0 & 0 & \ldots & -1
+\end{array} \right] .
+$$
+
+\( \mathbf{\Lambda} B^{-1} = \frac{1}{n-1} \left[ \begin{array}{lllll}
+2 - n & 1 & 1 & \ldots & 1 \\
+1 & 2 - n & 1 & \ldots & 1 \\
+1 & 1 & 2 - n & \ldots & 1 \\
+\ldots & \ldots & \ldots & \ldots & \ldots \\
+1 & 1 & 1 & \ldots & 2 - n
+\end{array} \right] .
+$$
+
+$$
+\begin{array} { r } { \cdot \boldsymbol { C } ^ { - 1 } = \left[ \begin{array} { c c c c c c } { 1 / \lambda } & { - 1 / \lambda ^ { 2 } } & { 1 / \lambda ^ { 3 } } & { - 1 / \lambda ^ { 4 } } & { 1 / \lambda ^ { 5 } } \\ { 0 } & { 1 / \lambda } & { - 1 / \lambda ^ { 2 } } & { 1 / \lambda ^ { 3 } } & { - 1 / \lambda ^ { 4 } } \\ { 0 } & { 0 } & { 1 / \lambda } & { - 1 / \lambda ^ { 2 } } & { 1 / \lambda ^ { 3 } } \\ { 0 } & { 0 } & { 0 } & { 1 / \lambda } & { - 1 / \lambda ^ { 2 } } \\ { 0 } & { 0 } & { 0 } & { 1 / \lambda } & { - 1 / \lambda ^ { 2 } } \\ { 0 } & { 0 } & { 0 } & { 0 } & { 1 / \lambda } \end{array} \right] . \mathrm { d }) \textbf { D } ^ { - 1 } = \left[ \begin{array} { c c c c c } { 1 } & { - a } & { 0 } & { \ldots } & { 0 } \\ { 0 } & { 1 } & { - a } & { \ldots } & { 0 } \\ { 0 } & { 0 } & { 1 } & { \ldots } & { 0 } \\ { \ldots } & { \ldots } & { \ldots } & { \ldots } \\ { 0 } & { 0 } & { 0 } & { \ldots } & { 1 } \end{array} \right] . } \end{array}
+$$
+
+3.54. Nếu $\boldsymbol { A } ^ { k } = 0$ thì $\left( I + A \right) ^ { - 1 } = I - A + A ^ { 2 } + \ldots + ( - 1 ) ^ { k - 1 } A ^ { k - 1 } ,$ 
+
+$$
+\left( I - A \right) ^ { - 1 } = I + A + A ^ { 2 } + \ldots + A ^ { k - 1 } .
+$$
+
+$$
+\begin{array} { r } { \left\{ \begin{array} { l l } { \displaystyle A ^ { n } = 0 , B ^ { m } = 0 } \\ { \displaystyle A B = B A } \end{array} \right. \Rightarrow \left( A + B \right) ^ { n + m } = \sum _ { k = 0 } ^ { n + m } C _ { n + m } ^ { k } A ^ { k } B ^ { n + m - k } = 0 . } \end{array}
+$$
+
+Theo định lý 25) $I + A + B$ khả nghịch.
+
+$$
+\left( I + A \right) ^ { k } = I + \sum _ { m = 0 } ^ { k } C _ { k } ^ { m } A ^ { m } = 0 \Longrightarrow A \left( \sum _ { m = 0 } ^ { k - 1 } C _ { k } ^ { m + 1 } A ^ { m } \right) = - I \Rightarrow \operatorname * { det } A \neq 0 .
+$$
+
+3.57. Cách 1: $\left( I + B A \right) ^ { - 1 } = I - B ( I + A B ) ^ { - 1 } A .$
+
+Cách 2: Ta chứng minh tự động cấu tuyến tính có ma trận $I + B A$ là đơn cấu: $( I + B A ) ( \nu ) = \mathbf { 0 } \Rightarrow B A ( \nu ) = - \nu \Rightarrow A ( B A ( \nu ) ) = - A ( \nu ) \Rightarrow A ( \nu ) = \mathbf { 0 } .$
+
+$$
+( \mathrm { v } \exists \bigl ( I + A B \bigr ) ^ { - 1 } ) \quad A ( \nu ) = \mathbf { 0 } \Longrightarrow - \nu = B A ( \nu ) = B ( \mathbf { 0 } ) = \mathbf { 0 } \Longrightarrow \nu = \mathbf { 0 } .
+$$
+
+3.58 $\bullet \ \mathrm { N } \acute{e}u \ \boldsymbol { A } = \left[ a _ { i j } \right] , a _ { i j } = \left\{ \begin{array}{ll}
+\lambda_i > 0 & \text{nếu } i = j \\
+0 & \text{khi khác}
+\end{array} \right.$ thì ma trận nghịch đảo của nó cũng có dạng này.
+
+(20) Ngược lại, giả sử $A = \left[ a_{ij} \right]$, $a_{ij} \geq 0$ và $\boldsymbol{A}^{-1} = \left[ b_{ij} \right]$, $b_{ij} \geq 0$ thì $\sum_{j=1}^{n} a_{ij} b_{jk} = \delta_{ik}$, $\sum_{k=1}^{n} b_{ji} a_{ik} = \delta_{jk}$ (ký hiệu Kronecker). Do đó mỗi cột và mỗi hàng của $A$ chỉ có đúng 1 phần tử khác 0.
+
+3.59. Với mọi $i, j \in \{ n \}$, xét $\mathbf{E}_{ij} = [e_{kl}]$, 
+$$
+e_{kl} = \left\{
+\begin{array}{ll}
+1 & \text{nếu } k=i \text{ và } l=j \\
+0 & \text{trong các trường hợp khác}
+\end{array}
+\right.
+\Rightarrow (E_{ij}A)^2 = \mathbf{0} \Rightarrow a_{ij}^2 = 0 \Rightarrow A = \mathbf{0}.
+$$
+
+(204)
+$$
+\mathrm{tr}(AB - BA) = 0 \Rightarrow AB - BA = \left[ \begin{array}{cc}
+a & b \\
+c & -a 
+\end{array} \right]
+$$
+
+$$
+\Rightarrow (AB - BA)^2 = (a^2 + bc)\mathbf{I} \Rightarrow (AB - BA)^2 C - C(AB - BA)^2 = \mathbf{0}.
+$$
+
+3.61. a) Qui nạp theo $\mathbf{k}$
+
+$$
+\mathrm{b}) \text{Từ a)} \Rightarrow |\boldsymbol{A}| \cdot |\boldsymbol{B}|^k = |\boldsymbol{B}|^k \cdot |\boldsymbol{A} + k\boldsymbol{I}| \Rightarrow |\boldsymbol{B}| = 0.
+$$
+
+3.62. Khai triển Laplace.

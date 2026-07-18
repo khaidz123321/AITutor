@@ -1,10 +1,12 @@
+import sys
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from controller.router import api_router
 from core.session import engine
 from models.base import Base
 
-# Sau khi đã import đủ, lệnh này sẽ tạo toàn bộ 4 bảng và các liên kết khóa ngoại
+# Tạo bảng Python-owned: documents + activities (nếu chưa tồn tại)
+# Bảng users, chat_sessions, chat_messages do Spring Boot (Hibernate) quản lý — KHÔNG tạo ở đây
 Base.metadata.create_all(bind=engine)
 
 app = FastAPI(title="AI Tutor PTIT - Backend")
@@ -28,3 +30,8 @@ def root():
         "status": "Online",
         "database": "Connected"
     }
+
+from fastapi import HTTPException
+@app.get("/test-500")
+def test_500():
+    raise HTTPException(status_code=500, detail="This is a test 500 error")

@@ -1,0 +1,420 @@
+# Bài tập Chương 5
+
+5.1. Ánh xạ $f : \mathbb{R}^2 \to \mathbb{R}^2$ nào dưới đây là ánh xạ tuyến tính:
+
+a) $f(x, y) = (2x, x + y)$,
+
+b) $\nabla f(x, y) = (x^2, y),$
+
+c) $f(x, y) = (y, x)$,
+
+d) $f(x, y) = (x, y + 1),$
+
+e) $f(x, y) = (ax + by, cx + dy),$
+
+f) $f(x, y) = (\sqrt[3]{x}, \sqrt[3]{y}).$
+
+5.2. Ánh xạ $f : \mathcal{M}_2 \to \mathbb{R}$ nào dưới đây là ánh xạ tuyến tính:
+
+$$
+f\left(\begin{bmatrix} a & b \\ c & d \end{bmatrix}\right) = a + d,
+$$
+
+$$
+b) ~ f\left(\begin{bmatrix} a & b \\ c & d \end{bmatrix}\right) = \left|\begin{array}{cc} a & b \\ c & d \end{array}\right|,
+$$
+
+$$
+f\left(\begin{bmatrix} a & b \\ c & d \end{bmatrix}\right) = 2a + 3b + c - d + 1,
+$$
+
+d) $f\left(\begin{bmatrix} a & b \\ c & d \end{bmatrix}\right) = a^2 + d^2.$
+
+5.3. Cho ánh xạ tuyến tính $f : \mathbb{R}^3 \to \mathbb{R}^2$ như sau:
+
+$$
+f(1, 0, 0) = (1, 1), f(0, 1, 0) = (3, 0), f(0, 0, 1) = (4, -7).
+$$
+
+a) Tìm ma trận chính tắc của $f$,
+
+b) Tính $f(1, 3, 8)$ và $f(x, y, z).$
+
+5.4. Chứng minh mỗi ánh xạ tuyến tính $f : \mathbb{R}^2 \to \mathbb{R}^2$ đều có dạng:
+
+$$
+f(x, y) = (ax + by, cx + dy).
+$$
+
+Hoặc tổng quát hóa đối với ánh xạ tuyến tính $f : \mathbb{R}^n \to \mathbb{R}^m$：
+
+$$
+\mathrm{10~inh~xa~tuyến~tính~} f : \mathbb{R}^2 \to \mathbb{R}^2 ~có~ma~trận~tích = \frac{2}{4}.1] :
+$$
+
+a) Véc tơ nào sau đây thuộc $\mathrm{Ker} f\colon (5, 10); (3, 2); (1, 1)$：
+
+b) Véc tơ nào sau đây thuộc $\operatorname{Im} f\colon (1, -4); (5, 0); (-3, 12)$
+
+5.6.a) Chứng minh rằng áp $\mathcal{M}$ các ma trận vuông cấp hai dạng $\left[ \begin{array}{ll}
+a & b \\
+b & c
+\end{array} \right] ~ là~không~gian~con~của~\mathcal{M}_2$ các ma trận vuông cấp hai. Tìm một cơ sở của $\mathcal{M}$：
+
+bởi Chứng minh $f : \left[ \begin{array}{cc}
+a & b \\
+b & c
+\end{array} \right] \mapsto \left[ \begin{array}{cc}
+a + c & b \\
+b & a + b + c
+\end{array} \right]$ là ánh xạ tuyến tính của $\mathcal{M}$ . Tìm nhân và ảnh của $f$：
+
+5.7.Từ đồng cấu tuyến tính $f$ có ma trận ứng với cơ sở $\left\{{e}_1, {e}_2, {e}_3, {e}_4 \right\}$ là
+
+$$
+A = \left[ \begin{array} { l l l l } { 1 } & { 2 } & { 0 } & { 1 } \\ { 3 } & { 0 } & { - 1 } & { 2 } \\ { 2 } & { 5 } & { 3 } & { 1 } \\ { 1 } & { 2 } & { 1 } & { 3 } \end{array} \right] .
+$$
+
+Hãy tìm ma trận của $f$ trong cơ sở $\left\{ e _ { 1 } , e _ { 1 } + e _ { 2 } , e _ { 1 } + e _ { 2 } + e _ { 3 } , e _ { 1 } + e _ { 2 } + e _ { 3 } + e _ { 4 } \right\} .$
+
+5.8. Viết ma trận chính tắc, tìm một cơ sở của $\operatorname{Im} f$, tìm một cơ sở của Ker $f$ của các ánh xạ tuyến tính $f : \mathbb{R} ^ { n } \to \mathbb{R} ^ { m }$ sau:
+
+a) $f ( x , y , z ) = ( x - y + 3 z , 5 x + 6 y - 4 z , 7 x + 4 y + 2 z ).$
+
+b) $f ( x , y , z ) = ( 2 x - z , - x + 2 z , 0 ).$
+
+c) $f ( x , y , z ) = ( 2 x + 2 y - 8 z , x + 6 y + z , 3 x + 6 y - 9 z , x + 5 y ).$
+
+d) $f ( x , y , z , t ) = ( x + 4 y + 5 z + 9 t , 3 x - 2 y + z - t , - x - y - t , 2 x + 3 y + 5 z + 8 t ).$
+
+5.9. Cho ánh xạ tuyến tính $f : \mathbb{R} ^ { 3 } \to \mathbb{R} ^ { 3 }$ có ma trận chính tắc là $A = \left[ \begin{array} { l l l } { 0 } & { 2 } & { 1 } \\ { 1 } & { - 4 } & { 0 } \\ { 3 } & { 0 } & { 0 } \end{array} \right] .$
+
+Hãy tìm ma trận của $f$ trong cơ sở $\left\{ \nu _ { 1 } , \nu _ { 2 } , \nu _ { 3 } \right\}; \nu _ { 1 } = ( 1 , 1 , 1 ), \nu _ { 2 } = ( 1 , 1 , 0 ), \nu _ { 3 } = ( 1 , 0 , 0 ).$
+
+5.10. a) Chứng tỏ $\nu _ { 1 } = ( 1 , 2 , 3 ) , \nu _ { 2 } = ( 2 , 5 , 3 ) , \nu _ { 3 } = ( 1 , 0 , 10 )$ là cơ sở của $\mathbb{R} ^ { 3 }$. b) Cho ánh xạ tuyến tính $f : \mathbb{R} ^ { 3 } \to \mathbb{R} ^ { 2 }$ xác định bởi $f ( \nu _ { 1 } ) = ( 1 , 0 )$, $f ( \nu _ { 2 } ) = ( 1 , 0 )$, $f ( \nu _ { 3 } ) = ( 0 , 1 )$. Tìm công thức xác định ánh xạ $f ( x , y , z )$.
+
+5.11. Cho $f : \mathbb{R} ^ { 2 } \to \mathbb{R} ^ { 2 }$, $f ( x , y ) = ( x + y , 2x )$ và đa thức $p(t) = 3 - 2t + t^2$. Tìm $p(f)(x, y)$.
+
+5.12. Cho $D : \mathbf{P} _ { 2 } \to \mathbf{P} _ { 2 }$ là toán tử lấy đạo hàm. Cho đa thức $p(t) = -5 + 2t + t^2$. Tìm $p(D)(q(t))$, trong đó $\nu(x) \in \mathbf{P} _ { 2 }$, $q(t) = at^2 + bt + c$.
+
+[13 -1] 5.13. Cho ánh xạ tuyến tính $f : \mathbf{P} _ { 2 } \to \mathbf{P} _ { 2 }$ có ma trận $A=\begin{pmatrix} 2 & 0 & 5 \\ 6 & -2 & 4 \end{pmatrix}$ trong cơ sở $\mathcal{B} = \left\{ q_1, q_2, q_3 \right\}; q_1 = 3t + 3t^2$, $q_2 = -1 + 3t + 2t^2$, $q_3 = 3 + 7t + 2t^2$.
+
+a) Tìm tọa độ $\mathbf{d} \hat{\rho}$ trong cơ sở $\mathcal{B}$ ảnh của các vector của cơ sở $\mathcal{B}$.
+
+$$
+\left[ f ( q _ { 1 } ) \right] _ { \mathcal { B } } , \left[ f ( q _ { 2 } ) \right] _ { \mathcal { B } } , \left[ f ( q _ { 3 } ) \right] _ { \mathcal { B } } .
+$$
+
+b) Tìm $f ( q _ { 1 } ) , \ f ( q _ { 2 } ) , \ f ( q _ { 3 } )$  
+c) Tìm $f ( 1 + t ^ { 2 } )$
+
+5.14.\*) a) Với hai ma trận cung cấp bất kỳ $A, B$, chứng minh:
+
+$$
+r ( A + B ) \leq r ( A ) + r ( B ).
+$$
+
+b) Với hai ma trận vuông cấp $n$ bất kỳ $A, B$, chứng minh bất đẳng thức Sylvester: 
+$$
+r ( A ) + r ( B ) - n \leq r ( A B ) \leq \min ( r ( A ) , r ( B ) ).
+$$
+
+5.15.\*) Với ba ma trận vuông cấp $n$ bất kỳ $A, B, C$, chứng minh bất đẳng thức Frobenius:
+$$
+r ( A B ) + r ( B C ) \leq r ( B ) + r ( A B C ).
+$$
+
+5.16.\*) Giả sử $A$ là ma trận vuông cấp $n$ sao cho $A ^ { 2 } = I$. Chứng minh:
+$$
+r ( A + I ) + r ( A - I ) = n.
+$$
+
+5.17.\*) Giả sử $A, B$ là hai ma trận có lần lượt kích thước $m \times n , n \times p$
+
+a) Chứng minh rằng các vector có dạng $( B X ) ^ { t }$, với $X ^ { t } \in \mathbb{R} ^ { p }$, thỏa mãn điều kiện $A B X = 0$ là không gian con của $\mathbb{R} ^ { n }$ có số chiều bằng $r ( B ) - r ( A B )$.  
+
+b) Chứng minh rằng $r ( A ) = r ( B )$ khi và chỉ khi $A B X = 0 \Rightarrow B X = 0$.
+
+5.18. Ma trận vuông cấp $n$ được gọi là lũy linh nếu tồn tại số nguyên dương $k$ sao cho $\boldsymbol{ A } ^ { k } = 0$. Chứng minh rằng $A$ lũy linh khi và chỉ khi ${ A ^ { n } } = 0$.
+
+5.19. Giả sử $\left\{ e_{1}, \ldots, e_{n} \right\}$ là một cơ sở của không gian véc tơ $V$. Từ đồng cấu $f$ với 
+$$
+f(e_{1}) = 0, f(e_{2}) = a_{21}e_{1}, f(e_{3}) = a_{31}e_{1} + a_{32}e_{2}, \ldots, f(e_{n}) = a_{n1}e_{1} + \dots + a_{n,n-1}e_{n-1}
+$$
+Chứng minh rằng $f^{n} = 0$.
+
+5.20. Tìm định thức của các tự đồng cấu sau:
+
+a) $f$ là tự đồng cấu của không gian véc tơ $\mathbb{R}^3$ xác định bởi:
+$$
+f(x, y, z) = (2x - z, x + 2y - 4z, 3x - 3y + z).
+$$
+
+b) $f$ là tự đồng cấu của không gian véc tơ $\mathcal{M}$ các ma trận vuông cấp 2 xác định bởi:
+$$
+f(A) = MA \quad \text{trong đó} \quad A = \begin{pmatrix}
+a & b \\
+c & d
+\end{pmatrix}.
+$$
+
+5.21.\*) Giả sử $f : V \to W$ là đồng cấu tuyến tính:
+
+a) Chứng minh rằng $f$ toàn ánh khi và chỉ khi tồn tại đồng cấu $g : W \to V$ sao cho $f \circ g = \operatorname{Id}_{W}$.
+
+b) Chứng minh rằng $f$ đơn ánh khi và chỉ khi tồn tại đồng cấu $h : W \to V$ sao cho $h \circ f = \operatorname{Id}_{V}$.
+
+5.22.\*) Cho ba không gian véc tơ $V_{1}, V_{2}, V_{3}$:
+
+a) Giả sử $f : V_{1} \to V_{2}$, $g : V_{1} \to V_{3}$ là hai ánh xạ tuyến tính. Chứng minh: $\operatorname{Ker} f \subset \operatorname{Ker} g$ khi và chỉ khi tồn tại ánh xạ tuyến tính $h : V_{2} \to V_{3}$ sao cho $g = h \circ f$.
+
+b) Giả sử $f : V _ { 2 } \to V _ { 3 } , g : V _ { 1 } \to V _ { 3 }$ là hai ánh xạ tuyến tính. Chứng minh: $\operatorname{Im} f \supset \operatorname{Im} g$ khi và chỉ khi tồn tại ánh xạ tuyến tính $h : V _ { 1 } \to V _ { 2 }$ sao cho $g = f \circ h$.
+
+5.23.\*) Giả sử $A, B$ là hai ma trận vuông cấp $n$ sao cho với mọi ma trận cột $X$, ta có $AX = \mathbf{0} \Rightarrow BX = \mathbf{0}$. Chứng minh tồn tại ma trận $C$ cấp $n$ sao cho $B = CA$.
+
+5.24.\*) Giả sử $W _ { 1 } , W _ { 2 }$ là hai không gian véc tơ con của $V$. Chứng minh rằng hai tính chất sau trong đường:
+
+(i) Tồn tại ánh xạ tuyến tính $f$ của $V$ sao cho $\operatorname{Im} f = W _ { 1 }$, $\operatorname{Ker} f = W _ { 2 }$.
+
+(ii) Tồn tại một phần bù $W _ { 3 }$ của $W _ { 2 }$ trong không gian véc tơ $V$ sao cho $W _ { 3 }$ đồng phẳng với $W _ { 1 }$.
+
+5.25.\*) Giả sử $f : V \to W$ là ánh xạ tuyến tính. Chứng minh rằng tồn tại ánh xạ tuyến tính $g : W \to V$ sao cho $f \circ g \circ f = f$ và $g \circ f \circ g = g$.
+
+5.26.\*) Tìm các giá trị riêng, cơ sở của không gian riêng của các ma trận sau:
+
+$$
+\mathrm{d}) \left[ { \begin{array} { r r r } { 1 } & { - 3 } & { 4 } \\ { 4 } & { - 7 } & { 8 } \\ { 6 } & { - 7 } & { 7 } \end{array} } \right].
+$$
+
+$$
+{ \begin{array} { r l r l r l } & { 4 { \Big ] } } & & { \qquad \operatorname { e } { \Big [ } { \begin{array} { c c c } { 7 } & { -12 } & { 6 } \\ { 10 } & { -19 } & { 10 } \\ { 12 } & { -24 } & { 13 } \end{array} } { \Big ] } } & & { \operatorname { f } { \Big [ } { \begin{array} { c c c c } { 3 } & { -1 } & { 0 } & { 0 } \\ { 1 } & { 1 } & { 0 } & { 0 } \\ { 3 } & { 0 } & { 5 } & { -3 } \\ { 4 } & { -1 } & { 3 } & { -1 } \end{array} } { \Big ] } . } \end{array} }
+$$
+
+5.27. Giả sử $D : V \to V$ là toán tử vi phân, nghĩa là $D ( \nu ) = { \frac { d \nu } { d t } }$. Tính định thức và đa thức đặc trưng của $D$ trong các trường hợp sau:
+
+a) $V$ là không gian vector sinh bởi $\left\{ 1 , t , . . . , t ^ { n } \right\}$
+
+b) $V$ là không gian vector sinh bởi $\left\{ e ^ { t } , e ^ { 2 t } , e ^ { 3 t } \right\}$
+
+c) $V$ là không gian vector sinh bởi $\left\{ \sin t , \cos t \right\}$
+
+5.28. Chứng tỏ rằng các ma trận sau không chéo hóa được:
+
+$$
+{ \mathrm { a ) } } { \left[ \begin{array} { l l l } { 0 } & { 1 } & { 0 } \\ { -4 } & { 4 } & { 0 } \\ { -2 } & { 1 } & { 2 } \end{array} \right] } .
+$$
+
+$$
+\mathrm { b ) } \left[ \begin{array} { c c c } { 2 } & { 6 } & { -15 } \\ { 1 } & { 1 } & { -5 } \\ { 1 } & { 2 } & { -6 } \end{array} \right] .
+$$
+
+$$
+\mathrm{c}) \left[ \begin{array}{rrr}
+12 & -6 & -2 \\
+18 & -9 & -3 \\
+18 & -9 & -3
+\end{array} \right].
+$$
+
+$$
+\mathrm{d}) \left[ \begin{array}{rrr}
+4 & -5 & 2 \\
+5 & -7 & 3 \\
+6 & -9 & 4
+\end{array} \right].
+$$
+
+5.29. Chéo hóa hai ma trận sau:
+
+$$
+A = \left[ \begin{array}{lll}
+1 & -3 & 3 \\
+3 & -5 & 3 \\
+6 & -6 & 4
+\end{array} \right].
+$$
+
+$$
+\mathfrak{b}) \ B = \left[ \begin{array}{lll}
+-3 & 1 & -1 \\
+-7 & 5 & -1 \\
+-6 & 6 & -2
+\end{array} \right].
+$$
+
+5.30. Trong $\mathbb{R}^3$; trường hợp sau hãy tìm một ma trận $P$ làm chéo hóa A và xác định $P^{-1}AP$:
+
+$$
+\mathbf{a}) \left[ \begin{array}{rrr}
+5 & 7 & -5 \\
+0 & 4 & -1 \\
+2 & 8 & -3
+\end{array} \right]. \qquad 
+\mathbf{b}) \left[ \begin{array}{rrr}
+7 & -12 & 6 \\
+10 & -19 & 10 \\
+12 & -24 & 13
+\end{array} \right]. \qquad 
+\mathbf{c}) \left[ \begin{array}{rrr}
+5 & -3 & 2 \\
+6 & -4 & 4 \\
+4 & -4 & 5
+\end{array} \right].
+$$
+
+$$
+\mathrm{d}) \left[ { \begin{array} { r r r } { 1 } & { - 3 } & { 3 } \\ { 3 } & { - 5 } & { 3 } \\ { 6 } & { - 6 } & { 4 } \end{array} } \right] . \qquad \mathrm{e}) \left[ { \begin{array} { r r r } { - 1 } & { 3 } & { - 1 } \\ { - 3 } & { 5 } & { - 1 } \\ { - 3 } & { 3 } & { 1 } \end{array} } \right] .
+$$
+
+$$
+\mathrm{f}) \left[ \begin{array} { l l l } { 0 } & { 1 } & { 0 } \\ { 1 } & { 0 } & { 1 } \\ { 0 } & { 1 } & { 0 } \end{array} \right] .
+$$
+
+$$
+\mathrm{g}) \left[ \begin{array} { c c c } { 11 } & { - 5 } & { 5 } \\ { - 5 } & { 3 } & { - 3 } \\ { 5 } & { - 3 } & { 3 } \end{array} \right] . \mathrm{h}) \left[ \begin{array} { c c c } { - 1 } & { a } & { a ^ { 2 } } \\ { 0 } & { 0 } & { - a } \\ { 0 } & { 0 } & { 1 } \end{array} \right] . \qquad \mathrm{i}) \left[ \begin{array} { c c c } { 0 } & { - 1 } & { 1 } \\ { - a - 1 } & { a } & { a + 1 } \\ { - a } & { a } & { a + 1 } \end{array} \right] , a \in \mathbb{R} .
+$$
+
+5.31. Trong mỗi trường hợp sau tìm một cơ sở của $\mathbb{R}^3$ để ánh xạ tuyến tính $f$ có ma trận dạng chéo:
+
+$$
+f(x, y, z) = (x - y, 2x + 3y + 2z, x + y + 2z).
+$$
+
+$$
+\begin{array} { r l }
+& { j \left( x , y , z , J - \mathord { \cup } - \mathrel { \cup } - y , \mathord { \angle } \mathord { \lrcorner } - \mathord { \lrcorner } \right. \mathord { \left. \downarrow \right)} + \downarrow + \downarrow + \downarrow + \downarrow + \downarrow + \downarrow + \downarrow + \downarrow + \downarrow + \downarrow  \mathrm { . } } \\
+& { f ( x , y , z ) = \left( 3 x + y + z , 2 x + 4 y + 2 z , x + y + 3 z \right) \mathrm { . } } \\
+& { f ( x , y , z ) = \left( x + 2 y + 2 z , x + 2 y - z , - x + y + 4 z \right) \mathrm { . } } \\
+& { f ( x , y , z ) = \left( x + y + z , 2 y + z , 2 y + 3 z \right) \mathrm { . } }
+\end{array}
+$$
+
+5.32. Tìm đa thức đặc trưng và các giá trị riêng của ma trận
+
+$$
+A = \left[ \begin{array} { l l l l }
+a _ { 1 1 } & a _ { 1 2 } & \cdots & a _ { 1 n } \\
+0 & a _ { 2 2 } & \cdots & a _ { 2 n } \\
+\vdots & \vdots & \ddots & \vdots \\
+0 & 0 & \cdots & a _ { n n }
+\end{array} \right] .
+$$
+
+5.33. Chứng minh rằng $A$ và $A ^ { t }$ có cùng đa thức đặc trưng.
+
+5.34. Giả sử $f , g$ là hai ánh xạ tuyến tính của không gian véc tơ $V$ thỏa mãn $f \circ g = g \circ f$. Chứng minh $\operatorname{Ker} { f } , \operatorname{Im} { f }$ bất biến đối với $g$:
+
+$$
+B = \left[ \begin{array} { c c c } { 8 } & { 12 } & { 0 } \\ { 0 } & { 8 } & { 12 } \\ { 0 } & { 0 } & { 8 } \end{array} \right] . \text{Tìm ma trận } A \text{ thoả mãn } B = A ^ { 3 } .
+$$
+
+5.36. Cho đa thức $p ( t )$ bất kỳ. Chứng minh rằng :
+
+$$
+\bf b) \bf \nabla p ( P ^ { - 1 } A P ) = P ^ { - 1 } p ( A ) P .
+$$
+
+$$
+\dot{\hat{\mathrm{e}}u} \ A = \left[ \begin{array} { l l l l } { a _ { 1 } } & { 0 } & { \cdots } & { 0 } \\ { 0 } & { a _ { 2 } } & { \cdots } & { 0 } \\ { \vdots } & { \vdots } & { \ddots } & { \vdots } \\ { 0 } & { 0 } & { \cdots } & { a _ { n } } \end{array} \right] , \ B = \left[ \begin{array} { l l l l } { a _ { 1 } } & { a } & { \cdots } & { b } \\ { 0 } & { a _ { 2 } } & { \cdots } & { c } \\ { \vdots } & { \vdots } & { \ddots } & { \vdots } \\ { 0 } & { 0 } & { \cdots } & { a _ { n } } \end{array} \right] \text{ thì } p ( A ) , \ p ( B ) \text{ có dạng : }
+$$
+
+$$
+p ( A ) = \left[ \begin{array} { l l l l } p ( a _ { 1 } ) & 0 & \cdots & 0 \\ 0 & p ( a _ { 2 } ) & \cdots & 0 \\ \vdots & \vdots & \ddots & \vdots \\ 0 & 0 & \cdots & p ( a _ { n } ) \end{array} \right] , \ p ( B ) = \left[ \begin{array} { l l l l } p ( a _ { 1 } ) & x & \cdots & y \\ 0 & p ( a _ { 2 } ) & \cdots & z \\ \vdots & \vdots & \ddots & \vdots \\ 0 & 0 & \cdots & p ( a _ { n } ) \end{array} \right] .
+$$
+
+5.37. Giả sử $f_i$ là các ánh xạ tuyến tính của không gian véc tơ con $W_i$, ($i = 1, ..., n$ và $V = W_1 \oplus ... \oplus W_n$). Với mỗi $\nu \in V$, tồn tại cách viết duy nhất
+
+$$\nu = \nu_1 + \ldots + \nu_n,$$
+
+trong đó $\nu_1 \in W_1, ..., \nu_n \in W_n$. Đặt $f(\nu) = \sum_{i=1}^n f_i (\nu_i)$. Chứng minh $f$ là ánh xạ tuyến tính của $V$ và:
+
+$$\operatorname{Ker} f = \bigoplus_{i=1}^n \operatorname{Ker} f_i, \quad \operatorname{Im} f = \sum_{i=1}^n \operatorname{Im} f_i.$$
+
+5.38. ${ }^{*} p(t) = t^{100} + t^2 - 1$. Với ma trận $A = \left[ \begin{array}{llll}
+4 & 3 & 0 & 0 \\
+2 & 3 & 0 & 0 \\
+4 & 9 & -1 & 0 \\
+1 & 2 & 5 & 2
+\end{array} \right]$. Tính $\det p(A)$.
+
+5.39. ${ }^{*}$ Cho $A = \left[ \begin{array}{lll}
+1/2 & 1 & 1 \\
+0 & 1/3 & 1 \\
+0 & 0 & 1/5
+\end{array} \right]$. Khi đó $A^n = [a_{ij}(n)]_{3\times3}$. Tìm $\lim_{n \to \infty} a_{ij}(n); i, j = 1, 2, 3.$
+
+5.40\*)Tìm các giá trị $a, b, c, d$ để ma trận $\left[ \begin{array}{ll}
+b & c \\
+d & a
+\end{array} \right]$ chéo hóa được.
+
+5.41. ${ }^{*}$ Giả sử tự do cấu tạo tuyến tính $f$ của không gian véc tơ $n$ chiều $V$ có $n$ giá trị riêng phân biệt. Chứng minh rằng nếu tự do cấu tạo $g$ của không gian véc tơ $V$ giao hoán với $f$ (nghĩa là $f \circ g = g \circ f$), thì $g$ chéo hóa được.
+
+5.42.\*) Cho tuần đọng cáu tuyến tính \( f : \mathbb{R}^n \to \mathbb{R}^n \) có ma trận trong cơ sở chính tắc có dạng \( A = [a_{ij}] \) với \( a_{ij} = 0 \) hay \( p + 1 \leq i, j \leq n \). Chứng minh rằng nếu \(\lambda\) là giá trị riêng của \( f \) thì \(-\lambda\) cũng là giá trị riêng của \( f \):
+
+5.43.\*) Cho tuần đọng cáu tuyến tính \( f : \mathbb{R}^n \to \mathbb{R}^n \) có ma trận trong cơ sở chính tắc
+
+có dạng \( A = [a_{ij}] \) với
+\[
+a_{ij} = 
+\begin{cases}
+0 & \text{nếu } i + 1 < j \\
+1 & \text{nếu } j = i + 1 \\
+0 & \text{nếu } i = j = 2, ..., n \\
+\text{nhan giá trị tuỳ chọn của các. }
+\end{cases}
+\]
+rường hợp khác
+
+a) Đặt \( \nu = e_n = (0, ..., 0, 1) \). Chứng minh \(\{\nu, f(\nu), ..., f^{n-1}(\nu)\}\) là một cơ sở của \(\mathbb{R}^n\):
+
+b) Chứng minh rằng nếu \( f \) chéo hóa được thì các giá trị riêng của \( f \) khác nhau từng đôi một.
+
+5.44.\*) Cho hai ánh xạ tuyến tính \( f, g : V \to W \). Chứng minh:
+
+$$
+r ( f + g ) = r ( f ) + r ( g ) \Leftrightarrow { \left\{ \begin{array} { l l } { { \mathrm { Im } } f \cap { \mathrm { Im } } g = \left\{ \mathbf { 0 } \right\} } \\ { { \mathrm { Ker } } f + { \mathrm { Ker } } g = V } \end{array} \right. } .
+$$
+
+5.45.\*) Cho ma trận A vuông cấp $n$ đối xứng. Chứng minh $I _ { n } + A$ khả nghịch.
+
+5.46.\*) Cho $V = W _ { 1 } \oplus W _ { 2 }$, với mỗi $\nu \in V$, $\nu = \nu _ { 1 } + \nu _ { 2 }, \nu _ { i } \in W _ { i }$ xét ánh xạ $p : V \to V$, $p ( \nu ) = \nu _ { 1}$: phép chiếu lên $W _ { 1 }$ song song với $W _ { 2 }$:
+
+a) Chứng minh $p \circ p = p$, $\mathrm{Im} p = W _ { 1 }$, Ker ${ \boldsymbol { p } } = W _ { 2 }$:
+
+b) Ngược lại, nếu $p : V \to V$, $p \circ p = p$ thì $p$ là phép chiếu lên $\operatorname{Im} p$ song song với Ker $p$:
+
+5.47. a) Giả sử $\nu$ là một vector riêng của hai tự đồng cấu $f, g$. Chứng minh rằng $\nu$ cũng là vector riêng của $af + bg$, với mọi số thực $a, b$:
+
+b) Nếu $\lambda$ là một giá trị riêng của tự đồng cấu $f$ thì $p ( \lambda )$ là một giá trị riêng của tự đồng cấu $p ( f )$, trong đó $p ( t )$ là đa thức.
+
+5.48. Chứng minh rằng $A$ và $A ^ { t }$ có cùng các giá trị riêng. Cho ví dụ chứng tỏ $A$ và $A ^ { t }$ có các vector riêng khác nhau.
+
+5.49. Giả sử $f, g$ là hai tự đồng cấu thỏa mãn $f \circ g = g \circ f$. Giả sử W là không gian riêng ứng với giá trị riêng $\lambda$ của $f$. Chứng minh rằng $W$ bất biến đối với $g$:
+
+5.50. Giả sử \( f, g \) là hai truy tuyến chéo hóa được và thỏa mãn \( f \circ g = g \circ f \). Chứng minh rằng tồn tại một cơ sở \( \{ v_1, v_2, \ldots, v_n \} \) các vector riêng đồng thời của \( f \) và \( g \).
+
+5.51. Định lý Cayley-Hamilton: Gọi \( \mathscr{P}(\lambda) = |A - \lambda I| \) là đa thức đặc trưng của \( A \). Chứng minh rằng \( \mathcal{P}(A) = 0 \).
+
+5.52. Với đa thức bất kỳ \( p(t) = t^n + a_{n-1}t^{n-1} + \cdots + a_1t + a_0 \), ma trận vuông cấp \( n \) tương ứng với \( p(t) \) có dạng
+\[ A = \left[ \begin{array}{ccccc}
+0 & 0 & \cdots & 0 & -a_0 \\
+1 & 0 & \cdots & 0 & -a_1 \\
+0 & 1 & \cdots & 0 & -a_2 \\
+\vdots & \vdots & \ddots & \vdots & \vdots \\
+0 & 0 & \cdots & 1 & -a_{n-1}
+\end{array} \right]. \]
+Chứng minh rằng \( p(A) = 0 \).
+
+5.53. Cho tự đồng cấu tuyến tính \( f : V \to V \). Giả sử tồn tại \( \nu \in V \) sao cho \( f^{k-1}(\nu) \neq \mathbf{0} \) và \( f^k(\nu) = \mathbf{0} \). Đặt \( S = \{\nu, f(\nu), \ldots, f^{k-1}(\nu)\} \) và \( W = \operatorname{span}S \). Chứng minh rằng:
+
+i) Tập \( S \) độc lập tuyến tính.
+
+ii) Không gian con \( W \) bất biến đối với \( f \).
+
+iii) Thu hẹp của \( f \) vào không gian con \( W \colon \tilde{f} = f|_W \) là luỹ linh.
+
+iv) Tìm ma trận chuyển $\widetilde{\boldsymbol{f}}$ trong cơ sở $\left\{ f^{k-1}(\nu), \ldots, f(\nu), \nu \right\}$ của $W$.
+
+5.54.\*) Chứng minh rằng đa thức đặc trưng của ma trận $A$ có thể biểu diễn như sau: 
+$\left| A - \lambda I \right| = (-\lambda)^{n} + C_{1}(-\lambda)^{n-1} + C_{2}(-\lambda)^{n-2} + \ldots + C_{n}$, trong đó $C_{k}$ là tổng tất cả các định thức con chính bậc $k$ của $A$ (định thức con chính là định thức con có các chỉ số hàng và chỉ số cột bằng nhau).

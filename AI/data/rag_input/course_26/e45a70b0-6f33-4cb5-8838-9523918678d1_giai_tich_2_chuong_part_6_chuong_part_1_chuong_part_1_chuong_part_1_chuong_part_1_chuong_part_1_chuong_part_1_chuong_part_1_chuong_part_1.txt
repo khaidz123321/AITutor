@@ -1,0 +1,377 @@
+# Bài tập chương 1
+
+Bài 1.1. Cho hàm số $z = z(x, y)$ được xác định bởi phương trình:
+
+$$
+x = e^{2z}(z + y^2 + 2y).
+$$
+
+Tính vi phân toàn phần $dz(x, y)$.
+
+Bài 1.2. Tính giá trị gần đúng của 
+
+$$
+I = \sqrt{e^{-0.02} + 2.11^3}.
+$$
+
+Bài 1.3. Cho hàm số $z = z(x, y)$ xác định bởi phương trình:
+
+$$
+z = x^3\sin(yz) + 3xe^{\frac{y^2}{z}}.
+$$
+
+Tính giá trị gần đúng của $z$ tại điểm (0.98, 0.01).
+
+Bài 1.4. Cho hàm số 
+
+$$
+z = \ln{\sqrt{x^2 + y^2}} + \arctan{\frac{y}{x}}.
+$$
+
+a) Rút gọn biểu thức: $A = z_{xx}'' + z_{yy}''$
+
+b) Tính giá trị của $d^2z(0, 1)$.
+
+Bài 1.5. Cho hàm số $z = z(x, y)$ xác định bởi phương trình:
+
+$$
+z = x^2y + 2xe^{\frac{y}{z}}.
+$$
+
+Tính giá trị gần đúng của $z$ tại điểm (0.99, 0.02).
+
+Bài 1.6. Tìm cực trị không điều kiện của các hàm số sau:
+
+a) $z = xy e^{x - y}$  
+b) $z = e^{2x}(x^2 + y^2 - 2)$  
+c) $z = xy^2 + x^4 + y^4$  
+d) $z = xy\sqrt{1 + x^2 + y^2}$  
+e) $z = 3x^2y + y^3 - 18x - 30y$  
+f) $z = x^4 + y^4 - 4xy + 1$  
+g) $z = e^x(x + y)(x - y + 4)$
+
+Bài 1.7. Tìm các hệ số $A, B, C$ để hàm số 
+
+$$
+z = 2x^3 + 3xy - 2y^3 + Ax + By + C,
+$$
+
+đạt cực trị tại điểm $M_1(1, -1)$ và $z(1, -1) = 0$.
+
+Bài 1.8. Tìm cực trị của hàm số
+
+$$
+f(x, y) = \frac{1}{4}x^4 + 2xy + \frac{1}{4}y^4
+$$
+
+với điều kiện $x^2 + y^2 = 1$
+
+Bài 1.9. Tìm giá trị lớn nhất và nhỏ nhất của hàm số
+
+a) \(z = x^2 + y^2 - 2x^2y + 1\) trên miền \(D = \{(x, y): x^2 + y^2 \leq 1\}.\)
+
+Bài 1.10. Cho hàm số \(z = 2x^4 + y^4 - x^2 - 2y^2.\)
+
+a) Tìm cực trị của \(z\)
+
+b) Tìm giá trị lớn nhất và nhỏ nhất trên miền \(D = \{(x, y): x \geq 0, y \geq 0, x + y \leq 1\}.\)
+
+# Hướng dẫn giải bài tập chương 1
+
+Bài 1.1. Sử dụng công thức \(dz = z_x' dx + z_y' dy\) với
+
+$$
+z_x' = \frac{e^{-2z}}{2(y+1)^2 + 2z - 1}, \quad z_y' = \frac{-2(y+1)}{2(y+1)^2 + 2z - 1}.
+$$
+
+Bài 1.2. Đặt hàm số \(f(x, y) = \sqrt{2^{2x} + y^3}\). Khi đó \(I = f(-0.02, 2.11)\) và
+
+$$
+I \approx f(0, 2) + df(0, 2) = 3 - \frac{1}{3} \times 0.01 + 2 \times 0.11 = 3.2167.
+$$
+
+Bài 1.3. Theo công thức:
+
+$$
+z(x_0 + \delta_x, y_0 + \delta_y) \approx z(x_0, y_0) + z_x'(x_0, y_0)\Delta_x + z_y'(x_0, y_0)\Delta_y,
+$$
+
+trong đồ $(x_0, y_0) = (1, 0), \Delta_x = -0.02, \Delta_y = 0.01.$ Khi đó, $z(0.98, 0.01) \approx 2.97$：
+
+Bài 1.4. Cho hàm số
+
+$$
+z = \ln{\sqrt{x^2 + y^2}} + \arctan{\frac{y}{x}}.
+$$
+
+a) Rút gọn biểu thức: $I = z_{xx}'' + z_{yy}''$
+
+b) Tính giá trị của $d^2z(0, 1)$：
+
+Ta có
+
+$$
+\begin{array}{l}
+{z_{xx}'' = \frac{-x^2 + 2xy + y^2}{(x^2 + y^2)^2}} \\
+{z_{yy}'' = \frac{x^2 - 2xy - y^2}{(x^2 + y^2)^2}} \\
+{z_{xy}'' = \frac{-x^2 - 2xy + y^2}{(x^2 + y^2)^2}.}
+\end{array}
+$$
+
+Khi đó, ta có $I = 0, d^2z(0, 1) = dx^2 + 2dxdy - dy^2.$
+
+Bài 1.5. Theo công thức:
+
+$$
+z(x_0 + \delta_x, y_0 + \delta_y) \approx z(x_0, y_0) + z_x'(x_0, y_0)\Delta_x + z_y'(x_0, y_0)\Delta_y,
+$$
+
+trong đồ $(x_0, y_0) = (1, 0), \Delta_x = -0.01, \Delta_y = 0.02.$ Khi đó, $z(0.99, 0.02) \approx 2.02$
+
+Bài 1.6.a) $z = xy e^{x-y}$：
+
+b) $z = e^{2x}(x^2 + y^2 - 2)$：
+
+$$
+\left\{ \begin{array} { l l } { z _ { x } ^ { \prime } = y ( x + 1 ) e ^ { x - y } = 0 } \\ { z _ { y } ^ { \prime } = x ( 1 - y ) e ^ { x - y } } \end{array} \right. \Leftrightarrow \left\{ \begin{array} { l l } { x _ { 1 } = 0 } \\ { y _ { 1 } = 0 , } \end{array} \right. \left\{ \begin{array} { l l } { x _ { 2 } = - 1 } \\ { y _ { 2 } = 1 . } \end{array} \right.
+$$
+
+Khi đố, ta có
+
+$$
+\begin{array} { r l } { a = z _ { x y } ^ { \prime \prime } \ ^ { 2 } - z _ { x ^ { 2 } } ^ { \prime \prime } . z _ { y ^ { 2 } } ^ { \prime \prime } , \Delta ( x _ { 1 } , y _ { 1 } ) = 1 > 0 , \Delta ( x _ { 2 } , y _ { 2 } ) = - 1 < 0 \Rightarrow z _ { min } = z ( x _ { 2 } , y _ { 2 } ) = - 1 < 0 . } \end{array}
+$$
+
+c) $z = x y ^ { 2 } + x ^ { 4 } + y ^ { 4 }$
+
+$$
+\begin{array}{c} \left\{ \begin{array} { l l } { z _ { x } ^ { \prime } = 4 x ^ { 3 } + y ^ { 2 } = 0 } \\ { z _ { y } ^ { \prime } = 2 y ( x + 2 y ^ { 2 } ) = 0 } \end{array} \right. \Leftrightarrow \left\{ \begin{array} { l l } { x _ { 1 } = 0 } \\ { y _ { 1 } = 0 , } \end{array} \right. \left\{ \begin{array} { l l } { x _ { 2 } = - \frac { 1 } { 2 \sqrt { 2 } } } \\ { y _ { 2 } = \frac { 1 } { 2 \sqrt { 2 } } , } \end{array} \right. \left\{ \begin{array} { l l } { x _ { 3 } = - \frac { 1 } { 2 \sqrt { 2 } } } \\ { y _ { 3 } = - \frac { 1 } { 2 \sqrt { 2 } } . } \end{array} \right.
+$$
+
+Khi đố, ta có
+
+$$
+\begin{array} { r } { \Delta = z _ { x y } ^ { \prime \prime } ^ { 2 } - z _ { x ^ { 2 } } ^ { \prime \prime } . z _ { y ^ { 2 } } ^ { \prime \prime } , \Delta ( x _ { 2 } , y _ { 2 } ) > 0 , \Delta ( x _ { 3 } , y _ { 3 } ) > 0 , \Delta ( x _ { 1 } , y _ { 1 } ) = 0 . } \end{array}
+$$
+
+Xét tại $(x_1, y_1)$
+
+$$
+z(0, 0) = 0, z\left(-\frac{1}{n}, \frac{1}{n}\right) = -\frac{1}{n^3} + \frac{2}{n^4} < 0 \forall n \geq n_0, z\left(\frac{1}{n}, \frac{1}{n}\right) = \frac{1}{n^3} + \frac{2}{n^4} > 0 \forall n \geq n_0.
+$$
+
+Như vậy, hàm số không có cực trị.
+
+dz = xy\sqrt{1 + x^2 + y^2}
+
+$$
+\left\{
+\begin{array} { l }
+z_x' = 0 \\
+z_y' = 0 
+\end{array}
+\right.
+\Leftrightarrow
+\left\{
+\begin{array} { l }
+x_0 = 0 \\
+y_0 = 0
+\end{array}
+\right.
+$$
+
+$$
+z(0, 0) = 0, z\left(\frac{1}{n}, \frac{1}{n}\right) > 0 \forall n \geq n_0, z\left(\frac{1}{n}, -\frac{1}{n}\right) < 0 \forall n \geq n_0.
+$$
+
+Như vậy, hàm số không có cực trị.
+
+$z = 3x^2y + y^3 - 18x - 30y$
+
+$$
+\begin{array}{c}
+\left\{
+\begin{array}{l}
+z_{x}^{\prime} = 6xy - 18 = 0 \\
+z_{y}^{\prime} = 3y^{2} + 3x^{2} - 30 = 0
+\end{array}
+\right.
+\quad \Leftrightarrow \left\{
+\begin{array}{l}
+x_{1} = 1 \\
+y_{1} = 3,
+\end{array}
+\right.
+\quad \left\{
+\begin{array}{c}
+x_{2} = -1 \\
+y_{2} = -3
+\end{array}
+\right.,
+\quad \left\{
+\begin{array}{c}
+x_{3} = 3 \\
+y_{3} = 1
+\end{array}
+\right.,
+\quad \left\{
+\begin{array}{c}
+x_{4} = -3 \\
+y_{4} = -1
+\end{array}
+\right.
+\end{array}
+$$
+
+Khi đó, ta có
+
+$$
+\Delta = {z_{xy}^{\prime\prime}}^{2} - z_{x^{2}}^{\prime\prime}.z_{y^{2}}^{\prime\prime}, \quad \Delta(x_{1}, y_{1}) = \Delta(x_{2}, y_{2}) < 0, \quad \Delta(x_{3}, y_{3}) = \Delta(x_{4}, y_{4}) > 0.
+$$
+
+Vậy hàm số đạt cực đại tại $(x_{2}, y_{2})$ và đạt cực tiểu tại $(x_{1}, y_{1})$:
+
+f) $z = x^{4} + y^{4} - 4xy + 1$
+
+$$
+\begin{array}{c}
+\left\{
+\begin{array}{l}
+z_{x}^{\prime} = 4x^{3} - 4y = 0 \\
+z_{y}^{\prime} = 4y^{3} - 4x = 0
+\end{array}
+\right.
+\Leftrightarrow \left\{
+\begin{array}{l}
+x_{1} = 0 \\
+y_{1} = 0,
+\end{array}
+\right.
+\quad \left\{
+\begin{array}{c}
+x_{2} = 1 \\
+y_{2} = 1
+\end{array}
+\right.,
+\quad \left\{
+\begin{array}{c}
+x_{3} = -1 \\
+y_{3} = -1
+\end{array}
+\right.
+\end{array}
+$$
+
+Khi đó, ta có
+
+$$
+\Delta = z_{xy}^{\prime\prime}{^2} - z_{x^2}^{\prime\prime}.z_{y^2}^{\prime\prime}, \quad \Delta(x_3, y_3) = \Delta(x_2, y_2) < 0, \quad \Delta(x_1, y_1) = 0.
+$$
+
+Vậy hàm số đạt cực tiểu tại $(x_2, y_2)$ và đạt cực tiểu tại $(x_3, y_3)$. Hàm số không đạt cực trị tại $(x_1, y_1)$:
+
+g) $z = e^x (x + y)(x - y + 4)$.
+
+$$
+\begin{array}{c}
+\left\{
+\begin{array}{l l}
+z_x' = e^x(x^2 - y^2 + 6x + 4y + 4) = 0 \\
+z_y' = e^x(-2y + 4) = 0
+\end{array} \right.
+\Leftrightarrow 
+\left\{
+\begin{array}{l l}
+x_1 = -2 \\
+y_1 = 2,
+\end{array} \right. 
+\left\{
+\begin{array}{l l}
+x_2 = -4 \\
+y_2 = 2.
+\end{array} \right.
+\end{array}
+$$
+
+Khi đó, ta có:
+
+$$
+\Delta = {z_{xy}^{\prime\prime}}^2 - z_{x^2}^{\prime\prime}.z_{y^2}^{\prime\prime}, \quad \Delta(x_1, y_1) > 0, \quad \Delta(x_2, y_2) < 0.
+$$
+
+Vậy hàm số đạt cực đại tại $(x_2, y_2)$.
+
+Bài 1.7. Tìm các hạng số $A$, $B$, $C$ để hàm số:
+
+$$
+z = 2x^3 + 3xy - 2y^3 + Ax + By + C,
+$$
+
+đạt cực trị tại các điểm $M_1(1, -1)$ và $z(1, -1) = 0$.
+
+$$
+\left\{ \begin{array} { l l } { z _ { x } ^ { \prime } ( 1 , - 1 ) = 0 } \\ { z _ { y } ^ { \prime } ( 1 , - 1 ) = 0 } \end{array} \right. \Leftrightarrow \left\{ \begin{array} { l l } { A = - 3 } \\ { B = 3 } \end{array} \right., z ( 1 , - 1 ) = 0 \Rightarrow C = 5.
+$$
+
+Thí lại: Thỏa mãn.
+
+Bài 1.8. Tìm cực trị của hàm số
+
+$$
+f ( x , y ) = \frac { 1 } { 4 } x ^ { 4 } + 2 x y + \frac { 1 } { 4 } y ^ { 4 }
+$$
+
+với điều kiện $x ^ { 2 } + y ^ { 2 } = 1$,
+
+$$
+\left\{ \begin{array} { l l } { L _ { x } ^ { \prime } = 0 } & {} \\ { L _ { y } ^ { \prime } = 0 } & {\Leftrightarrow \lambda = - \frac { 5 } { 4 }, ( x , y ) = ( \frac { 1 } { \sqrt { 2 } } , \frac { 1 } { \sqrt { 2 } } ), ( - \frac { 1 } { \sqrt { 2 } } , - \frac { 1 } { \sqrt { 2 } } ) ; } \\ { L _ { z } ^ { \prime } = 0 } & {} \end{array} \right.
+$$
+
+$$
+\lambda = \frac { 3 } { 4 }, ( x , y ) = ( - \frac { 1 } { \sqrt { 2 } } , \frac { 1 } { \sqrt { 2 } } ), ( \frac { 1 } { \sqrt { 2 } } , - \frac { 1 } { \sqrt { 2 } } ).
+$$
+
+$$
+d ^ { 2 } L ( \frac { 1 } { \sqrt { 2 } } , \frac { 1 } { \sqrt { 2 } } , - \frac { 5 } { 4 } ) = - 6 d x ^ { 2 } < 0, d ^ { 2 } L ( - \frac { 1 } { \sqrt { 2 } } , - \frac { 1 } { \sqrt { 2 } } , - \frac { 5 } { 4 } ) = - 6 d x ^ { 2 } < 0
+$$
+
+$$
+d ^ { 2 } L \left( - \frac { 1 } { \sqrt { 2 } } , \frac { 1 } { \sqrt { 2 } } , \frac { 3 } { 4 } \right) = 10 d x ^ { 2 } > 0 , \quad d ^ { 2 } L \left( \frac { 1 } { \sqrt { 2 } } , - \frac { 1 } { \sqrt { 2 } } , \frac { 3 } { 4 } \right) = 10 d x ^ { 2 } > 0 .
+$$
+
+Vậy hàm số đạt cực đại tại $\left( - \frac { 1 } { \sqrt { 2 } } , - \frac { 1 } { \sqrt { 2 } } \right)$ và cực tiểu tại $\left( \frac { 1 } { \sqrt { 2 } } , - \frac { 1 } { \sqrt { 2 } } \right)$.
+
+Bài 1.9. Tìm giá trị lớn nhất và nhỏ nhất của hàm số
+
+a) $z = x ^ { 2 } + y ^ { 2 } - 2 x ^ { 2 } y + 1$ trên miền $D = \{ ( x , y ) : \ x ^ { 2 } + y ^ { 2 } \leq 1 \} .$
+
+$$
+\begin{array}{l}
+\displaystyle \left\{ z _ { y } ^ { \prime } = 0 \right. \quad \Leftrightarrow ( x , y ) = ( 0 , 0 ) , \left( \frac { \sqrt { 2 } } { 2 } , \frac { 1 } { 2 } \right) , \left( - \frac { \sqrt { 2 } } { 2 } , \frac { 1 } { 2 } \right). \\
+\displaystyle x ^ { 2 } + y ^ { 2 } \leq 1
+\end{array}
+$$
+
+Tại biên $x ^ { 2 } + y ^ { 2 } = 1$, ta có $z ( x , y ) = f ( y ) = 2 ( y ^ { 3 } - y + 1 )$ với $| y | \leq 1$
+
+$$
+f ( - 1 ) = f ( 1 ) = 2, \quad f \left( \frac { \sqrt { 3 } } { 3 } \right) = 2 \left( 1 + \frac { \sqrt { 3 } } { 3 } \right), \quad f \left( - \frac { \sqrt { 3 } } { 3 } \right) = 2 \left( 1 - \frac { \sqrt { 3 } } { 3 } \right).
+$$
+
+Vậy hàm số đạt nhỏ nhất là $2 \left( 1 - \frac { \sqrt { 3 } } { 3 } \right)$ và lớn nhất là $2 \left( 1 + \frac { \sqrt { 3 } } { 3 } \right)$.
+
+Bài 1.10. Cho hàm số \( z = 2x^4 + y^4 - x^2 - 2y^2 \)
+
+a) Tìm cực trị của \( z \)
+
+$$
+z_{\min} = -\frac{9}{8} \text{ tại } \left( -\frac{1}{2}, -1 \right), \left( \frac{1}{2}, -1 \right), \left( -\frac{1}{2}, 1 \right), \left( \frac{1}{2}, 1 \right).
+$$
+
+b) Tìm giá trị lớn nhất và nhỏ nhất trên miền \( D = \{(x, y) : x \geq 0, y \geq 0, x + y \leq 1\} \): Xét trên các biên và các điểm cực trị trong miền \( D \)
+
+# 1 dfgfg
+
+# 2 ddfg
+
+T.P

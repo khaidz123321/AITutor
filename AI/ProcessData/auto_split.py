@@ -2,8 +2,8 @@ import os
 import re
 import glob
 
-# Pattern match tất cả variants: Chuong, Chưong, Chuơng, Chương
-CHUONG_PATTERN = r'(?:Ch(?:u|ư)(?:o|ơ)ng|CHƯƠNG)'
+# Pattern match tất cả variants: Chuong, Chương, CHU'ONG, Bai, Bài, Phan, Phần
+CHUONG_PATTERN = r'(?:Ch(?:u|ư)[\'\’]?(?:o|ơ)ng|CHƯƠNG|B(?:a|à)i|BÀI|Ph(?:a|ầ)n|PHẦN)'
 
 def auto_split_large_files():
     CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -26,8 +26,8 @@ def auto_split_large_files():
             content, flags=re.IGNORECASE | re.MULTILINE
         )
         
-        # NẾU CÓ NHIỀU HƠN 1 CHƯƠNG -> FILE GỘP
-        if len(chapter_headings) > 1:
+        # NẾU TÌM THẤY ÍT NHẤT 1 CHƯƠNG/BÀI/PHẦN -> FILE GỘP CẦN TÁCH
+        if len(chapter_headings) > 0:
             file_name = os.path.basename(file_path)
             subject_dir = os.path.dirname(file_path)
             base_name = os.path.splitext(file_name)[0]
@@ -54,9 +54,12 @@ def auto_split_large_files():
                     new_file_name = f"{base_name}_chuong_{chapter_num}.txt"
                     new_file_path = os.path.join(subject_dir, new_file_name)
                     
-                    with open(new_file_path, 'w', encoding='utf-8') as out_f:
+                    mode = 'a' if os.path.exists(new_file_path) else 'w'
+                    with open(new_file_path, mode, encoding='utf-8') as out_f:
+                        if mode == 'a':
+                            out_f.write("\n\n")
                         out_f.write(chunk)
-                    print(f"  ✅ Đã tách: {new_file_name}")
+                    print(f"  ✅ Đã tách/Gộp: {new_file_name}")
                     
                 # NẾU ĐOẠN TEXT ĐỨNG TRƯỚC CHƯƠNG 1 (Lời nói đầu, Mục lục...)
                 else:

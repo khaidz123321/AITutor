@@ -1,0 +1,3080 @@
+[
+  {
+    "id": "RAG_001",
+    "query": "Trong phần 1.1.2, định nghĩa \"x < y\" được đưa ra như thế nào khi xét các chữ số thập phân $x_0, x_1, \\dots$ và $y_0, y_1, \\dots$ của hai số thực $x$ và $y$?",
+    "difficulty": "easy",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_1",
+    "relevant_chapter": "Chương 1",
+    "relevant_section": "1.1.2. Các tính chất của tập số thực"
+  },
+  {
+    "id": "RAG_002",
+    "query": "Theo mục \"Tính trừ\" trong phần 1.1.2, nếu $a<b$ là hai số thực, làm thế nào để chứng minh tồn tại một số hữu tỷ $r\\in\\mathbb{Q}$ sao cho $a<r<b$ dựa trên các chữ số thập phân của $a$ và $b$?",
+    "difficulty": "medium",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_1",
+    "relevant_chapter": "Chương 1",
+    "relevant_section": "1.1.2. Các tính chất của tập số thực"
+  },
+  {
+    "id": "RAG_003",
+    "query": "Số phức được định nghĩa như thế nào trong phần 1.2 của giáo trình?",
+    "difficulty": "easy",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_1",
+    "relevant_chapter": "Chương 1",
+    "relevant_section": "1.2. Số phức"
+  },
+  {
+    "id": "RAG_004",
+    "query": "Khi nào ta cần mở rộng tập số thực thành tập số phức để giải phương trình bậc hai và tại sao cần số ảo i?",
+    "difficulty": "medium",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_1",
+    "relevant_chapter": "Chương 1",
+    "relevant_section": "1.2. Số phức"
+  },
+  {
+    "id": "RAG_005",
+    "query": "Trong mục 1.2.3, tính chất phân phối của phép nhân đối với phép cộng được viết như thế nào?",
+    "difficulty": "easy",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_1",
+    "relevant_chapter": "Chương 1",
+    "relevant_section": "1.2.3. Tính chất"
+  },
+  {
+    "id": "RAG_006",
+    "query": "Theo tính chất (k) trong mục 1.2.3, bất đẳng thức |x + y| ≤ |x| + |y| đạt bằng khi nào? Hãy giải thích điều kiện cần và đủ cho trường hợp bằng.",
+    "difficulty": "medium",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_1",
+    "relevant_chapter": "Chương 1",
+    "relevant_section": "1.2.3. Tính chất"
+  },
+  {
+    "id": "RAG_007",
+    "query": "Trong phần 1.2.4, ánh xạ $f : \\mathbb{C} \\to (Oxy)$ được định nghĩa như thế nào để biểu diễn một số phức $z = a + bi$ trên mặt phẳng tọa độ?",
+    "difficulty": "easy",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_1",
+    "relevant_chapter": "Chương 1",
+    "relevant_section": "1.2.4. Biểu diễn hình học của số phức"
+  },
+  {
+    "id": "RAG_008",
+    "query": "Trong ví dụ 1.5 của phần 1.2.4, nếu $z \\in \\mathbb{C}$ thỏa mãn $\\frac{z^{2}}{z+i} \\in i\\mathbb{R}$, thì tập các điểm $M(a;b)$ trên mặt phẳng phức mô tả $z$ có hình học như thế nào?",
+    "difficulty": "medium",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_1",
+    "relevant_chapter": "Chương 1",
+    "relevant_section": "1.2.4. Biểu diễn hình học của số phức"
+  },
+  {
+    "id": "RAG_009",
+    "query": "Công thức Moivre nói rằng nếu một số phức z được viết dưới dạng lượng giác $z=|z|(\\cos\\varphi+i\\sin\\varphi)$ thì $z^n$ bằng gì?",
+    "difficulty": "easy",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_1",
+    "relevant_chapter": "Chương 1",
+    "relevant_section": "1.2.5. Công thức Moivre"
+  },
+  {
+    "id": "RAG_010",
+    "query": "Trong chứng minh công thức Moivre, tại bước quy nạp, tại sao ta có thể dùng công thức cộng góc $\\cos(k\\varphi+\\varphi)$ và $\\sin(k\\varphi+\\varphi)$ để suy ra $z^{k+1}=|z|^{k+1}(\\cos((k+1)\\varphi)+i\\sin((k+1)\\varphi))$?",
+    "difficulty": "medium",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_1",
+    "relevant_chapter": "Chương 1",
+    "relevant_section": "1.2.5. Công thức Moivre"
+  },
+  {
+    "id": "RAG_011",
+    "query": "Trong phần 1.2.6, công thức tính căn bậc n của một số phức z = |z|(cos φ + i sin φ) được cho như thế nào?",
+    "difficulty": "easy",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_1",
+    "relevant_chapter": "Chương 1",
+    "relevant_section": "1.2.6. Căn bậc $n$ của một số phức"
+  },
+  {
+    "id": "RAG_012",
+    "query": "Theo công thức trong phần 1.2.6, tại sao khi lấy căn bậc n của z ta phải cộng thêm k·2π vào góc φ và cho k = 0, 1, …, n‑1? Giải thích ý nghĩa của các giá trị k và số lượng nghiệm khác nhau của √[n]{z}.",
+    "difficulty": "medium",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_1",
+    "relevant_chapter": "Chương 1",
+    "relevant_section": "1.2.6. Căn bậc $n$ của một số phức"
+  },
+  {
+    "id": "RAG_013",
+    "query": "Công thức Euler trong phần 1.2.7 được phát biểu như thế nào và nó liên hệ giữa hàm mũ phức và các hàm lượng giác?",
+    "difficulty": "easy",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_1",
+    "relevant_chapter": "Chương 1",
+    "relevant_section": "1.2.7. Công thức Euler (Ô le)"
+  },
+  {
+    "id": "RAG_014",
+    "query": "Trong ví dụ 1.9, để tính tổng $4_n = \\sum_{k=1}^{n} \\cos(a+k b)$ và $B_n = \\sum_{k=1}^{n} \\sin(a+k b)$, tại sao cần giả thiết $b \\notin 2\\pi\\mathbb{Z}$ và làm thế nào công thức Euler được dùng để đưa tổng các số hạng thành một cấp số nhân?",
+    "difficulty": "medium",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_1",
+    "relevant_chapter": "Chương 1",
+    "relevant_section": "1.2.7. Công thức Euler (Ô le)"
+  },
+  {
+    "id": "RAG_015",
+    "query": "Trong phần 1.3.1 của giáo trình, dãy số thực được ký hiệu bằng ký hiệu nào (ví dụ (x_n)_{n=1}^{\\infty})?",
+    "difficulty": "easy",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_1",
+    "relevant_chapter": "Chương 1",
+    "relevant_section": "1.3. Dãy số thực"
+  },
+  {
+    "id": "RAG_016",
+    "query": "Theo định nghĩa trong mục 1.3.1, một dãy số (x_n) được gọi là bị chặn dưới khi tồn tại một số thực m thỏa mãn điều kiện gì đối với mọi phần tử x_n của dãy?",
+    "difficulty": "medium",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_1",
+    "relevant_chapter": "Chương 1",
+    "relevant_section": "1.3. Dãy số thực"
+  },
+  {
+    "id": "RAG_017",
+    "query": "Trong phần 1.3.2, để chứng minh dãy x_n = a/n hội tụ về 0, n₀ được chọn như thế nào và vì sao khi n > n₀ ta luôn có |x_n - 0| < ε?",
+    "difficulty": "easy",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_1",
+    "relevant_chapter": "Chương 1",
+    "relevant_section": "1.3.2. Tính chất"
+  },
+  {
+    "id": "RAG_018",
+    "query": "Theo định lý 1.16 (phần 1.3.2), nếu một dãy (x_n) cùng hội tụ tới hai giới hạn A₁ và A₂ khác nhau, tại sao việc chọn ε = ½|A₁ - A₂| dẫn đến mâu thuẫn và do đó chứng minh tính duy nhất của giới hạn?",
+    "difficulty": "medium",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_1",
+    "relevant_chapter": "Chương 1",
+    "relevant_section": "1.3.2. Tính chất"
+  },
+  {
+    "id": "RAG_019",
+    "query": "Trong Định lý 1.26, công thức tính giới hạn của tổng (hoặc hiệu) hai dãy $x_n$ và $y_n$ là gì?",
+    "difficulty": "easy",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_1",
+    "relevant_chapter": "Chương 1",
+    "relevant_section": "1.3.3. Các phép toán về giới hạn"
+  },
+  {
+    "id": "RAG_020",
+    "query": "Tại sao trong phần (f) của Định lý 1.26 cần giả thiết $B \\neq 0$ để kết luận $\nlim_{n\\to\\infty}\\frac{x_n}{y_n}=\\frac{A}{B}$, và nếu $B=0$ thì giới hạn của $\nfrac{x_n}{y_n}$ có thể xảy ra như thế nào?",
+    "difficulty": "medium",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_1",
+    "relevant_chapter": "Chương 1",
+    "relevant_section": "1.3.3. Các phép toán về giới hạn"
+  },
+  {
+    "id": "RAG_021",
+    "query": "Trong phần 1.3.4, định nghĩa \"dãy tăng\" và \"dãy giảm\" được đưa ra như thế nào?",
+    "difficulty": "easy",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_1",
+    "relevant_chapter": "Chương 1",
+    "relevant_section": "1.3.4. Dãy đơn điệu"
+  },
+  {
+    "id": "RAG_022",
+    "query": "Theo định lý 1.27 trong mục 1.3.4, nếu một dãy số $(x_n)$ tăng và bị chặn trên, tại sao giới hạn của dãy này luôn tồn tại và bằng giá trị sup của tập $\\{x_n : n\\in\\mathbb{N}\\}$?",
+    "difficulty": "medium",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_1",
+    "relevant_chapter": "Chương 1",
+    "relevant_section": "1.3.4. Dãy đơn điệu"
+  },
+  {
+    "id": "RAG_023",
+    "query": "Trong mục 1.3.5, hai dãy $(x_n)$ và $(y_n)$ được gọi là kề nhau khi và chỉ khi nào?",
+    "difficulty": "easy",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_1",
+    "relevant_chapter": "Chương 1",
+    "relevant_section": "1.3.5. Hai dãy $\\mathbf { k }$ và $\\mathbf { e }$"
+  },
+  {
+    "id": "RAG_024",
+    "query": "Theo Định lý 1.31 trong phần 1.3.5, nếu hai dãy $(x_n)$ và $(y_n)$ kề nhau, tại sao chúng đều hội tụ tới cùng giới hạn? Hãy giải thích cách chứng minh dựa trên tính chất đơn điệu và dãy $z_n = y_n - x_n$.",
+    "difficulty": "medium",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_1",
+    "relevant_chapter": "Chương 1",
+    "relevant_section": "1.3.5. Hai dãy $\\mathbf { k }$ và $\\mathbf { e }$"
+  },
+  {
+    "id": "RAG_025",
+    "query": "Trong mục 1.3.6 \"Dãy con\" của giáo trình, dãy con $(x_{n_k})$ của dãy $(x_n)$ được định nghĩa như thế nào?",
+    "difficulty": "easy",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_1",
+    "relevant_chapter": "Chương 1",
+    "relevant_section": "1.3.6. Dãy con"
+  },
+  {
+    "id": "RAG_026",
+    "query": "Theo tính chất 2 trong mục 1.3.6, nếu hai dãy con $(x_{2n})$ và $(x_{2n+1})$ của dãy $(x_n)$ đều hội tụ tới cùng một giới hạn $x^{*}$, làm thế nào để chứng minh rằng dãy $(x_n)$ cũng hội tụ tới $x^{*}$?",
+    "difficulty": "medium",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_1",
+    "relevant_chapter": "Chương 1",
+    "relevant_section": "1.3.6. Dãy con"
+  },
+  {
+    "id": "RAG_027",
+    "query": "Theo định nghĩa trong phần 1.3.7, dãy $(x_n)$ được gọi là dãy Cauchy (hoặc dãy cơ bản) khi nào?",
+    "difficulty": "easy",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_1",
+    "relevant_chapter": "Chương 1",
+    "relevant_section": "1.3.7. Dãy Cauchy"
+  },
+  {
+    "id": "RAG_028",
+    "query": "Trong phần 1.3.7, chứng minh \"dãy hội tụ ⇒ dãy Cauchy\" dựa vào việc chọn $\\epsilon/2$ và bất đẳng thức $|x_n - x_m| \\le |x_n - x^*| + |x_m - x^*|$. Giải thích chi tiết tại sao bước này đảm bảo tồn tại $n_0$ sao cho $|x_n - x_m| < \\epsilon$ với mọi $n,m \\ge n_0$.",
+    "difficulty": "medium",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_1",
+    "relevant_chapter": "Chương 1",
+    "relevant_section": "1.3.7. Dãy Cauchy"
+  },
+  {
+    "id": "RAG_029",
+    "query": "Trong phần 2.1.3, hàm số y = f(x) được gọi là tuần hoàn trên miền D khi nào?",
+    "difficulty": "easy",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "2.1.3. Hàm số tuần hoàn"
+  },
+  {
+    "id": "RAG_030",
+    "query": "Theo ví dụ trong phần 2.1.3, hàm số y = sin(ax + b) (với a > 0) có chu kỳ T = 2π/a. Nếu a = 4, chu kỳ của hàm số này là bao nhiêu và nếu muốn chu kỳ bằng π thì a phải bằng bao nhiêu?",
+    "difficulty": "medium",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "2.1.3. Hàm số tuần hoàn"
+  },
+  {
+    "id": "RAG_031",
+    "query": "Trong phần 2.1.4, hàm số y = f(x) được gọi là tăng trên miền D khi và chỉ khi điều kiện nào?",
+    "difficulty": "easy",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "2.1.4. Hàm số đơn điệu (tăng hoặc giảm)"
+  },
+  {
+    "id": "RAG_032",
+    "query": "Nếu một hàm số y = f(x) tăng ngặt (đồng biến) trên miền D, thì nó có chắc chắn cũng là hàm tăng (không ngặt) trên cùng miền D không? Giải thích lý do dựa trên các định nghĩa trong phần 2.1.4.",
+    "difficulty": "medium",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "2.1.4. Hàm số đơn điệu (tăng hoặc giảm)"
+  },
+  {
+    "id": "RAG_033",
+    "query": "Trong mục 2.1.5, hàm số bị chặn trên trên miền D được định nghĩa như thế nào?",
+    "difficulty": "easy",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "2.1.5. Hàm số bị chặn"
+  },
+  {
+    "id": "RAG_034",
+    "query": "Nếu một hàm số y = f(x) trên miền D thỏa mãn tồn tại M ∈ ℝ sao cho f(x) ≤ M ∀x∈D và tồn tại m ∈ ℝ sao cho f(x) ≥ m ∀x∈D, thì hàm số này được gọi là gì? Hãy giải thích mối quan hệ giữa việc bị chặn trên, bị chặn dưới và bị chặn trên miền D dựa trên nội dung của mục 2.1.5.",
+    "difficulty": "medium",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "2.1.5. Hàm số bị chặn"
+  },
+  {
+    "id": "RAG_035",
+    "query": "Trong phần 2.1.6, cận dưới đúng (infimum) của hàm $f$ trên miền $D$ được ký hiệu và định nghĩa như thế nào?",
+    "difficulty": "easy",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "2.1.6. Cận trên đúng và cận dưới đúng"
+  },
+  {
+    "id": "RAG_036",
+    "query": "Theo định nghĩa của cận trên đúng (supremum) trong phần 2.1.6, tại sao cần thêm điều kiện \"∀ ε>0 ⇒ ∃ x₀∈D sao cho M‑ε < f(x₀)\" và điều kiện này có ý nghĩa gì đối với việc xác định supremum?",
+    "difficulty": "medium",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "2.1.6. Cận trên đúng và cận dưới đúng"
+  },
+  {
+    "id": "RAG_037",
+    "query": "Trong phần 2.1.7, hàm số ngược của hàm y = sin x được định nghĩa như thế nào và miền xác định (domain) và tập giá trị (range) của hàm y = arcsin x là gì?",
+    "difficulty": "easy",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "2.1.7. Hàm số ngược"
+  },
+  {
+    "id": "RAG_038",
+    "query": "Theo tính chất đồ thị trong mục 2.1.7, tại sao đồ thị của hàm y = f(x) và đồ thị của hàm ngược y = f⁻¹(x) luôn đối xứng qua đường thẳng y = x, và điều kiện nào của hàm f(x) đảm bảo tồn tại hàm ngược?",
+    "difficulty": "medium",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "2.1.7. Hàm số ngược"
+  },
+  {
+    "id": "RAG_039",
+    "query": "Trong phần 2.1.8, hàm sinh hyperbolic được ký hiệu là $y=\\sh(x)$ và định nghĩa bằng công thức nào?",
+    "difficulty": "easy",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "2.1.8. Hàm hypebolic"
+  },
+  {
+    "id": "RAG_040",
+    "query": "Dựa trên định nghĩa $\\sh(x)=\\frac{1}{2}(e^{x}-e^{-x})$ và $\\ch(x)=\\frac{1}{2}(e^{x}+e^{-x})$, hãy chứng minh công thức $\\sh^{2}x-\\ch^{2}x=-1$ cho mọi $x\\in\\mathbb{R}$.",
+    "difficulty": "medium",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "2.1.8. Hàm hypebolic"
+  },
+  {
+    "id": "RAG_041",
+    "query": "Trong phần 2.2.1, giới hạn của hàm số f(x) tại điểm x₀ được định nghĩa như thế nào?",
+    "difficulty": "easy",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "2.2. Giới hạn của hàm một biến số"
+  },
+  {
+    "id": "RAG_042",
+    "query": "Dựa trên công thức cộng của hàm tanh, làm thế nào để chứng minh công thức tanh(2x)=\\frac{2\\tanh x}{1+\\tanh^2 x} trong nội dung \"Giới hạn của hàm một biến số\"?",
+    "difficulty": "medium",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "2.2. Giới hạn của hàm một biến số"
+  },
+  {
+    "id": "RAG_043",
+    "query": "Giới hạn của hàm số f(x) khi x tiến đến x0 được định nghĩa như thế nào trong phần 2.2.2 của giáo trình Giải tích 1?",
+    "difficulty": "easy",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "2.2.2. Quan hệ giữa giới hạn của dãy số và giới hạn của hàm số"
+  },
+  {
+    "id": "RAG_044",
+    "query": "Trong phần 2.2.2, làm thế nào để xác định mối quan hệ giữa giới hạn của dãy số và giới hạn của hàm số khi áp dụng công thức lim x→x0 f(x) = A?",
+    "difficulty": "medium",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "2.2.2. Quan hệ giữa giới hạn của dãy số và giới hạn của hàm số"
+  },
+  {
+    "id": "RAG_045",
+    "query": "Trong mục 2.2.4 “Các phép toán về giới hạn”, công thức tính giới hạn của tổng hai hàm f(x) và g(x) khi x tiến tới x₀ là gì?",
+    "difficulty": "easy",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "2.2.4. Các phép toán về giới hạn"
+  },
+  {
+    "id": "RAG_046",
+    "query": "Giả sử lim_{x→x₀} f(x)=A và lim_{x→x₀} g(x)=B (với B≠0). Theo phần 2.2.4, khi nào giới hạn lim_{x→x₀} \\frac{f(x)}{g(x)} tồn tại và giá trị của nó bằng bao nhiêu?",
+    "difficulty": "medium",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "2.2.4. Các phép toán về giới hạn"
+  },
+  {
+    "id": "RAG_047",
+    "query": "Trong phần 2.2.5, định nghĩa \"hàm tăng và bị chặn trên\" trên khoảng $(a, x_0)$ là gì?",
+    "difficulty": "easy",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "2.2.5. Giới hạn của hàm đơn điệu"
+  },
+  {
+    "id": "RAG_048",
+    "query": "Theo Định lý 2.6(i) trong phần 2.2.5, nếu hàm $f(x)$ tăng và bị chặn trên trên $(a, x_0)$, tại sao giới hạn $\\displaystyle\\lim_{x\to x_0^-}f(x)$ tồn tại và bằng giá trị sup của $f$ trên khoảng đó?",
+    "difficulty": "medium",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "2.2.5. Giới hạn của hàm đơn điệu"
+  },
+  {
+    "id": "RAG_049",
+    "query": "Trong phần 2.3.1 của giáo trình, hàm \\(\\alpha(x)\\) được gọi là \"vô cùng bé\" (VCB) tại \\(x_{0}\\) khi nào? Hãy nêu định nghĩa đầy đủ bằng ký hiệu giới hạn.",
+    "difficulty": "easy",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "2.3. Dài lượng vô cùng bé và vô cùng lớn"
+  },
+  {
+    "id": "RAG_050",
+    "query": "Giả sử \\(\\alpha(x)\\) và \\(\\beta(x)\\) đều là các hàm vô cùng bé tại \\(x_{0}\\). Khi nào ta nói \\(\\alpha(x) = O(\\beta(x))\\) tại \\(x_{0}\\) và ý nghĩa của điều kiện \\(\\displaystyle\\lim_{x\\to x_{0}}\\frac{\\alpha(x)}{\\beta(x)} = 0\\) trong ngữ cảnh này?",
+    "difficulty": "medium",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "2.3. Dài lượng vô cùng bé và vô cùng lớn"
+  },
+  {
+    "id": "RAG_051",
+    "query": "Theo định nghĩa VCB trong phần 2.3.2, một hàm số được gọi là VCB tại điểm $x_0$ khi nào?",
+    "difficulty": "easy",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "2.3.2. Tinh chat"
+  },
+  {
+    "id": "RAG_052",
+    "query": "Trong ví dụ 2.8 của phần 2.3.2, tại sao ta có $e^{ax}-e^{bx}\\sim (a-b)x$ và $\\sin(ax)-\\sin(bx)\\sim (a-b)x$ khi $x\\to0$, và làm thế nào các tính chất VCB được áp dụng để tính giới hạn $\\displaystyle\\lim_{x\\to0}\\frac{e^{ax}-e^{bx}}{\\sin(\\alpha x)-\\sin(\\beta x)}$?",
+    "difficulty": "medium",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "2.3.2. Tinh chat"
+  },
+  {
+    "id": "RAG_053",
+    "query": "Trong phần 2.4 \"Hàm liên tục\", hàm số $y = f(x)$ được gọi là liên tục tại $x_0$ khi và chỉ khi điều kiện nào (theo định nghĩa epsilon‑delta) được thỏa mãn?",
+    "difficulty": "easy",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "2.4. Ham lien tuc"
+  },
+  {
+    "id": "RAG_054",
+    "query": "Theo nội dung của phần 2.4, nếu hàm $f(x)$ có giới hạn $\\displaystyle\\lim_{x\to x_0}f(x)=L$ và $f(x_0)=L$, thì $f$ liên tục tại $x_0$. Áp dụng điều này, hàm $g(x)=\\frac{e^{ax}-e^{bx}}{\\sin(\\alpha x)-\\sin(\\beta x)}$ có liên tục tại $x=0$ không? Hãy giải thích dựa trên định nghĩa và tính giới hạn đã cho trong đoạn văn.",
+    "difficulty": "medium",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "2.4. Ham lien tuc"
+  },
+  {
+    "id": "RAG_055",
+    "query": "Theo mục 2.4.2, nếu hai hàm số f(x) và g(x) đều liên tục trên miền D, thì hàm số f(x)+g(x) có tính chất gì?",
+    "difficulty": "easy",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "2.4.2. Tinh chat dai só"
+  },
+  {
+    "id": "RAG_056",
+    "query": "Trong phần \"Hàm số f(x)/g(x) liên tục trên miền D trừ những điểm x₀ sao cho g(x₀)=0\" của mục 2.4.2, tại sao cần loại trừ các điểm mà g(x₀)=0 và hàm số f(x)/g(x) có thể không liên tục ở những điểm đó?",
+    "difficulty": "medium",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "2.4.2. Tinh chat dai só"
+  },
+  {
+    "id": "RAG_057",
+    "query": "Công thức biểu diễn max\\{f(x), g(x)\\} bằng hàm tuyệt đối trong đoạn văn là gì?",
+    "difficulty": "easy",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "2.4.3. Cực trị của hàm liên tục"
+  },
+  {
+    "id": "RAG_058",
+    "query": "Trong chứng minh định lý 2.11 bằng phương pháp chia đôi, nếu f(c) > 0 thì đoạn con nào được chọn tiếp theo và độ dài của đoạn đó so với đoạn [a, b] ban đầu là bao nhiêu?",
+    "difficulty": "medium",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "2.4.3. Cực trị của hàm liên tục"
+  },
+  {
+    "id": "RAG_059",
+    "query": "Trong phần 2.4.4, định nghĩa \"hàm số f(x) bị chặn trên [a, b]\" là gì?",
+    "difficulty": "easy",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "2.4.4. Tinh chat bi chan"
+  },
+  {
+    "id": "RAG_060",
+    "query": "Theo định lý 2.14 trong mục 2.4.4, tại sao một hàm số liên tục trên đoạn đóng [a, b] luôn tồn tại các điểm x₁, x₂ sao cho f(x₁)=min_{x∈[a,b]}f(x) và f(x₂)=max_{x∈[a,b]}f(x)?",
+    "difficulty": "medium",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "2.4.4. Tinh chat bi chan"
+  },
+  {
+    "id": "RAG_061",
+    "query": "Trong phần 2.5.1, hàm số f(x) được gọi là liên tục đều trên miền D khi và chỉ khi thỏa mãn điều kiện nào (viết đầy đủ bất đẳng thức với ε và δ)?",
+    "difficulty": "easy",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "2.5. Ham lien tuc deu"
+  },
+  {
+    "id": "RAG_062",
+    "query": "Theo định lý 2.16, tại sao việc hàm f(x) liên tục đều trên miền D dẫn tới f(x) liên tục tại mỗi điểm x₀ ∈ D? Hãy giải thích mối quan hệ giữa liên tục đều và liên tục thông thường dựa trên định nghĩa đã cho.",
+    "difficulty": "medium",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "2.5. Ham lien tuc deu"
+  },
+  {
+    "id": "RAG_063",
+    "query": "Trong phần 2.6.1 Định nghĩa, đạo hàm của hàm số $f(x)$ tại điểm $x_0$ được định nghĩa như thế nào?",
+    "difficulty": "easy",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "2.6. Dao ham"
+  },
+  {
+    "id": "RAG_064",
+    "query": "Theo nội dung của mục 2.6, tại sao việc chứng minh rằng hàm $f(x)=\\cos x^2$ không liên tục trên $[0,+\\infty)$ giúp khẳng định rằng hàm này cũng không khả vi trên cùng khoảng?",
+    "difficulty": "medium",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "2.6. Dao ham"
+  },
+  {
+    "id": "RAG_065",
+    "query": "Theo phần 2.6.3, đạo hàm của hàm số hằng số $y = C$ là gì?",
+    "difficulty": "easy",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "2.6.3. Dao ham cia cac ham so thong dung"
+  },
+  {
+    "id": "RAG_066",
+    "query": "Nếu $y = \\frac{f(x)}{g(x)}$ và $g(x) \\neq 0$, công thức đạo hàm của $y$ được đưa ra trong mục 2.6.3 như thế nào?",
+    "difficulty": "medium",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "2.6.3. Dao ham cia cac ham so thong dung"
+  },
+  {
+    "id": "RAG_067",
+    "query": "Theo định nghĩa trong phần 2.6.4, công thức đạo hàm của hàm y = arcsin x là gì?",
+    "difficulty": "easy",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "2.6.4. Dao ham cua cac ham so nguoc"
+  },
+  {
+    "id": "RAG_068",
+    "query": "Trong phần 2.6.4, đạo hàm của hàm y = arccos x được xác định trên khoảng nào và tại sao cần giới hạn x trong (-1, 1)?",
+    "difficulty": "medium",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "2.6.4. Dao ham cua cac ham so nguoc"
+  },
+  {
+    "id": "RAG_069",
+    "query": "Theo phần 2.7, vi phân của hàm số $f(x)$ được định nghĩa như thế nào và ký hiệu nào được dùng để biểu thị $df(x)$?",
+    "difficulty": "easy",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "2.7. Vi phan cua ham só"
+  },
+  {
+    "id": "RAG_070",
+    "query": "Trong đoạn văn, công thức $f(x+\\Delta_x)-f(x)=f'(x)\\Delta_x+o(\\Delta_x)$ được đưa ra. Khi nào và như thế nào chúng ta có thể sử dụng vi phân $df(x)=f'(x)dx$ để xấp xỉ giá trị $f(x+\\Delta_x)$?",
+    "difficulty": "medium",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "2.7. Vi phan cua ham só"
+  },
+  {
+    "id": "RAG_071",
+    "query": "Trong phần 2.8, công thức vi phân của hàm số $f(x)$ được viết như thế nào?",
+    "difficulty": "easy",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "2.8. Dao ham va vi phan cap cao"
+  },
+  {
+    "id": "RAG_072",
+    "query": "Theo các tính chất vi phân trong mục 2.8, làm thế nào để tính vi phân của hàm số $\\frac{f(x)}{g(x)}$ và yêu cầu nào cần có đối với $g(x)$?",
+    "difficulty": "medium",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "2.8. Dao ham va vi phan cap cao"
+  },
+  {
+    "id": "RAG_073",
+    "query": "Theo phần 2.8.1, ký hiệu $f^{\\prime\\prime}(x)$ đại diện cho gì?",
+    "difficulty": "easy",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "2.8.1. Dinh nghia"
+  },
+  {
+    "id": "RAG_074",
+    "query": "Trong định nghĩa của phần 2.8.1, nếu $f^{(n-1)}(x)$ tồn tại và khả vi tại $x$, thì $f^{(n)}(x)$ được định nghĩa như thế nào và ký hiệu nào được dùng?",
+    "difficulty": "medium",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "2.8.1. Dinh nghia"
+  },
+  {
+    "id": "RAG_075",
+    "query": "Trong phần 2.8.2, công thức tính đạo hàm cấp n của tổng (hoặc hiệu) hai hàm f(x) và g(x) là gì?",
+    "difficulty": "easy",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "2.8.2. Tính chất"
+  },
+  {
+    "id": "RAG_076",
+    "query": "Theo tính chất (u v)^{(n)} trong mục 2.8.2, nếu u(x)=e^{x} và v(x)=\\sin x, làm thế nào để viết công thức tổng quát cho đạo hàm cấp n của hàm f(x)=u(x)v(x) và cần lưu ý gì về các đạo hàm bậc k của u và v?",
+    "difficulty": "medium",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "2.8.2. Tính chất"
+  },
+  {
+    "id": "RAG_077",
+    "query": "Trong mục 2.8.3 “Các định lý về hàm khả vi”, định nghĩa “điểm cực đại địa phương” của hàm số f(x) trên miền D là gì?",
+    "difficulty": "easy",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "2.8.3. Cac dinh ly ve ham khä vi"
+  },
+  {
+    "id": "RAG_078",
+    "query": "Theo mục 2.8.3, làm thế nào để phân biệt một điểm cực đại địa phương và một điểm cực đại toàn cục của hàm số f(x) trên miền D? Cụ thể, điều kiện tồn tại δ trong định nghĩa của mỗi loại cực trị là gì?",
+    "difficulty": "medium",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "2.8.3. Cac dinh ly ve ham khä vi"
+  },
+  {
+    "id": "RAG_079",
+    "query": "Trong mục 2.9.2 \"Phần dư Taylor\", phần dư $R_{n}(x)$ được định nghĩa như thế nào?",
+    "difficulty": "easy",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "2.9.2. Phan du Taylor"
+  },
+  {
+    "id": "RAG_080",
+    "query": "Theo Định lý 2.40 trong phần 2.9.2, điều kiện nào cần thỏa mãn để tồn tại $c = x_{0} + \\lambda (x-x_{0})$ (với $\\lambda\\in(0,1)$) sao cho $R_{n}(x)=\\frac{1}{(n+1)!}f^{(n+1)}(c)(x-x_{0})^{n+1}$?",
+    "difficulty": "medium",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "2.9.2. Phan du Taylor"
+  },
+  {
+    "id": "RAG_081",
+    "query": "Theo mục 2.11.1, định nghĩa một tập D ⊆ ℝ là tập lồi như thế nào?",
+    "difficulty": "easy",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "2.11. Hàm lồi (đọc thêm)"
+  },
+  {
+    "id": "RAG_082",
+    "query": "Trong phần 2.11, nếu hàm f(x) được gọi là hàm lồi chặt trên tập lồi D, thì bất đẳng thức nào phải đúng với mọi x₁, x₂ ∈ D và λ ∈ (0, 1)?",
+    "difficulty": "medium",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "2.11. Hàm lồi (đọc thêm)"
+  },
+  {
+    "id": "RAG_083",
+    "query": "Trong bất đẳng thức Jensen, nếu f là hàm lồi trên D, các hệ số λ₁, λ₂, …, λₙ thuộc [0,1] và tổng chúng bằng 1, công thức bất đẳng thức Jensen được viết như thế nào?",
+    "difficulty": "easy",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "2.11.2. Bất đẳng thức Jensen"
+  },
+  {
+    "id": "RAG_084",
+    "query": "Trong chứng minh bằng quy nạp của bất đẳng thức Jensen, khi chuyển từ n điểm sang n+1 điểm, ta cần áp dụng tính chất nào của hàm lồi và làm thế nào để tách tổng λᵢxᵢ thành một tổ hợp tuyến tính của hai phần để sử dụng bất đẳng thức cho n điểm?",
+    "difficulty": "medium",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "2.11.2. Bất đẳng thức Jensen"
+  },
+  {
+    "id": "RAG_085",
+    "query": "Trong Định lý 2.47 (phần 2.11.3. Điều kiện cần và đủ của hàm lồi), hàm g(x) được định nghĩa như thế nào và nó phải tăng trên các miền D₁ = {x∈D : x < a} và D₂ = {x∈D : x > a}?",
+    "difficulty": "easy",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "2.11.3. Điều kiện cần và đủ của hàm lồi"
+  },
+  {
+    "id": "RAG_086",
+    "query": "Trong chứng minh chiều \"⇐\" của Định lý 2.47, tại sao việc chọn λ = (x₁‑x₂)/(a‑x₂) (với a < x₁ < x₂) và áp dụng bất đẳng thức lồi của f(x) dẫn tới việc chứng minh rằng g(x) = (f(x)‑f(a))/(x‑a) tăng trên D₁ và D₂?",
+    "difficulty": "medium",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "2.11.3. Điều kiện cần và đủ của hàm lồi"
+  },
+  {
+    "id": "RAG_087",
+    "query": "Trong phần 2.11.4, định lý 2.48 cho biết hàm số f(x) lồi trên D khi và chỉ khi điều gì về đạo hàm bậc nhất của f?",
+    "difficulty": "easy",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "2.11.4. Cực trị của hàm lồi"
+  },
+  {
+    "id": "RAG_088",
+    "query": "Theo định lý 2.50(ii), nếu hàm số f(x) lồi chặt và khả vi trên D, và tồn tại một khoảng (x₀-δ, x₀+δ) ⊆ D, thì điều kiện nào cần và đủ để x₀ là điểm cực tiểu toàn cục của f?",
+    "difficulty": "medium",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "2.11.4. Cực trị của hàm lồi"
+  },
+  {
+    "id": "RAG_089",
+    "query": "Trong phần 3.1.2 “Ý nghĩa hình học”, công thức của sigma_P được viết như thế nào?",
+    "difficulty": "easy",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "3.1.2. Ý nghĩa hình học"
+  },
+  {
+    "id": "RAG_090",
+    "query": "Theo phần 3.1.2, nếu hàm f(x) ≥ 0 trên đoạn [a,b] thì sigma_n được hiểu là tổng diện tích các hình chữ nhật; làm sao giới hạn của sigma_n khi n → ∞ cho ta giá trị của tích phân I = ∫_{-1}^{2} x^2 dx?",
+    "difficulty": "medium",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "3.1.2. Ý nghĩa hình học"
+  },
+  {
+    "id": "RAG_091",
+    "query": "Trong phần 3.1.3, tổng Darboux dưới $s_{P}$ được định nghĩa như thế nào?",
+    "difficulty": "easy",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "3.1.3. Tổng Darboux trên và dưới"
+  },
+  {
+    "id": "RAG_092",
+    "query": "Nếu $P_{1}\\subseteq P_{2}$, mối quan hệ giữa các tổng Darboux trên $S_{P}$ và dưới $s_{P}$ của các phân hoạch $P_{1}$ và $P_{2}$ là gì?",
+    "difficulty": "medium",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "3.1.3. Tổng Darboux trên và dưới"
+  },
+  {
+    "id": "RAG_093",
+    "query": "Trong Định lý 3.3 của phần 3.1.4, điều kiện ii) \"\\lim_{\\Delta_P \\to 0} (S_P - s_P) = 0\" có nghĩa gì và nó liên quan như thế nào tới khái niệm hàm số khả tích trên đoạn [a, b]?",
+    "difficulty": "easy",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "3.1.4. Các điều kiện khả tích"
+  },
+  {
+    "id": "RAG_094",
+    "query": "Giả sử ta có hai phép chia P₁ và P₂ của đoạn [a, b] sao cho P = P₁ \\cup P₂. Từ các bất đẳng thức s_{P₁} ≤ s_P ≤ S_P ≤ S_{P₂} trong phần chứng minh, giải thích tại sao suy ra s_{P₁} ≤ S_{P₂} với mọi P₁, P₂ và cách điều này hỗ trợ việc chứng minh tính khả tích của hàm f(x).",
+    "difficulty": "medium",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "3.1.4. Các điều kiện khả tích"
+  },
+  {
+    "id": "RAG_095",
+    "query": "Trong phần 3.2 \"Tinh chat\", công thức nào mô tả tính chất tuyến tính của tích phân khi cộng hai hàm khả tích $f(x)$ và $g(x)$ trên đoạn $[a,b]$?",
+    "difficulty": "easy",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "3.2. Tinh chat"
+  },
+  {
+    "id": "RAG_096",
+    "query": "Theo phần 3.2, nếu biết rằng $a \\le g(x)$ với mọi $x \\in [a,b]$ và $f(x)$ cũng khả tích trên $[a,b]$, thì mối quan hệ nào giữa $\\int_a^b f(x)dx$ và $\\int_a^b g(x)dx$ được suy ra và dưới giả thiết nào?",
+    "difficulty": "medium",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "3.2. Tinh chat"
+  },
+  {
+    "id": "RAG_097",
+    "query": "Trong phần 3.3.1, nguyên hàm của hàm số $f(x)$ được định nghĩa như thế nào?",
+    "difficulty": "easy",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "3.3. Mối quan hệ giữa nguyên hàm và tích phân xác định"
+  },
+  {
+    "id": "RAG_098",
+    "query": "Theo phần 3.3, khi nào bất đẳng thức Cauchy‑Schwarz $\\left(\\int_a^b f(x)g(x)dx\\right)^2 \\le \\int_a^b f^2(x)dx\\,\\int_a^b g^2(x)dx$ được suy ra, và điều kiện nào về các hằng số $A, B, C$ trong biểu thức $A y^2 + 2By + C$ phải thỏa mãn?",
+    "difficulty": "medium",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "3.3. Mối quan hệ giữa nguyên hàm và tích phân xác định"
+  },
+  {
+    "id": "RAG_099",
+    "query": "Trong phần 3.3.2, hàm nguyên hàm \\(\\varphi(x)\\) được định nghĩa như thế nào đối với một hàm số \\(f(x)\\) khả tích trên \\([a,b]\\)?",
+    "difficulty": "easy",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "3.3.2. Hàm tích"
+  },
+  {
+    "id": "RAG_100",
+    "query": "Theo Định lý 3.10 trong phần 3.3.2, nếu \\(f(x)\\) liên tục trên \\([a,b]\\) thì \\(\\varphi'(x)=f(x)\\) với mọi \\(x\\in[a,b]\\). Khi nào (điều kiện nào) chúng ta có thể áp dụng định lý này để tính đạo hàm của hàm tích \\(\\varphi(x)=\\int_a^x f(t)dt\\)?",
+    "difficulty": "medium",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "3.3.2. Hàm tích"
+  },
+  {
+    "id": "RAG_101",
+    "query": "Công thức Newton‑Leibnitz trong phần 3.3.3 được viết như thế nào?",
+    "difficulty": "easy",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "3.3.3. Công thức Newton-Leibnitz"
+  },
+  {
+    "id": "RAG_102",
+    "query": "Trong định lý 3.11, để áp dụng công thức Newton‑Leibnitz, hàm f(x) cần thỏa mãn những điều kiện gì và F(x) phải là gì?",
+    "difficulty": "medium",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "3.3.3. Công thức Newton-Leibnitz"
+  },
+  {
+    "id": "RAG_103",
+    "query": "Trong phần 3.4.1, công thức đổi biến được nêu như thế nào? Cụ thể, nếu đặt $x=\\varphi(t)$ thì tích phân $\\int_a^b f(x)dx$ chuyển thành dạng gì?",
+    "difficulty": "easy",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "3.4.1. Phương pháp đổi biến"
+  },
+  {
+    "id": "RAG_104",
+    "query": "Theo định lý 3.13, để áp dụng phương pháp đổi biến cần thỏa mãn những điều kiện gì về hàm $\\varphi(t)$ và các giới hạn $\\alpha,\\beta$? Và trong ví dụ 3.12, tại sao ta chọn $\\varphi(t)=\\frac{x}{2}$ (hoặc $x=2t$) để tính tích phân $\\int_0^2 \\frac{1}{\\sqrt{4+x^2}}dx$?",
+    "difficulty": "medium",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "3.4.1. Phương pháp đổi biến"
+  },
+  {
+    "id": "RAG_105",
+    "query": "Trong phần 3.5, công thức tổng quát của tích phân hàm thực hữu tỉ được viết dưới dạng ${\\cal I}=\\int_{a}^{b}\\frac{P_{n}(x)}{Q_{m}(x)}dx$ với $P_{n},Q_{m}$ là các đa thức bậc $n,m$. Ở ví dụ tính $I$, biểu thức $x\\arcsin\\sqrt{\\frac{x}{1+x}}\\big|_{0}^{3}-\\frac{1}{2}\\int\\frac{x\\,dx}{\\sqrt{x}(1+x)}$ được rút gọn thành gì?",
+    "difficulty": "easy",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "3.5. Tích phân của hàm thực hữu tỉ"
+  },
+  {
+    "id": "RAG_106",
+    "query": "Trong ví dụ tính $I$, tại sao người giải đổi biến $x=t^{2}$ (hay $t=\\sqrt{x}$) và viết $\\int\\frac{(\\sqrt{x})^{2}\\,d\\sqrt{x}}{1+(\\sqrt{x})^{2}}$, sau đó tính được $I=\\frac{4\\pi}{3}-\\sqrt{3}$? Hãy giải thích các bước biến đổi và điều kiện áp dụng của phép đổi biến này trong việc tính tích phân hàm thực hữu tỉ.",
+    "difficulty": "medium",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "3.5. Tích phân của hàm thực hữu tỉ"
+  },
+  {
+    "id": "RAG_107",
+    "query": "Công thức tính tích phân I₆ được nêu trong phần 3.5.2 (Phương pháp đồng nhất hệ số) là gì?",
+    "difficulty": "easy",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "3.5.2. Phương pháp đồng nhất hệ số"
+  },
+  {
+    "id": "RAG_108",
+    "query": "Trong bước 1 của phương pháp đồng nhất hệ số, tại sao các đa thức bậc hai (x² + b_i x + c_i) phải thỏa mãn điều kiện Δ_i = b_i² – 4c_i < 0 và điều kiện này ảnh hưởng như thế nào đến việc phân tích thành các phần tử riêng?",
+    "difficulty": "medium",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "3.5.2. Phương pháp đồng nhất hệ số"
+  },
+  {
+    "id": "RAG_109",
+    "query": "Trong phần 3.6, khi đổi biến t = tan\\(\\frac{x}{2}\\), công thức biểu diễn sin x và cos x theo t là gì?",
+    "difficulty": "easy",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "3.6. Tích phân của hàm lượng giác"
+  },
+  {
+    "id": "RAG_110",
+    "query": "Trong ví dụ tính J = \\int_{1}^{\\sqrt{3}} \\frac{dx}{(1+x^{2})^{2}}, tại sao ta áp dụng công thức I_{5} (phương pháp t = tan\\(\\frac{x}{2}\\)) và kết quả cuối cùng của J được tính ra là \\(\\frac{1}{8}+\\frac{\\pi}{24}\\)?",
+    "difficulty": "medium",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "3.6. Tích phân của hàm lượng giác"
+  },
+  {
+    "id": "RAG_111",
+    "query": "Trong phần 3.7.1, công thức tính diện tích của miền được bao bởi hai đường cong y = f(x) và y = g(x) từ x = a đến x = b là gì?",
+    "difficulty": "easy",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "3.7. Một vài ứng dụng của tích phân"
+  },
+  {
+    "id": "RAG_112",
+    "query": "Trong ví dụ 3.25, để tính diện tích miền giới hạn bởi đường thẳng x + y = 0 và parabol y = 2x - x^2, tại những điểm nào hai đường này cắt nhau và tích phân nào được dùng để tính diện tích?",
+    "difficulty": "medium",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "3.7. Một vài ứng dụng của tích phân"
+  },
+  {
+    "id": "RAG_113",
+    "query": "Trong phần 3.7.2, công thức tính độ dài đường cong dạng I (trong hệ tọa độ Oxy) được cho như thế nào?",
+    "difficulty": "easy",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "3.7.2. Tính độ dài đường cong"
+  },
+  {
+    "id": "RAG_114",
+    "query": "Khi một đường cong được cho bởi phương trình cực r = r(φ) trên khoảng φ ∈ [α, β], tại sao công thức độ dài đường cong cần tính √{r²(φ) + [r'(φ)]²} và trong những trường hợp nào chúng ta nên dùng công thức dạng II thay vì công thức dạng I?",
+    "difficulty": "medium",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "3.7.2. Tính độ dài đường cong"
+  },
+  {
+    "id": "RAG_115",
+    "query": "Trong phần 3.7.3, công thức tính thể tích của một vật thể được tạo ra bằng cách quay vùng giới hạn bởi y = f(x) ≥ 0, x = a và x = b quanh trục Ox là gì?",
+    "difficulty": "easy",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "3.7.3. Tính thể tích của vật thể"
+  },
+  {
+    "id": "RAG_116",
+    "query": "Nếu một vật thể H được giới hạn bởi các mặt phẳng x = a và x = b (với a < b) và các mặt cắt tại x = x₀ có diện tích S(x₀), thì công thức tổng thể tích V_H = ∫ₐᵇ S(x)dx áp dụng trong trường hợp nào và làm sao ta tính S(x) khi vùng quay quanh trục Ox?",
+    "difficulty": "medium",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "3.7.3. Tính thể tích của vật thể"
+  },
+  {
+    "id": "RAG_117",
+    "query": "Trong phần 3.7.4, công thức tính diện tích mặt tròn xoay quanh trục Ox của một đường y = f(x) trên đoạn [a,b] được cho như thế nào?",
+    "difficulty": "easy",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "3.7.4. Tính diện tích của mặt tròn xoay"
+  },
+  {
+    "id": "RAG_118",
+    "query": "Trong ví dụ tính thể tích của khối tròn xoay tạo thành từ cung AB, tại sao diện tích một mặt cắt đứng S(x) được viết dưới dạng S(x)=\\frac{2bcx}{a}\\sqrt{1-\\frac{x^{2}}{a^{2}}} và tích phân của nó cho kết quả V=\\frac{2}{3}abc? Hãy giải thích các bước và giả thiết liên quan.",
+    "difficulty": "medium",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "3.7.4. Tính diện tích của mặt tròn xoay"
+  },
+  {
+    "id": "RAG_119",
+    "query": "Định nghĩa tích phân suy rộng với cận +∞ trong phần 3.8.1 là gì và ký hiệu như thế nào?",
+    "difficulty": "easy",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "3.8. Tích phân vô hạn"
+  },
+  {
+    "id": "RAG_120",
+    "query": "Theo phần 3.8, tích phân ∫_{-\\infty}^{+\\infty} f(x)dx hội tụ khi và chỉ khi nào? Hãy giải thích mối quan hệ giữa tích phân suy rộng ∫_{a}^{+\\infty} f(x)dx và ∫_{-\\infty}^{a} f(x)dx.",
+    "difficulty": "medium",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "3.8. Tích phân vô hạn"
+  },
+  {
+    "id": "RAG_121",
+    "query": "Theo Định lý 3.34, điều kiện cần và đủ để tích phân ∫_a^{+∞} f(x)dx hội tụ khi f(x) ≥ 0 là gì?",
+    "difficulty": "easy",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "3.8.2. Các điều kiện hội tụ của tích phân suy rộng"
+  },
+  {
+    "id": "RAG_122",
+    "query": "Giả sử hai hàm f(x) và g(x) khả tích trên [a,b] với mọi b>a và thỏa mãn 0 ≤ f(x) ≤ g(x) trên [a,+∞). Nếu ∫_a^{+∞} g(x)dx hội tụ, thì ∫_a^{+∞} f(x)dx có hội tụ không? Hãy giải thích dựa trên Định lý 3.35.",
+    "difficulty": "medium",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "3.8.2. Các điều kiện hội tụ của tích phân suy rộng"
+  },
+  {
+    "id": "RAG_123",
+    "query": "Theo mục 3.9.1, \"tích phân suy rộng\" được định nghĩa như thế nào và ký hiệu của nó là gì?",
+    "difficulty": "easy",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "3.9.1. Định nghĩa"
+  },
+  {
+    "id": "RAG_124",
+    "query": "Trong phần 3.9.1, nếu hàm f(x) khả tích trên mọi đoạn [a,c] (với c<b) và lim_{x→b^-}f(x)=∞, thì điều kiện nào cần thỏa mãn để tích phân suy rộng \\(\\int_a^b f(x)dx\\) được gọi là hội tụ?",
+    "difficulty": "medium",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "3.9.1. Định nghĩa"
+  },
+  {
+    "id": "RAG_125",
+    "query": "Theo phần 3.9.2, công thức tính tích phân suy rộng Φ(x)=\\int_{a}^{b}\\frac{dx}{(x-a)^{\\alpha}} cho \\alpha<1 là gì?",
+    "difficulty": "easy",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "3.9.2. Quan hệ giữa hai loại tích phân suy rộng"
+  },
+  {
+    "id": "RAG_126",
+    "query": "Trong phần 3.9.2, khi đổi biến x = a + \\frac{1}{y} (y\\to+\\infty) để biến đổi tích phân suy rộng có cận hữu hạn và cực điểm a, biểu thức tích phân mới được viết dưới dạng nào và điều kiện nào cần thỏa mãn để phép biến đổi này hợp lệ?",
+    "difficulty": "medium",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "3.9.2. Quan hệ giữa hai loại tích phân suy rộng"
+  },
+  {
+    "id": "RAG_127",
+    "query": "Tiêu chuẩn Cauchy cho một chuỗi $\\sum_{n=1}^{\\infty} a_n$ được phát biểu như thế nào trong phần 4.1.2?",
+    "difficulty": "easy",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_4",
+    "relevant_chapter": "Chương 4",
+    "relevant_section": "4.1.2. Các điều kiện hội tụ"
+  },
+  {
+    "id": "RAG_128",
+    "query": "Trong ví dụ 4.3, làm thế nào tiêu chuẩn Cauchy được áp dụng để chứng minh chuỗi điều hòa $\\displaystyle\\sum_{n=1}^{\\infty}\\frac{1}{n}$ phân kỳ?",
+    "difficulty": "medium",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_4",
+    "relevant_chapter": "Chương 4",
+    "relevant_section": "4.1.2. Các điều kiện hội tụ"
+  },
+  {
+    "id": "RAG_129",
+    "query": "Theo tính chất I trong phần 4.1.3, chuỗi ∑_{n=1}^{+\\infty} a_n có hội tụ hay phân kỳ có phụ thuộc vào các số hạng đầu tiên của chuỗi không?",
+    "difficulty": "easy",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_4",
+    "relevant_chapter": "Chương 4",
+    "relevant_section": "4.1.3. Các tính chất"
+  },
+  {
+    "id": "RAG_130",
+    "query": "Nếu chuỗi ∑_{n=1}^{+\\infty} a_n hội tụ, thì chuỗi ∑_{n=1}^{+\\infty} \\lambda a_n (với \\lambda \\in \\mathbb{R}) cũng hội tụ không? Hãy giải thích dựa trên các tính chất đã nêu trong mục 4.1.3.",
+    "difficulty": "medium",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_4",
+    "relevant_chapter": "Chương 4",
+    "relevant_section": "4.1.3. Các tính chất"
+  },
+  {
+    "id": "RAG_131",
+    "query": "Trong phần 4.2.1 của giáo trình, chuỗi số dương được định nghĩa như thế nào?",
+    "difficulty": "easy",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_4",
+    "relevant_chapter": "Chương 4",
+    "relevant_section": "4.2. Chuỗi số dương"
+  },
+  {
+    "id": "RAG_132",
+    "query": "Theo định lý 4.7 (so sánh) trong phần 4.2.2, nếu biết chuỗi \\(\\sum_{n=1}^{\\infty} b_n\\) hội tụ và có \\(a_n \\le b_n\\) với \\(n \\ge n_0\\), chúng ta có thể kết luận gì về chuỗi \\(\\sum_{n=1}^{\\infty} a_n\\)?",
+    "difficulty": "medium",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_4",
+    "relevant_chapter": "Chương 4",
+    "relevant_section": "4.2. Chuỗi số dương"
+  },
+  {
+    "id": "RAG_133",
+    "query": "Trong phần 4.3.1, chuỗi dàn dấu được định nghĩa như thế nào? Cụ thể công thức tổng của chuỗi dàn dấu là gì?",
+    "difficulty": "easy",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_4",
+    "relevant_chapter": "Chương 4",
+    "relevant_section": "4.3. Chuỗi dàn dấu"
+  },
+  {
+    "id": "RAG_134",
+    "query": "Theo định lý Leibniz (định lý 4.17) trong phần 4.3.2, chuỗi dàn dấu ∑_{k=1}^{\\infty}(-1)^{k-1}a_k hội tụ khi nào? Yêu cầu nào đối với dãy số dương a_k?",
+    "difficulty": "medium",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_4",
+    "relevant_chapter": "Chương 4",
+    "relevant_section": "4.3. Chuỗi dàn dấu"
+  },
+  {
+    "id": "RAG_135",
+    "query": "Trong định lý Leibniz (định lý 4.17) của phần 4.3.2, chuỗi dàn dấu \\(\\sum_{k=1}^{+\\infty}(-1)^{k-1}a_k\\) hội tụ khi thỏa mãn những điều kiện gì?",
+    "difficulty": "easy",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_4",
+    "relevant_chapter": "Chương 4",
+    "relevant_section": "4.3.2. Dấu hiệu hội tụ"
+  },
+  {
+    "id": "RAG_136",
+    "query": "Trong chứng minh của định lý Leibniz ở mục 4.3.2, tại sao dãy con \\( (S_{2m}) \\) được khẳng định là đơn điệu tăng và bị chặn trên, và cách chứng minh này dẫn tới kết luận \\(\\lim_{m\\to\\infty} S_{2m}=S\\) như thế nào?",
+    "difficulty": "medium",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_4",
+    "relevant_chapter": "Chương 4",
+    "relevant_section": "4.3.2. Dấu hiệu hội tụ"
+  },
+  {
+    "id": "RAG_137",
+    "query": "Trong phần 4.4.1, chuỗi hàm được định nghĩa như thế nào và tổng riêng $S_n(x)$ được tính như thế nào?",
+    "difficulty": "easy",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_4",
+    "relevant_chapter": "Chương 4",
+    "relevant_section": "4.4. Chuỗi hàm"
+  },
+  {
+    "id": "RAG_138",
+    "query": "Theo định nghĩa trong mục 4.4.1, để một chuỗi hàm $\\sum_{k=1}^{\\infty} f_k(x)$ hội tụ đều trên miền $D$, cần thỏa mãn điều kiện gì và làm sao kiểm tra điều kiện này dựa trên các tổng riêng $S_n(x)$?",
+    "difficulty": "medium",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_4",
+    "relevant_chapter": "Chương 4",
+    "relevant_section": "4.4. Chuỗi hàm"
+  },
+  {
+    "id": "RAG_139",
+    "query": "Trong phần 4.4.2, phần dư bậc n của chuỗi hàm $(*)$ được định nghĩa như thế nào?",
+    "difficulty": "easy",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_4",
+    "relevant_chapter": "Chương 4",
+    "relevant_section": "4.4.2. Các điều kiện hội tụ đều"
+  },
+  {
+    "id": "RAG_140",
+    "query": "Theo định lý Cauchy trong mục 4.4.2, chuỗi hàm $(*)$ hội tụ đều trên miền $D$ khi và chỉ khi điều kiện gì được thỏa mãn?",
+    "difficulty": "medium",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_4",
+    "relevant_chapter": "Chương 4",
+    "relevant_section": "4.4.2. Các điều kiện hội tụ đều"
+  },
+  {
+    "id": "RAG_141",
+    "query": "Trong đoạn văn, tại sao bất đẳng thức \\(\\bigl|\\frac{\\sin n\\alpha x}{n^{3}+n-1}\\bigr| \\le \\frac{1}{n^{3}}\\) đúng với mọi \\(n\\in\\mathbb{N}^*\\)?",
+    "difficulty": "easy",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_4",
+    "relevant_chapter": "Chương 4",
+    "relevant_section": "4.4.3. Tính chất của chuỗi hàm hội tụ đều"
+  },
+  {
+    "id": "RAG_142",
+    "query": "Theo Định lý 4.23, nếu chuỗi hàm \\(\\sum_{n=1}^{\\infty} f_n(x)\\) hội tụ đều trên miền \\(D\\) và mỗi hàm \\(f_k(x)\\) liên tục trên \\(D\\), tại sao hàm giới hạn \\(f(x)\\) cũng phải liên tục trên \\(D\\)?",
+    "difficulty": "medium",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_4",
+    "relevant_chapter": "Chương 4",
+    "relevant_section": "4.4.3. Tính chất của chuỗi hàm hội tụ đều"
+  },
+  {
+    "id": "RAG_143",
+    "query": "Theo Định lý 4.29 trong phần 4.5.3, công thức tính bán kính hội tụ R của một chuỗi hàm dựa trên giới hạn ρ = \\lim_{n\\to\\infty}\\left|\\frac{a_{n+1}}{a_n}\\right| là gì?",
+    "difficulty": "easy",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_4",
+    "relevant_chapter": "Chương 4",
+    "relevant_section": "4.5.3. Quy tắc tìm bán kính hội tụ"
+  },
+  {
+    "id": "RAG_144",
+    "query": "Trong quy tắc tìm bán kính hội tụ (phần 4.5.3), nếu giới hạn ρ = \\lim_{n\\to\\infty}\\sqrt[n]{|a_n|} bằng 0 thì bán kính hội tụ R của chuỗi hàm sẽ như thế nào và chuỗi hội tụ ở mọi giá trị của x hay có ngoại lệ nào không?",
+    "difficulty": "medium",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_4",
+    "relevant_chapter": "Chương 4",
+    "relevant_section": "4.5.3. Quy tắc tìm bán kính hội tụ"
+  },
+  {
+    "id": "RAG_145",
+    "query": "Theo Định lý 4.31, nếu một chuỗi lũy thừa có bán kính hội tụ R > 0 thì nó hội tụ đều trên đoạn nào?",
+    "difficulty": "easy",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_4",
+    "relevant_chapter": "Chương 4",
+    "relevant_section": "4.5.4. Tính hội tụ đều của chuỗi lũy thừa"
+  },
+  {
+    "id": "RAG_146",
+    "query": "Trong chứng minh Định lý 4.31, tại sao ta có thể dùng bất đẳng thức |a_n x_0^n| ≤ |a_n (R')^n| cho mọi x_0 ∈ [‑R', R'] và từ đó áp dụng Định lý 4.21 để kết luận chuỗi lũy thừa hội tụ đều?",
+    "difficulty": "medium",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_4",
+    "relevant_chapter": "Chương 4",
+    "relevant_section": "4.5.4. Tính hội tụ đều của chuỗi lũy thừa"
+  },
+  {
+    "id": "RAG_147",
+    "query": "Trong phần 4.6.1, chuỗi lượng giác (*) được viết dưới dạng nào và các hệ số aₙ, bₙ có tính chất gì?",
+    "difficulty": "easy",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_4",
+    "relevant_chapter": "Chương 4",
+    "relevant_section": "4.6. Chuỗi Fourier3 4.6.1. Chuỗi lượng giác"
+  },
+  {
+    "id": "RAG_148",
+    "query": "Theo định lý 4.38, nếu hai chuỗi ∑ₙ₌₀^∞ aₙ và ∑ₙ₌₀^∞ bₙ hội tụ tuyệt đối, thì chuỗi lượng giác (*) có gì về tính hội tụ (cụ thể là hội tụ đều) trên khoảng [-π, π]?",
+    "difficulty": "medium",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_4",
+    "relevant_chapter": "Chương 4",
+    "relevant_section": "4.6. Chuỗi Fourier3 4.6.1. Chuỗi lượng giác"
+  },
+  {
+    "id": "RAG_149",
+    "query": "Khai triển Fourier của hàm số có chu kỳ $2\\pi$ được định nghĩa như thế nào và công thức tổng quát của nó là gì?",
+    "difficulty": "easy",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_4",
+    "relevant_chapter": "Chương 4",
+    "relevant_section": "4.6.2. Khai triển Fourier của hàm số có chu kỳ $2\\pi$"
+  },
+  {
+    "id": "RAG_150",
+    "query": "Trong phần 4.6.2, nếu $\\displaystyle\\lim_{n\\to\\infty} a_n\\sin\\bigl(n+\\frac12\\bigr)x = 0$, dãy $S_n(x)$ hội tụ tới $S(x)$ như thế nào và dưới điều kiện gì (đối với tập $D$)?",
+    "difficulty": "medium",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_4",
+    "relevant_chapter": "Chương 4",
+    "relevant_section": "4.6.2. Khai triển Fourier của hàm số có chu kỳ $2\\pi$"
+  },
+  {
+    "id": "RAG_151",
+    "query": "Trong phần 4.6.3, công thức tính hệ số Fourier $a_0$ của hàm $g(t)$ là gì?",
+    "difficulty": "easy",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_4",
+    "relevant_chapter": "Chương 4",
+    "relevant_section": "4.6.3. Khai triển Fourier của hàm số có chu kỳ $2 T$"
+  },
+  {
+    "id": "RAG_152",
+    "query": "Tại sao trong phần 4.6.3, khi $f(x)$ và $f'(x)$ liên tục trên đoạn, ta có thể khẳng định $f(x)=S(x)$? Điều kiện nào của Định lý 4.40 được áp dụng?",
+    "difficulty": "medium",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_4",
+    "relevant_chapter": "Chương 4",
+    "relevant_section": "4.6.3. Khai triển Fourier của hàm số có chu kỳ $2 T$"
+  },
+  {
+    "id": "RAG_153",
+    "query": "Trong phần 4.6.4, Dạng I của khai triển Fourier được định nghĩa như thế nào và chu kỳ $2T$ của hàm $F(x)$ liên hệ như thế nào với các điểm $a,b$ của khoảng $[a,b]$?",
+    "difficulty": "easy",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_4",
+    "relevant_chapter": "Chương 4",
+    "relevant_section": "4.6.4. Khai triển Fourier của hàm số xác định trên $[a,b]$, $[a,b)$, $(a,b]$, hay $(a,b)$. Giả sử cho hàm số $f(x)$ xác định trên $[a,b]$, ta thắc triển hàm $f(x)$ thành hàm số $F(x)$ xác định trên $\\mathbb{R}$ và có chu kỳ $2T$. Khi đó ta có khai triển Fourier của hàm $F(x)$ và cũng có khai triển Fourier của hàm $f(x)$ với $x \\in [a,b]$. Thắc triển hàm $f(x)$, $F(x)$ có các dạng sau: Dạng I. Chu kỳ của hàm số $F(x)$ là $2T = b - a$."
+  },
+  {
+    "id": "RAG_154",
+    "query": "Khi cho một hàm $f(x)$ xác định trên khoảng $(0,2]$ như trong ví dụ 4.43, làm thế nào để xây dựng hàm $F(x)$ có chu kỳ $2T=2$ trên toàn bộ $\\mathbb{R}$ và tính các hệ số Fourier của $f(x)$ theo Dạng I?",
+    "difficulty": "medium",
+    "subject": "giai_tich_1",
+    "relevant_source": "giai_tich_1_chuong_4",
+    "relevant_chapter": "Chương 4",
+    "relevant_section": "4.6.4. Khai triển Fourier của hàm số xác định trên $[a,b]$, $[a,b)$, $(a,b]$, hay $(a,b)$. Giả sử cho hàm số $f(x)$ xác định trên $[a,b]$, ta thắc triển hàm $f(x)$ thành hàm số $F(x)$ xác định trên $\\mathbb{R}$ và có chu kỳ $2T$. Khi đó ta có khai triển Fourier của hàm $F(x)$ và cũng có khai triển Fourier của hàm $f(x)$ với $x \\in [a,b]$. Thắc triển hàm $f(x)$, $F(x)$ có các dạng sau: Dạng I. Chu kỳ của hàm số $F(x)$ là $2T = b - a$."
+  },
+  {
+    "id": "RAG_155",
+    "query": "Theo đoạn văn, triết học được định nghĩa như thế nào?",
+    "difficulty": "easy",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_1",
+    "relevant_chapter": "Chương 1",
+    "relevant_section": "Chương 1 cung cấp cho sinh viên những tri thức cơ bản về triết học nói chung,"
+  },
+  {
+    "id": "RAG_156",
+    "query": "Trong đoạn văn, nguồn gốc nhận thức và nguồn gốc xã hội của triết học có mối quan hệ như thế nào và chúng ảnh hưởng ra sao đến việc hình thành triết học?",
+    "difficulty": "medium",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_1",
+    "relevant_chapter": "Chương 1",
+    "relevant_section": "Chương 1 cung cấp cho sinh viên những tri thức cơ bản về triết học nói chung,"
+  },
+  {
+    "id": "RAG_157",
+    "query": "Theo đoạn văn, từ tiếng Hy Lạp \"philosophia\" có nghĩa là gì?",
+    "difficulty": "easy",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_1",
+    "relevant_chapter": "Chương 1",
+    "relevant_section": "# b. Khái niệm Triết học"
+  },
+  {
+    "id": "RAG_158",
+    "query": "Dựa trên nội dung của phần \"# b. Khái niệm Triết học\", triết học ở Trung Quốc, Ấn Độ và phương Tây đều được coi như thế nào và vì lý do gì?",
+    "difficulty": "medium",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_1",
+    "relevant_chapter": "Chương 1",
+    "relevant_section": "# b. Khái niệm Triết học"
+  },
+  {
+    "id": "RAG_159",
+    "query": "Trong đoạn \"c. Vấn đề đối tượng của triết học trong lịch sử\" nói rằng đối tượng của triết học là gì?",
+    "difficulty": "easy",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_1",
+    "relevant_chapter": "Chương 1",
+    "relevant_section": "# c. Vấn đề đối tượng của triết học trong lịch sử"
+  },
+  {
+    "id": "RAG_160",
+    "query": "Theo nội dung đoạn trên, tại thời kỳ Cổ đại ở Hy Lạp, triết học được xem là \"khoa học của các khoa học\" vì lý do gì và điều này phản ánh mối quan hệ giữa triết học và các lĩnh vực tri thức khác như thế nào?",
+    "difficulty": "medium",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_1",
+    "relevant_chapter": "Chương 1",
+    "relevant_section": "# c. Vấn đề đối tượng của triết học trong lịch sử"
+  },
+  {
+    "id": "RAG_161",
+    "query": "Trong phần \"# d. Chức năng cơ bản của triết học\", triết học được mô tả là gì?",
+    "difficulty": "easy",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_1",
+    "relevant_chapter": "Chương 1",
+    "relevant_section": "# d. Chức năng cơ bản của triết học"
+  },
+  {
+    "id": "RAG_162",
+    "query": "Theo đoạn văn, tại sao thế giới quan được coi là cơ sở để định hướng nhận thức và hành động của con người?",
+    "difficulty": "medium",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_1",
+    "relevant_chapter": "Chương 1",
+    "relevant_section": "# d. Chức năng cơ bản của triết học"
+  },
+  {
+    "id": "RAG_163",
+    "query": "Trong phần “1.1.2. Vấn đề cơ bản của triết học”, vấn đề cơ bản của triết học được mô tả là gì?",
+    "difficulty": "easy",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_1",
+    "relevant_chapter": "Chương 1",
+    "relevant_section": "1.1.2. Vấn đề cơ bản của triết học"
+  },
+  {
+    "id": "RAG_164",
+    "query": "Theo đoạn văn, cách trả lời hai câu hỏi lớn (bản thể luận và nhận thức luận) sẽ quyết định lập trường của nhà triết học như thế nào và ảnh hưởng ra sao đến việc giải quyết các vấn đề khác trong triết học?",
+    "difficulty": "medium",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_1",
+    "relevant_chapter": "Chương 1",
+    "relevant_section": "1.1.2. Vấn đề cơ bản của triết học"
+  },
+  {
+    "id": "RAG_165",
+    "query": "Theo đoạn văn, chủ nghĩa duy vật được định nghĩa như thế nào?",
+    "difficulty": "easy",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_1",
+    "relevant_chapter": "Chương 1",
+    "relevant_section": "# b. Chủ nghĩa duy vật và chủ nghĩa duy tâm"
+  },
+  {
+    "id": "RAG_166",
+    "query": "Đoạn văn liệt kê ba hình thức cơ bản của chủ nghĩa duy vật là gì, và mỗi hình thức này xuất hiện trong thời kỳ lịch sử nào?",
+    "difficulty": "medium",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_1",
+    "relevant_chapter": "Chương 1",
+    "relevant_section": "# b. Chủ nghĩa duy vật và chủ nghĩa duy tâm"
+  },
+  {
+    "id": "RAG_167",
+    "query": "Theo đoạn văn, thuyết khả tri (thuyết có thể biết) trong triết học khẳng định điều gì về khả năng nhận thức của con người?",
+    "difficulty": "easy",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_1",
+    "relevant_chapter": "Chương 1",
+    "relevant_section": "# c. Thuyết có thể biết (thuyết khả tri) và thuyết không thể biết (thuyết bất khả tri)"
+  },
+  {
+    "id": "RAG_168",
+    "query": "Dựa trên nội dung của phần \"c. Thuyết có thể biết (thuyết khả tri) và thuyết không thể biết (thuyết bất khả tri)\", thuyết khả tri và thuyết bất khả tri có quan hệ như thế nào và thuyết khả tri đưa ra điều kiện nào để khẳng định rằng không có gì là \"không thể biết\"?",
+    "difficulty": "medium",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_1",
+    "relevant_chapter": "Chương 1",
+    "relevant_section": "# c. Thuyết có thể biết (thuyết khả tri) và thuyết không thể biết (thuyết bất khả tri)"
+  },
+  {
+    "id": "RAG_169",
+    "query": "Trong mục “1.1.3. Biện chứng và siêu hình” của giáo trình, khái niệm “biện chứng” được định nghĩa như thế nào?",
+    "difficulty": "easy",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_1",
+    "relevant_chapter": "Chương 1",
+    "relevant_section": "1.1.3. Biện chứng và siêu hình"
+  },
+  {
+    "id": "RAG_170",
+    "query": "Theo phần “1.1.3. Biện chứng và siêu hình”, mối quan hệ giữa khái niệm “biện chứng” và “siêu hình” trong lịch sử triết học được mô tả như thế nào, và chúng ảnh hưởng ra sao đến quan điểm hoài nghi luận thời Phục hưng?",
+    "difficulty": "medium",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_1",
+    "relevant_chapter": "Chương 1",
+    "relevant_section": "1.1.3. Biện chứng và siêu hình"
+  },
+  {
+    "id": "RAG_171",
+    "query": "Trong đoạn \"# a. Khái niệm biện chứng và siêu hình trong lịch sử\" khái niệm “biện chứng” được định nghĩa ban đầu là gì?",
+    "difficulty": "easy",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_1",
+    "relevant_chapter": "Chương 1",
+    "relevant_section": "# a. Khái niệm biện chứng và siêu hình trong lịch sử"
+  },
+  {
+    "id": "RAG_172",
+    "query": "Theo nội dung của phần \"# a. Khái niệm biện chứng và siêu hình trong lịch sử\", các khái niệm “biện chứng” và “siêu hình” được sử dụng như thế nào trong lịch sử triết học và chúng có mối quan hệ gì với nhau?",
+    "difficulty": "medium",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_1",
+    "relevant_chapter": "Chương 1",
+    "relevant_section": "# a. Khái niệm biện chứng và siêu hình trong lịch sử"
+  },
+  {
+    "id": "RAG_173",
+    "query": "Trong phần \"# b. Sự đối lập giữa hai phương pháp tư duy\" của giáo trình, phương pháp siêu hình được định nghĩa như thế nào?",
+    "difficulty": "easy",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_1",
+    "relevant_chapter": "Chương 1",
+    "relevant_section": "# b. Sự đối lập giữa hai phương pháp tư duy"
+  },
+  {
+    "id": "RAG_174",
+    "query": "Theo đoạn văn, phương pháp siêu hình coi nguyên nhân của sự biến đổi của sự vật nằm ở đâu và vì sao nó chỉ xem xét sự vật ở trạng thái tĩnh, đồng nhất?",
+    "difficulty": "medium",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_1",
+    "relevant_chapter": "Chương 1",
+    "relevant_section": "# b. Sự đối lập giữa hai phương pháp tư duy"
+  },
+  {
+    "id": "RAG_175",
+    "query": "Phép biện chứng tự phát thời Cổ đại được mô tả như thế nào trong nội dung về các hình thức của phép biện chứng trong lịch sử?",
+    "difficulty": "easy",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_1",
+    "relevant_chapter": "Chương 1",
+    "relevant_section": "# b. Các hình thức của phép biện chứng trong lịch sử"
+  },
+  {
+    "id": "RAG_176",
+    "query": "Theo đoạn văn, ba hình thức lịch sử của phép biện chứng (tự phát, duy tâm, duy vật) phát triển như thế nào và mối liên hệ giữa chúng là gì?",
+    "difficulty": "medium",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_1",
+    "relevant_chapter": "Chương 1",
+    "relevant_section": "# b. Các hình thức của phép biện chứng trong lịch sử"
+  },
+  {
+    "id": "RAG_177",
+    "query": "Trong phần 1.2.1 a, điều kiện kinh tế - xã hội nào được nêu là nền tảng cho sự ra đời của triết học Mác?",
+    "difficulty": "easy",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_1",
+    "relevant_chapter": "Chương 1",
+    "relevant_section": "1.2. TRIẾT HỌC MÁC - LÊNIN VÀ VAI TRÒ CỦA TRIẾT HỌC MÁC -"
+  },
+  {
+    "id": "RAG_178",
+    "query": "Theo đoạn văn, cách mạng công nghiệp đã làm cho phương thức sản xuất tư bản chủ nghĩa được củng cố như thế nào và điều này liên quan như thế nào đến quan điểm của Mác và Engels về lực lượng sản xuất?",
+    "difficulty": "medium",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_1",
+    "relevant_chapter": "Chương 1",
+    "relevant_section": "1.2. TRIẾT HỌC MÁC - LÊNIN VÀ VAI TRÒ CỦA TRIẾT HỌC MÁC -"
+  },
+  {
+    "id": "RAG_179",
+    "query": "Thời kỳ hình thành tư tưởng triết học của Marx, từ chủ nghĩa duy tâm và dân chủ cách mạng sang chủ nghĩa duy vật và chủ nghĩa cộng sản, diễn ra trong khoảng thời gian nào?",
+    "difficulty": "easy",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_1",
+    "relevant_chapter": "Chương 1",
+    "relevant_section": "# b. Những thời kỳ chủ yếu trong sự hình thành và phát triển của Triết học Mác"
+  },
+  {
+    "id": "RAG_180",
+    "query": "Trong giai đoạn 1841‑1844, quá trình chuyển đổi tư tưởng của Marx từ chủ nghĩa duy tâm sang chủ nghĩa duy vật và chủ nghĩa cộng sản đã được thực hiện như thế nào, và yếu tố nào (ví dụ: ảnh hưởng của Ph. Ăng‑ghen, hoàn cảnh lịch sử, hay nhu cầu cách mạng) đóng vai trò quyết định trong sự chuyển đổi này?",
+    "difficulty": "medium",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_1",
+    "relevant_chapter": "Chương 1",
+    "relevant_section": "# b. Những thời kỳ chủ yếu trong sự hình thành và phát triển của Triết học Mác"
+  },
+  {
+    "id": "RAG_181",
+    "query": "Trong đoạn văn, triết học Mác‑Lênin được mô tả là gì?",
+    "difficulty": "easy",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_1",
+    "relevant_chapter": "Chương 1",
+    "relevant_section": "# c. Thực chất và ý nghĩa cuộc cách mạng trong triết học do C. Mác và Ph. Ăng‑ghen thực hiện"
+  },
+  {
+    "id": "RAG_182",
+    "query": "Theo nội dung của phần \"# c. Thực chất và ý nghĩa cuộc cách mạng trong triết học do C. Mác và Ph. Ăng‑ghen thực hiện\", mối quan hệ giữa quan niệm duy vật về tự nhiên và quan niệm duy vật về đời sống xã hội được thể hiện như thế nào và có ý nghĩa gì đối với giai cấp công nhân?",
+    "difficulty": "medium",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_1",
+    "relevant_chapter": "Chương 1",
+    "relevant_section": "# c. Thực chất và ý nghĩa cuộc cách mạng trong triết học do C. Mác và Ph. Ăng‑ghen thực hiện"
+  },
+  {
+    "id": "RAG_183",
+    "query": "Trong phần \"Giai đoạn Lênin trong sự phát triển Triết học Mác\", Lenin nhấn mạnh quan điểm gì về lý luận của Mác?",
+    "difficulty": "easy",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_1",
+    "relevant_chapter": "Chương 1",
+    "relevant_section": "# d. Giai đoạn Lênin trong sự phát triển Triết học Mác"
+  },
+  {
+    "id": "RAG_184",
+    "query": "Theo đoạn văn, những biến đổi của điều kiện kinh tế - xã hội cuối thế kỷ XIX, đầu thế kỷ XX đã đặt ra những nhiệm vụ nào cho Lenin trong việc nghiên cứu và phát triển Triết học Mác?",
+    "difficulty": "medium",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_1",
+    "relevant_chapter": "Chương 1",
+    "relevant_section": "# d. Giai đoạn Lênin trong sự phát triển Triết học Mác"
+  },
+  {
+    "id": "RAG_185",
+    "query": "Triết học Mác - Lênin xác định đối tượng nghiên cứu là gì?",
+    "difficulty": "easy",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_1",
+    "relevant_chapter": "Chương 1",
+    "relevant_section": "# b. Đối tượng của triết học Mác - Lênin"
+  },
+  {
+    "id": "RAG_186",
+    "query": "Theo đoạn văn, mối quan hệ giữa vật chất và ý thức được nghiên cứu trong triết học Mác - Lênin có ý nghĩa gì đối với việc phân biệt đối tượng của triết học so với các khoa học cụ thể?",
+    "difficulty": "medium",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_1",
+    "relevant_chapter": "Chương 1",
+    "relevant_section": "# b. Đối tượng của triết học Mác - Lênin"
+  },
+  {
+    "id": "RAG_187",
+    "query": "Trong phần \"# c. Chức năng của triết học Mác - Lênin\", chức năng thế giới quan của triết học Mác - Lênin được định nghĩa như thế nào?",
+    "difficulty": "easy",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_1",
+    "relevant_chapter": "Chương 1",
+    "relevant_section": "# c. Chức năng của triết học Mác - Lênin"
+  },
+  {
+    "id": "RAG_188",
+    "query": "Theo đoạn văn, tại sao chức năng phương pháp luận của triết học Mác - Lênin được mô tả là \"chung nhất, phổ biến nhất cho nhận thức và hoạt động thực tiễn\" và nó đóng vai trò gì trong việc trang bị cho con người các nguyên tắc phương pháp luận?",
+    "difficulty": "medium",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_1",
+    "relevant_chapter": "Chương 1",
+    "relevant_section": "# c. Chức năng của triết học Mác - Lênin"
+  },
+  {
+    "id": "RAG_189",
+    "query": "Trong phần 1.2.3, triết học Mác - Lênin được mô tả là gì?",
+    "difficulty": "easy",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_1",
+    "relevant_chapter": "Chương 1",
+    "relevant_section": "1.2.3. Vai trò của triết học Mác - Lênin trong đời sống xã hội và trong sự"
+  },
+  {
+    "id": "RAG_190",
+    "query": "Theo đoạn văn, triết học Mác - Lênin đóng vai trò gì trong việc phân tích xu hướng phát triển của xã hội và trong công cuộc xây dựng chủ nghĩa xã hội ở Việt Nam hiện nay?",
+    "difficulty": "medium",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_1",
+    "relevant_chapter": "Chương 1",
+    "relevant_section": "1.2.3. Vai trò của triết học Mác - Lênin trong đời sống xã hội và trong sự"
+  },
+  {
+    "id": "RAG_191",
+    "query": "Trong phần 1, khái niệm và nguồn gốc ra đời của triết học được định nghĩa như thế nào?",
+    "difficulty": "easy",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_1",
+    "relevant_chapter": "Chương 1",
+    "relevant_section": "1. Hãy nêu và phân tích khái niệm và nguồn gốc ra đời của triết học?"
+  },
+  {
+    "id": "RAG_192",
+    "query": "Theo đoạn văn, những điều kiện lịch sử mới của thế kỷ XXI đã quy định vai trò của triết học Mác‑Lênin như thế nào và vì sao cần bảo vệ, phát triển nó?",
+    "difficulty": "medium",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_1",
+    "relevant_chapter": "Chương 1",
+    "relevant_section": "1. Hãy nêu và phân tích khái niệm và nguồn gốc ra đời của triết học?"
+  },
+  {
+    "id": "RAG_193",
+    "query": "Triết học Mác – Lênin ra đời dựa trên những tiền đề nào?",
+    "difficulty": "easy",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_1",
+    "relevant_chapter": "Chương 1",
+    "relevant_section": "3. Triết học Mác – Lênin ra đời dựa trên những tiền đề nào?"
+  },
+  {
+    "id": "RAG_194",
+    "query": "Các tiền đề của triết học Mác – Lênin được hình thành trong bối cảnh lịch sử nào và chúng có mối quan hệ như thế nào với sự phát triển của chủ nghĩa duy vật lịch sử?",
+    "difficulty": "medium",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_1",
+    "relevant_chapter": "Chương 1",
+    "relevant_section": "3. Triết học Mác – Lênin ra đời dựa trên những tiền đề nào?"
+  },
+  {
+    "id": "RAG_195",
+    "query": "Trong đoạn trích, chủ nghĩa duy tâm khách quan cho rằng nguồn gốc của vật chất là gì?",
+    "difficulty": "easy",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "Chương 2: CHỦ NGHĨA DUY VẬT BIỆN CHỨNG"
+  },
+  {
+    "id": "RAG_196",
+    "query": "Theo đoạn văn, tại sao các nhà triết học duy vật trước C. Mác nhấn mạnh tính ‘tự thân tồn tại’ của vật chất và điều này ảnh hưởng như thế nào đến quan hệ giữa vật chất và ý thức?",
+    "difficulty": "medium",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "Chương 2: CHỦ NGHĨA DUY VẬT BIỆN CHỨNG"
+  },
+  {
+    "id": "RAG_197",
+    "query": "Trong phần \"b) Cuộc cách mạng trong khoa học tự nhiên cuối thế kỷ XIX, đầu thế kỷ XX và\" đoạn văn, Röntgen đã phát hiện ra gì vào năm 1895?",
+    "difficulty": "easy",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "# b) Cuộc cách mạng trong khoa học tự nhiên cuối thế kỷ XIX, đầu thế kỷ XX và"
+  },
+  {
+    "id": "RAG_198",
+    "query": "Theo nội dung của đoạn văn, thuyết tương đối hẹp (1905) và thuyết tương đối tổng quát (1916) của Albert Einstein chứng minh mối quan hệ nào giữa không gian, thời gian và khối lượng khi vật chất chuyển động?",
+    "difficulty": "medium",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "# b) Cuộc cách mạng trong khoa học tự nhiên cuối thế kỷ XIX, đầu thế kỷ XX và"
+  },
+  {
+    "id": "RAG_199",
+    "query": "Trong quan niệm của triết học Mác - Lênin, phạm trù vật chất được định nghĩa như thế nào?",
+    "difficulty": "easy",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "# c) Quan niệm của triết học Mác - Lênin về vật chất"
+  },
+  {
+    "id": "RAG_200",
+    "query": "Theo đoạn văn, mối quan hệ giữa phạm trù vật chất và các dạng vật chất cụ thể được mô tả như thế nào, và tại sao các dạng vật chất cụ thể có giới hạn trong khi phạm trù vật chất là vô hạn?",
+    "difficulty": "medium",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "# c) Quan niệm của triết học Mác - Lênin về vật chất"
+  },
+  {
+    "id": "RAG_201",
+    "query": "Trong tác phẩm 'Chủ nghĩa duy vật và chủ nghĩa kinh nghiệm phê phán', Lenin định nghĩa vật chất như thế nào?",
+    "difficulty": "easy",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "1. V.I. Lênin: Toàn tập, Sách, t.18, tr.323."
+  },
+  {
+    "id": "RAG_202",
+    "query": "Theo Lenin, sự khác biệt giữa vật chất như một phạm trù triết học và các dạng vật chất mà khoa học nghiên cứu cụ thể là gì, và tại sao vật chất triết học được coi là vô hạn, không sinh ra, không mất đi?",
+    "difficulty": "medium",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "1. V.I. Lênin: Toàn tập, Sách, t.18, tr.323."
+  },
+  {
+    "id": "RAG_203",
+    "query": "Trong phần \"# d) Phương thức tồn tại của vật chất\", vận động được định nghĩa như thế nào và tại sao nó được coi là cách thức tồn tại của vật chất?",
+    "difficulty": "easy",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "# d) Phương thức tồn tại của vật chất"
+  },
+  {
+    "id": "RAG_204",
+    "query": "Theo nội dung của đoạn văn, không gian và thời gian được xem là hình thức tồn tại của vật chất; làm thế nào mà vận động, không gian và thời gian tương tác, hỗ trợ lẫn nhau để thể hiện sự tồn tại đa dạng của thế giới vật chất?",
+    "difficulty": "medium",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "# d) Phương thức tồn tại của vật chất"
+  },
+  {
+    "id": "RAG_205",
+    "query": "Trong phần \"1. C. Mác và Ph. Ănghen: Toàn tập, Sđd, t.20, tr.519\" có nêu các hình thức vận động cơ bản của vật chất, thì \"vận động xã hội\" được định nghĩa như thế nào?",
+    "difficulty": "easy",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "1. C. Mác và Ph. Ănghen: Toàn tập, Sđd, t.20, tr.519."
+  },
+  {
+    "id": "RAG_206",
+    "query": "Theo nội dung của đoạn văn, một hình thức vận động cụ thể có thể mất đi để chuyển hoá thành hình thức vận động khác. Hãy nêu một ví dụ thực tế cho quá trình chuyển hoá từ \"vận động cơ học\" sang \"vận động xã hội\" và giải thích nguyên tắc chuyển hoá này.",
+    "difficulty": "medium",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "1. C. Mác và Ph. Ănghen: Toàn tập, Sđd, t.20, tr.519."
+  },
+  {
+    "id": "RAG_207",
+    "query": "Theo đoạn văn trong phần 2.1.2, thế giới vật chất bao gồm những gì?",
+    "difficulty": "easy",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "2.1.2. Nguồn gốc, bản chất và kết cấu của ý thức"
+  },
+  {
+    "id": "RAG_208",
+    "query": "Trong đoạn này, mối quan hệ giữa tính vật chất của thế giới và sự hình thành các trường phái triết học về ý thức được mô tả như thế nào?",
+    "difficulty": "medium",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "2.1.2. Nguồn gốc, bản chất và kết cấu của ý thức"
+  },
+  {
+    "id": "RAG_209",
+    "query": "Theo quan điểm duy vật biện chứng, nguồn gốc tự nhiên của ý thức được mô tả như thế nào trong đoạn \"Nguồn gốc tự nhiên của ý thức\"?",
+    "difficulty": "easy",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "# a) Nguồn gốc của ý thức"
+  },
+  {
+    "id": "RAG_210",
+    "query": "Trong phần \"Nguồn gốc của ý thức\", quan điểm của chủ nghĩa duy vật siêu hình và chủ nghĩa duy vật biện chứng khác nhau như thế nào về cách giải thích mối quan hệ giữa vật chất và ý thức?",
+    "difficulty": "medium",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "# a) Nguồn gốc của ý thức"
+  },
+  {
+    "id": "RAG_211",
+    "query": "Trong phần “# b) Bản chất của ý thức” của giáo trình, bản chất của ý thức được định nghĩa như thế nào?",
+    "difficulty": "easy",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "# b) Bản chất của ý thức"
+  },
+  {
+    "id": "RAG_212",
+    "query": "Theo nội dung “# b) Bản chất của ý thức”, tại sao lại nói rằng thế giới khách quan là nguyên bản, còn ý thức chỉ là hình ảnh chủ quan của thế giới đó, và mối quan hệ này ảnh hưởng như thế nào đến việc hiểu biết về nguồn gốc và phát triển của ý thức?",
+    "difficulty": "medium",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "# b) Bản chất của ý thức"
+  },
+  {
+    "id": "RAG_213",
+    "query": "Trong phần “# c) Kết cấu của ý thức”, “tri thức” được định nghĩa như thế nào?",
+    "difficulty": "easy",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "# c) Kết cấu của ý thức"
+  },
+  {
+    "id": "RAG_214",
+    "query": "Theo nội dung của phần “# c) Kết cấu của ý thức”, ba lớp cấu trúc của ý thức (tri thức, tình cảm, ý chí) có quan hệ biện chứng như thế nào và tại sao tri thức được coi là quan trọng nhất?",
+    "difficulty": "medium",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "# c) Kết cấu của ý thức"
+  },
+  {
+    "id": "RAG_215",
+    "query": "Trong phần 2.1.3, chủ nghĩa duy tâm được định nghĩa như thế nào về mối quan hệ giữa ý thức và vật chất?",
+    "difficulty": "easy",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "2.1.3. Mối quan hệ giữa vật chất và ý thức"
+  },
+  {
+    "id": "RAG_216",
+    "query": "Theo đoạn văn, chủ nghĩa duy vật siêu hình nhấn mạnh vai trò của vật chất như thế nào trong việc sinh ra và quyết định ý thức, và tại sao quan điểm này lại không thể phản ánh tính năng động, sáng tạo của ý thức?",
+    "difficulty": "medium",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "2.1.3. Mối quan hệ giữa vật chất và ý thức"
+  },
+  {
+    "id": "RAG_217",
+    "query": "Trong phần \"# b) Quan điểm của chủ nghĩa duy vật biện chứng\" của giáo trình, vật chất quyết định ý thức ở khía cạnh nào?",
+    "difficulty": "easy",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "# b) Quan điểm của chủ nghĩa duy vật biện chứng"
+  },
+  {
+    "id": "RAG_218",
+    "query": "Theo nội dung của phần \"# b) Quan điểm của chủ nghĩa duy vật biện chứng\", yếu tố nào của hoạt động thực tiễn xã hội‑lịch sử được cho là động lực mạnh mẽ nhất quyết định tính phong phú và độ sâu sắc của nội dung ý thức, và tại sao?",
+    "difficulty": "medium",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "# b) Quan điểm của chủ nghĩa duy vật biện chứng"
+  },
+  {
+    "id": "RAG_219",
+    "query": "Trong triết học Mác - Lênin, nguyên tắc phương pháp luận được rút ra từ mối quan hệ giữa vật chất và ý thức là gì?",
+    "difficulty": "easy",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "# b) Ý nghĩa phương pháp luận"
+  },
+  {
+    "id": "RAG_220",
+    "query": "Theo đoạn \"b) Ý nghĩa phương pháp luận\", khi thực hiện hoạt động nhận thức và cải tạo sự vật, hiện tượng, tại sao cần tôn trọng hiện thực khách quan đồng thời phát huy tính năng động, chủ quan của con người?",
+    "difficulty": "medium",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "# b) Ý nghĩa phương pháp luận"
+  },
+  {
+    "id": "RAG_221",
+    "query": "Phép biện chứng duy vật là gì và nó được mô tả như thế nào trong phần 2.2 của giáo trình?",
+    "difficulty": "easy",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "2.2. PHÉP BIỆN CHỨNG DUY VẬT"
+  },
+  {
+    "id": "RAG_222",
+    "query": "Theo đoạn văn, để đạt hiệu quả cao trong nhận thức và hành động, chúng ta cần vận dụng mối quan hệ giữa vật chất và ý thức như thế nào và tại sao không được tuyệt đối hoá bất kỳ mặt nào (vật chất hoặc ý thức)?",
+    "difficulty": "medium",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "2.2. PHÉP BIỆN CHỨNG DUY VẬT"
+  },
+  {
+    "id": "RAG_223",
+    "query": "Trong phần 2.2.1, “biện chứng khách quan” được định nghĩa là gì?",
+    "difficulty": "easy",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "2.2.1. Hai loại hình biện chứng và phép biện chứng duy vật"
+  },
+  {
+    "id": "RAG_224",
+    "query": "Theo nội dung của mục 2.2.1, mối quan hệ giữa “biện chứng khách quan” và “biện chứng chủ quan” như thế nào và biện chứng khách quan quy định biện chứng chủ quan ra sao?",
+    "difficulty": "medium",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "2.2.1. Hai loại hình biện chứng và phép biện chứng duy vật"
+  },
+  {
+    "id": "RAG_225",
+    "query": "Theo đoạn văn, khái niệm “phép biện chứng duy vật” trong chủ nghĩa Mác-Lênin được định nghĩa như thế nào?",
+    "difficulty": "easy",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "# b) Khái niệm phép biện chứng duy vật"
+  },
+  {
+    "id": "RAG_226",
+    "query": "Trong nội dung trên, “phép biện chứng duy vật” được mô tả là học thuyết nghiên cứu và khái quát biện chứng của thế giới; vậy nó đóng vai trò gì trong việc xây dựng hệ thống các nguyên tắc phương pháp luận của nhận thức và thực tiễn?",
+    "difficulty": "medium",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "# b) Khái niệm phép biện chứng duy vật"
+  },
+  {
+    "id": "RAG_227",
+    "query": "Trong phần “2.2.2. Nội dung của phép biện chứng duy vật”, nguyên lý triết học của phép biện chứng duy vật được định nghĩa như thế nào?",
+    "difficulty": "easy",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "2.2.2. Nội dung của phép biện chứng duy vật"
+  },
+  {
+    "id": "RAG_228",
+    "query": "Theo nội dung của phép biện chứng duy vật trong mục 2.2.2, sự thống nhất giữa nội dung thế giới quan duy vật biện chứng và phương pháp luận biện chứng duy vật giúp nhận thức và cải tạo thế giới như thế nào?",
+    "difficulty": "medium",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "2.2.2. Nội dung của phép biện chứng duy vật"
+  },
+  {
+    "id": "RAG_229",
+    "query": "Trong phần \"# b) Các cặp phạm trù cơ bản của phép biện chứng duy vật\", phạm trù \"cái riêng\" được định nghĩa như thế nào?",
+    "difficulty": "easy",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "# b) Các cặp phạm trù cơ bản của phép biện chứng duy vật"
+  },
+  {
+    "id": "RAG_230",
+    "query": "Theo nội dung của phần \"# b) Các cặp phạm trù cơ bản của phép biện chứng duy vật\", khi thay thế đối tượng cũ bằng đối tượng mới, tại sao cần phải kế thừa các yếu tố tích cực từ đối tượng cũ và phát triển sáng tạo chúng trong điều kiện mới?",
+    "difficulty": "medium",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "# b) Các cặp phạm trù cơ bản của phép biện chứng duy vật"
+  },
+  {
+    "id": "RAG_231",
+    "query": "Trong phần “c) Các quy luật cơ bản của phép biện chứng duy vật”, “quy luật” được định nghĩa như thế nào?",
+    "difficulty": "easy",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "# c) Các quy luật cơ bản của phép biện chứng duy vật"
+  },
+  {
+    "id": "RAG_232",
+    "query": "Theo đoạn văn, quy luật chuyển hoá từ lượng sang chất và ngược lại áp dụng khi nào và có ý nghĩa thực tiễn gì đối với việc làm chủ tự nhiên và xã hội?",
+    "difficulty": "medium",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "# c) Các quy luật cơ bản của phép biện chứng duy vật"
+  },
+  {
+    "id": "RAG_233",
+    "query": "Trong mục 2.3.1 của phần “2.3. LÝ LUẬN NHẬN THỨC”, khái niệm “lý luận nhận thức” được định nghĩa như thế nào?",
+    "difficulty": "easy",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "2.3. LÝ LUẬN NHẬN THỨC"
+  },
+  {
+    "id": "RAG_234",
+    "query": "Theo đoạn văn, sự xuất hiện của các hiện tượng mới trong xã hội gắn liền với yếu tố nào, và điều này khác với quá trình xuất hiện tự phát trong tự nhiên như thế nào?",
+    "difficulty": "medium",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "2.3. LÝ LUẬN NHẬN THỨC"
+  },
+  {
+    "id": "RAG_235",
+    "query": "Trong phần “2.3.2. Lý luận nhận thức duy vật biện chứng”, triết học Mác‑Lênin định nghĩa nguồn gốc của nhận thức là gì?",
+    "difficulty": "easy",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "2.3.2. Lý luận nhận thức duy vật biện chứng"
+  },
+  {
+    "id": "RAG_236",
+    "query": "Theo nội dung của đoạn văn, tại sao thực tiễn được coi là cơ sở chủ yếu và tiêu chuẩn kiểm tra chân lý trong quá trình nhận thức duy vật biện chứng?",
+    "difficulty": "medium",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "2.3.2. Lý luận nhận thức duy vật biện chứng"
+  },
+  {
+    "id": "RAG_237",
+    "query": "Theo đoạn văn, thực tiễn được định nghĩa như thế nào trong triết học Mác‑Lênin?",
+    "difficulty": "easy",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "# b. Thực tiễn và vai trò của thực tiễn với nhận thức"
+  },
+  {
+    "id": "RAG_238",
+    "query": "Trong nội dung \"# b. Thực tiễn và vai trò của thực tiễn với nhận thức\", tại sao thực tiễn được coi là cơ sở, động lực và mục đích của nhận thức, và nó đóng vai trò gì trong việc kiểm tra chân lý?",
+    "difficulty": "medium",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "# b. Thực tiễn và vai trò của thực tiễn với nhận thức"
+  },
+  {
+    "id": "RAG_239",
+    "query": "Trong phần “# c. Các giai đoạn cơ bản của quá trình nhận thức” của giáo trình, “nhận thức cảm tính” được định nghĩa như thế nào?",
+    "difficulty": "easy",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "# c. Các giai đoạn cơ bản của quá trình nhận thức"
+  },
+  {
+    "id": "RAG_240",
+    "query": "Theo quan điểm của V.I. Lenin trong cùng đoạn, con đường biện chứng của quá trình nhận thức gồm những giai đoạn nào và chúng liên kết với nhau như thế nào để đạt được sự nhận thức chân lý?",
+    "difficulty": "medium",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "# c. Các giai đoạn cơ bản của quá trình nhận thức"
+  },
+  {
+    "id": "RAG_241",
+    "query": "Theo đoạn trích, “nhận thức lý tính” được định nghĩa như thế nào?",
+    "difficulty": "easy",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "1. V.I. Lênin: Toàn tập, Sđd, t.29, tr.179."
+  },
+  {
+    "id": "RAG_242",
+    "query": "Trong nội dung trên, ba hình thức thể hiện của nhận thức lý tính là gì và mỗi hình thức (khái niệm, phán đoán, suy lý) đóng vai trò gì trong việc tách ra và nắm bắt bản chất có tính quy luật của các sự vật, hiện tượng?",
+    "difficulty": "medium",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "1. V.I. Lênin: Toàn tập, Sđd, t.29, tr.179."
+  },
+  {
+    "id": "RAG_243",
+    "query": "Trong quan điểm của Chủ nghĩa duy vật biện chứng, chân lý được định nghĩa như thế nào?",
+    "difficulty": "easy",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "# d. Quan điểm của Chủ nghĩa duy vật biện chứng về chân lý"
+  },
+  {
+    "id": "RAG_244",
+    "query": "Theo đoạn văn, tính tuyệt đối và tính tương đối của chân lý có nghĩa gì và chúng khác nhau như thế nào?",
+    "difficulty": "medium",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "# d. Quan điểm của Chủ nghĩa duy vật biện chứng về chân lý"
+  },
+  {
+    "id": "RAG_245",
+    "query": "Lênin định nghĩa vật chất là gì trong triết học Marx‑Lenin?",
+    "difficulty": "easy",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "1. Hãy phân tích sự khác nhau giữa quan niệm của chủ nghĩa duy vật biện chứng"
+  },
+  {
+    "id": "RAG_246",
+    "query": "Theo định nghĩa của Lênin, sự khác nhau cơ bản giữa quan niệm của chủ nghĩa duy vật biện chứng và chủ nghĩa duy vật trước Mác về vật chất thể hiện ở khía cạnh nào?",
+    "difficulty": "medium",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "1. Hãy phân tích sự khác nhau giữa quan niệm của chủ nghĩa duy vật biện chứng"
+  },
+  {
+    "id": "RAG_247",
+    "query": "Trong nội dung mục 3, “bản chất” của ý thức được chủ nghĩa duy vật biện chứng định nghĩa như thế nào?",
+    "difficulty": "easy",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "3. Hãy phân tích những quan niệm của chủ nghĩa duy vật biện chứng về bản chất"
+  },
+  {
+    "id": "RAG_248",
+    "query": "Theo mục 3, làm thế nào để so sánh ý thức của con người với hoạt động của người máy và tâm lý động vật trong quan niệm của chủ nghĩa duy vật biện chứng?",
+    "difficulty": "medium",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "3. Hãy phân tích những quan niệm của chủ nghĩa duy vật biện chứng về bản chất"
+  },
+  {
+    "id": "RAG_249",
+    "query": "Trong triết học Mác‑Lênin, bản chất của nhận thức được định nghĩa như thế nào?",
+    "difficulty": "easy",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "8. Hãy phân tích bản chất của nhận thức, vai trò của thực tiễn đối với nhận thức"
+  },
+  {
+    "id": "RAG_250",
+    "query": "Theo quan điểm của triết học Mác‑Lênin, vai trò của thực tiễn trong quá trình nhận thức ảnh hưởng như thế nào đến việc hình thành và kiểm chứng lý luận, và nguyên tắc thống nhất giữa lý luận và thực tiễn được áp dụng ra sao?",
+    "difficulty": "medium",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "8. Hãy phân tích bản chất của nhận thức, vai trò của thực tiễn đối với nhận thức"
+  },
+  {
+    "id": "RAG_251",
+    "query": "Trong phần 4 của giáo trình, quy luật “chuyển hóa từ những sự thay đổi dần dần về lượng thành những sự thay đổi về chất và ngược lại” được định nghĩa như thế nào?",
+    "difficulty": "easy",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "4. Vận dụng quy luật Chuyển hóa từ những sự thay đổi dần dần về lượng"
+  },
+  {
+    "id": "RAG_252",
+    "query": "Làm thế nào quy luật chuyển hóa từ lượng sang chất được áp dụng để phân tích “nghệ thuật chớp thời cơ” trong cách mạng đổi mới ở Việt Nam hiện nay?",
+    "difficulty": "medium",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_2",
+    "relevant_chapter": "Chương 2",
+    "relevant_section": "4. Vận dụng quy luật Chuyển hóa từ những sự thay đổi dần dần về lượng"
+  },
+  {
+    "id": "RAG_253",
+    "query": "Trong chương 3, “CHỦ NGHĨA DUY VẬT LỊCH SỬ” được định nghĩa như thế nào?",
+    "difficulty": "easy",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "CHƯƠNG 3: CHỦ NGHĨA DUY VẬT LỊCH SỬ"
+  },
+  {
+    "id": "RAG_254",
+    "query": "Theo nội dung của chương 3, mối quan hệ biện chứng giữa lực lượng sản xuất và quan hệ sản xuất ảnh hưởng như thế nào đến sự hình thành và phát triển của xã hội loài người?",
+    "difficulty": "medium",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "CHƯƠNG 3: CHỦ NGHĨA DUY VẬT LỊCH SỬ"
+  },
+  {
+    "id": "RAG_255",
+    "query": "Học thuyết hình thái kinh tế - xã hội là gì và nó được coi là nội dung cơ bản của chủ nghĩa duy vật lịch sử như thế nào?",
+    "difficulty": "easy",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "3.1. HỌC THUYẾT HÌNH THÁI KINH TẾ - XÃ HỘI"
+  },
+  {
+    "id": "RAG_256",
+    "query": "Trong bối cảnh thế giới đang có những biến đổi to lớn, sâu sắc, học thuyết hình thái kinh tế - xã hội được sử dụng như thế nào để hướng dẫn các đảng và nhà nước xã hội chủ nghĩa xác định cương lĩnh, đường lối, chủ trương và chính sách xây dựng chủ nghĩa xã hội?",
+    "difficulty": "medium",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "3.1. HỌC THUYẾT HÌNH THÁI KINH TẾ - XÃ HỘI"
+  },
+  {
+    "id": "RAG_257",
+    "query": "Trong phần 3.1.1, “sản xuất vật chất” được định nghĩa như thế nào và vai trò của nó trong xã hội loài người là gì?",
+    "difficulty": "easy",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "3.1.1. Sản xuất vật chất là cơ sở của sự tồn tại và phát triển xã hội"
+  },
+  {
+    "id": "RAG_258",
+    "query": "Theo nội dung của mục 3.1.1, tại sao sản xuất vật chất được coi là cơ sở quyết định toàn bộ sự vận động và phát triển của đời sống xã hội, và nó liên quan như thế nào tới sản xuất tinh thần và sản xuất ra bản thân con người?",
+    "difficulty": "medium",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "3.1.1. Sản xuất vật chất là cơ sở của sự tồn tại và phát triển xã hội"
+  },
+  {
+    "id": "RAG_259",
+    "query": "Trong đoạn văn, 'phương thức sản xuất' được định nghĩa là gì?",
+    "difficulty": "easy",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "3.1.2. Biện chứng giữa lực lượng sản xuất và quan hệ sản xuất"
+  },
+  {
+    "id": "RAG_260",
+    "query": "Theo nội dung của mục 3.1.2, tại sao phương thức sản xuất được coi là sự thống nhất giữa lực lượng sản xuất và quan hệ sản xuất, và khi nào sự không thống nhất giữa chúng có thể dẫn đến sự thay đổi lịch sử?",
+    "difficulty": "medium",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "3.1.2. Biện chứng giữa lực lượng sản xuất và quan hệ sản xuất"
+  },
+  {
+    "id": "RAG_261",
+    "query": "Trong phần “# b. Quy luật quan hệ sản xuất phù hợp với trình độ phát triển của lực lượng” đoạn văn nói rằng “lực lượng sản xuất và quan hệ sản xuất là hai mặt của một phương thức sản xuất”. Vậy khái niệm “quan hệ sản xuất” được định nghĩa như thế nào trong nội dung này?",
+    "difficulty": "easy",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "# b. Quy luật quan hệ sản xuất phù hợp với trình độ phát triển của lực lượng"
+  },
+  {
+    "id": "RAG_262",
+    "query": "Theo đoạn “# b. Quy luật quan hệ sản xuất phù hợp với trình độ phát triển của lực lượng” nếu quan hệ sản xuất không phù hợp với trình độ phát triển của lực lượng sản xuất, hậu quả đối với quá trình phát triển của lực lượng sản xuất sẽ như thế nào?",
+    "difficulty": "medium",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "# b. Quy luật quan hệ sản xuất phù hợp với trình độ phát triển của lực lượng"
+  },
+  {
+    "id": "RAG_263",
+    "query": "Trong phần 3.1.3, “cơ sở hạ tầng” được định nghĩa là gì?",
+    "difficulty": "easy",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "3.1.3. Biện chứng giữa cơ sở hạ tầng và kiến trúc thượng tầng của xã hội"
+  },
+  {
+    "id": "RAG_264",
+    "query": "Theo nội dung đoạn văn, quy luật biện chứng giữa cơ sở hạ tầng và kiến trúc thượng tầng ảnh hưởng như thế nào đến việc đổi mới tư duy kinh tế của Đảng Cộng sản Việt Nam trong bối cảnh nền kinh tế thị trường định hướng xã hội chủ nghĩa?",
+    "difficulty": "medium",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "3.1.3. Biện chứng giữa cơ sở hạ tầng và kiến trúc thượng tầng của xã hội"
+  },
+  {
+    "id": "RAG_265",
+    "query": "Trong phần \"# b. Quy luật về mối quan hệ biện chứng giữa cơ sở hạ tầng và kiến trúc thượng tầng\" của giáo trình, khái niệm \"cơ sở hạ tầng\" và \"kiến trúc thượng tầng\" được định nghĩa như thế nào?",
+    "difficulty": "easy",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "# b. Quy luật về mối quan hệ biện chứng giữa cơ sở hạ tầng và kiến trúc thượng"
+  },
+  {
+    "id": "RAG_266",
+    "query": "Theo nội dung đoạn văn, kiến trúc thượng tầng (như chính trị, pháp luật, triết học…) có thể tác động trở lại như thế nào đối với cơ sở hạ tầng, và trong những điều kiện nào mối quan hệ biện chứng này được nhấn mạnh?",
+    "difficulty": "medium",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "# b. Quy luật về mối quan hệ biện chứng giữa cơ sở hạ tầng và kiến trúc thượng"
+  },
+  {
+    "id": "RAG_267",
+    "query": "Trong đoạn văn trên, hình thái kinh tế - xã hội được định nghĩa như thế nào và bao gồm những yếu tố cơ bản nào?",
+    "difficulty": "easy",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "3.1.4. Sự phát triển các hình thái kinh tế - xã hội là một quá trình lịch sử - tự nhiên"
+  },
+  {
+    "id": "RAG_268",
+    "query": "Theo quan điểm duy vật lịch sử trong phần 3.1.4, lực lượng sản xuất, quan hệ sản xuất (cơ sở hạ tầng) và kiến trúc thượng tầng tương tác như thế nào để quyết định dạng xã hội ở một giai đoạn lịch sử nhất định?",
+    "difficulty": "medium",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "3.1.4. Sự phát triển các hình thái kinh tế - xã hội là một quá trình lịch sử - tự nhiên"
+  },
+  {
+    "id": "RAG_269",
+    "query": "Trong đoạn \"b. Tiến trình lịch sử - tự nhiên của xã hội loài người\" này, khái niệm \"lực lượng sản xuất\" được định nghĩa như thế nào?",
+    "difficulty": "easy",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "# b. Tiến trình lịch sử - tự nhiên của xã hội loài người"
+  },
+  {
+    "id": "RAG_270",
+    "query": "Theo nội dung trên, quan hệ sản xuất cần phải phù hợp với trình độ của lực lượng sản xuất như thế nào để tạo điều kiện cho sự biến đổi của quan hệ sản xuất và thúc đẩy phát triển xã hội?",
+    "difficulty": "medium",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "# b. Tiến trình lịch sử - tự nhiên của xã hội loài người"
+  },
+  {
+    "id": "RAG_271",
+    "query": "Trong phần \"# c. Giá trị khoa học bền vững và ý nghĩa cách mạng\" của giáo trình, “lý luận hình thái kinh tế - xã hội” được định nghĩa như thế nào?",
+    "difficulty": "easy",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "# c. Giá trị khoa học bền vững và ý nghĩa cách mạng"
+  },
+  {
+    "id": "RAG_272",
+    "query": "Theo đoạn văn, tại sao việc thay thế hình thái kinh tế - xã hội tư bản chủ nghĩa bằng hình thái kinh tế - xã hội cộng sản chủ nghĩa phải thông qua đấu tranh giai cấp và cách mạng xã hội?",
+    "difficulty": "medium",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "# c. Giá trị khoa học bền vững và ý nghĩa cách mạng"
+  },
+  {
+    "id": "RAG_273",
+    "query": "Theo V.I. Lenin trong đoạn văn, giai cấp được định nghĩa như thế nào?",
+    "difficulty": "easy",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "3.2. GIAI CẤP VÀ DÂN TỘC"
+  },
+  {
+    "id": "RAG_274",
+    "query": "Trong định nghĩa của Lenin, đặc trưng cơ bản của giai cấp là gì và mối quan hệ giữa vị trí kinh tế - xã hội của các tập đoàn người với phần của cải xã hội được mô tả như thế nào?",
+    "difficulty": "medium",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "3.2. GIAI CẤP VÀ DÂN TỘC"
+  },
+  {
+    "id": "RAG_275",
+    "query": "Trong đoạn \"Hương thức sản xuất chứa đựng những điều kiện vật chất\" thì \"điều kiện vật chất\" được hiểu là gì?",
+    "difficulty": "easy",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "Hương thức sản xuất chứa đựng những điều kiện vật chất"
+  },
+  {
+    "id": "RAG_276",
+    "query": "Theo nội dung trên, quan hệ sở hữu, quan hệ tổ chức quản lý sản xuất và quan hệ phân phối của cải xã hội ảnh hưởng như thế nào đến việc xác định giai cấp thống trị và giai cấp bị trị trong các hình thái sản xuất (nô lệ, phong kiến, tư bản)?",
+    "difficulty": "medium",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "Hương thức sản xuất chứa đựng những điều kiện vật chất"
+  },
+  {
+    "id": "RAG_277",
+    "query": "Trong phần “# b. Đấu tranh giai cấp”, đấu tranh giai cấp được định nghĩa là gì?",
+    "difficulty": "easy",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "# b. Đấu tranh giai cấp"
+  },
+  {
+    "id": "RAG_278",
+    "query": "Theo nội dung của đoạn, đấu tranh giai cấp được coi là một hiện tượng lịch sử khách quan vì lý do nào, và nó xuất phát từ tính tất yếu kinh tế như thế nào?",
+    "difficulty": "medium",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "# b. Đấu tranh giai cấp"
+  },
+  {
+    "id": "RAG_279",
+    "query": "Trong phần \"# c. Đấu tranh giai cấp của giai cấp vô sản\", đấu tranh kinh tế được định nghĩa là gì?",
+    "difficulty": "easy",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "# c. Đấu tranh giai cấp của giai cấp vô sản"
+  },
+  {
+    "id": "RAG_280",
+    "query": "Theo nội dung của đoạn, ba hình thức cơ bản của đấu tranh giai cấp của giai cấp vô sản (đấu tranh kinh tế, đấu tranh chính trị và đấu tranh tư tưởng) có mối quan hệ và vai trò như thế nào trong quá trình đấu tranh trước khi giành được chính quyền?",
+    "difficulty": "medium",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "# c. Đấu tranh giai cấp của giai cấp vô sản"
+  },
+  {
+    "id": "RAG_281",
+    "query": "Trong phần 3.2.2 “Dân tộc” của giáo trình, khái niệm “dân tộc” được định nghĩa như thế nào?",
+    "difficulty": "easy",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "3.2.2. Dân tộc"
+  },
+  {
+    "id": "RAG_282",
+    "query": "Theo đoạn văn, quá trình phát triển của các hình thức cộng đồng người từ thị tộc đến dân tộc diễn ra như thế nào và yếu tố nào quyết định việc chuyển đổi từ thị tộc sang bộ lạc?",
+    "difficulty": "medium",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "3.2.2. Dân tộc"
+  },
+  {
+    "id": "RAG_283",
+    "query": "Theo nội dung trong phần \"# b. Dân tộc - hình thức cộng đồng người phổ biến hiện nay\", dân tộc được định nghĩa là gì?",
+    "difficulty": "easy",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "# b. Dân tộc - hình thức cộng đồng người phổ biến hiện nay"
+  },
+  {
+    "id": "RAG_284",
+    "query": "Trong đoạn văn, dân tộc (quốc gia) được cho là một cộng đồng người ổn định dựa trên những yếu tố nào (lãnh thổ, ngôn ngữ, kinh tế, văn hoá, tâm lý, nhà nước, pháp luật)?",
+    "difficulty": "medium",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "# b. Dân tộc - hình thức cộng đồng người phổ biến hiện nay"
+  },
+  {
+    "id": "RAG_285",
+    "query": "Theo đoạn văn, khái niệm “giai cấp quyết định dân tộc” có nghĩa gì và vai trò của nó như thế nào?",
+    "difficulty": "easy",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "3.2.3. Mối quan hệ giai cấp - dân tộc - nhân loại"
+  },
+  {
+    "id": "RAG_286",
+    "query": "Trong bối cảnh lịch sử hình thành dân tộc Việt Nam, đoạn văn cho rằng phương thức sản xuất tư bản chủ nghĩa và giai cấp tư sản đã thúc đẩy quá trình thay thế hình thức cộng đồng bộ tộc bằng cộng đồng dân tộc như thế nào?",
+    "difficulty": "medium",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "3.2.3. Mối quan hệ giai cấp - dân tộc - nhân loại"
+  },
+  {
+    "id": "RAG_287",
+    "query": "Trong phần “# b. Quan hệ giai cấp, dân tộc với nhân loại”, khái niệm “nhân loại” được định nghĩa như thế nào?",
+    "difficulty": "easy",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "# b. Quan hệ giai cấp, dân tộc với nhân loại"
+  },
+  {
+    "id": "RAG_288",
+    "query": "Theo đoạn văn, tại sao trong xã hội cộng sản nguyên thủy cộng đồng nhân loại chưa hình thành rõ nét và những điều kiện nào cần có để mối quan hệ giữa giai cấp, dân tộc và nhân loại trở nên chặt chẽ hơn?",
+    "difficulty": "medium",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "# b. Quan hệ giai cấp, dân tộc với nhân loại"
+  },
+  {
+    "id": "RAG_289",
+    "query": "Theo đoạn văn, khái niệm “nhà nước” được Ph. Ăngghen định nghĩa như thế nào?",
+    "difficulty": "easy",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "3.3. NHÀ NƯỚC VÀ CÁCH MẠNG XÃ HỘI"
+  },
+  {
+    "id": "RAG_290",
+    "query": "Trong phần 3.3.1, nhà nước được cho là ra đời trong những điều kiện lịch sử nào và nhằm đáp ứng yêu cầu gì của giai cấp?",
+    "difficulty": "medium",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "3.3. NHÀ NƯỚC VÀ CÁCH MẠNG XÃ HỘI"
+  },
+  {
+    "id": "RAG_291",
+    "query": "Theo đoạn văn, bản chất của nhà nước được mô tả là gì?",
+    "difficulty": "easy",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "# b. Bản chất của nhà nước"
+  },
+  {
+    "id": "RAG_292",
+    "query": "Nhà nước ra đời trong điều kiện kinh tế - xã hội nào và nó đóng vai trò gì trong việc duy trì trật tự xã hội và bảo vệ lợi ích của giai cấp thống trị?",
+    "difficulty": "medium",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "# b. Bản chất của nhà nước"
+  },
+  {
+    "id": "RAG_293",
+    "query": "Theo Ph. Ăngghen, đặc trưng cơ bản đầu tiên của nhà nước là gì?",
+    "difficulty": "easy",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "# c. Đặc trưng cơ bản của nhà nước"
+  },
+  {
+    "id": "RAG_294",
+    "query": "Trong đoạn văn, nhà nước có thể giữ mức độ độc lập đối với hai giai cấp đối địch khi nào và vì lý do gì?",
+    "difficulty": "medium",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "# c. Đặc trưng cơ bản của nhà nước"
+  },
+  {
+    "id": "RAG_295",
+    "query": "Trong phần \"# d. Chức năng cơ bản của nhà nước\" đoạn văn, nhà nước được định nghĩa là công cụ gì của giai cấp thống trị?",
+    "difficulty": "easy",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "# d. Chức năng cơ bản của nhà nước"
+  },
+  {
+    "id": "RAG_296",
+    "query": "Theo nội dung của đoạn, tại sao giai cấp thống trị phải đảm bảo nguồn tài chính qua hệ thống thuế và quốc trái để duy trì hoạt động của bộ máy nhà nước?",
+    "difficulty": "medium",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "# d. Chức năng cơ bản của nhà nước"
+  },
+  {
+    "id": "RAG_297",
+    "query": "Theo phần “# e. Các kiểu và hình thức nhà nước”, nhà nước vô sản được định nghĩa như thế nào?",
+    "difficulty": "easy",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "# e. Các kiểu và hình thức nhà nước"
+  },
+  {
+    "id": "RAG_298",
+    "query": "Trong đoạn văn, tại sao nhà nước vô sản được mô tả là “nhà nước của số đông thống trị số ít” và điều này khác gì so với nhà nước tư sản?",
+    "difficulty": "medium",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "# e. Các kiểu và hình thức nhà nước"
+  },
+  {
+    "id": "RAG_299",
+    "query": "Trong phần 3.3.2 \"Cách mạng xã hội\" của giáo trình, nguồn gốc sâu xa của cách mạng xã hội được mô tả là gì?",
+    "difficulty": "easy",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "3.3.2. Cách mạng xã hội"
+  },
+  {
+    "id": "RAG_300",
+    "query": "Theo nội dung đoạn \"Nguồn gốc của cách mạng xã hội\" trong mục 3.3.2, mối quan hệ giữa lực lượng sản xuất tiến bộ và quan hệ sản xuất lạc hậu dẫn đến mâu thuẫn giai cấp như thế nào, và khi nào mâu thuẫn này có thể bùng phát thành cách mạng xã hội?",
+    "difficulty": "medium",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "3.3.2. Cách mạng xã hội"
+  },
+  {
+    "id": "RAG_301",
+    "query": "Trong phần 3.4 “Tồn tại xã hội và ý thức xã hội”, “tồn tại xã hội” được định nghĩa là gì?",
+    "difficulty": "easy",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "3.4. TỒN TẠI XÃ HỘI VÀ Ý THỨC XÃ HỘI"
+  },
+  {
+    "id": "RAG_302",
+    "query": "Theo nội dung của phần 3.4, mối quan hệ giữa lĩnh vực vật chất (tồn tại xã hội) và lĩnh vực tinh thần (ý thức xã hội) ảnh hưởng như thế nào đến quá trình cách mạng xã hội hiện đại?",
+    "difficulty": "medium",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "3.4. TỒN TẠI XÃ HỘI VÀ Ý THỨC XÃ HỘI"
+  },
+  {
+    "id": "RAG_303",
+    "query": "Trong triết học Mác - Lênin, khái niệm “tồn tại xã hội” được định nghĩa như thế nào?",
+    "difficulty": "easy",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "3.4.1. Khái niệm tồn tại xã hội và các yếu tố cơ bản của tồn tại xã hội"
+  },
+  {
+    "id": "RAG_304",
+    "query": "Theo đoạn văn của mục 3.4.1, mối quan hệ nào giữa “tồn tại xã hội” và “ý thức xã hội” được nhấn mạnh, và tại sao quan hệ này lại quan trọng khi phân tích các quy luật phát triển xã hội?",
+    "difficulty": "medium",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "3.4.1. Khái niệm tồn tại xã hội và các yếu tố cơ bản của tồn tại xã hội"
+  },
+  {
+    "id": "RAG_305",
+    "query": "Trong phần \"# b. Các yếu tố cơ bản của tồn tại xã hội\" của giáo trình, \"phương thức sản xuất vật chất\" được định nghĩa là gì?",
+    "difficulty": "easy",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "# b. Các yếu tố cơ bản của tồn tại xã hội"
+  },
+  {
+    "id": "RAG_306",
+    "query": "Theo đoạn văn, mức độ ảnh hưởng của điều kiện tự nhiên đến đời sống con người và tiến bộ xã hội phụ thuộc vào những yếu tố nào?",
+    "difficulty": "medium",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "# b. Các yếu tố cơ bản của tồn tại xã hội"
+  },
+  {
+    "id": "RAG_307",
+    "query": "Trong đoạn văn, “ý thức xã hội” được định nghĩa như thế nào?",
+    "difficulty": "easy",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "3.4.2. Ý thức xã hội và kết cấu của ý thức xã hội"
+  },
+  {
+    "id": "RAG_308",
+    "query": "Theo nội dung của phần 3.4.2, mối quan hệ giữa “ý thức xã hội” và “ý thức cá nhân” là gì và tại sao chúng vẫn có sự khác nhau tương đối?",
+    "difficulty": "medium",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "3.4.2. Ý thức xã hội và kết cấu của ý thức xã hội"
+  },
+  {
+    "id": "RAG_309",
+    "query": "Trong phần “c. Tính giai cấp của ý thức xã hội” của giáo trình, ‘tính giai cấp của ý thức xã hội’ được định nghĩa như thế nào?",
+    "difficulty": "easy",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "# c. Tính giai cấp của ý thức xã hội"
+  },
+  {
+    "id": "RAG_310",
+    "query": "Theo đoạn văn, tại mức độ nào (tâm lý xã hội hay hệ tư tưởng) tính giai cấp của ý thức xã hội thể hiện rõ rệt và sâu sắc hơn, và vì sao hệ tư tưởng của giai cấp thống trị lại luôn bảo vệ lợi ích của giai cấp thống trị?",
+    "difficulty": "medium",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "# c. Tính giai cấp của ý thức xã hội"
+  },
+  {
+    "id": "RAG_311",
+    "query": "Trong phần \"# d. Các hình thái ý thức xã hội\" của giáo trình, \"ý thức chính trị\" được định nghĩa như thế nào?",
+    "difficulty": "easy",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "# d. Các hình thái ý thức xã hội"
+  },
+  {
+    "id": "RAG_312",
+    "query": "Theo nội dung của đoạn văn, tại sao \"ý thức pháp quyền\" lại có mối liên hệ chặt chẽ với \"ý thức chính trị\" và chúng xuất hiện trong những xã hội nào?",
+    "difficulty": "medium",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "# d. Các hình thái ý thức xã hội"
+  },
+  {
+    "id": "RAG_313",
+    "query": "Trong phần 3.4.3, khái niệm “tồn tại xã hội quyết định ý thức xã hội” được định nghĩa như thế nào?",
+    "difficulty": "easy",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "3.4.3. Quan hệ biện chứng giữa tồn tại xã hội và ý thức xã hội"
+  },
+  {
+    "id": "RAG_314",
+    "query": "Theo đoạn văn, phương thức sản xuất đời sống vật chất quyết định các quá trình sinh hoạt xã hội, chính trị và tinh thần như thế nào, và trong những hoàn cảnh nào mối quan hệ này có thể bị ảnh hưởng?",
+    "difficulty": "medium",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "3.4.3. Quan hệ biện chứng giữa tồn tại xã hội và ý thức xã hội"
+  },
+  {
+    "id": "RAG_315",
+    "query": "Trong phần \"# b. Tính độc lập tương đối và khả năng tác động trở lại tồn tại xã hội của ý thức\" ý thức xã hội được mô tả có tính gì so với tồn tại xã hội?",
+    "difficulty": "easy",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "# b. Tính độc lập tương đối và khả năng tác động trở lại tồn tại xã hội của ý thức"
+  },
+  {
+    "id": "RAG_316",
+    "query": "Theo đoạn văn, những nguyên nhân nào khiến ý thức xã hội thường lạc hậu hơn tồn tại xã hội và chúng phản ánh như thế nào tính độc lập tương đối của ý thức?",
+    "difficulty": "medium",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "# b. Tính độc lập tương đối và khả năng tác động trở lại tồn tại xã hội của ý thức"
+  },
+  {
+    "id": "RAG_317",
+    "query": "Theo đoạn văn trong mục 3.5 “Triết học về con người”, khái niệm ‘con người’ được định nghĩa như thế nào?",
+    "difficulty": "easy",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "3.5. TRIẾT HỌC VỀ CON NGƯỜI"
+  },
+  {
+    "id": "RAG_318",
+    "query": "Trong đoạn văn, những yếu tố nào được cho là quyết định mức độ tiến bộ của ý thức xã hội của con người và vai trò của giai cấp đại diện?",
+    "difficulty": "medium",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "3.5. TRIẾT HỌC VỀ CON NGƯỜI"
+  },
+  {
+    "id": "RAG_319",
+    "query": "Theo đoạn \"# b) Bản chất con người\" trong giáo trình, bản chất của con người được định nghĩa như thế nào?",
+    "difficulty": "easy",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "# b) Bản chất con người"
+  },
+  {
+    "id": "RAG_320",
+    "query": "Trong đoạn này, các loại quan hệ xã hội (như quan hệ vật chất, quan hệ tinh thần, quan hệ kinh tế, …) được liệt kê và mô tả như thế nào, và chúng ảnh hưởng ra sao đến việc hình thành và thay đổi bản chất của con người?",
+    "difficulty": "medium",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "# b) Bản chất con người"
+  },
+  {
+    "id": "RAG_321",
+    "query": "Theo C. Mác, thực chất của hiện tượng lao động của con người bị tha hóa là gì?",
+    "difficulty": "easy",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "3.5.2. Hiện tượng lao động của con người bị tha hóa và vấn đề giải phóng"
+  },
+  {
+    "id": "RAG_322",
+    "query": "Trong quan điểm của các nhà sáng lập chủ nghĩa Mác, hiện tượng lao động bị tha hóa chỉ xảy ra trong xã hội nào và nguyên nhân chính gây ra hiện tượng này là gì?",
+    "difficulty": "medium",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "3.5.2. Hiện tượng lao động của con người bị tha hóa và vấn đề giải phóng"
+  },
+  {
+    "id": "RAG_323",
+    "query": "Trong phần 3.5.3, quan hệ cá nhân – xã hội được định nghĩa như thế nào và tại sao nó được coi là tiền đề cho sự tồn tại và phát triển của cá nhân?",
+    "difficulty": "easy",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "3.5.3. Quan hệ cá nhân và xã hội; vai trò của quần chúng nhân dân và lãnh"
+  },
+  {
+    "id": "RAG_324",
+    "query": "Theo nội dung của mục 3.5.3, quan hệ cá nhân – xã hội phụ thuộc vào những yếu tố lịch sử, trình độ phát triển xã hội và bản chất của xã hội nào, và quan hệ này có sự khác nhau như thế nào giữa xã hội có phân chia giai cấp và xã hội không phân chia giai cấp?",
+    "difficulty": "medium",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "3.5.3. Quan hệ cá nhân và xã hội; vai trò của quần chúng nhân dân và lãnh"
+  },
+  {
+    "id": "RAG_325",
+    "query": "Khái niệm quần chúng nhân dân được định nghĩa như thế nào trong lịch sử?",
+    "difficulty": "easy",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "# b. Vai trò của quần chúng nhân dân và lãnh tụ trong lịch sử"
+  },
+  {
+    "id": "RAG_326",
+    "query": "Vai trò của quần chúng nhân dân và lãnh tụ trong lịch sử có mối quan hệ như thế nào với nguyên tắc lịch sử - cụ thể và toàn diện?",
+    "difficulty": "medium",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "# b. Vai trò của quần chúng nhân dân và lãnh tụ trong lịch sử"
+  },
+  {
+    "id": "RAG_327",
+    "query": "Trong đoạn văn, “lý luận về con người của các nhà kinh điển của chủ nghĩa Mác - Lênin” được coi là nền tảng lý luận cho việc gì?",
+    "difficulty": "easy",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "3.5.4. Vấn đề con người trong sự nghiệp cách mạng ở Việt Nam"
+  },
+  {
+    "id": "RAG_328",
+    "query": "Theo nội dung đoạn 3.5.4, điều kiện lịch sử xã hội Việt Nam hiện đại đã ảnh hưởng như thế nào đến việc Chủ tịch Hồ Chí Minh vận dụng và phát triển lý luận về con người của Mác - Lênin?",
+    "difficulty": "medium",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "3.5.4. Vấn đề con người trong sự nghiệp cách mạng ở Việt Nam"
+  },
+  {
+    "id": "RAG_329",
+    "query": "Hình thái kinh tế - xã hội trong học thuyết của Mác-Lênin được định nghĩa như thế nào?",
+    "difficulty": "easy",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "1. Hãy phân tích nội dung cơ bản của học thuyết hình thái kinh tế - xã hội và rút"
+  },
+  {
+    "id": "RAG_330",
+    "query": "Trong phần 1, học thuyết hình thái kinh tế - xã hội chỉ ra những yếu tố nào quyết định sự chuyển đổi kinh tế và chúng mang lại ý nghĩa phương pháp luận gì cho quá trình đổi mới ở Việt Nam?",
+    "difficulty": "medium",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "1. Hãy phân tích nội dung cơ bản của học thuyết hình thái kinh tế - xã hội và rút"
+  },
+  {
+    "id": "RAG_331",
+    "query": "Triết học Mác - Lênin định nghĩa dân tộc là gì?",
+    "difficulty": "easy",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "5. Hãy phân tích quan điểm của triết học Mác - Lênin về dân tộc; quan hệ giai"
+  },
+  {
+    "id": "RAG_332",
+    "query": "Làm thế nào quan điểm của triết học Mác - Lênin về quan hệ giai cấp - dân tộc - nhân loại được vận dụng trong cách mạng xã hội chủ nghĩa tại Việt Nam?",
+    "difficulty": "medium",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "5. Hãy phân tích quan điểm của triết học Mác - Lênin về dân tộc; quan hệ giai"
+  },
+  {
+    "id": "RAG_333",
+    "query": "Triết học Mác-Lênin định nghĩa “con người” như thế nào trong phần 6 của giáo trình?",
+    "difficulty": "easy",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "6. Phân tích quan điểm của triết học Mác - Lênin về con người và ý nghĩa của nó"
+  },
+  {
+    "id": "RAG_334",
+    "query": "Trong bối cảnh đổi mới ở Việt Nam hiện nay, quan điểm của triết học Mác-Lênin về con người có thể được áp dụng như thế nào để nâng cao hiệu quả của các chính sách phát triển kinh tế‑xã hội?",
+    "difficulty": "medium",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "6. Phân tích quan điểm của triết học Mác - Lênin về con người và ý nghĩa của nó"
+  },
+  {
+    "id": "RAG_335",
+    "query": "Trong bối cảnh phát triển xã hội ở Việt Nam, “bỏ qua” hình thái tư bản chủ nghĩa có nghĩa là gì?",
+    "difficulty": "easy",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "3. Em hiểu như thế  nào về sự phát triển “bỏ qua” hình thái tư bản chủ nghĩa để"
+  },
+  {
+    "id": "RAG_336",
+    "query": "Theo quan điểm của Marx‑Lenin và Hồ Chí Minh, những điều kiện khách quan và chủ quan nào cần có để Việt Nam có thể thực hiện việc “bỏ qua” giai đoạn tư bản chủ nghĩa và tiến tới xây dựng chủ nghĩa xã hội?",
+    "difficulty": "medium",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "3. Em hiểu như thế  nào về sự phát triển “bỏ qua” hình thái tư bản chủ nghĩa để"
+  },
+  {
+    "id": "RAG_337",
+    "query": "Văn kiện Đại hội đại biểu toàn quốc lần thứ XII của Đảng Cộng sản Việt Nam là tài liệu gì?",
+    "difficulty": "easy",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "6. Đảng Cộng sản Việt Nam: Văn kiện Đại hội đại biểu toàn quốc lần thứ XII, Nxb."
+  },
+  {
+    "id": "RAG_338",
+    "query": "Trong danh sách tài liệu tham khảo, Văn kiện Đại hội đại biểu toàn quốc lần thứ XII của Đảng Cộng sản Việt Nam được liệt kê cùng với những tài liệu nào, và chúng có mối liên hệ như thế nào trong việc xây dựng nội dung giảng dạy triết học?",
+    "difficulty": "medium",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "6. Đảng Cộng sản Việt Nam: Văn kiện Đại hội đại biểu toàn quốc lần thứ XII, Nxb."
+  },
+  {
+    "id": "RAG_339",
+    "query": "Giáo trình Triết học Mác – Lênin (Dành cho bậc đại học) do Bộ Giáo dục và Đào tạo xuất bản thuộc hệ gì?",
+    "difficulty": "easy",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "11. Bộ Giáo dục và Đào tạo: Giáo trình Triết học Mác – Lênin (Dành cho bậc đại học"
+  },
+  {
+    "id": "RAG_340",
+    "query": "Giáo trình Triết học Mác – Lênin (Dành cho bậc đại học) của Bộ Giáo dục và Đào tạo được thiết kế cho đối tượng học nào và có mục tiêu gì so với các giáo trình khác như giáo trình cao cấp lý luận chính trị của Học viện Chính trị quốc gia Hồ Chí Minh?",
+    "difficulty": "medium",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "11. Bộ Giáo dục và Đào tạo: Giáo trình Triết học Mác – Lênin (Dành cho bậc đại học"
+  },
+  {
+    "id": "RAG_341",
+    "query": "Trong phần 20 của sách “Mác‑xít” (Séptulin A.P.), khái niệm “phạm trù” trong triết học Marx‑Lenin được định nghĩa như thế nào?",
+    "difficulty": "easy",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "20. Séptulin A.P.: Bàn về mối liên hệ lẫn nhau của các phạm trù trong triết học"
+  },
+  {
+    "id": "RAG_342",
+    "query": "Theo Séptulin A.P. trong phần 20, mối liên hệ lẫn nhau giữa các phạm trù trong triết học Marx‑Lenin được áp dụng như thế nào để làm sáng tỏ quy luật biện chứng duy vật?",
+    "difficulty": "medium",
+    "subject": "triet_hoc_maclenin",
+    "relevant_source": "triet_hoc_maclenin_1_chuong_3",
+    "relevant_chapter": "Chương 3",
+    "relevant_section": "20. Séptulin A.P.: Bàn về mối liên hệ lẫn nhau của các phạm trù trong triết học"
+  }
+]

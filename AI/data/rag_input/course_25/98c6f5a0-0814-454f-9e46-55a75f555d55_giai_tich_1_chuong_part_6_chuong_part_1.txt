@@ -1,0 +1,109 @@
+# Bài tập chương 1
+
+Bài tập 1.1. Viết số phức sau dưới dạng chính tắc 
+$\begin{array} { l } { 1) z = 6i \Big( \displaystyle \frac { 1 + i } { 2 - i } \Big) + 3 \Big( \displaystyle \frac { i - 4 } { 2i + 1 } \Big). } \\ { 2) z = \displaystyle \frac { ( 1 + i ^ { 3 } ) ^ { 2 } ( 2 - i ) } { 4 - 5i }. } \end{array}$
+$\begin{array} { l } { \displaystyle \mathbf { Đs } : z = \frac { - 24 } { 5 } + \frac { 33 } { 5 } i. } \\ { \displaystyle \mathbf { Đs } : z = \frac { - 28 } { 41 } - \frac { 6 } { 41 } i. } \end{array}$
+3) $z ~ = ~ ( a + b i ) ^ { 9 }$ với $a , b \in \mathbb { R }$
+Đs: $z ~ = ~ ( \sqrt { a ^ { 2 } + b ^ { 2 } } ) ^ { 9 } ( \cos 9\alpha + i \sin 9\alpha)$ với 
+$\begin{array} { r } { \alpha = \operatorname { arccos } \frac { a } { \sqrt { a ^ { 2 } + b ^ { 2 } } }. } \end{array}$ 
+hoặc $\begin{array} { r } { \alpha = \arcsin \frac { b } { \sqrt { a ^ { 2 } + b ^ { 2 } } }. } \end{array}$
+
+Bài tập 1.2. Tính $\mathrm { Im } ( z ) , \mathrm { Re } ( z )$ của các số phức sau:
+1) $z = \frac { ( 1 - i \sqrt { 3 } ) ^ { 15 } } { ( i - 1 ) ^ { 20 } } + \frac { ( 1 + i \sqrt { 3 } ) ^ { 15 } } { ( 1 + i ) ^ { 20 } }. $
+
+${\bf Đs}: Im(z) = 0, Re(z) = 64.$  
+$2) z = (1 + \cos \alpha - i \sin \alpha)^n.$   
+Đs: $Re(z) = 2^n \cos^n {\frac{\alpha}{2}} \cos {\frac{n\alpha}{2}}, Im(z) = -2^n \cos^n {\frac{\alpha}{2}} \sin {\frac{n\alpha}{2}}$   
+$3) z = (1 - i)^n$   
+Đs: $\begin{array} { r } { Re(z) = 2^{\frac{n}{2}} \cos {\frac{n\pi}{4}}, Im(z) = -2^{\frac{n}{2}} \sin {\frac{n\pi}{4}}. } \end{array}$
+
+Bài tập 1.3. Giải các phương trình sau, với nghiệm phức
+
+$3) (z + i)^{4} + (z^{2} + 1)^{2} + (z - i)^{4} = 0.$ 
+$\begin{array}{rlr}
+&+1 = 0 \text{ với } \varphi \in \mathbb{R}, \varphi \neq 0, \varphi \neq 1. &\mathbf{Đs}: e^{i\varphi}, e^{-i\varphi}. \\
+&2(1 + i)z - 45 = 0, \operatorname*{min}ghi \text{ èm }{:} z_{0} = 3i. &\mathbf{Đs}: z_{0}, -3, 2 - i, 1 - 2i. \\
+&\overset{2}{+}(z + i)^{4} + (z - i)^{4} = 0. &\mathbf{Đs}: -\sqrt{3}, \sqrt{3}, \frac{1}{\sqrt{3}}, -\frac{1}{\sqrt{3}}.
+\end{array}$   
+$4) (z^{2} - 4z + 5)^{2} + (z + 1)^{2} = 0.$   
+Đs: $1 - i, 1 + i, 3 - 2i, 3 + 2i.$
+
+$5) z^{4} = z + \bar{z}.$
+$\begin{array}{r}
+\text{Đs}: 0, \sqrt[3]{2}, \frac{1}{\sqrt[3]{2}}(-1 - i), \frac{1}{\sqrt[3]{2}}(-1 + i).
+\end{array}$
+
+Bài tập 1.4. Giải hệ phương trình, với nghiệm phức.
+
+$1) xy = z, yz = x, zx = y.$
+Đs: $(0, 0, 0), (1, 1, 1), (1, -1, -1), (-1, -1, 1), (-1, 1, -1).$
+
+$2) x = y^{2}, y = z^{2}, z = x^{2}.$
+
+Bài tập 1.5. Chứng minh rằng
+
+1) $| x + y | ^ { 2 } \leq ( 1 + | x | ^ { 2 } ) ( 1 + | y | ^ { 2 } ) \forall x , y \in \mathbb{C}.$   
+2) $\begin{array}{r}
+z < \frac{1}{2} \Rightarrow |(1 + i) z^3 + i z| < \frac{3}{4} ~ \forall z \in \mathbb{C}.
+\end{array}$  
+3) Một trong 2 bất đẳng thức sau đúng $\begin{array}{r}
+|1 + z| \geq \frac{1}{2} 
+\end{array}$ hoặc $|1+ z^2| \geq 1 ~ \forall z \in \mathbb{C}.$   
+4) $\begin{array}{rl}
+& z_1 z_2 = \frac{1}{4} \Big( |z_1 + \bar{z_2}| ^ {2} - |z_1 - \bar{z_2}| ^ {2} + i|z_1 + i\bar{z_2}| ^ {2} - i|z_1 - i\bar{z_2}| ^ {2} \Big) ~ \forall z_1, z_2 \in \mathbb{C}, \\
+& |\overline{z_1} z_2 - 1|^2 - |z_1 - z_2|^2 = (1 - |z_1|^2)(1 - |z_2|^2) ~ \forall z_1, z_2 \in \mathbb{C}.
+\end{array}$
+
+Bài tập 1.6. Tìm ánh xạ $f : \mathbb{C} \to \mathbb{C}$ thỏa mãn:
+
+1) $f(x) = x ~ \forall x \in \mathbb{R}, f(z_1 + z_2) = f(z_1) + f(z_2), f(z_1 z_2) = f(z_1).f(z_2)$ với $z_1, z_2 \in \mathbb{C}.$  
+Đs: $f(z) = z$ hoặc $\begin{array}{r}
+f(z) = \bar{z}.
+\end{array}$
+
+2) $z f(1 - z) - (1 - 3z)f(1 + z) = z^2 + 1.$
+
+Bài tập 1.7. Khai triển các hàm số sau theo các hàm sin $x$ và cos $x$:
+
+1) $A = \sin 7x$：
+
+2) $B = \cos 9x$：
+
+3) $C = \sin nx$：
+
+Đs: $C = \sum _ { k = 0 } ^ { n } a _ { k } \cos ^ { n - k } x \sin ^ { k } x$, trong đó $b _ { k } = 0$ nếu $k \in 2\mathbb{N}$, $a _ { k } = C _ { n } ^ { k } ( - 1 ) ^ { \frac { k - 1 } { 2 } }$ nếu $k \notin 2\mathbb{N}$：
+
+4) $D = \cos nx$
+
+Đs: $D = \sum _ { k = 0 } ^ { n } b _ { k } \cos ^ { n - k } x \sin ^ { k } x$, trong đó $b _ { k } = 0$ nếu $k \notin 2\mathbb{N}$, $b _ { k } = C _ { n } ^ { k } ( - 1 ) ^ { \frac { k } { 2 } }$ nếu $k \in 2\mathbb{N}$：
+
+Bài 1.8. Dùng định nghĩa, chứng minh rằng
+
+$$
+\begin{array} { l }
+{\displaystyle \lim _ { n \to \infty } \frac { n } { n + 1 } = 1 . } \\
+{\displaystyle \lim _ { n \to \infty } \frac { 2n - 1 } { n + 1 } = 2 . } \\
+{\displaystyle \lim _ { n \to \infty } \frac { n ^ { 2 } } { n ^ { 3 } + 1 } = 0 . } \\
+{\displaystyle \lim _ { n \to \infty } \frac { 1 + 2 ^ { n } } { 3 ^ { n } } = 0 . } \\
+{\displaystyle \lim _ { n \to \infty } \frac { 1 + n ^ { 2 } } { 3n - 1 } = +\infty . }
+\end{array}
+$$
+
+Bài 1.9. Tìm các giới hạn sau:
+
+$$
+\lim _ { n \to \infty } \left( \frac { 1 } { 1 \cdot 2 } + \frac { 1 } { 2 \cdot 3 } + \ldots + \frac { 1 } { n ( n + 1 ) } \right).
+$$
+
+Đs: 1.
+
+$$
+\operatorname*{lim}_{n \to \infty} \frac{1}{1 \cdot 2 \cdot 3} + \frac{1}{2 \cdot 3 \cdot 4} + \ldots + \frac{1}{n (n + 1) (n + 2)}.
+$$
+
+Đs: $\textstyle{\frac{1}{4}}$
+
+Đs: $0.$   
+4) $\operatorname*{lim}_{n \to \infty} (\sqrt{4 n^2 + \alpha n + 1} - 2 n).$ Đs: $\textstyle{\frac{\alpha}{4}}$ :   
+5) $\operatorname*{lim}_{n \to \infty} (27n^3 + 3n^2 - 5 - 3n).$ Đs: $\frac{1}{9}$ :   
+6) $\operatorname*{lim}_{n \to \infty} \sqrt{\frac{4n^2 + n - 1}{n^3 - n^2 + 10}} - 2n^2.$ Đs: $\textstyle{\frac{-5}{36}}$ .

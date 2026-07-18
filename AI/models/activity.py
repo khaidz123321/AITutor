@@ -6,7 +6,7 @@ class Activity(Base):
     id = Column(Integer, primary_key=True, index=True)
     # Khóa ngoại liên kết tới id user
     # ondelete="CASCADE": nếu tài khoản User bị xóa, toàn bộ lịch sử hoạt động của người đó cũng bị xóa theo.
-    user_id = Column(Integer, ForeignKey("users.id", ondelete="CASCADE"), index=True, nullable=False)
+    user_id = Column(Integer, index=True, nullable=False)
     # Phân loại hành động (vd: 'login', 'start_chat', 'submit_exercise')
     action_type = Column(String(255), nullable=False)
     # mô tả chi tiết hành động 

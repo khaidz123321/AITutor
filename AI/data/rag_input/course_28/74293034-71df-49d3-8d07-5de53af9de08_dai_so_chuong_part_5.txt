@@ -1,0 +1,231 @@
+# Bài tập Chương 2
+
+2.1. Tap $\mathbb{R}^3$ với các phép toán được định nghĩa trong các trường hợp sau có phải là không gian véc tơ không? Chỉ rõ tiên đề mà phép toán không thỏa mãn.
+
+$$
+\left\{
+\begin{array}{l}
+(x, y, z) + (x', y', z') = (x + x', y + y', z + z') \\
+\alpha (x, y, z) = (\alpha x, y, z) \quad \vdots \quad \alpha \in \mathbb{R}
+\end{array}
+\right.
+$$
+
+b)
+$$
+\left\{
+\begin{array}{l}
+(x, y, z) + (x', y', z') = (x + x', y + y', z + z') \\
+\alpha (x, y, z) = (2 \alpha x, 2 \alpha y, 2 \alpha z) ; \quad \alpha \in \mathbb{R}
+\end{array}
+\right.
+$$
+
+c)
+$$
+\left\{
+\begin{array}{l}
+(x, y, z) + (x', y', z') = (x + x' + 1, y + y' + 1, z + z' + 1) \\
+\alpha (x, y, z) = (0, 0, 0) ; \quad \alpha \in \mathbb{R}
+\end{array}
+\right.
+$$
+
+2.2. Xét các hàm số xác định trong đoạn $[a, b] \subset \mathbb{R}$ với các phép cộng hai hàm số và phép nhân hàm số với số thực. Tập các hàm số sau có phải là không gian véc tơ không?
+
+a) Tập các hàm liên tục trong đoạn $\left[ a , b \right]$ ：  
+b) Tập các hàm khả vi trong khoảng $\scriptstyle { \left( a , b \right) }$ ：  
+c) Tập các hàm bị chặn trong đoạn $\left[ a , b \right]$ ：  
+d) Tập các hàm số trong đoạn $\left[ a , b \right]$ thỏa mãn $f ( b ) = 0$ ：  
+e) Tập các hàm số trong đoạn $\left[ a , b \right]$ thỏa mãn $f ( b ) = 1$ ：  
+f) Tập các hàm số không âm trong đoạn $\left[ a , b \right]$ ：
+
+2.3. Tập hợp các véc tơ có dạng sau có phải là không gian con của $\mathbb { R } ^ { 3 } \mathrm { ? }$  
+a) Các véc tơ có dạng $( x , 0 , 0 )$ ：   
+b) Các véc tơ có dạng $( x , 1 , 1 )$ ：   
+c) Các véc tơ có dạng $( x , y , z )$ thỏa mãn $x + y + z = 0$ ：   
+d) Các véc tơ có dạng $( x , y , z )$ thỏa mãn $x + y + z = 1$ ：   
+e) Các véc tơ có dạng $\left( x , y , z \right)$, $2 x - y + z = 0$, $x + y - 4 z = 0.$
+
+2.4. Tìm $x , y , z$ nếu ${ \bigl ( } 2 , - 3 , 4 { \bigr ) } = x { \bigl ( } 1 , 1 , 1 { \bigr ) } + y { \bigl ( } 1 , 1 , 0 { \bigr ) } + z { \bigl ( } 1 , 0 , 0 { \bigr ) }.$
+
+2.5. Hãy biểu diễn véc tơ $u$ thành hợp thức tuyến tính của $\nu _ { 1 } , \nu _ { 2 } , \nu _ { 3 }$  
+a) $\boldsymbol { u } = ( 7 , - 2 , 15 )$, $\nu _ { 1 } = ( 2 , 3 , 5 )$, $\nu _ { 2 } = ( 3 , 7 , 8 )$, $\nu _ { 3 } = ( 1 , - 6 , 1 ).$  
+b) $u = ( 1 , 4 , - 7 , 7 )$, $\nu _ { 1 } = ( 4 , 1 , 3 , - 2 )$, $\nu _ { 2 } = ( 1 , 2 , - 3 , 2 )$, $\nu _ { 3 } = ( 6 , 9 , 1 , - 3 ).$
+
+2.6. Hay xác định $\lambda$ sao cho $u$ là tổ hợp tuyến tính của $\nu _ { 1 } , \nu _ { 2 } , \nu _ { 3 }$:
+
+a) $u = ( 7 , - 2 , \lambda ) ; ~ \nu _ { 1 } = ( 2 , 3 , 5 ) , ~ \nu _ { 2 } = ( 3 , 7 , 8 ) , ~ \nu _ { 3 } = ( 1 , - 6 , 1 ).$
+
+b) $u = ( 1 , 3 , 5 ) ; ~ \nu _ { 1 } = ( 3 , 2 , 5 ) , ~ \nu _ { 2 } = ( 2 , 4 , 7 ) , ~ \nu _ { 3 } = ( 5 , 6 , \lambda ).$
+
+2.7. Viết đa thức $p = - 3 + 4 x + x ^ { 2 }$ thành tổ hợp tuyến tính của các đa thức:
+
+$$
+p _ { 1 } = 5 - 2 x + x ^ { 2 } , ~ p _ { 2 } = - 3 x + 2 x ^ { 2 } , ~ p _ { 3 } = 3 + x .
+$$
+
+2.8. Chứng minh $\left\{ \nu _ { 1 } , \nu _ { 2 } , \nu _ { 3 } \right\}$ là một cơ sở của $\mathbb { R } ^ { 3 }$, tìm tọa độ $\hat { \mathrm { d } } \hat { \mathrm { 0 } }$ của $u$ trong cơ sở này.
+
+a) $u = ( 6 , 9 , 14 ) ; ~ \nu _ { 1 } = \left( 1 , 1 , 1 \right) , ~ \nu _ { 2 } = \left( 1 , 1 , 2 \right) , ~ \nu _ { 3 } = \left( 1 , 2 , 3 \right).$
+
+b) $u = ( 6 , 2 , - 7 ) ; ~ \nu _ { 1 } = ( 2 , 1 , - 3 ) , ~ \nu _ { 2 } = ( 3 , 2 , - 5 ) , ~ \nu _ { 3 } = ( 1 , - 1 , 1 ).$
+
+2.9. Mỗi hệ vector sau có sinh ra $\mathbb { R } ^ { 3 }$ không?
+
+a) $u = ( 1 , 1 , 1 ) , ~ \boldsymbol { \nu } = ( 2 , 2 , 0 ) , ~ w = ( 3 , 0 , 0 ).$
+
+b) $u = ( 2 , - 1 , 3 ) , ~ \nu = ( 4 , 1 , 2 ) , ~ w = ( 8 , - 1 , 8 ).$
+
+c) $u = ( 3 , 1 , 4 ) , ~ \nu = ( 2 , - 3 , 5 ) , ~ w = ( 5 , - 2 , 9 ), ~ s = ( 1 , 4 , - 1 ).$
+
+2.10. Các hệ vector sau đây độc lập hay phụ thuộc tuyến tính.
+a) $u = ( 4 , - 2 , 6 )$, $\nu = ( 6 , - 3 , 9 )$ trong $\mathbb { R } ^ { 3 }$：
+b) $\boldsymbol{u} = ( 2 , - 3 , 1 )$, $\nu = ( 3 , - 1 , 5 )$, $w = ( 1 , - 4 , 3 )$ trong $\mathbb { R } ^ { 3 }.$
+c) $u = ( 5 , 4 , 3 )$, $\nu = ( 3 , 3 , 2 )$, $w = ( 8 , 1 , 3 )$ trong $\mathbb { R } ^ { 3 }$：
+d) $u = ( 4 , - 5 , 2 , 6 )$, $v = ( 2 , - 2 , 1 , 3 )$, $\boldsymbol{w} = ( 6 , - 3 , 3 , 9 )$, $s = ( 4 , - 1 , 5 , 6 )$ trong $\mathbb { R } ^ { 4 }$：
+
+2.11. Tìm chiều và một cơ sở của các không gian con của $\mathbb{R}^4$ xác định như sau:
+a) Các vector có dạng $( a , b , c , 0 )$：
+b) Các vector có dạng $( a , b , c , d )$ với $d = a + b$ và $c = a - b$：
+c) Các vector có dạng $( a , b , c , d )$ với $a = b = c = d$：
+
+2.12. Tìm chiều và mặt cơ sở của không gian con sinh bởi hệ các vec tơ sau:
+a) $\nu _{1} = (2, 4, 1)$, $\nu_{2} = (3, 6, -2)$, $\nu_{3} = (-1, 2, -\frac{1}{2})$:
+
+b) $\nu_{1} = (1, 0, 0, -1)$, $\nu_{2} = (2, 1, 1, 0)$, $\nu_{3} = (1, 1, 1, 1)$, $\nu_{4} = (1, 2, 3, 4)$, $\nu_{5} = (0, 1, 2, 3).$
+
+c) $\nu_{1} = (1, 1, 1, 1, 0)$, $\nu_{2} = (1, 1, -1, -1, -1)$, $\nu_{3} = (2, 2, 0, 0, -1)$, $\nu_{4} = (1, 1, 5, 5, 2)$, $\nu_{5} = (1, -1, -1, 0, 0).$
+
+2.13. Chứng minh rằng tập các hàm khả vi trên $[a, b]$ và thỏa mãn $f' + 4f = 0$ tạo thành không gian con của $C_{[a; b]}^{0}$. Tìm một cơ sở và chiều của không gian con này.
+
+2.14. Cho 3 vec tơ $\nu_{1}$, $\nu_{2}$, $\nu_{3}$ của không gian vec tơ $V$. Chứng minh:
+a) Nếu $\{\nu_{1}, \nu_{2}\}$ độc lập thì $\{\nu_{1} + \nu_{2}, \nu_{1} - \nu_{2}\}$ cũng độc lập.
+b) Nếu $\{\nu_{1}, \nu_{2}, \nu_{3}\}$ độc lập thì $\{\nu_{1} + \nu_{2}, \nu_{2} + \nu_{3}, \nu_{3} + \nu_{1}\}$ cũng độc lập.
+
+2.15. Chứng minh nếu hai hệ vector $\left\{ \nu _ { 1 } , . . . , \nu _ { n } \right\}$ và $\left\{ u _ { 1 } , . . . , u _ { m } \right\}$ của không gian vector V mà mỗi vector của hệ này đều có thể biểu diễn thành tổ hợp tuyến tính của hệ kia thì hai hệ đó có cùng hạng.
+
+2.16. Giả sử $U, V$ và $W$ là ba không gian con của cùng một không gian vector. Chứng minh rằng $( U \cap V ) + ( U \cap W ) \subset U \cap ( V + W ) .$
+
+2.17. Trong không gian $\mathbb{R}^4$, xét các vector: $u_1 = ( 1, 2, -1, 3)$, $u_2 = ( 2, 4, 1, -2)$, $u_3 = ( 3, 6, 3, -7)$ và $\nu_1 = ( 1, 2, -4, 11)$, $\nu_2 = ( 2, 4, -5, 14)$. Đặt $U$ và $V$ là hai không gian con của $\mathbb{R}^4$ lần lượt sinh bởi các vector $\left\{ u _ { 1 } , u _ { 2 } , u _ { 3 } \right\}$ và $\left\{ \nu _ { 1 } , \nu _ { 2 } \right\}$. Chứng minh rằng $U = V$.
+
+2.18. Chứng minh rằng các tập con sau
+
+$$
+V = \left\{ ( x, y, z ) \in \mathbb{R}^3 \mid x + y + z = 0 \right\}, W = \left\{ ( x, y, z ) \in \mathbb{R}^3 \mid x - y - z = 0 \right\}
+$$
+
+là các không gian con của $\mathbb{R}^3$. Tìm một cơ sở của $V \cap W$, $V$ và $W$.
+
+2.19. Chứng minh rằng các tập con sau
+
+$$
+V = \left\{ ( x, y, z ) \in \mathbb{R}^3 \mid x = 0 \right\}, W = \left\{ ( x, y, z ) \in \mathbb{R}^3 \mid y = 0 \right\}
+$$
+
+Là các không gian con của $\mathbb{R}^3$. Xác định $V \cap W, V + W$. Tổng này có phải là tổng trực tiếp không?
+
+2.20. Trong không gian $\mathbb{R}^4$ xét:
+
+$\begin{array}{rl}
+& V = \mathrm{span}\left\{(1, 0, 0, 2); (0, 2, 1, -1); (-1, 6, 3, 7)\right\}, \\
+& W = \mathrm{span}\left\{(3, 2, 0, 1); (1, 2, 1, 1)\right\}.
+\end{array}$
+Tìm số chiều của $V, W, V \cap W, V + W$:
+
+2.21. Tìm điều kiện của $x, y, z$ để $u = (x, y, z) \in \mathbb{R}^3$ thuộc không gian vector con sinh bởi: $u_1 = (2, 1, 0)$, $u_2 = (1, -1, 2)$, $u_3 = (0, 3, -4)$.
+
+2.22. Chứng minh rằng $W = \left\{(x, y, 0) \mid x, y \in \mathbb{R}\right\}$ là không gian vector con sinh bởi hai vector $u, v$ trong các trường hợp sau:
+
+a) $u = (1, 2, 0), v = (0, 1, 0)$.
+
+b) $u = (2, -1, 0), v = (1, 3, 0)$.
+
+2.23. $W_1, W_2$ là hai không gian vector con của $\mathbb{R}^3$ xác định như sau:
+
+$\begin{array}{r}
+W_1 = \left\{(x, y, z) \mid x, y, z \in \mathbb{R}; x = y = z\right\};
+W_2 = \left\{(0, y, z) \mid y, z \in \mathbb{R}\right\}.
+\end{array}$
+Chứng minh rằng $\mathbb{R}^3 = W_1 \oplus W_2$.
+
+2.24. Cho hai véc tơ $u_{1} = (1, -3, 2)$, $u_{2} = \left(2, -1, 1\right)$ của $\mathbb{R}^{3}$:
+
+a) Viết $(1,7,-4)$ thành hợp thức tuyến tính của hai véc tơ $u_{1}, u_{2}$:
+
+b) Viết $(2,-5,4)$ thành hợp thức tuyến tính của hai véc tơ $u_{1}, u_{2}$:
+
+c) Tìm các giá trị của $k$ để $(1, k, 5)$ viết được thành hợp thức tuyến tính của hai véc tơ $u_{1}, u_{2}.$
+
+d) Tìm điều kiện $x, y, z$ để $(x, y, z)$ viết được thành hợp thức tuyến tính của hai véc tơ $u_{1}, u_{2}$:
+
+2.25. Tìm $W_{1} \cap W_{2}$, trong $\mathbb{R}^{3}: W_{1} = \{(x, y, 0) | x, y \in \mathbb{R}\}. W$ là không gian véc tơ con của $\mathbb{R}^{3}$ sinh bởi hai véc tơ (1,2,3) và (1,-1,1).
+
+2.26. $W_{1}, W_{2}, W_{3}$ là ba không gian véc tơ con của $\mathbb{R}^{3}$ xác định như sau:
+
+$$
+\begin{array}{rl}
+& W_{1} = \left\{(x, y, z) | x, y, z \in \mathbb{R}; x + y + z = 0\right\}; \\
+& W_{2} = \left\{(x, y, z) | x, y, z \in \mathbb{R}; x = z\right\}; \\
+& W_{3} = \left\{(0, 0, z) | z \in \mathbb{R}\right\}.
+\end{array}
+$$
+
+Chứng minh rằng: a) $\mathbb{R}^{3} = W_{1} + W_{2};$ b) $\mathbb{R}^{3} = W_{1} + W_{3};$ c) $\mathbb{R}^{3} = W_{2} + W_{3}.$
+
+Trong các tổng trên trường hợp nào là tổng trực tiếp.
+
+2.27. Giả sử $W$ là không gian véc tơ con của không gian véc tơ $n$ chiều $V$. Chứng minh rằng $\dim W \leq n$: $\mathrm{dim} W = n$ khi và chỉ khi $W = V$:
+
+2.28. Cho $W_{1}, W_{2}$ là hai không gian véc tơ con của $\mathbb{R}^{4}$ xác định như sau:
+$$
+\begin{array}{rl}
+& \quad W_{1} = \left\{(x, y, z, t) \mid x, y, z, t \in \mathbb{R}; y + z + t = 0\right\}; \\
+& \quad W_{2} = \left\{(x, y, z, t) \mid x, y, z, t \in \mathbb{R}; x + y = 0, z = 2t\right\}.
+\end{array}
+$$
+Tìm mặt cơ sở và chiều của các không gian véc tơ con $W_{1}, W_{2}$ và $W_{1} \cap W_{2}$
+
+2.29. Giả sử $W_{1}, W_{2}$ là hai không gian véc tơ con 2 chiều của $\mathbb{R}^{3}$. Chứng minh rằng $W_{1} \cap W_{2} \neq \{\bf{0}\}.$
+
+2.30. Giả sử $W_{1}, W_{2}$ là hai không gian véc tơ con của $\mathbb{R}^{3}$ thỏa mãn điều kiện $\dim W_{1} = 1$, $\dim W_{2} = 2$ và $W_{1} \subset W_{2}$. Chứng minh rằng $\mathbb{R}^{3} = W_{1} \oplus W_{2}$:
+
+2.31. Giả sử $W_{1}, W_{2}$ là hai không gian con của không gian véc tơ $V$ sao cho $W_{1} \cup W_{2} = V$. Chứng minh $W_{1} = V$ hay $W_{2} = V$:
+
+2.32. Giả sử $W_{1}, W_{2}$ là hai không gian con của không gian véc tơ $V$. Chứng minh rằng hai tính chất bất kỳ trong ba tính chất sau kéo theo tính chất thứ ba:
+
+1) ${ \cal W } _ { 1 } \cap { \cal W } _ { 2 } = \left\{ \mathbf { 0 } \right\} ,$  
+2) $W _ { 1 } + W _ { 2 } = V$ ,  
+3) $\dim W _ { 1 } + \dim W _ { 2 } = \dim V .$
+
+2.33. Chứng minh rằng mỗi không gian con $W$ của $V$ đều có bổ tuyến tính, nghĩa là tồn tại không gian con $Z$ sao cho $V = W \oplus Z$. Hỏi $Z$ có duy nhất không?
+
+2.34. Cho hệ véc tơ $\left\{ \nu _ { 1 } , . . . , \nu _ { n } \right\}$ của không gian véc tơ $V$. Chứng minh rằng hệ $\left\{ \nu _ { 1 } , . . . , \nu _ { n } \right\}$ độc lập tuyến tính khi và chỉ khi $\sum _ { i = 1 } ^ { n } \mathbb { R } \nu _ { i }$ là tổng trực tiếp và $\mathbf { \nabla } \nu _ { i } \neq \mathbf { 0 }$ với mỗi $i = 1 , . . . , n$ :
+
+2.35. Giả sử $V = W _ { 1 } \oplus \ldots \oplus W _ { n }$. Chứng minh rằng:
+
+a) Nếu $\mathcal { S } _ { i }$ là một hệ độc lập tuyến tính của $W _ { i }$ với mỗi $i = 1 , . . . , n$ thì ${ \mathcal { S } } _ { 1 } \cup . . . \cup { \mathcal { S } } _ { n }$ là hệ độc lập tuyến tính của $V$ :
+
+b) Nếu $\mathcal { S } _ { i }$ là một hệ sinh của $W _ { i }$ với mỗi $i = 1 , . . . , n$ thì ${ \mathcal { S } } _ { 1 } \cup . . . \cup { \mathcal { S } } _ { n }$ là hệ sinh của $V$ :
+
+c) Nếu $\mathcal { S } _ { i }$ là một cơ sở của $W _ { i }$ với mỗi $i = 1 , . . . , n$ thì ${ \mathcal { S } } _ { 1 } \cup . . . \cup { \mathcal { S } } _ { n }$ là một cơ sở của $V$ :
+
+2.36. Giả sử \( k_1, \ldots, k_n \) là \( n \) số thực cho trước, trong \(\mathbb{R}^n\) xét tập:
+
+$$
+W = \left\{ \nu = (x_1, \ldots, x_n) \in \mathbb{R}^n \big| k_1 x_1 + \cdots + k_n x_n = 0 \right\}.
+$$
+
+a) Chứng minh \( W \) là không gian con của \(\mathbb{R}^n\)：
+
+b) Chứng minh rằng \(\dim W = n - 1\) nếu \(k_1, \ldots, k_n\) không đồng thời bằng 0.
+
+2.37. Cho hệ véc tơ \( M = \left\{\nu_1, \ldots, \nu_p, u_1, \ldots, u_q\right\} \) của không gian véc tơ \( V \). Giả sử hệ \( (M_1 = \left\{ \nu_1, \ldots, \nu_p \right\}) \) có hạng là \( m \) và hệ \( M_2 = \left\{ u_1, \ldots, u_q \right\} \) có hạng \( n \). Chứng minh hạng của \( M \leq m + n \)：
+
+2.38. Giả sử \( V \) là không gian véc tơ và \(\mathcal{S}\) là hệ sinh hữu hạn của \( V \).
+
+a) Chứng minh rằng, tồn tại cơ sở \(\mathcal{B} \) của \( V \) sao cho \(\mathcal{B} \subset \mathcal{S} \)：
+
+b) Cho hệ được lập tuyến tính \(\mathcal{U}\) của \( V \) thỏa mãn \(\mathcal{U} \subset \mathcal{S} \). Chứng minh rằng tồn tại cơ sở \(\mathcal{B} \) của \( V \) sao cho \(\mathcal{U} \subset \mathcal{B} \subset \mathcal{S} \)：
+
+c) Cho hệ đạc lạp tuyến tính $\boldsymbol{\mathcal{U}}$ của $V$, chứng minh rằng tồn tại cơ sở $\mathcal{B}$ của $V$ sao cho $\mathcal{U} \subset \mathcal{B} \subset \mathcal{S} \cup \mathcal{U}$:

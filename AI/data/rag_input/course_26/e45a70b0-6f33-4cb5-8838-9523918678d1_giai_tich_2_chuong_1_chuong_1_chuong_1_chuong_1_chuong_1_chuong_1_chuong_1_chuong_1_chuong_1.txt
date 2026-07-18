@@ -1,0 +1,1554 @@
+# CHUƠNG 1. PHÉP TÍNH VI PHÂN HÀM NHIỀU BIẾN
+
+1.1. KHÔNG GIAN ${ \mathcal { R } } ^ { n }$  
+1.1.1. CÁC PHÉP TOÁN
+
+Cho hai vec to
+
+$$
+\mathbf{x} = ( x _ { 1 } , x _ { 2 } , . . . , x _ { n } ) \in \mathcal { R } ^ { n } , y = ( y _ { 1 } , y _ { 2 } , . . . , y _ { n } ) \in \mathcal { R } ^ { n } .
+$$
+
+Khi đó, ta nhắc lại các phép toán quen thuộc trong không gian $n$ chiều $\mathcal { R } ^ { n }$:
+
+$+$ Phép cộng và trừ:
+
+$$
+x \pm y = ( x _ { 1 } \pm y _ { 1 } , x _ { 2 } \pm y _ { 2 } , . . . , x _ { n } \pm y _ { n } ) .
+$$
+
+$+$ Phép nhân vec to với một số thực:
+
+$$
+\lambda x = ( \lambda x _ { 1 } , \lambda x _ { 2 } , . . . , \lambda x _ { n } ) , ~ \forall \lambda \in \mathcal { R } .
+$$
+
+$+$ Phép nhân vô hướng hai vec to:
+
+$$
+\langle x , y \rangle = x _ { 1 } y _ { 1 } + x _ { 2 } y _ { 2 } + . . . + x _ { n } y _ { n } .
+$$
+
+Khi đó, ta có vec to $x$ vuông góc với $y$ khi và chỉ khi $x _ { 1 } y _ { 1 } + x _ { 2 } y _ { 2 } + . . . + x _ { n } y _ { n } = 0 .$
+
+$+$ Góc giữa hai vec to $x \neq 0$ và $y \neq 0$ xác định bởi công thức:
+
+$$
+\cos ( x , y ) = \frac{x_1 y_1 + x_2 y_2 + . . . + x_n y_n}{\sqrt{x_1^2 + x_2^2 + . . . + x_n^2} \sqrt{y_1^2 + y_2^2 + . . . + y_n^2}}.
+$$
+
+1.1.2. CHUẨN VÀ HÀM KHOẢNG CÁCH
+
+Cho vector \( x = ( x _ { 1 } , x _ { 2 } , . . . , x _ { n } ) \in \mathbb{R} ^ { n } \). Khi đó, chuẩn của vector \( x \) là một số thực được ký hiệu bằng \( \| x \| \) và được xác định bởi
+
+\[
+\| x \| = \sqrt { x _ { 1 } ^ { 2 } + x _ { 2 } ^ { 2 } + \ldots + x _ { n } ^ { 2 } } .
+\]
+
+Chuẩn có các tính chất cơ bản sau:
+
+\( + \| x \| \geq 0 \forall x \in \mathbb{R} ^ { n } \) và \( \| x \| = 0 \) khi và chỉ khi \( x = 0 \)
+
+\[
+\begin{array}{rl}
+& + \| \lambda x \| = | \lambda | \| x \| \ \forall x \in \mathbb{R} ^ { n } , \lambda \in \mathbb{R}. \\
+& + \| x + y \| \leq \| x \| + \| y \| \ \forall x, y \in \mathbb{R} ^ { n }. 
+\end{array}
+\]
+
+Khi đó, khoảng cách giữa \( \boldsymbol{x} \in \mathcal{R} ^ { n } \) và \( y \in \mathcal{R} ^ { n } \) được xác định bởi công thức
+
+\[
+d ( x , y ) = \| x - y \| .
+\]
+
+1.1.3.Topics.
+
+Cho \( x \in \mathbb{R} ^ { n } , \epsilon > 0 \). Khi đó
+
+$+ B(x, \epsilon) = \{ y \in \mathbb{R}^n : \|y - x\| < \epsilon \}$ gọi là hình cầu mở có tâm tại điểm $x$ và bán kính là $\epsilon$.
+
+$+ \bar{B}(x, \epsilon) = \{ y \in \mathbb{R}^n : \|y - x\| \leq \epsilon \}$ gọi là hình cầu đóng có tâm tại điểm $x$ và bán kính là $\epsilon$.
+
+$+ \mathrm{Điểm}~ x \in M \subseteq \mathbb{R}^n$ gọi là điểm trong, nếu tồn tại một hình cầu mở $B(x, \epsilon)$ sao cho $B(x, \epsilon) \subseteq M$. Tập hợp các điểm trong của $M$ được gọi là phần trong của $M$ và ký hiệu bằng $\mathrm{int}~ M$.
+
+$+ \mathrm{Tập}~ M \subseteq \mathbb{R}^n$ gọi là tập mở, nếu $\mathrm{int}~ M = M$
+
+$+ \mathrm{Cho}~ M \subseteq \mathbb{R}^n$. Điểm $x$ được gọi là điểm biên của $M$, nếu với mọi $\epsilon > 0$ thì $B(x, \epsilon)$ chứa những điểm thuộc $M$ và những điểm không thuộc $M$. Tập hợp các điểm biên của $M$ được ký hiệu là $\partial M$.
+
+$+ \mathrm{Tập}~ M \subseteq \mathbb{R}^n$ gọi là một tập đóng, nếu $\partial M \subseteq M$
+
+$+ \mathrm{Tập}~ M \subseteq \mathbb{R}^n$ gọi là bị chặn bởi $\alpha > 0$, nếu $\|x\| \leq \alpha ~ \forall x \in M$.
+
+$+ \mathrm{Tập}~ M \subseteq \mathbb{R}^n$ gọi là tập compact, nếu $M$ là tập đóng và bị chặn.
+
+# 1.2. Hàm số nhiều biến
+
+Cho $\varnothing \neq D \subseteq \mathbb{R}^n$. Khi đó, ánh xạ xác định bằng
+
+$$
+x = ( x _ { 1 } , x _ { 2 } , . . . , x _ { n } ) \in D \longmapsto y = f ( x _ { 1 } , x _ { 2 } , . . . , x _ { n } ) \in {\mathcal{R}}
+$$
+
+được gọi là một hàm số nhiều biến, Tập $D$ được gọi là miền xác định của hàm số $f$. Các số $x _ { 1 } , x _ { 2 } , . . . , x _ { n }$ được gọi là các biến số của hàm số $f$.
+
+Ví dụ 1.1. Cho $R > 0$. Tìm miền xác định của hàm số
+
+$$
+f ( x ) = \sqrt{ R ^ { 2 } - x _ { 1 } ^ { 2 } - x _ { 2 } ^ { 2 } - \ldots - x _ { n } ^ { 2 } }.
+$$
+
+Giải.
+
+Theo định nghĩa, miền xác định $D$ được xác định bởi
+
+$$
+\begin{array}{rl}
+& D = \{ x \in {\mathcal{R}}^n : R ^ { 2 } - x _ { 1 } ^ { 2 } - x _ { 2 } ^ { 2 } - . . . - x _ { n } ^ { 2 } \geq 0 \} \\
+& = \{ x \in {\mathcal{R}}^n : \| x - 0 \| ^ { 2 } \leq R ^ { 2 } \} \\
+& = \bar{B}(0, R).
+\end{array}
+$$
+
+Dưới đây là một số mặt bậc 2 thường gặp trong không gian ${\mathcal{R}}^3$:
+
+1.2.1. Mặt cầu
+
+Phương trình:
+
+$$
+(S) = \{ (x, y, z) \in {\mathcal{R}}^3 : ( x - a ) ^ { 2 } + ( y - b ) ^ { 2 } + ( z - c ) ^ { 2 } = R ^ { 2 } \}.
+$$
+
+Hình 1: Mặt cầu.
+
+Khi đó, điểm $I(a, b, c)$ gọi là tâm và $R$ gọi là bán kính của mặt cầu $(S)$.
+
+1.2.2. Mặt elipsoit
+
+Phương trình:
+
+$$
+(E) : \frac{x^2}{a^2} + \frac{y^2}{b^2} + \frac{z^2}{c^2} = 1 ( a, b, c > 0 ).
+$$
+
+Các mặt cắt
+
+$$
+(Oxy)z = 0 : \frac{x^2}{a^2} + \frac{y^2}{b^2} = 1.
+$$
+
+$$
+(Oyz)x = 0 : \frac{y^2}{b^2} + \frac{z^2}{c^2} = 1.
+$$
+
+$$
+(Oxz)y = 0 : \frac{x^2}{a^2} + \frac{z^2}{c^2} = 1.
+$$
+
+1.2.3. Mặt hypebolit một tầng
+
+Phương trình:
+
+$$
+(H_1) : \frac{x^2}{a^2} + \frac{y^2}{b^2} - \frac{z^2}{c^2} = 1 (a, b, c > 0).
+$$
+
+Các mặt cắt
+
+$$
+(Oxy)z = 0 : \frac{x^2}{a^2} + \frac{y^2}{b^2} = 1.
+$$
+
+![](images/7eba7c9c43056146195e4247eefd1bbdcc4405bf1b23fc9889b5ec4e75e99301.jpg)  
+Hình 2: Mặt elipxoit.
+
+$$
+(Oxz)y = 0 : \frac{x^2}{a^2} - \frac{z^2}{c^2} = 1.
+$$
+
+1.2.4. Mặt hypebolit hai tầng
+
+Phương trình:
+
+$$
+(H_2) : \frac{x^2}{a^2} + \frac{y^2}{b^2} - \frac{z^2}{c^2} = -1 (a, b, c > 0).
+$$
+
+Điều kiện
+
+$$
+\frac{z^2}{c^2} - 1 \geq 0 \Leftrightarrow z \in (-\infty, -c] \cup [c, +\infty).
+$$
+
+Các mặt cắt
+
+$$
+\begin{array} { c } { ( O y z ) ~ x = 0 : \displaystyle \frac { y ^ { 2 } } { b ^ { 2 } } - \displaystyle \frac { z ^ { 2 } } { c ^ { 2 } } = - 1 . } \\ { ( O x z ) ~ y = 0 : \displaystyle \frac { x ^ { 2 } } { a ^ { 2 } } - \displaystyle \frac { z ^ { 2 } } { c ^ { 2 } } = - 1 . } \end{array}
+$$
+
+$$
+( P ) \ z = h > c : \frac { x ^ { 2 } } { a ^ { 2 } } + \frac { y ^ { 2 } } { b ^ { 2 } } = \frac { h ^ { 2 } } { c ^ { 2 } } - 1 .
+$$
+
+![](images/6a9a82668cb234b1fbae9eafb922036151085e3c86ecc9687da0a165c8cee4d8.jpg)  
+Hình 3: Mặt hypebolit một tầng.
+
+![](images/00fb4e0f49b75f35be747e60dc08229ac94fd9f2501502bd34e908857e0ef54d.jpg)  
+Hình 4: Mặt hypebolit hai tầng.
+
+1.2.5. Mặt paraboloid-eliptic Phương trình:
+
+$$
+( P E ) : \frac { x ^ { 2 } } { p } + \frac { y ^ { 2 } } { q } = 2 z \ ( p , q > 0 ) ,
+$$
+
+với điều kiện $z \geq 0$. Các mặt cắt
+
+$$
+( O y z ) ~ x = 0 : y ^ { 2 } = 2 q z .
+$$
+
+$$
+( O x z ) ~ y = 0 : x ^ { 2 } = 2 p z .
+$$
+
+$$
+( P ) \ z = h > 0 : \frac { x ^ { 2 } } { p } + \frac { y ^ { 2 } } { q } = 2 h .
+$$
+
+![](images/1f29efcd12d013e9bd8dfea6547163f6968e56eb9f40f0195025f1042f90e984.jpg)  
+Hình 5: Mặt paraboloid-eliptic.
+
+xK
+
+1.2.6. Mặt trũng
+
+Phương trình:
+
+trong domain $f , g , h : D \subseteq \mathcal { R } ^ { 2 } \to \mathcal { R }$：
+
+1.2.7. Mặt nón bậc hai
+
+Phương trình:
+
+$$
+( N ) : \frac { x ^ { 2 } } { a ^ { 2 } } + \frac { y ^ { 2 } } { b ^ { 2 } } - \frac { z ^ { 2 } } { c ^ { 2 } } = 0 \ ( a , b , c > 0 ) .
+$$
+
+Các mặt cắt
+
+$$
+(Oyz)~x=0: y = \pm \frac{b}{c} z.
+$$
+
+![](images/d7073ba6b97a7115c74ad892701fc33ce2e3c4b1ff8d61663075d78c2b5eec80.jpg)  
+Hình 6: Mặt trụ song song $Oz$
+
+$$
+(P)~z=h>0 : \frac{x^2}{a^2} + \frac{y^2}{b^2} = \frac{h^2}{c^2}.
+$$
+
+# 1.3. Giới hạn hàm nhiều biến số
+
+Để hiểu về giới hạn hàm nhiều biến số trong không gian $\mathcal{R}^{n}$, ta có thể nghiên cứu thông qua giới hạn của hàm hai biến số. Một dãy điểm $\{M_n\} \subset \mathcal{R}^2$ được gọi là dẫn đến điểm $M_0 \in \mathcal{R}^2$, viết tắt là $M_n \to M_0$ khi $n \to \infty$ hay $\lim_{n \to \infty} M_n = M_0$, nếu với mọi $\epsilon > 0$ tồn tại số tự nhiên $n(\epsilon)$ sao cho
+
+$$
+M_n \in B(M_0, \epsilon)~\forall n \geq n(\epsilon).
+$$
+
+Trong trường hợp đặc biệt: Nếu $\lim_{n \to \infty} x_n = x_0$ và $\lim_{n \to \infty} y_n = y_0$ thì điểm $M_n(x_n, y_n) \to M_0(x_0, y_0)$ khi $n \to \infty$.
+
+Cho một hàm hai biến số \( z = f(x, y) \) xác định trong lân cận của điểm \( M_0 \in \mathbb{R}^2 \). Khi đó, số \( m \) được gọi là giới hạn của hàm \( f(x, y) \) khi \( (x, y) \) tiến đến \( M_0(x_0, y_0) \), ký hiệu \(\operatorname*{lim}_{M \to M_0} f(M) = m\), nếu với mọi dãy điểm bất kỳ \(\{M_n\} \subset \mathbb{R}^2\) sao cho \(\operatorname*{lim}_{n \to \infty} M_n = M_0\) thì
+
+$$
+\operatorname*{lim}_{n \to \infty} f(M_n) = m.
+$$
+
+Ta có thể chứng minh được rằng: \(\operatorname*{lim}_{M \to M_0} f(M) = m\) khi và chỉ khi
+
+$$
+\forall \epsilon > 0, \exists \delta > 0, \forall M \in B(M_0, \delta) \Rightarrow |f(M) - m| < \epsilon.
+$$
+
+![](images/cbeb5c5caf867412c74672889d08bae2b606e6130307673df47a316a6e3b9f5e.jpg)  
+Hình 7: Mặt nón bậc hai.
+
+Ví dụ 1.2. Tìm giới hạn
+
+$$
+I_1 = \operatorname*{lim}_{(x, y) \to (0, 0)} \frac{x^2y}{2x^2 + y^2}.
+$$
+
+Giải.
+
+Hàm số \( f(x, y) = \frac{x^2y}{2x^2 + y^2} \) xác định trên \( D = \mathbb{R}^2 \backslash \{(0, 0)\} \). Từ bất đẳng thức
+
+$$
+\frac{x^2}{2x^2 + y^2} \leq \frac{x^2}{2x^2} = \frac{1}{2} ~ \forall (x, y) \in D,
+$$
+
+Ta có $| f (x, y) | \leq \frac{1}{2} |y|$ với mọi $(x, y) \in D$. Do đó
+
+$$
+0 \leq \lim_{(x, y) \to (0, 0)} \left| \frac{x^2 y}{2 x^2 + y^2} \right| \leq \lim_{(x, y) \to (0, 0)} \frac{1}{2} |y| = 0.
+$$
+
+Vậy $I_1 = 0$.
+
+Ví dụ 1.3. Tìm giới hạn
+
+$$
+I_2 = \lim_{(x, y) \to (0, 0)} \frac{x y}{2 x^2 + y^2}.
+$$
+
+Giải.
+
+Hàm số $f(x, y) = \frac{xy}{2 x^2 + y^2}$ xác định trên $D = \mathbb{R}^2 \backslash \{(0, 0)\}$. Ta xét đường thẳng đặc biệt sau:
+
+$+ \text{Điểm } (x, y) \in d: y = x$. Khi đó $(x, y) \to (0, 0)$ khi và chỉ khi $x \to 0$. Khi đó, ta có
+
+$$
+I_2 = \lim_{(x, y) \to (0, 0)} \frac{x y}{2 x^2 + y^2} = \lim_{x \to 0} \frac{x^2}{2 x^2 + x^2} = \frac{1}{3}.
+$$
+
+$+ \text{Điểm } (x, y) \in d: y = 3x$. Khi đó $(x, y) \to (0, 0)$ khi và chỉ khi $x \to 0$. Khi đó, ta có
+
+$$
+I_2 = \lim_{(x, y) \to (0, 0)} \frac{x y}{2 x^2 + y^2} = \lim_{x \to 0} \frac{3 x^2}{2 x^2 + 9 x^2} = \frac{3}{11}.
+$$
+
+Đó vậy $I _ { 2 }$ không tồn tại.
+
+# 1.4. Hàm số liên tục
+
+Cho hàm số $z = f ( x , y )$ xác định trên miền $D$ và điểm $M _ { 0 } \in D$. Khi đó, 
++ Hàm số $f$ liên tục tại điểm $M _ { 0 }$ nếu tồn tại giới hạn
+$$
+\lim_{M \to M_0} f ( M ) = f ( M _ { 0 } ).
+$$
+
++ Hàm số $f$ liên tục trên miền $D$ nếu $f$ liên tục tại mọi điểm $M \in D$:
++ Hàm số $f$ đồng đều liên tục trên miền $D$ nếu với mọi $\epsilon > 0$, tồn tại $\delta > 0$ sao cho
+$$
+\forall ( x , y ) , ( x ^ { \prime } , y ^ { \prime } ) \in D : \| ( x , y ) - ( x ^ { \prime } , y ^ { \prime } ) \| < \delta \Rightarrow | f ( x , y ) - f ( x ^ { \prime } , y ^ { \prime } ) | < \epsilon .
+$$
+
+Bằng cách dùng định nghĩa, ta có nhận xét sau.
+
+Nhận xét $1 . 4 . ~ + ~ .$ Nếu hàm $f : D \subseteq \mathcal{R} ^ { 2 } \to \mathcal{R}$ liên tục đồng đều trên miền $D$, thì $f$ liên tục trên miền $D$. Điều ngược lại không đúng.
+
+Nếu $f$ liên tục trên miền $D$ và $D$ là tập compact, thì $f$ liên tục đồng đều trên miền $D$: Nếu $f$ liên tục trên miền compact $D$, thì $f$ đạt giá trị lớn nhất và nhỏ nhất trên miền $D$
+
+# 1.5. Đạo hàm riêng và vi phân toàn phần của hàm nhiều biến số
+
+Cho hàm số $z = f(x)$ xác định trên miền $D \subseteq \mathcal{R}^n$ và điểm $\bar{x} = (\bar{x}_1, \bar{x}_2, . . . , \bar{x}_n) \in D$
+
+### 1.5.1. Đạo hàm riêng
+
+Nếu hàm một biến số $x_1 \longmapsto f(x_1, \bar{x}_2, . . . , \bar{x}_n)$ có đạo hàm tại $x_1$, thì đạo hàm đó được gọi là đạo hàm riêng của $f$ theo biến $x_1$ tại điểm $\bar{x}$ và được ký hiệu
+
+$$
+f_{x_1}'(\bar{x}) \mathrm{ hay } \frac{\partial f}{\partial x_1} (\bar{x}).
+$$
+
+Bằng cách hiểu tương tự, ta cũng có các đạo hàm riêng của $f$ theo biến $x_i$ $(i = 1, 2, . . . , n)$ tại điểm $\bar{x}$ và được ký hiệu
+
+$$
+f_{x_i}'(\bar{x}) \mathrm{ hay } \frac{\partial f}{\partial x_i} (\bar{x}).
+$$
+
+#### Ví dụ 1.5. Tìm các đạo hàm riêng của hàm số sau:
+
+$$
+f(x, y) = x^2 \tan (x^3 + 2y).
+$$
+
+Giải.
+
+$$
+\begin{array}{l}
+\displaystyle \frac{\partial f}{\partial x} = 2x \tan (x^3 + 2y) + x^2 \cdot \frac{1}{\cos^2(x^3 + 2y)} \cdot 3x^2 = 2x \tan (x^3 + 2y) + \frac{3x^4}{\cos^2(x^3 + 2y)}. \\
+\displaystyle \frac{\partial f}{\partial y} = x^2 \cdot \frac{1}{\cos^2(x^3 + 2y)} \cdot 2 = \frac{2x^2}{\cos^2(x^3 + 2y)}.
+\end{array}
+$$
+
+### 1.5.2. Hàm khả vi
+
+Cho hàm nhiều biến $f : D \subseteq \mathcal{R}^n \to \mathcal{R}$ và điểm $\bar{x} = (\bar{x}_1, \bar{x}_2, . . . , \bar{x}_n) \in D$:
+
++ Với mọi $x = (x_1, x_2, . . . , x_n) \in D$ đặt
+
+Khi đó
+
+$$
+\Delta_f = f(\bar{x}_1 + \Delta_{x_1}, \bar{x}_2 + \Delta_{x_2}, . . . , \bar{x}_n + \Delta_{x_n}) - f(\bar{x}_1, \bar{x}_2, . . . , \bar{x}_n)
+$$
+
+được gọi là sai phân của hàm $f$ tại điểm $\bar{x}$.
+
++ Sai phân tuyến tính của hàm số có dạng
+
+$$
+\Delta_f = A_1 \Delta_{x_1} + A_2 \Delta_{x_2} + . . . + A_n \Delta_{x_n} + \alpha_1 \Delta_{x_1} + \alpha_2 \Delta_{x_2} + . . . + \alpha_n \Delta_{x_n},
+$$
+
+trong đó $A_i (i = 1, 2, . . . , n)$ chỉ phụ thuộc vào $\bar{x}$, không phụ thuộc vào $\Delta_x = (\Delta_{x_1}, \Delta_{x_2}, . . . , \Delta_{x_n})$ và
+
+$$
+\lim_{\Delta_x \to 0} \alpha_k = 0 \quad \forall k = 1, 2, . . . , n,
+$$
+
+thì hàm số $f$ được gọi là khả vi tại điểm $\bar{x}$. Khi đó
+
+$$
+df = A_1 \Delta_{x_1} + A_2 \Delta_{x_2} + . . . + A_n \Delta_{x_n}
+$$
+
+được gọi là vi phân toàn phần của $f$ tại điểm $\bar{x}$:
+
++ Hàm $f$ được gọi là khả vi trên miền $D$, nếu $f$ khả vi tại mọi điểm $\bar{x} \in D$:
+
+Định lý 1.6. Nếu hàm $f : D \subseteq \mathcal{R}^n \to \mathcal{R}$ có các đạo hàm riêng liên tục trong một lân cận của điểm $\bar{x} \in D$, thì $f$ sẽ khả vi tại điểm $\bar{x}$ và
+
+$$
+d f = \frac{\partial f}{\partial x_1} (\bar{x}) \Delta_{x_1} + \frac{\partial f}{\partial x_2} (\bar{x}) \Delta_{x_2} + \ldots + \frac{\partial f}{\partial x_n} (\bar{x}) \Delta_{x_n}.
+$$
+
+Chứng minh: Theo định nghĩa, ta có
+
+$$
+\begin{array} { r l }
+& { \Delta _ { f } = f ( \bar { x } _ { 1 } + \Delta _ { x _ { 1 } } , \bar { x } _ { 2 } + \Delta _ { x _ { 2 } } , . . . , \bar { x } _ { n } + \Delta _ { x _ { n } } ) - f ( \bar { x } _ { 1 } , \bar { x } _ { 2 } , . . . , \bar { x } _ { n } ) } \\
+& { \quad = f ( \bar { x } _ { 1 } + \Delta _ { x _ { 1 } } , \bar { x } _ { 2 } + \Delta _ { x _ { 2 } } , . . . , \bar { x } _ { n } + \Delta _ { x _ { n } } ) - f ( \bar { x } _ { 1 } , \bar { x } _ { 2 } + \Delta _ { x _ { 2 } } , . . . , \bar { x } _ { n } + \Delta _ { x _ { n } } ) } \\
+& { \quad ~ + \cdot \cdot } \\
+& { \quad \quad + f ( \bar { x } _ { 1 } , \bar { x } _ { 2 } , . . . , \bar { x } _ { n - 1 } , \bar { x } _ { n } + \Delta _ { x _ { n } } ) - f ( \bar { x } _ { 1 } , \bar { x } _ { 2 } , . . . , \bar { x } _ { n } ) . }
+\end{array}
+$$
+
+Theo công thức số gia giới nội, tồn tại các số ${ \theta _ { 1 } , \theta _ { 2 } , . . . , \theta _ { n } \in ( 0 , 1 ) }$ sao cho
+
+$$
+\begin{array} { r l }
+& { f ( \bar { x } _ { 1 } , . . . , \bar { x } _ { i - 1 } , \bar { x } _ { i } + \Delta _ { x _ { i } } , . . . , \bar { x } _ { n } + \Delta _ { x _ { n } } ) - f ( \bar { x } _ { 1 } , . . . , \bar { x } _ { i } , \bar { x } _ { i + 1 } + \Delta _ { x _ { i + 1 } } , . . . , \bar { x } _ { n } + \Delta _ { x _ { n } } ) } \\
+& { \phantom { f ( \bar { x } _ { 1 } , . . . , \bar { x } _ { i - 1 } , \bar { x } _ { i } + \Delta _ { x _ { i } } , . . . , \bar { x } _ { n } + \Delta _ { x _ { n } } ) - f ( \bar { x } _ { 1 } , . . . , \bar { x } _ { i } - \Delta _ { x _ { i } } ) } } \\
+& { \phantom { f ( \bar { x } _ { 1 } , . . . , \bar { x } _ { i } - \Delta _ { x _ { i } - 1 } , \bar { x } _ { i } + \Delta _ { i } \Delta _ { x _ { i } } , . . . , \bar { x } _ { n } + \Delta _ { x _ { n } } ) } = \displaystyle \frac { \partial f } { \partial x _ { i } } ( \bar { x } _ { 1 } , . . . , \bar { x } _ { i - 1 } , \bar { x } _ { i } + \theta _ { i } \Delta _ { x _ { i } } , . . . , \bar { x } _ { n } + \Delta _ { x _ { n } } ) . }
+\end{array}
+$$
+
+Đối các đạo hàm riêng liên tục trong lân cận của điểm $\bar { x }$ nên
+
+$$
+\frac { \partial f } { \partial x _ { i } } ( \bar { x } _ { 1 } , . . . , \bar { x } _ { i - 1 } , \bar { x } _ { i } + \theta _ { i } \Delta _ { x _ { i } } , . . . , \bar { x } _ { n } + \Delta _ { x _ { n } } ) = \frac { \partial f } { \partial x _ { i } } ( \bar { x } ) + \alpha _ { i } ( \Delta _ { x } ) ,
+$$
+
+trong độ $\operatorname*{lim}_{\Delta_{x}} \alpha_{i} (\Delta_{x}) = 0 \forall i = 1, 2, ..., n.$ Do vậy, định lý được chứng minh.
+
+Nhận xét 1.7. Trong trường hợp hàm $3$ biến số $f(x, y, z)$ có các đạo hàm riêng liên tục trong lân cận của điểm $(x_{0}, y_{0}, z_{0})$, theo định lý trên, ta có
+
+$$
+\Delta_{f} = \frac{\partial f}{\partial x}(x_{0}, y_{0}, z_{0}) \Delta_{x} + \frac{\partial f}{\partial y}(x_{0}, y_{0}, z_{0}) \Delta_{y} + \frac{\partial f}{\partial z}(x_{0}, y_{0}, z_{0}) \Delta_{z} + \alpha \Delta_{x} + \beta \Delta_{y} + \gamma \Delta_{z},
+$$
+
+Đặt 
+$$
+\rho = \sqrt{\Delta_{x}^{2} + \Delta_{y}^{2} + \Delta_{z}^{2}}, \quad \epsilon = \frac{1}{\rho} (\alpha \Delta_{x} + \beta \Delta_{y} + \gamma \Delta_{z}).
+$$
+Khi đó, theo bất đẳng thức Bất đẳng thức Bunyakovsky, ta có
+
+$$
+|\epsilon| = \frac{1}{\rho} |\alpha \Delta_{x} + \beta \Delta_{y} + \gamma \Delta_{z}| \leq \frac{\sqrt{(\alpha^{2} + \beta^{2} + \gamma^{2})(\Delta_{x}^{2} + \Delta_{y}^{2} + \Delta_{z}^{2})}}{\sqrt{\Delta_{x}^{2} + \Delta_{y}^{2} + \Delta_{z}^{2}}} = \sqrt{\alpha^{2} + \beta^{2} + \gamma^{2}}
+$$
+
+Do đó
+
+$$
+\operatorname*{lim}_{(\Delta_x, \Delta_y, \Delta_z) \to 0} \epsilon = 0
+$$
+
+và
+
+$$
+\alpha \Delta_x + \beta \Delta_y + \gamma \Delta_z = o(\rho).
+$$
+
+Như vậy
+
+$$
+\Delta_f \approx \frac{\partial f}{\partial x}(x_0, y_0, z_0) \Delta_x + \frac{\partial f}{\partial y}(x_0, y_0, z_0) \Delta_y + \frac{\partial f}{\partial z}(x_0, y_0, z_0) \Delta_z + o(\rho).
+$$
+
+Khi các số $\hat{o}^\prime \Delta_x, \Delta_y, \Delta_z$ khá nhỏ, ta có
+
+$$
+\Delta_f \approx \frac{\partial f}{\partial x}(x_0, y_0, z_0) \Delta_x + \frac{\partial f}{\partial y}(x_0, y_0, z_0) \Delta_y + \frac{\partial f}{\partial z}(x_0, y_0, z_0) \Delta_z.
+$$
+
+Ví dụ 1.8. Dùng vi phân, tính xấp $\chi \vec{l}$ giá trị biểu thức sau:
+
+$$
+S = \arctan \frac{1,02}{0,95}.
+$$
+
+Giải: Từ
+
+$$
+S = \arctan \frac{1 + 0,02}{1 - 0,05}
+$$
+
+ta đặt $x_0 = 1$, $y_0 = 1$, $\Delta_x = 0,02$, $\Delta_y = -0,05$ và $f(x, y) = \arctan \frac{x}{y}$. Khi đó
+
+$$
+\frac{\partial f}{\partial x} = \frac{-y}{x^2 + y^2}, \quad \frac{\partial f}{\partial y} = \frac{x}{x^2 + y^2}.
+$$
+
+Theo công thức (1.1) cho hàm số có 2 biến, ta có
+
+$$
+\Delta_f \approx \frac{\partial f}{\partial x}(x_0, y_0) \Delta_x + \frac{\partial f}{\partial y}(x_0, y_0) \Delta_y.
+$$
+
+Do đó
+
+$$
+S = \Delta_f + f(x_0, y_0)
+\approx \frac{\partial f}{\partial x}(x_0, y_0) \Delta_x + \frac{\partial f}{\partial y}(x_0, y_0) \Delta_y + f(x_0, y_0)
+= f(1, 1) + \frac{1.02 + 1.05}{2}
+= \frac{\pi}{4} + 0.035
+\quad \alpha \coth,
+$$
+
+# 1.6. Đạo hàm theo phương
+
+Cho vector $d \in \mathcal{R}^n$. Nếu tồn tại giới hạn (huruhán)
+
+$$
+\lim_{\lambda \to 0} \frac{f(\bar{x} + \lambda d) - f(\bar{x})}{\lambda},
+$$
+
+thì giới hạn này được gọi là đạo hàm theo phương $d$ của hàm $f$ tại điểm $\bar{x}$ và được ký hiệu bởi $D_d f(\bar{x})$
+
+Ví dụ 1.9. Tìm đạo hàm theo phương $D_d f(\bar{x})$ của hàm số $f(x, y, z) = 2x + 3y + z^2$, trong đó  
+$d = (1, 2, 0), \bar{x} = (3, -1, 1)$
+
+Giải:
+
+Theo định nghĩa, đạo hàm $D_{d} f(\bar{x})$ được xác định bởi công thức
+
+$$
+\begin{array}{rl}
+& D_{d} f(\bar{x}) = \displaystyle \operatorname*{lim}_{\lambda \to 0} \frac{f(\bar{x} + \lambda d) - f(\bar{x})}{\lambda} \\
+& \qquad = \displaystyle \operatorname*{lim}_{\lambda \to 0} \frac{f(1 + 3\lambda, -1 + 2\lambda, 1) - f(3, -1, 1)}{\lambda} \\
+& \qquad = \displaystyle \operatorname*{lim}_{\lambda \to 0} \frac{2(1 + 3\lambda) + 3(-1 + 2\lambda) + 1^2 - (2 \cdot 3 + 3 \cdot (-1) + 1^2)}{\lambda} \\
+& \qquad = 12.
+\end{array}
+$$
+
+Đưa vào định nghĩa, ta có nhận xét sau:
+
+Nhận xét 1.10. Giả sử $\{e_1, e_2, ..., e_n\}$ là một hệ cơ sở chuẩn trong $\mathcal{R}^n$, hàm số $f(x)$ tồn tại các đạo hàm riêng trên $D$ và $\bar{x} \in D$. Khi đó
+
+$$
+D_{e_i} f(\bar{x}) = \frac{\partial f}{\partial x_i} (\bar{x}) \quad \forall i = 1, 2, ..., n.
+$$
+
+1.7. Quan hệ giữa đạo hàm theo phương và đạo hàm riêng
+
+Cho hàm $f : D \subseteq \mathcal{R}^n \to \mathcal{R}$ khả vi tại điểm $\bar{x} \in D$. Khi đó, đạo hàm theo phương $d = (d_1, d_2, ..., d_n)$ được xác định bởi công thức:
+
+$$
+D_{d} f(\bar{x}) = \frac{\partial f}{\partial x_{1}} (\bar{x}) d_{1} + \frac{\partial f}{\partial x_{2}} (\bar{x}) d_{2} + \ldots + \frac{\partial f}{\partial x_{n}} (\bar{x}) d_{n}.
+$$
+
+Chứng minh: Theo định nghĩa, hàm số $f$ khả vi tại điểm $\bar{x}$ hay
+
+$$
+\Delta_{f} = A_{1} \Delta_{x_{1}} + A_{2} \Delta_{x_{2}} + \ldots + A_{n} \Delta_{x_{n}} + \alpha_{1} \Delta_{x_{1}} + \alpha_{2} \Delta_{x_{2}} + \ldots + \alpha_{n} \Delta_{x_{n}},
+$$
+
+trong đó $\begin{array}{r}\Delta_{f} = f(\bar{x} + \Delta_{x}) - f(\bar{x}), A_{i} = \frac{\partial f}{\partial x_{i}} (\bar{x})\end{array}$, và $\alpha_i = 0$ với mọi $i = 1, 2, \ldots, n$. Đặt công thức trên với $\Delta_{x_{i}} = \lambda d_{i}$, ta có
+
+$$
+\begin{array} { l } { \displaystyle D _ { d } f \big ( \bar { x } \big ) = \operatorname* { lim } _ { \Delta x \to 0 } \frac { f \big ( \bar { x } + \lambda d \big ) - f \big ( \bar { x } \big ) } { \lambda } } \\ { \displaystyle ~ = \operatorname* { lim } _ { \Delta x \to 0 } \big ( A _ { 1 } d _ { 1 } + . . . + A _ { n } d _ { n } + \alpha _ { 1 } d _ { 1 } + . . . + \alpha _ { n } d _ { n } \big ) } \\ { \displaystyle ~ = \frac { \partial f } { \partial x _ { 1 } } ( \bar { x } ) d _ { 1 } + \frac { \partial f } { \partial x _ { 2 } } ( \bar { x } ) d _ { 2 } + . . . + \frac { \partial f } { \partial x _ { n } } ( \bar { x } ) d _ { n } } .
+\end{array}
+$$
+
+Vi dụ 1.11. Tìm đạo hàm theo phương $d = (-1, 3)$ tại điểm $\bar{x} = (e, e^2)$ của hàm số
+
+$$
+f(x, y) = \ln(x^2 + y).
+$$
+
+Giải.
+
+Tính các đạo hàm theo phương
+
+$$
+\begin{array} { c c c } { \displaystyle \frac { \partial f } { \partial x } = \frac { 2x } { x ^ { 2 } + y }, } \\ { \displaystyle \frac { \partial f } { \partial y } = \frac { 1 } { x ^ { 2 } + y }. } \end{array}
+$$
+
+Khi đó
+
+$$
+{ \begin{array} { l } { \displaystyle { \frac { \partial f } { \partial { x } } } ( { \bar { x } } ) = { \frac { 2 x } { { x } ^ { 2 } + y } } ( { \bar { x } } ) = { \frac { 1 } { e } } , } \\ { \displaystyle { \frac { \partial f } { \partial y } } ( { \bar { x } } ) = { \frac { 1 } { { x } ^ { 2 } + y } } ( { \bar { x } } ) = { \frac { 1 } { 2 e ^ { 2 } } } . } \end{array} }
+$$
+
+Theo công thức (1.2), ta có
+
+$$
+\begin{array} { l } { { \displaystyle { \cal D } _ { d } f ( \bar { x } ) = \frac { \partial f } { \partial x } ( \bar { x } ) d _ { 1 } + \frac { \partial f } { \partial y } ( \bar { x } ) d _ { 2 } } } \\ { { \displaystyle ~ = \frac { 1 } { e } ( - 1 ) + \frac { 1 } { 2 e ^ { 2 } } 3 } } \\ { { \displaystyle ~ = \frac { 3 } { 2 e ^ { 2 } } - \frac { 1 } { e } . } } \end{array}
+$$
+
+# 1.8. Đạo hàm riêng của hàm hợp
+
+Cho hàm vector $f : D \subseteq \mathcal { R } ^ { n } \to \mathcal { R } ^ { m }$ và hàm số $g : f ( D ) \to \mathcal { R }$. Khi đó hàm số $h = g o f : D \to \mathcal { R }$ được xác định bởi
+
+$$
+g o f ( x ) = g \bigl ( f ( x ) \bigr )
+$$
+
+được gọi là hàm hợp của hai hàm số $g$ và $f$. Nếu các hàm số $g$, các hàm số trong tọa độ thành phần của $f$ và các đạo hàm riêng của chúng liên tục tại điểm $x = ( x _ { 1 } , . . . , x _ { n } )$ và $f ( x )$ tương ứng. Khi đó các đạo hàm riêng của hàm hợp $h$ được xác định bởi công thức
+
+$$
+{ \frac { \partial h } { \partial { x } _ { 1 } } } = { \frac { \partial g } { \partial { f } _ { 1 } } } { \frac { \partial { f } _ { 1 } } { \partial { x } _ { 1 } } } + { \frac { \partial g } { \partial { f } _ { 2 } } } { \frac { \partial { f } _ { 2 } } { \partial { x } _ { 1 } } } + . . . + { \frac { \partial g } { \partial { f } _ { m } } } { \frac { \partial { f } _ { m } } { \partial { x } _ { 1 } } }
+$$
+
+$$
+{ \frac { \partial h } { \partial x _ { n } } } = { \frac { \partial g } { \partial f _ { 1 } } } { \frac { \partial f _ { 1 } } { \partial x _ { n } } } + { \frac { \partial g } { \partial f _ { 2 } } } { \frac { \partial f _ { 2 } } { \partial x _ { n } } } + \ldots + { \frac { \partial g } { \partial f _ { m } } } { \frac { \partial f _ { m } } { \partial x _ { n } } } .
+$$
+
+Chứng minh:
+
+Theo định nghĩa, ta có
+
+$$
+\begin{array} { r l }
+{ \frac { \Delta _ { 2 } } { \Delta _ { 3 } } - \frac { \mu ^ { 2 } \zeta ^ { 2 } \zeta ^ { 3 } } { \mu ^ { 3 } } + \frac { \Delta _ { 3 } ^ { 2 } \zeta ^ { 3 } } { \Delta _ { 3 } ^ { 2 } } - \frac { \mu ^ { 2 } \zeta ^ { 3 } } { \mu ^ { 3 } } } & { = } \\
+& { - \frac { \mu ^ { 2 } \zeta ^ { 3 } \zeta ^ { 3 } } { \mu ^ { 3 } \zeta ^ { 3 } } + \frac { \Delta _ { 3 } ^ { 2 } \zeta ^ { 3 } } { \mu ^ { 3 } \zeta ^ { 3 } } - \frac { \Delta _ { 3 } ^ { 2 } \zeta ^ { 3 } } { \mu ^ { 3 } } - \frac { \mu ^ { 2 } \zeta ^ { 3 } \zeta ^ { 3 } } { \mu ^ { 3 } } } \\
+& { - \frac { \mu ^ { 2 } \zeta ^ { 3 } \zeta ^ { 3 } \zeta ^ { 3 } } { \mu ^ { 3 } \zeta ^ { 3 } } + \frac { \Delta _ { 3 } \zeta ^ { 3 } } { \mu ^ { 3 } \zeta ^ { 3 } } - \frac { \Delta _ { 3 } \zeta ^ { 3 } } { \mu ^ { 3 } } - \frac { \mu ^ { 2 } \zeta ^ { 3 } \zeta ^ { 3 } } { \mu ^ { 3 } } } \\
+& { - \frac { \mu ^ { 2 } \zeta ^ { 3 } \zeta ^ { 3 } \zeta ^ { 3 } } { \mu ^ { 3 } \zeta ^ { 3 } } + \frac { \mu ^ { 2 } \zeta ^ { 3 } \zeta ^ { 3 } } { \mu ^ { 3 } \zeta ^ { 3 } } - \frac { \mu ^ { 2 } \zeta ^ { 3 } } { \mu ^ { 3 } \zeta ^ { 3 } } - \frac { \mu ^ { 2 } \zeta ^ { 3 } \zeta ^ { 3 } } { \mu ^ { 3 } } } \\
+{ - \frac { \mu ^ { 2 } \zeta ^ { 3 } \zeta ^ { 3 } } { \mu ^ { 3 } \zeta ^ { 3 } } + \frac { \mu ^ { 2 } \zeta ^ { 3 } \zeta ^ { 3 } } { \mu ^ { 3 } \zeta ^ { 3 } } - \frac { \mu ^ { 2 } \zeta ^ { 3 } } { \mu ^ { 3 } \zeta ^ { 3 } } } \\
+& - \frac { \mu ^ { 2 } \zeta ^ { 3 } \zeta ^ { 3 } }
+$$
+
+} { \mu ^ { 3 } \zeta ^ { 3 } ( \frac { \mu ^ { 2 } \zeta ^ { 3 } } { \Delta _ { 3 } } - \frac { \mu ^ { 2 } \zeta ^ { 3 } } { \zeta ^ { 6 } } - \frac { \mu ^ { 2 } \zeta ^ { 3 } } { \mu ^ { 2 } \zeta ^ { 3 } } ) } \\ 
+\sqrt { \left( \frac { \mu ^ { 2 } \zeta ^ { 3 } } { \mu ^ { 2 } \zeta ^ { 3 } } + \frac { \mu } { \Delta _ { 3 } } \right) }
+$$
+
+(1.4)
+
+Đo giả thiết liên tục của các hàm số và cho $\Delta _ { x _ { 1 } } \neq 0$ , ta nhận được
+
+$$
+\frac {\partial h}{\partial x_1} = \frac{\partial g}{\partial f_1} \frac{\partial f_1}{\partial x_1} + \frac{\partial g}{\partial f_2} \frac{\partial f_2}{\partial x_2} + ... + \frac{\partial g}{\partial f_m} \frac{\partial f_m}{\partial x_1}.
+$$
+
+Bằng cách làm tương tự, ta nhận được điều phải chứng minh.
+
+Ví dụ 1.12. Tìm đạo hàm riêng $\frac {\partial f}{\partial x}$ của hàm số sau
+
+$$
+f (x, y) = (u^2 + 1) \log_2 v, u = xy, v = 2x + y.
+$$
+
+Giải:
+
+Theo công thức (1.3), ta có
+
+$$
+\begin{array}{l}
+\displaystyle{\frac {\partial f}{\partial x} = \frac {\partial f}{\partial u} \frac {\partial u}{\partial x} + \frac {\partial f}{\partial v} \frac {\partial v}{\partial x}} \\
+\displaystyle{\quad = 2u \log_2 v . y + \frac{u^2 + 1}{v \ln 2} . 2} \\
+\displaystyle{\quad = 2xy^2 \log_2 (2x + y) + \frac{2(x^2y^2 + 1)}{(2x + y) \ln 2}.}
+\end{array}
+$$
+
+1.9. Đạo hàm riêng và vi phân cấp cao
+
+Cho hàm vector $f : D \subseteq \mathbb{R} ^ { n } \to \mathbb{R}$ . Các đạo hàm riêng
+
+$$
+\frac {\partial f}{\partial x_i}, i = 1, 2, ..., n
+$$
+
+được gọi là các đạo hàm riêng cấp 1. Các đạo hàm riêng của các đạo hàm riêng cấp 1
+
+$$
+\frac{\partial}{\partial x_j} \left( \frac{\partial f}{\partial x_i} \right) = \frac{\partial^2 f}{\partial x_j \partial x_i} = f''_{x_i x_j}(x), i, j = 1, 2, ..., n \quad (i \neq j) \mathrm{~hợp~}\frac{\partial^2 f}{\partial x_j^2} = f''_{x_i^2}(x).
+$$
+
+Được gọi là các đạo hàm riêng cấp 2. Bằng cách hiểu tương tự, ta cũng có các đạo hàm riêng $n$.
+
+Ví dụ 1.13. Tính các đạo hàm riêng cấp 2 của hàm số
+
+$$
+f(x, y) = (x^2 + y^3)\sin 2y.
+$$
+
+Giải:
+
+Các đạo hàm riêng cấp 1 là
+
+$$
+\begin{array}{l}
+f_x' = 2x \sin 2y, \\
+f_y' = 3y^2 \sin 2y + 2(x^2 + y^3) \cos 2y.
+\end{array}
+$$
+
+Các đạo hàm riêng cấp 2 là
+
+$$
+\begin{array}{rl}
+& f_{x^2}'' = 2 \sin 2y, \\
+& f_{xy}'' = 4x \cos 2y, \\
+& f_{y^2}'' = 6y \sin 2y + 6y^2 \cos 2y + 6y^3 \cos 2y - 4(x^2 + y^3) \sin 2y \\
+& \qquad = 2(3y - 2x^2 - 2y^3) \sin 2y + y^2 (1 + y) \cos 2y.
+\end{array}
+$$
+
+Định lý 1.14. (Schwarz)
+
+Nếu hàm số $f : D \subseteq \mathcal{R}^2 \to \mathcal{R}$ có các đạo hàm riêng cấp 2 liên tục trong một lân cận của điểm $M_0(x_0, y_0) \in D$, thì
+
+$$
+{ \frac { \partial ^ { 2 } f } { \partial x \partial y } } ( M _ { 0 } ) = { \frac { \partial ^ { 2 } f } { \partial y \partial x } } ( M _ { 0 } ) .
+$$
+
+Chứng minh: Đặt
+
+$$
+\begin{array} { r } { g ( x , y ) = f ( x + \Delta _ { x } , y ) - f ( x , y ) , } \\ { h ( x , y ) = f ( x , y + \Delta _ { y } ) - f ( x , y ) . } \end{array}
+$$
+
+Khi đó, ta được dạng thu lại rằng
+
+$$
+g ( x , y + \Delta _ { y } ) - g ( x , y ) = h ( x + \Delta _ { x } , y ) - h ( x , y ) .
+$$
+
+Theo định lý Lagrange, ta có
+
+$$
+\begin{array} { r l } & { g ( x , y + \Delta _ { y } ) - g ( x , y ) = g _ { y } ^ { \prime } ( x , y + \theta _ { y } \Delta _ { y } ) . \Delta _ { y } \quad \text{với} \quad 0 < \theta _ { y } < 1 ~ } \\ & { \qquad = \Delta _ { y } \Big ( f _ { y } ^ { \prime } ( x + \Delta _ { x } , y + \theta _ { y } \Delta _ { y } ) - f _ { y } ^ { \prime } ( x , y + \theta _ { y } \Delta _ { y } ) \Big ) } \\ & { \qquad = \Delta _ { x } \Delta _ { y } f _ { y x } ^ { \prime \prime } ( x + \theta _ { x } \Delta _ { x } , y + \theta _ { y } \Delta _ { y } ) \quad \text{với} \quad 0 < \theta _ { x } < 1 ~ } . \end{array}
+$$
+
+Tương tự, ta cũng có
+
+$$
+h ( x + \Delta _ { x } , y ) - h ( x , y ) = \Delta _ { x } \Delta _ { y } f _ { x y } ^ { \prime \prime } ( x + \alpha _ { x } \Delta _ { x } , y + \alpha _ { y } \Delta _ { y } ) \quad \text{với} \quad 0 < \alpha _ { x } , \alpha _ { y } < 1 .
+$$
+
+Từ các dạng thức (1.5), (1.6) và (1.7), ta có
+
+$$
+f_{yx}^{\prime\prime}(x + \theta_x \Delta_x, y + \theta_y \Delta_y) = f_{xy}^{\prime\prime}(x + \alpha_x \Delta_x, y + \alpha_y \Delta_y).
+$$
+
+Đối với các đạo hàm riêng cấp 2 liên tục và cho $(\Delta_x, \Delta_y) \to 0$, ta có định lý được chứng minh.
+
+Cho hàm số $f : D \subseteq \mathcal{R}^n \to \mathcal{R}$. Khi đó vi phân toàn phần
+
+$$
+df = f_{x_1}' dx_1 + f_{x_2}' dx_2 + ... + f_{x_n}' dx_n
+$$
+
+được gọi là vi phân cấp $1$ của hàm $f$. Vi phân toàn phần của $df$ nếu tồn tại, được gọi là vi phân cấp 2 của hàm $f$ và được ký hiệu $d^2f$ hay 
+
+$$
+d^2 f = d(df) = d(f_{x_1}' dx_1 + f_{x_2}' dx_2 + ... + f_{x_n}' dx_n).
+$$
+
+Bằng cách hiểu tương tự, ta có vi phân cấp $n$ của hàm số $f$:
+
+$$
+d^n f = d(d^{n-1} f).
+$$
+
+Trong trường hợp hàm 2 biến $f(x, y)$ và các đạo hàm bậc 2 liên tục, theo định lý Schwarz, ta có công thức
+
+$$
+d^2 f = f_{x^2}'' dx^2 + f_{xy}'' dxdy + f_{y^2}'' dy^2.
+$$
+
+# 1.10. Công thức Taylor của hàm hai biến
+
+Cho hàm hai biến $f : D \subseteq \mathcal{R}^2 \to \mathcal{R}$. Nếu hàm $f$ có các đạo hàm riêng cấp $n + 1$ liên tục trong một lân cận của điểm $M_0 (x_0, y_0)$ thì
+
+$$
+\begin{array}{rlr}
+& & \Delta f(x_0, y_0 + \Delta y) - f(x_0, y_0) = \frac{1}{1!} df(x_0, y_0) + \frac{1}{2!} d^2f(x_0, y_0) + ... + \frac{1}{n!} d^n f(x_0, y_0) \\
+& & + \frac{1}{(n+1)!} d^{n+1} f(x_0 + \theta \Delta x, y_0 + \theta \Delta y).
+\end{array}
+$$
+
+Đặt
+
+$$
+g(t) = f(x_0 + t \Delta x, y_0 + t \Delta y).
+$$
+
+Khi đó $g(t)$ là hàm một biến số và
+
+$$
+g(1) - g(0) = f(x_0 + \Delta x, y_0 + \Delta y) - f(x_0, y_0).
+$$
+
+Theo công thức Taylor cho hàm một biến số $g(t)$, ta có
+
+$$
+g(1) - g(0) = \frac{1}{1!} g'(0) + \frac{1}{2!} g''(0) + \ldots + \frac{1}{n!} g^{(n)}(0) + \frac{1}{(n+1)!} g^{(n+1)}(\theta), \quad 0 < \theta < 1.
+$$
+
+Mặt khác
+
+$$
+\begin{array} { l } { g ^ { \prime } ( 0 ) = f _ { x } ^ { \prime } ( x _ { 0 } , y _ { 0 } ) \Delta _ { x } + f _ { y } ^ { \prime } ( x _ { 0 } , y _ { 0 } ) \Delta _ { y } = d f ( x _ { 0 } , y _ { 0 } ) } \\ { g ^ { \prime \prime } ( 0 ) = f _ { x ^ { 2 } } ^ { \prime \prime } ( x _ { 0 } , y _ { 0 } ) \Delta _ { x } ^ { 2 } + 2 f _ { x y } ^ { \prime \prime } ( x _ { 0 } , y _ { 0 } ) \Delta _ { x } \Delta _ { y } + f _ { y ^ { 2 } } ^ { \prime \prime } ( x _ { 0 } , y _ { 0 } ) \Delta _ { y } ^ { 2 } = d f ( x _ { 0 } , y _ { 0 } ) } \\ { . . . } \\ { g ^ { ( n ) } ( 0 ) = d ^ { n } f ( x _ { 0 } , y _ { 0 } ) } \\ { g ^ { ( n + 1 ) } ( \theta ) = d ^ { n + 1 } f ( x _ { 0 } + \theta \Delta _ { x } , y _ { 0 } + \theta \Delta _ { y } ) . } \end{array}
+$$
+
+Trong trường hợp đặc biệt $n = 1$, ta có công thức
+
+được gọi là công thức số gia giới hạn của hàm $\hat{f} (x, y)$ tại điểm $(x_0, y_0)$:
+
+Ví dụ 1.15. Khai triển hàm số
+
+$$
+f(x, y) = 2x^2 - xy - y^2 - 6x - 3y + 5
+$$
+
+theo công thức Taylor trong lân cận của điểm $M_0 (1, -2)$.
+
+Giải: Theo công thức (1.8), ta tính các đạo hàm riêng cấp 1
+
+$$
+\begin{array} { l } { \displaystyle \frac { \partial f ( \boldsymbol { x } , \boldsymbol { y } ) } { \partial \boldsymbol { x } } = 4 \boldsymbol { x } - \boldsymbol { y } - 6 , } \\ { \displaystyle \frac { \partial f ( \boldsymbol { x } , \boldsymbol { y } ) } { \partial \boldsymbol { y } } = - \boldsymbol { x } - 2 \boldsymbol { y } - 3 , } \end{array}
+$$
+
+và các đạo hàm riêng cấp 2
+
+$$
+\begin{array} { r l } & { \frac { \partial ^ { 2 } f ( x , y ) } { \partial x ^ { 2 } } = 4 , } \\ & { \frac { \partial ^ { 2 } f ( x , y ) } { \partial x \partial y } = - 1 , } \\ & { \frac { \partial ^ { 2 } f ( x , y ) } { \partial y ^ { 2 } } = - 2 . } \end{array}
+$$
+
+Tính các giá trị của hàm số và đạo hàm tại $M _ { 0 }$
+
+$$
+f ( M _ { 0 } ) = 5 , \frac { \partial f } { \partial x } ( M _ { 0 } ) = 0 , \frac { \partial f } { \partial y } ( M _ { 0 } ) = 0 ,
+$$
+
+$$
+{ \frac { \partial ^ { 2 } f } { \partial x ^ { 2 } } } ( M _ { 0 } ) = 4 , { \frac { \partial ^ { 2 } f } { \partial x \partial y } } ( M _ { 0 } ) = - 1 , { \frac { \partial ^ { 2 } f } { \partial y ^ { 2 } } } ( M _ { 0 } ) = - 2 .
+$$
+
+Khi đó, công thức (1.8) có dạng
+
+$$
+\begin{array} { l } { \displaystyle f ( x , y ) = f ( M _ { 0 } ) + \frac { \partial f ( M _ { 0 } ) } { \partial x } ( x - 1 ) + \frac { \partial f ( M _ { 0 } ) } { \partial y } ( y + 2 ) } \\ { \displaystyle \qquad + \frac { 1 } { 2 } \left( \frac { \partial ^ { 2 } f ( M _ { 0 } ) } { \partial x ^ { 2 } } ( x - 1 ) ^ { 2 } + 2 \frac { \partial ^ { 2 } f ( M _ { 0 } ) } { \partial x \partial y } ( x - 1 ) ( y + 2 ) + \frac { \partial ^ { 2 } f ( M _ { 0 } ) } { \partial y ^ { 2 } } ( y + 2 ) ^ { 2 } \right. } \\ { \displaystyle \qquad \left. = 5 + 2 ( x - 1 ) ^ { 2 } - ( x - 1 ) ( y + 2 ) - ( y + 2 ) ^ { 2 } . \qquad \right. } \end{array}
+$$
+
+1.11. Hàm ánh
+
+Cho hàm véc tơ $F : D \subseteq \mathcal{R}^2 \to \mathcal{R}$. Khi đó, hệ thức giữa 2 biến $x, y$ có dạng
+
+$$
+F ( x , y ) = 0 .
+$$
+
+Hàm số $y = f ( x )$ được gọi là hàm ẩn của hệ thức trên, nếu $y = f ( x )$ thỏa mãn hệ thức trên.
+
+Ví dụ 1.16. Từ hệ thức
+
+$$
+\frac { x ^ { 2 } } { a ^ { 2 } } + \frac { y ^ { 2 } } { b ^ { 2 } } = 1 ,
+$$
+
+ta xác định được 2 hàm ẩn
+
+$$
+y = \pm \frac { b } { a } \sqrt { a ^ { 2 } - x ^ { 2 } }
+$$
+
+trên đoạn $[ -a, a ]$
+
+Định lý 1.17. Cho $( x _ { 0 } , y _ { 0 } ) \in D$ và F thỏa mãn 3 điều kiện sau:
+
+(i) $F ( x _ { 0 } , y _ { 0 } ) = 0$; (ii) $F_y'$ liên tục trên tập mở $U$ chứa điểm $( x _ { 0 } , y _ { 0 } )$; (iii) $F_y' ( x _ { 0 } , y _ { 0 } ) \neq 0$.
+
+Khi đó tồn tại hàm ẩn $y = f(x)$ xác định trong lân cận $V = (x_0 - \delta, x_0 + \delta)$. Hơn nữa,
+
++ $f$ liên tục trên miền $V$:
+
++ $f'$ liên tục trên miền $V$ và được xác định bởi
+
+$$
+f_x' = -\frac{F_y'}{F_x'}(x, y).
+$$
+
+Chứng minh: + Tồn tại hàm ẩn $y = f(x)$
+
+Giả thiết $F_y'(x_0, y_0) \neq 0$, ta có thể giả sử rằng
+
+$$
+{\cal F}_y'(x_0, y_0) > 0.
+$$
+
+Do $F_y'(x, y)$ liên tục trên tập mở $U$ chứa $(x_0, y_0)$ nên tồn tại $\alpha > 0$ sao cho
+
+$$
+F_y'(x, y) > 0, \forall (x, y) \in [x_0 - \alpha, x_0 + \alpha] \times [y_0 - \alpha, y_0 + \alpha].
+$$
+
+Khi đó
+
+$$
+F_y'(x_0, y) > 0, \forall y \in [y_0 - \alpha, y_0 + \alpha].
+$$
+
+Vậy hàm số $F(x_0, y)$ đồng biến trên $[y_0 - \alpha, y_0 + \alpha]$. Nhưng giả thiết $F(x_0, y_0) = 0$ và hàm số $F$ liên tục, nên ta có
+
+$$
+F(x_0, y_0 - \alpha) < 0 ~~~~ va ~~~ F(x_0, y_0 + \alpha) > 0.
+$$
+
+Do $F$ liên tục, nên tồn tại $\delta > 0$ sao cho
+
+$$
+F(x, y_{0} - \alpha) < 0 \quad \text{với} \quad F(x, y_{0} + \alpha) > 0, \forall x \in (x_{0} - \delta, x_{0} + \delta).
+$$
+
+Như vậy, mọi $x \in (x_{0} - \delta, x_{0} + \delta)$, tồn tại $y \in (y_{0} - \alpha, y_{0} + \alpha)$ sao cho $F(x, y) = 0$. Mặt khác, $F(x, \cdot)$ tăng ngắt theo $y$, nên tồn tại duy nhất $y = f(x)$:
+
++ Hàm số $y = f(x)$ liên tục trên $(x_{0} - \delta, x_{0} + \delta)$
+
+$$
+f : (x_{0} - \delta, x_{0} + \delta) \to (y_{0} - \alpha, y_{0} + \alpha).
+$$
+
+Lấy $x_{1} \in (x_{0} - \delta, x_{0} + \delta)$ bất kỳ, tồn tại $y_{1} \in (y_{0} - \alpha, y_{0} + \alpha)$ sao cho
+
+$$
+y_{1} = f(x_{1}) \quad \text{và} \quad F(x_{1}, y_{1}) = 0.
+$$
+
+Theo chứng minh trên, với mọi $\alpha_{1} > 0$ đủ nhỏ, tồn tại $\delta_{1} > 0$ sao cho phương trình $F(x, y) = 0$ xác định duy nhất hàm số
+
+$$
+f_{1} : (x_{1} - \delta_{1}, x_{1} + \delta_{1}) \to (y_{1} - \alpha_{1}, y_{1} + \alpha_{1}).
+$$
+
+Chọn $\alpha_{1} < \epsilon$ sao cho
+
+$$
+\begin{array} { r } { ( x _ { 1 } - \delta _ { 1 } , x _ { 1 } + \delta _ { 1 } ) \times ( y _ { 1 } - \alpha _ { 1 } , y _ { 1 } + \alpha _ { 1 } ) \subseteq ( x _ { 0 } - \delta , x _ { 0 } + \delta ) \to ( y _ { 0 } - \alpha , y _ { 0 } + \alpha ) . } \end{array}
+$$
+
+Khi đó,
+
+$$
+f _ { 1 } ( x ) = f ( x ) , \forall x \in ( x _ { 1 } - \delta _ { 1 } , x _ { 1 } + \delta _ { 1 } ) .
+$$
+
+Do đó, với mỗi $x$ thỏa mãn $| x - x _ { 1 } | < \delta _ { 1 }$, ta có
+
+$$
+| f _ { 1 } ( x ) - y _ { 1 } | = | f ( x ) - f ( x _ { 1 } ) | < \alpha _ { 1 } < \epsilon .
+$$
+
+Hay $f$ liên tục tại $x _ { 1 }$. Để chứng minh rằng $y = f ( x )$ khả vi trên $( x _ { 0 } - \delta , x _ { 0 } + \delta )$
+
+Với mỗi $x \in ( x _ { 0 } - \delta , x _ { 0 } + \delta )$ và $x + h \in ( x _ { 0 } - \delta , x _ { 0 } + \delta )$, ta có
+
+$$
+F ( x , f ( x ) ) = 0 \quad \text{và} \quad F ( x + h , f ( x + h ) ) = 0 .
+$$
+
+$$
+F ( x + h , f ( x + h ) ) - F ( x , f ( x ) ) = 0 .
+$$
+
+Hay
+
+$$
+h, f ( x ) + \theta ( f ( x + h ) - f ( x ) ) + \big( f ( x + h ) - f ( x ) \big) . F _ { y } ^ { \prime } \big( x + \theta h , f ( x ) + \theta ( f ( x + h ) - f ( x ) ) \big).
+$$
+
+Do đó,
+
+$$
+\frac{f ( x + h ) - f ( x )}{h} = - \frac{F _ { x } ^ { \prime } ( x + \theta h , f ( x ) + \theta ( f ( x + h ) - f ( x ) )}{ F _ { y } ^ { \prime } \big( x + \theta h , f ( x ) + \theta ( f ( x + h ) - f ( x ) ) \big)}.
+$$
+
+Cho $h \to 0$, ta nhận được
+
+$$
+f_{x}^{\prime} = -\frac{F_{x}^{\prime}}{F_{y}^{\prime}} (x, y).
+$$
+
+Ví dụ 1.18. Cho hệ thức
+
+$$
+e^{z} = x + y + z.
+$$
+
+Tìm các đạo hàm riêng của hàm $z$ theo các biến $x, y$
+
+Giải: Đặt
+
+$$
+F(x, y, z) = e^{z} - x - y - z.
+$$
+
+Khi đó, ta có
+
+$$
+\begin{array}{l}
+{\displaystyle z_{x}^{\prime} = - \frac{F_{x}^{\prime}}{F_{z}^{\prime}} = - \frac{1}{1 - e^{z}} = \frac{1}{e^{z} - 1},} \\
+{\displaystyle z_{y}^{\prime} = - \frac{F_{y}^{\prime}}{F_{z}^{\prime}} = \frac{1}{e^{z} - 1}.}
+\end{array}
+$$
+
+1.12. Cực trị của hàm nhiều biến
+
+1.12.1. Định nghĩa
+
+Cho hàm số $f : D \subseteq \mathbb{R}^n \to \mathbb{R}$ và điểm $M_{0} \in D$
+
+$+ \ \mathrm{Điểm} \ M_{0} \ \mathrm{được gọi là điểm cực tiểu của hàm} \ f \ \mathrm{trên miền} \ D, \ \mathrm{nếu tồn tại hình cầu} \ B(M_{0}, \epsilon) \subseteq D \ \mathrm{sao cho}$
+
+$$
+f(M_{0}) \leq f(M), \forall M \in B(M_{0}, \epsilon).
+$$
+
+$+ \ \mathrm{Điểm} \ M_{0} \ \mathrm{được gọi là điểm cực đại của hàm} \ f \ \mathrm{trên miền} \ D, \ \mathrm{nếu tồn tại hình cầu} \ B(M_{0}, \epsilon) \subseteq D \ \mathrm{sao cho}$
+
+$$
+f(M_{0}) \geq f(M), \forall M \in B(M_{0}, \epsilon).
+$$
+
+$+ \ \mathrm{Điểm} \ \mathrm{cực đại hoặc điểm cực tiểu được gọi chung là điểm cực trị.}$
+
+1.12.2. Cực trị không điều kiện Dưới đây là điều kiện cần của cực trị.
+
+Nếu hàm số $f : D \subseteq \mathcal{R}^2 \to \mathcal{R}$ đạt cực trị tại điểm $M_0 (x_0, y_0)$ và có các đạo hàm riêng trong lân cận của điểm $M_0$, thì
+
+$$
+f_x'(M_0) = f_y'(M_0) = 0.
+$$
+
+Chứng minh: Đặt
+
+$$
+\varphi(x) = f(x, y_0).
+$$
+
+Theo định nghĩa, $x_0$ là điểm cực trị của hàm số $\varphi$. Theo định lý Fermat cho hàm một biến $\varphi$, ta có
+
+$$
+\varphi'(x_0) = 0.
+$$
+
+Hay $f_x'(M_0) = 0$. Bằng cách làm tương tự, ta cũng có $f_y'(M_0) = 0$. Định lý được chứng minh.
+
+Điểm $M_0$ thỏa mãn hệ phương trình
+
+$$
+\left\{
+\begin{array}{l}
+f_x'(x, y) = 0, \\
+f_y'(x, y) = 0
+\end{array}
+\right.
+$$
+
+được gọi là điểm đọng của hàm số $f$. Trong trường hợp tổng quát, định lý Fermat chỉ ra rằng một điểm cực trị là điểm đọng. Tuy nhiên chiều ngược lại, một điểm đọng chưa chắc đã là một điểm cực trị. Như vậy, khi nào thì điểm đọng sẽ là điểm cực trị? Định lý dưới đây khảng định điều này.
+
+Định lý 1.20. Cho điểm $M_0 (x_0, y_0)$ là điểm đọng của hàm số $f(x, y)$ và hàm số $f(x, y)$ có các đạo hàm riêng cấp 2 liên tục trong một lân cận của điểm $M_0$. Đặt
+
+$$
+{ \cal A } = f''_{x^2} ( M_0 ), B = f''_{xy} ( M_0 ), C = f''_{y^2} ( M_0 ), \Delta = B^2 - { \cal A } C.
+$$
+
+Khi đó,
+
+$(i)$ Nếu $\Delta > 0$, thì hàm số không đạt cực trị tại điểm $M_0$:
+
+$(ii)$ Nếu $\Delta = 0$,thì hàm số $f(x, y)$ có thể đạt cực trị tại $M_0$ hoặc không đạt cực trị tại điểm $M_0$:
+
+$(iii)$ Nếu $\Delta < 0$ và
+
+$+ \quad { \cal A } > 0$, thì $M_0$ là điểm cực tiểu.
+$+ \quad { \cal A } < 0$, thì $M_0$ là điểm cực đại.
+
+Chứng minh: $(i)$ Giả sử $\Delta > 0$. Theo công thức Taylor cho hàm hai biến số, ta có
+
+$$
+f(x_0 + \Delta_x, y_0 + \Delta_y) - f(x_0, y_0) = df(x_0, y_0) + \frac{1}{2} d^2f(x_0 + \theta\Delta_x, y_0 + \theta\Delta_y),
+$$
+
+trong đó $0 < \theta < 1$. Do $M_0$ là điểm dừng, nên $df(x_0, y_0) = 0$. Khi đó
+
+$$
+f(x_0 + \Delta_x, y_0 + \Delta_y) - f(x_0, y_0) = \frac{1}{2} \Big( { \cal A } \Delta_x^2 + 2B\Delta_x\Delta_y + C\Delta_y^2 \Big),
+$$
+
+trong đó
+
+$$
+\left\{ \begin{array} { l l } { A _ { 0 } = f ^ { \prime \prime } { _ { x ^ { 2 } } } ( x _ { 0 } + \theta \Delta _ { x } , y _ { 0 } + \theta \Delta _ { y } ) , } \\ { B _ { 0 } = f ^ { \prime \prime } { _ { x y } } ( x _ { 0 } + \theta \Delta _ { x } , y _ { 0 } + \theta \Delta _ { y } ) , } \\ { C _ { 0 } = f ^ { \prime \prime } { _ { y ^ { 2 } } } ( x _ { 0 } + \theta \Delta _ { x } , y _ { 0 } + \theta \Delta _ { y } ) . } \end{array} \right.
+$$
+
+Đo vậy, tam thức bậc hai
+
+$$
+g ( x ) = A _ { 0 } x ^ { 2 } + 2 B _ { 0 } x + C _ { 0 }
+$$
+
+đi qua 2 nghiệm của phương trình $g ( x ) = 0$. Tồn tại $\alpha , \beta$ sao cho
+
+$$
+g ( \alpha ) > 0 , g ( \beta ) < 0 
+$$
+
+và
+
+$$
+\operatorname* { lim } _ { \Delta x , \Delta y \to 0 } ( A _ { 0 } \alpha ^ { 2 } + 2 B _ { 0 } \alpha + C _ { 0 } ) = g ( \alpha ) > 0 , \operatorname* { lim } _ { (\Delta x, \Delta y) \to 0 } ( A _ { 0 } \beta ^ { 2 } + 2 B _ { 0 } \beta + C _ { 0 } ) = g ( \beta )
+$$
+
+Khi đó, tồn tại $\epsilon _ { 0 } > 0$ sao cho
+
+$$
+A _ { 0 } \alpha ^ { 2 } + 2 B _ { 0 } \alpha + C _ { 0 } > 0 \mathrm{~và~} A _ { 0 } \beta ^ { 2 } + 2 B _ { 0 } \beta + C _ { 0 } < 0 , \forall ( \Delta _ { x } , \Delta _ { y } ) \in B ( O , \epsilon _ { 0 } ) .
+$$
+
+Với mọi $0 < \epsilon < \epsilon _ { 0 }$, ta chọn $\delta > 0$ sao cho
+
+$$
+\left\{ \begin{array} { l l } { \delta < \frac{\epsilon}{2}, } \\ { \qquad |\delta \alpha| < \frac{\epsilon}{2}, } \\ { \qquad |\delta \beta| < \frac{\epsilon}{2}. } \end{array} \right.
+$$
+
+Xét 2 điểm $(\delta \alpha, \delta)$ và $(\delta \beta, \delta)$. Khi đó, ta được lại rằng
+
+$$
+\begin{array} { l }
+{( \delta \alpha , \delta ) \in B ( O , \epsilon _ { 0 } ), } \\
+{( \delta \beta , \delta ) \in B ( O , \epsilon _ { 0 } ), } \\
+{ f ( x _ { 0 } + \delta \alpha, y _ { 0 } + \delta ) - f ( x _ { 0 }, y _ { 0 } ) = \frac{1}{2} \delta ^ { 2 } ( A _ { 0 } \alpha ^ { 2 } + 2 B _ { 0 } \alpha + C _ { 0 } ) > 0, } \\
+{ f ( x _ { 0 } + \delta \beta, y _ { 0 } + \delta ) - f ( x _ { 0 }, y _ { 0 } ) = \frac{1}{2} \delta ^ { 2 } ( A _ { 0 } \beta ^ { 2 } + 2 B _ { 0 } \beta + C _ { 0 } ) < 0. }
+\end{array}
+$$
+
+Theo định nghĩa, điểm $M_{0}$ không là điểm cực trị.
+
+(20 $(ii)$ Giả sử $\Delta = 0$. Với hàm số
+
+$$
+f ( x , y ) = x ^ { 4 } + y ^ { 4 }
+$$
+
+cho ta $\Delta = 0$ tại điểm $O ( 0, 0 )$ và điểm $O$ là điểm cực tiểu.
+
+Với hàm số
+
+$$
+f ( x , y ) = x ^ { 3 } + y ^ { 3 }
+$$
+
+cho ta $\Delta = 0$ tại điểm $O ( 0, 0 )$ và điểm $O$ không là điểm cực trị.
+
+$(iii)$ Giả sử $\Delta < 0$ và $A > 0$. Theo giả thiết liên tục của các đạo hàm riêng cấp hai, ta có
+
+$$
+\operatorname*{lim}_{(\Delta_x, \Delta_y) \to 0} \Delta_0 = \Delta < 0 \quad \text{và} \quad \operatorname*{lim}_{(\Delta_x, \Delta_y) \to 0} A_0 = A > 0.
+$$
+
+Hay tồn tại $\epsilon > 0$ sao cho
+
+$$
+\Delta_0 < 0, A_0 > 0 \forall (\Delta_x, \Delta_y) \in B(O, \epsilon).
+$$
+
+Khi đó
+
+$$
+f(x_0 + \Delta_x, y_0 + \Delta_y) - f(x_0, y_0) = \frac{1}{2} \left( A_0 \Delta_x^2 + 2B_0 \Delta_x \Delta_y + C_0 \Delta_y^2 \right) \geq 0,
+$$
+
+với mọi $(\Delta_x, \Delta_y) \in B(O, \epsilon)$. Vậy điểm $M_0$ là điểm cực tiểu. Bằng cách chứng minh tương tự, ta cũng có trường hợp $\Delta < 0$ và $A < 0$. Như vậy, định lý được chứng minh.
+
+Ví dụ 1.21. Tìm cực trị của hàm số
+
+$$
+f(x, y) = x^4 + y^4 - x^2 - 2xy - y^2.
+$$
+
+Giải: Tìm các điểm dừng hay giải hệ phương trình
+
+$$
+f_x' = 4x^3 - 2x - 2y = 0, \quad f_y' = 4y^3 - 2x - 2y = 0,
+$$
+
+ta nhận được các nghiệm $(0, 0), (-1, -1), (1, 1)$. Để tìm điều kiện đủ của cực trị, ta tính các đạo hàm riêng cấp hai
+
+$$
+f''_{xx} = 12x^2 - 2, \quad f''_{xy} = -2, \quad f''_{yy} = 12y^2 - 2.
+$$
+
+$+\text{Xét}$ tại điểm $(-1, -1)$
+
+Ta có
+
+$$
+A = 10, B = -2, C = 10, \Delta = B^2 - AC < 0.
+$$
+
+Do đó hàm số đạt cực tiểu tại điểm $( -1, -1 )$ và giá trị cực tiểu $f ( -1, -1 ) = -2$:
+
+$+ \mathrm{Xét}$ tại điểm $( 1, 1 )$
+
+Ta có
+
+$$
+A = 10, B = -2, C = 10, \Delta = B^2 - AC < 0.
+$$
+
+Do đó hàm số đạt cực tiểu tại điểm $( 1, 1 )$ và giá trị cực tiểu $f ( -1, -1 ) = -2$:
+
+$+ \mathrm{Xét}$ tại điểm $( 0, 0 )$
+
+Ta có
+
+$$
+A = -2, B = -2, C = -2, \Delta = B^2 - AC = 0.
+$$
+
+Để tìm hiểu sự tồn tại của cực trị, ta xét số gia của hàm số tại điểm $( 0, 0 )$:
+
+$$
+\Delta_f = f(\Delta_x, \Delta_y) - f(0, 0) = \Delta_x^4 + \Delta_y^4 - \Delta_x^2 - \Delta_y^2 - 2\Delta_x\Delta_y.
+$$
+
+Nếu $0 < \Delta_x = \Delta_y < \sqrt{\frac{3}{2}}$ thì
+
+$$
+\Delta_f = 2\Delta_x^4 - 4\Delta_x^2 < 2\Delta_x^4 - 3\Delta_x^2 = 2\Delta_x^2(\Delta_x^2 - \frac{3}{2}) < 0.
+$$
+
+Nếu $0 < \Delta_x = -\Delta_y$ thì
+
+$$
+\Delta_f = \Delta_x^4 + \Delta_x^4 - \Delta_x^2 - \Delta_x^2 + 2\Delta_x^2 = 2\Delta_x^4 > 0.
+$$
+
+Theo định nghĩa, điểm $(0, 0)$ không là điểm cực trị. Vậy hàm số đạt cực tiểu tại hai điểm $(-1, -1)$ và $(1, 1)$, và $f_{\min} = -2$.
+
+# 1.12.3. Cực trị có điều kiện
+
+Cho hàm số $f(x, y)$ xác định trên tập mở $D \subseteq \mathbb{R}^2$. Một đường cong có phương trình $\varphi(x, y) = 0$. Người ta gọi cực trị của hàm số $f(x, y)$ trong đó các biến $x, y$ bị ràng buộc bởi hệ thức $\varphi(x, y) = 0$ là cực trị có điều kiện.
+
+Định lý 1.22. (điều kiện cần)
+
+Giả sử điểm $(x_0, y_0)$ là điểm cực trị có điều kiện của hàm số $f(x, y)$ với ràng buộc $\varphi(x, y) = 0$. Các hàm số $f(x, y)$ và $\varphi(x, y)$ thỏa mãn các điều kiện:
+
+(i) Các đạo hàm riêng của các hàm số $f, \varphi$ liên tục trên một lân cận của điểm $(x_0, y_0)$.
+
+(ii) $\varphi_x'(x_0, y_0) \neq 0$, $\varphi_y'(x_0, y_0) \neq 0.$
+
+Khi đó tồn tại $\lambda$ (gọi là nhân tử Lagrange) sao cho
+
+$$
+\left\{ 
+\begin{array}{ll}
+f_x'(x_0, y_0) + \lambda \varphi_x'(x_0, y_0) = 0, \\
+f_y'(x_0, y_0) + \lambda \varphi_y'(x_0, y_0) = 0, \\
+\varphi(x_0, y_0) = 0.
+\end{array} 
+\right.
+$$
+
+Chứng minh: Hàm số $f(x, y)$ với ràng buộc $\varphi(x, y) = 0$ đạt cực trị tại điểm $(x_0, y_0)$, nên $\varphi(x_0, y_0) = 0$. Giả sử $\varphi_x'(x_0, y_0) \neq 0$, theo định lý hàm ẩn, tồn tại hàm ẩn $y = y(x)$ thỏa phương trình $\varphi(x, y) = 0$. Khi đó, hàm số $z = f(x, y(x))$ đạt cực trị tại điểm $x_0$. Theo định lý Fermat, ta có $z'(x_0) = 0$. Hay
+
+$$
+f_x'(x_0, y_0) + f_y'(x_0, y_0).y'(x_0) = 0.
+$$
+
+Mặt khác, từ phương trình $\varphi(x, y(x)) = 0$ tại điểm $(x_0, y_0)$, ta có
+
+$$
+\varphi_x'(x_0, y_0) + \varphi_y'(x_0, y_0).y'(x_0) = 0.
+$$
+
+Kết hợp hai hệ thức trên, ta có
+
+$$
+\begin{array}{r}
+\Big(f_x'(x_0, y_0) + \lambda \varphi_x'(x_0, y_0)\Big) + \Big(f_y'(x_0, y_0) + \lambda \varphi_y'(x_0, y_0)\Big).y'(x_0) = 0.
+\end{array}
+$$
+
+Vì $\varphi_y'(x_0, y_0) \neq 0$ nên tồn tại $\lambda \in \mathbb{R}$ sao cho
+
+$$
+\left\{ \begin{array}{l}
+f_{x}^{\prime}(x_{0}, y_{0}) + \lambda \varphi_{x}^{\prime}(x_{0}, y_{0}) = 0, \\
+f_{y}^{\prime}(x_{0}, y_{0}) + \lambda \varphi_{y}^{\prime}(x_{0}, y_{0}) = 0.
+\end{array} \right.
+$$
+
+Định lý được chứng minh.
+
+Hàm số
+
+$$
+F(x, y, \lambda) = f(x, y) + \lambda \varphi(x, y)
+$$
+
+được gọi là hàm Lagrange. Bây giờ ta xét điều kiện đủ cho cực trị có điều kiện. Với mọi $\lambda_{0}$ có định, ta cần xét xem điểm đinh có điều kiện $(x_{0}, y_{0})$ có là điểm cực trị của hàm $f(x, y)$ với ràng buộc $\varphi(x, y)$ không? Từ hệ thức
+
+$$
+\begin{array}{rl}
+& \Delta F(x_{0}, y_{0}, \lambda_{0}) = f(x, y) - f(x_{0}, y_{0}) + \lambda_{0} \left( \varphi(x, y) - \varphi(x_{0}, y_{0}) \right) \\
+& \quad \quad \quad = f(x, y) - f(x_{0}, y_{0}) \\
+& \quad \quad \quad = \Delta f(x_{0}, y_{0}).
+\end{array}
+$$
+
+Như vậy, với mọi $\lambda_{0}$ có định, nếu điểm $(x_{0}, y_{0})$ là điểm cực trị của hàm $L(x, y, \lambda_{0})$ thì $(x_{0}, y_{0})$ cũng là điểm cực trị của hàm $f(x, y)$. Cực trị của hàm $L(x, y, \lambda_{0})$ là cực trị không điều kiện, do vậy điểm $(x_{0}, y_{0})$ có phải là điểm cực trị hay không hoàn toàn phụ thuộc vào dấu của
+
+$$
+d ^ { 2 } F ( x _ { 0 } , y _ { 0 } , \lambda _ { 0 } ) = \frac { \partial ^ { 2 } F } { \partial x ^ { 2 } } ( x _ { 0 } , y _ { 0 } , \lambda _ { 0 } ) d x ^ { 2 } + 2 \frac { \partial ^ { 2 } F } { \partial x \partial y } ( x _ { 0 } , y _ { 0 } , \lambda _ { 0 } ) d x d y + \frac { \partial ^ { 2 } F } { \partial y ^ { 2 } } ( x _ { 0 } , y _ { 0 } , \lambda _ { 0 } ) d y ^ { 2 }
+$$
+
+Đặt 
+\[
+\frac{\partial \varphi}{\partial x} (x_0, y_0) dx + \frac{\partial \varphi}{\partial y} (x_0, y_0) dy = 0
+\]
+và ta chỉ xét các điểm $(x, y)$ sao cho $\varphi(x, y) = 0$. Khi đó, thay
+
+$$
+dy = - \frac{\frac{\partial \varphi}{\partial x} (x_0, y_0)}{\frac{\partial \varphi}{\partial y} (x_0, y_0)} dx
+$$
+
+vào biểu thức $d ^ { 2 } F ( x _ { 0 } , y _ { 0 } , \lambda _ { 0 } )$, ta nhận được
+
+$$
+d ^ { 2 } F ( x _ { 0 } , y _ { 0 } , \lambda _ { 0 } ) = G ( x _ { 0 } , y _ { 0 } , \lambda _ { 0 } ) d x ^ { 2 } .
+$$
+
+Do đó,
+
+$+ \mathrm{Nếu} \ G ( x _ { 0 } , y _ { 0 } , \lambda _ { 0 } ) > 0$ thì điểm $(x_0, y_0)$ là điểm cực tiểu có điều kiện.  
+$+ \mathrm{Nếu} \ G ( x _ { 0 } , y _ { 0 } , \lambda _ { 0 } ) < 0$ thì điểm $(x_0, y_0)$ là điểm cực đại có điều kiện.
+
+Ví dụ 1.23. Tìm cực trị của hàm số $f(x, y) = xy$ với ràng buộc $x^2 + y^2 = 1$
+
+Giải: Hàm Lagrange có dạng
+
+$$
+F ( x , y , \lambda ) = x y + \lambda ( x ^ { 2 } + y ^ { 2 } - 1 ) .
+$$
+
+$^+$ Tìm điểm cực trị có điều kiện: Giải hệ phương trình
+
+$$
+\left\{ \begin{array} { l l } { F _ { x } ^ { \prime } = y + 2 \lambda x = 0 , } \\ { F _ { y } ^ { \prime } = x + 2 \lambda y = 0 , } \\ { x ^ { 2 } + y ^ { 2 } = 1 . } \end{array} \right.
+$$
+
+Ta nhận được 4 nghiệm
+
+$$
+A _ { 1 } ( \frac { \sqrt { 2 } } { 2 } , - \frac { \sqrt { 2 } } { 2 } , \frac { 1 } { 2 } ) , A _ { 2 } ( - \frac { \sqrt { 2 } } { 2 } , \frac { \sqrt { 2 } } { 2 } , \frac { 1 } { 2 } ) , A _ { 3 } ( \frac { \sqrt { 2 } } { 2 } , \frac { \sqrt { 2 } } { 2 } , - \frac { 1 } { 2 } ) , A _ { 4 } ( - \frac { \sqrt { 2 } } { 2 } , - \frac { \sqrt { 2 } } { 2 } , - \frac { 1 } { 2 } ) .
+$$
+
+Với mỗi điểm $( x , y )$ thuộc miền ràng buộc hay $\varphi ( x , y ) = x ^ { 2 } + y ^ { 2 } - 1 = 0$, ta có
+
+$$
+2 x d x + 2 y d y = 0 \quad \text{và} \quad F _ { x x } ^ { \prime \prime } = 2 \lambda , F _ { x y } ^ { \prime \prime } = 1 , F _ { y y } ^ { \prime \prime } = 2 \lambda .
+$$
+
+Ta xét tại các điểm:
+
+$+$ Tại điểm $A _ { 1 } \left( \frac { \sqrt { 2 } } { 2 } , - \frac { \sqrt { 2 } } { 2 } , \frac { 1 } { 2 } \right) .$
+
+$$
+\begin{array} { c } { d ^ { 2 } F ( A _ { 1 } ) = d x ^ { 2 } + 2 d x d y + d y ^ { 2 } } \\ { = ( d x + d y ) ^ { 2 } } \\ { = 4 d x ^ { 2 } . } \end{array}
+$$
+
+Vậy hàm số đạt cực tiểu tại điểm $A _ { 1 }$ và giá trị cực tiểu $\begin{array} { r } { f ( A _ { 1 } ) = - \frac { 1 } { 2 } } \end{array}$
+
+Bằng cách làm tương tự, hàm số đạt cực tiểu tại điểm $A _ { 2 }$ và giá trị cực tiểu $\begin{array} { r } { f ( A _ { 2 } ) = - \frac { 1 } { 2 } } \end{array}$ . Hàm số đạt cực đại tại các điểm $A _ { 3 }$, $A _ { 4 }$ và giá trị cực đại $\begin{array} { r } { f ( A _ { 3 } ) = f ( A _ { 4 } ) = \frac { 1 } { 2 } } \end{array}$
+
+# 1.13. Giá trị lớn nhất và nhỏ nhất
+
+1.13.1. Định nghĩa
+
+Cho hàm số $f : D \subseteq \mathcal { R } ^ { 2 } \to \mathcal { R }$ và điểm $M _ { 0 } ( x _ { 0 } , y _ { 0 } ) \in D$:
+
++ Hàm số $f$ được gọi là đạt giá trị lớn nhất tại điểm $M _ { 0 }$ trên miền $D$, nếu
+
+$$
+f ( M _ { 0 } ) \geq f ( M ) , \forall M \in D .
+$$
+
++ Hàm số $f$ được gọi là đạt giá trị nhỏ nhất tại điểm $M _ { 0 }$ trên miền $D$, nếu
+
+$$
+f ( M _ { 0 } ) \leq f ( M ) , \forall M \in D .
+$$
+
+Chú ý rằng mọi hàm $f ( x , y )$ liên tục trên một miền đóng và bị chặn $D \subseteq \mathcal { R } ^ { 2 }$ đều tồn tại giá trị lớn nhất và giá trị nhỏ nhất trên miền $D$:
+
+1.13.2. Phương pháp tìm
+
+Ta nhận thấy rằng: Nếu hàm số $f(x, y)$ đạt giá trị nhỏ nhất hoặc lớn nhất tại điểm $(x_0, y_0) \in D \subseteq \mathbb{R}^2$ và $(x_0, y_0) \in int D$, thì $(x_0, y_0)$ sẽ là điểm cực trị không điều kiện. Khi đó, điểm này cũng là điểm đỉnh của hàm số $f(x, y)$. Do vậy, ta có quy tắc tìm giá trị lớn nhất và nhỏ nhất của hàm số $f(x, y)$ trên miền $D$ như sau:
+
+1
+
+Bước 1. Tìm các điểm cực trị không điều kiện trên miền $D$: $(x_1, y_1), (x_2, y_2), \ldots, (x_n, y_n).$
+
+Buộc 2. Tìm các điểm dừng có điều kiện trên biên $\partial D$ hoặc tìm giá trị lớn nhất và nhỏ nhất trên biên $\partial D$: $(x_{n+1}, y_{n+1}), (x_{n+2}, y_{n+2}), \ldots, (x_m, y_m).$
+
+Bước 3. Giá trị lớn nhất và nhỏ nhất của hàm số $f(x, y)$ trên miền $D$ xác định bởi công thức:
+
+$$
+\begin{array}{l}
+f_{LN} = \max\{ f(x_1, y_1), f(x_2, y_2), \ldots, f(x_m, y_m) \}, \\
+f_{NN} = \min\{ f(x_1, y_1), f(x_2, y_2), \ldots, f(x_m, y_m) \}.
+\end{array}
+$$
+
+Ví dụ 1.24. Tìm giá trị lớn nhất và nhỏ nhất của hàm $f(x, y)$:
+
+$$
+f(x, y) = 8x^2 + 3y^2 - (2x^2 + y^2 + 1)^2.
+$$
+
+trên miền $D = \{ ( x , y ) \in \mathcal { R } ^ { 2 } : x ^ { 2 } + y ^ { 2 } \leq 1 \}$
+
+Giải: Miền $D$ là một hình tròn đơn vị. Do đó, $D$ là đóng và bị chặn. Hàm số $f ( x , y )$ liên tục trên miền $D$, nên hàm số đạt giá trị lớn nhất và nhỏ nhất trên miền $D$.
+
++ Tìm các điểm cực trị không điều kiện: Giải hệ phương trình
+
+$$
+\left\{ \begin{array} { l } f _ { x } ^ { \prime } ( x , y ) = 0 \\ f _ { y } ^ { \prime } ( x , y ) = 0 \end{array} \right. \iff \left\{ 8 x ( 1 - 2 x ^ { 2 } - y ^ { 2 } ) = 0 \right.
+$$
+
+cho ta các điểm cực trị:
+
+$$
+\begin{array}{c}
+\begin{array}{l l}
+x _ { 1 } = 0 & x _ { 2 } = 0 \\
+y _ { 1 } = 0, & y _ { 2 } = \frac { 1 } { \sqrt { 2 } },
+\end{array} 
+\quad
+\begin{array}{l l}
+x _ { 3 } = 0 & x _ { 4 } = \frac { 1 } { \sqrt { 2 } } \\
+y _ { 3 } = - \frac { 1 } { \sqrt { 2 } }, & y _ { 4 } = 0,
+\end{array} 
+\quad
+x _ { 5 } = - \frac { 1 } { \sqrt { 2 } }
+\end{array}
+$$
+
++ Xét hàm số $f ( x , y )$ trên miền biên $\partial D = \{ ( x , y ) : x ^ { 2 } + y ^ { 2 } = 1 \}$. Thay $y ^ { 2 } = 1 - x ^ { 2 }$ vào hàm số $f ( x , y )$, ta nhận được
+
+$$
+f ( x , y ) = 8 x ^ { 2 } + 3 ( 1 - x ^ { 2 } ) - ( 2 x ^ { 2 } + 1 - x ^ { 2 } - 1 ) ^ { 2 } = x ^ { 2 } - x ^ { 4 } - 1,
+$$
+
+Với $x \in [-1, 1]$. Đễ dàng thấy rằng: Hàm số đạt giá trị lớn nhất tại $\begin{array}{r}(x^2 = \frac{1}{2}, y^2 = \frac{1}{2}),\end{array}$ nhỏ nhất tại $(x = 0, y^2 = 1)$ hoặc $(x^2 = 1, y = 0)$.
+
+$+$ Kết luận: Giá trị lớn nhất và nhỏ nhất của hàm $f(x, y)$ được xác định bởi:
+
+$$
+{\begin{array}{rl}
+& { f_{LN} = \operatorname*{max}\{ f(x_1, y_1), f(x_2, y_2), \ldots\} = f(0, 0) = -1, } \\
+& {} \\
+& { f_{NN} = \operatorname*{min}\{ f(x_1, y_1), f(x_2, y_2), \ldots\} = f(x_4, y_4) = f(x_5, y_5) = 0. }
+\end{array}}
+$$
+
+Ví dụ 1.25. Tìm giá trị lớn nhất và nhỏ nhất của hàm số
+
+$$
+f(x, y) = e^x (x + y)(x - y + 4),
+$$
+
+trên tam giác OAB, với $A(-5, 0), B(0, 5)$.
+
+Giải: $+$ Tìm các điểm cực trị không điều kiện: Giải hệ phương trình
+
+$$
+\begin{array}{r}
+\left\{
+\begin{array}{ll}
+f_x'(x, y) = 0 \\
+f_y'(x, y) = 0
+\end{array} \right.
+\iff 
+\left\{
+\begin{array}{ll}
+e^x (x^2 - y^2 + 6x + 4y + 4) = 0 \\
+e^x (-2y + 4) = 0,
+\end{array} \right.
+\end{array}
+$$
+
+cho ta các điểm cực trị:
+
+$$
+\left\{
+\begin{array}{ll}
+x_1 = -2 \\
+y_1 = 2,
+\end{array} \right. 
+\quad 
+\left\{ x_2 = -4 \right.
+$$
+
+Điểm $(x_1, y_1) \in (OAB)$ thỏa mãn. Điểm $(x_2, y_2)$ không thuộc miền ràng buộc.
+
+$+$ Xét hàm số $f(x, y)$ trên biên $OA: y = 0, x \in [-5, 0]$. Thay $y = 0$ vào hàm số $f(x, y)$, ta nhận được
+
+$$
+f(x, 0) = e^x (x^2 + 4x),
+$$
+
+với $x \in [-5, 0]$. Ta có $f'(x, 0) = e^x (x^2 + 6x + 4)$. Vì loại điểm $(x_2, y_2)$ và để tiện cho việc sử dụng, ta ký hiệu các điểm đúng và hai điểm đầu mút của đoạn $OA$ là
+
+$$
+\begin{array}{ll}
+x_3 = -3 - \sqrt{5} & \Bigg\{ x_4 = 0 \\
+y_3 = 0,
+\end{array}
+\quad
+\begin{array}{l}
+y_4 = -5.
+\end{array}
+$$
+
+$+$ Xét hàm số $f(x, y)$ trên biên $OB: x = 0, y \in [0, 5]$. Thay $x = 0$ vào hàm số $f(x, y)$, ta nhận được
+
+$$
+f(0, y) = -y^2 + 4y,
+$$
+
+với $y \in [0, 5]$. Ta có $f'(0, y) = -2y + 4$. Khi đó, ta có thêm điểm đầu mút $(x_5 = 0, y_5 = 5)$.
+
+$+$ Xét hàm số $f(x, y)$ trên biên $AB: y = x + 5, x \in [-5, 0]$. Thay $y = x + 5$ vào hàm số $f(x, y)$, ta nhận được
+
+$$
+f(x, x+5) = e^x (-2x - 5),
+$$
+
+với $x \in [-5, 0]$. Ta có $f'(x, x+5) = e^x (-2x - 7)$. Khi đó, ta có thêm điểm đỉnh $\left(x_6 = -\frac{7}{2}, y_6 = \frac{3}{2}\right)$.
+
+$+ \ \mathrm { Kết luận: }$ Giá trị lớn nhất và nhỏ nhất của hàm $f(x, y)$ được xác định bởi:
+
+$$
+\begin{array} { l } 
+{\mathfrak { r } _ { L N } = \operatorname* { max } \{ f ( x _ { 1 } , y _ { 1 } ) , f ( x _ { 2 } , y _ { 2 } ) , . . . , f ( x _ { 6 } , y _ { 6 } ) \} = f ( x _ { 1 } , y _ { 1 } ) = f ( x _ { 3 } , y _ { 3 } ) = 0, } \\ 
+{\mathfrak { r } _ { N N } = \operatorname* { min } \{ f ( x _ { 1 } , y _ { 1 } ) , f ( x _ { 2 } , y _ { 2 } ) , . . . , f ( x _ { 6 } , y _ { 6 } ) \} = f ( x _ { 2 } , y _ { 2 } ) = e ^ { - 3 - \sqrt { 5 } } ( - 2 \sqrt { 5 } - 10 ). } 
+\end{array}
+$$

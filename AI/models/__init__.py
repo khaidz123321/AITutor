@@ -1,7 +1,9 @@
 from .base import Base
-from .user import User
-from .chat_history import ChatHistory
 from .document import Document
 from .activity import Activity
 
-__all__ = ["Base", "User", "ChatHistory", "Document", "Activity"]
+# Phân công sở hữu bảng:
+# ✅ Python quản lý  : documents, activities
+# 📖 Python chỉ ĐỌC : users, chat_sessions, chat_messages (Spring Boot sở hữu)
+
+__all__ = ["Base", "Document", "Activity"]

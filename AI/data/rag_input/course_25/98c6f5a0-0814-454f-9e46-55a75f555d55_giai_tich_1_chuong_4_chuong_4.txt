@@ -1,0 +1,2555 @@
+# Chương 4. Phép tính tích phân
+
+96
+
+4.1.Tích phân xác định … 96
+
+4.1.1．Định nghĩa 96   
+4.1.2.Y nghĩa hình học. 97   
+4.1.3.Tổng Darboux trên và dưới 97   
+4.1.4.Các điều kiện khả tích 99
+
+4.2.Tính chất 102   
+4.3.Mối quan hệ giữa nguyên hàm và tích phân xác định 104
+
+4.3.1.Nguyên hàm 104   
+4.3.2.Hàm theo căn 105   
+4.3.3.Công thức Newton-Leibnitz .. .. 106
+
+4.4.Các phương pháp tính tích phân 107
+
+4.4.1.Phương pháp đổi biến ... .．.107   
+4.4.2．Phương pháp tích phân từng phần ．．．．. ：： 110
+
+4.5.Tích phân của hàm phân thức hữu tỉ.. 111
+
+4.5.1.Các dạng cơ bản... 111   
+4.5.2.Phương pháp đồng nhất hệ số...．． 113
+
+4.6.Tích phân của hàm lượng giác 114
+
+4.7.Một vài ứng dụng của tích phân . . 117
+
+4.7.1.Tính diện tích 117   
+4.7.2.Tính độ dài đường cong 121   
+4.7.3.Tính thể tích vật thể . 123
+
+4.7.4.Tính diện tích mặt tròn xoay .125
+
+4.8.Tích phân suy rộng với cấp vô hạn. 127
+
+4.8.1.Definition．. .. 127   
+4.8.2.Các điều kiện hội tụ của tích phân suy rộng với cấp vô hạn .. . . . 129   
+4.8.3.Hội tụ tuyệt đối và bán hội tụ . .. .132
+
+4.9.Tích phân suy rộng với cấp hữu hạn 133
+
+4.9.1.Definition.．. ... 133   
+4.9.2.Quan hệ giữa hai loại tích phân suy rộng .. 135   
+4.9.3.Các định lý hội tụ ：： . 135   
+
+Bài tập chương 4 ．．．. · . 138
+
+# Chương 4. Chuỗi số và chuỗi hàm
+
+146
+
+4.1．Chuỗi số · 146
+
+4.1.1．Định nghĩa 1 . 146   
+4.1.2.Các điều kiện hội tụ . 147   
+4.1.3.Các tính chất ...148
+
+4.2.Chuỗi số dương 149
+
+4.2.1.Definition ．．. 149   
+4.2.2. Các tiêu chuẩn hội tụ .. 149
+
+4.3. Chuỗi dàn đầu 154
+
+4.3.1. Định nghĩa .... 154   
+4.3.2. Đấu hiệu hội tụ .. 155
+
+4.4. Chuỗi hàm 156
+
+4.4.1. Định nghĩa 156   
+4.4.2.Các điều kiện hội tụ đều 157   
+4.4.3.Tính chất của chuỗi hàm hội tụ đều 161
+
+4.5. Chuỗi lũy thừa 164
+
+4.5.1. Định nghĩa . 164   
+4.5.2.Tính chất .. 165   
+4.5.3.Quy tắc tìm bán kính hội tụ 165   
+4.5.4.Tính hội tụ đều của chuỗi lũy thừa .... ...167
+
+4.5.5.Khai triển một hàm số thành chuỗi lũy thừa .169
+
+4.6. Chuỗi Fourier 171   
+4.6.1.Chuỗi lượng giác 171   
+4.6.2.Khai triển Fourier của hàm số có chu kỳ $2 \pi$ ， 173   
+4.6.3.Khai triển Fourier của hàm số có chu kỳ $2 T$ ： .. 175   
+4.6.4.Khai triển Fourier của hàm số xác định trên đoạn, khoảng... . . . 177   
+Bài tập chương 4．．．. ...182   
+Tài liệu tham khảo .．．. 190
+
+Giải tích hàm một biến số là một môn học đang giữ một vị trí quan trọng trong các lĩnh vực ứng dụng và trong hệ thống các môn học của Học viện Công nghệ Bưu chính Viễn thông. Các kiến thức và phương pháp của giải tích hàm một biến số đã hỗ trợ hiểu biết các kiến thức nền tảng cho các môn học giải tích hàm nhiều biến, vật lý, xác suất thống kê, toán kỹ thuật, toán rời rạc và các môn chuyên ngành khác.
+
+Bài giảng "Giải tích hàm một biến số" được biên soạn lại theo chương trình qui định của Học viện cho hệ đại học chuyên ngành Điện tử-Viễn thông-Công nghệ thông tin với hình thức đào tạo theo tín chỉ. Do đối tượng sinh viên rất đa dạng với trình độ cơ bản khác nhau, chúng tôi đã cố gắng tìm cách tiếp cận đơn giản và hợp lý để trình bày nội dung theo phương pháp dễ hiểu hơn, nhằm giúp cho sinh viên nắm được các kiến thức cơ bản nhất.
+
+Giáo trình dùng chia thành 4 chương. Chương 1 dành cho phần số phức và giới hạn của dãy số. Chương 2 và 3 bao gồm các nội dung về hàm liên tục, phép tính vi phân và phép tính vi phân của hàm một biến. Chương 4 trình bày về chuỗi số, chuỗi hàm, chuỗi lũy thừa và chuỗi Fourier. Các khái niệm và công thức được trình bày tương đối đơn giản và được minh họa bằng nhiều ví dụ với các hình vẽ sinh động. Các chứng minh khó được lược bỏ có chọn lọc để giúp cho giáo trình không quá nặng nề nhưng vẫn đảm bảo đủ để tiến cho sinh viên học tập chuyên sâu và tra cứu phục vụ quá trình học tập các môn học khác. Cuối mỗi chương đều có các bài tập để sinh viên tự giải nhằm giúp các em hiểu sâu sắc hơn về lý thuyết và rèn luyện kỹ năng thực hành.
+
+Tác giả hy vọng rằng giáo trình này hữu ích cho các em sinh viên và các bạn đồng nghiệp trong quá trình học tập và giảng dạy về môn học giải tích hàm một biến số. Tác giả cũng cảm ơn mọi ý kiến góp ý để giáo trình bài giảng này được hoàn thiện hơn nhằm nâng cao chất lượng dạy và học môn học này.
+
+# CHUƠNG 4. CHUỖI SỐ VÀ CHUỖI HÀM
+
+# 4.1. Chuỗi số
+
+## 4.1.1. Định nghĩa
+
+Cho dãy số thực $\left( a _ { n } \right)$ (hay phức). Khi đó tổng vô hạn
+
+$$
+a _ { 1 } + a _ { 2 } + \ldots + a _ { n } + \ldots
+$$
+
+được gọi là chuỗi số thực (tương ứng: Chuỗi số phức) và được ký hiệu bởi $\sum _ { n = 1 } ^ { + \infty } a _ { n }$, $a _ { n }$ được gọi là số hạng thứ $n$ của chuỗi số.
+
+Ví dụ: Chuỗi điều
+
+$$
+\begin{array} { r l }
+{\text{harmonic: } \sum _ { n = 1 } ^ { + \infty } \frac { 1 } { n }, \text{chuỗi Riemann } \sum _ { n = 1 } ^ { + \infty } \frac { 1 } { n ^ { \alpha } }, \dots} \\
+{\text{chuỗi số } \sum _ { n = 1 } ^ { + \infty } a _ { n }}
+\end{array}
+$$
+
+Tổng riêng thứ $n$
+
+$$
+S _ { n } = \sum _ { k = 1 } ^ { n } a _ { k }.
+$$
+
+Chuỗi $\sum _ { n = 1 } ^ { + \infty } a _ { n }$ được gọi là hội tụ tới $S$, nếu lim $S _ { n } = S$. Khi đó 
+
+$$
+R _ { n } = S - S _ { n }
+$$
+
+được gọi là phần dư bậc $n$ của $\sum _ { n = 1 } ^ { + \infty } a _ { n }$. Ngược lại, được gọi là phần kỳ.
+
+Ví dụ 4.1. Khảo sát sự hội tụ hay phân kỳ của tổng vô hạn cấp số nhân với công bội $q$
+
+$$
+\sum _ { n = 0 } ^ { + \infty } q ^ { n }, \ q \neq 0.
+$$
+
+Giải Xét tổng riêng thứ $n$ là $S _ { n }$ tổng hữu hạn các số hạng của một cấp số nhân $( q \neq 1 )$
+
+$$
+S _ { n } = \sum _ { k = 0 } ^ { n - 1 } q ^ { k } = \begin{cases}
+\frac { q ^ { n } - 1 } { q - 1 } & \text{nếu } q \neq 1 \\
+n & \text{nếu } q = 1 .
+\end{cases}
+$$
+
+Vậy
+
+$$
+\lim _ { n \to \infty } S _ { n } = \lim _ { n \to \infty } \sum _ { k = 0 } ^ { n - 1 } q ^ { k } = \begin{cases}
+\frac { 1 } { 1 - q } & \text{nếu } |q| < 1, q \neq 0 \\
+\text{khoảng không tồn tại} & \text{nếu } q \leq - 1 \\
++ \infty & \text{nếu } q \geq 1 .
+\end{cases}
+$$
+
+$$
+\begin{array} { r l }
+{
+\widehat{\mathbf{s} \boldsymbol{\omega}} \sum_{n=1}^{+\infty} a_n \mathrm{~dụng~công~gọi~li~} h \widehat{o l} \mathrm{~tu~} t u \mathrm{~tu~} t u \mathrm{~tu~} t \widehat{e} t \mathrm{~do i,~neu~} \sum_{n=1}^{+\infty} |a_n| \mathrm{~hòi~tu}.
+}
+{
+\widehat{\mathbf{\omega}} \sum_{n=1}^{+\infty} a_n \mathrm{~dụng~công~gọi~li~} b \widehat{an} \mathrm{~hò l} \mathrm{~tu,~neu~} \sum_{n=1}^{+\infty} a_n \mathrm{~hò i~tu~va~} \sum_{n=1}^{+\infty} |a_n| \mathrm{~phân~ky}.
+}
+\end{array}
+$$
+
+# 4.1.2. Các điều kiện hội tụ
+
+Định lý 4.2. (Cauchy)
+
+$\sum_{n=1}^{+\infty} a_n$ hội tụ khi và chỉ khi
+
+$$
+\forall \epsilon > 0, \exists n_0, \forall n \geq n_0, \forall p \in \mathbb{N}: |a_{n+1} + a_{n+2} + ... + a_{n+p}| < \epsilon.
+$$
+
+Chứng minh. Tồn tại giới hạn $\lim S_n$ khi và chỉ khi dãy $(S_n)$ là dãy Cauchy (xem chương 2, mục 2.7) khi và chỉ khi
+
+$$
+\begin{array} { r } { > 0 , \exists n _ { 0 } , \forall n \geq n _ { 0 } , \forall p \in \mathbb { N } : | S _ { n + p } - S _ { n } | < \epsilon \Leftrightarrow | a _ { n + 1 } + a _ { n + 2 } + . . . + a _ { n + p } | } \end{array}
+$$
+
+Ví dụ 4.3. Chứng minh rằng chuỗi điều hòa
+
+$$
+\sum _ { n = 1 } ^ { + \infty } { \frac { 1 } { n } } = 1 + { \frac { 1 } { 2 } } + { \frac { 1 } { 3 } } + \ldots + { \frac { 1 } { n } } + \ldots
+$$
+
+phần ký.
+
+Giải Với mỗi $\boldsymbol{n} \in \mathbb{N}^{*}$, ta có
+
+$$
+| S _ { 2n } - S _ { n } | = { \frac { 1 } { n + 1 } } + { \frac { 1 } { n + 2 } } + \ldots + { \frac { 1 } { 2n } } > { \frac { 1 } { 2n } } + { \frac { 1 } { 2n } } + \ldots + { \frac { 1 } { 2n } } = { \frac { n } { 2n } } = { \frac { 1 } { 2 } }.
+$$
+
+Theo định lý 4.2, chuỗi điều hòa $\sum _ { k = 1 } ^ { +\infty } { \frac { 1 } { k } }$ phần ký.
+
+$\sum _ { k = 1 } ^ { +\infty } a _ { k }$
+
+Định lý 4.4. Nếu chuỗi hội tụ, thì
+
+$$
+\operatorname*{lim}_{n \to \infty} a _ { n } = 0.
+$$
+
+Chứng minh. Áp dụng định lý 4.2 với $p = 1$ hay
+
+$$
+\forall \epsilon > 0 , \exists n _ { 0 } , \forall n \geq n _ { 0 } : | a _ { n + 1 } | < \epsilon.
+$$
+
+Hay $\lim_{n \to \infty} a _ { n } = 0$.
+
+Ví dụ 4.5. Khảo sát sự hội tụ hay phân kỳ của chuỗi số
+
+$$
+\sum _ { n = 1 } ^ { +\infty } { \frac { 2n^2 - 3n - 1 } { n^2 - 5n - 3 } }.
+$$
+
+Giải Xét giới hạn
+
+$$
+\operatorname*{lim}_{n \to \infty} a_n = \operatorname*{lim}{\frac{2 n^2 - 3 n - 1}{n^2 - 5 n - 3}} = 2 \neq 0.
+$$
+
+Theo định lý 4.4, chuỗi phân kỳ.
+
+Định lý 4.6. Nếu chuỗi $\sum_{n=1}^{+\infty} a_n$ hội tụ tuyệt đối, thì $\sum_{n=1}^{+\infty} a_n$ hội tụ.
+
+Chứng minh. Theo định lý 4.2, dãy $\sum_{n=1}^{\infty} \left|a_n\right|$ hội tụ khi và chỉ khi
+
+$$
+\forall \epsilon > 0 , \exists n_0 , \forall n \geq n_0 : \left|\left| a_{n+1}\right| + \left| a_{n+2}\right| + \ldots + \left| a_{n+p} \right|\right| < \epsilon
+$$
+
+Mà
+
+$$
+\left|a_{n+1} + a_{n+2} + \ldots + a_{n+p}\right| \leq \left|\left| a_{n+1}\right| + \left| a_{n+2}\right| + \ldots + \left| a_{n+p} \right|\right| < \epsilon.
+$$
+
+Do đó, ta có
+
+$$
+\forall \epsilon > 0 , \exists n_0 , \forall n \geq n_0 : \left|a_{n+1} + a_{n+2} + \ldots + a_{n+p}\right| < \epsilon.
+$$
+
+Vậy $\sum_{n=1}^{+\infty} a_n$ hội tụ.
+
+4.1.3. Các tính chất
+
+Dựa vào định nghĩa, ta dễ dàng chứng minh được các tính chất sau:
+$+$ Tính chất 1: Chuỗi số $\sum_{n=1}^{+\infty} a_n$ hội tụ hay phân kỳ không phụ thuộc vào tổng hữu hạn các số hạng đầu tiên. Hay
+
+$$
+\sum_{n=1}^{+\infty} a_n \mathrm{~hội tụ~(phân kỳ)~} \Leftrightarrow \sum_{n=n_0}^{+\infty} a_n \mathrm{~}\forall n_0 \geq 1.
+$$
+
+$$
+\begin{array}{rl}
+&{\displaystyle{\imath h c h'a^{\prime}2\mathrm{N}eu chu\tilde{o}\mathrm{s}\tilde{\bigotimes}\sum_{n=1}^{+\infty} a_n \mathrm{h}\hat{o}1\mathrm{t u}, \mathrm{th} \mathrm{c h}chu\tilde{o}\mathrm{i}\mathrm{s}\tilde{\bigotimes}\sum_{n=1}^{+\infty} \lambda a_n \mathrm{~\lambda}} \in \mathbb{R} 1}\\
+&{\displaystyle{\imath h c h'a^{\prime}3\mathrm{N}eu chu\tilde{o}\mathrm{i}\mathrm{s}\tilde{\otimes}\sum_{n=1}^{+\infty} a_n \mathrm{v}\tilde{a}\sum_{n=1}^{+\infty} b_n \mathrm{h}\hat{o}1\mathrm{t u}, \mathrm{th}}}
+\end{array}
+$$
+
+$$
+\sum_{n=1}^{+\infty}(a_n + b_n) = \sum_{n=1}^{+\infty} a_n + \sum_{n=1}^{+\infty} b_n.
+$$
+
+$^+$ Tính chất 4 Chuỗi số phức
+
+$$
+\sum_{n=1}^{+\infty} z_n = \sum_{n=1}^{+\infty}(Rez_n + iImz_n)
+$$
+
+hội tụ khi và chỉ khi
+
+$$
+\sum_{n=1}^{+\infty} Rez_n {\mathrm{~và~}} \sum_{n=1}^{+\infty} Imz_n {\mathrm{~hạ~tụng~}}
+$$
+
+# 4.2. Chuỗi số dương
+
+## 4.2.1. Định nghĩa
+
+Chuỗi số thực $\sum_{n=1}^{+\infty} a_n$ được gọi là chuỗi số dương, nếu $a_n > 0 \forall n \in \mathbb{N}^*$.
+
+Từ định nghĩa, ta nhận thấy rằng dãy số $(S_n)$ đơn điệu tăng. Do đó, chuỗi số dương $\sum_{n=1}^{+\infty} a_n$ hội tụ khi và chỉ khi dãy số $(S_n)$ bị chặn trên.
+
+## 4.2.2. Các tiêu chuẩn hội tụ Khảo sát sự hội tụ của chuỗi số dương
+
+![](images/370de40519888e5e03994601f4abf0d8d1df43096d359dbea0779c2a8903951c.jpg)
+
+Định lý 4.7. (so sánh 1)
+
+Cho hai chuỗi số dương $(a_n)$ và $(b_n)$ thỏa mãn $n=1$ và $n=1$
+
+Khi đó
+
+$^+$ Nếu $(2)$ hội tụ, thì $(1)$ hội tụ.
+$^+$ Nếu $(1)$ phân kỳ, thì $(2)$ phân kỳ.
+
+Chứng minh. Đặt
+$$
+S_n = \sum_{k=n_0}^{n} a_k, \bar{S}_n = \sum_{k=n_0}^{n} b_k.
+$$
+
+Ta có $(2)$ hội tụ khi và chỉ khi tồn tại $M$ sao cho $\bar{S}_n \leq M \forall n \geq n_0$. Từ bất đẳng thức,
+$$
+a_n \leq b_n \forall n \geq n_0 \Rightarrow S_n \leq M \forall n \geq n_0.
+$$
+Do đó, $\sum_{k=1}^{+\infty} a_k$ hội tụ.
+
+Vậy $\sum _ { k = n _ { 0 } } ^ { + \infty } a _ { k }$ hội tụ
+
+Nếu (1) phân kỳ, giả sử (2) hội tụ, theo chứng minh trên, ta có (1) hội tụ, trái giả thiết. Vậy (2) phân kỳ. □
+
+Ví dụ 4.8. Khảo sát sự hội tụ hay phân kỳ của chuỗi số
+
+$$
+\sum _ { n = 1 } ^ { + \infty } { \frac { n } { e ^ { n ^ { 2 } } + n - 1 } } .
+$$
+
+Giả sử bất đẳng thức $e ^ { x } > { \frac { 1 } { 2 } } x ^ { 2 } \forall x > 0$ suy ra
+
+$$
+\frac { n } { e ^ { n ^ { 2 } } + n - 1 } \leq \frac { n } { e ^ { n ^ { 2 } } } < \frac { 2 } { n ^ { 3 } } < \frac { 2 } { n ^ { 2 } } \forall n \in \mathbb { N } ^ { * } := \{ 1 , 2 , \ldots \} .
+$$
+
+Mà
+
+$$
+\sum _ { n = 1 } ^ { + \infty } { \frac { 1 } { n ^ { 2 } } } < 1 + \frac { 1 } { 1 . 2 } + \frac { 1 } { 2 . 3 } + \ldots + \frac { 1 } { ( n - 1 ) n } = 2 - \frac { 1 } { n } .
+$$
+
+Vậy dãy số $( S _ { n } )$ hội tụ. Hay chuỗi số dương $\sum _ { n = 1 } ^ { + \infty } { \frac { 1 } { n ^ { 2 } } }$ hội tụ. Theo định lý 4.7, chuỗi số $\sum _ { n = 1 } ^ { + \infty } { \frac { n } { e ^ { n ^ { 2 } } + n - 1 } }$ hội tụ.
+
+Định lý 4.9. (so sánh 2)
+
+Cho hai chuỗi số dương $\sum _ { n = 1 } ^ { + \infty } a _ { n }$ và $\sum _ { n = 1 } ^ { + \infty } b _ { n }$ thỏa mãn
+
+$$
+\lim_{n \to \infty} \frac{a_n}{b_n} = M \geq 0.
+
+Khi đó
+
++ Nếu $M \in ( 0 , + \infty )$, thì $\sum _ { n = 1 } ^ { + \infty } a _ { n }$ hội tụ (phân kỳ) khi và chỉ khi $\sum _ { n = 1 } ^ { + \infty } b _ { n }$ hội tụ (tương ứng: phân kỳ).
+
+$^+$ Nếu $M = O$ và $(2)$ hội tụ, thì $(1)$ hội tụ.
+
+$+$ Nếu $M = +\infty$ và $(2)$ phân kỳ, thì $(1)$ phân kỳ.
+
+Chứng minh. $+$ Nếu $\lim_{n \to \infty} \frac{a_n}{b_n} = M \in (0, +\infty)$ ,thì
+
+$$
+\forall \epsilon \in (0, M), \exists n_0, \forall n \geq n_0 \Rightarrow \left| \frac{a_n}{b_n} - M \right| < \epsilon \Rightarrow (M - \epsilon) b_n < a_n < (M + \epsilon)b_n.
+$$
+
+Theo định lý 4.7, ta có $(1)$ hội tụ (phân kỳ) khi và chỉ khi $(2)$ hội tụ (tương ứng: phân kỳ).
+
+$+\forall \epsilon > 0, \exists n_0, \forall n \geq n_0 \Rightarrow \left| \frac{a_n}{b_n} \right| < \epsilon \Rightarrow a_n \leq \epsilon b_n.$
+
+Theo định lý 4.7, nếu $(2)$ hội tụ thì $(1)$ hội tụ.
+
+$\begin{array}{r}
++\lim_{n \to \infty} \frac{a_n}{b_n} = +\infty \Rightarrow \lim_{n \to \infty} \frac{b_n}{a_n} = 0.
+\end{array}$ Khi đó, chứng minh tương tự như trên.
+
+Ví dụ 4.10. Khảo sát sự hội tụ hay phân kỳ của
+
+$$
+\sum_{n=1}^{+\infty} n \sin^2 \frac{2}{n}.
+$$
+
+Giải Đáp
+
+an = n sin² $\frac{2}{n} > 0 \forall n \in \mathbb{N}^*, b_n = \frac{1}{n} \Rightarrow \lim_{n \to \infty} \frac{a_n}{b_n} = \lim_{n \to \infty} \frac{\sin^2 \frac{2}{n}}{\frac{1}{n^2}} = 4 \in (0, +\infty)$. 
+
+Mà chuỗi điều hòa
+
+$$
+\sum_{n=1}^{+\infty} b_n = \sum_{n=1}^{+\infty} \frac{1}{n}
+$$
+
+Vậy $\sum_{n=1}^{+\infty} n \sin^2 \frac{2}{n}$ phân kỳ.
+
+Định lý 4.11. (D'Alembert)
+
+Cho chuỗi số dương $\sum_{k=1}^{+\infty} a_k$ thỏa mãn:
+
+- Nếu $D < 1$, thì $\sum_{k=1}^{+\infty} a_k$ hội tụ.
+- Nếu $D > 1$, thì $\sum_{k=1}^{+\infty} a_k$ phân kỳ.
+- Nếu $D = 1$, thì $\sum_{k=1}^{+\infty} a_k$ chưa kết luận được.
+
+Chứng minh. - Nếu $\lim_{n \to \infty} \frac{a_{n+1}}{a_n} = D < 1$, theo định nghĩa:
+
+$\forall \epsilon \in (0, 1-D), \exists n_0, \forall n \geq n_0 \Rightarrow \left| \frac{a_{n+1}}{a_n} - D \right| < \epsilon \Rightarrow a_{n+1} < (D + \epsilon)a_n$ với $q = D + \epsilon \in (0, 1)$:
+
+Khi đó
+
+$$
+\left\{ \begin{array} { l l } { \mathrm{Thay} \ n = n _ { 0 } } & { \Rightarrow a _ { n _ { 0 } + 1 } < a _ { n _ { 0 } } q } \\ { \mathrm{Thay} \ n = n _ { 0 } + 1 } & { \Rightarrow a _ { n _ { 0 } + 2 } < a _ { n _ { 0 } + 1 } q < a _ { n _ { 0 } } q ^ { 2 } } \\ { \dots } & \\ { \mathrm{Thay} \ n = n _ { 0 } + k } & { \Rightarrow a _ { n _ { 0 } + k } < a _ { n _ { 0 } } q ^ { k } . } \end{array} \right.
+$$
+
+Vì chuỗi $\sum _ { k = 1 } ^ { + \infty } a _ { n _ { 0 } } q ^ { k }$ hội tụ, nên $\sum _ { k = n _ { 0 } } ^ { + \infty } a _ { k }$ hội tụ, suy ra $\sum _ { k = 1 } ^ { + \infty } a _ { k }$ hội tụ. Nếu $\operatorname*{lim} _ { n \to \infty } \frac { a _ { n + 1 } } { a _ { n } } = D > 1$, theo định nghĩa
+
+$$
+\exists n _ { 0 }, \forall n \ge n _ { 0 } \Rightarrow \left| \frac { a _ { n + 1 } } { a _ { n } } - D \right| < \epsilon \Rightarrow a _ { n + 1 } > ( D - \epsilon ) a _ { n } = q \quad \text{với} \ q = D - \epsilon > 1.
+$$
+
+Như vậy
+
+$$
+a _ { n + 1 } > a _ { n } \geq a _ { n _ { 0 } } \forall n \geq n _ { 0 } > 0 \Rightarrow \operatorname*{lim} _ { n \to \infty } a _ { n } \neq 0.
+$$
+
+Theo định lý 4.4, ta có $\sum _ { k = 1 } ^ { + \infty } a _ { k }$ phân kỳ.
+
+Ví dụ 4.12. Khảo sát sự hội tụ của chuỗi số
+
+$$
+\sum _ { n = 1 } ^ { + \infty } \frac { n ! } { n ^ { n } }.
+$$
+
+Giải
+
+$$
+\begin{array} { c c c } { \displaystyle { \boldsymbol { n } _ { n } = \frac { n ! } { n ^ { n } } \Rightarrow \operatorname* { lim } _ { n  \to \infty } \frac { { \boldsymbol { a } } _ { n + 1 } } { { \boldsymbol { a } } _ { n } } = \operatorname* { lim } _ { n  \to \infty } ( \frac { n } { n + 1 } ) ^ { n } = \operatorname* { lim } _ { n  \to \infty } \frac { 1 } { ( 1 + \frac { 1 } { n } ) ^ { n } } = \frac { 1 } { e } < 1 . } } \end{array}
+$$
+
+Theo dấu hiệu D'Alembert, ta có $\sum _ { n = 1 } ^ { + \infty } { \frac { n ! } { n ^ { n } } }$ hội tụ. Định lý 4.13. (Cauchy)
+
+Cho chuỗi số dương $\sum _ { k = 1 } ^ { + \infty } a _ { k }$ thỏa mãn
+$$
+\operatorname* { lim } _ { n  \to \infty } \sqrt [ n ] { a _ { n } } = D \geq 0 .
+$$
+
+- Nếu $D < 1$, thì $\sum _ { k = 1 } ^ { + \infty } a _ { k }$ hội tụ.
+- Nếu $D > 1$, thì $\sum _ { k = 1 } ^ { + \infty } a _ { k }$ phân kỳ.
+- Nếu $D = 1$, thì $\sum _ { k = 1 } ^ { + \infty } a _ { k }$ chưa kết luận được.
+
+Chứng minh. - Nếu $\operatorname* { lim } _ { n  \to \infty } \sqrt [ n ] { a _ { n } } = D < 1$, theo định nghĩa ∀ε ∈ (0,1 $- \ D ) , \exists n _ { 0 } , \forall n \ge n _ { 0 } \Rightarrow | \sqrt [ n ] { a _ { n } } - D | < \epsilon \Rightarrow \sqrt [ n ] { a _ { n } } < D + \epsilon \Rightarrow a _ { n } < q ^ { n } ,$ 
+
+với $q = D + \epsilon \in ( 0 , 1 )$:
+
+Mà chuỗi
+$$
+\sum _ { k = n _ { 0 } } ^ { + \infty } q ^ { k } = \frac { q ^ { n _ { 0 } } } { 1 - q } \mathrm { ( hội tụ ) } ,
+$$
+
+nen $\sum_{k=n_0}^{+\infty} a_k$ hội tụ, suy ra $\sum_{k=1}^{+\infty} a_k$ hội tụ. - Nếu $\lim_{n\to\infty} \sqrt[n]{a_n} = D > 1$, theo định nghĩa
+
+$\forall \epsilon \in (0, D-1), \exists n_0, \forall n \geq n_0 \Rightarrow |\sqrt[n]{a_n} - D| < \epsilon \Rightarrow \sqrt[n]{a_n} > D - \epsilon > 1 \rightarrow a_n > 1$.   
+Theo định lý 4.4, ta có $\sum_{k=1}^{+\infty} a_k$ phân kỳ.
+
+Ví dụ 4.14. Cho chuỗi số dương $\sum_{k=1}^{+\infty} a_k \ \text{với} \ \lim_{n\to\infty} a_n = a \in (0, +\infty)$. Khảo sát sự hội tụ hay phân kỳ của chuỗi số sau
+
+Giải Ta có
+
+$$
+D = \lim_{n\to\infty} \sqrt[n]{\left(\frac{x}{a_n}\right)^n} = \frac{x}{a}.
+$$
+
+Theo định lý 4.13, ta có
+
++ Nếu $x \in (0, a)$, thì hội tụ.   
++ Nếu $x \in (a, +\infty)$, thì phân kỳ.
+
++ Nếu $x = a$, thì chuỗi trên có thể hội tụ và có thể phân kỳ. Ta xem các trường hợp đặc biệt sau.
+
+Trường hợp 1: $a_n = \sqrt[n]{n} \Rightarrow \lim_{n\to\infty} a_n = 1 \Rightarrow a = 1 = x$. Khi đó
+
+$$
+\sum_{k=1}^{+\infty} \left(\frac{x}{a_n}\right)^n = \sum_{k=1}^{+\infty} \frac{1}{n} \text{ phân kỳ.}
+$$
+
+Trường hợp 2: $a_{n} = \sqrt[n]{n^2} \Rightarrow \lim_{n \to \infty} a_n = 1 \Rightarrow a = 1 = x$. Khi đó, cho hàm số $f(x)$ dương, giảm trên $[1, +\infty)$ thỏa mãn
+
+$$
+f(n) = a_n \forall n \in \mathbb{N}^*.
+$$
+
+Khi đó, chuỗi số dương $\sum_{k=1}^{+\infty} a_k$ hội tụ (phần ký) khi và chỉ khi 
+
+$$
+\int_1^{+\infty} f(x) dx < +\infty \quad (\text{tương ứng: phần ký}).
+$$
+
+Chứng minh. Do hàm $f(x)$ giảm trên $[1, +\infty)$, nên
+
+$$
+n \leq x \leq n+1 \Leftrightarrow f(n+1) \leq f(x) \leq f(n) \Leftrightarrow a_{n+1} \leq f(x) \leq a_n \Rightarrow 
+$$
+
+$$
+\int_k^{k+1} f(x) dx \leq a_n \forall n = 1, 2, \ldots \Rightarrow S_{n+1} - a_1 \leq \sum_{k=1}^n \int_k^{k+1} f(x) dx \leq S_n \Rightarrow 
+$$
+
+$$
+S_{n+1} - a_1 \leq \int_1^{n+1} f(x) dx \leq S_n.
+$$
+
+Theo định lý 4.7, ta có điều cần chứng minh.
+
+Ví dụ 4.16. Khảo sát sự hội tụ hay phân kỳ của chuỗi Riemann
+
+$$
+\sum_{k=1}^{+\infty} \frac{1}{n^\alpha}.
+$$
+
+Giải
+
+$$
+a_{n} = \frac{1}{n^{\alpha}} = f(n) \quad \text{với} \quad f(x) = \frac{1}{x^{\alpha}} > 0 \quad \forall x \geq 1.
+$$
+
+Theo ví dụ (5.34),
+
+$$
+\int_{1}^{+\infty} \frac{dx}{x^{\alpha}} = \left\{
+\begin{array}{ll}
+\frac{1}{\alpha - 1} & \text{nếu} \quad \alpha > 1 \\
+\text{phân kỳ} & \text{nếu} \quad \alpha \leq 1.
+\end{array}
+\right.
+$$
+
+Vậy
+
+- Nếu $\alpha > 1$, thì $\sum_{k=1}^{+\infty} \frac{1}{n^{\alpha}}$ hội tụ.  
+- Nếu $\alpha \leq 1$, thì $\sum_{k=1}^{+\infty} \frac{1}{n^{\alpha}}$ phân kỳ.
+
+4.3. Chuỗi đan dấu
+
+4.3.1. Định nghĩa Cho dãy số dương $a_1, a_2, \ldots, a_n, \ldots$. Khi đó chuỗi đan dấu là chuỗi số có dạng
+
+$$
+\sum_{k=1}^{+\infty} (-1)^{k-1} a_k = a_1 - a_2 + a_3 - \ldots + (-1)^{n-1} a_n + \ldots
+$$
+
+hoặc
+
+$$
+\sum_{k=1}^{+\infty} (-1)^k a_k = -a_1 + a_2 - a_3 - \ldots + (-1)^n a_n + \ldots
+$$
+
+4.3.2. Dấu hiệu hội tụ
+
+Định lý 4.17. (Leibnitz)
+
+Cho chuỗi đan dấu dạng
+
+$$
+\sum_{k=1}^{+\infty} (-1)^{k-1} a_k = a_1 - a_2 + a_3 - \ldots + (-1)^{n-1} a_n + \ldots ^{( )}
+$$
+
+thỏa mãn điều kiện
+
+Khi đó chuỗi (\*) hội tụ.
+
+Chứng minh. Xét hai dãy con của dãy $(S_n)$ là $\left(S_{2m}\right)$ và $\left(S_{2m+1}\right)$. Ta có
+
+$$
+S_{2m} = (a_1 - a_2) + (a_3 - a_4) + \ldots + (a_{2m-1} - a_{2m}) .
+$$
+
+Vì $(a_n)$ giảm, suy ra $a_k - a_{k+1} \geq 0 \forall k \geq 1 \Rightarrow S_{2m} \geq 0 .$
+
+Mặt khác
+
+$$
+S_{2m+1} = a_1 - (a_2 - a_3) + (a_4 - a_5) + \ldots + (a_{2m-2} - a_{2m-1}) + a_{2m}.
+$$
+
+Do đó dãy con $\left(S_{2m}\right)$ đơn điệu tăng và bị chặn trên. Khi đó
+
+$$
+\lim_{m \to \infty} S_{2m} = S.
+$$
+
+Theo định nghĩa,
+
+$$
+\forall \epsilon > 0, \exists n_1, \forall n \geq n_1 : |S_{2m} - S| < \frac{\epsilon}{2}.
+$$
+
+Từ giả thiết $\lim a_n = 0$, theo định nghĩa ta có $n \to \infty$
+
+$$
+\forall \epsilon > 0, \exists n_2, \forall n \geq n_2 : |a_n| < \frac{\epsilon}{2}.
+$$
+
+Đặt $n_0 = \max\{n_1, n_2\}$
+
+- Nếu $n$ chẵn, theo chứng minh trên ta có $|S_n - S| < \epsilon$. 
+- Nếu $n$ lẻ suy ra $n + 1$ chẵn. Khi đó
+
+$$
+| S_{n} - S | = | S_{n+1} - a_{n+1} - S | \leq | S_{n+1} - S | + | a_{n+1} | \leq \frac{\epsilon}{2} + \frac{\epsilon}{2} = \epsilon.
+$$
+
+Theo tính chất 2 của mục 2.6, ta có
+
+$$
+\lim_{n \to \infty} S_n = S.
+$$
+
+Ví dụ 4.18. Khảo sát sự hội tụ hay phân kỳ của dãy số
+
+Giải Đặt
+
+$$
+f(x) = \frac{1}{x - \ln x} \Rightarrow f'(x) = -\frac{1}{(x - \ln x)^2} \left( 1 - \frac{1}{x} \right) < 0 \quad \forall x > 1.
+$$
+
+Khi đó dãy số $\left(a_n\right)$ thỏa mãn các điều kiện của định lý 4.17 với
+
+$$
+a_n = f(n) = \frac{1}{n - \ln n} \Rightarrow \lim_{n \to \infty} a_n = 0.
+$$
+
+Vậy chuỗi dãy số
+
+$$
+\sum_{k=1}^{+\infty} \frac{(-1)^k}{k - \ln k}
+$$
+
+hội tụ.
+
+4.4. Chuỗi hàm
+
+4.4.1. Định nghĩa Cho một dãy các hàm thực $f_1(x), f_2(x), ..., f_n(x)$ xác định trên $(a, b)$. Khi đó, tổng vô hạn
+
+$$
+\sum_{k=1}^{+\infty} f_k(x)
+$$
+
+được gọi là một chuỗi hàm xác định trên $(a, b)$.
+
++ Hàm số $f_n(x)$ được gọi là số hạng thứ $n$ của chuỗi hàm $(^*)$:
+
++ Tổng hữu hạn
+
+$$
+S_n(x) = \sum_{k=1}^{n} f_k(x)
+$$
+
+được gọi là tổng riêng thứ $n$ của chuỗi hàm $(^*)$:
+
++ Điểm $x_0$ được gọi là điểm hội tụ (hay phân kỳ) của chuỗi hàm $(^*)$, nếu chuỗi số
+
+$$
+\sum_{k=1}^{n} f_k(x_0)
+$$
+
+Hội tụ (hay phần kỳ).
+
++ Tập các điểm hội tụ của chuỗi hàm được gọi là miền hội tụ của chuỗi hàm $(^*)$: + Chuỗi hàm $(^*)$ được gọi là hội tụ đều đến hàm số $f(x)$ trên miền $D$, nếu
+
+$$
+\forall \epsilon > 0, \exists n_0, \forall n \geq n_0 : |S_n(x) - S(x)| < \epsilon \quad \forall x \in D.
+$$
+
++ Nếu chuỗi hàm $(^*)$ hội tụ đều đến $f(x)$, thì hàm số
+
+$$
+R_n(x) = f(x) - S_n(x)
+$$
+
+được gọi là phần dư bậc $n$ của chuỗi hàm $(^*)$
+
++ Chuỗi hàm $(^*)$ được gọi là hội tụ tuyệt đối trên miền $D$, nếu
+
+$$
+\sum_{k=1}^{n} |f_k(x)|
+$$
+
+hội tụ trên miền $D$.
+
+# 4.4.2. Các điều kiện hội tụ đều
+
+Cho chuỗi hàm
+
+$$
+\sum_{k=1}^{\infty} f_k(x) \quad (^*)
+$$
+
+xác định trên miền $D$
+
+# Định lý 4.19. (Cauchy)
+
+Chuỗi hàm $(^*)$ hội tụ đều trên miền $D$ khi và chỉ khi
+
+$$
+\forall \epsilon > 0, \exists n_0, \forall n \geq n_0, \forall p \in \mathbb{N} : |S_{n+p}(x) - S_n(x)| < \epsilon \quad \forall x \in D.
+$$
+
+Chứng minh. ( $\Rightarrow$ ) Giả sử $\sum_{k=1}^{+\infty} f_k(x)$ hội tụ đều trên miền $D$ đến hàm số $f(x)$. Theo định nghĩa,
+
+$$
+\forall \epsilon > 0, \exists n_0, \forall p \in \mathbb{N} : |S_{n+p}(x) - S(x)| < \frac{\epsilon}{2} \quad \forall x \in D.
+$$
+
+Khi đó
+
+$$
+|x) - S_{n}(x)| \leq |S_{n+p}(x) - S(x)| + |S_{n}(x) - S(x)| < \frac{\epsilon}{2} + \frac{\epsilon}{2} = \epsilon \forall x
+$$
+
+$(\Leftarrow)$ Giả sử
+
+$$
+\forall \epsilon > 0, \exists n_0, \forall n \geq n_0, \forall p \in \mathbb{N}: |S_{n+p}(x) - S_n(x)| < \epsilon \forall x \in D.
+$$
+
+Với mỗi $x$ đã cho, dãy số $(S_n(x))$ là một dãy Cauchy. Theo tính chất của dãy Cauchy (mục 2.7), ta có
+
+$$
+\lim_{n \to \infty} S_n(x) = S(x) \forall x \in D \Rightarrow \lim_{p \to \infty} |S_{n+p}(x) - S_n(x)| = |S(x) - S_n(x)|
+$$
+
+Kết hợp điều này với $|S_{n+p}(x) - S_n(x)| < \epsilon ~\forall p \in \mathbb{N}, x \in D$ ta có $|S(x) - S_n(x)| < \epsilon \forall n \in \mathbb{N}, x \in D$. Vậy chuỗi hàm $(^*)$ hội tụ đều trên miền $D$.
+
+Ví dụ 4.20. Chứng minh rằng các chuỗi hàm
+
+$$
+\begin{array}{l}
+i) \displaystyle \sum_{n=1}^{+\infty} \frac{(-1)^{n-1}}{x^2 + n}, \\
+ii) \displaystyle \sum_{n=1}^{+\infty} \frac{(-1)^{n-1} x^2}{(x^2 + 1)^n},
+\end{array}
+$$
+
+hội tụ đều trên $\mathbb{R}$.
+
+Giải i) Đặt
+
+$$
+S_n(x) = \sum_{k=1}^{n} \frac{(-1)^{k-1}}{x^2 + k}.
+$$
+
+Khi đó
+
+$$
+S _ { n + p } ( x ) - S _ { n } ( x ) | = { \Big | } { \frac { ( - 1 ) ^ { n } } { x ^ { 2 } + n + 1 } } + { \frac { ( - 1 ) ^ { n + 1 } } { x ^ { 2 } + n + 2 } } + \ldots + { \frac { ( - 1 ) ^ { n + p + 1 } } { x ^ { 2 } + n + p } } { \Big | } .
+$$
+
+Ta xét hai trường hợp của $p$.
+
+Trường hợp $\boldsymbol{I} \colon \boldsymbol{p}$ lẻ.
+
+$$
+\begin{array} { c } 
+{ \left| \sum _ { k \neq j = 1 } ^ { n + 1 } \sum _ { i = 1 } ^ { 1 } \left| S _ { s \neq 0 , i } ( z ) \right| - S _ { s \neq 0 , i } ( z ) \right| } \\ 
+{ - \left| \frac { 1 } { x ^ { 2 } | 1 | } - \frac { 1 } { x ^ { 2 } | 2 | } + \frac { 1 } { x ^ { 2 } | 3 | } \right| } \\ 
+{ - \left| \sum _ { k \neq 1 + n - 1 } \sum _ { i = 2 + n + 2 } \right| \sum _ { k \neq 1 } ^ { 1 } \sum _ { i = 1 } ^ { 1 } | S _ { s \neq 0 , i } ( z ) - S _ { s \neq 0 , i } ( z ) | } \\ 
+{ = x ^ { 2 } + \alpha _ { 1 - 1 } \left( \sum _ { i = 1 + 2 } \alpha _ { 1 } \right) } \\
+\end{array}
+$$
+
+| $\left|\frac{x+1}{x-2}\right|$ | $|x+3|$ | $|x-4|$ |
+\hline
+$\frac{|x+1|}{|x-2|}$ & $|x+3|$ & $|x-4|$ \\
+$-\frac{x+1}{x-2}$ & $x+3$ & $4-x$ \\
+$\frac{x+1}{x-2}$ & $x+3$ & $x-4$ \\
+
+\end{array}
+$$
+
+(4.1)
+
+Trường hợp $2 \colon p$ chẵn.
+
+$$
+{ \begin{array} { r l }
+& { = \left| { \frac { 1 } { x ^ { 2 } + n + 1 } } - { \frac { 1 } { x ^ { 2 } + n + 2 } } + \ldots - { \frac { 1 } { x ^ { 2 } + n + p } } \right| } \\
+& { = ( { \frac { 1 } { x ^ { 2 } + n + 1 } } - { \frac { 1 } { x ^ { 2 } + n + 2 } } ) + \ldots + ( { \frac { 1 } { x ^ { 2 } + n + p - 1 } } - { \frac { 1 } { x ^ { 2 } + n + p } } ) } \\
+& { = { \frac { 1 } { x ^ { 2 } + n + 1 } } - \left( ( { \frac { 1 } { x ^ { 2 } + n + 2 } } ) - { \frac { 1 } { x ^ { 2 } + n + 3 } } \right) + \ldots } \\
+& { + ( { \frac { 1 } { x ^ { 2 } + n + p - 2 } } - { \frac { 1 } { x ^ { 2 } + n + p - 1 } } ) + { \frac { 1 } { x ^ { 2 } + n + p } } ) } \\
+& { < { \frac { 1 } { x ^ { 2 } + n + 1 } } }
+\end{array} }
+$$
+
+Từ (4.1) và (4.2) suy ra
+
+$$
+S _ { n + p } ( x ) - S _ { n } ( x ) | < { \frac { 1 } { x ^ { 2 } + n + 1 } } < { \frac { 1 } { n } } < \epsilon \Rightarrow n > { \frac { 1 } { \epsilon } } \Rightarrow n _ { 0 } = [ { \frac { 1 } { \epsilon } } ] + 1 .
+$$
+
+Theo định nghĩa Cauchy, ta có $\sum _ { n = 1 } ^ { + \infty } { \frac { ( - 1 ) ^ { n - 1 } } { x ^ { 2 } + n } }$ hội tụ đều trên $\mathbb { R }$.
+
+ii) Tương tự như trên, ta cũng chứng minh được rằng
+
+$$
+| S _ { n + p } ( x ) - S _ { n } ( x ) | < { \frac { x ^ { 2 } } { ( 1 + x ^ { 2 } ) ^ { n } } }
+$$
+
+với
+
+$$
+S _ { n } ( x ) = \sum _ { k = 1 } ^ { n } { \frac { ( - 1 ) ^ { k - 1 } x ^ { 2 } } { ( x ^ { 2 } + 1 ) ^ { k } } } .
+$$
+
+Theo công thức khai triển Newton
+
+$$
+( a + b ) ^ { n } = \sum _ { k = 0 } ^ { n } C _ { n } ^ { k } a ^ { k } b ^ { n - k } .
+$$
+
+Ta có
+
+$$
+\frac{x^2}{(1 + x^2)^n} < \frac{1}{n} < \epsilon \Rightarrow n > \frac{1}{\epsilon} \Rightarrow n_0 = \left[ \frac{1}{\epsilon} \right] + 1 .
+$$
+
+Theo dấu hiệu Cauchy, ta có $\sum _ { n = 1 } ^ { + \infty } { \frac { ( - 1 ) ^ { n - 1 } x ^ { 2 } } { ( x ^ { 2 } + 1 ) ^ { n } } }$ hội tụ đều trên $\mathbb{R}$.
+
+Định lý 4.21. Cho $| f _ { n } ( x ) | \leq c _ { n }$, $\forall n \in \mathbb{N}^*,\forall x \in D$ và chuỗi số dương $\sum _ { n = 1 } ^ { + \infty } c _ { n }$ hội tụ. Khi đó chuỗi hàm $(*)$ hội tụ tuyệt đối và hội tụ đều trên miền $D$.
+
+Chứng minh. Chuỗi hàm $(*)$ hội tụ tuyệt đối trên miền $D$: 
+
+Thật vậy, với mỗi $x_0 \in D$, ta có
+
+$$
+\sum _ { n = 1 } ^ { + \infty } c _ { n } \text{ hội tụ} \Rightarrow 
+\forall \epsilon > 0 , \exists n _ { 0 } , \forall n \geq n _ { 0 } , \forall p : | c _ { n + 1 } + c _ { n + 2 } + . . . + c _ { n + p } | < \epsilon .
+$$
+
+Khi đó
+
+$$
+\begin{array} { l } { | S _ { n + p } ( x ) - S _ { n } ( x ) | = | f _ { n + 1 } ( x ) + f _ { n + 2 } ( x ) + \ldots + f _ { n + p } ( x ) | } \\ { \qquad \leq | f _ { n + 1 } ( x ) | + | f _ { n + 2 } ( x ) | + \ldots + | f _ { n + p } ( x ) | } \\ { \qquad \leq c _ { n + 1 } + c _ { n + 1 } + \ldots + c _ { n + p } } \\ { \qquad < \epsilon . } \end{array}
+$$
+
+Theo định lý 4.19, ta có chuỗi hàm $( ^{*} )$ hội tụ đều trên miền $D$：
+
+Ví dụ 4.22. Chứng minh rằng chuỗi hàm
+
+$$
+\sum _ { n = 1 } ^ { + \infty } { \frac { \sin n \alpha x } { n ^ { 3 } + n - 1 } }
+$$
+
+hội tụ đều và hội tụ tuyệt đối trên miền $\mathbb{R}$：
+
+Giải Ta có
+
+$$
+\Big \vert \frac { \sin n \alpha x } { n ^ { 3 } + n - 1 } \Big \vert \leq \frac { 1 } { n ^ { 3 } } ~ \forall n \in \mathbb{N} ^ { * } .
+$$
+
+Do chuỗi số $\sum _ { n = 1 } ^ { + \infty } { \frac { 1 } { n ^ { 3 } } }$ hội tụ, nên theo định lý 4.21, chuỗi $\sum _ { n = 1 } ^ { + \infty } { \frac { \sin n \alpha x } { n ^ { 3 } + n - 1 } }$ hội tụ tuyệt đối và hội tụ đều trên miền $\mathbb{R}$：
+
+# 4.4.3. Tính chất của chuỗi hàm hội tụ đều
+
+Cho chuỗi hàm
+
+hội tụ đều tới hàm $f ( x )$ trên miền $D$. Ta xét khảo sát các tính chất của hàm $f ( x )$ trên miền $D$ như: Tính liên tục, khả vi...
+
+Định lý 4.23. Nếu chuỗi hàm
+
+hội tụ đều tới hàm $f ( x )$ trên miền $D$ và các hàm số $f _ { k } ( x )$ liên tục trên miền $D$ với mọi $k \in \mathbb{N}$, thì hàm số $f ( x )$ liên tục trên miền $D$：
+
+Chứng minh. Theo giả thiết $\sum_{n=1}^{+\infty} f_n(x)$ hội tụ đều đến hàm $f(x)$ trên miền $D$. Ta có
+
+$$
+\forall \epsilon > 0, \exists n_0, \forall n \geq n_0 : |S_n(x) - f(x)| < \frac{\epsilon}{3} ~ \forall x \in D.
+$$
+
+Do $f_k(x)$ liên tục trên miền $D$ với mọi $k$, nên với mỗi $n$ cố định, $S_n(x)$ là một hàm số liên tục trên $D$. Hay
+
+$$
+\forall \epsilon > 0, \exists \delta > 0, \forall x \in D : |x - x_0| < \delta \Rightarrow |S_n(x) - S_n(x_0)| < \frac{\epsilon}{3}.
+$$
+
+Khi đó, với mỗi $x_0 \in D$, ta có
+
+$$
+\begin{array} { l } 
+{
+\displaystyle |S(x) - f(x_0)| \leq |S_n(x) - f(x)| + |S_n(x) - S_n(x_0)| + |S_n(x_0) - f(x_0)| } \\ 
+{
+\displaystyle ~ < \frac{\epsilon}{3} + \frac{\epsilon}{3} + \frac{\epsilon}{3}} \\
+{
+\displaystyle ~ = \epsilon.
+}
+\end{array}
+$$
+
+Ví dụ 4.24. Chứng minh rằng chuỗi hàm
+
+$$
+\sum_{n=1}^{+\infty} x(1-x)^n
+$$
+
+không liên tục đều trên $[0, 2)$:
+
+Giải Xét giới hạn
+
+$$
+\sum_{n=1}^{+\infty} x(1-x)^n = \lim_{n \to \infty} S_n(x) = \lim_{n \to \infty} \sum_{k=1}^n x(1-x)^k
+$$
+
+$$
+= x \lim_{n \to \infty} \sum_{k = 1}^{n} (1 - x)^{k} = 
+\begin{cases}
+0 & \text{nếu } x = 0 \\
+1 & \text{nếu } x \in (0, 2).
+\end{cases}
+$$
+
+Vậy hàm số
+
+$$
+f(x) = \sum_{n=1}^{+\infty} x(1 - x)^{n}
+$$
+
+không liên tục trên $[0, 2)$. Do đó, theo định lý 4.23, ta có chuỗi hàm
+
+$$
+\sum_{n=1}^{+\infty} x(1 - x)^{n}
+$$
+
+không liên tục đều trên $[0, 2)$.
+
+Định lý 4.25. Nếu chuỗi hàm
+
+$$
+\sum_{n=1}^{+\infty} f_n(x)
+$$
+
+hội tụ đều đến hàm $f(x)$ trên miền $[a, b]$ và các hàm số $f_k(x)$ liên tục trên miền $[a, b]$ với mọi $k \in \mathbb{N}$, thì hàm số $f(x)$ khả tích từng phần trên miền $[a, b]$. Hơn nữa
+
+$$
+\int_{a}^{b} f(x) dx = \sum_{k=1}^{+\infty} \intop_{a}^{b} f_k(x) dx.
+$$
+
+Chứng minh. Theo định lý 4.23, hàm số $f(x)$ liên tục trên $[a, b]$. Do đó $f(x)$ khả tích trên $[a, b]$. Từ giả thiết $\sum_{n=1}^{+\infty} f_n(x)$ hội tụ đều đến hàm $f(x)$ trên miền $D$. Ta có
+
+$$
+\forall \epsilon > 0, \exists n_0, \forall n \geq n_0: |S_n(x) - f(x)| < \frac{\epsilon}{b-a} ~ \forall x \in D.
+$$
+
+Khi đó
+
+$$
+\begin{array} { r l }
+\displaystyle | \int _ { a } ^ { b } S _ { n } ( x ) d x - \int _ { a } ^ { b } f ( x ) d x | = \left| \prod _ { a } ^ { b } ( S _ { n } ( x ) - f ( x ) ) d x \right| \\
+\\
+\leq \int _ { a } ^ { b } | S _ { n } ( x ) - f ( x ) | d x \\
+\\
+< \int _ { a } ^ { b } \frac { c } { b - a } d x \\
+\\
+= e .
+\end{array}
+$$
+
+Nhu vậy
+
+$$
+\lim_{n \to \infty} \int _ { a } ^ { b } S _ { n } ( x ) d x = \int _ { a } ^ { b } f ( x ) d x.
+$$
+
+Định lý 4.26. Nếu chuỗi hàm (\*) hội tụ về hàm $f(x)$ trên $(a, b)$ và các đạo hàm
+
+$f_{k}^{\prime}(x) \quad k \in \mathbb{N}^{*}$ thỏa mãn:
+
+i）$f_{k}^{\prime}(x)$ liên tục trên $(a, b)$  
+ii）$\sum _ { n = 1 } ^ { +\infty } f_{n}^{\prime}(x)$ hội tụ đều trên $(a, b)$
+
+Khi đó
+
+$$
+f^{\prime}(x) = \sum _ { n = 1 } ^ { +\infty } f_{n}^{\prime}(x), \quad x \in ( a , b ).
+$$
+
+Chứng minh. Theo định lý 4.25, với $a < x < x_0 < b$ ta có
+
+$$
+g(t) = \sum _ { n = 1 } ^ { +\infty } f_{k}^{\prime}(t), \quad \forall t \in ( a , b )
+$$
+
+liên tục trên $(a, b)$ và
+
+$$
+\begin{array} { l } { \displaystyle { \int _ { x _ { 0 } } ^ { x } g ( t ) d t = \int _ { x _ { 0 } } ^ { x } \sum _ { n = 1 } ^ { \infty } f _ { k } ^ { \prime } ( t ) d t } } \\ { \displaystyle { \qquad = f _ { 1 } ( x ) - f _ { 1 } ( x _ { 0 } ) + f _ { 2 } ( x ) - f _ { 2 } ( x _ { 0 } ) + \ldots } } \\ { \displaystyle { \qquad = f ( x ) - f ( x _ { 0 } ) . } } \end{array}
+$$
+
+Đạo hàm hai vế, theo định lý 5.10, ta có
+
+$$
+g ( x ) = f ^ { \prime } ( x ) \Leftrightarrow f ^ { \prime } ( x ) = \sum _ { n = 1 } ^ { \infty } f _ { k } ^ { \prime } ( x ).
+$$
+
+Ví dụ 4.27. Tìm miền hội tụ của hàm $f ( x )$ và xét tính khả vi của nó trên miền đó.
+
+$$
+f ( x ) = \sum _ { n = 1 } ^ { + \infty } { \frac { | x | } { n ^ { 2 } + x ^ { 2 } } } .
+$$
+
+Giải Ta có
+
+$$
+\frac { | x | } { n ^ { 2 } + x ^ { 2 } } < \frac { | x | } { n ^ { 2 } }
+$$
+
+và chuỗi $\sum _ { n = 1 } ^ { + \infty } { \frac { 1 } { n ^ { 2 } } }$ hội tụ. Do đó hàm $f ( x )$ có tập xác định là $\mathbb{R}$. Tiếp theo, tiến hành xét đạo hàm dạng
+
+$$
+\sum _ { n = 1 } ^ { \infty } f _ { k } ^ { \prime } ( x ) = \sum _ { n = 1 } ^ { \infty } { \frac { n ^ { 2 } \mathrm{sgn} x - x | x | } { ( n ^ { 2 } + x ^ { 2 } ) ^ { 2 } } } \quad ( x \neq 0 ).
+$$
+
+Ta có, tồn tại $n _ { 0 } = [ x ^ { 2 } ] + 1$ sao cho
+
+$$
+\Big| \frac{n^2 \mathrm{sgn} x - x|x|}{(n^2 + x^2)^2} \Big| \leq \frac{n^2 + x^2}{n^4} \leq \frac{2n^2}{n^4} = \frac{2}{n^2} \quad \forall n \geq n_0.
+$$
+
+Theo định lý 4.21, chuỗi hàm $\sum_{n=1}^\infty f_k'(x)$ hội tụ đều. Theo định lý 4.26, ta có $f(x)$ khả vi trên $\mathbb{R}$. Hơn nữa,
+
+$$
+f'(x) = \sum_{n=1}^\infty \frac{n^2 \operatorname{sgn} x - x|x|}{(n^2 + x^2)^2} \quad \forall x \in \mathbb{R}.
+$$
+
+# 4.5. Chuỗi lũy thừa
+
+## 4.5.1. Định nghĩa
+
+Chuỗi lũy thừa là một chuỗi hàm có dạng
+
+$$
+\sum_{n=0}^\infty a_n x^n \quad \text{hoặc} \quad \sum_{n=0}^\infty a_n (x - x_0)^n,
+$$
+
+trong đó $x_0, a_k : const$ và $x^0 = 1$. Khi đó, các số $a_0, a_1, \dotsc$ được gọi là các hệ số của chuỗi lũy thừa.
+
+## 4.5.2. Tính chất
+
+Ta khảo sát miền hội tụ của chuỗi lũy thừa dạng
+
+$$
+\sum_{n=0}^\infty a_n x^n. \quad (^*)
+$$
+
+Định lý 4.28. (Abel)
+
+Nếu một chuỗi lũy thừa $(^*)$ hội tụ tại $x_0$, thì nó hội tụ tại mọi $x : |x| < |x_0|$. Nếu một chuỗi lũy thừa $(^*)$ phân kỳ tại $x_0$, thì nó phân kỳ tại mọi $x : |x| > |x_0|$. Khi đó
+
+$$
+R = \operatorname{sup} \{ | x _ { 0 } | : \sum _ { n = 0 } ^ { \infty } a _ { n } x _ { 0 } ^ { n } < \infty \}
+$$
+
+được gọi là bán kính hội tụ của $(^*)$:
+
+Chứng minh. Giải số chuỗi số $\sum _ { n = 0 } ^ { \infty } a _ { n } x _ { 0 } ^ { n }$ hội tụ. Theo định lý 4.4, ta có
+
+$$
+\lim_{n \to \infty} |a _ { n } x _ { 0 } ^ { n }| = 0 \Leftrightarrow \forall \epsilon > 0 , \exists n _ { 0 } , \forall n \geq n _ { 0 } : | a _ { n } x _ { 0 } ^ { n } | < \epsilon .
+$$
+
+Khi đó
+
+$$
+\forall x : \ | x | < | x _ { 0 } | \Leftrightarrow q = \left| { \frac { x } { x _ { 0 } } } \right| \in ( 0 , 1 ) ,
+$$
+
+ta có
+
+$$
+| a _ { n } x ^ { n } | = | a _ { n } x _ { 0 } ^ { n } . ( { \frac { x } { x _ { 0 } } } ) ^ { n } | = | a _ { n } x _ { 0 } ^ { n } | { \Big | } { \frac { x } { x _ { 0 } } } { \Big | } ^ { n } = | a _ { n } x _ { 0 } ^ { n } | q ^ { n } < \epsilon q ^ { n } .
+$$
+
+Mà chuỗi số $\sum _ { n = n _ { 0 } } ^ { \infty } \epsilon q ^ { n } = \epsilon { \frac { q ^ { n _ { 0 } } } { 1 - q } }$ hội tụ, suy ra $\sum _ { n = 0 } ^ { \infty } \left| a _ { n } x ^ { n } \right|$ hội tụ tuyệt đối. Vậy chuỗi hàm $(^*)$ hội tụ.
+
+Bây giờ ta xét trường hợp $( ^ { * } )$ phân kỳ tại $x _ { 0 }$ và $\vert x \vert > \vert x _ { 0 } \vert$. Giả sử $( ^ { * } )$ hội tụ tại $x$. Theo chứng minh trên, với $x _ { 0 } : \ | x | > | x _ { 0 } |$, ta có $( ^ { * } )$ phân kỳ tại $x _ { 0 }$, trái với giả thiết. Vậy $( ^ { * } )$ hội tụ tại $x$: □
+
+# 4.5.3. Quy tắc tìm bán kính hội tụ
+
+## Định lý 4.29. Nếu
+
+$$
+\operatorname*{lim}_{n \to \infty} \left| \frac{a_{n+1}}{a_n} \right| = \rho \quad hoăc \quad \operatorname*{lim}_{n \to \infty} \sqrt[n]{|a_n|} = \rho.
+$$
+
+thì chuỗi $( ^ { * } )$ có bán kính hội tụ được xác định bởi:
+
++ Nếu $\rho \in (0, +\infty)$, thì $R = \frac{1}{\rho}$,
+
++ Nếu $\rho = 0$, thì $R = +\infty$ và miền hội tụ $D = \mathbb{R}$,
+
++ Nếu $\rho = +\infty$, thì $R = 0$ và miền hội tụ $D = \{0\}$:
+
+Chứng minh. Giả sử rằng $\operatorname*{lim}_{n \to \infty} \left| \frac{a_{n+1}}{a_n} \right| = \rho$ (trường hợp: $\operatorname*{lim}_{n \to \infty} \sqrt[n]{|a_n|} = \rho$ được chứng minh tương tự).
+
++ Nếu $\rho \in (0, +\infty)$ và $| x | < \frac{1}{\rho}$, thì
+
+$$
+\operatorname*{lim}_{n \to \infty} {\frac{|a_{n+1} x^{n+1}|}{|a_n x^n|}} = \operatorname*{lim}_{n \to \infty} \left | \frac{a_{n+1}}{a_n} \right | |x| < \rho. \frac{1}{\rho} = 1.
+$$
+
+Theo dấu hiệu D'Alembert, chuỗi $(^*)$ hội tụ tuyệt đối, suy ra chuỗi $(^*)$ hội tụ. $+\ N\tilde{\mathsf{eu}}\ \rho = 0$, thì
+
+$$
+\operatorname*{lim}_{n \to \infty} {\frac{|a_{n+1} x^{n+1}|}{|a_n x^n|}} = \operatorname*{lim}_{n \to \infty} \left | \frac{a_{n+1}}{a_n} \right | |x| = 0\ \forall x \in \mathbb{R}.
+$$
+
+Vậy chuỗi $(^*)$ hội tụ với mọi $x \in \mathbb{R}$.
+
++ Nếu $\rho = +\infty$ và $\textstyle|x| > \frac{1}{\rho}$ thì
+
+$$
+\operatorname*{lim}_{n \to \infty} {\frac{|a_{n+1} x^{n+1}|}{|a_n x^n|}} = \operatorname*{lim}_{n \to \infty} \left | \frac{a_{n+1}}{a_n} \right | |x| > 1\ \forall x \in \mathbb{R}\ \backslash\ \{0\}.
+$$
+
+Theo dấu hiệu D'Alembert, ta có chuỗi hàm $(^*)$ phân kỳ.
+
+Ví dụ 4.30. Tìm miền hội tụ của các chuỗi luỹ thừa sau:
+
+$$
+\begin{array} { l } 
+{ i) \sum _ { n = 0 } ^ { + \infty } \frac { x ^ { n } } { n ! } \cdot } \\ 
+{ ii) \sum _ { n = 1 } ^ { + \infty } n ^ { n } x ^ { n } } . \\
+{ iii) \sum _ { n = 1 } ^ { + \infty } \frac { x ^ { n } } { \left( \frac { n + 1 } { n } \right)^ { n ^ { 2 } } } 
+} 
+\end{array}
+$$
+
+Gieí i) Đặt $\begin{array} { r } { a _ { n } = \frac { 1 } { n ! } } \end{array}$ . Khi đó
+
+$$
+\operatorname* { lim } _ { n \to \infty } \left| { \frac { a _ { n + 1 } } { a _ { n } } } \right| = \operatorname* { lim } _ { n \to \infty } { \frac { 1 } { n + 1 } } = 0 .
+$$
+
+Theo định lý 4.29, ta có miền hội tụ là $D = \mathbb{R}$ :
+
+ii) Đặt $a _ { n } = n ^ { n }$ . Khi đó
+
+$$
+\operatorname* { lim } _ { n \to \infty } \left| { \frac { a _ { n + 1 } } { a _ { n } } } \right| = \operatorname* { lim } _ { n \to \infty } n = + \infty .
+$$
+
+Theo định lý 4.29, ta có miền hội tụ là $D = \{ 0 \}$ :
+
+iii) Đặt $\begin{array} { r } { a _ { n } = \frac { 1 } { ( \frac { n + 1 } { n } ) ^ { n ^ { 2 } } } } \end{array}$ . Khi đó
+
+$$
+\operatorname* { lim } _ { n \to \infty } \left| { \frac { a _ { n + 1 } } { a _ { n } } } \right| = \operatorname* { lim } _ { n \to \infty } \left( { \frac { n } { n + 1 } } \right) ^ { n } = { \frac { 1 } { e } } \Rightarrow R = { \frac { 1 } { \rho } } = e .
+$$
+
+Xét tại $x : x = -e$ , chuỗi $(^{*})$ có dạng
+
+$$
+\sum _ { n = 1 } ^ { + \infty } \frac { ( - 1 ) ^ { n } e ^ { n } } { \left( \frac { n + 1 } { n } \right) ^ { n ^ { 2 } } }
+$$
+
+Trước ví dụ 2.8, dãy $\textstyle ( e _ { n } ) : e _ { n } = \left( 1 + \frac { 1 } { n } \right) ^ { n }$ đơn điệu tăng đến $e$, suy ra
+
+$$
+\lim_{n \to \infty} \left| \frac{ ( - 1 ) ^ { n } e ^ { n } } { \left( \frac { n + 1 } { n } \right) ^ { n ^ { 2 } } } \right| = \lim_{n \to \infty} \left( \frac{ e } { \left( 1 + \frac { 1 } { n } \right) ^ { n } } \right) ^ { n } > 1 .
+$$
+
+Vậy chuỗi $(^*)$ không hội tụ tại $x = e$ và $x = -e$. Theo định lý 4.29, ta có miền hội tụ là $D = (-e, e)$.
+
+4.5.4. Tính hội tụ đều của chuỗi lũy thừa
+
+Định lý 4.31. Nếu chuỗi lũy thừa $(^*)$ có bán kính hội tụ $R > 0$, thì với mọi $R' : 0 < R' < R$, ta có chuỗi $(^*)$ hội tụ đều trên $[-R', R']$.
+
+Chứng minh. Vì $R' \in (0, R)$, nên chuỗi số
+
+$$
+\sum _ { n = 0 } ^ { + \infty } \left| a _ { n } R ' ^ { n } \right|
+$$
+
+hội tụ. Với mọi $x_0 : x_0 \in [-R', R']$, ta có $\left| a _ { n } x _ { 0 } ^ { n } \right| \leq \left| a _ { n } R ' ^ { n } \right| \forall n$. Theo định lý 4.21, ta có chuỗi $(^*)$ hội tụ đều trên $[-R', R']$: □
+
+Định lý 4.32. Cho chuỗi lũy thừa $(^*)$ có bán kính hội tụ $R > 0$. Đặt
+
+$$
+f ( x ) = \sum _ { n = 0 } ^ { + \infty } a _ { n } x ^ { n } .
+$$
+
+Khi đó
+
+i) Hàm số $f ( x )$ liên tục trên $( - R , R )$:
+
+$$
+\begin{array} { r l }
+& i) \int _ { 0 } ^ { x } f ( t ) d t = \displaystyle \sum _ { n = 0 } ^ { + \infty } \int _ { 0 } ^ { x } a _ { n } t ^ { n } d t = \displaystyle \sum _ { n = 0 } ^ { + \infty } \frac { a _ { n } } { n + 1 } x ^ { n + 1 } \forall x \in ( - R , R ) . \\
+& ii) f ^ { \prime } ( x ) = \displaystyle \sum _ { n = 1 } ^ { + \infty } n a _ { n } x ^ { n - 1 } \forall x \in ( - R , R ) .
+\end{array}
+$$
+
+Chứng minh. i) Do hàm số $a _ { n } x ^ { n }$ liên tục trên $\mathbb { R } \forall n$ và theo định lý 4.31, ta có $f ( x )$ liên tục trên $( - R , R )$:
+
+ii) Theo định lý 4.25, với hàm số $f _ { k } ( x ) = a _ { n } x ^ { n }$ liên tục trên $[ 0 , x ] \forall x \in ( - R , R )$ và chuỗi $\sum _ { n = 0 } ^ { + \infty } a _ { n } x ^ { n }$ hội tụ đều đến hàm số $f ( x )$ trên $( - R , R )$. Do đó, ta có:
+
+$$
+\int _ { 0 } ^ { x } f ( t ) d t = \sum _ { n = 0 } ^ { + \infty } \int _ { 0 } ^ { x } a _ { n } t ^ { n } d t = \sum _ { n = 0 } ^ { + \infty } \frac { a _ { n } } { n + 1 } x ^ { n + 1 } \forall x \in ( - R , R ) .
+$$
+
+iii) Ta sẽ chứng minh chuỗi lũy thừa $\sum _ { n = 1 } ^ { + \infty } n a _ { n } x ^ { n - 1 }$ hội tụ đều trên $( - R , R )$:
+
+Đó vậy, với $x \in (-R, R) \setminus \{0\}$, tồn tại $r$ sao cho $|x| < r < R$. Từ chuỗi số  
+$\sum_{n=1}^{+\infty} a_n r^n$ hội tụ, suy ra $\lim a_n r^n = 0$, theo định nghĩa   
+$$
+\forall \epsilon > 0, \exists n_0, \forall n \ge n_0 : |a_n r^n| < \epsilon.
+$$
+
+Khi đó
+
+$$
+|n a_n x^{n-1}| = n |a_n| r^n \left|\frac{x}{r}\right|^{n-1} \frac{1}{r} < \frac{\epsilon n}{r} \left|\frac{x}{r}\right|^{n-1}.
+$$
+
+Với $x : \left|\frac{x}{r}\right| < 1 \Rightarrow \sum_{n=1}^{+\infty} \frac{\epsilon n}{r} \left|\frac{x}{r}\right|^{n-1}$ hội tụ (theo dấu hiệu D'Alembert). Vậy chuỗi lũy thừa $\sum_{n=1}^{+\infty} n a_n x^{n-1}$ hội tụ trên $[-r, r]$. Theo định lý 4.31, chuỗi lũy thừa $\sum_{n=1}^{+\infty} n a_n x^{n-1}$ hội tụ đều trên $(-R, R)$. Vậy hàm số $f(x)$ thỏa mãn tất cả các giả thiết của định lý 4.26, ta có ii) được chứng minh.
+
+# Ví dụ 4.33. Tính tổng
+
+$$
+f(x) = x - \frac{x^2}{2} + \frac{x^3}{3} - \frac{x^4}{4} + \ldots + (-1)^{n-1} \frac{x^n}{n} + \ldots \quad \text{với } x \in (-1, 1).
+$$
+
+Giải Ta có chuỗi
+
+$$
+f(x) = \sum_{n=1}^{\infty} (-1)^{n-1} \frac{x^n}{n}
+$$
+
+Hàm trên $( -1, 1 )$. Khi đó
+
+$$
+f'(x) = 1 - x + x^2 - x^3 + \ldots + (-1)^n x^n + \ldots = \frac{1}{1+x} \quad \forall |x| < 1.
+$$
+
+Lấy nguyên hàm hai vế
+
+$$
+f(x) = \int \frac{dx}{1+x} = \ln(1+x) + C.
+$$
+
+Thay $x = 0$ vào $f(x)$, ta nhận được
+
+$$
+f(0) = C = 0.
+$$
+
+Vậy $f(x) = \ln(1+x) \quad \forall x \in (-1, 1).$
+
+4.5.5. Khai triển hàm số thành chuỗi幂尾部分不需要翻译，因为它似乎是文本中的一个错误或中断。根据指示，我们只修复越南语的拼写和标点符号，并保持数学公式不变。因此，返回的内容如下：
+
+$$
+f(x) = \sum_{n=1}^{\infty} (-1)^{n-1} \frac{x^n}{n}
+$$
+
+Hàm trên $( -1, 1 )$. Khi đó
+
+$$
+f'(x) = 1 - x + x^2 - x^3 + \ldots + (-1)^n x^n + \ldots = \frac{1}{1+x} \quad \forall |x| < 1.
+$$
+
+Lấy nguyên hàm hai vế
+
+$$
+f(x) = \int \frac{dx}{1+x} = \ln(1+x) + C.
+$$
+
+Thay $x = 0$ vào $f(x)$, ta nhận được
+
+$$
+f(0) = C = 0.
+$$
+
+Vậy $f(x) = \ln(1+x) \quad \forall x \in (-1, 1).$
+
+4.5.5. Khai triển hàm số thành chuỗi幂尾部分保留不变。
+
+$$
+f(x) = \frac{1}{1 - x} + \varphi(x)
+\quad \text{với} \quad 
+\varphi(x) = \left\{
+\begin{array}{ll}
+e^{-\frac{1}{x^2}} & \text{nếu } x \neq 0 \\
+0 & \text{nếu } x = 0.
+\end{array}\right.
+$$
+
+Chứng minh rằng: $S(x) \neq f(x) \quad \forall x \in (-1, 1) \setminus \{0\}.$
+
+Giải Ta dễ dàng chứng minh được rằng
+
+$$
+\varphi^{(k)}(0) = 0 \quad \text{và} \left(\frac{1}{1 - x}\right)^{(k)} = \frac{k!}{(1 - x)^{k + 1}} \quad \forall k = 0, 1, 2, \ldots
+$$
+
+Khi đó, ta có
+
+$$
+f^{(k)}(0) = k! \quad \forall k = 0, 1, 2, \ldots
+$$
+
+Thay $f^{(k)}(0)$ vào biểu thức $S(x)$, ta nhận được $S(x)$ có dạng tổng vô hạn các số hạng của cấp số nhân vô hạn (cộng bội $q: | q | < 1$)
+
+$$
+S(x) = \sum_{n=0}^{+\infty} \frac{f^{(n)}(0)}{n!} x^n = \sum_{n=0}^{+\infty} x^n = \frac{1}{1 - x} \neq \frac{1}{1 - x} + \varphi(x) = f(x) \quad \forall x \in (-1, 1).
+$$
+
+Khi nào thì dấu ${\bf \zeta}'' = {\bf \zeta}''$ xảy ra?
+
+Định lý 4.35. Nếu $f(x)$ khả vi mọi cấp tại lân cận của điểm $x_0$ và tồn tại giới hạn hữu hạn $\lim_{h \to 0} \frac{f^{(n)}(x_0 + h) - f^{(n)}(x_0)}{h}$ thì $f(x)$ khả vi cấp $(n+1)$ tại $x_0$.
+
+$$
+R _ { n } ( x ) = \lim_{n \to \infty} \frac{ f ^ { ( n + 1 ) } ( \xi ) } { ( n + 1 ) ! } ( x - x _ { 0 } ) ^ { n + 1 } = 0, \quad \text{với} \quad \xi = \lambda x _ { 0 } + ( 1 - \lambda ) x , \ \lambda \in ( 0 , 1 )
+$$
+
+Khi đó $f(x) = S(x)$. Hay
+
+$$
+S(x) = f(x_0) + \frac{ f ^ { \prime } ( x _ { 0 } ) } { 1 ! } ( x - x _ { 0 } ) ^ { 1 } + \frac{ f ^ { \prime \prime } ( x _ { 0 } ) } { 2 ! } ( x - x _ { 0 } ) ^ { 2 } + \ldots + \frac{ f ^ { ( n ) } ( x _ { 0 } ) } { n ! } ( x - x _ { 0 } ) ^ { n }
+$$
+
+Theo mục 4.5, ta có
+
+$$
+f(x) = P_n(x) + R_n(x),
+$$
+
+trong đó
+
+$$
+P_n(x) = \sum_{k=0}^{n} \frac{ f ^ { ( k ) } ( x _ { 0 } ) } { k ! } ( x - x _ { 0 } ) ^ { k }, \quad R_n(x) = \frac{ f ^ { ( n + 1 ) } ( \xi ) } { ( n + 1 ) ! } ( x - x _ { 0 } ) ^ { n + 1 }
+$$
+
+với $\xi = \lambda x_0 + (1-\lambda)x$, $\lambda \in (0,1)$:
+
+Khi đó
+
+$$
+f(x) = \lim_{n \to \infty} R_n(x) + \lim_{n \to \infty} P_n(x) = \lim_{n \to \infty} P_n(x).
+$$
+
+Định lý 4.36. Nếu $f(x)$ có đạo hàm mọi cấp tại lân cận của điểm $x_0$ và trong lân cận này có
+
+$$
+| f ^ { ( k ) } ( x ) | \leq M, \quad \forall k \in \mathbb{N},
+$$
+
+thì $f(x) = S(x)$.
+
+$$
+f(x) = f(x_0) + \frac{f'(x_0)}{1!}(x - x_0)^1 + \frac{f''(x_0)}{2!}(x - x_0)^2 + \ldots + \frac{f^{(n)}(x_0)}{n!}(x - x_0)^n.
+$$
+
+Chứng minh ta có
+
+$$
+\frac{1}{(n+1)!} (x - x_0)^{n+1} = (x - x_0) \left(e^x - e^{x_0}\right) \Rightarrow \sum_{n=0}^{+\infty} \frac{1}{(n+1)!}(x - x_0)^{n+1}
+$$
+
+Theo định lý 4.4, ta có
+
+$$
+\lim_{n \to \infty} \frac{1}{(n + 1)!} (x - x_0)^{n+1} = 0 \Rightarrow \lim_{n \to \infty} \frac{1}{(n + 1)!} |x - x_0|^{n+1} = 0.
+$$
+
+Khi đó,
+
+$$
+\lim_{n \to \infty} |R_n(x)| = \lim_{n \to \infty} \left|\frac{f^{(n+1)}(\xi)}{(n + 1)!}(x - x_0)^{n+1}\right| \leq \lim_{n \to \infty} \frac{M}{(n + 1)!}|x - x_0|^n
+$$
+
+Vậy $\lim R_n(x) = 0$. Theo định lý 4.35, định lý được chứng minh.
+
+Ví dụ 4.37. (Công thức Euler)
+
+Chứng minh rằng:
+
+$$
+e^{\alpha i} = \cos \alpha + i \sin \alpha.
+$$
+
+Giải Theo công thức khai triển Taylor, ta dễ dàng tính được rằng
+
+$$
+\begin{array} { c } { \displaystyle \sin x = x - \frac{x^3}{3!} + \frac{x^5}{5!} - \ldots + (-1)^n \frac{x^{2n+1}}{(2n+1)!} + \ldots } \\ { \displaystyle \cos x = 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \ldots + (-1)^n \frac{x^{2n}}{(2n)!} + \ldots } \\ { \displaystyle e^x = 1 + \frac{x}{1!} + \frac{x^2}{2!} + \ldots + \frac{x^n}{n!} + \ldots } \end{array}
+$$
+
+Chú ý rằng $i^{2n} = (-1)^n$, ta có
+
+$$
+\begin{array} { l } { e^{ix} = 1 + \frac{ix}{1!} + \frac{(ix)^2}{2!} + \ldots + \frac{(ix)^n}{n!} + \ldots } \\ { = 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \ldots + (-1)^n \frac{x^{2n}}{(2n)!} + \ldots } \\ { + i \left( x - \frac{x^3}{3!} + \frac{x^5}{5!} - \ldots + (-1)^n \frac{x^{2n+1}}{(2n+1)!} + \ldots \right) } \end{array}
+$$
+
+# 4.6. Chuỗi Fourier
+
+## 4.6.1. Chuỗi lượng giác
+
+Là một chuỗi hàm số có dạng
+
+$$
+\frac{a_0}{2} + \sum_{n=1}^{+\infty} (a_n \cos nx + b_n \sin nx), \quad (^*)
+$$
+
+trong đồ d6 $a_k, b_k : \ const \ \forall k \in \mathbb{N}.$
+
+Xét hệ các hàm số
+
+$$
+H = \{ 1 , \cos x , \sin x , \cos 2x , \sin 2x , \ldots \}.
+$$
+
+Ta sẽ chứng minh được rằng: Hệ $H$ có tính trực giao, nghĩa là
+
+$$
+\int_{-\pi}^{\pi} \alpha(x) \beta(x) dx = 0 ~ \forall \alpha(x), \beta(x) \in H.
+$$
+
+Ta xét sự hội tụ đều của chuỗi hàm $(*)$:
+
+Định lý 4.38. Nếu hai chuỗi $\sum_{n=0}^{+\infty} a_n$ và $\sum_{n=0}^{+\infty} b_n$ hội tụ tuyệt đối, thì chuỗi lượng giác $(*)$ hội tụ đều và hội tụ tuyệt đối trên $\mathbb{R}$.
+
+Chứng minh Từ
+
+$$
+\left| a_n \cos nx + b_n \sin nx \right| \leq \left| a_n \right| + \left| b_n \right| ~ \forall x \in \mathbb{R}
+$$
+
+và giả thiết cho hai chuỗi: $\sum_{n=0}^{+\infty} \left| a_n \right|$ và $\sum_{n=0}^{+\infty} \left| b_n \right|$ hội tụ, theo định lý 4.21, suy ra chuỗi lượng giác $(*)$ hội tụ đều và hội tụ tuyệt đối trên $\mathbb{R}$.
+
+Định lý 4.39. Nếu hai dãy số dương $(a_n)$ và $(b_n)$ đơn điệu giảm và hội tụ về $0$, thì chuỗi lượng giác $(*)$ hội tụ trên miền $D = \mathbb{R} \setminus \left\{ k2\pi : k \in \mathbb{Z} \right\}$:
+
+Chứng minh Đặt
+
+$$
+S_n = \sum_{k=1}^{n} a_k \cos kx, \quad \bar{S}_n = \sum_{k=1}^{n} b_k \sin kx.
+$$
+
+$+$ Chứng minh rằng: $( S_{n}(x) )$ hội tụ trên $D$:
+
+$$
+\begin{array}{l}
+{\displaystyle {\bar{\mathbf{\xi}}}_{n}(x)=a_{1}2 \sin \frac{x}{2} \cos x + a_{2}2 \sin \frac{x}{2} \cos 2x + \ldots + a_{n}2 \sin \frac{x}{2} \cos nx } \\
+{\displaystyle = a_{1}\left( \sin\left(1+\frac{1}{2}\right)x - \sin\left(1-\frac{1}{2}\right)x \right) + a_{2}\left( \sin\left(2+\frac{1}{2}\right)x - \sin\left(2-\frac{1}{2}\right)x \right)} \\
+{\displaystyle + \ldots + a_{n}\left( \sin\left(n+\frac{1}{2}\right)x - \sin\left(n-\frac{1}{2}\right)x \right) } \\
+{\displaystyle = a_{n} \sin\left(n+\frac{1}{2}\right)x - a_{1} \sin\frac{x}{2} + \sum_{k=2}^{n}(a_{k+1}-a_{k}) \sin\left(k-\frac{1}{2}\right)x. }
+\end{array}
+$$
+
+Từ
+
+$$
+| (a_{k-1} - a_{k}) \sin\left( k-\frac{1}{2} \right) x | \leq | a_{k-1} - a_{k} | = a_{k-1} - a_{k}
+$$
+
+$$
+\sum_{k=2}^{n}(a_{k-1}-a_{k}) = a_{1} - a_{n} \to a_{1} \text{ khi } n \to \infty,
+$$
+
+theo đàu hiệu Weierstrass, suy ra
+
+$$
+\sum_{k=2}^{n}(a_{k+1}-a_{k}) \sin\left(k-\frac{1}{2}\right)x \text{ hội tụ đến } S_{0}(x).
+$$
+
+Kết hợp điều này với
+
+$$
+\lim_{n \to \infty} a_{n} \sin\left(n+\frac{1}{2}\right)x = 0,
+$$
+
+ta có $S_n$ hội tụ tới $-a_1 \sin \frac{x}{2} + S_0(x)$. Hay $(S_n(x))$ hội tụ tới 
+\[
+-\frac{a_1}{2} + \frac{S_1(x)}{2 \sin \frac{x}{2}} = S(x) \quad \forall x \in D.
+\]
+
+Bằng cách chứng minh tương tự, ta cũng chứng minh được rằng chuỗi $(\bar{S}_n(x))$ hội tụ tới $\bar{S}(x)$ khi $n \to \infty$.
+
+Vậy chuỗi $(*)$ hội tụ tới $S(x) + \bar{S}(x)$ trên miền $D$.
+
+4.6.2. Khai triển Fourier của hàm số có chu kỳ 2π
+
+Cho hàm $f(x)$ xác định trên $\mathbb{R}$ và có chu kỳ $2\pi$. Hàm số $f(x)$ được gọi là khai triển được thành chuỗi lượng giác, nếu ta có thể viết
+$$
+f(x) = \frac{a_0}{2} + \sum_{k=1}^{+\infty}(a_k \cos kx + b_k \sin kx) \quad \forall x \in \mathbb{R}.
+$$
+
+Khi đó, nếu có thể chuyển dấu tích phân qua tổng vô hạn (xem định lý 4.25), thì ta có
+$$
+\int_{-\pi}^{\pi} f(x) dx = \int_{-\pi}^{\pi} \frac{a_0}{2} dx + \sum_{n=1}^{+\infty} \int_{-\pi}^{\pi}(a_n \cos nx + b_n \sin nx) dx
+$$
+
+\[
+\begin{array}{c}
+\displaystyle{
+\int_{-\pi}^{\pi} f(x) \cos n x dx = \int_{-\pi}^{\pi} a_n \cos^2 n x dx = \pi a_n,
+}
+\end{array}
+\]
+
+$$
+\begin{array} { c } { \displaystyle \int_{-\pi}^{\pi} f(x) \sin nx \, dx = \int_{-\pi}^{\pi} a_n \sin^2 nx \, dx } \\ { -\pi } \\ { = \pi b_n . }
+\end{array}
+$$
+
+Như vậy, ta có
+
+$$
+(*) \left\{
+\begin{array}{ll}
+a_0 = \frac{1}{\pi} \int_{-\pi}^{\pi} f(x) \, dx \\
+a_k = \frac{1}{\pi} \int_{-\pi}^{\pi} f(x) \cos kx \, dx & \forall k \in \mathbb{N}^* \\
+b_k = \frac{1}{\pi} \int_{-\pi}^{\pi} f(x) \sin kx \, dx & \forall k \in \mathbb{N}^* .
+\end{array}
+\right.
+$$
+
+Khi đó, ta gọi chuỗi Fourier của hàm số $f(x)$ là chuỗi lượng giác có dạng
+
+$$
+S(x) = \frac{a_0}{2} + \sum_{k=1}^{+\infty} (a_k \cos kx + b_k \sin kx) \quad \forall x \in \mathbb{R},
+$$
+
+trong đó, các hệ số $a_0, a_k, b_k \forall k \in \mathbb{N}^*$ được xác định bởi (*) gọi là các hệ số Fourier của hàm số $f(x)$.
+
+Vấn đề ta quan tâm là: Khi nào $S(x) = f(x)?$
+
+Định lý 4.40. (Dirichlet)
+
+Cho hàm số $f(x)$ tuần hoàn với chu kỳ $2\pi$ thỏa mãn một trong hai điều kiện sau trên $[-\pi, \pi]$:
+
+i) $f(x)$ và $f'(x)$ liên tục từng khúc.
+
+ii) $f(x)$ đơn điệu từng khúc và bị chặn. Khi đó, nếu $f(x)$ liên tục tại $x_0$, thì
+
+$$
+f(x_0) = S(x_0),
+$$
+
+nếu $f(x)$ gián đoạn tại $x_0$, thì
+
+$$
+S(x_0) = \frac{1}{2} \left( \lim_{x \to x_0^+} f(x) + \lim_{x \to x_0^-} f(x) \right).
+$$
+
+(Không chứng minh).
+
+Ví dụ 4.41. Tìm khai triển Fourier của hàm số tuần hoàn với chu kỳ $2\pi$
+
+$$
+f(x) = x^2 \quad \forall -\pi \leq x \leq \pi.
+$$
+
+Giải Tính các hệ số Fourier, ta có
+
+![](images/a480338d5d83c8cb1af9cfe703d90f7976bce1276bf49bcbf7a014246b78970f.jpg)  
+Hình 1: Biểu diễn hình học của $f(x) = x^2, x \in [-\pi, \pi]$ chu kỳ $2\pi$
+
+$$
+\begin{array}{l}
+a_0 = \frac{1}{\pi} \int_{-\pi}^{\pi} x^2 dx = \frac{2}{\pi} \int_{0}^{\pi} r^2 dx = \frac{2\pi^2}{3}, \\
+a_n = \frac{1}{\pi} \int_{-\pi}^{\pi} x^2 \cos(nx) dx = \frac{2}{\pi} \int_{0}^{\pi} x^2 \cos(nx) dx = \frac{4(-1)^n}{n^2}, \\
+b_n = \frac{1}{\pi} \int_{-\pi}^{\pi} x^2 \sin(nx) dx = 0.
+\end{array}
+$$
+
+Vậy khai triển Fourier của hàm $f(x)$ có dạng
+
+$$
+S(x) = \frac{\pi^2}{3} - 4 \left( \cos x - \frac{\cos 2x}{2^2} + \frac{\cos 3x}{3^2} - \ldots + \frac{4(-1)^{n+1}\cos(nx)}{n^2} + \ldots \right).
+$$
+
+Chú ý rằng $f(x)$ và $f'(x)$ liên tục trên khung, theo định lý 4.40, ta có $f(x) = S(x)$:
+
+# 4.6.3. Khai triển Fourier của hàm số có chu kỳ $2T$
+
+Cho hàm $f(x)$ xác định trên $\mathbb{R}$ và có chu kỳ $2T$. Bằng cách đổi biến
+
+$$
+t = \frac{\pi x}{T},
+$$
+
+ta có, hàm số
+
+Như vậy, theo chứng minh trên, khai triển Fourier của hàm $g(t)$ có dạng
+
+$$
+\frac{a_0}{2} + \sum_{k=1}^{+\infty} (a_k \cos kt + b_k \sin kt) \quad \forall t \in \mathbb{R},
+$$
+
+trong đó
+
+$$
+\left\{
+\begin{array}{l}
+a_0 = \frac{1}{\pi} \int_{-\pi}^{\pi} g(t) dt \\
+a_k = \frac{1}{\pi} \int_{-\pi}^{\pi} g(t) \cos kt dt \\
+b_k = \frac{1}{\pi} \int_{-\pi}^{\pi} g(t) \sin kt dt \quad \forall k \in \mathbb{N}^{*}.
+\end{array}
+\right.
+$$
+
+Bằng cách đổi biến $t \to x$, ta nhận được chuỗi Fourier của hàm $f(x)$ có dạng:
+
+$$
+S(x) = \frac{a_0}{2} + \sum_{k=1}^{+\infty} (a_k \cos \frac{\pi kx}{T} + b_k \sin \frac{\pi kx}{T}) \quad \forall x \in \mathbb{R},
+$$
+
+trong đó, các hệ số Fourier $a_0, a_k, b_k \forall k \in \mathbb{N}^{*}$ được xác định bởi
+
+$$
+\left\{ \begin{array} { l l } { a _ { 0 } = \frac { 1 } { T } \int f ( x ) d x = \frac { 1 } { T } \int f ( x ) d x } \\ { \qquad - \frac { T } { T } } \\ { a _ { k } = \frac { 1 } { T } \int f ( x ) \cos \frac { k \pi x } { T } d x = \frac { 1 } { T } \int f ( x ) \cos \frac { k \pi x } { T } d x } \\ { \qquad - \frac { T } { T } } \\ { b _ { k } = \frac { 1 } { T } \int f ( x ) \sin \frac { k \pi x } { T } d x = \frac { 1 } { T } \int f ( x ) \sin \frac { k \pi x } { T } d x \ \forall k \in \mathbb { N } ^ { * } . } \end{array} \right.
+$$
+
+Ví dụ 4.42. Tìm khai triển Fourier của hàm số tuần hoàn với chu kỳ $2T = 2$
+
+$$
+f ( x ) = | x | \quad \forall -1 \leq x \leq 1 .
+$$
+
+Từ đó tính tổng
+
+$$
+S = { \frac { 1 } { 1 ^ { 2 } } } + { \frac { 1 } { 3 ^ { 2 } } } + \ldots + { \frac { 1 } { ( 2 n + 1 ) ^ { 2 } } } + \ldots
+$$
+
+Giải Tính các hệ số Fourier, ta có
+
+![](images/63a8ebad66db679eba1d3fcf93762605faae232ccf843b8a790859cb1d24461b.jpg)
+
+Hình 2: Biểu diễn hình học của $f ( x ) = | x | , x \in [ - 1 , 1 ]$, chu kỳ 2.
+
+$$
+\begin{array} { l } { \displaystyle a _ { 0 } = \frac { 1 } { T } \int f ( x ) d x = 2 \int _ { 0 } ^ { 1 } x d x = 1 , } \\ { \vphantom { \displaystyle \frac { T } { T } \int } } \\ { \displaystyle a _ { n } = \frac { 1 } { T } \int f ( x ) \cos n \pi x d x = 2 \int _ { 0 } ^ { 1 } x \cos n \pi x d x = 2 . \frac { ( - 1 ) ^ { n } - 1 } { n ^ { 2 } \pi ^ { 2 } } , } \\ { \phantom { \displaystyle \frac { T } { T } } } \\ { \displaystyle b _ { n } = \frac { 1 } { T } \int f ( x ) \sin n \pi x d x = 0 . } \end{array}
+$$
+
+Vậy khai triển Fourier của hàm $f(x)$ có dạng
+
+$$
+S(x) = \frac { 1 } { 2 } - \frac { 2 } { \pi ^ { 2 } } \Big ( \frac { \cos \pi x } { 1 ^ { 2 } } + \frac { \cos 3 \pi x } { 3 ^ { 2 } } + . . . + \frac { \cos ( 2 n + 1 ) \pi x } { ( 2 n + 1 ) ^ { 2 } } + . . . \Big ).
+$$
+
+Chú ý rằng $f(x)$ và $f'(x)$ liên tục từng mảnh, theo định lý 4.40, ta có $f(x) = S(x)$. Thay $x = 0$ vào $f(x)$, ta có
+
+$$
+0 = \frac { 1 } { 2 } - \frac { 2 } { \pi ^ { 2 } } \Big ( \frac { 1 } { 1 ^ { 2 } } + \frac { 1 } { 3 ^ { 2 } } + \ldots + \frac { 1 } { ( 2 n + 1 ) ^ { 2 } } + \ldots \Big ).
+$$
+
+Vậy
+
+$$
+S = \frac { \pi ^ { 2 } } { 8 }.
+$$
+
+4.6.4. Khai triển Fourier của hàm số xác định trên $[ a , b ]$, $[ a , b )$, $( a , b ]$, hay $( a , b )$. Giả sử cho hàm số $f ( x )$ xác định trên $[ a , b ]$, ta mở rộng hàm $f ( x )$ thành hàm số $F ( x )$ xác định trên $\mathbb { R }$ và có chu kỳ $2 T$. Khi đó ta có khai triển Fourier của hàm $F ( x )$ và cũng có khai triển Fourier của hàm $f ( x )$ với $x \in [ a , b ]$. Mở rộng hàm
+
+$f ( x ) = F ( x )$ có các dạng sau:
+
+Dạng I. Chu kỳ của hàm số $F ( x )$ là $2 T = b - a$：
+
+Ví dụ 4.43. Cho hàm số $f ( x )$ xác định trên $( 0 , 2 ]$
+$$
+f ( x ) = \left\{ \begin{array} { l l } { x } & { nế u x \in ( 0 , 1 ] } \\ { 1 } & { nế u x \in ( 1 , 2 ] . } \end{array} \right.
+$$
+
+Tìm chuỗi Fourier của hàm $f ( x )$：
+
+Giải Mở rộng hàm $f ( x ) = F ( x )$ xác định trên $\mathbb { R }$ và có chu kỳ $2 T = 2$. Tính các hệ số Fourier, ta có
+
+$$
+\begin{array} { l } { \displaystyle \dot { u _ { 1 } } - \frac { 1 } { T } \int ^ { T } \boldsymbol { F } ( x ) d x - \displaystyle \int _ { 0 } ^ { 1 } \boldsymbol { x } d x + \displaystyle \int _ { 1 } ^ { 2 } | d x - \frac { 3 } { 2 } \boldsymbol { \cdot } , } \\ { \displaystyle \dot { u _ { \alpha } } - \frac { 1 } { T } \int ^ { T } \boldsymbol { F } ( x ) \cos { \frac { \pi x } { T } } d x - \displaystyle \int _ { x } ^ { 1 } \boldsymbol { c } \cos { \alpha x } d x + \displaystyle \int _ { 1 } ^ { 2 } \boldsymbol { c } \cos { \alpha x } d x - \displaystyle \frac { ( - c ) } { T } , } \\ { \displaystyle \dot { u _ { \alpha } } = \frac { 1 } { T } \int ^ { T } \boldsymbol { F } ( x ) \sin { \frac { \pi x } { T } } d x } \\ { = \displaystyle \int _ { 0 } ^ { 1 } \boldsymbol { c } \sin { \pi x } d x - \displaystyle \int _ { 1 } ^ { 2 } \sin { \pi x } \alpha d x = \frac { ( - 1 ) ^ { n } + ( - 1 ) ^ { n } - 1 } { n \pi } = - \frac { 1 } { n \pi } . } \end{array}
+$$
+
+Vậy khai triển Fourier của hàm $F(x)$ có dạng
+
+![](images/56cc285fe8b773adaadbce60f1169f727d8c7cd99743d4e0ba40762eb45926b7.jpg)  
+Hình 3: Đồ thị của $F(x)$ trong ví dụ 4.43.
+
+$$
+S ( x ) = \frac { 3 } { 4 } + \sum _ { n = 1 } ^ { \infty } \left( \frac { ( - 1 ) ^ { n } - 1 } { n ^ { 2 } \pi ^ { 2 } } \cos n \pi x - \frac { 1 } { n \pi } \sin n \pi x \right) .
+$$
+
+Chú ý rằng $F(x)$ và $F'(x)$ liên tục trên khung, theo định lý 4.40, ta có $F(x) = S(x)$. Hay
+
+$$
+F(x) = \frac{3}{4} + \sum_{n=1}^{\infty} \left( \frac{(-1)^n - 1}{n^2 \pi^2} \cos n\pi x - \frac{1}{n\pi} \sin n\pi x \right).
+$$
+
+Thu gọn hàm $F(x)$ trên $(0, 2]$ cho khai triển Fourier của hàm $f(x)$:
+
+$$
+f(x) = \frac{3}{4} + \sum_{n=1}^{\infty} \left( \frac{(-1)^n - 1}{n^2 \pi^2} \cos n\pi x - \frac{1}{n\pi} \sin n\pi x \right).
+$$
+
+Đẳng thức 2. Hàm số $F(x)$ chẵn (đồ thị đối xứng qua trục $Oy$).
+
+Ví dụ 4.44. Cho hàm số $f(x)$ xác định trên $(0, 2]$:
+
+$$
+f(x) = \left\{ 
+\begin{array}{ll}
+x & \text{nếu } x \in (0, 1] \\
+1 & \text{nếu } x \in (1, 2].
+\end{array} 
+\right.
+$$
+
+Hay khai triển Fourier hàm số $f(x)$ thành các hàm cosin.
+
+Giải. Thác triển hàm $f(x) = F(x)$ xác định bởi:
+
+$$
+F(x) = \left\{
+\begin{array}{ll}
+|x| & \text{nếu } |x| \le 1 \\
+1 & \text{nếu } x \in [-2, -1) \cup (1, 2].
+\end{array} 
+\right.
+$$
+
+và tuần hoàn với chu kỳ $2T = 4$. Tính các hệ số Fourier, ta có
+
+$$
+\begin{array} { l } { \displaystyle { a _ { 0 } = \frac { 1 } { T } \int F ( x ) d x = \int _ { 0 } ^ { 1 } x d x + \int _ { 1 } ^ { 2 } \| d x = \frac { 3 } { 2 } , } } \\ { \displaystyle { a _ { n } = \frac { 1 } { T } \int f ( x ) \cos { \frac { n \pi x } { T } d x } = \int x \cos { \frac { n \pi x } { 2 } d x } + \int _ { 1 } ^ { 2 } \cos { \frac { n \pi x } { 2 } d x } } } \\ { \displaystyle { b _ { n } = \frac { 1 } { T } \int _ { - T } ^ { 1 } F ( x ) \sin { \frac { n \pi x } { T } d x } = 0 . } } \end{array}
+$$
+
+Vậy khai triển Fourier của hàm $F(x)$ có dạng:
+
+![](images/dbd0a3903d1517be9e1a8071e878089b5f6c7351ff5e009235cc077ece2aa762.jpg)
+
+Hình 4: Đồ thị của $F(x)$ trong ví dụ 4.44.
+
+$$
+S ( x ) = \frac { 3 } { 4 } + \sum _ { n = 1 } ^ { \infty } a _ { n } \cos { \frac { n \pi x } { 2 } } .
+$$
+
+Chú ý rằng $F(x)$ và $F'(x)$ liên tục từng mảnh, theo định lý 4.40, ta có $F(x) = S(x)$. Thu gọn hàm $F(x)$ trên $(0, 2]$ cho khai triển Fourier của hàm $f(x)$:
+
+$$
+f ( x ) = \frac { 3 } { 4 } + \sum _ { n = 1 } ^ { \infty } \left( \frac { 4 } { n ^ { 2 } \pi ^ { 2 } } (\cos { \frac { n \pi } { 2 } } - 1 ) - \frac { 2 } { n \pi } \sin { \frac { n \pi } { 2 } } \right) \cos { \frac { n \pi x } { 2 } } .
+$$
+
+Đẳng thức 3. Hàm số $F(x)$ lẻ (đối xứng qua tam điểm $O$).
+
+Vi dụ 4.45. Cho hàm số $f(x)$ xác định trên $(0,2]$.
+
+$$
+f(x) = \left\{ 
+\begin{array}{ll}
+1 - x & \text{nếu } x \in (0, 1] \\
+0 & \text{nếu } x \in (1, 2]
+\end{array} 
+\right.
+$$
+
+Hãy khai triển Fourier hàm số $f(x)$ thành các hàm sin.
+
+Giải Thác triển hàm $F(x)$ xác định bởi
+
+$$
+F(x) = \left\{
+\begin{array}{ll}
+1 - x & \text{nếu } 0 < x \leq 1 \\
+-(x + 1) & \text{nếu } -1 \leq x \leq 0 \\
+0 & \text{nếu } x \in [-2, -1) \cup (1, 2]
+\end{array}
+\right.
+$$
+
+và tuần hoàn với chu kỳ $2T = 4$. Tính các hệ số Fourier, ta có
+
+$$
+\begin{array}{l}
+a_0 = \frac{1}{T} \int F(x) dx = \int_{-1}^{0}(1 + x)dx + \int_{0}^{1}(1 - x)dx = 0, \\
+\vphantom{\frac{1}{T}\int} \\
+a_n = \frac{1}{T} \int F(x) \cos\left(\frac{n\pi x}{T}\right) dx = 0, \\
+b_n = \frac{1}{T} \int F(x) \sin\left(\frac{n\pi x}{T}\right) dx = 2 \int_{0}^{1}(1 - x)\sin\left(\frac{n\pi x}{2}\right)dx = \frac{2}{n\pi} - \frac{4(-1)^n}{n^2\pi^2}
+\end{array}
+$$
+
+Vậy khai triển Fourier của hàm $F(x)$ có dạng
+
+![](images/b998f87441b3624fc4041ff2ffcb9c075d18479.jpg)  
+Hình 5: Đồ thị của $F ( x )$ trong ví dụ 4.45.
+
+$$
+S ( x ) = 4 \sum _ { n = 1 } ^ { \infty } \Big ( { \frac { 1 } { n \pi } } - { \frac { 2 \sin { \frac { n \pi } { 2 } } } { n ^ { 2 } \pi ^ { 2 } } } \Big ) \sin { \frac { n \pi x } { 2 } } .
+$$
+
+Chú ý rằng $F ( x )$ và $F ^ { \prime } ( x )$ liên tục từng khúc, theo định lý 4.40, ta có $F ( x ) = S ( x )$. Thu gọn hàm $F ( x )$ trên $( 0 , 2 ]$ cho khai triển Fourier của hàm $f ( x )$ dạng
+
+$$
+f ( x ) = 4 \sum _ { n = 1 } ^ { \infty } \Big ( { \frac { 1 } { n \pi } } - { \frac { 2 \sin { \frac { n \pi } { 2 } } } { n ^ { 2 } \pi ^ { 2 } } } \Big ) \sin { \frac { n \pi x } { 2 } } .
+$$
+
+# Bài 4.1. Tính các tổng sau:
+
+ds : 2.   
+3   
+ds:- 4   
+23   
+ds:15   
+ds : 1   
+$\mathrm { ds } : 1 - { \sqrt [ { 3 } ] { 2 } } .$  
+ds : 1.   
+ds:-0.   
+ds : phần kỳ.   
+ds : 1-√2.   
+$\mathrm { ds } : \frac { \log _ { 3 } 2 } { 1 - \log _ { 3 } ^ { 2 } 2 } .$
+
+1 $\begin{array} { r l } & { \begin{array} { r l } & { \sum _ { i = 1 } ^ { N } \frac { 1 } { 2 ^ { N / 2 } } } \\ & { \sum _ { i = 1 } ^ { N } \frac { 1 } { 2 ^ { N / 2 } } } \\ & { \sum _ { i = 1 } ^ { N } \frac { 1 } { 2 ^ { N / 2 } } } \\ & { \sum _ { i = 1 } ^ { N } \frac { 1 } { 2 ^ { N / 2 } } } \end{array} } \\ & { \begin{array} { r l } & { \sum _ { i = 1 } ^ { N } \frac { 1 } { 2 ^ { N / 2 } } \sum _ { j = 1 } ^ { N } } \\ & { \sum _ { i = 1 } ^ { N } \frac { 1 } { 2 ^ { N / 2 } } } \\ & { \sum _ { i = 1 } ^ { N } \frac { 1 } { 2 ^ { N / 2 } } } \end{array} } \\ & { \begin{array} { r l } & { \sum _ { i = 1 } ^ { N } \frac { 1 } { 2 ^ { N / 2 } } } \\ & { \sum _ { i = 1 } ^ { N } \frac { 1 } { 2 ^ { N / 2 } } } \\ & { \sum _ { i = 1 } ^ { N } \frac { 1 } { 2 ^ { N / 2 } } } \end{array} } \\ & { \begin{array} { r l } & { \sum _ { i = 1 } ^ { N } \frac { 1 } { 2 ^ { N / 2 } } } \\ & { \sum _ { i = 1 } ^ { N } \frac { 1 } { 2 ^ { N / 2 } } } \\ & { \sum _ { i = 1 } ^ { N } \frac { 1 } { 2 ^ { N / 2 } } } \end{array} } \end{array}$
+
+2) $n=1 + (-1)^n + 1$
+
+3) $\sum_{n=1}^\infty n$
+
+4) $\geq (v_{n+2} - 2v_{n+1} + \sqrt{n})$ for $n \geq 2$
+
+5) $M = \log_3(2^n + 12)$ for $n \geq 0$
+
+Bài 4.2. Dùng định lý Cauchy, xét hội tụ của các chuỗi sau:
+
+$$
+\begin{array} { l } { \displaystyle \sum _ { n = 1 } ^ { + \infty } \frac { \cos nx - \cos (n+1)x } { n } } \\ { \displaystyle \sum _ { n = 1 } ^ { + \infty } \frac { \cos x^n } { n^2 } } \end{array}
+$$
+
+ds: hội tụ.
+
+ds: hội tụ.
+
+$$
+\begin{array} { l } { \displaystyle \sum _ { n = 1 } ^ { + \infty } \frac { ( - 1 ) ^ { n + 1 } } { n } } \\ { \displaystyle \sum _ { n = 1 } ^ { + \infty } \frac { 1 } { \sqrt { n ( n + 1 ) } } } \end{array}
+$$
+
+Dãy phần kỳ, xét: $| S _ { 6 n } - S _ { 3 n } |$
+
+Dãy phần kỳ, xét: $\left| S _ { 2 n } - S _ { n } \right|$
+
+Bài 4.3. Dùng dấu hiệu so sánh, xét sự hội tụ của các chuỗi sau:
+
+ds : hội tụ.
+ds : phần kỳ.
+ds : hội tụ.
+ds : hội tụ.
+ds : phần kỳ.
+1
+ds : hội tụ.
+ds : hội tụ.
+ds : hội tụ.
+$\mathrm { ds } : p > \frac { 1 } { 3 } \to \mathrm { hội }$
+$\mathrm { ds } : p > \frac { 1 } { 2 } \to \mathrm { hội }$
+
+1 §2 $\begin{array} { r l } & { \frac { 1 } { \Delta x } = \frac { \pi } { \pi ^ { 2 } } } \\ & { \frac { 1 } { \Delta x ^ { 2 } } } \\ & { \frac { 1 } { \Delta x ^ { 3 } } } \\ & { \frac { 1 } { \Delta x ^ { 3 } } } \\ & { \frac { 1 } { \Delta x ^ { 3 } } } \\ & { \frac { 1 } { \Delta x ^ { 3 } } } \\ & { \frac { 1 } { \Delta x ^ { 3 } } } \\ & { \frac { 1 } { \Delta x ^ { 3 } } } \\ & { \frac { 1 } { \Delta x ^ { 3 } } } \\ & { \frac { 1 } { \Delta x ^ { 3 } } } \\ & { \frac { 1 } { \Delta x ^ { 3 } } } \\ & { \frac { 1 } { \Delta x ^ { 3 } } } \\ & { \frac { 1 } { \Delta x ^ { 3 } } } \\ & { \frac { 1 } { \Delta x ^ { 3 } } } \\ \end{array} \frac { \pi ^ { 3 } + 1 } { 12 \pi ^ { 2 } + 3 \pi - \frac { 1 } { 3 \pi } }$
+
+2 §3
+
+4
+
+5
+
+6
+
+n=1
+
+7) $\sum_{n=1}^{\infty} n \cos(n)$, $p>0$
+
+8) $\sum_{n=1}^{\infty} M \sin\left(\frac{n}{n^{3}+1}\right)$, $p>0$
+
+9) $\sum_{n=1}^{\infty} M \arcsin(n p > 0)$
+
+10) $\sum_{n=1}^{\infty} (1 - \cos(1))$, $p > 0$
+
+u $p \leq \frac{1}{3}$ phần ký.
+
+u $p \leq \frac{1}{2}$ phần ký.
+
+Bài 4.4. Dùng dấu hiệu D'Alembert, xét hội tụ của các chuỗi sau:
+
+$$
+\begin{array} { l } 
+{ \displaystyle \sum _ { n = 1 } ^ { + \infty } \frac { 4 . 7 . 10 . . . ( 3 n + 1 ) } { 2 . 6 . 10 . . . ( 4 n - 2 ) } } \\ 
+{ \displaystyle \sum _ { n = 1 } ^ { + \infty } \frac { n + 1 } { 2 ^ { n } } } 
+\end{array}
+$$
+
+ds: hội tụ.
+
+ds: hội tụ.
+
+ds: hội tụ.
+
+ds: hội tụ.
+
+ds: hội tụ.
+
+ds: hội tụ.
+
+3 $\begin{array}{c} \begin{array} { r l } & { \frac {\Delta x}{\sqrt{2}} = \frac{\left( \frac{\Delta x}{2} - \frac{1}{2} \right)}{\nu^2} } \\ & { - \frac{\Delta x}{\sqrt{2}} } \\ & { \frac{\Delta x}{\sqrt{2}} } \\ & { \frac{\sqrt{2}}{2} } \\ & { \frac{\sqrt{2}}{2} } \\ & { \frac{\sqrt{2}}{2} } \\ & { \frac{\sqrt{2}}{2} } \\ & { - \frac{\sqrt{2}}{2} } \\ & { \frac{\sqrt{2}}{2} } \\ & { \frac{\sqrt{2}}{2} } \\ & { \frac{\sqrt{2}}{2} } \\ & { \frac{\sqrt{2}}{2} } \\ & { - \frac{1}{2} } \\ & { \frac{\sqrt{2}}{2} } \\ & { \frac{\sqrt{2}}{2} } \\ & { \frac{\sqrt{2}}{2} } \\ & { \frac{\sqrt{2}}{2} } \end{array} \frac{\left( \frac{\Delta x}{2} \right)}{2\nu} \ \frac{\left( \frac{\Delta x}{2} \right)}{\nu^2}  \\ & { \frac{\sqrt{2}}{2} } \\ & { \frac{\sqrt{2}}{2} } \\ & { \frac{\sqrt{2}}{2} } \\ & { \frac{\sqrt{2}}{2} } \\ & { \frac{\sqrt{2}}{2} } \\ & { \frac{\sqrt{2}}{2} } \\ & { \frac{\sqrt{2}}{2} } \\ & { \frac{\sqrt{2}}{2} } \end{array}$
+
+ds: phần kỳ.
+
+ds: phần kỳ.
+
+ds: hội tụ.
+
+ds: hội tụ.
+
+Bài 4.5. Dùng dấu hiệu Cauchy, xét sự hội tụ của các chuỗi sau:
+
+ds: hội tụ.
+
+ds: hội tụ.
+
+$$
+\begin{array} { r l }
+& { \frac { 1 } { \sqrt { 2 \pi } } \left( \frac { \sigma ( x ) } { 2 \sqrt { 3 } } \frac { \big ( 1 - \frac { \sigma ( x ) } { 2 } \big ) ^ { \frac { 1 } { \sigma ( x - 1 ) } } } { 1 } \right) ^ { \frac { 1 } { \sigma ( x - 1 ) } } } \\
+& { \frac { 1 } { \sqrt { 2 \pi } } \left( \cos \frac { x } { x } \right) ^ { \frac { 1 } { \sigma ( x - 1 ) } } } \\
+& { \frac { 1 } { \sqrt { 2 \pi } } \left( \frac { 2 \sigma ( x ) } { 2 \sqrt { 3 } } \frac { \big ( 1 - \frac { \sigma ( x ) } { 2 } \big ) ^ { \frac { 1 } { \sigma ( x - 1 ) } } } { 1 } \right) ^ { \frac { 1 } { \sigma ( x - 1 ) } } } \\
+& { \frac { 1 } { \sqrt { 2 \pi } } \mathfrak { L } \left( \frac { \sigma ( x ) } { \pi ( 1 - 1 ) } \right) ^ { \frac { 1 } { \sigma ( x - 1 ) } } } \\
+& { \frac { 1 } { \sqrt { 2 \pi } } \frac { \sigma ( x ) } { 2 \sqrt { 3 } } \frac { \sigma ( x - 1 ) } { 1 + \sqrt { 3 } } } \\
+& { \frac { 1 } { \sqrt { 2 \pi } } \left( 1 + \mathrm { axsin } \frac { 1 } { \sqrt { 2 } \pi ^ { 2 } - 1 } \right) ^ { \frac { 1 } { \sigma ( x - 1 ) } } }
+\end{array}
+$$
+
+đs : hội tụ.
+
+đs : hội tụ.
+
+đs : hội tụ.
+
+đs : hội tụ.
+
+$$
+\begin{array} { l } { \displaystyle \sum _ { n = 1 } ^ { + \infty } 3 ^ { ( - 1 ) ^ { n } + 2 n } } \\ { \displaystyle \sum _ { n = 1 } ^ { + \infty } 3 ^ { ( - 1 ) ^ { n } - 2 n } } \\ { \displaystyle \sum _ { n = 1 } ^ { + \infty } \left( \frac { 2 n + ( - 1 ) ^ { n } } { 3 n - 4 } \right) ^ { 2 n + 5 } } \\ { \displaystyle \sum _ { n = 1 } ^ { + \infty } \left( \mathrm { z e c o s 2 } ^ { \mathrm { a } \mathrm { z e c o s 2 } ^ { \mathrm { a } - 1 } } \frac { n + 1 } { 2 n + 3 } \right) } \end{array}
+$$
+
+Dãy: phần kỳ.
+
+Dãy: hội tụ.
+
+Dãy: hội tụ.
+
+Dãy: hội tụ.
+
+Bài 4.6. Dùng dấu hiệu tích phân, xét sự hội tụ của các chuỗi sau:
+
+Dãy: phần kỳ.
+
+Dãy: hội tụ.
+
+Dãy: phần kỳ.
+
+Dãy: hội tụ.
+
+Dãy: phần kỳ.
+
+M
+
+2Mn
+
+3) ∑nh(m)
+
+5） 4M $\begin{array} { r l } & { \sum _ { i = 1 } ^ { n } \frac { 1 } { n } \sum _ { j = 1 } ^ { n } \frac { 1 } { n } \sum _ { i = 1 } ^ { n } \frac { 1 } { n } \sum _ { j = 1 } ^ { n } } \\ & { \sum _ { i = 1 } ^ { n } \frac { 1 } { n } \sum _ { j = 2 } ^ { n } \frac { 1 } { n } \sum _ { i = 1 } ^ { n } \frac { 1 } { n } \sum _ { j = 1 } ^ { n } } \\ & \sum _ { i = 1 } ^ { n } \frac { 1 } { n } \sum _ { j = 1 } ^ { n } \frac { 1 } { n } \sum _ { i = 1 } ^ { n } \frac { 1 } { n } \sum _ { j = 1 } ^ { n } \frac { 1 } { n } \sum _ { i = 1 } ^ { n } \frac { 1 } { n } \sum _ { j = 1 } ^ { n } \frac { 1 } { n } \sum _ { i = 1 } ^ { n } \frac { 1 } { n } \sum _ { j = 1 } ^ { n } \frac { 1 } { n } \sum _ { i = 1 } ^ { n } \frac { 1 } { n } \sum _ { j = 1 } ^ { n } \frac { 1 } { n } \sum _ { i = 1 } ^ { n } \frac { 1 } { n } \sum _ { j = 1 } ^ { n } \frac { 1 } { n } \sum _ { i = 1 } ^ { n } \frac { 1 } { n } \sum _ { j = 1 } ^ { n } \frac { 1 } { n } \sum _ { i = 1 } ^ { n } \frac { 1 } { n } \sum _ { j = 1 } ^ { n } \frac { 1 } { n } \sum _ { i = 1 } ^ { n } \frac { 1 } { n } \sum _ { j = 1 } ^ { n } \frac { 1 } { n } \sum _ { i = 1 } ^ { n } \frac { 1 } { n } \sum _ { j = 1 } ^ { n } \frac { 1 } { n } \sum _ { i = 1 } ^ { n } \frac { 1 } { n } \sum _ { j = 1 } ^ { n } \frac { 1 } { n } \end{array}$
+
+} \sum _ { i = 1 } ^ { n } \frac { 1 } { n } \sum _ { j = 1 } ^ { n } \frac { 1 } { n } \sum _ { i = 1 } ^ { n } \frac { 1 } { n } \sum _ { j = 1 } ^ { n } \frac { 1 } { n } \sum _ { i = 1 } ^ { n } \frac { 1 } { n } \sum _ { j = 1 } ^ { n } \frac { 1 } { n } \sum _ { i = 1 } ^ { n } \frac { 1 } { n } \sum _ { j = 1 } ^ { n } \frac { 1 } { n } \sum _ { i = 1 } ^ { n } \frac { 1 } { n } \sum _ { j = 1 } ^ { n } \frac { 1 } { n } \end{array}$   
+③   
+7   
+8   
+9   
+10
+
+đs: hội tụ.
+
+đs: phần kỳ.
+
+đs: hội tụ.
+
+đs: hội tụ.
+
+đs: hội tụ.
+
+Bài 4.7. Dùng dấu hiệu Leibniz, xét sự hội tụ của các chuỗi sau:
+
+đs: hội tụ.
+
+đs: hội tụ.
+
+đs: hội tụ.
+
+đs: phần kỳ.
+
+đs: hội tụ.
+
+đs: hội tụ.
+
+đs: phần kỳ.
+
+$\begin{array} { r l }
+& { \frac { 1 } { \sqrt { 3 } } ( 1 - \frac { \sigma } { 2 } ) ^ { 2 } } \\
+& { \times \frac { \sigma } { 2 } ( 2 \sigma ^ { 2 } ) } \\
+& { \times \frac { \sigma } { 2 } ( 1 + \frac { \sigma } { 2 } ) ^ { 2 } } \\
+& { \times \frac { \sigma } { 2 } ( 1 + \frac { \sigma } { 2 } ) ^ { 2 } } \\
+& { \times \frac { \sigma } { 2 } ( 1 + \frac { \sigma } { 2 } ) ^ { 2 } } \\
+& { \times \frac { \sigma } { 2 } ( 1 + \frac { \sigma } { 2 } ) ^ { 2 } } \\
+& { \times \frac { \sigma } { 2 } ( 1 + \frac { \sigma } { 2 } ) ^ { 2 } } \\
+& { \times \frac { \sigma } { 2 } ( 1 + \frac { \sigma } { 2 } ) ^ { 2 } } \\
+& { \times \frac { \sigma } { 2 } ( 1 + \frac { \sigma } { 2 } ) ^ { 2 } }
+\end{array}$
+
+$\begin{array}{c}
+\begin{array} { r l }
+& { \sum _ { j = 0 } ^ { n } \frac { \partial \sin \theta } { \partial x } } \\
+& { \frac { \sin \theta } { \cos x } } \\
+& { \frac { \sin \theta } { \cos x } } \\
+& { \frac { \sin \theta } { \cos x } } \\
+& { \frac { \sin \theta } { \sin x } } \\
+& { \frac { \sin \theta } { \cos x } } \\
+& { \frac { \sin \theta } { \sin x } }
+\end{array} 
+\qquad
+\begin{array} { r l }
+{ \frac { 1 } { 2 } } & { \frac { 1 } { \sin ^ { 2 } \theta } } \\
+{ \frac { \sin ^ { 2 } \theta } { \sin ^ { 2 } \theta } } & { \frac { \sin \theta } { \cos \theta } } \\
+{ \frac { \sin \theta } { \sin x } } & { \frac { \sin \theta } { \cos \theta } } \\
+{ \frac { \sin \theta } { \cos x } } & { \frac { \sin \theta } { \cos x } }
+\end{array}
+$
+
+$\begin{array}{r l}
+\frac { 1 } { 2 } & \frac { 1 } { \sin ^ { 2 } \theta } \\
+\frac { 1 } { 2 } & \frac { 1 } { \sin ^ { 2 } \theta } \\
+\frac { 1 } { 2 } & \frac { 1 } { \sin ^ { 2 } \theta }
+\end{array}
+\times
+\begin{array}{r l}
+\frac { 1 } { 2 } & \frac { 1 } { \sin ^ { 2 } \theta } \\
+\frac { 1 } { 2 } & \frac { 1 } { \sin ^ { 2 } \theta } \\
+\frac { 1 } { 2 } & \frac { 1 } { \sin ^ { 2 } \theta }
+\end{array}$
+
+5) ∑_{n=1}^{∞} n \sin(n)
+
+8. (20 điểm) Tính tổng $\sum_{n=1}^{10} n \sin(n)$
+
+ds: hội tụ.
+
+ds: hội tụ.
+
+Bài 4.8. Khảo sát sự hội tụ đều của các hàm số sau:
+
+ds: phân kỳ.
+
+trên $D = [-1, 1)$ : hội tụ điều kiện.
+
+trên $D = [0, 1]$ : hội tụ điều kiện.
+
+trên $D = [0, +\infty)$
+
+1) 
+\[
+\begin{array}{l}
+\displaystyle \sum_{n=1}^{+\infty} x^{n-1} \\
+\displaystyle \sum_{n=1}^{+\infty} (-1)^n x^n \\
+\displaystyle \sum_{n=1}^{+\infty} (-1)^n x^n \\
+\displaystyle \sum_{n=1}^{+\infty} (-1)^n \\
+\displaystyle \sum_{n=1}^{+\infty} \sqrt{\frac{1}{x}} e^{-nx}
+\end{array}
+\]
+
+trên $D = [0, +\infty)$ : hội tụ điều kiện.
+
+trên $D = [0, +\infty)$ : không hội tụ đều.
+
+![](images/6ee0fbf6c0bf8cff6b403cc804b44696a39c6386ba3c8f557dcc76e9acbb58c7.jpg)
+
+trên $D = [0, 2]$ : hội tụ điều kiện.
+
+![](images/6d580ae1ccb312a6f833b32740776525e9670dd85c40da2d3b46335411010a54.jpg)
+
+trên $D = [0, +\infty)$ : hội tụ điều kiện.
+
+trên $D = \mathbb{R}$ : hội tụ đều.
+
+trên $D = \mathbb{R}$ : hội tụ đều.
+
+trên $D = [0, +\infty)$ : hội tụ đều.
+
+Bài 4.9. Tìm miền hội tụ của các chuỗi lũy thừa sau:
+
+1) $\sum_{n=0} (-2)^n$
+
+2) $M_4 \sum_{n=1}^\infty (x+2)^n \frac{1}{n}$
+
+3) $\sum_{n=1}^\infty$
+
+4) $M_2 \sum_{n=1}^\infty (x + 1)^{2n}$
+
+5) $(3 + 4)^2$
+
+6) $\sum_{n=1}^\infty (2x+1)^0$
+
+ds : D = R.
+
+$\mathrm { ds } : \mathcal{D} = \left[ -\frac{19}{4}, \frac{3}{4} \right).$
+
+$\mathrm { ds } : \mathcal{D} = [-1, 1].$
+
+$\mathrm { ds } : D = \left( -\sqrt{\frac{e}{2}} - 1, \sqrt{\frac{e}{2}} - 1 \right).$
+
+ds : $D = \mathbb{R}$,
+
+ds : $D = \mathbb{R}.$
+
+$\mathrm { ds } : D = \left[ -\frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}} \right].$
+
+$$
+\begin{array}{l}
+\displaystyle \sum_{n=1}^{+\infty} \frac{(-1)^{n-1} 4^n x^n}{n^2} \\
+\displaystyle \sum_{n=1}^{+\infty} \frac{(-1)^n (x - 1)^{6n+3}}{2n + 1} \\
+\displaystyle \sum_{n=1}^{+\infty} \frac{(-1)^n (x + 1)^{2n+1}}{3^{2n+1} (2n + 1)}
+\end{array}
+$$
+
+Bài 4.10. Khai triển Fourier các hàm số sau:
+
+$\begin{array}{r}1) f(x) = \frac{\pi - x}{2}\end{array}$ với $x \in (0, 2\pi)$ theo sin.  
+${\mathrm{ds}}: \sum_{n=1}^{\infty} \frac{\sin nx}{n}$
+
+$\begin{array}{r}2) f(x) = \cos \frac{x}{2}\end{array}$ với $x \in (-\pi, \pi)$, chu kỳ $2\pi$:  
+${\mathrm{ds}}: \cos \frac{x}{2} = \frac{2}{\pi} + \frac{1}{\pi} \sum_{n=1}^{+\infty} \frac{(-1)^n \cos nx}{\frac{1}{4} - n^2}.$
+
+3) $f(x)=$
+
+$$
+\textstyle {\mathrm{ds}}: a_0 = \frac{15}{2}, \ a_n =
+$$
+
+6 nếu 0 < x < 2, 3x nếu 2 < x < 4.  
+$\begin{array}{l}2 \quad \text{neu} \quad n \in 2\mathbb{N}\end{array}$,
+
+$b_n=$
+
+$$
+{\mathrm{ds}}: b_n = 
+\begin{cases}
+0 & \text{nếu } n \in 2\mathbb{N}, \\
+-\frac{2}{n^2 - \frac{1}{4}} & \text{nếu } n \in 2\mathbb{N} + 1.
+\end{cases}
+$$
+
+$$
+{\mathrm{ds}}: D = [0, 2].
+$$
+
+$\begin{array} { r } { 4) f(x) = \cos \frac{x}{2}, x \in (0, 2\pi], chu kỳ 2T = 4\pi. } \end{array}$
+
+$\begin{array} { r l }
+& {\Psi^{\pm}(x) = \cos \frac{\pi}{2} \Psi^{\ll}(x), \quad \text{với} \quad \Psi^{\cup}(x, 2\pi/\Psi)} \\
+& {\Psi^{\mathrm{ds}}: a_0 = 0, \ a_n = 0, b_n = \frac{8n}{\pi (2n-1)(2n+1)}.} \\
+& {\Psi^{5): f(x) = x \sin x, \quad x \in [-\pi, \pi].} \\
+& {\Psi^{\mathrm{ds}}: a_0 = -2, \ a_1 = -\frac{1}{2}, a_n = \frac{2}{n^2-1} (n \geq 2), b_n = 0.}
+\end{array}$
+
+（2 $6) f(x) = x \cos x, \quad x \in (0, \pi)$ theo cosin. Tính tổng $S = \sum_{n=1}^{\infty} \frac{4n^2 + 1}{(4n^2 - 1)^2}$
+
+$\begin{array} { l } {\displaystyle \mathrm{ds}: -\frac{2}{\pi} + \frac{\pi}{2} \cos x - \frac{4}{\pi} \sum_{n=1}^{\infty} \frac{4n^2 + 1}{(4n^2 - 1)^2} \cos 2nx}
+\end{array}$
+
+, \( S = \frac{\pi^2}{8} + \frac{1}{2}. \)
+
+7) \( f(x) = x \cos x \quad x \in (0, \pi) \text{ theo sin}.\)
+
+\(\mathrm{d}s: -\frac{1}{2} \sin x + 2 \sum_{n=2}^{\infty} (-1)^n \frac{n}{n^2 - 1} \sin nx .\)
+
+$$
+\mathrm{ds} : D = [-2, 4].
+$$
+
+$$
+8) f(x) = \left\{
+\begin{array}{ll}
+0 & \text{nếu } -3 < x \leq 2 \\
+x & \text{nếu } 2 < x < 3.
+\end{array} \right. \text{Tính } S = \sum_{n=1}^{\infty} \frac{1}{(2n-1)^2}
+$$
+
+$$
+\frac{dH_3}{dt} - \frac{dH_6}{d\pi^2} \sum_{n=1}^{\infty} \frac{dH_1}{(2n-1)^2} \cos \frac{(2n-1)\pi x}{dt} - \frac{dH_3}{dt} \sum_{n=1}^{\infty} \frac{(-1)^n}{(2n-1)^2} \sin \frac{n\pi x}{dt}, S = \frac{\pi^2}{8}, (x = 0).
+$$
+
+$$
+9) f(x) = \left\{
+\begin{array}{ll}
+0 & \text{nếu } \frac{\pi}{2} \leq |x| \leq \pi \\
+\cos x & \text{nếu } |x| < \frac{\pi}{2}.
+\end{array} \right.
+$$
+
+trên $[-\pi, \pi]$:
+
+$$
+\mathrm{ds} : \frac{1}{\pi} + \frac{1}{2}\sin x - \sum_{n=1}^{\infty} \frac{2}{\pi(4n^2-1)} \cos 2nx
+$$
+
+$$
+10) f(x) = \left\{
+\begin{array}{ll}
+x & \\
+1 & \\
+3 &
+\end{array} \right.
+$$
+
+theo các hàm cosin.
+
+$$
+\begin{array} { r } { \mathtt { d s } : \frac { 2 } { 3 } + \frac { 3 } { \pi ^ { 2 } } \displaystyle \sum _ { n = 1 } ^ { \infty } \frac { \cos \frac { 2 n \pi } { 3 } - 1 } { n ^ { 2 } } \cos \frac { 2 n \pi x } { 3 } . } \end{array}
+$$
+
+1. Brown, Pearcy A. và Carl, "An Introduction to Analysis", Graduate Texts in Mathematics, Springer-verlag, 1995.
+
+2. Liasko Y. Y., Boiatruc A. C., Gai Ia. G. và Golovac G. P., "Giải Tích Toán Học", Tập 1, NXB DH&THCN, 1979.
+
+3. Trim D., "Calculus for Engineers", Springer, 2001.
+
+4. Stewart J., "Essential Calculus", Thomson Brooks/Cole, 2006a.
+5. Stewart J., "Calculus: Concepts and Contexts", Thomson Brooks/Cole, 2006.
+6. Rudin W., "Principles of Mathematical Analysis", 3rd ed, McGraw-Hill, 1976.
+7. Tri N. D., Dinh T. V. và Quynh N. H., "Toán Cao cấp Tập 1", NXBGD, 2003.
+8. Wrede R., và Spiegel M., "Theory and Problems of Advanced Calculus",
+McGraw-Hill, 2002.
+
+$$
+\epsilon < f ( x ) \leq A \forall x \in ( x ^ { * } , x _ { 0 } ) \Rightarrow | f ( x ) - A | < \epsilon \forall x : 0 > x - x _ { 0 } >
+$$
+
+Như vậy $\lim_{x \to x_0^-} f(x) = A.$
+
+Nếu $f(x)$ không bị chặn trên, tức là $\forall A$, $\exists x^* \in (a, x_0) : f(x^*) > A$. Do $f(x)$ tăng trên $(a, x_0)$, nên $f(x) \geq f(x^*) > A \forall x \in (x^*, x_0) \Rightarrow f(x) > A \forall x \in (a, x_0) : x - x_0 > -\delta$ với $\delta = x_0 - x^*$. Như vậy $\lim_{x \to x_0^-} f(x) = +\infty$.
+
+ii) Chứng minh tương tự như trong i) hoặc áp dụng i) cho hàm số $g(x) = -f(x)$: □
+
+# 2.3. Đại lượng vô cùng bé và vô cùng lớn
+
+## 2.3.1. Định nghĩa
+
+$+ \ : \mathrm{Hàm} \ : \mathrm{s} \widetilde{0} \ : \alpha(x)$ được gọi là vô cùng bé, viết tắt là VCB tại $x_0$ nếu $\lim_{x \to x_0} \alpha(x) = 0$
+
+$+ \ \mathbf{Cho} \ \alpha(x), \beta(x)$ là hai VCB tại $x_0$
+$\begin{array}{r}
+\mathrm{i.} \ \mathrm{Nếu} \lim_{x \to x_0} \frac{\alpha(x)}{\beta(x)} = 0
+\end{array}$ thì $\alpha(x)$ được gọi là VCB bậc cao hơn $\beta(x)$ tại $x_0$, ký hiệu là $\alpha(x) = o(\beta(x))$ tại $x_0$
+
+$+ \ \mathbf{Cho} \ \alpha(x), \beta(x)$ là hai VCB tại $x_0$
+Nếu $\lim_{x \to x_0} \frac{\alpha(x)}{\beta(x)} = m \neq 0$ thì $\alpha(x), \beta(x)$ được gọi là hai VCB cùng cấp tại $x_0$. Đặc biệt, khi $m = 1$, ta gọi $\alpha(x), \beta(x)$ là hai VCB tương đương tại $x_0$, ký hiệu $\alpha(x) \sim \beta(x)$ tại $x_0$
+
+$+ \mathrm{Hàm} \ s \mathrm{o} \ a(x) \ duoc \ g \mathrm{o}i \ l \mathrm{a} \ v \mathrm{o} \ c \mathrm{ing} \ l \mathrm{on}, \ vi \mathrm{et} \ t \mathrm{at} \ l \mathrm{a} \ VCL \ t \mathrm{ai} \ x_0$ nếu hàm số $a(x)$ được gọi là vô cùng bé tại $x_0$
+
+$+ \mathrm{Cho} \ \alpha(x), \beta(x)$ là hai VCL tại $x_0$ và $\lim_{x \to x_0} \frac{\alpha(x)}{\beta(x)} = m$. Nếu $m$
+
+Khi $\lim_{x \to x_0} \frac{\alpha(x)}{\beta(x)} = \infty$ thì $\alpha ( x )$ được gọi là VCL bậc cao hơn $\beta ( x )$ tại $x _ { 0 }$. Nếu $m \neq 0$ thì $\alpha ( x ) , \beta ( x )$ được gọi là hai VCL cùng cấp tại $x _ { 0 }$. Đặc biệt, khi $m = 1$, ta gọi $\alpha ( x ) , \beta ( x )$ được gọi là hai VCL tương đương tại $x _ { 0 }$.
+
+Hề qua: Nếu $\alpha(x) \sim \alpha_1(x)$ và $\beta(x) \sim \beta_1(x)$ tại $x_0$, thì
+
+$$
+\lim_{x \to x_0} \frac{\alpha(x)}{\beta(x)} = \lim_{x \to x_0} \frac{\alpha_1(x)}{\beta_1(x)}.
+$$
+
+Ví dụ 2.7. Dùng VCB tương đương, tìm giới hạn
+
+$$
+\lim_{x \to 0} \frac{\sin^2 3x}{x \sin 5x}.
+$$
+
+Giải Theo công thức $\lim_{x \to 0} \frac{\sin x}{x} = 1$, ta có $6 \sin(kx) \sim kx$. Từ đó suy ra
+
+$$
+\lim_{x \to 0} \frac{\sin^2 3x}{x \sin 5x} = \lim_{x \to 0} \frac{(3x)^2}{x \cdot 5x} = \frac{9}{5}.
+$$
+
+# 2.3.2. Tính chất
+
+Dựa vào định nghĩa VCB và tính chất của giới hạn, ta có các tính chất đại số của VCB như sau:
+
+1. Nếu $\alpha_i(x), i = 1, 2, ..., n$ là các VCB tại $x_0$, thì $\sum_{i=1}^{n} \alpha_i(x)$ và $\prod_{i=1}^{n} \alpha_i(x)$ cũng là VCB tại $x_0$.
+
+2. Nếu $\alpha(x)$ là VCB tại $x_0$ và $\beta(x)$ bị chặn trong lân cận của điểm $x_0$, thì $\alpha(x) . \beta(x)$ cũng là VCB tại $x_0$.
+
+3. Cho $\alpha(x), \beta(x)$ là hai VCB tại $x_0$, nếu $\alpha(x) \sim \beta(x)$, thì $c . \alpha(x) \sim c . \beta(x)$.
+
+Ví dụ 2.8. Cho $\alpha \neq \beta$, tìm giới hạn
+
+$$
+\operatorname*{lim}_{x \to 0} \frac{e^{ax} - e^{bx}}{\sin(\alpha x) - \sin(\beta x)}.
+$$
+
+Giải Theo công thức $\operatorname*{lim}_{x \to 0} \frac{e^x - 1}{x} = 1$ ta có $e^x - 1 \sim x$ khi $x \to 0 \Rightarrow e^{ax} - e^{bx} \sim (a - b)x$. Từ $\sin(x) \sim x \Rightarrow \sin(\alpha x) - \sin(\beta x) \sim (\alpha - \beta)x$. Do đó
+
+$$
+\operatorname*{lim}_{x \to 0} \frac{e^{ax} - e^{bx}}{\sin(\alpha x) - \sin(\beta x)} = \operatorname*{lim}_{x \to 0} \frac{(a - b)x}{(\alpha - \beta)x} = \frac{a - b}{\alpha - \beta}.
+$$
+
+# 2.4. Hàm liên tục
+
+## 2.4.1. Định nghĩa
+
+Cho hàm số $y = f(x)$ xác định trên miền $D$ và $x_0 \in D$:
+
+$+ \operatorname{Hàm} s\tilde{0} f(x)$ được gọi là liên tục tại $x_0$ khi và chỉ khi $\lim_{x \to x_0} f(x) = f(x_0).$
+
+Hay $\forall \epsilon > 0, \exists \delta > 0, \forall x : 0 < |x - x_0| < \delta \Rightarrow |f(x) - f(x_0)| < \epsilon.$
+
+$+ \operatorname{Hàm} s\tilde{0} f(x)$ được gọi là liên tục trái tại $x_0$ khi và chỉ khi $\lim_{x \to x_0^-} f(x) = f(x_0).$
+
+Hay $\forall \epsilon > 0, \exists \delta > 0, \forall x : 0 < x - x_0 < -\delta \Rightarrow |f(x) - f(x_0)| < \epsilon.$
+
+$+ \operatorname{Hàm} s\tilde{0} f(x)$ được gọi là liên tục phải tại $x_0$ khi và chỉ khi $\lim_{x \to x_0^+} f(x) = f(x_0).$
+
+Hay $\forall \epsilon > 0, \exists \delta > 0, \forall x : 0 < x - x_0 < \delta \Rightarrow |f(x) - f(x_0)| < \epsilon.$
+
+Nhận xét: $f(x)$ liên tục tại $x_0$ khi và chỉ khi $f(x)$ liên tục trái và liên tục phải tại $x_0$.
+
+$+ \operatorname{Hàm} s\tilde{0} f(x)$ được gọi là gián đoạn tại $x_0$, nếu $f(x)$ không liên tục tại $x_0,$ khi
+
+Hệ quả 2.49. Cho $f(x)$ có đạo hàm cấp 2 trên miền $D$. Khi đó, $f(x)$ lồi trên miền $D$ khi và chỉ khi
+
+$$
+f''(x) \geq 0 \quad \forall x \in D.
+$$
+
+Chứng minh Theo định lý 2.48, $f(x)$ lồi trên $D$ khi và chỉ khi $f'(x)$ tăng trên $D$. Ta đã biết $f'(x)$ tăng trên $D$ khi và chỉ khi $\left(f'(x)\right)' = f''(x) \geq 0 \forall x \in D.$
+
+# 2.11.4. Cực trị của hàm lồi
+
+Cho hàm số $f(x)$ lồi trên miền lồi $D$:
+
+Định lý 2.50.
+i) Nếu $f(x)$ đạt cực tiểu toàn cục trên $D$, thì tập các điểm cực tiểu toàn cục là một tập lồi.
+
+ii) Nếu $f(x)$ là hàm lồi và có cực tiểu toàn cục trên $D$, thì có duy nhất một điểm cực tiểu toàn cục. 
+
+iii) Cho $f(x)$ là hàm lồi, khả vi trên $D \ni (x_0 - \delta, x_0 + \delta) \subseteq D$. Khi đó, $f(x)$ đạt cực tiểu toàn cục tại $x_0$ khi và chỉ khi $f'(x_0) = 0$.
+
+Chứng minh:
+i) Giả sử $x_1, x_2 \in D$ sao cho
+
+$$
+f(x_1) = f(x_2) \leq f(x) \quad \forall x \in D.
+$$
+
+Do $f(x)$ lồi trên $D$, ta có
+
+$$
+\forall \lambda \in [0, 1] \Rightarrow f(\lambda x_1 + (1 - \lambda)x_2) \leq \lambda f(x_1) + (1 - \lambda)f(x_2) = f(x_1).
+$$
+
+ii) (Phần chứng minh) Giả sử ngược lại rằng tồn tại $x_1, x_2 \in D, x_1 \neq x_2$ sao cho
+
+$$
+f(x_1) = f(x_2) \leq f(x) \quad \forall x \in D.
+$$
+
+Do $f(x)$ lồi trên $D$, ta có
+
+$$
+\forall \lambda \in (0, 1) \Rightarrow f \left( \lambda x_1 + (1 - \lambda) x_2 \right) < \lambda f(x_1) + (1 - \lambda) f(x_2) = f \left( x_1' \right),
+$$
+
+Điều này có nghĩa là $x_1$ không phải là điểm cực tiểu toàn cục, trái giả thiết. Vậy tập các điểm cực tiểu nếu tồn tại thì tập điểm đó có duy nhất một phần tử.
+
+ii) Phần thuận dễ dàng được suy ra từ định lý Fermat. Đảo lại, giả sử cho $f'(x_0) = 0$. Theo định lý 2.48, $f'(x)$ tăng trên miền $D$. Vậy $f'(x)$ đổi dấu từ "$-$" sang "$+$" qua điểm $x_0$. Vậy $x_0$ là điểm cực tiểu toàn cục.
+
+Ví dụ 2.51. (Bất đẳng thức Cauchy)
+
+Cho $a_k \geq 0 ~\forall k = 1, 2, ..., n$. Chứng minh rằng
+
+$$
+\frac{a_1 + a_2 + ... + a_n}{n} \geq \sqrt[n]{a_1 a_2 ... a_n}.
+$$
+
+Giải Nếu tồn tại $k : a_k = 0$, thì bất đẳng thức trên luôn đúng.
+
+Nếu $a_k > 0 ~\forall k = 1, 2, ..., n$, thì bất đẳng thức trên có dạng
+
+$$
+\ln \left( \frac{a_1 + a_2 + ... + a_n}{n} \right) \geq \frac{1}{n} \left( \ln a_1 + \ln a_2 + ... + \ln a_n \right).
+$$
+
+$$
+\ln \left( \frac{1}{n} a_1 + \frac{1}{n} a_2 + \ldots + \frac{1}{n} a_n \right) \leq \frac{1}{n} (-\ln a_1) + \frac{1}{n} (-\ln a_2) + \ldots + \frac{1}{n} (-\ln a_n)
+$$
+
+$$
+\left( \frac{1}{n} a_1 + \frac{1}{n} a_2 + \ldots + \frac{1}{n} a_n \right) \leq \frac{1}{n} (-\ln a_1) + \frac{1}{n} (-\ln a_2) + \ldots + \frac{1}{n} (-\ln a_n)
+$$
+
+$$
+\Leftrightarrow f \left( \frac{1}{n} a_1 + \frac{1}{n} a_2 + \ldots + \frac{1}{n} a_n \right) \leq \frac{1}{n} f(a_1) + \frac{1}{n} f(a_2) + \ldots + \frac{1}{n} f(a_n),
+$$
+
+với $f(x) = -\ln x$:
+
+Mặt khác $\textstyle f(x) = -\ln x \Rightarrow f''(x) = \frac{1}{x^2} > 0 \forall x \in (0, +\infty)$. Theo hệ quả 2.49, $f(x)$ lồi trên $(0, +\infty)$. Theo bất đẳng thức Jensen, bất đẳng thức Cauchy được chứng minh.
+
+Ví dụ 2.52. (Bất đẳng thức Schwartz)
+
+Cho $b_k > 0 \forall k = 1, 2, \ldots, n.$ Chứng minh rằng
+
+$$
+\frac { a _ { 1 } ^ { 2 } } { b _ { 1 } } + \frac { a _ { 2 } ^ { 2 } } { b _ { 2 } } + \ldots + \frac { a _ { n } ^ { 2 } } { b _ { n } } \geq \frac { ( a _ { 1 } + a _ { 2 } + \ldots + a _ { n } ) ^ { 2 } } { b _ { 1 } + b _ { 2 } + \ldots + b _ { n } } \quad \forall a _ { 1 } , a _ { 2 } , . . . , a _ { n } .
+$$
+
+Chứng minh Đặt $b = \sum _ { k = 1 } ^ { n } b _ { k }$. Khi đó
+
+$$
+\begin{array} { c }
+{
+\displaystyle \frac { a _ { 1 } ^ { 2 } } { b _ { 1 } } + \frac { a _ { 2 } ^ { 2 } } { b _ { 2 } } + \ldots + \frac { a _ { n } ^ { 2 } } { b _ { n } } \geq \frac { ( a _ { 1 } + a _ { 2 } + \ldots + a _ { n } ) ^ { 2 } } { b _ { 1 } + b _ { 2 } + \ldots + b _ { n } }
+}
+\\
+{
+\displaystyle \Leftrightarrow b _ { 1 } \left( \frac { a _ { 1 } } { b _ { 1 } } \right) ^ { 2 } + b _ { 2 } \left( \frac { a _ { 2 } } { b _ { 2 } } \right) ^ { 2 } + \ldots + b _ { n } \left( \frac { a _ { n } } { b _ { n } } \right) ^ { 2 } \geq ( a _ { 1 } + a _ { 2 } + \ldots + a _ { n } ) ^ { 2 }
+}
+\\
+{
+\displaystyle \Leftrightarrow \frac { b _ { 1 } } { b } \left( \frac { a _ { 1 } } { b _ { 1 } } \right) ^ { 2 } + \frac { b _ { 2 } } { b } \left( \frac { a _ { 2 } } { b _ { 2 } } \right) ^ { 2 } + \ldots + \frac { b _ { n } } { b } \left( \frac { a _ { n } } { b _ { n } } \right) ^ { 2 } \geq \left( \frac { b _ { 1 } } { b } \frac { a _ { 1 } } { b _ { 1 } } + \frac { b _ { 2 } } { b } \frac { a _ { 2 } } { b _ { 2 } } + \ldots + \frac { b _ { n } } { b } \frac { a _ { n } } { b _ { n } } \right) ^ { 2 }
+}
+\\
+{
+\displaystyle \Leftrightarrow \lambda _ { 1 } \left( \frac { a _ { 1 } } { b _ { 1 } } \right) ^ { 2 } + \lambda _ { 2 } \left( \frac { a _ { 2 } } { b _ { 2 } } \right) ^ { 2 } + \ldots + \lambda _ { n } \left( \frac { a _ { n } } { b _ { n } } \right) ^ { 2 } \geq \left( \lambda _ { 1 } \frac { a _ { 1 } } { b _ { 1 } } + \ldots
+}
+
++ \lambda _ { 2 } \frac { a _ { 2 } } { b _ { 2 } } + \ldots + \lambda _ { n } \frac { a _ { n } } { b _ { n } } } \\ { \displaystyle \Leftrightarrow \lambda _ { 1 } f ( x _ { 1 } ) + \lambda _ { 2 } f ( x _ { 2 } ) + \ldots + \lambda _ { n } f ( x _ { n } ) \geq f \big ( \lambda _ { 1 } x _ { 1 } + \lambda _ { 2 } x _ { 2 } + \ldots + \lambda _ { n } x _ { n } \big) }
+$$
+
+Bài 2.18. Kiểm tra định lý Lagrange đối với hàm số
+
+$$
+f(x) = \left\{
+\begin{array}{ll}
+\frac{3 - x^2}{2} & \text{nếu } 0 \leq x \leq 1 \\
+\frac{1}{x} & \text{nếu } x > 1 .
+\end{array}
+\right.
+$$
+
+trên $[0, 2]$. Xác định điểm trung bình $c$: 
+$$
+c_1 = \frac{1}{2}, \quad c_2 = \sqrt{2}
+$$
+
+Bài 2.19. Dùng định lý Lagrange, chứng minh các bất đẳng thức sau:
+
+$$
+\begin{array}{rl}
+& |\sin x - \sin y| \le |x - y| \quad \forall x, y . \\
+& p y^{p-1} (x - y) \le x^p - y^p \le p x^{p-1} (x - y) \quad \forall 0 < x < y, p > 0 . \\
+& |\arctan x - \arctan y| \le |x - y| \quad \forall x, y . \\
+& \frac{a - b}{a} < \ln \frac{a}{b} < \frac{a - b}{b} \quad \forall 0 < b < a . \\
+& \frac{x - y}{\cos^2 y} \le \tan x - \tan y \le \frac{x - y}{\cos^2 x} \quad \forall 0 < y \le x < \frac{\pi}{2} .
+\end{array}
+$$
+
+Bài 2.20. Cho hàm $f(x)$ khả vi trên $(a, b)$. Dùng định lý Lagrange, chứng minh rằng: Nếu hàm số $f(x)$ có đạo hàm bị chẵn trên miền $(a, b)$, thì $f(x)$ liên tục đều trên $(a, b)$.
+
+Bài 2.21. Cho hàm số $f ( x )$ liên tục trên $[ a , b ]$, khả vi trên $( a , b )$ và $f ( x ) \neq mx + n \forall m, n$. Chứng minh rằng: Tồn tại ít nhất $c \in ( a , b )$ sao cho
+
+$$
+\left| \frac { f ( b ) - f ( a ) } { b - a } \right| < | f ^ { \prime } ( c ) | .
+$$
+
+Hướng dẫn: Chia $[ a , b ]$ thành $a = x _ { 0 } < x _ { 1 } < . . . < x _ { n } = b$ và áp dụng định lý Lagrange cho các đoạn $[ x _ { k - 1 } , x _ { k } ] \forall k = 1, 2, ..., n$
+
+Bài 2.22.
+
+Khai triển Taylor của các hàm số sau:
+
+1) $f(x) = \ln \cos x$ tại $x_0 = 0$ đến số hạng $o(x^4)$:
+$$ f(x) = -\frac{x^2}{2} - \frac{x^4}{12} + o(x^4). $$
+
+2) $f(x) = e^{x \cos x}$ tại $x_0 = 0$ đến số hạng $o(x^3)$:
+$$ f(x) = 1 + x + \frac{1}{2} x^2 - \frac{1}{6} x^3 + o(x^3). $$
+
+3) $f(x) = \arcsin x$ tại $x_0 = 0$ đến số hạng $o(x^6)$:
+$$ f(x) = x + \frac{1}{6} x^3 + \frac{3}{40} x^5 + o(x^6). $$
+
+4) $f(x) = (x^2 - 1)e^{2x}$ tại $x_0 = -1$ đến số hạng $o((x+1)^n)$:
+$$ f(x) = \sum_{k=0}^{n} \frac{e^{-2} 2^{k-2} (k-5)}{(k-1)!} (x+1)^k + o\bigl( (x+1)^n \bigr). $$
+
+5) $f(x) = x^2 - 3x + 3$ tại $x_0 = 3$ đến số hạng $o((x-3)^n)$:
+$$ f(x) = 3 + \sum_{k=0}^{n} (-1)^k (x-3)^k + o\big( (x-3)^n \big). $$
+
+Bài 2.23. Dùng quy tắc L'Hospital, tìm các giới hạn sau:
+
+1) $\begin{array} { r l }
+& { \frac { \lim_{\theta \to \infty} \sqrt { \frac { 1 } { \vartheta + 3 \pi ^ { 4 } } - \sqrt { \pi - 2 \pi } } } { \pi - \Theta } } \\
+& { \frac { \lim_{\theta \to \infty} \sqrt { \frac { 1 } { \vartheta + 1 } - \sqrt { \pi - 2 } } } { \pi } \quad \forall \widehat{\mathbf{u}} : \forall \widehat{\mathbf{u}} : \forall } \\
+& { \frac { \lim_{\theta \searrow \infty} \sqrt { \frac { 1 } { \vartheta + \sigma } - \sqrt { \pi - 2 } } } { \pi } \forall \widehat{\mathbf{u}} : \forall \widehat{\mathbf{u}} : \forall } \\
+& { \frac { \lim_{\theta \searrow \infty} } { \pi - \Theta } \left( 2 \ln ( \sin \gamma ) \right) } \\
+& { \frac { \lim_{\theta \searrow \infty} \sqrt { \frac { 1 } { \vartheta + 1 } + 2 \ln ( \sin \gamma ) } } { \pi } } \\
+& { \frac { \lim_{\theta \searrow \infty} } { \pi - \Theta } } \\
+& { \frac { \lim_{\theta \searrow \infty} } { \pi - \Theta } } \\
+& { \frac { \lim_{\theta \searrow \infty} } { \pi - \Theta } } \\
+& { \frac { \lim_{\theta \searrow \infty} } { \pi - \Theta }
+\end{array}$
+
+$( 2 \shuffle \chi ) ^ { \mathrm { tm } \geq 2 }$  
+$\frac { \operatorname* { lim } _ { \theta \searrow \infty } ^ { \infty } } { \pi - \Theta }$
+
+ds: $\frac{2\sqrt{a}}{na}$
+
+ds: $\frac{1}{2}.$
+
+ds: $-\frac{5}{2}.$
+
+ds: $\frac{1}{e}.$
+
+5) ds: $e^{-1}$
+
+7) ds:= $e$
+
+Bài 2.24. (Tìm cực tiểu toàn cục của hàm số) Chi phí khi tàu chạy cả ngày và đêm gồm hai phần: Phần cố định bằng $a$ đồng, phần biến đổi tăng tỷ lệ với lập phương của tốc độ. Hỏi tàu chạy với tốc độ $v$ nào thì kinh tế nhất.
+
+Hướng dẫn: Gọi thời gian tàu chạy là $t$ ngày đêm. Khi đó chi phí là $R = a t + k t v ^ { 3 }$ ($k$ là hệ số tỷ lệ). Vì $\begin{array} { r } { t = \frac { S } { v } } \end{array}$ suy ra
+
+$$
+R = \frac { S a } { v } + k S v ^ { 2 }
+\operatorname*{min} \Leftrightarrow 0 = R' \Leftrightarrow v = \sqrt[3]{\frac{a}{2k}} ,
+$$
+
+vi hàm số $R$ là lồi trên $(0, +\infty)$.
+
+Bài 2.25. Cho $f ( x ) = - \ln ( \ln x )$ với $x \in D = ( 0 , + \infty )$. a) Chứng minh rằng $f ( x )$ lồi trên $D$:   
+b) Từ đó, chứng minh rằng
+
+$$
+\ln { \frac { x + y } { 2 } } \geq \sqrt { \ln x \ln y } \forall x , y > 1 .
+$$
+
+Bài 2.26. Cho $f ( x ) = x \ln x$ với $x \in D = ( 0 , + \infty )$: 
+
+a) Chứng minh rằng $f ( x )$ lồi trên $D$:  
+
+b) Từ đó, chứng minh rằng
+
+$$
+x \ln { \frac { x } { a } } + y \ln { \frac { y } { b } } \geq ( x + y ) \ln { \frac { x + y } { a + b } } \forall a , b , x , y > 0 .
+$$

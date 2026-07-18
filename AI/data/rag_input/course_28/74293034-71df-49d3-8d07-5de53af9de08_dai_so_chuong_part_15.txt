@@ -1,0 +1,289 @@
+# Bài tập Chương 6
+
+6.1. Xét ánh xạ $\eta : \mathcal{M}_{m \times n} \times \mathcal{M}_{m \times n} \to \mathbb{R}$ xác định bởi $\eta(A, B) = \mathrm{tr}(B^t A)$. Trong đó $\mathcal{M}_{m \times n}$ là không gian các ma trận có $m \times n$ và trA là trace của ma trận vuông $A$. Chứng minh $\eta$ là một tích vô hướng.
+
+6.2. Trong không gian $\mathbb{R}^2$, xét dạng song tuyến tính xác định bởi:
+
+$$
+\eta((x_1, y_1), (x_2, y_2)) = x_1 x_2 - 2 x_1 y_2 - 2 y_1 x_2 + 5 y_1 y_2.
+$$
+
+a) Chứng minh $\left(\mathbb{R}^2, \eta\right)$ là không gian vector Euclid.
+
+b) Trục chuẩn hóa Gram-Schmidt cơ sở {(1,0),(0,1)} của $\mathbb{R}^2$:
+
+6.3. Giả sử $\boldsymbol{u} = (x_1, y_1)$, $\nu = (x_2, y_2)$ là hai vector thuộc $\mathbb{R}^2$:
+
+a) Chứng minh rằng dạng song tuyến tính sau là một tích vô hướng trên $\mathbb{R}^2$
+
+$$
+\eta_1(u, \nu) = x_1 x_2 - 2 x_1 y_2 - 2 y_1 x_2 + 7 y_1 y_2.
+$$
+
+b) Tìm các giá trị $k$ để dạng song tuyến tính sau là một tích vô hướng trên $\mathbb{R}^2$:
+
+$$
+\eta_2(u, \nu) = x_1 x_2 - 3 x_1 y_2 - 3 y_1 x_2 + k y_1 y_2.
+$$
+
+c) Tìm các điều kiện của $a, b, c, d \in \mathbb{R}$ để dạng song tuyến tính sau là một tích vô hướng trên $\mathbb{R}^2$:
+
+$$
+\eta_{3}(u, v) = a x_1 x_2 + b x_1 y_2 + c y_1 x_2 + d y_1 y_2.
+$$
+
+6.4. Chứng minh rằng:
+
+(i) Tổng của hai tích vô hướng là một tích vô hướng.
+
+(ii) Tích của một số dương với một tích vô hướng là một tích vô hướng.
+
+6.5. Trong không gian vector Euclid $V$ với tích vô hướng $\langle, \rangle$
+
+a) Chứng minh bất đẳng thức hình bình hành
+
+$$
+\| u + v \|^{2} + \| u - v \|^{2} = 2 \| u \|^{2} + 2 \| v \|^{2}.
+$$
+
+b) Công thức dạng urc $\langle u, v \rangle = \frac{1}{4} \| u + v \|^{2} - \frac{1}{4} \| u - v \|^{2}$.
+
+(c) $\| u \| = \| v \|$ khi và chỉ khi $(u + v, u - v) = 0$:
+
+d) $\| u + v \|^{2} = \| u \|^{2} + \| v \|^{2}$ khi và chỉ khi $(u, v) = 0$.
+
+6.6. Trong không gian vector Euclid $V$. Chứng minh rằng: Với mọi $u, v, w \in V$, $\| u - v \|^{2} \leq 2 (\| u - w \|^{2} + \| w - v \|^{2})$.
+
+6.7. Hai hệ vec tơ $\left\{ u_{1}, \ldots, u_{n} \right\}$, $\left\{ \nu_{1}, \ldots, \nu_{n} \right\}$ của không gian vec tơ Euclide $V$ với tích vô hướng $(u_i, \nu_j) = \delta_{ij} = \begin{cases} 0 & \text{neu } i \neq j \\ 1 & \text{nếu } i = j \end{cases}; i, j = 1, \ldots, n.$
+
+Chứng minh:
+a) Nếu $\left\{ u_{1}, \ldots, u_{n} \right\}$ là hệ trực tinh thì mỗi hệ $\left\{ \nu_{1}, \ldots, \nu_{n} \right\}$ tương ứng của nó cũng độc lập tuyến tính.
+
+b) Với mỗi cơ sở $\left\{ e_{1}, \ldots, e_{n} \right\}$ đều tồn tại duy nhất một cơ sở $\left\{ \nu_{1}, \ldots, \nu_{n} \right\}$ tương ứng của nó. Khi đó nếu $u = \sum_{i=1}^{n} x_i e_i$, $\nu = \sum_{i=1}^{n} y_i e_i$ thì $x_i = (u, \nu_i)$ và $\langle u, \nu \rangle = \sum_{i=1}^{n} x_i y_i.$
+
+6.8. Cho $W$ là không gian vec tơ con của không gian véc tơ Euclide $V$. Chứng minh rằng: với mỗi $\nu \in V$, tồn tại duy nhất véc tơ $u_0 \in W$ sao cho:
+
+\[
+(u_0, w) = (\nu, w) \quad \forall w \in W.
+\]
+
+$$
+\begin{array} { r } { \left\| u _ { 0 } - \nu \right\| ^ { 2 } \leq \left\| u - \nu \right\| ^ { 2 } \mathrm { ~với~mọi~} u \in W \mathrm { . } } \end{array}
+$$
+
+$u _ { 0 }$ được gọi là hình chiếu của $\nu$ xuông $W$.
+
+6.9. Cho $W _ { 1 } , W _ { 2 }$ là hai không gian con của không gian véc tơ Euclide $V$ thỏa mãn $\mathrm{dim} W _ { 1 } < \mathrm{dim} W _ { 2 }$. Chứng minh tồn tại véc tơ khác O của $W _ { 2 }$ trực giao với mọi véc tơ của $W _ { 1 }$:
+
+6.10. Xét ánh xạ $\eta : \mathcal{M} _ { 2 } \times \mathcal{M} _ { 2 } \to \mathbb{R}$ xác định bởi $\eta ( A , B ) = \mathrm{tr}(A^t M B)$, trong đó $M = \left[ \begin{array}{ll} 1 & 2 \\ 3 & 5 \end{array} \right]$, và $\mathcal{M}_2$ là gì?
+
+Chứng minh rằng $\eta$ là một dạng song tuyến tính.
+
+$$
+\mathrm{Tìm~ma~trận~của~}\eta~trong~cơ~sở~\left\{\left[ 1 \quad 0 \right], \left[ 0 \quad 1 \right]\right\}.
+$$
+
+6.11. Giả sử $\eta$ là một dạng song tuyến tính trên $\mathbb{R} ^ { 2 }$ xác định bởi:
+
+$$
+\eta \big( ( x _ { 1 } , x _ { 2 } ) , ( y _ { 1 } , y _ { 2 } ) \big) = 2 x _ { 1 } y _ { 1 } - 3 x _ { 1 } y _ { 2 } + x _ { 2 } y _ { 2 }.
+$$
+
+a) Tìm ma trận $A$ của $\eta$ trong cơ sở $\left\{ u_{1} = (1,0), u_{2} = (1,1) \right\}$
+
+b) Tìm ma trận $B$ của $\eta$ trong cơ sở $\left\{ \nu_{1} = (2,1), \nu_{2} = (1,-1) \right\}$
+
+c) Tìm ma trận $P$ chuyển từ cơ sở $\left\{ u_{i} \right\}$ sang $\left\{ \nu_{i} \right\}$, và nghiệm lại rằng $B = P^{t} A P.$
+
+6.12. Tìm ma trận trực giao $P$ sao cho $P^{t} A P$ có dạng chéo:
+
+$$
+\mathbf{a}) \left[ \begin{array}{lll}
+7 & -2 & 2 \\
+-2 & 5 & 0 \\
+2 & 0 & 5
+\end{array} \right],
+$$
+
+$$
+\mathbf{b}) \left[ \begin{array}{lll}
+0 & 2 & 2 \\
+2 & 3 & -1 \\
+2 & -1 & 3
+\end{array} \right],
+$$
+
+$$
+\mathbf{c}) \left[ \begin{array}{lll}
+5 & -1 & 2 \\
+-1 & 5 & 2 \\
+2 & 2 & 2
+\end{array} \right],
+$$
+
+$$
+\mathrm{d}) \left[ \begin{array}{lll}
+2 & -1 & -1 \\
+-1 & 2 & -1 \\
+-1 & -1 & 2
+\end{array} \right].
+$$
+
+6.13. Cho $\alpha, \beta$. Tìm giá trị lớn nhất và giá trị nhỏ nhất của $a_{12}$:
+
+6.14. Giả sử $\boldsymbol{Q}$ là một dạng toàn phương trên không gian véc tơ $V$ với dạng cực trị là $\eta$. Nghĩa lại ràng $\eta(u, \nu) = \frac{1}{2} \left( Q(u + \nu) - Q(u) - Q(\nu) \right), u, \nu \in V.$
+
+6.15. Giả sử $\eta$ là một dạng song tuyến tính trên không gian véc tơ $V$. Với mỗi tập con $S \subset V$, ký hiệu:
+
+$$
+S^{\perp} = \left\{ \nu \in V : \eta(u, \nu) = 0, \forall u \in S \right\}; S^{\top} = \left\{ \nu \in V : \eta(\nu, u) = 0, \forall u \in S \right\}.
+$$
+
+a) Chứng minh rằng: i) $S^{\bot}, S^{\top}$ là hai không gian véc tơ con của $V$; ii) Nếu $S_1 \subset S_2$, thì $S_2^{\perp} \subset S_1^{\perp}$ và $S_2^{\top} \subset S_1^{\top}$; iii) $\{ \mathbf{0} \}^{\perp} = \{ \mathbf{0} \}^{\top} = V$.
+
+b) Giả sử $U, W$ là hai không gian véc tơ con của $V$. Chứng minh rằng: i) $(U + W)^{\perp} = U^{\perp} \cap W^{\perp}$; ii) $(U \cap W)^{\perp} = U^{\perp} + W^{\perp}$.
+
+6.16. Tìm một cơ sở của không gian véc tơ con $W$ của $\mathbb{R}^{4}$ trực giao với hai véc tơ $u_1 = (1, -2, 3, 4)$ và $u_2 = (3, -5, 7, 8)$.
+
+6.17. Giả sử $W$ là không gian véc tơ con của $\mathbb{R}^5$ sinh bởi $u = (1, 2, 3, -1, 2)$ và $\nu = (2, 4, 7, 2, -1)$. Hãy tìm một cơ sở của phần bù trực giao $W^\perp$ của $W$.
+
+6.18. Trong không gian véc tơ $\mathbf{P}_2$ các đa thức bậc $\leq 2$, xét tương ứng
+
+$$
+\langle p, q \rangle = \int_0^1 p(t) q(t) dt.
+$$
+
+a) Chứng minh rằng $\langle , \rangle$ là một tích vô hướng.
+
+b) Tìm một cơ sở của không gian con $W$ trực giao với $q(t) = 2t + 1$: Sử dụng phương pháp Gram-Schmidt cho tập $\{1, t, t^2\}$:
+
+6.19. Không gian véc tơ $\mathcal{M}_2$ các ma trận vuông cấp 2 với tích vô hướng
+
+$$
+\eta(A, B) = \mathrm{tr}(B^t A).
+$$
+
+a) Giả sử $\left\{\begin{bmatrix}1 & 0 \\ 0 & 0\end{bmatrix}, \begin{bmatrix}0 & 1 \\ 0 & 0\end{bmatrix}, \begin{bmatrix}0 & 0 \\ 1 & 0\end{bmatrix}, \begin{bmatrix}0 & 0 \\ 0 & 1\end{bmatrix}\right\}$ là cơ sở chuẩn.
+
+b) Tìm một cơ sở của phần bù trực giao của: (i) Các ma trận đường chéo. (ii) Các ma trận đối xứng.
+
+6.20. Với mỗi dạng toán phương $\boldsymbol{Q}$ sau hãy viết ma trận trong cơ sở chính tắc và tìm cơ sở biểu diễn $\hat{\mathbf{d}} \hat{\mathbf{0}}$ của $\boldsymbol{Q}$ trong cơ sở này có dạng chính tắc:
+
+a) $Q ( x _ { 1 } , x _ { 2 } , x _ { 3 } ) = { x _ { 1 } } ^ { 2 } + 5 { x _ { 2 } } ^ { 2 } - 4 { x _ { 3 } } ^ { 2 } + 2 x _ { 1 } x _ { 2 } - 4 x _ { 1 } x _ { 3 } .$
+
+b) $Q ( x _ { 1 } , x _ { 2 } , x _ { 3 } ) = 4 { x _ { 1 } } ^ { 2 } + { x _ { 2 } } ^ { 2 } + { x _ { 3 } } ^ { 2 } - 4 x _ { 1 } x _ { 2 } + 4 x _ { 1 } x _ { 3 } - 3 x _ { 2 } x _ { 3 } .$
+
+c) $Q ( x _ { 1 } , x _ { 2 } , x _ { 3 } ) = x _ { 1 } x _ { 2 } + x _ { 1 } x _ { 3 } + x _ { 2 } x _ { 3 } .$
+
+d) $Q ( x _ { 1 } , x _ { 2 } , x _ { 3 } ) = 3 { x _ { 1 } } ^ { 2 } + 2 { x _ { 2 } } ^ { 2 } - { x _ { 3 } } ^ { 2 } - 2 { x _ { 4 } } ^ { 2 } + 2 x _ { 1 } x _ { 2 } - 4 x _ { 2 } x _ { 3 } + 2 x _ { 2 } x _ { 4 } .$
+
+e) $Q ( x _ { 1 } , x _ { 2 } , x _ { 3 } ) = 2 { x _ { 1 } } ^ { 2 } + 3 { x _ { 2 } } ^ { 2 } + 4 { x _ { 3 } } ^ { 2 } - 2 x _ { 1 } x _ { 2 } + 4 x _ { 1 } x _ { 3 } - 3 x _ { 2 } x _ { 3 } .$
+
+f) $Q ( x _ { 1 } , x _ { 2 } , x _ { 3 } ) = 3 { x _ { 1 } } ^ { 2 } - 2 { x _ { 2 } } ^ { 2 } + 2 { x _ { 3 } } ^ { 2 } + 4 x _ { 1 } x _ { 2 } - 3 x _ { 1 } x _ { 3 } - x _ { 2 } x _ { 3 } .$
+
+6.21. Với mỗi dạng phương trình $\boldsymbol{Q}$ sau hãy đưa biểu thức toán đạọ về dạng chính tắc bằng phương pháp chéo hóa trục giao.
+
+$$
+\begin{array} { r l }
+& {\overset { , } { Q } ( x _ { 1 } , x _ { 2 } , x _ { 3 } ) = 6 { x _ { 1 } } ^ { 2 } + 5 { x _ { 2 } } ^ { 2 } + 7 { x _ { 3 } } ^ { 2 } - 4 x _ { 1 } x _ { 2 } + 4 x _ { 1 } x _ { 3 } . } \\
+& {\overset { , } { Q } ( x _ { 1 } , x _ { 2 } , x _ { 3 } ) = { x _ { 1 } } ^ { 2 } + { x _ { 2 } } ^ { 2 } + 5 { x _ { 3 } } ^ { 2 } - 6 x _ { 1 } x _ { 2 } - 2 x _ { 1 } x _ { 3 } + 2 x _ { 2 } x _ { 3 } . }
+\end{array}
+$$
+
+$Q ( x _ { 1 } , x _ { 2 } , x _ { 3 } ) = { x _ { 1 } } ^ { 2 } + { x _ { 2 } } ^ { 2 } + { x _ { 3 } } ^ { 2 } + 4 x _ { 1 } x _ { 2 } + 4 x _ { 1 } x _ { 3 } + 4 x _ { 2 } x _ { 3 } .$
+
+$Q ( x _ { 1 } , x _ { 2 } , x _ { 3 } ) = 17 { x _ { 1 } } ^ { 2 } + 14 { x _ { 2 } } ^ { 2 } + 14 { x _ { 3 } } ^ { 2 } - 4 x _ { 1 } x _ { 2 } - 4 x _ { 1 } x _ { 3 } - 8 x _ { 2 } x _ { 3 } .$
+
+$Q ( x _ { 1 } , x _ { 2 } , x _ { 3 } ) = { x _ { 1 } } ^ { 2 } - 5 { x _ { 2 } } ^ { 2 } + { x _ { 3 } } ^ { 2 } + 4 x _ { 1 } x _ { 2 } + 2 x _ { 1 } x _ { 3 } + 4 x _ { 2 } x _ { 3 } .$
+
+6.22. Tìm $\lambda$ tương ứng với dạng toàn phương sau xác định đường:
+
+$$
+\begin{array} { r l }
+& Q ( x _ { 1 } , x _ { 2 } , x _ { 3 } ) = 5 { x _ { 1 } } ^ { 2 } + { x _ { 2 } } ^ { 2 } + \lambda { x _ { 3 } } ^ { 2 } + 4 x _ { 1 } x _ { 2 } - 2 x _ { 1 } x _ { 3 } - 2 x _ { 2 } x _ { 3 } . \\
+& Q ( x _ { 1 } , x _ { 2 } , x _ { 3 } ) = 2 { x _ { 1 } } ^ { 2 } + { x _ { 2 } } ^ { 2 } + 3 { x _ { 3 } } ^ { 2 } + 2 \lambda x _ { 1 } x _ { 2 } + 2 x _ { 1 } x _ { 3 } . \\
+& Q ( x _ { 1 } , x _ { 2 } , x _ { 3 } ) = { x _ { 1 } } ^ { 2 } + { x _ { 2 } } ^ { 2 } + 5 { x _ { 3 } } ^ { 2 } + 2 \lambda x _ { 1 } x _ { 2 } - 2 x _ { 1 } x _ { 3 } + 4 x _ { 2 } x _ { 3 } . \\
+& Q ( x _ { 1 } , x _ { 2 } , x _ { 3 } ) = { x _ { 1 } } ^ { 2 } - 4 { x _ { 2 } } ^ { 2 } + 2 { x _ { 3 } } ^ { 2 } + 2 \lambda x _ { 1 } x _ { 2 } + 4 x _ { 1 } x _ { 3 } .
+\end{array}
+$$
+
+6.23.\*) Hãy đưa các đường bậc hai có phương trình sau $\mathbf { v } \dot { \hat { \mathbf { e } } }$ dạng chính tắc và viết tên chung:
+
+a) $3 x ^ { 2 } + 8 x y - 3 y ^ { 2 } + 180 = 0.$  
+b) $17 x ^ { 2 } + 12 x y + 8 y ^ { 2 } - 80 = 0.$  
+c) $7 x ^ { 2 } + 6 x y - y ^ { 2 } + 28 x + 12 y + 28 = 0.$  
+d) $19 x ^ { 2 } + 6 x y + 11 y ^ { 2 } + 38 x + 6 y - 18 = 0.$  
+e) $4 x ^ { 2 } + 9 x y + 12 y ^ { 2 } - 4 x + 6 y + 1 = 0.$  
+
+6.24.\*) Hãy đưa các mặt bậc hai có phương trình sau $\mathrm { v } \dot { \hat { \mathbf { e } } }$ dạng chính tắc và viết tên chung:
+
+a) \(7x^2 + 7y^2 + 10z^2 - 2xy - 4xz + 4yz - 12x + 12y + 60z = 24;\)
+b) \(2xy - 6x + 10y + z = 31\);
+c) \(3y^2 + 3z^2 + 4xy + 4xz - 2yz + 8x + 8y + 8z = 0;\)
+d) \(2x^2 + 2y^2 + 3z^2 - 2xz - 2yz = 16;\)
+e) \(2xy + 2xz + 2yz - 6x - 6y - 12z = 0\);
+f) \(x^2 - 5y^2 + z^2 + 4xy + 2xz + 4yz + 18x + 18y + 45 = 0.\)
+
+(20
+
+6.25.) Cho \(f\) tự đồng cấu tuyến tính của không gian vector Euclide \((V, \langle , \rangle)\). Chứng minh ba mệnh đề sau tương đương:
+
+(i) Với mọi \(\nu \in V\), \(\left<f (\nu), \nu\right> = 0\)
+
+(ii) Với mọi \(\nu, u \in V\), \(\left<f (\nu), u\right> = -\langle f (u), \nu\rangle;\)
+
+(iii) Ma trận của \(f\) trong cơ sở chuẩn là phần đối xứng.
+
+6.26.
+a) \(A, B\) là hai ma trận vuông cấp \(n\). Chứng minh:
+
+$$
+\forall X, Y \in \mathbb{R}^n, \quad XAY^t = XBY^t \Rightarrow A = B.
+$$
+
+b) \(A, B\) là hai ma trận đối xứng cấp \(n\). Chứng minh:
+
+Với mọi \(X \in \mathbb{R}^n\), \(XAX^t = XBX^t \Rightarrow A = B\)
+
+c) \(A\) là ma trận vuông cấp \(n\). Chứng minh \(A\) đối xứng khi và chỉ khi với mọi \(X \in \mathbb{R}^n\), \(XAX^t = 0\):
+
+6.27. \*） Gia sư $A = \left[ a_{ij} \right]$ là hai ma trận trực giao cấp $n$. Chứng minh rằng $\sum_{1 \le i, j \le n} |a_{ij}| \le n$. Khi nào thì có dạng húc.
+
+（20
+
+6.28.\*) Gia sư $\mathcal{B}$ là một cơ sở chuẩn của không gian véc tơ Euclide $n$ chiều $V$: $\left\{\nu_1, . . . , \nu_n\right\}$ là một hệ véc tơ của $V$:
+
+a) Chứng minh $\left| \operatorname{det}_{\mathcal{B}} \left\{\nu_1, . . . , \nu_n\right\} \right| \leq \prod_{i=1}^{n} \|\nu_i\|$; （204
+
+b) Xét trường hợp dạng thực.
+
+6.29.\*) a) Chứng minh rằng với mỗi hệ véc tơ $\left\{\nu_1, . . . , \nu_n\right\}$ của không gian Euclide $V$ ta luôn có:
+
+$$
+\begin{array}{r}
+| \nu_{1}, \nu_{1} \quad \nu_{1}, \nu_{2} \quad \ldots \quad \nu_{1}, \nu_{k} | \\
+\nu_{2}, \nu_{1} \quad \nu_{2}, \nu_{2} \quad \ldots \quad \nu_{2}, \nu_{k} |_{\Sigma^{0}} \\
+\ldots \qquad \ldots \qquad \ldots \qquad \ldots \\
+\nu_{k}, \nu_{1} \quad \nu_{k}, \nu_{2} \quad \ldots \quad \nu_{k}, \nu_{k} |
+\end{array}
+$$
+
+b) Nếu $\left\{\boldsymbol{e}_1, . . . , \boldsymbol{e}_k\right\}$ độc lập tuyến tính thì:
+
+Ngược lại, với mỗi $b _ { 1 } , . . . , b _ { k }$ cho trước, tồn tại duy nhất $\nu$ sao cho $b _ { i } = \left. \nu , e _ { i } \right.$ và bất đẳng thức trên trở thành đẳng thức.
+
+c) Chứng minh rằng nếu $A$ là ma trận của một dạng toàn phương xác định
+
+đúng thì $Q ( x _ { 1 } , . . . , x _ { n } ) = \left| \begin{array} { l l l l } { 0 } & { x _ { 1 } } & { \dots } & { x _ { n } } \\ { x _ { 1 } } & & & \\ { \dots } & & { A } & \\ { x _ { n } } & & & \end{array} \right| \underset { x \in \dot{\bf{d}} } {\mathrm{xis}}\mathrm{{dinh}}\mathrm{\hat{am}}.$
+
+6.30. Cho $\eta , \varphi$ là hai tích vô hướng trên không gian véc tơ $n$ chiều $V$ sao cho $\forall u, \nu \in V : \eta ( u, \nu ) = 0 \Longrightarrow \varphi ( u, \nu ) = 0$. Chứng minh tồn tại $k \in \mathbb{R} : \varphi ( u, \nu ) = k \eta ( u, \nu )$.
+
+6.31. Cho $\boldsymbol{Q}$ là một dạng toàn phương trên không gian véc tơ $n$ chiều $V$ có chỉ số quy định $( p , q )$. $W$ là không gian véc tơ con của $V$. Chứng minh:
+
+a) Nếu $Q \big| _ { W }$ xác định dương thì $\dim ( W ) \leq p$.
+
+b) Nếu $Q \big| _ { W }$ xác định âm thì $\dim ( W ) \leq q$.
+
+c) Nếu $\dim ( W ) > \mathrm{max} ( p , q )$ thì $Q \big| _ { W }$ không xác định, nghĩa là tồn tại một véc tơ $\nu \in W$, $\nu \neq 0$ sao cho $Q ( \nu ) = 0$.
+
+# HƯỚNG DẪN BÀI TẬP

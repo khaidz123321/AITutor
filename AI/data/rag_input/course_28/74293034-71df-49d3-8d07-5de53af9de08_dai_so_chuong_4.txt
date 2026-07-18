@@ -1,0 +1,913 @@
+# CHƯƠNG 4 HỆ PHƯƠNG TRÌNH TUYẾN TÍNH
+
+Hệ phương trình tuyến tính là bài toán thường gặp phải khi nghiên cứu các hệ tuyến tính. Đối với hệ phi tuyến người ta xấp xỉ bằng hệ tuyến tính. Vì vậy hệ phương trình tuyến tính có rất nhiều ứng dụng trong thực tế.
+
+Nhờ sự hỗ trợ của công nghệ thông tin, các bài toán hệ phương trình tuyến tính ngày càng được ưa chuộng rộng rãi hơn. Có thể chỉ ra đây một vài bài toán dạng này:
+
+- Sự phân phối dòng điện trong những sơ đồ có nhiều ghép nối.
+- Giải gần đúng những bài toán của lý thuyết trường.
+- Giải gần đúng một vài bài toán trong các vấn đề bức xạ điện từ.
+- Sự phân phiền vật liệu các dòng nước trong các hệ thủy lực học phức tạp.
+- Ứng dụng phân tích thống kê vào tâm lý học, xã hội học và kinh tế học.
+
+- Chuỗi Markov, phân bố định hướng của chuỗi Markov ứng dụng trong bài toán chuyển mạch của tổng đài...
+
+Hệ phương trình tuyến tính đã được biết đến rất sớm. Ở Trung Quốc người ta tìm thấy một cuốn sách có khoảng từ năm 500 trước công nguyên, trong đó có những chỉ dẫn về việc dùng một bàn tính để giải các hệ phương trình tuyến tính qua các ví dụ cụ thể. Phương pháp giải này chính là thuật toán khử Gauss. Ở châu Âu thuật toán này đã được mô tả trong công trình của Buteo (Pháp) năm 1550, trước Gauss hai thế kỷ. Một phương pháp khác để giải hệ phương trình tuyến tính là sử dụng định thức của Cramer.
+
+Thoạt tiên ta có thể thấy rằng hình như vấn đề giải hệ phương trình tuyến tính dạng cơ sở và có thể giải quyết bằng những phương tiện tính toán sơ cấp quen biết. Tuy nhiên, để giải các bài toán nếu ra ở trên ta thường phải khảo sát khoảng từ 150 đến 200 phương trình đồng thời. Tình trạng đó trong thực hành đã gây ra nhiều khó khăn lớn đến nỗi hầu như không thể giải quyết nội dung nếu chỉ dùng phương pháp sơ cấp. Với sự hỗ trợ của máy tính và các thuật toán mới đã khiến cho hệ phương trình tuyến tính được ứng dụng hiệu quả để giải quyết các bài toán thực tế. Mùa hè năm 1949, Giáo sư Wassily Leontief trường Đại học Harvard đã gửi đến Trung tâm tính toán của trường Đại học Mark I đề nghị giải hệ phương trình tuyến tính $\mathrm{g} \dot{\mathrm{o}} \mathrm{m} 500$ phương trình với 500 ánh biểu diễn các chỉ tiêu kinh tế của Mỹ. Mark I là máy trong những trung tâm máy tính điện tử lớn nhất thời bấy giờ cũng không giải quyết được. Leontief buộc phải rút gọn bài toán về hệ 45 phương trình với 45 ánh. Với kết quả này, Leontief nhận được giải Nobel kinh tế năm 1973, ông ta được xem là người mở cánh cửa vào kỷ nguyên mới của các mô hình toán học về kinh tế.
+
+Một hệ phương trình tuyến tính có thể viết dưới dạng ma trận, dưới dạng một véc tơ là một hợp tuyến tính của một hệ các véc tơ khác hoặc biểu thị cấu trúc toạ độ của một ánh xạ tuyến tính (Chương 5).
+
+Nếu ta ký hiệu các hệ số của hệ m phương trình có $n$ ẩn thành một ma trận có $m \times n$, các ẩn thành ma trận cột $n { \times } 1$, các hệ số vế sau thành ma trận cột $m { \times } 1$, thì hệ phương trình đã cho có thể biểu diễn dưới dạng ma trận. Với cách biểu diễn này ta thấy nếu ma trận các hệ số khả nghịch thì hệ phương trình có duy nhất nghiệm (hệ Cramer).
+
+Nếu ta xét $n + 1$ véc tơ có m thành phần trong đó n véc tơ đầu là các hệ số độc lập với các ẩn còn véc tơ thứ $n + 1$ là hệ số của vế sau của hệ phương trình. Khi đó hệ phương trình được biểu diễn dưới dạng véc tơ, vế sau là một tổ hợp tuyến tính của $n$ véc tơ các hệ số. Với cách biểu diễn này thì hệ phương trình có nghiệm khi và chỉ khi véc tơ vế sau thuộc vào không gian con sinh bởi n véc tơ của các hệ số.
+
+Điều này cho thấy ta có thể giải quyết một bài toán hệ phương trình tuyến tính bằng ma trận, bằng biểu diễn thành tổ hợp tuyến tính. Điều kiện tồn tại nghiệm liên quan đến hạng của hệ véc tơ hay tập ảnh của ánh xạ tuyến tính và ngược lại. Vì vậy khi học chương này đòi hỏi học viên thay đổi mối liên kết giữa các khái niệm trên để giải quyết bài toán một cách linh hoạt. Học viên cần nắm vững và vận dụng thành thạo hai phương pháp: phương pháp Cramer và phép khử Gauss để giải hệ phương trình tuyến tính.
+
+Phương pháp Cramer sử dụng định thức để giải hệ phương trình, khi Cramer đưa ra quy tắc này thì nó trở thành "một" trong các công trình về toán học được dùng trong một thời gian dài. Tuy nhiên phương pháp khử của Gauss đôi khi tỏ ra đơn giản và hiệu quả hơn. Giải bài toán theo phương pháp khử của Gauss là sử dụng các phép biến đổi tương đương lên các phương trình của hệ để đưa hệ phương trình cần giải về hệ tương đương đơn giản hơn mà ta dễ dàng tìm được nghiệm. Thực chất của phương pháp này là sử dụng các phép biến đổi tương đương trong dọc lên các hàng của ma trận hệ số của hệ phương trình.
+
+Hệ phương trình tuyến tính thuần nhất liên quan đến nhân của ảnh xạ tuyến tính được khảo sát trong chương 5, Tập hợp nghiệm của hệ phương trình thuần nhất là không gian vector con của $\mathbb{R}^n$ (Định lý 4.5).
+
+# 4.1. KHAI NIỆM HỆ PHƯƠNG TRÌNH TUYẾN TÍNH
+
+Trong không gian với hệ trục tọa độ Oxyz, tập hợp các điểm có tọa độ $(x, y, z)$ thỏa mãn phương trình $Ax + By + Cz = D$ là một mặt phẳng.
+
+Do đó tập hợp nghiệm của hệ phương trình $\left\{ \begin{array}{l} A_1 x + B_1 y + C_1 z = D_1 \\ A_2 x + B_2 y + C_2 z = D_2 \end{array} \right.$ là giao của hai mặt phẳng, vì vậy hệ phương trình có thể vô nghiệm hoặc hữu số nghiệm.
+
+Tương tự tập hợp nghiệm của hệ phương trình $\left\{ \begin{array} { l l } { A _ { 1 } x + B _ { 1 } y + C _ { 1 } z = D _ { 1 } } \\ { A _ { 2 } x + B _ { 2 } y + C _ { 2 } z = D _ { 2 } } \\ { A _ { 3 } x + B _ { 3 } y + C _ { 3 } z = D _ { 3 } } \end{array} \right.$ là giao của ba mặt phẳng, vì vậy hệ phương trình có thể vô nghiệm hoặc duy nhất nghiệm hoặc vô số nghiệm.
+
+Khái niệm hệ phương trình tuyến tính tổng quát và phương pháp giải được xét trong các mục sau.
+
+# 4.1.1. Đạng tổng quát của hệ phương trình tuyến tính
+
+Hệ m phương trình tuyến tính n ẩn có dạng tổng quát:
+
+$$
+{ \left\{ \begin{array} { l } { a _ { 1 1 } x _ { 1 } + a _ { 1 2 } x _ { 2 } + . . . + a _ { 1 n } x _ { n } = b _ { 1 } } \\ { a _ { 2 1 } x _ { 1 } + a _ { 2 2 } x _ { 2 } + . . . + a _ { 2 n } x _ { n } = b _ { 2 } } \\ { . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+Nghiệm của hệ phương trình là bao gồm $n$ số $\left( x _ { 1 } , x _ { 2 } , . . . , x _ { n } \right)$ sao cho khi thay vào (4.1) ta có các đẳng thức đúng. Giải một hệ phương trình là đi tìm tập hợp nghiệm của hệ.
+
+Hai hệ phương trình cùng dạng là tương đương nếu tập hợp nghiệm của chúng bằng nhau. Vì vậy để giải một hệ phương trình ta có thể giải hệ phương trình tương đương của nó.
+
+# 4.1.2. Đạng ma trận của hệ phương trình tuyến tính
+
+Với hệ (4.1) ta xét các ma trận:
+
+$$
+A = \left[ \begin{array} { l l l l } a _ { 1 1 } & a _ { 1 2 } & \ldots & a _ { 1 n } \\ a _ { 2 1 } & a _ { 2 2 } & \ldots & a _ { 2 n } \\ \vdots & \vdots & \ddots & \vdots \\ a _ { m 1 } & a _ { m 2 } & \ldots & a _ { m n } \end{array} \right] , B = \left[ \begin{array} { l } b _ { 1 } \\ b _ { 2 } \\ \vdots \\ b _ { m } \end{array} \right] , X = \left[ \begin{array} { l } x _ { 1 } \\ x _ { 2 } \\ \vdots \\ x _ { n } \end{array} \right] .
+$$
+
+$A, B, X$ lần lượt được gọi là ma trận hệ số, ma trận vế phải và ma trận nghiệm. Khi đó hệ phương trình (4.1) được viết lại dưới dạng ma trận:
+
+$$
+A X = B.
+$$
+
+Trong trường hợp $A$ khả nghịch thì hệ phương trình có nghiệm $X = A ^ { - 1 } B$.
+
+# 4.1.3. Đạng véc tơ của hệ phương trình tuyến tính
+
+Nếu ta ký hiệu vector cột thứ $i$ của ma trận $A$ là $\nu_i = (a_{1i}, . . . , a_{mi}) \in \mathbb{R}^m$ và vector sau $b = (b_1, . . . , b_m) \in \mathbb{R}^m$, thì hệ (4.1) được viết dưới dạng vector:
+
+$$
+x_1\nu_1 + x_2\nu_2 + . . . + x_n\nu_n = b.
+$$
+
+(4.4)
+
+Với cách viết này ta thấy rằng hệ phương trình (4.1) có nghiệm khi và chỉ khi $b \in \operatorname{span}\{\nu_1, . . . , \nu_n\}.$
+
+Ví dụ 4.1: Xét hệ phương trình viết dưới dạng tổng quát:
+
+$$
+\left\{
+\begin{array}{ll}
+2x_1 + 2x_2 - x_3 + x_4 = 4 \\
+4x_1 + 3x_2 - x_3 + 2x_4 = 6 \\
+8x_1 + 5x_2 - 3x_3 + 4x_4 = 12
+\end{array}
+\right.
+$$
+
+Hệ phương trình viết dưới dạng ma trận như sau:
+
+$$
+{ \left[ \begin{array} { l l l l } { 2 } & { 2 } & { - 1 } & { 1 } \\ { 4 } & { 3 } & { - 1 } & { 2 } \\ { 8 } & { 5 } & { - 3 } & { 4 } \end{array} \right] } { \left[ \begin{array} { l } { x _ { 1 } } \\ { x _ { 2 } } \\ { x _ { 3 } } \\ { x _ { 4 } } \end{array} \right] } = { \left[ \begin{array} { l } { 4 } \\ { 6 } \\ { 12 } \end{array} \right] }
+$$
+
+Xét các vector:
+
+$$
+\nu _ { 1 } = ( 2 , 4 , 8 ) , \nu _ { 2 } = ( 2 , 3 , 5 ) , \nu _ { 3 } = ( - 1 , - 1 , - 3 ) , \nu _ { 4 } = ( 1 , 2 , 4 ) ; b = ( 4 , 6 , 12 ).
+$$
+
+Khi đổi hệ phương trình trên có thể viết dưới dạng vector:
+
+$$
+x _ { 1 } ( 2 , 4 , 8 ) + x _ { 2 } ( 2 , 3 , 5 ) + x _ { 3 } ( - 1 , - 1 , - 3 ) + x _ { 4 } ( 1 , 2 , 4 ) = ( 4 , 6 , 12 ).
+$$
+
+# 4.2. ĐỊNH LÝ TỒN TẠI Nghiệm
+
+Định lý 4.1: (Kronecker-Capelli) Hệ phương trình (4.1) có nghiệm khi và chỉ khi $r(A) = r(\tilde{A})$ trong đó $\tilde{A}$ là ma trận được tạo bằng cách bổ sung thêm vào ma trận hệ số $A$ một cột cuối cùng là vector phải của hệ phương trình.
+
+$$
+r(A) = r(\tilde{A}); \quad \tilde{A} = \left[ \begin{array}{cccc}
+a_{11} & \ldots & a_{1n} & b_1 \\
+\vdots & \ddots & \vdots & \vdots \\
+a_{m1} & \ldots & a_{mn} & b_m
+\end{array} \right].
+$$
+
+Chứng minh: Hệ (4.1) có nghiệm khi và chỉ khi tồn tại $x_1, x_2, \ldots, x_n \in \mathbb{R}^n$ sao cho $x_1\nu_1 + x_2\nu_2 + \ldots + x_n\nu_n = b$. Nghĩa là $b \in \operatorname{span}\{\nu_1, \ldots, \nu_n\}$ ($b$ biểu diễn được thành hợp thức tuyến của $\{\nu_1, \ldots, \nu_n\}$). Vì vậy $r(\nu_1, \ldots, \nu_n) = r(\nu_1, \ldots, \nu_n, b)$. Do đó $r(A) = r(\tilde{A})$.
+
+Vi dụ 4.2: $\mathsf { H } \hat{\mathsf { e }}$ phương trình trong ví dụ 4.1 có ma trận hệ số $A = \left[ \begin{array}{llll}
+2 & 2 & -1 & 1 \\
+4 & 3 & -1 & 2 \\
+8 & 5 & -3 & 4
+\end{array} \right] ,$ ma trận bổ sung cột cuối $\widetilde{A} = \left[ \begin{array}{lllll}
+2 & 2 & -1 & 1 & 4 \\
+4 & 3 & -1 & 2 & 6 \\
+8 & 5 & -3 & 4 & 12
+\end{array} \right] .$
+
+Hàng $r(A) = r(\widetilde{A}) = 3$, do đó hệ phương trình có nghiệm.
+
+# 4.3. PHƯƠNG PHÁP CRAMER
+
+## 4.3.1. Hệ Cramer và cách giải
+
+Định nghĩa 4.2: Hệ phương trình tuyến tính với số phương trình bằng số ẩn và định thức của ma trận hệ số khác 0 được gọi là hệ Cramer.
+
+Định lý 4.2: Mọi hệ Cramer đều tồn tại duy nhất nghiệm.
+
+Cụ thể, hệ $\sum_{j=1}^{n} a_{ij} x_j = b_i , \ i = 1, ..., n$ có công thức nghiệm $x_i = \frac{D_i}{D}, \ i = 1, ..., n ;$ trong đó 
+\[
+D = \operatorname*{det} A = D_{\mathcal {B}} \left\{\nu_1 , . . . , \nu_{i-1} , \nu_i , \nu_{i+1} , . . . , \nu_n \right\},
+\]
+\[
+D_i = D_{\mathcal {B}} \left\{ \nu_1, . . . , \nu_{i-1}, b, \nu_{i+1}, . . . , \nu_n \right\}.
+\]
+
+$D_{i}$ là định nghĩa của determinant khi các vector cột là các vector hệ số của hệ phương trình, nhưng vector cột thứ $i$ được thay thế bằng vector cột $b$.
+
+Chứng minh: det $A \neq 0 \implies \left\{ \nu _ { 1 } , . . . , \nu _ { n } \right\}$ là một cơ sở của $\mathbb { R } ^ { n }$. Do đó, $b$ được biểu diễn duy nhất thành hợp tuyến tính của $\left\{ \nu _ { 1 } , . . . , \nu _ { n } \right\}$. Nghĩa là tồn tại duy nhất $(x _ { 1 } , x _ { 2 } , . . . , x _ { n })$ sao cho $x _ { 1 } \nu _ { 1 } + x _ { 2 } \nu _ { 2 } + . . . + x _ { n } \nu _ { n } = b$:
+
+Gọi $\mathcal{B} = \left\{ e _ { 1 } , . . . , e _ { n } \right\}$ là cơ sở chính tắc của $\mathbb { R } ^ { n }$. Khi đó:
+
+$$
+D_{i} = D_{\mathcal{B}} \left\{ \nu _ { 1 } , . . . , \nu _ { i - 1 } , b, \nu _ { i + 1 } , . . . , \nu _ { n } \right\} = D_{\mathcal{B}} \left\{ \nu _ { 1 } , . . . , \nu _ { i - 1 } , \sum _ { k = 1 } ^ { n } x _ { k } \nu _ { k }, \nu _ { i + 1 } , . . . , \nu _ { n } \right\}
+$$
+
+$$
+= x_{i} D_{\mathcal{B}} \left\{ \nu _ { 1 } , . . . , \nu _ { i - 1 } , \nu _ { i }, \nu _ { i + 1 } , . . . , \nu _ { n } \right\} = x_{i} D \Rightarrow x_{i} = \frac{D_{i}}{D}, i = 1, . . . , n.
+$$
+
+Vi dụ 4.3: Hệ phương trình 
+\[
+\left\{ \begin{array} { r c c c c c c c } 
+{ 2x } & { + } & { 3y } & { - } & { z } & { = } & { 1 } \\ 
+{ 3x } & { + } & { 5y } & { + } & { 2z } & { = } & { 8 } \\ 
+{ x } & { - } & { 2y } & { - } & { 3z } & { = } & { -1 } 
+\end{array} \right. 
+\]
+$D = \left| { \begin{array} { c c c } 
+{ 2 } & { 3 } & { -1 } \\ 
+{ 3 } & { 5 } & { 2 } \\ 
+{ 1 } & { -2 } & { -3 } 
+\end{array} } \right| = 22, D_x = \left| { \begin{array} { c c c } 
+{ 1 } & { 3 } & { -1 } \\ 
+{ 8 } & { 5 } & { 2 } \\ 
+{ -1 } & { -2 } & { -3 } 
+\end{array} } \right| = 66,$
+
+$$
+D_y = \left| \begin{array} { c c c } 
+{ 2 } & { 1 } & { -1 } \\ 
+{ 3 } & { 8 } & { 2 } \\ 
+{ 1 } & { -1 } & { -3 } 
+\end{array} \right| = -22, D_z = \left| \begin{array} { c c c } 
+{ 2 } & { 3 } & { 1 } \\ 
+{ 3 } & { 5 } & { 8 } \\ 
+{ 1 } & { -2 } & { -1 } 
+\end{array} \right| = 44.
+$$
+
+Do đó hệ có nghiệm $x = 3, y = -1, z = 2$
+
+## 4.3.2. Giải hệ phương trình tuyến tính trường hợp tổng quát
+
+Giả sử hệ phương trình có nghiệm và $r(\nu_1, ..., \nu_n) = r(\nu_1, ..., \nu_n, b) = r(\nu_1, ..., \nu_p);$ ($p \leq n$ (trong trường hợp khác cách giải hoàn toàn tương tự). Với giả thiết này, $p$ véc tơ hàng phía trên của $A$ tạo thành hệ độc lập tuyến tính tối đa của hệ các véc tơ hàng của $A$. Vì vậy hệ (4.1) tương đương với $p$ phương trình đầu
+
+$$
+\left\{
+\begin{array}{l}
+a_{11} x_1 + a_{12} x_2 + \ldots + a_{1n} x_n = b_1 \\
+a_{21} x_1 + a_{22} x_2 + \ldots + a_{2n} x_n = b_2 \\
+\vdots \\
+a_{p1} x_1 + a_{p2} x_2 + \ldots + a_{pn} x_n = b_p
+\end{array}
+\right.
+.$$
+
+$$
+\scriptstyle {\mathrm{Gi}} \ i \ s \ i \left| \begin{array}{ccc}
+{a_{11}} & {\ldots} & {a_{1p}} \\
+{\vdots} & {\ddots} & {\vdots} \\
+{a_{p1}} & {\ldots} & {a_{pp}}
+\end{array} \right| \neq 0 \ (\mathrm{trong} \ \mathrm{h} \mathrm{kha} \mathrm{c} \mathrm{hi} \mathrm{ch} \mathrm{gi} \mathrm{i} \mathrm{h} \mathrm{đai} \mathrm{hai} \mathrm{hoàn} \mathrm{t} \mathrm{o} \mathrm{n} \mathrm{g} \mathrm{t} \mathrm{'o} \mathrm{n} \mathrm{g})
+$$
+
+$\mathrm{Hế}$ phương trình trên được viết lại:
+
+$$
+\left\{
+\begin{array}{l}
+a_{11} x_1 + a_{12} x_2 + . . . + a_{1p} x_p = b_1 - a_{1(p+1)} x_{p+1} - . . . - a_{1n} x_n \\
+a_{21} x_1 + a_{22} x_2 + . . . + a_{2p} x_p = b_2 - a_{2(p+1)} x_{p+1} - . . . - a_{2n} x_n \\
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+Đây là hệ Cramér phụ thuộc các biến $x_{p+1}, . . . , x_n$
+
+Vậy hệ có vô số nghiệm phụ thuộc các biến $x_{p+1}, . . . , x_n$; các biến $x_{p+1}, . . . , x_n$ nhận giá trị tùy ý.
+
+$$
+\begin{array}{r}
+\underline{\text { Ví dụ 4.4: }} \mathrm{Giải} \mathrm{bài} \mathrm{tham} \hat{\chi} \lambda \mathrm{h} \hat{e}\left\{
+\begin{array}{l}
+\lambda x_{1} + x_{2} + x_{3} + x_{4} = 1 \\
+x_{1} + \lambda x_{2} + x_{3} + x_{4} = 1 \\
+x_{1} + x_{2} + \lambda x_{3} + x_{4} = 1 \\
+x_{1} + x_{2} + x_{3} + \lambda x_{4} = 1
+\end{array}
+\right.
+.
+\end{array}
+$$
+
+Theo ví dụ 3.29 chương 3 ta có $D = \operatorname*{det} A = (\lambda + 3)(\lambda - 1)^{3}$:
+
+$\cdot$ Khi $\lambda \neq -3, \lambda \neq 1$: Hệ đã cho là hệ Cramer nên có nghiệm duy nhất. Ngoài ra khi thay đổi vị trí của các biến trong hệ thì hệ không thay đổi, do đó hệ có nghiệm $x_{1} = x_{2} = x_{3} = x_{4}$. Thay vào phương trình ta được:
+
+$$
+x_{1} = x_{2} = x_{3} = x_{4} = \frac{1}{\lambda + 3}.
+$$
+
+Ta cũng có thể tìm nghiệm theo công thức (4.6), với
+
+$$
+D _ { 1 } = D _ { 2 } = D _ { 3 } = D _ { 4 }; D _ { 4 } = \left| \begin{array} { l l l l } { \lambda } & { 1 } & { 1 } & { 1 } \\ { 1 } & { \lambda } & { 1 } & { 1 } \\ { 1 } & { 1 } & { \lambda } & { 1 } \\ { 1 } & { 1 } & { 1 } & { 1 } \end{array} \right| = (\lambda - 1)^3 \Rightarrow x _ { 1 } = x _ { 2 } = x _ { 3 } = x _ { 4 } = \frac { D _ { 4 } } { D } = \frac { 1 } { \lambda + 3 }
+$$
+
+$\cdot$ Khi $\lambda = 1$: $r ( A ) = r (\tilde{A}) = 1$, hệ phương trình đã cho tương đương với một phương trình $x _ { 1 } + x _ { 2 } + x _ { 3 } + x _ { 4 } = 1$:
+
+$\mathrm{H}$ hệ phương trình có vô số nghiệm $x _ { 1 } = 1 - x _ { 2 } - x _ { 3 } - x _ { 4 }$ với $x _ { 2 }, x _ { 3 }, x _ { 4 }$ tùy ý.
+
+（20 $\cdot$ Khi $\lambda = - 3$: det $A = 0 \Rightarrow r ( A ) < 4$ (theo Ví dụ 3.43 c6 $r ( A ) = 3$) nhưng ma trận bổ sung $\tilde{A}$ có định thức con cấp 4
+
+$$
+\begin{array} { r l } 
+{ \left| \begin{array} { l l l l } { 1 } & { 1 } & { 1 } & { 1 } \\ { - 3 } & { 1 } & { 1 } & { 1 } \\ { 1 } & { - 3 } & { 1 } & { 1 } \\ { 1 } & { 1 } & { - 3 } & { 1 } \end{array} \right| = 64 \neq 0 \Rightarrow r (\tilde{A}) = 4 \Longrightarrow \mathrm{hệ\ phương\ trình\ vô\ nghiệm}}
+\end{array}
+$$
+
+# 4.4. PHƯƠNG PHÁP MA TRẬN NGHỊCH ĐẢO
+
+Định lý 4.3: $Hệ \ Cramér \sum_{j=1}^{n} a_{ij} x_j = b_i$, $i = 1, ..., n$ có nghiệm duy nhất khi ma trận
+
+$$
+A = \left[ \begin{array}{llll}
+a_{11} & a_{12} & \ldots & a_{1n} \\
+a_{21} & a_{22} & \ldots & a_{2n} \\
+\vdots & \vdots & \ddots & \vdots \\
+a_{n1} & a_{n2} & \ldots & a_{nn}
+\end{array} \right], 
+B = \left[ \begin{array}{l}
+b_1 \\
+b_2 \\
+\vdots \\
+b_n
+\end{array} \right],
+X = \left[ \begin{array}{l}
+x_1 \\
+x_2 \\
+\vdots \\
+x_n
+\end{array} \right], 
+\operatorname*{det} A \neq 0 \Longrightarrow X = A^{-1} B.
+$$
+
+$$
+\underline{\mathrm{Ví dụ ~4.5}} \colon \mathrm{Xét ~hệ~phương~trình~}
+\left\{
+\begin{array}{ll}
+x_1 + 2 x_2 + 3 x_3 = a \\
+2 x_1 + 5 x_2 + 3 x_3 = b \\
+x_1 \qquad + 8 x_3 = c
+\end{array} 
+\right.
+$$
+
+[123] Ma trận hệ số $A=\begin{bmatrix}
+1 & 2 & 3\\
+2 & 5 & 3\\
+1 & 0 & 8
+\end{bmatrix}$ có $\det A = -1$, do đó hệ đã cho là hệ Cramer có [108] nghiệm theo công thức (4.7).
+
+$$
+\mathrm{T}u \dot{\mathrm{u}} \mathrm{V}_{\mathrm{i}}^{\prime} \mathrm{d} u 3.37 \mathrm{c}0 \quad A^{-1} = \left[ \begin{array}{ccc}
+-40 & 16 & 9 \\
+13 & -5 & -3 \\
+5 & -2 & -1
+\end{array} \right].
+$$
+
+![](images/b76185b2a45d48a40b6f488b577ab9bfa3886b6ba6e541586e69d391e5e82ced.jpg)
+
+Nhận xét 4.1: Từ công thức đổi tọa độ (3.15), công thức (3.45) về ma trận chuyển cơ sở và từ ví dụ 4.5 ta thấy:
+
+$$
+\mathrm{N}_{\hat{\mathsf{e}} \Uparrow}^{\hat{\mathsf{e}}} \Bigg\{ \sum_{j=1}^{n} a_{ij} x_j = b_i, \forall i = 1, . . . , n \quad \mathrm{với} \ A = \Big[ \boldsymbol{a}_{ij} \Big] \mathrm{thì} A^{-1} = \Big[ \boldsymbol{c}_{ij} \Big].
+$$
+
+$$
+\mathrm{Nói cách khác,} \left[ \begin{array}{l}
+b_1 \\
+\vdots \\
+b_n
+\end{array} \right] = A \left[ \begin{array}{l}
+x_1 \\
+\vdots \\
+x_n
+\end{array} \right] \mathrm{với} \left[ \begin{array}{l}
+x_1 \\
+\vdots \\
+x_n
+\end{array} \right] = B \left[ \begin{array}{l}
+b_1 \\
+\vdots \\
+b_n
+\end{array} \right] \mathrm{thì} B = A^{-1}.
+$$
+
+# 4.5. GIẢI HỆ PHƯƠNG TRÌNH TUYẾN TÍNH BẰNG PHƯƠNG PHÁP KHU GAUSS
+
+Ta có thể kiểm tra được rằng: khi thực hiện các biến đổi tương đương sau lên các phương trình của hệ thức sẽ được hệ mới tương đương:
+
+· Đổi hai phương trình;  
+· Nhân, chia một số khác 0 vào cả hai vế của một phương trình;   
+· Cộng vào một phương trình một tổ hợp tuyến tính các phương trình khác.
+
+Giải hệ phương trình tuyến tính bằng phương pháp khử Gauss là thực hiện các phép biến đổi trong tương đương (có thể đổi chỉ số các biến) để đưa hệ phương trình (4.1)
+
+$$
+\sum _ { j = 1 } ^ { n } a _ { i j } x _ { j } = b _ { i } ; \quad i = 1 , . . . , m .
+$$
+
+về hệ tương đương
+
+$$
+\sum _ { j = 1 } ^ { n } a _ { i j } ^ { \prime } x _ { j } ^ { \prime } = b _ { i } ^ { \prime } ; \quad i = 1 , . . . , m .
+$$
+
+Các biến $x _ { 1 } ^ { \prime } , . . . , x _ { n } ^ { \prime }$ là các biến $x _ { 1 } , . . . , x _ { n }$ nhưng có thể thay đổi thứ tự chỉ số và ma trận bổ sung của hệ mới có dạng
+
+$$
+\underbrace { \left[ \begin{array} { l l l l } { a _ { 1 1 } ^ { \prime } } & { \cdots } & { \cdots } & { } \\ { \underbrace { \phantom { - } a _ { p p } ^ { \prime } } } & { \cdots } & { } \\ { \bigcirc } & { \bigcirc } & { } \end{array} \right] } _ { \bigcirc } \underbrace { b _ { i } ^ { \prime } } _ { p + 1 }
+$$
+
+trong đó $a _ { 1 1 } ^ { \prime } . . . a _ { p p } ^ { \prime } \ne 0$
+
+● Nếu một trong các $b _ { p + 1 } ^ { \phantom { \dagger } }, . . . , b _ { m } ^ { \phantom { \dagger } }$ khác O thì tồn tại phương trình mà vế trái bằng O, vế phải khác O nên hệ vô nghiệm.
+
+Nếu $b ^ { \prime } _ { p + 1 } = . . . = b ^ { \prime } _ { m } = 0$ thì hệ đã cho tương đương với hệ $p$ phương trình
+
+$$
+\left\{ \begin{array} { c } { a _ { 1 1 } ^ { \prime } x _ { 1 } ^ { \prime } + a _ { 1 2 } ^ { \prime } x _ { 2 } ^ { \prime } + } \\ { a _ { 2 2 } ^ { \prime } x _ { 2 } ^ { \prime } + } \\ { . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+$$
+\begin{array}{r}
+\underline{\mathrm{Ví dụ~4.6}} \colon \mathrm{X} \notin \mathrm{th} \notin \mathrm{phụmeng~trình} \{ 2 x_{1} + 5 x_{2} + 3 x_{3} = b, (\mathrm{xem~ví~dụ~4.5}) . } \\
+\qquad + 8 x_{3} = c
+\end{array}
+$$
+
+$$
+\mathrm{Mátrix~bào~súng~hệ~}\widetilde{\mathrm{A}} = \left[ \begin{array}{llll}
+1 & 2 & 3 & a \\
+2 & 5 & 3 & b \\
+1 & 0 & 8 & c
+\end{array} \right] .
+$$
+
+Thực hiện các biến đổi tương đương ta được
+
+$$
+\left[ \begin{array}{llll}
+1 & 2 & 3 & a \\
+2 & 5 & 3 & b \\
+1 & 0 & 8 & c
+\end{array} \right]
+\sim
+\left[ \begin{array}{llll}
+1 & 0 & 8 & c \\
+0 & 1 & -3 & b - 2a \\
+0 & 2 & -5 & a - c
+\end{array} \right]
+\sim
+\left[ \begin{array}{llll}
+1 & 0 & 8 & c \\
+0 & 1 & -3 & b - 2a \\
+0 & 0 & 1 & 5a - 2b - c
+\end{array} \right]
+$$
+
+$$
+\begin{bmatrix}
+    1 & 0 & 0 & -40a + 16b + 9c \\
+    0 & 1 & 0 & 13a - 5b - 3c \\
+    0 & 0 & 1 & 5a - 2b - c
+\end{bmatrix}
+$$
+
+Vậy ta đã tìm được hệ phương trình tương đương và cũng là nghiệm của hệ:
+
+$$
+\left\{
+\begin{array}{ll}
+x_1 = -40a + 16b + 9c \\
+x_2 = 13a - 5b - 3c \\
+x_3 = 5a - 2b - c
+\end{array} \right.
+$$
+
+Ví dụ 4.7: Giải hệ phương trình $\left\{
+\begin{array}{ll}
+2x_1 + 5x_2 - 8x_3 = 8 \\
+4x_1 + 3x_2 - 9x_3 = 9 \\
+2x_1 + 3x_2 - 5x_3 = 7 \\
+x_1 + 8x_2 - 7x_3 = 12
+\end{array} \right.$
+
+$$
+\Leftrightarrow 
+\begin{bmatrix}
+    1 & 8 & -7 & 12 \\
+    0 & -11 & 6 & -16 \\
+    0 & 1 & -1 & 1 \\
+    0 & -2 & 3 & -1
+\end{bmatrix} 
+\begin{bmatrix}
+    1 & 8 & -7 & 12 \\
+    0 & 1 & -1 & 1 \\
+    0 & 0 & -5 & 5 \\
+    0 & 0 & 1 & 1
+\end{bmatrix} 
+\begin{bmatrix}
+    1 & 8 & -7 & 12 \\
+    0 & 1 & -1 & 1 \\
+    0 & 0 & 1 & 1 \\
+    0 & 0 & 0 & 0
+\end{bmatrix} 
+\begin{bmatrix}
+    1 & 0 & 0 & 3 \\
+    0 & 1 & 0 & 2 \\
+    0 & 0 & 1 & 1 \\
+    0 & 0 & 0 & 0
+\end{bmatrix}
+$$
+
+Vậy hệ đã cho có nghiệm duy nhất $x _ { 1 } = 3, x _ { 2 } = 2, x _ { 3 } = 1$
+
+Ví dụ 4.8: Giải và biện luận theo tham số m hệ phương trình
+
+$$
+\left\{ \begin{array} { l l } { 3 x _ { 1 } + 2 x _ { 2 } + 5 x _ { 3 } + 4 x _ { 4 } = 3 } \\ { 2 x _ { 1 } + 3 x _ { 2 } + 6 x _ { 3 } + 8 x _ { 4 } = 5 } \\ { x _ { 1 } - 6 x _ { 2 } - 9 x _ { 3 } - 20 x _ { 4 } = - 11 } \\ { 4 x _ { 1 } + x _ { 2 } + 4 x _ { 3 } + m x _ { 4 } = 2 } \end{array} \right. .
+$$
+
+$$
+\begin{array}{c} 
+\begin{array} { r l } 
+& { \begin{array} { c c c c c c c c } { 1 } & { 2 } & { 5 } & { 5 } & { 4 } & { 3 } \\ { 2 } & { 3 } & { 6 } & { 8 } & { 5 } \\ { 1 } & { - 6 } & { - 9 } & { - 20 } & { - 11 } \\ { 4 } & { 1 } & { 4 } & { m } & { 2 } \end{array} } 
+\end{array} 
+\mapsto \left[ \begin{array} { c c c c c c } { 1 } & { - 6 } & { - 9 } & { - 20 } & { - 11 } \\ { 3 } & { 2 } & { 5 } & { 4 } & { 3 } \\ { 2 } & { 3 } & { 6 } & { 8 } & { 5 } \\ { 4 } & { 1 } & { 4 } & { m } & { 2 } \end{array} \right] 
+\Leftarrow \left[ \begin{array} { c c c c c } { 1 } & { - 6 } & { - 9 } & { - 20 } & { - 12 } \\ { 0 } & { 20 } & { 32 } & { 64 } & { - 20 } \\ { 0 } & { 15 } & { 24 } & { 48 } & { 48 } \end{array} \right] 
+\\ 
+& { \mapsto \left[ \begin{array} { c c c c c } { 1 } & { - 5 } & { - 20 } & { - 20 } & { - 11 } \\ { 0 } & { 5 } & { 8 } & { 16 } & { 9 } \\ { 0 } & { 0 } & { 0 } & { m } & { 1 } \end{array} \right] 
+\Leftarrow \left[ \begin{array} { c c c c c } { 1 } & { - 1 } & { - 1 } & { - 4 } & { - 2 } \\ { 0 } & { 5 } & { 8 } & { 16 } & { 9 } \\ { 0 } & { 0 } & { 0 } & { 0 } & { 0 } \\ { 0 } & { 0 } & { 0 } & { m } & { 1 } \end{array} \right] 
+\Leftarrow \left[ \begin{array} { c c c c c } { 1 } & { 0 } & { \frac { 3 } { 5 } } & { - \frac { 4 } { 5 } } & { - 5 } \\ { 0 } & { 1 } & { \frac { 6 } { 5 } } & { \frac { 16 } { 5 } } & { \frac { 9 } { 5 } } \\ { 0 } & { 0 } & { 0 } & { 0 } & { 0 } \\ { 0 } & { 0 } & { 0 } & { 0 } & { 1 } \end{array} \right] . 
+\end{array}
+$$
+
+} \end{array}
+$$
+
+Hệ đồng phương trình tương đương với hệ:
+\[
+\left\{
+\begin{array}{c}
+x_1 - \frac{3}{5} x_3 - \frac{4}{5} x_4 = -\frac{1}{5} \\
+x_2 + \frac{8}{5} x_3 + \frac{16}{5} x_4 = \frac{9}{5} \\
+m x_4 = 1
+\end{array}
+\right.
+\]
+
+$\cdot$ Khi $m = 0$: hệ vô nghiệm;
+
+$\bullet$ Khi $m \neq 0$: hệ có vô số nghiệm
+
+$$
+x_4 = \frac{1}{m}, \quad x_2 = \frac{9}{5} - \frac{16}{5 m} - \frac{8}{5} x_3, \quad x_1 = -\frac{1}{5} + \frac{4}{5 m} - \frac{3}{5} x_3; \quad x_3 \mathrm{\ tuỳ ý}.
+$$
+
+Vi dụ 4.9: Giải hệ phương trình $\left\{ \begin{array} { l l } { x _ { 1 } - x _ { 3 } + x _ { 4 } - x _ { 5 } = - 3 } \\ { 2 x _ { 1 } + 2 x _ { 2 } + x _ { 3 } - 9 x _ { 4 } = 2 } \\ { 3 x _ { 1 } - x _ { 2 } + x _ { 3 } - 8 x _ { 4 } - 4 x _ { 5 } = - 2 . } \\ { 6 x _ { 1 } + x _ { 2 } + x _ { 3 } - 16 x _ { 4 } - 5 x _ { 5 } = - 3 } \\ { x _ { 1 } + x _ { 2 } + x _ { 4 } + 2 x _ { 5 } = - 2 } \end{array} \right.$
+
+$$
+\tilde { A } = [ \begin{array} { c c c c c c } { 1 } & { 0 } & { - 1 } & { 1 } & { - 1 } & { - 3 } \\ { 2 } & { 2 } & { 1 } & { - 9 } & { 0 } & { 2 } \\ { 3 } & { - 1 } & { 1 } & { - 8 } & { - 4 } & { - 2 } \\ { 6 } & { 1 } & { 1 } & { - 16 } & { - 5 } & { - 3 } \\ { 1 } & { 1 } & { 0 } & { 1 } & { 2 } & { - 2 } \end{array} ] [ \begin{array} { c c c c c c } { 1 } & { 0 } & { - 1 } & { 1 } & { - 1 } & { - 3 } \\ { 0 } & { 2 } & { 3 } & { - 11 } & { 2 } & { 8 } \\ { 0 } & { - 1 } & { 4 } & { - 11 } & { - 1 } & { 7 } \\ { 0 } & { 1 } & { 7 } & { - 22 } & { 1 } & { 15 } \\ { 0 } & { 1 } & { 1 } & { 0 } & { 3 } & { 1 } \end{array} ]
+$$
+
+$$
+ { [ \begin{array} { l l l l l l l } { 1 } & { 0 } & { - 1 } & { 1 } & { - 1 } & { - 3 } \\ { 0 } & { 1 } & { 1 } & { 0 } & { 3 } & { 1 } \\ { 0 } & { 0 } & { 1 } & { - 11 } & { - 4 } & { 6 } \\ { 0 } & { 0 } & { 5 } & { - 11 } & { 2 } & { 8 } \\ { 0 } & { 0 } & { 6 } & { - 22 } & { - 2 } & { 14 } \end{array} ] }
+ { [ \begin{array} { l l l l l l l } { 1 } & { 0 } & { - 1 } & { 1 } & { - 1 } & { - 3 } \\ { 0 } & { 1 } & { 1 } & { 0 } & { 3 } & { 1 } \\ { 0 } & { 0 } & { 1 } & { - 11 } & { - 4 } & { 6 } \\ { 0 } & { 0 } & { 0 } & { 44 } & { 22 } & { - 22 } \\ { 0 } & { 0 } & { 0 } & { 44 } & { 22 } & { - 22 } \end{array} ] }
+$$
+
+$$
+ { [ \begin{array} { l l l l l l } { 1 } & { 0 } & { 0 } & { 0 } & { 0 } & { - 2 } \\ { 0 } & { 1 } & { 1 } & { 0 } & { 3 } & { 1 } \\ { 0 } & { 0 } & { 1 } & { - 3 } & { 0 } & { 2 } \\ { 0 } & { 0 } & { 0 } & { 2 } & { 1 } & { - 1 } \\ { 0 } & { 0 } & { 0 } & { 0 } & { 0 } & { 0 } \end{array} ] }
+ { [ \begin{array} { l l l l l l } { 1 } & { 0 } & { 0 } & { 0 } & { 0 } & { - 2 } \\ { 0 } & { 1 } & { 0 } & { - 3 } & { 0 } & { 2 } \\ { 0 } & { 0 } & { 1 } & { - 3 } & { 0 } & { 2 } \\ { 0 } & { 0 } & { 0 } & { 2 } & { 1 } & { - 1 } \\ { 0 } & { 0 } & { 0 } & { 0 } & { 0 } & { 0 } \end{array} ] }
+.
+$$
+
+$\mathrm { H } \hat{\mathbf{e}}$ đã cho tương đồng với hệ:
+
+$$
+\left\{ \begin{array} { c c c c c } { x _ { 1 } } & {} & { = - 2 } & {} & { \left[ x _ { 1 } = - 2 \right. } \\ {} & { x _ { 2 } } & { - 3 x _ { 4 } } & { = 2 } & {} \\ {} & {} & { x _ { 3 } - 3 x _ { 4 } } & { = 2 } & { \mathrm{suy nghĩ} \left\{ \begin{array} { l } { x _ { 2 } = 2 + 3 x _ { 4 } } \\ { x _ { 3 } = 2 + 3 x _ { 4 } } \\ { x _ { 5 } = - 1 - 2 x _ { 4 }; \ x _ { 4 } \in \mathbb{R} . } \end{array} \right. } \end{array} \right.
+$$
+
+# 4.6. HỆ PHƯƠNG TRÌNH TUYẾN TÍNH THUẬN NHẤT
+
+$$
+\left\{ \begin{array} { l } { a _ { 1 1 } x _ { 1 } + a _ { 1 2 } x _ { 2 } + . . . + a _ { 1 n } x _ { n } = 0 } \\ { a _ { 2 1 } x _ { 1 } + a _ { 2 2 } x _ { 2 } + . . . + a _ { 2 n } x _ { n } = 0 } \\ { . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+Nhận xét 4.2: $\mathrm{v} \acute{\mathsf{e}}$ sau của hệ phương trình thuận nhất luôn bằng $O$, do đó không thay đổi khi ta giải hệ theo phương pháp khử Gauss. Vì vậy, để giải hệ phương trình thuận nhất ta chỉ cần biến đổi ma trận hệ số của hệ.
+
+Vi dụ 4.10: Giải hệ phương trình thuần nhất 
+\[
+\left\{
+\begin{array}{l}
+2x_1 - 3x_2 - 3x_3 - 2x_4 = 0 \\
+4x_1 - 7x_2 - 5x_3 - 6x_4 = 0 \\
+3x_1 - 5x_2 - 4x_3 - 4x_4 = 0
+\end{array}
+\right.
+\]
+
+$\begin{array}{rl}
+& \left[ \begin{array}{llll} 
+2 & -3 & -3 & -2 \\ 
+4 & -7 & -5 & -6 \\ 
+1 & -2 & -1 & -2 
+\end{array} \right] 
+\left[ \begin{array}{llll}
+2 & -3 & -3 & -2 \\
+4 & -7 & -5 & -6 \\
+1 & -2 & -1 & -2
+\end{array} \right]
+\Leftrightarrow 
+\left[ \begin{array}{llll}
+1 & -2 & -1 & -2 \\ 
+2 & -3 & -3 & -2 \\ 
+4 & -7 & -5 & -6 
+\end{array} \right] 
+\left[ \begin{array}{llll}
+1 & -2 & -1 & -2 \\
+0 & 1 & -1 & 2 \\
+0 & -1 & 1 & -2
+\end{array} \right]
+\\
+& \left[ \begin{array}{llll}
+1 & -2 & -1 & -2 \\ 
+0 & 1 & -1 & 2 \\ 
+0 & 0 & 0 & 0 
+\end{array} \right] 
+\left[ \begin{array}{llll}
+1 & 0 & -3 & 2 \\
+0 & 1 & -1 & 2 \\
+0 & 0 & 0 & 0
+\end{array} \right]
+\Rightarrow 
+\left\{
+\begin{array}{lcl}
+x_1 = 3x_3 - 2x_4 & \cdot & x_3, x_4 ~ tự do. \\
+x_2 = x_3 - 2x_4 & \cdot &
+\end{array} 
+\right.
+\}$
+
+nd{array}$ 1
+
+# Định lý 4.5:
+
+a) Hệ (4.11) chỉ có nghiệm thường khi và chỉ khi $r(A) = n$.
+
+b) Nếu $r(A) = p < n$ thì tập hợp nghiệm của hệ (4.11) là không gian con $n - p$ chiều của $\mathbb{R}^n$.
+
+Chứng minh: Ta chứng minh b). Thực hiện các biến đổi tương đương lên ma trận $\mathbf{A}$ của hệ để đưa hệ về dạng tương đương với ma trận bổ sung có dạng
+
+$$
+\left[ { \begin{array}{lllll}
+1 & * & * & * & 0 \\
+0 & \ddots & * & * & 0 \\
+\vdots & 0 & 1 & * & 0 \\
+0 & \dots & \dots & 0 & 0 \\
+0 & \dots & \dots & 0 & 0
+\end{array} } \right]
+$$
+
+Suy ra nghiệm có dạng $\left\{ \begin{array}{ll}
+x_1' = c_{1(p+1)} x_{p+1}' + \ldots + c_{1(n-p)} x_n' \\
+\vdots \\
+x_p' = c_{p(p+1)} x_{p+1}' + \ldots + c_{p(n-p)} x_n'
+\end{array} \right. ,$
+
+trong đó $(x_1', ..., x_n')$ là một hoán vị của $(x_1, ..., x_n)$.
+
+Đề đơn giản trong cách trình bày ta giả sử $x _{1} ^{\prime} = x_{1}, \ldots, x_{n}^{\prime} = x_{n}$ (trong hợp khác được chứng minh tương tự), khi đó tập hợp nghiệm:
+
+$$
+\begin{array}{rl}
+& \Big\{(c_{11}x_{p+1} + \ldots + c_{1,n-p}x_{n}, \ldots, c_{p1}x_{p+1} + \ldots + c_{p,n-p}x_{n}, x_{p+1}, \ldots, x_{n}) \Big| x_{p+1}, \ldots, x_{n} \in \mathbb{R}\Big\}\\
+& = \Big\{(c_{11}, \ldots, c_{p1}, 1, 0, \ldots, 0)x_{p+1} + \ldots + (c_{1,n-p}, \ldots, c_{p,n-p}, 0, 0, \ldots, 1)x_{n} \Big| x_{p+1}, \ldots, x_{n} \in \mathbb{R}\Big\}
+\end{array}
+$$
+
+là không gian con $n - p$ chiều của $\mathbb{R}^{n}$:
+
+Ví dụ 4.11: Tập $W_{2} = \left\{u = (x, y, z) \in \mathbb{R}^{3} \mid 2x - 3y + 4z = 0\right\}$ là không gian con của $\mathbb{R}^{3}$ có chiều $\dim W_{2} = 3 - 1 = 2$. Ta có thể tìm một cơ sở của $W_{2}$ như sau.
+
+$$
+u = (x, y, z) \in W_{2} \Leftrightarrow 
+\left\{
+\begin{array}{l}
+u = (x, y, z) \\
+2x - 3y + 4z = 0
+\end{array}\right.
+\Leftrightarrow 
+\left\{
+\begin{array}{l}
+u = (x, y, z) \\
+x = \frac{3}{2}y - 2z
+\end{array}\right.
+$$
+
+$$
+\Leftrightarrow u = \left(\frac{3}{2}y - 2z, y, z\right) = \frac{y}{2}(3, 2, 0) + z(-2, 0, 1).
+$$
+
+Vậy hai vector (3,2,0),(-2,0,1) là một cơ sở của $W_2$
+
+Vi dụ 4.12: Đặt $V_1$, $V_2$ lần lượt là tập hợp nghiệm của hệ phương trình $(I)$ và hệ phương trình $(II)$:
+
+$$
+\left( I \right) \left\{ \begin{array} { l } { 4 x _ { 1 } + 5 x _ { 2 } - 2 x _ { 3 } + 3 x _ { 4 } = 0 } \\ { 3 x _ { 1 } + 5 x _ { 2 } + 6 x _ { 3 } - 4 x _ { 4 } = 0 } \\ { 5 x _ { 1 } + 7 x _ { 2 } + 2 x _ { 3 } = 0 } \end{array} \right. , \left( I I \right) \left\{ \begin{array} { l } { 2 x _ { 1 } - 3 x _ { 2 } - 3 x _ { 3 } - 2 x _ { 4 } = 0 } \\ { 4 x _ { 1 } - 7 x _ { 2 } - 5 x _ { 3 } - 6 x _ { 4 } = 0 } \\ { 3 x _ { 1 } - 5 x _ { 2 } - 4 x _ { 3 } - 4 x _ { 4 } = 0 } \end{array} \right.
+$$
+
+Hãy tìm mặt cơ sở của các không gian con $V_1$, $V_2$, $V_1 \cap V_2$. Suy ra số chiều của $V_1 + V_2$:
+
+Giải: Giải hệ phương trình $(I)$:
+
+$$
+{ \begin{array} { r l } & { [ \begin{array} { l l l l } { 4 } & { 5 } & { - 2 } & { 3 } \\ { 3 } & { 5 } & { 6 } & { - 4 } \\ { 5 } & { 7 } & { 2 } & { 0 } \end{array} ] \Leftrightarrow [ \begin{array} { l l l l } { 1 } & { 0 } & { - 8 } & { 7 } \\ { 3 } & { 5 } & { 6 } & { - 4 } \\ { 1 } & { 2 } & { 4 } & { - 3 } \end{array} ] [ \begin{array} { l l l l } { 1 } & { 0 } & { - 8 } & { 7 } \\ { 0 } & { 5 } & { 30 } & { - 25 } \\ { 0 } & { 2 } & { 12 } & { - 10 } \end{array} ] \Leftrightarrow [ \begin{array} { l l l l } { 1 } & { 0 } & { - 8 } & { 7 } \\ { 0 } & { 1 } & { 6 } & { - 5 } \\ { 0 } & { 0 } & { 0 } & { 0 } \end{array} ] } \\ & { \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad } \\ & { \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad } \end{array} }
+$$
+
+$$
+\begin{array} { r l } & {(x_1, x_2, x_3, x_4) \in V_1 \Longleftrightarrow \nu = (8x_3 - 7x_4, -6x_3 + 5x_4, x_3, x_4) = x_3(8, -6, 1, 0) + x_4(-7, 5, 0, 1)} \\ & { \qquad V_1 = \left\{ x_3 (8, -6, 1, 0) + x_4 (-7, 5, 0, 1) \middle| x_3, x_4 \in \mathbb{R} \right\}. } \end{array}
+$$
+
+Tương tự, từ ví dụ 4.10 ta có
+
+$$
+\begin{array} { r } { V _ { 2 } = \left\{ x _ { 3 } ( 3 , 1 , 1 , 0 ) + x _ { 4 } ( - 2 , - 2 , 0 , 1 ) \middle | x _ { 3 } , x _ { 4 } \in \mathbb { R } \right\} . } \end{array}
+$$
+
+$V _ { 1 } \cap V _ { 2 }$ là không gian nghiệm của hệ 6 phương trình
+
+$$
+\left\{ \begin{array} { l l } { 4 x _ { 1 } + 5 x _ { 2 } - 2 x _ { 3 } + 3 x _ { 4 } = 0 } \\ { 3 x _ { 1 } + 5 x _ { 2 } + 6 x _ { 3 } - 4 x _ { 4 } = 0 } \\ { 5 x _ { 1 } + 7 x _ { 2 } + 2 x _ { 3 } \qquad = 0 } \\ { 2 x _ { 1 } - 3 x _ { 2 } - 3 x _ { 3 } - 2 x _ { 4 } = 0 } \\ { 4 x _ { 1 } - 7 x _ { 2 } - 5 x _ { 3 } - 6 x _ { 4 } = 0 } \\ { 3 x _ { 1 } - 5 x _ { 2 } - 4 x _ { 3 } - 4 x _ { 4 } = 0 } \end{array} \right. .
+$$
+
+Giải hệ phương trình này ta được nghiệm: $x _ { 1 } = - x _ { 2 } = x _ { 3 } = x _ { 4 } ; x _ { 4 }$ tùy ý
+
+$$
+\begin{array} { r l } & { \Rightarrow V _ { 1 } \cap V _ { 2 } = \left\{ x _ { 4 } ( 1 , - 1 , 1 , 1 ) \middle | x _ { 4 } \in \mathbb { R } \right\} . } \\ & { \Rightarrow \dim V _ { 1 } + V _ { 2 } = 3 . } \end{array}
+$$
+
+Ví dụ 4.13: Cho hệ phương trình thuận nhất có $n$ phương trình $n+1$ ẩn:
+
+$$
+\sum _ { j = 1 } ^ { n + 1 } a _ { i j } x _ { j } = 0 ; i = 1 , . . . , n .
+$$
+
+Đặt $D _ { j }$ là định thức của ma trận vuông cấp $n$ được bằng cách xóa cột $j$ với $j = 1 , . . . , n + 1$ của ma trận hệ số $A = \left[ a _ { i j } \right] _ { i = 1, n }$
+
+Nếu tồn tại $D_{j_0} \neq 0$ thì $r(A) = n$, do đó không gian nghiệm của (4.13) có chiều bằng 1 và có dạng
+
+$$
+\Big \{ t \Big ( D _ { 1 } , - D _ { 2 } , . . . , ( - 1 ) ^ { j + 1 } D _ { j } , . . . , ( - 1 ) ^ { n } D _ { n + 1 } \Big ) \Big | t \in \mathbb{R} \Big \}.
+$$
+
+Giải: Xét định thức cấp $n+1$:
+
+$$
+D = \left| \begin{array}{lllll}
+y_1 & \dots & y_j & \dots & y_{n+1} \\
+a_{11} & \dots & a_{1j} & \dots & a_{1,n+1} \\
+\vdots & \vdots & \vdots & \vdots & \vdots \\
+a_{i1} & \dots & a_{ij} & \dots & a_{i,n+1} \\
+\vdots & \vdots & \vdots & \vdots & \vdots \\
+a_{n1} & \dots & a_{nj} & \dots & a_{n,n+1}
+\end{array} \right|.
+$$
+
+Khai triển theo hàng thứ nhất ta được:
+
+$$
+y_1 (-1)^2 D_1 + y_2 (-1)^3 D_2 + \cdots + y_j (-1)^{j+1} D_j + \cdots + y_{n+1} (-1)^{n} D_{n+1} = D.
+$$
+
+Với mỗi $i = 1, . . . , n$, khi $y_1 = a_{i1}$, $y_2 = a_{i2}$, $\ldots$, $y_{n+1} = a_{i,n+1}$ thì định thức $D$ tương ứng bằng 0 (vì hàng thứ 1 và hàng thứ $i + 1$ bằng nhau). Điều này chứng tỏ
+
+$$
+\left\{ \begin{array} { l } { a_{11} (-1)^{2} D_{1} + a_{12} (-1)^{3} D_{2} + \dots + a_{1j} (-1)^{j+1} D_{j} + \dots + a_{1,n+1} (-1)^{n} D_{n+1} = 0 } \\ { a_{21} (-1)^{2} D_{1} + a_{22} (-1)^{3} D_{2} + \dots + a_{2j} (-1)^{j+1} D_{j} + \dots + a_{2,n+1} (-1)^{n} D_{n+1} = 0 } \\ { \vdots } \\ { a_{n1} (-1)^{2} D_{1} + a_{n2} (-1)^{3} D_{2} + \dots + a_{nj} (-1)^{j+1} D_{j} + \dots + a_{n,n+1} (-1)^{n} D_{n+1} = 0 } \end{array} \right. .
+$$
+
+Vậy $(D_{1}, -D_{2}, \ldots, (-1)^{j+1} D_{j}, \ldots, (-1)^{n} D_{n+1})$ là một nghiệm của hệ phương trình (4.13).
+
+Mặt khác tồn tại $D_{j} \neq 0$ đồng thời $(D(-"))$ khác nghiệm tầm thường. Vậy tập nghiệm có dạng
+
+$$
+\Big \{ t \big ( D_{1}, -D_{2}, \ldots, (-1)^{j+1} D_{j}, \ldots, (-1)^{n} D_{n+1} \big ) \Big | t \in \mathbb{R} \Big \}.
+$$
+
+Định lý 4.6: Giả sử $(\overline{x}_1, . . . , \overline{x}_n)$ là một nghiệm của phương trình không thuần nhất (4.1). Khi đó $(x_1, . . . , x_n)$ là nghiệm của phương trình thuần nhất tương ứng (4.11) khi và chỉ khi $(x_1 + \overline{x}_1, . . . , x_n + \overline{x}_n)$ là nghiệm của phương trình (4.1).
+
+Cho $W \subset \mathbb{R}^n$, $(\overline{x}_1, . . . , \overline{x}_n) \in \mathbb{R}^n$; ký hiệu (Xem công thức 1.44)
+
+$$
+(\overline{x}_1, . . . , \overline{x}_n) + W = \Big\{( \overline{x}_1 + x_1, . . . , \overline{x}_n + x_n ) \Big| (x_1, . . . , x_n) \in W \Big\}
+$$
+
+Với ký hiệu này kết quả của Định lý 4.6 có thể biểu diễn như sau: Giả sử $(\overline{x}_1, . . . , \overline{x}_n)$ là một nghiệm của (4.1); khi đó
+
+$W$ là tập nghiệm của (4.11) khi và chỉ khi $(\overline{x}_1 + W, . . . , \overline{x}_n + W)$ là tập nghiệm của (4.1).
+
+Ví dụ 4.14: Giải và biện luận theo tham số $a, b$ hệ phương trình
+
+$$
+\left\{ { \begin{array} { l } { x_1 + a x_2 + a^2 x_3 = 1 } \\ { x_1 + b x_2 + b^2 x_3 = 1 } \end{array} } \right. .
+$$
+
+Giải: Hệ có một nghiệm riêng $\overline{x}_1 = 1, \ \overline{x}_2 = 0, \ \overline{x}_3 = 0$. Theo Định lý 4.6 ta cần tìm nghiệm tổng quát của hệ phương trình thuận nhất tương ứng.
+
+$$
+\mathrm{Ma trận} A = \left[ \begin{array}{lll}
+1 & a & a^2 \\
+1 & b & b^2 
+\end{array} \right].
+$$
+
+· Trong hợp $a = b: r(A) = 1$, hệ phương trình trong đồng với một phương trình đó có vô số nghiệm $x_1 = 1 - ax_2 - a^2 x_3; x_2, x_3$ tùy ý. · Trường hợp $a \neq b$: $r(A) = 2$. Theo ví dụ 4.13 không gian nghiệm của hệ phương trình thuận nhất tương ứng có chiều bằng 1 và có dạng $\{ t(D_1, -D_2, D_3) | t \in \mathbb{R} \}.$ $D_1 = \left| { \begin{array}{ll}
+a & a^2 \\
+b & b^2 
+\end{array} } \right| = ab(b-a), \ D_2 = \left| 1 & a^2 \right| = (a+b)(b-a), D_3 = \left| 1 & a \right| = b - a.$
+
+Vậy không gian nghiệm của hệ phương trình thuận nhất tương ứng:
+
+$\left\{ x(b - a) \big( ab, -(a + b), 1 \big) \Big| x \in \mathbb{R} \right\}$ hoăc $\left\{ t(ab, -(a + b), 1) \Big| t \in \mathbb{R} \right\}.$ (20 Đố dò hế đạ cá chõng nghiệmm $\left\{ x_1 = 1 + abt \right. \nonumber$
+
+# CHUONG 4
+
+4.1.a) $x_1 = x_2 = 1, x_3 = x_4 = -1.$ b) $x_1 = -2, x_2 = 0, x_3 = 1, x_4 = -1.$ c) Hề vô nghiệm. d) $x = -3, y = 0, z = -\frac{1}{2}, t = \frac{2}{3}.$
+
+4.2.a) $= 6 - 26x_3 + 17x_4, x_2 = -1 + 7x_3 - 5x_4.$ b bài mém. c) $x_1 = 3, x_2 = 2, x_3 = 1.$ d) $x_3 = 6 - 15x_1 + 10x_2, x_4 = -7 + 18x_1 - 12x_2.$
+
+4.3.a) Khi $m = 0$ hề vô nghiệm; $m \neq 0$ hề có nghiệm:
+
+$$
+x_1 = \frac{4 - m}{5m} - \frac{3}{5} x_3, x_2 = \frac{9m - 16}{5m} - \frac{8}{5} x_3, x_4 = \frac{1}{m}.
+$$
+
+b) Khi $m(m + 3) \neq 0$ hề có nghiệm duy nhất:
+
+$x _ { 1 } = \displaystyle \frac { 2 - m ^ { 2 } } { m ( m + 3 ) } \ , x _ { 2 } = \displaystyle \frac { 2 m - 1 } { m ( m + 3 ) } \ , x _ { 3 } = \displaystyle \frac { m ^ { 3 } + 2 m ^ { 2 } - m - 1 } { m ( m + 3 ) } .$ Khi $m = 0$ và $m = - 3$, định nghĩa không hợp lệ.
+
+c) Áp dụng định lý Vandermonde ta có:
+
+$$
+\begin{array} { c } 
+D = ( c - a ) ( b - a ) ( c - b ) , D _ { x } = ( c - d ) ( b - d ) ( c - b ) , \\
+D _ { y } = ( c - a ) ( d - a ) ( c - d ) , D _ { z } = ( d - a ) ( b - a ) ( d - b )
+\end{array}
+$$
+
+$\bullet$ Nếu $a, b, c$ lần lượt khác nhau thì hệ có nghiệm duy nhất. 
+$x = \frac { ( b - d ) ( c - d ) } { ( b - a ) ( c - a ) } \ , y = \frac { ( d - a ) ( d - c ) } { ( b - a ) ( b - c ) } \ , z = \frac { ( d - a ) ( d - b ) } { ( c - a ) ( c - b ) } \ .$
+
+$\cdot$ Nếu chỉ có hai số trong các số $a, b, c, d$ khác nhau và $a \neq b$ hay $a \neq c$ hay $c \neq b$, thì hệ có nghiệm phụ thuộc 1 tham số tùy ý. Chẳng hạn: $d = a \neq b = c$ thì nghiệm tổng quát có dạng: 
+$x = { \frac { ( b - d ) } { ( b - a ) } } = 1$ , $y = \frac { ( d - c ) } { ( b - a ) } z$, $z$ tùy ý.
+
+$\cdot$ Nếu $a = b = c = d$ thì hệ đã cho tương đương với phương trình: 
+\[20x + y + z = 1\]
+hệ có vô số nghiệm phụ thuộc vào 2 nghiệm tùy ý $\dot{\mathbf{y}}$. Nếu có 2 số trong ${}_a, b, c$ bằng nhau và khác $d$ thì hệ vô nghiệm. 
+\[D = (c - a)(b - a)(c - b), D_x = abcD,\]
+\[D_y = -(ab + bc + ca)D, D_z = (a + b + c)D,\]
+(xem bài tập 7 chương 4).
+$\cdot$ Nếu ${}_a, b, c$ khác nhau một phần biệt thì hệ có nghiệm duy nhất:
+\[x = \frac{abc}{D}, y = -\frac{(ab + bc + ca)}{D}, z = \frac{a + b + c}{D}.\]
+$\cdot$ Nếu có 2 số trong ${}_a, b, c$ bằng nhau thì hệ có vô số nghiệm phụ thuộc vào 1 số.
+
+$\bullet$ Nếu $a = b = c$ thì hệ đã cho tương đương với phương trình:
+\[20x + ay + a^2z = a^3\]
+hệ có vô số nghiệm phụ thuộc vào 2 nghiệm tùy ý $\dot{y}$. 
+
+4.4. Định lý $D = \left| A \right|$ của ma trận hệ số của hệ phương trình thỏa mãn:
+\[D^2 = \left| AA^t \right| = (a^2 + (1 - b)^2 + c^2 + (1 - d)^2)^4 \neq 0\]
+vì $a \neq 0 \implies D \neq 0 \implies$ hệ có nghiệm duy nhất.
+
+4.5. Ta thực hiện các phép biến đổi sau lên ma trận bổ sung của hệ đề đưa về hệ tương đương: cộng tất cả các hàng vào hàng 1 và chia cho $\frac{n(n + 1)}{2}$. Trừ hàng $j+1$ vào hàng $j$, $j = 2, \ldots, n - 1$. Trừ hàng 1 vào hàng $j$, $j = 2, \ldots, n$. Ta được:
+
+$\Rightarrow x_2 = x_3 = \dots = x_{n-1} = \frac{2}{n}$
+
+$\Rightarrow x_1 + (2 + 3 + \dots + n - 1) \cdot \frac{2}{n} = n - 1$
+
+$\Rightarrow x_1 = \frac{n - 2}{n}$
+
+$\Rightarrow x_2 = \dots = x_{n-1} = 1.$
+
+$x_n = \frac{2 - n}{n}.$
+
+$$
+4.6.\mathrm{a})\mathrm{i}) m = -3, \mathrm{ii}) m = 2, \mathrm{iii}) m \neq 2, m \neq -3.
+$$
+
+b)i) $m \neq 2, m \neq -5$, ii) $m = -5$, iii) $m = 2.$ c)i) luôn có nghiệm, ii) $m = 3$, iii) $m \neq 3$. d)i) $m = 4$, ii) $m \neq 4$, iii) không thể có duy nhất nghiệm.
+
+4.7. a) $c + 2b - 5a = 0$. b) luôn có nghiệm.
+
+c) $2a - b + c = 0$. d) luôn có nghiệm.
+
+$$
+\left| \begin{array}{cccc}
+a_{11} - \frac{1}{2} & a_{12} & \cdots & a_{1n} \\
+a_{21} & a_{22} - \frac{1}{2} & \cdots & a_{2n} \\
+\vdots & \vdots & \ddots & \vdots \\
+a_{n1} & a_{n2} & \cdots & a_{nn} - \frac{1}{2}
+\end{array} \right| \neq 0.
+$$
+
+4.9. Giải hệ phương trình suy ra: $\nu = u_1 + 3u_2 - 2u_3$.
+
+$$
+4 . 1 0 . {\text{ Nhịm}} X = A ^ {-1} B = \left[ \begin{array}{llll}
+0 & 5 & 1 & 9 \\
+0 & 3 & 1 & 7 \\
+1 & -1 & 1 & -3
+\end{array} \right] .
+$$
+
+4.11.Một cơ sở của $U : \left\{ ( 1 , 0 , 0 , 0 ) , ( 0 , - 1 , 1 , 0 ) , ( 0 , - 1 , 0 , 1 ) \right\}$
+
+Một cơ sở của $W : \left\{ ( - 1 , 1 , 0 , 0 ) , ( 0 , 0 , 2 , 1 ) \right\}$. Một cơ sở của $U \cap W : \left\{ ( 3 , - 3 , 2 , 1 ) \right\}$
+
+4.12. $V _ { 1 } = \left\{ x _ { 3 } ( 8 , - 6 , 1 , 0 ) + x _ { 4 } ( - 7 , 5 , 0 , 1 ) \right\} ; V _ { 2 } = \left\{ x _ { 3 } ( 3 , 1 , 1 , 0 ) + x _ { 4 } ( - 2 , - 2 , 0 , 1 ) \right\} ; V _ { 3 } = 0 .$ ： $V _ { 1 } \cap V _ { 2 } = \left\{ x _ { 4 } ( 1 , - 1 , 1 , 1 ) \right\} . \ \dim V _ { 1 } + V _ { 2 } = 3 .$
+
+4.13. $\nu = ( x , y , z , w ) \in W \Leftrightarrow \exists r , s , t : \nu = r ( 1 , - 2 , 0 , 3 ) + s ( 1 , - 1 , - 1 , 4 ) + t ( 1 , 0 , - 2 , 5 )$ Điều này tương đương với hệ phương trình sau có nghiệm
+
+$$
+\left\{ \begin{array}{lllllll}
+r & + & s & + & t & = & x \\
+- 2 r & - & s & & & = & y \\
+& - & s & - & 2 t & = & z \\
+3 r & + & 4 s & + & 5 t & = & w
+\end{array} \right. .
+$$
+
+$$
+\begin{cases}
+2x + y + z = 0 \\
+Vậy hệ phương trình xác định W: 
+5x + y - w = 0
+\end{cases}
+$$
+
+4.14. $\mathrm { H }$ phương trình xác định $W : \left\{ x+y=0 \right\}$
+
+4.15. Đặt $X = \left[ \begin{array} { l l } { a } & { b } \\ { c } & { d } \end{array} \right]$
+
+$$
+X ^ { 2 } - 2 X = \left[ \begin{array} { l l } { - 1 } & { 0 } \\ { 6 } & { 3 } \end{array} \right] \Leftrightarrow \left\{ \begin{array} { l l } { a ^ { 2 } + b c - 2 a = - 1 } \\ { c ( a + d - 2 ) = 6 } \\ { b ( a + d - 2 ) = 0 } \\ { b c + d ^ { 2 } - 2 d = 3 } \end{array} \right. \Leftrightarrow \left\{ \begin{array} { l l } { b = 0 } \\ { a = 1 } \\ { c ( d - 1 ) = 6 } \end{array} \right\} \left\{ \begin{array} { l l } { b = 0 } \\ { a = 1 } \\ { a = - 1 , c = - 3 } \\ { d = 3 , c = 3 } \end{array} \right. .
+$$
+
+[𝑥₁ = 1993 + t, x₂ = 1994 - 2t]
+
+4.16. Từ ví dụ 4.12 và định lý 4.6 ta có nghiệm $x = 2003 + 10t; t \in \mathbb{R}$.

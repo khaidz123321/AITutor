@@ -14,6 +14,21 @@ from core.config import settings
 from core.mapping import get_mapped_paths
 import traceback
 
+
+# NOTE: Dùng E5Embeddings với prefix "query:"/"passage:" để tận dụng tối đa
+# khả năng phân biệt câu hỏi và đoạn văn bản của multilingual-e5-large.
+# ⚠️  Sau khi bật E5Embeddings, PHẢI chạy lại reindex_rag.py để re-embed toàn bộ tài liệu!
+
+class E5Embeddings:
+    def __init__(self, base: HuggingFaceEmbeddings):
+        self.base = base
+
+    def embed_documents(self, texts: list) -> list:
+        return self.base.embed_documents(["passage: " + t for t in texts])
+
+    def embed_query(self, text: str) -> list:
+        return self.base.embed_query("query: " + text)
+
 # Map tên môn (dạng snake_case) sang tên hiển thị tiếng Việt đã bị xóa vì thay thế bằng cấu hình động
 
 class RAGService:
@@ -21,15 +36,13 @@ class RAGService:
     Lớp dịch vụ chịu trách nhiệm xử lý tài liệu thô thành cơ sở dữ liệu vector
     và tìm kiếm thông tin liên quan theo môn học.
     """
+    _shared_embeddings = None
+
     def __init__(self):
-        # Multilingual embedding model hỗ trợ 50+ ngôn ngữ (bao gồm tiếng Việt)
-        # Dùng cosine distance: score gần 0 = rất liên quan, gần 2 = không liên quan
-        self.embeddings = HuggingFaceEmbeddings(
-            model_name="sentence-transformers/paraphrase-multilingual-mpnet-base-v2"
-        )
         # Thư mục lưu trữ cơ sở dữ liệu vector tại local
         self.persist_directory = os.path.join(settings.BASE_DIR, "data", "vector_db")
         self.text_splitter = RecursiveCharacterTextSplitter(
+
             chunk_size=800,
             chunk_overlap=150,
             separators=[
@@ -46,6 +59,20 @@ class RAGService:
             # giúp chunk vẫn có heading để RAG hiểu ngữ cảnh
             keep_separator=True,
         )
+
+    @property
+    def embeddings(self):
+        if self.__class__._shared_embeddings is None:
+            print("[RAG] Đang tải mô hình Embedding vào RAM (Chỉ tải 1 lần)...", flush=True)
+            _base = HuggingFaceEmbeddings(
+                model_name=os.path.join(settings.BASE_DIR, "multilingual-e5-large-finetuned"),
+                model_kwargs={"device": "cpu"},
+                encode_kwargs={"normalize_embeddings": True},
+            )
+            self.__class__._shared_embeddings = E5Embeddings(_base)
+            print("[RAG] Tải mô hình thành công!", flush=True)
+        return self.__class__._shared_embeddings
+
 
     def _normalize_query(self, text: str) -> str:
         """
@@ -67,9 +94,18 @@ class RAGService:
         section metadata phản ánh đúng nội dung chính của chunk đó.
         Ví dụ: '2.1.2. Hàm số chẵn, lẻ'
         """
-        headings = re.findall(r'^#{1,4}\s+(.+)$', text, re.MULTILINE)
+        # Priority 1: Markdown heading chuẩn hoặc thiếu khoảng trắng sau # (do OCR)
+        headings = re.findall(r'^#{1,4}\s*(.+?)$', text, re.MULTILINE)
         if headings:
             return headings[0].strip()  # heading ĐẦU TIÊN, không phải cuối
+        # Priority 2: Số mục dạng "2.1.2. Tên mục" — OCR đôi khi không sinh ra #
+        section_nums = re.findall(r'^(\d+(?:\.\d+)+\.?\s+.+?)$', text, re.MULTILINE)
+        if section_nums:
+            return section_nums[0].strip()
+        # Priority 3: Dòng dạng "CHUONG X." hoặc tiêu đề viết hoa toàn bộ
+        caps = re.findall(r'^([A-Z][A-Z0-9\s\.]{4,})$', text, re.MULTILINE)
+        if caps:
+            return caps[0].strip()
         return ""
 
     def _parse_chapter_from_filename(self, filename: str) -> str:
@@ -102,6 +138,28 @@ class RAGService:
             parts.append(f"M\u1ee5c: {section}")
 
         return " \u2014 ".join(parts)
+
+    def clear_subject(self, subject: str) -> bool:
+        """
+        Xóa toàn bộ vector DB collection của một môn học.
+        Hữu ích khi giáo viên upload đè file mới, tránh duplicate dữ liệu.
+        """
+        try:
+            safe_name = unicodedata.normalize('NFKD', subject).encode('ASCII', 'ignore').decode('utf-8')
+            safe_name = re.sub(r'[^a-zA-Z0-9_-]', '', safe_name).lower()
+            safe_collection_name = f"subject_{safe_name}"
+
+            vector_db = Chroma(
+                persist_directory=self.persist_directory,
+                embedding_function=self.embeddings,
+                collection_name=safe_collection_name
+            )
+            vector_db.delete_collection()
+            print(f"[RAG] Đã xóa toàn bộ VectorDB collection: {safe_collection_name}")
+            return True
+        except Exception as e:
+            print(f"[RAG] Không thể xóa VectorDB collection của môn {subject} (có thể chưa tồn tại): {e}")
+            return False
 
     def index_document(self, file_path: str, subject: str):
         """
@@ -141,14 +199,19 @@ class RAGService:
                 chunk.metadata["subject"] = subject
 
             # FIX: Dịch tên môn học sang dạng không dấu để đặt tên Collection chuẩn
-            safe_collection_name = f"subject_{subject}"
+            safe_name = unicodedata.normalize('NFKD', subject).encode('ASCII', 'ignore').decode('utf-8')
+            safe_name = re.sub(r'[^a-zA-Z0-9_-]', '', safe_name).lower()
+            safe_collection_name = f"subject_{safe_name}"
 
             # 4. Lưu vào ChromaDB với metadata đầy đủ
+            # collection_metadata: dùng cosine distance (nhất quán với normalize_embeddings=True)
+            # score 0.0 = giống hệt, 1.0 = khác hoàn toàn (cosine distance)
             vector_db = Chroma.from_documents(
                 documents=chunks,
                 embedding=self.embeddings,
                 persist_directory=self.persist_directory,
-                collection_name=safe_collection_name 
+                collection_name=safe_collection_name,
+                collection_metadata={"hnsw:space": "cosine"},
             )
             print(f"[RAG] Đã index {len(chunks)} chunks từ {os.path.basename(file_path)}")
             return True
@@ -157,34 +220,30 @@ class RAGService:
             print(f"Lỗi nạp dữ liệu rag: {e}")
             return False
 
-    def query_context(self, subject: str, query: str, top_k: int = 6, threshold: float = 1.2, display_subject: str = "") -> str:
+    def query_context(self, subject: str, query: str, top_k: int = 6, threshold: float = 0.72, display_subject: str = "") -> str:
         """
-        Tìm kiếm chunk liên quan nhất trong toàn bộ collection của môn học.
-        Model sentence-transformers/paraphrase-multilingual-mpnet-base-v2 dùng cosine distance.
-        Score thực tế: 0.0-0.5 = liên quan tốt, > 1.2 = không liên quan.
         
         NOTE: Không filter theo chapter vì frontend chapters (5 chương) không tương ứng
         với cấu trúc file text (4 chương sách) — thù dựa vào semantic search để tìm đúng nội dung.
         """
         try:
-            safe_collection_name = f"subject_{subject}"
+            safe_name = unicodedata.normalize('NFKD', subject).encode('ASCII', 'ignore').decode('utf-8')
+            safe_name = re.sub(r'[^a-zA-Z0-9_-]', '', safe_name).lower()
+            safe_collection_name = f"subject_{safe_name}"
             vector_db = Chroma(
                 persist_directory=self.persist_directory,
                 embedding_function=self.embeddings,
                 collection_name=safe_collection_name,
+                collection_metadata={"hnsw:space": "cosine"},
             )
-
-            # Normalize query: bỏ dấu tiếng Việt để khớp với nội dung OCR không dấu trong DB
-            normalized_query = self._normalize_query(query)
-            print(f"[RAG] Query gốc: '{query}'")
-            print(f"[RAG] Query sau normalize: '{normalized_query}'")
 
             # Tìm kiếm trên toàn bộ collection, không filter chapter
             # Lấy nhiều hơn (top_k * 3) để bù trừ duplicate section, sau đó deduplicate
+            # Chuẩn hóa query (bỏ dấu) để khớp với text OCR bị mất dấu trong DB
+
+            print(f"[RAG] Query: '{query}'")
             raw_k = top_k * 3
-            results_with_scores = vector_db.similarity_search_with_score(
-                normalized_query, k=raw_k
-            )
+            results_with_scores = vector_db.similarity_search_with_score(query, k=raw_k)
 
             # Debug: in score để dễ điều chỉnh threshold
             for doc, score in results_with_scores:
@@ -192,12 +251,9 @@ class RAGService:
                 sec = doc.metadata.get("section", "")
                 print(f"[RAG DEBUG] score={score:.4f} | {src} | {sec}")
 
-            # Lọc chunk có score quá cao (hoàn toàn không liên quan)
-            filtered = [
-                doc
-                for doc, score in results_with_scores
-                if score < threshold
-            ]
+            # Lọc chunk liên quan: cosine distance thấp = liên quan (giữ score < threshold)
+            # ChromaDB trả về cosine distance: 0.0 = giống hệt, 2.0 = hoàn toàn khác
+            filtered = [doc for doc, score in results_with_scores if score < threshold]
             if not filtered:
                 print(f"[RAG] Không có chunk nào lọt qua threshold={threshold}. Trả về rỗng.")
                 return "No relevant theoretical context found for this query in the provided documents."

@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "D:\Project\AITutor\AI\controller\endpoints\exercises.py", line 499, in generate_from_theory
+    raw_output_stage1 = _call_llm(
+                        ^^^^^^^^^^
+  File "D:\Project\AITutor\AI\controller\endpoints\exercises.py", line 57, in _call_llm
+    raise Exception(f"curl failed with return code {result.returncode}: {result.stderr}")
+Exception: curl failed with return code 56: 

@@ -1,11 +1,3 @@
-"""
-Script tai lap chi muc (re-index) toan bo tai lieu RAG.
-Chay script nay sau khi cap nhat logic chunking de metadata `section` duoc gan dung.
-
-Cach dung:
-    cd d:/Project/AITutor/AI
-    D:\\Project\\venv\\Scripts\\python.exe reindex_rag.py
-"""
 import os
 import sys
 import shutil

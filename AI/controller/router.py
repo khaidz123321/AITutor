@@ -1,7 +1,5 @@
 from fastapi import APIRouter
-from controller.endpoints import chat, documents, activities
-
-# Khởi tạo Điều Hành chính
+from controller.endpoints import chat, documents, activities, exercises, persona, courses
 api_router = APIRouter()
 
 # Đăng ký các nhánh con vào điều hành chính
@@ -25,3 +23,26 @@ api_router.include_router(
     prefix="/documents", 
     tags=["Knowledge Base (RAG)"]
 )
+
+# Prefix /v1/exercises khớp với URL Spring Boot gọi:
+# aiServiceUrl + "/v1/exercises/import-pdf"  (ExerciseAiServiceImpl.java)
+api_router.include_router(
+    exercises.router,
+    prefix="/v1/exercises",
+    tags=["Exercise AI — PDF Import"]
+)
+
+# Prefix /v1/persona — Tự động tạo AI Persona cho khóa học mới
+api_router.include_router(
+    persona.router,
+    prefix="/v1/persona",
+    tags=["AI Persona Builder"]
+)
+
+# Prefix /v1/courses — Quản lý khóa học (Tạo thư mục)
+api_router.include_router(
+    courses.router,
+    prefix="/v1/courses",
+    tags=["Courses Management"]
+)
+

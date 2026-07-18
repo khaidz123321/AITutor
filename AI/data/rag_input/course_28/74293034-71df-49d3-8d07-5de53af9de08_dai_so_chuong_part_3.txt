@@ -1,0 +1,232 @@
+# Bài tập Chương 1
+
+1.1 Hai tập hợp \(A\) và \(B\) trong các trường hợp sau đây bằng nhau hay là tập hợp con của nhau?
+
+$$
+A = \left\{ x \in \mathbb { R } \Big| x ^ { 2 } + 2 x > 1 \right\} ~ , ~ B = \left\{ x \in \mathbb { R } \Big| x > \sqrt { 2 } - 1 \right\}.
+$$
+
+b) \(A\) là tập tất cả số thực \(\geq 0\), \(B\) là tập tất cả số thực \(\geq\) trị tuyệt đối của chính nó.
+
+c) \(A\) là tập tất cả số nguyên không âm có lũy thừa bậc 3 là một số lẽ không chia hết cho 3, \(B\) là tập các số nguyên không âm có bình phương trừ 1 chia hết cho 24.
+
+1.2 \(A , B , C , D\) là tập con của \(E\). Chứng minh rằng:
+
+a) \(A \setminus B = \emptyset\) khi và chỉ khi \(A \subset B\)
+
+b) Nếu \(A \subset B, C \subset D\) thì \(A \cup C \subset B \cup D , A \cap C \subset B \cap D.\)
+
+c) Nếu \(A \cup C \subset A \cup B, A \cap C \subset A \cap B\) thì \(C \subset B\).
+
+1.3 Cho \(A, B\) là hai tập con của \(E\), chứng minh rằng:
+
+a) \(A \subset B \Leftrightarrow \overline{B} \subset \overline{A}\)
+
+b) \(A \subset B \Leftrightarrow A \cup B = B \Leftrightarrow \overline{A} \cup B = E.\)
+
+c) \(A \subset B \Leftrightarrow A \cap B = A \Leftrightarrow \overline{B} \cap A = \emptyset.\)
+
+d) \(A \setminus ( A \setminus B ) = A \cap B\)
+
+e) \(A \cap ( B \setminus C ) = ( A \cap B ) \setminus ( A \cap C ).\)
+
+f) \(A \cup ( B \setminus A ) = A \cup B.\)
+
+1.4 \(A , B , C , D\) là tập con của \(E\). Chứng minh rằng:
+
+a) $A \cap B \neq \emptyset \Leftrightarrow ( A \times B ) \cap ( B \times A ) \neq \emptyset$  
+b) $( A \times C ) \cap ( B \times D ) = ( A \cap B ) \times ( C \cap D )$
+
+1.5 * Trong $\mathbb{R}$, xét quan hệ $\mathcal{R}$ xác định bởi: $a \mathcal{R} b \Leftrightarrow a^3 - b^3 = a - b$  
+Chứng minh $\mathcal{R}$ là một quan hệ trong dường. Tìm lớp tương đồng $\Pi_a^{-1}$ của $a$:  
+
+1.6 * Trong tập hợp các số tự nhiên $\mathbb{Z}$, các quan hệ sau có phải là quan hệ tương đồng không?  
+a) $a \mathcal{R} b \Leftrightarrow a$ chia hết cho $b$  
+b) $a \mathcal{R} b \Leftrightarrow a$ không nguyên tố với $b$:  
+
+1.7 * Trong $\mathbb{R}$, xét quan hệ $\mathcal{R}$ xác định bởi: $a \mathcal{R} b \Leftrightarrow ( a^3 + 2 ) ( b^2 + 1 ) = ( b^3 + 2 ) ( a^2 + 1 )$.  
+Chứng minh $\mathcal{R}$ là một quan hệ trong dường. Xác định số phần tử của lớp tương đồng $a$ của $a$:  
+
+$\bf{1.8^{*}}$ Trong tập các đường thẳng trong không gian, quan hệ vuông góc có phải là quan hệ tương đồng không?
+
+1.9 * Trong $\mathbb{R}^2$ xét quan hệ $(x, y) \leq (x', y') \Leftrightarrow x \leq x'$ và $y \leq y'$. Chứng minh $\leq$ là một quan hệ thứ tự. Quan hệ này có phải là quan hệ thứ tự toàn phần không?
+
+1.10 * Ta sắp xếp thứ hạng học sinh bằng cách dựa vào điểm kiểm tra hai môn học, điểm môn thứ nhất ký hiệu là $x$, điểm môn thứ hai ký hiệu là $y$. Học sinh có điểm $(x_1, y_1)$ kém hơn hoặc bằng học sinh có điểm $(x_2, y_2)$, ký hiệu $(x_1, y_1) \leq (x_2, y_2)$ xác định như sau:
+
+$$
+(x_1, y_1) \leq (x_2, y_2) \Longleftrightarrow \left\{ 
+  \begin{array}{ll}
+    x_1 < x_2 \\
+    \text{hoặc} \\
+    \left\{
+      \begin{array}{l}
+        x_1 = x_2 \\
+        y_1 \leq y_2
+      \end{array}
+    \right.
+  \end{array}
+\right.
+$$
+
+Giả sử điểm của môn thứ hai của các học sinh là khác nhau, chứng minh quan hệ $\leq$ là một quan hệ thứ tự toàn phần (được gọi là sắp xếp thứ hạng theo điểm).
+
+1.11 * a) Cho tập được sắp $(E, \leq)$ và hai tập con $A \subset B \subset E$. Chứng minh rằng nếu tồn tại sup A, sup $B$ thì sup $A \leq \operatorname*{sup} B$:
+
+b) Tìm ba ví dụ về tập được sắp $(E, \leq)$ thỏa mãn:
+1) Tồn tại sup $A$ nhưng không tồn tại sup $B$.
+2) Tồn tại sup $B$ nhưng không tồn tại sup $A$.
+3) Tồn tại sup $A \not\in A$ nhưng tồn tại max $B$.
+
+1.12 Các ánh xạ $f : X \to Y$ sau đây là đơn ánh, toàn ánh, song ánh? Xác định ánh xạ ngược nếu tồn tại.
+a) $X = Y = \mathbb{R}$, $f(x) = 2x + 5$:
+b) $X = Y = \mathbb{R}$, $f(x) = x^2 - 2x$
+c) $X = [1;3]$, $Y = [-1;3]$, $f(x) = x^2 - 2x.$
+d) $X = Y = \mathbb{R}$, $f(x) = 3x - 2|x|$
+e) $X = Y = \mathbb{R}$, $f(x) = x^2 + bx + c; b, c \in \mathbb{R}.$ (20)
+
+1.13 Cho $f : \mathbb{R}^* \to \mathbb{R}$ và $g : \mathbb{R} \to \mathbb{R}$ xác định bởi: $f(x) = 1/x$, $g(x) = 3x / (x^2 + 1).$
+a) Ánh xạ nào là đơn ánh, toàn ánh. Tìm $\mathrm{Im}\ f$, $\mathrm{Im}\ g$.
+b) Xác định ánh xạ tích $g \circ f$. Có dạng thức $g \circ f = g$ không?
+
+1.14 Cho hai ánh xạ $f, g : \mathbb{N} \to \mathbb{N}$ xác định bởi: 
+\[ f(n) = 2n, \quad g(n) = \left\{
+\begin{array}{ll}
+\frac{n}{2} & \text{n chẵn} \\
+\frac{n-1}{2} & \text{n lẻ}
+\end{array}\right. \]
+a) Xác định tính chất đơn ánh, toàn ánh của $f, g$.
+b) Xác định $f \circ g, g \circ f$.
+
+1.15 Cho ánh xạ $f : X \to Y$, cho $A, B \subset X$ và $C, D \subset Y$. Chứng minh rằng:
+a) $A \subset B \Rightarrow f(A) \subset f(B)$.
+Tìm ví dụ chứng tỏ $f(A) \subset f(B)$ nhưng $A \not\subset B$.
+b) $f(A \cap B) \subset f(A) \cap f(B)$.
+Tìm ví dụ chứng tỏ $f(A) \cap f(B) \subset f(A \cap B)$.
+c) $f(A \cup B) = f(A) \cup f(B)$.
+d) $f^{-1}(C \cap D) = f^{-1}(C) \cap f^{-1}(D)$.
+e) $f^{-1}(C \cup D) = f^{-1}(C) \cup f^{-1}(D)$.
+f) $f^{-1}(C \setminus D) = f^{-1}(C) \setminus f^{-1}(D)$.
+Nếu $f$ đơn ánh thì:
+g) $f(A) \subset f(B) \Rightarrow A \subset B$.
+h) $f(A \cap B) = f(A) \cap f(B)$.
+
+1.16 Ký hiệu $h = g \circ f$ là hợp của hai ánh xạ $f : X \to Y$, $g : Y \to Z$. Chứng minh:
+a) Nếu $f, g$ đơn ánh thì $h$ đơn ánh.
+b) Nếu $f, g$ toàn ánh thì $h$ toàn ánh.
+
+c) $h$ toàn ánh thì $g$ toàn ánh.   
+d) $h$ đơn ánh thì $f$ đơn ánh.   
+e) $h$ đơn ánh và $f$ toàn ánh thì $g$ đơn ánh.   
+f) $h$ toàn ánh và $g$ đơn ánh thì $f$ toàn ánh.
+
+1.17 \* Với mỗi bộ số nguyên $a , b , c , d \in \mathbb { R }$ sao cho $ad - bc = 1$:
+
+Ta xét ánh xạ $f : \mathbb { R } ^ { 2 } \to \mathbb { R } ^ { 2 }$ xác định bởi $f ( x , y ) = ( ax + by, cx + dy)$，
+
+Gọi $\mathcal{F}$ là tập hợp các ánh xạ như trên. Chứng minh:
+
+a) Với mỗi $f \in \mathcal{F}$ thì $f$ là song ánh và $\boldsymbol { f } ^ { - 1 } \in \mathcal{F}$：
+
+b) Nếu $f , g \in \mathcal{F}$ thì $f \circ g \in \mathcal{F}$. Nói cách khác, tập $\mathcal{F}$ với luật hợp thành là hợp hai ánh xạ là một nhóm không giao hoán.
+
+$\mathbf { 1 . 1 8 ~ ^ { * } }$ Cho ba tập hợp khác rỗng $E , F , G$：
+
+a) Cho hai ánh xạ $f : E \to F$ và $g : E \to G$：
+
+Chứng minh rằng tồn tại ánh xạ $h \colon F \to G$ sao cho $h \circ f = g$ khi và chỉ khi với mỗi $x , x ^ { \prime } \in E : f ( x ) = f ( x ^ { \prime } ) \Rightarrow g ( x ) = g ( x ^ { \prime } )$
+
+b) Cho hai ánh xạ $g : E \to G$ và $h \colon F \to G$：
+
+Chứng minh rằng tồn tại ánh xạ $f : E \to F$ sao cho $h \circ f = g$ khi và chỉ khi với mỗi $x \in E , \exists y \in F : g ( x ) = h ( y )$
+
+1.19 Cho tập $X$ có $n$ phần tử. Chứng minh ${\mathcal{P}}( X )$ có $2^n$ phần tử.
+
+$\mathbf { 1 . 2 0 * }$ Cho hai phép thế của tập $\{1,2,3,4\}$:
+
+$$
+\sigma = \left[ \begin{array} { l l l l } { 1 } & { 2 } & { 3 } & { 4 } \\ { 3 } & { 4 } & { 1 } & { 2 } \end{array} \right] , \mu = \left[ \begin{array} { l l l l } { 1 } & { 2 } & { 3 } & { 4 } \\ { 4 } & { 2 } & { 1 } & { 3 } \end{array} \right] .
+$$
+
+Tim $\sigma \circ \mu , \mu \circ \sigma , \sigma ^ { - 1 } , \mu ^ { - 1 }$
+
+1.21 * Cho $n$ điểm khác nhau trong mặt phẳng:
+
+a) Tính số đoạn thẳng nội tiếp cặp điểm khác nhau.
+b) Tính số các véc tơ $\neq \vec{0}$ có các điểm đầu, điểm cuối từ $n$ điểm này.
+
+1.22 * Tìm hàng lớn nhất trong khai triển của nhị thức $(37 + 19)^{31}$:
+
+$$
+1.23 * \text{ Với hai số tự nhiên } n, p \in \mathbb{N}, \text{ ký hiệu } S_{p}(n) = \sum _ { k = 0 } ^ { n } k^{p} .
+$$
+
+a) Chứng minh $S_{p+1}(n+1) = \sum _ { k = 0 } ^ { p + 1 } C_{p+1}^k S_k(n).$
+
+b) Suy ra $(n+1)^{p+1} = \sum _ { k = 0 } ^ { p } C_{p+1}^k S_k(n).$
+
+c) Suy ra các tổng $\sum _ { k = 1 } ^ { n } k, \sum _ { k = 1 } ^ { n } k^{2}, \sum _ { k = 1 } ^ { n } k^{3}.$
+
+1.24 * Chứng minh rằng $\begin{array} { r } { \mathcal { G } = \left\{ f _ { a b } : \mathbb { R } \to \mathbb { R } \middle | f \left( x \right) = a x + b ; a , b \in \mathbb { R } , a \neq 0 \right\} } \end{array}$ với phép hợp ánh là một nhóm. Nhóm này có giao hoán không?
+
+$1 . 2 5 ^ { \ast } \mathrm { L \tilde { u } y }$ thức của phần tử $a$ của nhóm $G$ với phép nhân được định nghĩa như sau:
+
+$$
+a ^ { 0 } = 1 , a ^ { n } = a a ^ { n - 1 } , a ^ { - n } = \left( a ^ { - 1 } \right) ^ { n } ; \forall n \in \mathbb { N } .
+$$
+
+Chứng minh rằng với mọi $m , n , k \in \mathbb { Z }$:
+
+$$
+a ^ { m } a ^ { n } = a ^ { m + n } , \left( a ^ { m } \right) ^ { n } = a ^ { m n } , \left( a ^ { m + n } \right) ^ { k } = a ^ { k m + k n } .
+$$
+
+1.26 * Cho nhóm $G$ với phép nhân thỏa mãn điều kiện $( a b ) ^ { 2 } = a ^ { 2 } b ^ { 2 }$ với mọi $a , b \in G$. Chứng minh $G$ là nhóm Abel.
+
+1.27 * Cho $\left( G , ^ { * } \right)$ là một nhóm, giả sử $G$ là một tập hợp hữu hạn có số phần tử chẵn. Đặt $S = \left\{ \left. x \in G \right| x ^ { 2 } = e , x \neq e \right\}$. Chứng minh rằng quan hệ $\mathcal { R }$ xác định trong $G$ bởi:
+
+$$
+x \mathcal { R } y \Leftrightarrow y = x ~ hoặc ~ y = x ^ { - 1 }
+$$
+
+là một quan hệ tương đương. Suy ra $S$ có số phần tử chẵn.
+
+(20 $\mathbf{1.28^*}$) Cho $G, G'$ là hai nhóm lần lượt có phần tử trung hòa là $e$ và $e'$. $f: G \to G'$ là một đồng cấu nhóm. Chứng minh: $f(e) = e'$, $f(a^{-1}) = f(a)^{-1}$
+
+(1.29 $\mathbf{*}$) Cho $G, G'$ là hai nhóm lần lượt có phần tử trung hòa là $e$ và $e'$. $f: G \to G'$ là một đồng cấu nhóm. Ta định nghĩa và ký hiệu hạt nhân của đồng cấu nhóm $f$ là $\operatorname{Ker} f = f^{-1}(e')$. Chứng minh rằng $f$ là đơn cấu khi và chỉ khi $\operatorname{Ker} f = \left\{ e \right\}$.
+
+(1.30 $\mathbf{*}$) Cho $(A, +, \cdot)$ là một trường. Tập con $C = \left\{ x \in A \mid \forall a \in A : ax = xa \right\}$ được gọi là tâm của $A$. Giả sử $\forall x \in A, x^2 - x \in C$:
+
+a) Chứng minh rằng $(C, +)$ là một nhóm con của nhóm $(A, +)$.
+
+b) Chứng minh rằng $xy + yx \in C$ với mọi $x, y \in A$.
+
+c) Suy ra trường $A$ giao hoán.
+
+(1.31 $\mathbf{*}$) Cho $A$ là một trường có đơn vị.
+
+a) Chứng minh rằng, nếu $x, y$ thỏa mãn $xy = yx$ thì ta có nhị thức Newton
+
+$$
+\left(x + y \right)^{n} = \sum_{k=0}^{n} C_{n}^{k} x^k y^{n-k},
+$$
+
+trong đó $x^0 = 1$, $x^k$ là tích $k$ lần của phần tử $x$.
+
+b) Phần tử $x \in A$ được gọi là lũy linh nếu tồn tại một số tự nhiên $n \neq 0$ sao cho $\{ x^n \} = 0$. Chứng minh rằng, nếu $x, y$ lũy linh và $xy = yx$ thì $x + y$ cũng lũy linh.
+
+c) Chứng minh rằng, nếu $x$ lũy linh và $xy = yx$ thì $xy$ cũng lũy linh.
+
+d) Nếu $x \in A$ lũy linh thì tồn tại $\left( 1 - x \right)^{-1}$:
+
+1.32 Biểu diễn số đố mang trung với các công thức Boole sau:
+
+$$
+\begin{array}{rl}
+& {\mathfrak{i}) \left[ x \vee ( y' \wedge z ) \vee ( x \wedge z' ) \right] \vee ( y \wedge z ).} \\
+& {\mathfrak{o}) \ x \vee \left[ y' \vee ( y \wedge z )' \vee z' \right].}
+\end{array}
+$$
+
+1.33 Viết các công thức Boole tương ứng với các mạng sau và tìm mạng tương đương đơn giản hơn:
+
+![](images/898e5cf3b461185546fe8c27fa9d132e403d44336026476dcb016d86b4073163.jpg)

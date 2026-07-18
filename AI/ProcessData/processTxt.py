@@ -2,6 +2,9 @@ import os
 import sys
 from dotenv import load_dotenv
 from auto_split import auto_split_large_files
+from clean.clean_data import clean_rag_input as clean_headers_footers
+from clean.clean_rag_input import main as clean_ocr_garbage
+from clean.clean_ocr_llm import main as clean_ocr_with_llm
 
 # 1. TỰ ĐỘNG XÁC ĐỊNH ĐƯỜNG DẪN TUYỆT ĐỐI
 # Lấy thư mục chứa chính file test_function.py này (D:\Project\AITutor\AI)
@@ -15,6 +18,7 @@ if PROJECT_ROOT not in sys.path:
     sys.path.append(PROJECT_ROOT)
 
 from ProcessData.read_data import DataReader
+from reindex_rag import reindex_all
 
 load_dotenv()
 
@@ -69,8 +73,20 @@ def run_test():
         else:
             print(f"KHÔNG TÌM THẤY: {pdf_folder}")
 
-    print("\n HOÀN TẤT! Dữ liệu đã sẵn sàng trong thư mục rag_input.")
+    print("\n HOÀN TẤT TRÍCH XUẤT! Đang tiến hành tách chương...")
     auto_split_large_files()
+    
+    print("\n TIẾN HÀNH DỌN DẸP RÁC OCR VÀ HEADER/FOOTER...")
+    clean_headers_footers() # Xóa header/footer PTIT
+    clean_ocr_garbage()     # Xóa rác OCR và mục lục/tài liệu tham khảo
+    
+    print("\n TIẾN HÀNH KHÔI PHỤC DẤU TIẾNG VIỆT VÀ SỬA LỖI BẰNG LLM...")
+    clean_ocr_with_llm()
+    
+    print("\n TIẾN HÀNH NHÚNG DỮ LIỆU (EMBEDDING) VÀO VECTOR DB...")
+    reindex_all()
+    
+    print("\n TẤT CẢ HOÀN TẤT! Toàn bộ pipeline đã tự động chạy từ PDF -> Vector DB thành công.")
 
 if __name__ == "__main__":
     run_test()

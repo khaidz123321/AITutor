@@ -1,0 +1,297 @@
+# Bài tập chương 4
+
+1. Giải các phương trình vi phân có biến số phân ly:
+
+$$
+\begin{array} { l } { \mathrm { a ) ( 1 + x ) y d x + ( 1 - y ) x d y = 0 . } \\ { \mathrm { b ) ( x ^ { 2 } - y x ^ { 2 } ) y ^ { \prime } + y ^ { 2 } + x y ^ { 2 } = 0 . } \\ { \mathrm { c ) y ^ { \prime } \cos 2 y - \sin y = 0 . } \\ { \mathrm { d ) y ^ { \prime } = \cos ( x - y ) . } } \end{array}
+$$
+
+2. Giải các phương trình vi phân cấp một.
+
+$$
+\begin{array} { r l } & { \mathrm { a ) ( y - x ) d x + ( y + x ) d y = 0 . } \\ & { \mathrm { b ) ( 3 x ^ { 2 } + y ^ { 2 } ) y + ( y ^ { 2 } - x ^ { 2 } ) x y ^ { \prime } = 0 . } \\ & { \mathrm { c ) y ^ { \prime } = 2 \left( \frac { y + 2 } { x + y - 1 } \right) ^ { 2 } . } } \end{array}
+$$
+
+3. Giải các phương trình vi phân tuyến tính cấp một:
+
+$\begin{array} { l } { \mathrm { a ) 2 } x ( x - 1 ) y ^ { \prime } + ( 2 x - 1 ) y + 1 = 0 . } \\ { \mathrm { b ) } y ^ { \prime } + 2 x y = x e ^ { - x } . } \\ { \mathrm { c ) 2 } y d x + ( y ^ { 2 } - 6 x ) d y = 0 . } \end{array}$
+
+$\mathrm{(d) } y ^ { \prime } + x y = x ^ { 3 }$
+
+$\mathrm{(e) } y ^ { \prime } \cos ^ { 2 } x + y = \tan x$ thỏa mãn $y ( 0 ) = 0$
+
+4. Tìm nghiệm riêng của phương trình: $y e ^ { y } = y ^ { \prime } ( y ^ { 3 } + 2 x e ^ { y } )$ thỏa mãn điều kiện đầu $\mathrm{(} y ( 0 ) = - 1 \mathrm{)}$
+
+5. Tìm nghiệm của phương trình $y ^ { \prime } - y = \cos x - \sin x$. thỏa mãn điều kiện biên khi $x \to \infty$
+
+6. Tìm nghiệm của các phương trình sau:
+
+a) $\textstyle y' - \frac{y}{x} = x^3$ ：b) $y' + \frac{y}{x} = \sin x$ ：
+
+7. Tìm nghiệm các phương trình Bernoulli sau:
+
+$\begin{array} { r } { \mathrm{a})\ y' + \frac{y}{x} = x \left( \frac{e^x}{e^x + 1} \right) y^2 } \end{array}$  
+b) $(x + 1)y'' + x(y')^2 = y'$ ：  
+c) $x^2 y' = y(x + y)$   
+$\begin{array} { r } { \mathrm{d})\ y dx + 2x dy = \frac{2y \sqrt{x}}{\cos^2 y} dy } \end{array}$ thỏa mãn điều kiện $y(0) = \pi$
+
+8. Giải các phương trình sau:
+
+a) $(y^2 + 1)^{3/2} dx + (y^2 + 3xy\sqrt{1 + y^2}) dy = 0.$  
+b) $e^x (2 + 2x - y^2) dx - ye^x dy = 0$  
+c） $(y \cos^2 x - \sin x) dy = y \cos x (y \sin x + 1) dx$  
+d) $(2x + 3x^2 y) dx = (3y^2 - x^3) dy$
+
+9. Giải các phương trình:
+
+a) $y'' - 7y' + 6y = \sin x$ ：  
+b) $y'' + 9y = 6e^{3x}$   
+c） $y'' - (m - 1)y' + my = e^x - x - 1$   
+d) $\begin{array} { r l } {2xy'y'' = y'^2 - 1.} & {y = \frac{2}{3C_1}(C_1 x + 1)^{\frac{3}{2}} + C_2} \end{array}$
+
+e) $\sqrt{y} y'' = y'$. Nghiệm tổng quát: 
+\[ x = \sqrt{y} - \frac{C_1}{2} \ln |2\sqrt{y} + C_1| + C_2 \]
+và ngoài ra $y = c$ (cũng là nghiệm).
+
+f) $y'' = y' e^y$:
+
+g) $yy'' + y^2 = 1$
+
+h) $y'^2 + yy'' = yy'$
+
+10. Tính phân tích tổng quát của các phương trình sau:
+
+$$
+(x - y + 4) dy + (y + x - 2) dx = 0.
+$$
+
+11. Giải phương trình $x^2 y'' + xy' - 4y = x^2 \ln x$ bằng cách đổi biến số $x = e^t$:
+
+12. Bằng cách đặt $y = ux$, hay giải phương trình: 
+\[ x dy - y dx - \sqrt{x^2 - y^2} dx = 0. \]
+
+13. Tìm nghiệm riêng của phương trình: 
+\[ xy' = \sqrt{x^2 - y^2} + y \]
+thỏa mãn điều kiện đầu $y(1) = 0$.
+
+14. Tìm nghiệm tổng quát của phương trình:
+\[ y' - xy = x + x^3 \]
+
+15. Chứng minh rằng hệ các vector $\{\cos^2 2x, \sin^2 2x, 2\}$ là hệ phụ thuộc tuyến tính. Tính định thức Wronski của chúng.
+
+16. Giải phương trình:
+
+a) \( y^{\prime\prime} + y^{\prime} = x + e^{-x} \)
+b) \( 2y^{\prime\prime} + 5y^{\prime} = 9x \sin x \)
+D: \( y = (-2x + \frac{185}{29}) \sin x + (-5 - \frac{16}{29}) \cos x \)
+c) \( y^{\prime\prime} - 2y^{\prime} + 5y = x \sin 3x \)
+Ds: 
+\[ y = \left( \frac{3}{26}x + \frac{57}{26} \right) \cos 3x + \left( -\frac{1}{13}x + \frac{41}{43} \right) \sin 3x. \]
+
+17. Giải hệ phương trình vi phân:
+
+\[ 
+\begin{array}{ll}
+x^{\prime} = 7x + 3y \\
+y^{\prime} = 6x + 4y,
+\end{array} 
+\quad
+b) 
+\begin{array}{ll}
+x^{\prime} = y - 7x \\
+y^{\prime} = -2x - 5y,
+\end{array} 
+\quad
+c)
+\begin{array}{lll}
+x^{\prime} = x - y + z \\
+y^{\prime} = x + y - z \\
+z^{\prime} = 2x - y,
+\end{array} 
+\quad
+d) 
+\begin{array}{lll}
+x^{\prime} = 2x + y \\
+y^{\prime} = x + 3y \\
+z^{\prime} = 2y + 3.
+\end{array} 
+\]
+
+Hướng dẫn giải bài tập chương 4
+
+1. Giải các phương trình vi phân cấp biến số phụ:
+
+a) \( \ln |xy| + x - y = C \)
+b) 
+\[ \frac{x + y}{xy} + \ln \left|\frac{y}{x}\right| = C \]
+c) \( x = \ln |\tan \frac{y}{2}| + 2\cos y + C \)
+d) \( x + \cot \frac{x - y}{2} = C \)
+
+2. Giải các phương trình vi phân cấp một.
+
+a) \( y^2 + 2xy - x^2 = C^2 \)
+b) \( x(x^2 + y^2) - Cy^2 = 0 \)
+\( e^{-2\arctan{\frac{y+2}{x-3}}} = C(y+2) \)
+
+3. Giải các phương trình vi phân tuyến tính cấp một:
+
+\[ 
+y = \frac{C}{\sqrt{x^2 - x}} - \frac{\ln(x - \frac{1}{2}) + \sqrt{x^2 - x}}{2\sqrt{x^2 - x}}
+\]
+nếu \(x < 0\) hoạc \(x > 1\); 
+\[ 
+y = \frac{C}{\sqrt{x - x^2}} + \frac{\arcsin(2x-1)}{2\sqrt{x-x^2}}
+\]
+nếu \(0 < x < 1\);
+b) \( y = e^{-x^2}(C + \frac{x^2}{2}) \)
+c) \( y^2 - 2x = Cy^3 \)
+d) \( y' + xy = x^3 \)
+
+Hướng dẫn: Nghiệm của phương trình thuận nhất \(y = Ce^x\) dùng phương pháp biến thiên hạng số.
+
+e) \( y'\cos^2{x} + y = \tan{x} \) thỏa mãn \(y(0) = 0\)
+Hướng dẫn: Phương trình tuyến tính thuận nhất có nghiệm \(y = Ce^{-\int{\tan{x}}dx}\)
+
+4. Tìm nghiệm riêng của phương trình:
+\[ 
+ye^y = y'(y^3 + 2xe^y)
+\]
+thỏa mãn điều kiện đầu \(y(0) = -1\).
+
+Hướng dẫn: Xem \(x\) là hàm phụ, thay \(\begin{array}{r} y' = \frac{1}{x'} \end{array}\)
+
+5. Tìm nghiệm của phương trình:
+\[ 
+y' - y = \cos{x} - \sin{x}
+\]
+thỏa mãn điều kiện biên khi \( x \to \infty \).
+
+6. Tìm nghiệm của các phương trình sau:
+
+a) $\textstyle y ^ { \prime } - \frac { y } { x } = x ^ { 3 }$
+b) 
+$$y = \frac { C } { x } + \frac { \sin x } { x } - \cos x$$
+
+7. Tìm nghiệm các phương trình Bernoulli sau:
+
+a) $y = Cx - x\ln(e^r+1)$
+b) $( x + 1 ) y ^ { \prime \prime } + x ( y ^ { \prime } ) ^ { 2 } = y ^ { \prime }$
+
+Hướng dẫn: Đặt $y ^ { \prime } = p , z = p ^ { - 1 }$ ta được phương trình tuyến tính cấp một:
+
+$$
+z ^ { \prime } + \frac { 1 } { 1 + x } z = \frac { x } { x + 1 }.
+$$
+
+Nghiệm tổng quát:
+$$\left\{ 
+\begin{array} { l l }
+{\ln | x ^ { 2 } + C _ { 1 } | + \frac { 2 } { \sqrt { C _ { 1 } } } \arctan \frac { x } { \sqrt { C _ { 1 } } } + C _ { 2 }} & {\text{neu } C _ { 1 } > 0} \\
+{\ln | x ^ { 2 } + C _ { 1 } | + \frac { 2 } { \sqrt { - C _ { 1 } } } \arctan \frac { x - \sqrt { - C _ { 1 } } } { \sqrt { - C _ { 1 } } + x } + C _ { 2 }} & {\text{neu } C _ { 1 } < 0}
+\end{array} 
+\right.,$$
+hướng dẫn $y =$ (20 $C$ là nghiệm kỳ diệu).
+
+c) $x ^ { 2 } y ^ { \prime } = y ( x + y )$
+
+HD: Đặt $z \ = \ y^{-1}$. Nghiệm tổng quát của phương trình thuận nhất: $z = Cx$, dùng phương pháp biến đổi hàm số.
+
+（20 $\begin{array}{r}
+d) y dx + 2x dy = \frac{2y\sqrt{x}}{\cos^2 y} dy
+\end{array}$ thỏa mãn điều kiện $y(0) = \pi$,
+
+HD: Đưa phương trình về dạng $\begin{array}{r}
+x' + \frac{2}{y} x = \frac{2}{\cos^2 y} x^{1/2}
+\end{array}$. Đặt $z = x^{1/2}$ ta có nghiệm tổng quát của PT: $\begin{array}{r}
+\tan y + \frac{1}{y} \ln |\cos y| + \frac{C}{y} = \sqrt{x}
+\end{array}$
+
+8. Giải các phương trình sau:
+
+a) $(y^2 + 1)^{3/2} dx + (y^2 + 3xy\sqrt{1+y^2}) dy = 0.$ （20 HD: Phương trình là phương trình vi phân toàn phần.
+
+b) $e^x(2+2x-y^2)dx - ye^x dy = 0$
+
+c）$(y \cos^2 x - \sin x)dy = y\cos x(y\sin x + 1) dx$ （20
+
+d）$(2x + 3xy^2)dx = (3y^2 - x^3)dy.$ （2）
+
+9. Giải các phương trình:
+
+a) $y'' - 7y' + 6y = \sin x$
+
+b) $y'' + 9y = 6e^{3x}$
+
+C) $y'' - (m-1)y' + my = e^x - x - 1$
+
+d) $\begin{array}{r}2xy'y'' = y'^2 - 1. \quad y = \frac{2}{3C_1}(C_1x + 1)^{\frac{3}{2}} + C_2\end{array}$
+
+e) $\sqrt{y}y'' = y'$ . Nghiệm tổng quát: $\begin{array}{r} x = \sqrt{y} - \frac{C_1}{2}\ln|2\sqrt{y} + C_1| + C_2\end{array}$ và ngoài ra $y = c$ cũng là nghiệm.  
+- Nếu $C_1 = 0$
+
+f) $S$ và $y = C$ cũng là một nghiệm. (Nếu $C_1 \neq 0$, ta có $w - \ln|e^y + C_1|$)
+
+g) $y^2 + C_1 = (x + C_2)^2$
+
+h) $y^2 = 2C_1 e^x + C_2$
+
+10. Tính tích phân tổng quát của các phương trình sau:
+
+$$
+(x - y + 4)dy + (y + x - 2)dx = 0.
+$$
+
+Hướng dẫn: Đặt $x = u + 1, y = v - 3$ ta được $\frac{dv}{du} = \frac{u + v}{v - u}$, từ đó ta có $y^2 + x^2 - 2xy - 8y + 4x = C_1$
+
+11. Giải phương trình $x^2 y'' + xy' - 4y = x^2 \ln x$ bằng cách đổi biến số $\boldsymbol{x} = \boldsymbol{e}^t$:
+
+12. $y = \pm x; \arcsin\left(\frac{y}{x}\right) = \ln|x| + C$
+
+13. $x y' = \sqrt{x^2 - y^2} + y \Leftrightarrow y' = \sqrt{1 - \frac{y^2}{x^2}} + \frac{y}{x}$  
+   Đặt $\textstyle u = \frac{y}{x}$  
+   Đáp số: $y = \pm x$
+
+14. $y = C e^{\frac{x^2}{2}}$  
+   $\frac{x^2}{2} + 1$
+
+15. Chứng minh rằng hệ các vector $\{\cos^2 2x, \sin^2 2x, 2\}$ là hệ phụ thuộc tuyến tính. Tính định thức Wronski của chúng.
+
+16. Giải phương trình:
+
+a) Phương trình đặc trưng: $\lambda^2 + \lambda = 0$ nghiệm tổng quát của phương trình thuận nhất $y = C_1 + C_2 e^{-x}$  
+   Tìm nghiệm riêng dưới dạng $\bar{y} = y_1 + y_2$ trong đó $y_1, y_2$ là nghiệm tương ứng của các   
+phương trình: $y'' + y' = x$ và $y'' + y = e^{-x}$  
+   Đáp số: $y = C_1 + C_2 e^{-x} + \frac{1}{2} x^2 - x - xe^{-x}.$  
+
+b) $y = (-2x + \frac{185}{29})\sin x + (-5 - \frac{16}{29})\cos x$ (20)
+
+c) $\begin{array}{r}
+   y = (\frac{3}{26}x + \frac{57}{26})\cos 3x + (\frac{-1}{13}x + \frac{41}{43})\sin 3x.
+   \end{array}$ (20)
+
+17. Nghiệm có dạng:
+
+$$
+\begin{array}{c} \begin{array} { r l } & { a ) \left\{ x = C _ { 1 } e ^ { t } + C _ { 2 } e ^ { 10t } \right\}, \quad b) \left\{ x = e ^ { -6t } ( C _ { 1 } \cos t + C _ { 2 } \sin t ) \right\} \\ & { y = -2C _ { 1 } e ^ { t } + C _ { 2 } e ^ { 10t }, } \\ & { x = C _ { 1 } e ^ { t } + C _ { 2 } e ^ { 2t } + C _ { 3 } e ^ { -t } } \\ & { y = C _ { 1 } e ^ { t } - 3C _ { 3 } e ^ { -t }, \quad d) \left\{ y = e ^ { 3t } [ ( C _ { 2 } + C _ { 3 } ) \cos t + ( C _ { 3 } - C _ { 2 } ) \sin t ] \right\} } \\ & { z = C _ { 1 } e ^ { t } + C _ { 2 } e ^ { 2t } - 5C _ { 3 } e ^ { -t }, } \end{array} 
+\qquad \overset { d, } { z = C _ { 1 } e ^ { 2t } + e ^ { 3t } [ ( C _ { 1 } + C _ { 2 } ) \cos t + ( C _ { 2 } - C _ { 1 } ) \sin t ] , }
+\end{array}
+$$
+
+# Tài liệu tham khảo
+
+1. Brown, Pearcy A. and Carl, "An introduction to analysis", Graduate Texts in Mathematics, Springer-verlag, 1995.
+
+2. Trim D., "Calculus for engineers", Springer, 2001.
+
+3. Stewart J., "Essential Calculus", Thomson Brooks/Cole, 2006a.
+
+4. Stewart J., "Calculus: Concepts and Contexts", Thomson Brooks/Cole, 2006.
+
+5. Rudin W., "Principles of Mathematical Analysis", 3rd ed, McGraw-Hill, 1976.
+
+6. Wrede R., và Spiegel M., "Theory and Problems of Advanced Calculus", McGraw-Hill,  
+2002.
+
+7. N.D. Tri (chủ biên), "Toán học cao cấp", tập 3, NXB GD, 2003.
+
+8. N.D. Binh (chủ biên), "Chuỗi và phương trình vi phân", NXB HK-KT, 2008.

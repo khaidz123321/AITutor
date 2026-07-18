@@ -1,0 +1,53 @@
+# 74293034-71DF-49D3-8D07-5DE53AF9DE08 ĐẠI SỐ
+
+BỘ THÔNG TIN VÀ TRUYỀN THÔNG HỌC VIỆN CÔNG NGHỆ BƯU CHÍNH VIỄN THÔNG
+
+# GIÁO TRÌNH ĐẠI SỐ
+
+Mã số BAS 1201
+
+KHOA PHỤ TRÁCH: CƠ BẢN  
+CHỦ BIÊN: PGS.TS. LÊ BA LONG
+
+# LỜI NÓI ĐẦU TÀI BẢN
+
+Giáo trình này được bổ sung, sắp xếp và chỉnh sửa lại từ giáo trình Đại số của cùng tác giả, xuất bản năm 2008 - Nhà xuất bản Bưu điện.
+
+Nội dung của giáo trình được sắp xếp phù hợp với đề cương chi tiết theo hình thức đào tạo tín chỉ của Học viện Công nghệ Bưu chính Viễn thông ban hành năm 2012. Chương 3 và chương 4 của giáo trình cũ được ghép lại thành chương 3: Ma trận và Định thức. Các nội dung đánh dấu (\*) không có trong đề cương mới và được xem là phần độc thêm. Tác giả đã bổ sung thêm nhiều ví dụ minh họa, hy vọng rằng người đọc sẽ dễ dàng tiếp thu kiến thức hơn.
+
+Tác giả xin chân thành cảm ơn các đồng nghiệp và các thế hệ sinh viên của Học viện đã ủng hộ và đóng góp ý kiến để giáo trình được hoàn chỉnh hơn.
+
+Trong quá trình biên soạn lại Tác giả đã nhận được sự động viên, tạo điều kiện từ Ban lãnh đạo Học viện, sự hỗ trợ tích cực từ Khoa Cơ bản 1, đặc biệt Bộ môn Toán để tác giả hoàn thiện hơn giáo trình của mình. Tác giả xin chân thành cảm ơn.
+
+Hà Nội, 2015  
+PGS.TS. Lê Ba Long  
+KHOA CƠ BẢN 1  
+HỌC VIỆN CÔNG NGHỆ BƯU CHÍNH VIỄN THÔNG
+
+# LỜI NÓI ĐẦU XUẤT BẢN LẦN 1
+
+Toán cao cấp $\mathbf{A}_1$, ${\bf A}_2$, $\mathbf{A}_3$ là chương trình toán đại cương dành cho sinh viên các nhóm ngành toán và nhóm ngành thuộc khối kỹ thuật. Nội dung của toán cao cấp $\mathbf{A}_1, \mathbf{A}_3$ chú ý đến phép tính tích phân của hàm một hoặc nhiều biến, còn toán cao cấp $\mathbf{A}_2$ giới thiệu các cấu trúc đại số và đại số tuyến tính. Có khá nhiều sách giáo khoa và tài liệu tham khảo viết về các chủ đề này. Tuy nhiên xuất phát từ đặc thù ứng dụng toán học đối với ngành điện tử viễn thông và công nghệ thông tin và nhu cầu có tài liệu phù hợp với chương trình đào tạo của Học viện Công nghệ Bưu chính Viễn thông nên chúng tôi đã biên soạn giáo trình này.
+
+Giáo trình được biên soạn theo chương trình quy định năm 2007 của Học viện Công nghệ Bưu Chính Viễn Thông. Nội dung cuốn sách dựa tổng kết bài giảng của tác giả trong nhiều năm và tham khảo các giáo trình của các trường đại học kỹ thuật khác. Chính vì thế, giáo trình này cũng có thể dùng làm tài liệu học tập, tài liệu tham khảo cho sinh viên của các trường, các ngành đại học và cao đẳng kỹ thuật.
+
+Giao trình $\mathrm{g} \dot{\imath} \mathrm{o} \mathrm{m} 7$ chương:
+Chương I: Lôgic toán học, lý thuyết tập hợp, ánh xạ và các cấu trúc đại số. Chương II: Không gian véc tơ.
+Chương III: Ma trận.
+Chương IV: Định thức.
+Chương V: Hệ phương trình tuyến tính
+Chương VI: Ánh xạ tuyến tính.
+Chương VII: Không gian véc tơ Euclid và dạng toán học.
+
+Ngoài vai trò là công cụ cho các ngành khoa học khác, toán học còn được xem là một ngành khoa học có phương pháp tư duy logic chính xác chặt chẽ. Vì vậy việc học toán cũng giúp ta rèn luyện phương pháp tư duy. Các phương pháp này đã được giảng dạy và cung cấp từng bước trong quá trình học tập đó phổ thông, nhưng trong chương I các vấn đề này được hệ thống hóa lại. Nội dung của chương I được xem là cơ sở, nền tảng của toán học hiện đại. Một vài nội dung trong chương này đã được học ở phổ thông nhưng chỉ với mức độ đơn giản. Các cấu trúc đại số thì hoàn toàn mới và khá trừu tượng vì vậy đòi hỏi học viên phải đọc lại nhiều lần mới tiếp thu được.
+
+Các chương còn lại của giáo trình là đại số tuyến tính. Kiến thức của các chương liên kết chất chẽ với nhau, kết quả của chương này là công cụ cho chương khác. Vì vậy học viên cần thay đổi mối liên hệ giữa các chương. Đặc điểm của môn học này là tính khái quát hóa và trừu tượng cao. Các khái niệm thường được khái quát hóa như những kết quả của hình học giải tích ở phổ thông. Khi học ta nên liên hệ đến các kết quả đó.
+
+Giáo trình được trình bày theo cách thích hợp đối với người tự học. Trong khi nghiên cứu các nội dung chi tiết, người đọc nên xem phần giới thiệu của mỗi chương cũng như mục đích của chương để thấy rõ mục đích ý nghĩa, yêu cầu chính của chương đó. Trong mỗi chương, mọi nội dung, người đọc có thể theo dõi và hiểu rõ thông qua cách diễn đạt và chứng minh rõ ràng. Đặc biệt, người đọc nên chú ý đến các nhận xét, bình luận để hiểu sâu hơn hoặc mở rộng tổng quát hơn kết quả. Hầu hết các bài toán được xây dựng theo lối: Đặt bài toán, chứng minh tồn tại lời giải bằng lý thuyết và cuối cùng nêu thuật toán giải quyết bài toán này. Các ví dụ là để minh hoạ trực tiếp khái niệm, định lý hay các thuật toán, vì vậy sẽ giúp người đọc dễ dàng hơn khi tiếp thu bài học. Cuối mỗi chương đều có các bài tập sắp xếp từ dễ đến khó. Các bài tập dễ chỉ kiểm tra trực tiếp nội dung vừa học còn các bài tập khó đòi hỏi phải sử dụng kiến thức tổng hợp.
+
+Một số nội dung của cuốn sách đã được dạy hoặc dạy một phần trong chương trình phổ thông. Chẳng hạn giải tích tổ hợp, các đường conic có ở chương trình phổ thông. Tuy nhiên ở đây tác giả muốn trình bày lại giải tích tổ hợp theo ngôn ngữ hình học. Minh hoạ đúng chỉ số quan trọng của dạng toán phương trình phân loại các đường bậc 2 trong mặt phẳng và các mặt bậc 2 trong không gian.
+
+Tuy rằng tác giả đã rất cố gắng, song các thiếu sót còn tồn tại trong giáo trình là điều khó tránh khỏi. Tác giả rất mong sự đóng góp ý kiến của bạn bè đồng nghiệp, học viên xa gần và xin cảm ơn vì điều đó. Tác giả xin chân thành cảm ơn GS. Đỗ Quỳnh, PGS. TS. Nguyễn Xuân Viên, PGS. TS. Nguyễn Năng Anh, ThS.GVC. Nguyễn Tiến Duyên, ThS.GVC. Đặng Phi Nga đã có những đóng góp và động viên quý báu.
+
+Cuối cùng chúng tôi bày tỏ sự cảm ơn đối với Ban Giám đốc Học viện Công nghệ Bưu chính Viễn thông, Khoa Cơ bản 1 và ban bè đồng nghiệp đã khuyến khích động viên, tạo nhiều điều kiện thuận lợi để chúng tôi hoàn thành giáo trình này.
+
+Hà Nội, 2008. PGS. TS. Lê Bá Long Khoa cơ bản 1 Học viện Công nghệ Bưu chính Viễn thông

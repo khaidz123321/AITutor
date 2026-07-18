@@ -3,19 +3,19 @@ Quản lý luồng chat theo kiến trúc Single-Agent AI Tutor
 Tách biệt luồng Khởi tạo (Init) và luồng Hỏi đáp (Chat)
 """
 
-from fastapi import APIRouter, Depends, HTTPException
+from fastapi import APIRouter, Depends, HTTPException, Header
 from sqlalchemy.orm import Session
+from sqlalchemy import text
 from core.session import get_db
 from schemas.chat import ChatRequest, ChatResponse
-from engine.ai_engine import AItutor 
+from engine.ai_engine import AItutor
 from engine.session_manager import SessionManager
 from engine.rag_service import RAGService
 from engine.scaffolding import LearningScaffold
-from models.chat_history import ChatHistory
 from core.mapping import get_mapped_paths
 from core.config import settings
 from schemas.evaluation import DiagnoseResult, GenerateResult
-import os 
+import os
 import json
 import time
 
@@ -28,46 +28,59 @@ rag_service = RAGService()
 # Gọi bằng phương thức GET khi frontend/HTML vừa load xong
 # =================================================================
 @router.get("/init")
-def init_chat_session(subject: str, chapter: str, db: Session = Depends(get_db)):
-    current_user_id = 1 # TODO: Sau này lấy từ Token đăng nhập (JWT)
+def init_chat_session(
+    subject: str,
+    chapter: str,
+    db: Session = Depends(get_db),
+    x_user_id: int = Header(..., description="User ID từ Spring Boot JWT"),
+    x_chapter_id: int = Header(..., description="Chapter ID từ Spring Boot")
+):
+    current_user_id = x_user_id
     session_manager = SessionManager(db)
-    mapped_subj, mapped_chap = get_mapped_paths(subject, chapter)
     
+    # Lookup course_id và order_index từ chapters table thay vì dùng subject string
+    chapter_row = db.execute(
+        text("SELECT course_id, order_index FROM chapters WHERE id = :cid"),
+        {"cid": x_chapter_id}
+    ).fetchone()
+    
+    if chapter_row and chapter_row[0]:
+        mapped_subj = f"course_{chapter_row[0]}"
+        # Dùng order_index để tạo tên file: order_index=1 → chuong_1.json
+        mapped_chap = f"chuong_{chapter_row[1]}"
+    else:
+        mapped_subj, mapped_chap = get_mapped_paths(subject, chapter)
+    
+    print(f"[Chat Init] chapter_id={x_chapter_id} → mapped_subj='{mapped_subj}', mapped_chap='{mapped_chap}'")    
     try:
-        # Thay thế toàn bộ bằng mapped_subj và mapped_chap
         progress = session_manager.get_user_progress(current_user_id, mapped_subj, mapped_chap)
-        
+
         if progress:
             current_question_id = progress.get("question_id")
         else:
             current_question_id = ai_tutor.get_first_question_id(mapped_subj, mapped_chap)
             session_manager.update_progress(current_user_id, mapped_subj, mapped_chap, current_question_id, step=1)
-        
-        history_records = db.query(ChatHistory).filter(
-            ChatHistory.user_id == current_user_id,
-            ChatHistory.subject == mapped_subj,
-            ChatHistory.chapter == mapped_chap
-        ).order_by(ChatHistory.created_at.asc()).all()
-        
-        formatted_history = [
-            {"role": record.role, "content": record.content} 
-            for record in history_records
-        ]
+
+        # Đọc lịch sử từ bảng Spring Boot (chat_sessions + chat_messages)
+        formatted_history = session_manager.get_raw_history(
+            user_id=current_user_id,
+            chapter_id=x_chapter_id
+        )
 
         if not formatted_history:
             welcome_message = ai_tutor.get_initial_question(mapped_subj, mapped_chap, current_question_id)
-            session_manager.save_message(current_user_id, mapped_subj, mapped_chap, "ai", welcome_message)
-            
+            # LƯU Ý: KHÔNG gọi save_message() nữa
+            # Spring Boot sẽ tự lưu welcome_message vào chat_messages sau khi nhận phản hồi
             return {
-                "reply": welcome_message, 
-                "history": [], 
+                "reply": welcome_message,
+                "history": [],
                 "question_id": current_question_id,
                 "status": "success"
             }
 
         return {
-            "reply": "", 
-            "history": formatted_history, 
+            "reply": "",
+            "history": formatted_history,
             "question_id": current_question_id,
             "status": "success"
         }
@@ -82,29 +95,46 @@ def init_chat_session(subject: str, chapter: str, db: Session = Depends(get_db))
 # Gọi bằng phương thức POST mỗi khi sinh viên bấm gửi tin nhắn
 # =================================================================
 @router.post("/", response_model=ChatResponse)
-def chat_with_tutor(request: ChatRequest, db: Session = Depends(get_db)):
-    mapped_subj, mapped_chap = get_mapped_paths(request.subject, request.chapter)
-    current_user_id = 1 # TODO: Sau này lấy từ Token đăng nhập
+def chat_with_tutor(
+    request: ChatRequest,
+    db: Session = Depends(get_db),
+    x_user_id: int = Header(..., description="User ID từ Spring Boot JWT"),
+    x_chapter_id: int = Header(..., description="Chapter ID từ Spring Boot")
+):
+    current_user_id = x_user_id
     session_manager = SessionManager(db)
     
+    # Lookup course_id và order_index từ chapters table thay vì dùng subject string
+    chapter_row = db.execute(
+        text("SELECT course_id, order_index FROM chapters WHERE id = :cid"),
+        {"cid": x_chapter_id}
+    ).fetchone()
+    
+    if chapter_row and chapter_row[0]:
+        mapped_subj = f"course_{chapter_row[0]}"
+        # Dùng order_index để tạo tên file: order_index=1 → chuong_1.json
+        mapped_chap = f"chuong_{chapter_row[1]}"
+    else:
+        mapped_subj, mapped_chap = get_mapped_paths(request.subject, request.chapter)
+    
+    print(f"[Chat] chapter_id={x_chapter_id} → mapped_subj='{mapped_subj}', mapped_chap='{mapped_chap}'")    
     try:
-        # Sử dụng mapped_subj và mapped_chap
         progress = session_manager.get_user_progress(current_user_id, mapped_subj, mapped_chap)
-        original_question_id = progress.get("question_id") if progress else None    
-        
+        original_question_id = progress.get("question_id") if progress else None
+
         if not progress:
             current_question_id = ai_tutor.get_first_question_id(mapped_subj, mapped_chap)
             current_step = 1
         else:
             current_question_id = progress.get("question_id")
             current_step = progress.get("step", 1)
-        
+
         question_data = ai_tutor.load_question_data(mapped_subj, mapped_chap, current_question_id)
 
+        # Đọc lịch sử chat từ bảng Spring Boot
         chat_history = session_manager.get_chat_history(
             user_id=current_user_id,
-            subject=mapped_subj,
-            chapter=mapped_chap
+            chapter_id=x_chapter_id
         )
 
         try:
@@ -125,10 +155,12 @@ def chat_with_tutor(request: ChatRequest, db: Session = Depends(get_db)):
 
         # Bắt đầu tính giờ Diagnose
         start_diagnose_time = time.time()
+        subject_scope = ai_tutor.load_subject_scope(mapped_subj)
         diagnose_result = ai_tutor.diagnose(
             user_message=request.message,
             chat_history=chat_history,
-            json_context=diagnose_context
+            json_context=diagnose_context,
+            subject_scope=subject_scope
         )
         end_diagnose_time = time.time()
         print(f"[Log] Thời gian chẩn đoán (Groq/Llama): {end_diagnose_time - start_diagnose_time:.2f} giây - Trạng thái: {diagnose_result.cognitive_state}")
@@ -186,7 +218,7 @@ def chat_with_tutor(request: ChatRequest, db: Session = Depends(get_db)):
 
         # Bắt đầu tính giờ Generate
         start_generate_time = time.time()
-        persona_text = ai_tutor.load_persona(mapped_subj)
+        persona_text = ai_tutor.load_persona(mapped_subj, ai_persona_override=request.ai_persona)
         
         generate_result = ai_tutor.generate(
             cognitive_state=diagnose_result.cognitive_state.value if hasattr(diagnose_result.cognitive_state, 'value') else diagnose_result.cognitive_state,
@@ -206,8 +238,12 @@ def chat_with_tutor(request: ChatRequest, db: Session = Depends(get_db)):
         if generate_result:
             ai_reply = generate_result.response
             if getattr(generate_result, "source_citation", ""):
+                # Thay \n literal (do LLM sinh ra dạng chuỗi thoát) thành xuống dòng thực
                 citation_text = generate_result.source_citation.strip()
-                ai_reply += f"\n\n**Nguồn tài liệu:**\n{citation_text}"
+                citation_text = citation_text.replace('\\n', '\n')  # '\n' literal → newline thật
+                citation_text = citation_text.strip()
+                if citation_text:
+                    ai_reply += f"\n\n**Nguồn tài liệu:** {citation_text}"
             
             print(f"[AI Đánh giá Trạng thái]: {diagnose_result.cognitive_state}")
 
@@ -242,42 +278,25 @@ def chat_with_tutor(request: ChatRequest, db: Session = Depends(get_db)):
             ai_reply = "Xin lỗi, hệ thống AI đang gặp sự cố kết nối. Bạn vui lòng thử lại nhé!"
             new_step = current_step
 
-        # 5. Lưu toàn bộ xuống Database
-        # Lưu tin nhắn User
-        session_manager.save_message(
-            user_id=current_user_id, 
-            subject=mapped_subj, 
-            chapter=mapped_chap, 
-            role="user", 
-            content=request.message 
-        )
-        
-        # Lưu phản hồi AI
-        session_manager.save_message(
-            user_id=current_user_id, 
-            subject=mapped_subj, 
-            chapter=mapped_chap, 
-            role="ai", 
-            content=ai_reply
-        )
-
-        # Nếu AI quyết định cho sinh viên sang bước tiếp theo, cập nhật bảng Activity
+        # 5. Cập nhật tiến độ học tập (vào bảng activities — Python vẫn quản lý)
         if new_step != current_step or current_question_id != original_question_id:
             session_manager.update_progress(
-                user_id=current_user_id, 
-                subject=mapped_subj, 
-                chapter=mapped_chap, 
-                question_id=current_question_id, 
+                user_id=current_user_id,
+                subject=mapped_subj,
+                chapter=mapped_chap,
+                question_id=current_question_id,
                 step=new_step
             )
 
-        # 6. Trả về cho giao diện (HTML/JS)
+        # 6. TRẢ VỀ KẾT QUẢ (KHÔNG LƯU CHAT Ở ĐÂY)
+        # Spring Boot sẽ tự lưu user_message và ai_reply vào chat_messages
+        # sau khi nhận được phản hồi này.
         return ChatResponse(reply=ai_reply, status="success")
 
     except Exception as e:
         db.rollback()
         print(f"Chat API Error: {str(e)}")
         raise HTTPException(
-            status_code=500, 
+            status_code=500,
             detail="The AI Tutor engine encountered an error. Please try again later."
         )
