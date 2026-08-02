@@ -33,4 +33,7 @@ public interface ExerciseAiAttemptRepository extends JpaRepository<ExerciseAiAtt
             WHERE e.chapter_id = :chapterId
             """, nativeQuery = true)
     boolean allExercisesCorrect(@Param("userId") Long userId, @Param("chapterId") Long chapterId);
+
+    @Query("SELECT ea FROM ExerciseAiAttempt ea WHERE ea.user.id = :userId ORDER BY ea.attemptedAt DESC")
+    List<ExerciseAiAttempt> findByUserIdOrderByAttemptedAtDesc(@Param("userId") Long userId);
 }

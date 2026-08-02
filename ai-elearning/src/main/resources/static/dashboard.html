@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/dashboard.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/i18n.js?v=2.0"></script>
 </head>
 <body class="db-body">
     <div class="db-wrapper">
@@ -27,6 +28,8 @@
                 <div class="db-nav-item" data-panel="reportsPanel" id="navReports">Báo cáo</div>
                 <div class="db-nav-item" data-panel="notificationsPanel" id="navNotifications">Thông báo</div>
                 <div class="db-nav-item" data-panel="reviewsPanel" id="navReviews">Đánh giá</div>
+                <div class="db-nav-item" data-panel="newsPanel" id="navNews">Tin tức & Tuyên truyền</div>
+                <div class="db-nav-item" data-panel="supportPanel" id="navSupport">Yêu cầu Hỗ trợ Sinh viên</div>
             </nav>
             
             <div class="db-nav-user">
@@ -41,9 +44,6 @@
             <!-- Header -->
             <header class="db-header">
                 <h2 style="font-size: 18px; font-weight: 800;" id="dbTitle">Tổng quan hệ thống</h2>
-                <div style="display: flex; align-items: center; gap: 16px;">
-                    <a href="index.html" class="btn btn-outline-primary btn-sm">Xem trang chủ</a>
-                </div>
             </header>
 
             <div class="db-content">
@@ -448,6 +448,63 @@
                         </div>
                     </div>
                 </section>
+
+                <!-- ================= PANEL: NEWS ================= -->
+                <section class="db-panel" id="newsPanel">
+                    <div class="db-card">
+                        <div class="db-card-header" style="display:flex; justify-content:space-between; align-items:center;">
+                            <h3 class="db-card-title">Quản Lý Tin Tức & Bản Tin Tuyên Truyền</h3>
+                            <button class="btn btn-primary btn-sm" onclick="openNewsModal()">+ Đăng tin tức mới</button>
+                        </div>
+                        <div class="db-table-responsive">
+                            <table class="db-table">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Hình ảnh</th>
+                                        <th>Tiêu đề tin tức</th>
+                                        <th>Danh mục</th>
+                                        <th>Tiêu điểm (Spotlight)</th>
+                                        <th>Ngày tạo</th>
+                                        <th>Hành động</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="newsTableBody">
+                                    <tr><td colspan="7" style="text-align: center; color: var(--text-3);">Đang tải danh sách tin tức...</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ================= PANEL: SUPPORT TICKETS ================= -->
+                <section class="db-panel" id="supportPanel">
+                    <div class="db-card">
+                        <div class="db-card-header" style="display:flex; justify-content:space-between; align-items:center;">
+                            <h3 class="db-card-title">Danh sách Yêu cầu Hỗ trợ từ Sinh viên</h3>
+                            <button class="btn btn-secondary btn-sm" onclick="loadSupportTicketsModule()">🔄 Tải lại danh sách</button>
+                        </div>
+                        <div class="db-table-responsive">
+                            <table class="db-table">
+                                <thead>
+                                    <tr>
+                                        <th>Mã YC</th>
+                                        <th>Sinh viên</th>
+                                        <th>Email liên hệ</th>
+                                        <th>Vấn đề hỗ trợ</th>
+                                        <th>Nội dung chi tiết</th>
+                                        <th>Thời gian gửi</th>
+                                        <th>Trạng thái</th>
+                                        <th>Hành động</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="supportTicketsTableBody">
+                                    <tr><td colspan="8" style="text-align: center; color: var(--text-3);">Đang tải danh sách yêu cầu...</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
             </div>
         </main>
     </div>
@@ -486,8 +543,21 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="mcThumbLabel">Nhãn đại diện (2-4 ký tự)</label>
-                        <input type="text" id="mcThumbLabel" class="form-control" maxlength="4" placeholder="GT2" required>
+                        <label for="mcThumbnailFile">Ảnh đại diện khóa học</label>
+                        <!-- Hidden input vẫn giữ URL cũ -->
+                        <input type="hidden" id="mcThumbLabel">
+                        <div id="thumbnailUploadArea" style="border: 2px dashed var(--border); border-radius: 10px; padding: 16px; text-align: center; cursor: pointer; transition: border-color 0.2s;" onclick="document.getElementById('mcThumbnailFile').click()">
+                            <img id="thumbnailPreview" src="" alt="Xem trước ảnh" style="max-width: 100%; max-height: 120px; border-radius: 8px; display: none; margin: 0 auto 8px; object-fit: cover;">
+                            <div id="thumbnailPlaceholder" style="color: var(--text-3); font-size: 13px;">
+                                <div style="font-size: 28px; margin-bottom: 4px;">🖼️</div>
+                                <strong>Nhấn để chọn ảnh</strong><br>
+                                <small>JPG, PNG, WebP – tối đa 5MB</small>
+                            </div>
+                        </div>
+                        <input type="file" id="mcThumbnailFile" accept="image/*" style="display:none;">
+                        <small id="mcThumbnailCurrentLink" style="display:none; margin-top:6px; display:none;">
+                            Ảnh hiện tại: <a id="mcThumbnailCurrentUrl" href="#" target="_blank" style="color:#10b981; font-weight:600;">Xem ảnh</a>
+                        </small>
                     </div>
                 </div>
                 <div class="form-group" id="statusGroup" style="display:none;">
@@ -640,14 +710,54 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="meQuestion">Nội dung câu hỏi</label>
-                    <textarea id="meQuestion" class="form-control" rows="3" placeholder="Nhập nội dung câu hỏi bài tập..." required></textarea>
+                    <label for="meQuestion" style="font-weight: 700; color: #1e293b;">1. Nội dung câu hỏi trắc nghiệm</label>
+                    <textarea id="meQuestion" class="form-control" rows="2" placeholder="Nhập câu hỏi trắc nghiệm..." required></textarea>
                 </div>
+
+                <!-- 4 Multiple Choice Options (A, B, C, D) -->
+                <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px; margin-bottom: 20px;">
+                    <label style="font-weight: 700; color: #7a1318; font-size: 13.5px; margin-bottom: 12px; display: block;">2. Danh sách 4 đáp án trắc nghiệm (A, B, C, D):</label>
+                    
+                    <div class="form-group" style="margin-bottom: 10px;">
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <span style="width: 28px; height: 28px; border-radius: 50%; background: #7a1318; color: #fff; font-weight: 800; font-size: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">A</span>
+                            <input type="text" id="meOptA" class="form-control" placeholder="Nhập phương án A..." required>
+                        </div>
+                    </div>
+
+                    <div class="form-group" style="margin-bottom: 10px;">
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <span style="width: 28px; height: 28px; border-radius: 50%; background: #7a1318; color: #fff; font-weight: 800; font-size: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">B</span>
+                            <input type="text" id="meOptB" class="form-control" placeholder="Nhập phương án B..." required>
+                        </div>
+                    </div>
+
+                    <div class="form-group" style="margin-bottom: 10px;">
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <span style="width: 28px; height: 28px; border-radius: 50%; background: #7a1318; color: #fff; font-weight: 800; font-size: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">C</span>
+                            <input type="text" id="meOptC" class="form-control" placeholder="Nhập phương án C..." required>
+                        </div>
+                    </div>
+
+                    <div class="form-group" style="margin-bottom: 0;">
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <span style="width: 28px; height: 28px; border-radius: 50%; background: #7a1318; color: #fff; font-weight: 800; font-size: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">D</span>
+                            <input type="text" id="meOptD" class="form-control" placeholder="Nhập phương án D..." required>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="form-group">
-                    <label for="meCorrect">Đáp án đúng</label>
-                    <input type="text" id="meCorrect" class="form-control" placeholder="Nhập kết quả/đáp án đúng..." required>
+                    <label for="meCorrect" style="font-weight: 700; color: #1e293b;">3. Chọn đáp án đúng nhất khi sinh viên nộp bài:</label>
+                    <select id="meCorrect" class="form-control" required style="font-weight: 700; color: #7a1318;">
+                        <option value="A">Phương án A là đáp án đúng</option>
+                        <option value="B">Phương án B là đáp án đúng</option>
+                        <option value="C">Phương án C là đáp án đúng</option>
+                        <option value="D">Phương án D là đáp án đúng</option>
+                    </select>
                 </div>
-                <button type="submit" class="btn btn-primary btn-block">Lưu bài tập</button>
+
+                <button type="submit" class="btn btn-primary btn-block" style="padding: 12px; font-weight: 800; border-radius: 20px;">Lưu bài tập trắc nghiệm</button>
             </form>
         </div>
     </div>
@@ -791,6 +901,52 @@
         </div>
     </div>
 
-    <script src="js/dashboard.js"></script>
+    <!-- ===== MODAL: NEWS CREATE / EDIT ===== -->
+    <div class="db-modal" id="newsModal" style="z-index: 9999;">
+        <div class="db-modal-content" style="max-width: 600px;">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px;">
+                <h3 style="font-size: 18px; font-weight: 800;" id="newsModalTitle">Đăng Tin Tức Mới</h3>
+                <button type="button" onclick="closeNewsModal()" style="background:none; border:none; font-size:24px; cursor:pointer;">&times;</button>
+            </div>
+            <form id="newsForm" onsubmit="saveNews(event)">
+                <input type="hidden" id="newsId">
+                <div class="form-group" style="margin-bottom:14px;">
+                    <label style="display:block; font-size:13px; font-weight:700; margin-bottom:6px;">Tiêu đề tin tức</label>
+                    <input type="text" id="newsTitle" class="form-control" style="width:100%; padding:10px; border:1px solid #cbd5e1; border-radius:6px;" required>
+                </div>
+                <div class="form-group" style="margin-bottom:14px;">
+                    <label style="display:block; font-size:13px; font-weight:700; margin-bottom:6px;">Danh mục tin tức</label>
+                    <select id="newsCategory" class="form-control" style="width:100%; padding:10px; border:1px solid #cbd5e1; border-radius:6px;" required>
+                        <option value="academy">Tin Học viện</option>
+                        <option value="student">Hoạt động sinh viên</option>
+                        <option value="tech">Khoa học công nghệ</option>
+                        <option value="admission">Tuyển sinh</option>
+                    </select>
+                </div>
+                <div class="form-group" style="margin-bottom:14px;">
+                    <label style="display:block; font-size:13px; font-weight:700; margin-bottom:6px;">Link ảnh đại diện (Image URL)</label>
+                    <input type="url" id="newsImageUrl" class="form-control" style="width:100%; padding:10px; border:1px solid #cbd5e1; border-radius:6px;" placeholder="https://images.unsplash.com/..." required>
+                </div>
+                <div class="form-group" style="margin-bottom:14px;">
+                    <label style="display:block; font-size:13px; font-weight:700; margin-bottom:6px;">Mô tả ngắn (Summary)</label>
+                    <textarea id="newsSummary" class="form-control" style="width:100%; padding:10px; border:1px solid #cbd5e1; border-radius:6px; min-height:70px;" required></textarea>
+                </div>
+                <div class="form-group" style="margin-bottom:14px;">
+                    <label style="display:block; font-size:13px; font-weight:700; margin-bottom:6px;">Nội dung chi tiết (Content)</label>
+                    <textarea id="newsContent" class="form-control" style="width:100%; padding:10px; border:1px solid #cbd5e1; border-radius:6px; min-height:100px;"></textarea>
+                </div>
+                <div class="form-group" style="margin-bottom:20px; display:flex; align-items:center; gap:8px;">
+                    <input type="checkbox" id="newsIsSpotlight">
+                    <label for="newsIsSpotlight" style="font-size:13.5px; font-weight:600; cursor:pointer;">Đặt làm Tin Tiêu Điểm Nổi Bật (Spotlight Banner)</label>
+                </div>
+                <div style="display:flex; justify-content:flex-end; gap:10px;">
+                    <button type="button" class="btn btn-secondary btn-sm" onclick="closeNewsModal()">Hủy</button>
+                    <button type="submit" class="btn btn-primary btn-sm">Lưu tin tức</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/dashboard.js?v=2.0"></script>
 </body>
 </html>

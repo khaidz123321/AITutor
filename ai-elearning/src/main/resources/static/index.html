@@ -1,162 +1,292 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="PTIT E-Learning — Hệ thống học tập trực tuyến tích hợp AI của Học viện Công nghệ Bưu chính Viễn thông.">
-    <title>PTIT E-Learning — Học tập thông minh cùng AI</title>
+    <meta name="description"
+        content="PTIT E-Learning — Nền tảng Đào tạo Trực tuyến tích hợp AI dành cho Sinh viên PTIT.">
+    <title>PTIT E-Learning — Hệ Thống Đào Tạo Trực Tuyến Tích Hợp AI</title>
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/courses.css">
+    <script src="js/i18n.js"></script>
 </head>
+
 <body>
     <script src="components/header.js"></script>
 
     <main>
-        <!-- ===== HERO ===== -->
-        <div class="container" style="margin-top: 32px; margin-bottom: 32px;">
-            <section class="hero-section">
-                <div class="hero-orb"></div>
-                <div class="hero-inner">
-                    <div class="hero-eyebrow">
-                        <span class="hero-eyebrow-dot"></span>
-                        Học viện Công nghệ Bưu chính Viễn thông
+        <div class="container">
+            <!-- ===== HERO GREETING BANNER ===== -->
+            <div class="hero-banner-wrapper">
+                <div class="hero-banner-card">
+                    <div class="hero-banner-content">
+                        <h1 class="hero-banner-greeting" id="heroGreeting">Xin chào Sinh viên</h1>
+                        <p class="hero-banner-subtext">Cùng khám phá kho tàng kiến thức bất tận cùng bộ tài liệu độc quyền với PTIT E-Learning nhé!</p>
                     </div>
-                    <h1 class="hero-h1">
-                        Học tập thông minh<br>cùng <em>Gia sư AI</em>
-                    </h1>
-                    <p class="hero-p">
-                        Nền tảng e-learning hiện đại của PTIT — tích hợp trí tuệ nhân tạo giúp bạn hiểu bài sâu hơn, học hiệu quả hơn mỗi ngày.
-                    </p>
-                    <div class="hero-actions">
-                        <a href="courses.html" class="btn-hero-primary">🚀 Khám phá khóa học</a>
-                        <a href="introduction.html" class="btn-hero-ghost">Tìm hiểu thêm →</a>
+                    <div class="hero-banner-illustration">
+                        <img src="assets/images/ai_robot_tutor.png" alt="AI Robot Tutor Teaching" class="ai-robot-tutor-img">
                     </div>
-                    <div class="hero-stats-row">
-                        <div class="hero-stat">
-                            <div class="hero-stat-num">50+</div>
-                            <div class="hero-stat-lbl">Khóa học</div>
+                </div>
+            </div>
+
+            <!-- ===== HỆ THỐNG HỌC TẬP (6 CARDS GRID) ===== -->
+            <section class="section" style="padding-top: 0;">
+                <h2 class="system-section-title">Hệ thống học tập</h2>
+
+                <div class="system-grid">
+                    <!-- Card 1: Giới thiệu -->
+                    <div class="system-card">
+                        <div class="system-card-body">
+                            <h3 class="system-card-title">Giới thiệu</h3>
+                            <p class="system-card-desc">Tổng quan về các hệ thống và khóa học cần biết.</p>
+                            <a href="introduction.html" class="btn-system-access">
+                                Truy cập
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                            </a>
                         </div>
-                        <div class="hero-stats-divider"></div>
-                        <div class="hero-stat">
-                            <div class="hero-stat-num">12K+</div>
-                            <div class="hero-stat-lbl">Sinh viên</div>
+                        <div class="system-card-icon">
+                            <svg width="130" height="130" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <ellipse cx="60" cy="110" rx="40" ry="8" fill="#7a1318" opacity="0.15"/>
+                                <rect x="25" y="20" width="70" height="85" rx="10" fill="url(#grad_card1_bg)" stroke="#7a1318" stroke-width="2.5"/>
+                                <rect x="32" y="28" width="56" height="70" rx="6" fill="#ffffff"/>
+                                <rect x="42" y="14" width="36" height="14" rx="4" fill="url(#grad_card1_clip)" stroke="#54090c" stroke-width="2"/>
+                                <circle cx="60" cy="21" r="3" fill="#ffffff"/>
+                                <rect x="40" y="40" width="10" height="10" rx="2" fill="#10b981"/>
+                                <path d="M42 45l2.5 2.5 4-4" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M55 45h25" stroke="#475569" stroke-width="3" stroke-linecap="round"/>
+                                <rect x="40" y="56" width="10" height="10" rx="2" fill="#ef4444"/>
+                                <path d="M43 59l4 4M47 59l-4 4" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M55 61h25" stroke="#475569" stroke-width="3" stroke-linecap="round"/>
+                                <rect x="40" y="72" width="10" height="10" rx="2" fill="#f59e0b"/>
+                                <path d="M42 77l2.5 2.5 4-4" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M55 77h20" stroke="#94a3b8" stroke-width="3" stroke-linecap="round"/>
+                                <circle cx="85" cy="78" r="16" fill="url(#grad_gold)" stroke="#ffffff" stroke-width="2"/>
+                                <path d="M85 70l2 4 4.5.5-3.5 3 1 4.5-4-2.5-4 2.5 1-4.5-3.5-3 4.5-.5z" fill="#ffffff"/>
+                                <defs>
+                                    <linearGradient id="grad_card1_bg" x1="25" y1="20" x2="95" y2="105" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#fdf4f4"/>
+                                        <stop offset="1" stop-color="#fecdd3"/>
+                                    </linearGradient>
+                                    <linearGradient id="grad_card1_clip" x1="42" y1="14" x2="78" y2="28" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#991b1b"/>
+                                        <stop offset="1" stop-color="#7a1318"/>
+                                    </linearGradient>
+                                    <linearGradient id="grad_gold" x1="69" y1="62" x2="101" y2="94" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#fbbf24"/>
+                                        <stop offset="1" stop-color="#d97706"/>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
                         </div>
-                        <div class="hero-stats-divider"></div>
-                        <div class="hero-stat">
-                            <div class="hero-stat-num">200+</div>
-                            <div class="hero-stat-lbl">Bài giảng</div>
+                    </div>
+
+                    <!-- Card 2: Khóa học trực tuyến -->
+                    <div class="system-card">
+                        <div class="system-card-body">
+                            <h3 class="system-card-title">Khóa học trực tuyến</h3>
+                            <p class="system-card-desc">Với khóa học trực tuyến, bạn có thể học mọi lúc, mọi nơi.</p>
+                            <a href="courses.html" class="btn-system-access">
+                                Truy cập
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                            </a>
                         </div>
-                        <div class="hero-stats-divider"></div>
-                        <div class="hero-stat">
-                            <div class="hero-stat-num">98%</div>
-                            <div class="hero-stat-lbl">Hài lòng</div>
+                        <div class="system-card-icon">
+                            <svg width="130" height="130" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <ellipse cx="60" cy="105" rx="45" ry="8" fill="#7a1318" opacity="0.15"/>
+                                <rect x="20" y="24" width="80" height="56" rx="8" fill="url(#grad_card2_screen)" stroke="#334155" stroke-width="3"/>
+                                <rect x="26" y="30" width="68" height="44" rx="4" fill="url(#grad_card2_display)"/>
+                                <rect x="32" y="38" width="28" height="6" rx="3" fill="#38bdf8"/>
+                                <rect x="32" y="48" width="40" height="4" rx="2" fill="#e2e8f0" opacity="0.8"/>
+                                <rect x="32" y="56" width="32" height="4" rx="2" fill="#e2e8f0" opacity="0.6"/>
+                                <circle cx="74" cy="52" r="12" fill="url(#grad_card2_play)" stroke="#ffffff" stroke-width="2"/>
+                                <path d="M71 46l8 6-8 6v-12z" fill="#ffffff"/>
+                                <path d="M10 80h100c4 0 7 3 7 7v1H3v-1c0-4 3-7 7-7z" fill="url(#grad_card2_base)"/>
+                                <rect x="50" y="81" width="20" height="3" rx="1.5" fill="#94a3b8"/>
+                                <rect x="82" y="50" width="24" height="40" rx="4" fill="#ffffff" stroke="#7a1318" stroke-width="2.5"/>
+                                <rect x="85" y="56" width="18" height="26" rx="2" fill="#7a1318"/>
+                                <circle cx="94" cy="85" r="1.5" fill="#94a3b8"/>
+                                <defs>
+                                    <linearGradient id="grad_card2_screen" x1="20" y1="24" x2="100" y2="80" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#1e293b"/>
+                                        <stop offset="1" stop-color="#0f172a"/>
+                                    </linearGradient>
+                                    <linearGradient id="grad_card2_display" x1="26" y1="30" x2="94" y2="74" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#54090c"/>
+                                        <stop offset="1" stop-color="#7a1318"/>
+                                    </linearGradient>
+                                    <linearGradient id="grad_card2_play" x1="62" y1="40" x2="86" y2="64" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#ef4444"/>
+                                        <stop offset="1" stop-color="#b91c1c"/>
+                                    </linearGradient>
+                                    <linearGradient id="grad_card2_base" x1="3" y1="80" x2="117" y2="88" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#cbd5e1"/>
+                                        <stop offset="1" stop-color="#94a3b8"/>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Tin tức & Truyền thông -->
+                    <div class="system-card">
+                        <div class="system-card-body">
+                            <h3 class="system-card-title">Tin tức & Truyền thông</h3>
+                            <p class="system-card-desc">Cập nhật các tin tức, hoạt động sinh viên và sự kiện mới nhất.</p>
+                            <a href="news.html" class="btn-system-access">
+                                Truy cập
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                            </a>
+                        </div>
+                        <div class="system-card-icon">
+                            <svg width="130" height="130" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <ellipse cx="60" cy="106" rx="38" ry="7" fill="#7a1318" opacity="0.15"/>
+                                <path d="M36 46l36-16v60L36 74H20c-3 0-5-2-5-5V51c0-3 2-5 5-5h16z" fill="url(#grad_card3_horn)" stroke="#54090c" stroke-width="2.5"/>
+                                <path d="M42 74l6 24c1 4-2 7-6 7s-7-3-8-7l-4-24" fill="url(#grad_card3_handle)" stroke="#54090c" stroke-width="2"/>
+                                <ellipse cx="72" cy="60" rx="6" ry="30" fill="url(#grad_gold)" stroke="#54090c" stroke-width="2"/>
+                                <path d="M72 30c8 0 14 13 14 30s-6 30-14 30" fill="none" stroke="#fbbf24" stroke-width="3"/>
+                                <path d="M86 42c6 5 10 11 10 18s-4 13-10 18" stroke="#ef4444" stroke-width="4" stroke-linecap="round"/>
+                                <path d="M96 34c9 7 15 16 15 26s-6 19-15 26" stroke="#f59e0b" stroke-width="4" stroke-linecap="round"/>
+                                <path d="M25 25l3 7 7 3-7 3-3 7-3-7-7-3 7-3z" fill="#fbbf24"/>
+                                <defs>
+                                    <linearGradient id="grad_card3_horn" x1="15" y1="30" x2="72" y2="90" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#dc2626"/>
+                                        <stop offset="1" stop-color="#7a1318"/>
+                                    </linearGradient>
+                                    <linearGradient id="grad_card3_handle" x1="30" y1="74" x2="48" y2="105" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#f59e0b"/>
+                                        <stop offset="1" stop-color="#d97706"/>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: Khảo thí & Đánh giá -->
+                    <div class="system-card">
+                        <div class="system-card-body">
+                            <h3 class="system-card-title">Khảo thí & Đánh giá</h3>
+                            <p class="system-card-desc">Tiến hành bài kiểm tra để kiểm tra trình độ của người học.</p>
+                            <a href="assessment.html" class="btn-system-access">
+                                Truy cập
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                            </a>
+                        </div>
+                        <div class="system-card-icon">
+                            <svg width="130" height="130" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <ellipse cx="60" cy="106" rx="42" ry="8" fill="#7a1318" opacity="0.15"/>
+                                <rect x="18" y="42" width="84" height="60" rx="10" fill="url(#grad_card4_case)" stroke="#3d0507" stroke-width="3"/>
+                                <path d="M18 52h84v-8c0-5-4-9-9-9H27c-5 0-9 4-9 9v8z" fill="url(#grad_card4_fold)"/>
+                                <path d="M46 35v-9c0-4 4-7 8-7h12c4 0 8 3 8 7v9" stroke="#fbbf24" stroke-width="4" stroke-linecap="round"/>
+                                <rect x="36" y="48" width="10" height="14" rx="3" fill="url(#grad_gold)" stroke="#54090c" stroke-width="1.5"/>
+                                <rect x="74" y="48" width="10" height="14" rx="3" fill="url(#grad_gold)" stroke="#54090c" stroke-width="1.5"/>
+                                <g transform="translate(62, 12) rotate(8)">
+                                    <rect x="0" y="0" width="38" height="48" rx="4" fill="#ffffff" stroke="#7a1318" stroke-width="2"/>
+                                    <path d="M6 10h18M6 18h26M6 26h16" stroke="#94a3b8" stroke-width="2.5" stroke-linecap="round"/>
+                                    <circle cx="27" cy="36" r="8" fill="#10b981"/>
+                                    <text x="27" y="40" font-size="10" font-weight="900" fill="#ffffff" text-anchor="middle">A+</text>
+                                </g>
+                                <defs>
+                                    <linearGradient id="grad_card4_case" x1="18" y1="42" x2="102" y2="102" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#7a1318"/>
+                                        <stop offset="1" stop-color="#3d0507"/>
+                                    </linearGradient>
+                                    <linearGradient id="grad_card4_fold" x1="18" y1="35" x2="102" y2="52" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#991b1b"/>
+                                        <stop offset="1" stop-color="#7a1318"/>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- Card 5: Quản lý học tập -->
+                    <div class="system-card">
+                        <div class="system-card-body">
+                            <h3 class="system-card-title">Quản lý học tập</h3>
+                            <p class="system-card-desc">Quản lý thông tin người học, thống kê tiến độ và quá trình học tập.</p>
+                            <a href="student-dashboard.html" class="btn-system-access">
+                                Truy cập
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                            </a>
+                        </div>
+                        <div class="system-card-icon">
+                            <svg width="130" height="130" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <ellipse cx="60" cy="106" rx="42" ry="8" fill="#7a1318" opacity="0.15"/>
+                                <circle cx="42" cy="40" r="14" fill="#3b82f6"/>
+                                <path d="M22 75c0-11 9-18 20-18s20 7 20 18" fill="#2563eb"/>
+                                <circle cx="78" cy="40" r="14" fill="#fbbf24"/>
+                                <path d="M58 75c0-11 9-18 20-18s20 7 20 18" fill="#d97706"/>
+                                <circle cx="60" cy="50" r="16" fill="url(#grad_card5_user)" stroke="#ffffff" stroke-width="2.5"/>
+                                <path d="M36 90c0-13 11-21 24-21s24 8 24 21" fill="url(#grad_card5_body)" stroke="#ffffff" stroke-width="2"/>
+                                <rect x="70" y="65" width="40" height="28" rx="6" fill="#ffffff" stroke="#7a1318" stroke-width="2"/>
+                                <path d="M76 83l6-8 6 4 10-12" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <circle cx="98" cy="67" r="3" fill="#ef4444"/>
+                                <defs>
+                                    <linearGradient id="grad_card5_user" x1="44" y1="34" x2="76" y2="66" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#dc2626"/>
+                                        <stop offset="1" stop-color="#7a1318"/>
+                                    </linearGradient>
+                                    <linearGradient id="grad_card5_body" x1="36" y1="69" x2="84" y2="90" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#7a1318"/>
+                                        <stop offset="1" stop-color="#54090c"/>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- Card 6: Hỗ trợ sinh viên -->
+                    <div class="system-card">
+                        <div class="system-card-body">
+                            <h3 class="system-card-title">Hỗ trợ sinh viên</h3>
+                            <p class="system-card-desc">Hướng dẫn sử dụng hệ thống và trợ giúp kỹ thuật 24/7.</p>
+                            <a href="support.html" class="btn-system-access">
+                                Truy cập
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                            </a>
+                        </div>
+                        <div class="system-card-icon">
+                            <svg width="130" height="130" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <ellipse cx="60" cy="106" rx="40" ry="8" fill="#7a1318" opacity="0.15"/>
+                                <path d="M60 18L24 32v30c0 24 36 38 36 38s36-14 36-38V32L60 18z" fill="url(#grad_card6_shield)" stroke="#54090c" stroke-width="3"/>
+                                <path d="M60 26L32 37v25c0 18 28 29 28 29s28-11 28-29V37L60 26z" fill="#ffffff" opacity="0.15"/>
+                                <path d="M38 52c0-12 10-22 22-22s22 10 22 22" fill="none" stroke="#fbbf24" stroke-width="5" stroke-linecap="round"/>
+                                <rect x="32" y="48" width="10" height="20" rx="5" fill="#fbbf24" stroke="#54090c" stroke-width="2"/>
+                                <rect x="78" y="48" width="10" height="20" rx="5" fill="#fbbf24" stroke="#54090c" stroke-width="2"/>
+                                <path d="M83 65l-15 14" stroke="#fbbf24" stroke-width="3" stroke-linecap="round"/>
+                                <circle cx="66" cy="80" r="4" fill="#ffffff"/>
+                                <defs>
+                                    <linearGradient id="grad_card6_shield" x1="24" y1="18" x2="96" y2="100" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#dc2626"/>
+                                        <stop offset="1" stop-color="#7a1318"/>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
                         </div>
                     </div>
                 </div>
             </section>
         </div>
-
-        <!-- ===== STATS ===== -->
-        <div class="container" style="margin-bottom: 40px;">
-            <div class="stats-bar">
-                <div class="stats-inner">
-                    <div class="stat-item">
-                        <div class="stat-number" data-target="50">0+</div>
-                        <div class="stat-label">Khóa học</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number" data-target="12000">0</div>
-                        <div class="stat-label">Sinh viên</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number" data-target="200">0+</div>
-                        <div class="stat-label">Bài giảng</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number" data-target="98">0</div>
-                        <div class="stat-label">% Hài lòng</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- ===== CATEGORIES ===== -->
-        <section class="section" style="background: var(--bg-white); border-bottom: 1px solid var(--border);">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Danh mục khóa học</h2>
-                    <p class="section-subtitle">Đa dạng môn học theo chương trình đào tạo PTIT</p>
-                </div>
-                <div class="cat-grid">
-                    <a href="courses.html?cat=daicuong" class="cat-card">
-                        <div class="cat-label-tag">Đại cương</div>
-                        <div class="cat-name">Các môn đại cương</div>
-                        <div class="cat-count">3 khóa học</div>
-                    </a>
-                    <a href="courses.html?cat=chuyennganh" class="cat-card">
-                        <div class="cat-label-tag">CNTT</div>
-                        <div class="cat-name">Chuyên ngành CNTT</div>
-                        <div class="cat-count">5 khóa học</div>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- ===== WHY US ===== -->
-        <section class="section">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Tại sao chọn PTIT E-Learning?</h2>
-                    <p class="section-subtitle">Trải nghiệm học tập được thiết kế riêng cho sinh viên Việt Nam</p>
-                </div>
-                <div class="why-grid">
-                    <div class="why-card">
-                        <div class="why-label">AI</div>
-                        <div class="why-title">Gia sư AI thông minh</div>
-                        <p class="why-desc">Hỏi đáp tức thì với trí tuệ nhân tạo được huấn luyện từ giáo trình PTIT — giải thích rõ ràng, kiên nhẫn và sẵn sàng 24/7.</p>
-                    </div>
-                    <div class="why-card">
-                        <div class="why-label">ND</div>
-                        <div class="why-title">Nội dung chuẩn PTIT</div>
-                        <p class="why-desc">Toàn bộ nội dung được xây dựng và kiểm duyệt bởi giảng viên Học viện — đúng chương trình, đúng trọng tâm thi cử.</p>
-                    </div>
-                    <div class="why-card">
-                        <div class="why-label">TD</div>
-                        <div class="why-title">Theo dõi tiến độ</div>
-                        <p class="why-desc">Hệ thống tự động lưu lại tiến trình học tập, nhắc nhở và khuyến khích bạn hoàn thành từng chương một cách có kế hoạch.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ===== FEATURED COURSES ===== -->
-        <section class="section" style="background: var(--bg-white); border-top: 1px solid var(--border);">
-            <div class="container">
-                <div class="section-header-row">
-                    <div>
-                        <h2 class="section-title">Khóa học nổi bật</h2>
-                        <p class="section-subtitle" style="margin-bottom:0;">Được nhiều sinh viên yêu thích nhất</p>
-                    </div>
-                    <a href="courses.html" class="btn btn-secondary btn-sm">Xem tất cả</a>
-                </div>
-                <div class="course-grid" id="featuredCourses"></div>
-            </div>
-        </section>
-
-        <!-- ===== CTA ===== -->
-        <section class="section">
-            <div class="container">
-                <div class="cta-section">
-                    <h2 class="cta-title">Bắt đầu hành trình học tập ngay hôm nay</h2>
-                    <p class="cta-desc">Chỉ cần tài khoản sinh viên PTIT</p>
-                    <a href="register.html" class="btn-hero-primary" style="display:inline-flex;position:relative;z-index:2;">Đăng ký ngay</a>
-                </div>
-            </div>
-        </section>
     </main>
 
     <script src="components/footer.js"></script>
     <script src="js/index.js"></script>
+    <script>
+        (function() {
+            const userStr = localStorage.getItem('ptit_user');
+            if (userStr) {
+                try {
+                    const u = JSON.parse(userStr);
+                    if (u && u.name) {
+                        const name = u.name.split(' ').pop();
+                        document.getElementById('heroGreeting').innerHTML = 'Xin chào ' + name;
+                    }
+                } catch(e){}
+            }
+        })();
+    </script>
 </body>
+
 </html>

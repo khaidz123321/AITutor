@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cổng Quản Lý Học Tập Sinh Viên - PTIT E-Learning</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/i18n.js"></script>
+</head>
+<body class="db-body">
+    <div class="db-wrapper">
+        <!-- ===== SIDEBAR ===== -->
+        <aside class="db-sidebar">
+            <a href="index.html" class="db-brand">
+                <img src="assets/images/Logo-Hoc-Vien-Cong-Nghe-Buu-Chinh-Vien-Thong-PTITSimple.webp" alt="PTIT Logo" style="height: 32px; width: auto;">
+            </a>
+            
+            <nav class="db-nav">
+                <div class="db-nav-item active" data-panel="overviewPanel">Tổng quan học tập</div>
+                <div class="db-nav-item" data-panel="coursesPanel" id="navCourses">Khóa học của tôi</div>
+                <div class="db-nav-item" data-panel="exercisesAiPanel" id="navExercisesAi">Bài tập AI & Luyện tập</div>
+                <div class="db-nav-item" data-panel="progressPanel" id="navProgress">Tiến độ & Điểm số</div>
+                <div class="db-nav-item" data-panel="notificationsPanel" id="navNotifications">Thông báo lớp học</div>
+            </nav>
+            
+            <div class="db-nav-user">
+                <div id="dbUserFullName" style="font-weight: 700; font-size: 14px; margin-bottom: 4px;">Sinh viên PTIT</div>
+                <div id="dbUserRole" style="font-size: 12px; color: #94a3b8; margin-bottom: 12px;">Mã SV: B21DCCN001</div>
+                <a href="#" id="dbLogoutBtn" style="color: #ef4444; font-size: 13px; text-decoration: none; font-weight: 600;">Đăng xuất</a>
+            </div>
+        </aside>
+
+        <!-- ===== MAIN CONTENT ===== -->
+        <main class="db-main">
+            <!-- Header -->
+            <header class="db-header">
+                <h2 style="font-size: 18px; font-weight: 800;" id="dbTitle">Tổng quan học tập sinh viên</h2>
+                <div style="display: flex; align-items: center; gap: 16px;">
+                    <a href="index.html" class="btn btn-outline-primary btn-sm">Trang chủ PTIT</a>
+                </div>
+            </header>
+
+            <div class="db-content">
+                <!-- ================= PANEL: OVERVIEW ================= -->
+                <section class="db-panel active" id="overviewPanel">
+                    <!-- Metrics Cards -->
+                    <div class="db-stats-grid">
+                        <div class="db-stat-card">
+                            <div class="lbl">Khóa học đăng ký</div>
+                            <div class="val" id="statCourses" style="color: #2563eb;">4</div>
+                        </div>
+                        <div class="db-stat-card">
+                            <div class="lbl">Tiến độ trung bình</div>
+                            <div class="val" id="statProgress" style="color: #10b981;">75%</div>
+                        </div>
+                        <div class="db-stat-card">
+                            <div class="lbl">Giờ tự học tích lũy</div>
+                            <div class="val" id="statHours" style="color: #f59e0b;">42</div>
+                        </div>
+                        <div class="db-stat-card">
+                            <div class="lbl">Bài tập AI & Kiểm tra</div>
+                            <div class="val" id="statQuiz" style="color: #7a1318;">14/15</div>
+                        </div>
+                    </div>
+
+                    <!-- Enrolled Courses Progress Table -->
+                    <div class="db-card" style="margin-bottom: 24px;">
+                        <div class="db-card-header" style="display:flex; justify-content:space-between; align-items:center;">
+                            <h3 class="db-card-title">Tiến độ các khóa học đang tham gia</h3>
+                            <a href="courses.html" class="btn btn-secondary btn-sm">+ Đăng ký thêm môn</a>
+                        </div>
+                        <div class="db-table-responsive">
+                            <table class="db-table">
+                                <thead>
+                                    <tr>
+                                        <th>Môn học</th>
+                                        <th>Giảng viên</th>
+                                        <th>Danh mục</th>
+                                        <th>Tiến độ hoàn thành</th>
+                                        <th>Hành động</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="overviewCoursesTable">
+                                    <tr><td colspan="5" style="text-align: center; color: var(--text-3);">Đang tải dữ liệu khóa học...</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Learning Activity & Circular Progress Charts Grid -->
+                    <div class="db-grid" style="grid-template-columns: 2fr 1fr; gap: 24px;">
+                        <div class="db-card">
+                            <div class="db-card-header">
+                                <h3 class="db-card-title">Thống kê thời lượng tự học theo tuần (Giờ)</h3>
+                            </div>
+                            <div style="height: 240px; position: relative;">
+                                <canvas id="overviewChart"></canvas>
+                            </div>
+                        </div>
+
+                        <div class="db-card">
+                            <div class="db-card-header">
+                                <h3 class="db-card-title">Biểu đồ tròn tiến độ khóa học</h3>
+                            </div>
+                            <div style="height: 240px; position: relative; display:flex; align-items:center; justify-content:center;">
+                                <canvas id="progressDoughnutChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ================= PANEL: COURSES ================= -->
+                <section class="db-panel" id="coursesPanel">
+                    <div class="db-card">
+                        <div class="db-card-header">
+                            <h3 class="db-card-title">Danh sách khóa học cá nhân</h3>
+                        </div>
+                        <div class="db-table-responsive">
+                            <table class="db-table">
+                                <thead>
+                                    <tr>
+                                        <th>Mã môn</th>
+                                        <th>Tên khóa học</th>
+                                        <th>Chương học</th>
+                                        <th>Tiến độ học tập</th>
+                                        <th>Hành động</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="studentCoursesTableBody">
+                                    <tr><td colspan="5" style="text-align: center; color: var(--text-3);">Đang tải danh sách khóa học...</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ================= PANEL: EXERCISES AI ================= -->
+                <section class="db-panel" id="exercisesAiPanel">
+                    <div class="db-card">
+                        <div class="db-card-header">
+                            <h3 class="db-card-title">Lịch sử bài tập AI & Đánh giá năng lực</h3>
+                        </div>
+                        <div class="db-table-responsive">
+                            <table class="db-table">
+                                <thead>
+                                    <tr>
+                                        <th>Mã bài</th>
+                                        <th>Tên bài kiểm tra / Luyện tập AI</th>
+                                        <th>Môn học</th>
+                                        <th>Ngày nộp</th>
+                                        <th>Điểm số</th>
+                                        <th>Trạng thái</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="studentAttemptsTableBody">
+                                    <tr><td colspan="6" style="text-align: center; color: var(--text-3);">Đang tải lịch sử làm bài...</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ================= PANEL: PROGRESS & GRADES ================= -->
+                <section class="db-panel" id="progressPanel">
+                    <div class="db-card">
+                        <div class="db-card-header">
+                            <h3 class="db-card-title">Bảng kết quả học tập & Đánh giá năng lực</h3>
+                        </div>
+                        <div class="db-table-responsive">
+                            <table class="db-table">
+                                <thead>
+                                    <tr>
+                                        <th>Môn học</th>
+                                        <th>Tổng số bài học</th>
+                                        <th>Đã hoàn thành</th>
+                                        <th>Điểm trung bình AI</th>
+                                        <th>Xếp loại năng lực</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="studentGradeTableBody">
+                                    <tr><td colspan="5" style="text-align: center; color: var(--text-3);">Đang tải bảng điểm...</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ================= PANEL: NOTIFICATIONS ================= -->
+                <section class="db-panel" id="notificationsPanel">
+                    <div class="db-card">
+                        <div class="db-card-header">
+                            <h3 class="db-card-title">Thông báo từ Giảng viên & Hệ thống</h3>
+                        </div>
+                        <div id="studentNotificationsList" style="display:flex; flex-direction:column; gap:12px; padding:16px 0;">
+                            <div style="text-align:center; color:var(--text-3); padding:24px;">Đang tải thông báo...</div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/student-dashboard.js"></script>
+</body>
+</html>

@@ -258,3 +258,15 @@ INSERT INTO exercise_attempts (id, user_id, exercise_id, submitted_answer, is_co
 (10, 4, 4, 'final', true, NOW() - INTERVAL '5 days');
 
 SELECT setval(pg_get_serial_sequence('exercise_attempts', 'id'), (SELECT MAX(id) FROM exercise_attempts));
+
+-- ==========================================
+-- 13. DỮ LIỆU BẢNG `news`
+-- ==========================================
+INSERT INTO news (id, title, category, summary, content, image_url, is_spotlight, created_at, updated_at) VALUES
+(1, 'PTIT chính thức triển khai nền tảng Đào tạo số tích hợp Trợ lý Gia sư AI vào giảng dạy chính quy', 'academy', 'Học viện Công nghệ Bưu chính Viễn thông tiên phong ứng dụng Trí tuệ Nhân tạo hỗ trợ sinh viên tự học 24/7. Hệ thống giúp cá nhân hóa lộ trình bài giảng và tự động mở khóa chương học.', 'Nội dung chi tiết bài viết tuyên truyền chuyển đổi số của Học viện PTIT...', 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=80', true, NOW() - INTERVAL '1 day', NOW()),
+(2, 'Lễ vinh danh và trao học bổng tài năng cho sinh viên có thành tích xuất sắc', 'academy', 'Học viện trao tặng hàng trăm suất học bổng khuyến khích học tập và khen thưởng các sinh viên đạt thành tích cao trong nghiên cứu khoa học.', 'Chi tiết lễ vinh danh sinh viên xuất sắc...', 'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=800&q=80', false, NOW() - INTERVAL '3 days', NOW()),
+(3, 'Sinh viên PTIT xuất sắc giành Giải Nhất Cuộc thi Sáng tạo AI Toàn quốc 2026', 'tech', 'Đội tuyển PTIT xuất sắc vượt qua 50 trường đại học với sản phẩm Trợ lý AI hỗ trợ tự học trực tuyến thông minh cho ngành viễn thông.', 'Chi tiết cuộc thi AI toàn quốc 2026...', 'https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80', false, NOW() - INTERVAL '5 days', NOW()),
+(4, 'Chuỗi hoạt động Mùa Hè Xanh và Chiến dịch Tình nguyện Chuyển đổi số cộng đồng', 'student', 'Hơn 500 sinh viên tình nguyện PTIT ra quân tập huấn kỹ năng số, hỗ trợ người dân cài đặt ứng dụng công và phổ cập Internet.', 'Chi tiết hoạt động Mùa hè xanh...', 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80', false, NOW() - INTERVAL '7 days', NOW());
+
+SELECT setval(pg_get_serial_sequence('news', 'id'), (SELECT MAX(id) FROM news));
+

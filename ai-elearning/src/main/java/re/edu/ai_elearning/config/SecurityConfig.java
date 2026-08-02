@@ -32,11 +32,6 @@ public class SecurityConfig {
     private final JwtAuthenticationFilter jwtAuthenticationFilter;
 
     @Bean
-    public PasswordEncoder passwordEncoder() {
-        return new BCryptPasswordEncoder();
-    }
-
-    @Bean
     public AuthenticationManager authenticationManager(AuthenticationConfiguration configuration) throws Exception {
         return configuration.getAuthenticationManager();
     }
@@ -48,17 +43,41 @@ public class SecurityConfig {
             .cors(cors -> cors.configurationSource(corsConfigurationSource()))
             .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
             .authorizeHttpRequests(auth -> auth
-                // 1. Public endpoints
+                // 1. Public static web pages & assets
+                .requestMatchers(
+                    "/",
+                    "/index.html",
+                    "/login.html",
+                    "/register.html",
+                    "/*.html",
+                    "/css/**",
+                    "/js/**",
+                    "/assets/**",
+                    "/components/**",
+                    "/uploads/**",
+                    "/favicon.ico"
+                ).permitAll()
+
+                // 2. Public REST API endpoints
                 .requestMatchers("/api/v1/auth/**").permitAll()
                 .requestMatchers(HttpMethod.GET, "/api/v1/courses").permitAll()
                 .requestMatchers(HttpMethod.GET, "/api/v1/courses/{id}").permitAll()
                 .requestMatchers(HttpMethod.GET, "/api/v1/courses/{id}/reviews").permitAll()
                 .requestMatchers(HttpMethod.GET, "/api/v1/reviews/course/{courseId}").permitAll()
+                .requestMatchers(HttpMethod.GET, "/api/v1/news/**").permitAll()
+                .requestMatchers(HttpMethod.POST, "/api/v1/support-tickets").permitAll()
                 .requestMatchers("/api-docs/**", "/swagger-ui/**", "/swagger-ui.html").permitAll()
 
-                // 2. Admin specific endpoints
+                // 3. Student & general authenticated endpoints
+                .requestMatchers("/api/v1/student/**").authenticated()
+                .requestMatchers("/api/v1/support-tickets/**").authenticated()
+
+                // 3. Admin specific endpoints
                 .requestMatchers("/api/v1/users/me/**").authenticated() // Phải khai báo /me trước /{id}
                 .requestMatchers("/api/v1/users/**").hasRole("ADMIN")
+                .requestMatchers(HttpMethod.POST, "/api/v1/news/**").hasRole("ADMIN")
+                .requestMatchers(HttpMethod.PUT, "/api/v1/news/**").hasRole("ADMIN")
+                .requestMatchers(HttpMethod.DELETE, "/api/v1/news/**").hasRole("ADMIN")
                 .requestMatchers(HttpMethod.POST, "/api/v1/notifications").hasRole("ADMIN")
                 .requestMatchers(HttpMethod.POST, "/api/v1/notifications/broadcast").hasRole("ADMIN")
                 .requestMatchers(HttpMethod.GET, "/api/v1/reviews").hasRole("ADMIN")
@@ -66,7 +85,7 @@ public class SecurityConfig {
                 .requestMatchers(HttpMethod.DELETE, "/api/v1/reviews/{id}/admin").hasRole("ADMIN")
                 .requestMatchers("/api/v1/reports/courses-summary").hasRole("ADMIN")
 
-                // 3. Admin & Teacher endpoints
+                // 4. Admin & Teacher endpoints
                 .requestMatchers(HttpMethod.GET, "/api/v1/courses/all").hasAnyRole("ADMIN", "TEACHER")
                 .requestMatchers(HttpMethod.POST, "/api/v1/courses").hasAnyRole("ADMIN", "TEACHER")
                 .requestMatchers(HttpMethod.PUT, "/api/v1/courses/{id}").hasAnyRole("ADMIN", "TEACHER")
@@ -92,7 +111,7 @@ public class SecurityConfig {
                 .requestMatchers("/api/v1/reports/progress").hasAnyRole("ADMIN", "TEACHER")
                 .requestMatchers("/api/v1/reports/exercise-difficulty").hasAnyRole("ADMIN", "TEACHER")
 
-                // 4. Student & general authenticated endpoints
+                // 5. Authenticated endpoints
                 .requestMatchers(HttpMethod.GET, "/api/v1/courses/enrolled").authenticated()
                 .requestMatchers(HttpMethod.POST, "/api/v1/courses/{id}/enroll").authenticated()
                 .requestMatchers(HttpMethod.POST, "/api/v1/courses/{id}/reviews").authenticated()
@@ -113,7 +132,7 @@ public class SecurityConfig {
                 .requestMatchers("/api/v1/notifications/**").authenticated()
                 .requestMatchers("/api/v1/ai/chat/**").authenticated()
 
-                .anyRequest().permitAll()
+                .anyRequest().authenticated()
             );
 
         http.addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);

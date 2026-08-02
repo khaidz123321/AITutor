@@ -1,4 +1,4 @@
-﻿// =====================================================
+// =====================================================
 // COURSES PAGE LOGIC
 // =====================================================
 (function () {
@@ -61,38 +61,34 @@
         }
     }
 
-    function fetchCourses() {
+    async function fetchCourses() {
         const token = localStorage.getItem('ptit_token');
-        if (!token) {
-            window.location.href = 'login.html';
-            return;
-        }
 
-        fetch('/api/v1/courses?status=PUBLISHED&size=100', {
-            headers: { 'Authorization': 'Bearer ' + token }
-        })
-        .then(res => {
-            if (res.status === 401) {
-                localStorage.removeItem('ptit_token');
-                window.location.href = 'login.html';
-                return;
+        try {
+            const res = await fetch('/api/v1/courses?status=PUBLISHED&size=100', {
+                headers: token ? { 'Authorization': 'Bearer ' + token } : {}
+            });
+
+            if (!res || !res.ok) {
+                throw new Error('HTTP ' + (res ? res.status : 'error'));
             }
-            return res.json();
-        })
-        .then(resData => {
+
+            const resData = await res.json();
             if (resData && resData.success) {
                 DB_COURSES = (resData.data.items || []).map(c => {
                     c.category = (c.level === 'BEGINNER' || c.level === 'INTERMEDIATE') ? 'daicuong' : 'chuyennganh';
                     return c;
                 });
                 renderOutput();
+            } else {
+                const output = document.getElementById('courseOutput');
+                if (output) output.innerHTML = `<div style="text-align:center; padding: 40px; color: var(--text-3);">Không có khóa học nào.</div>`;
             }
-        })
-        .catch(err => {
-            console.error(err);
+        } catch (err) {
+            console.error('fetchCourses error:', err);
             const output = document.getElementById('courseOutput');
             if (output) output.innerHTML = `<div style="text-align:center; padding: 40px; color: var(--text-3);">Không thể tải danh sách khóa học. Vui lòng thử lại.</div>`;
-        });
+        }
     }
 
     document.addEventListener('DOMContentLoaded', () => {

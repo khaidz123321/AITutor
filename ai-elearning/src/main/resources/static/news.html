@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Trang Tin tức & Truyền thông Học viện PTIT — Cập nhật các hoạt động đào tạo, công nghệ, tuyển sinh và phong trào sinh viên mới nhất.">
+    <title>Tin tức & Truyền thông - PTIT E-Learning</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/news.css">
+    <script src="js/i18n.js"></script>
+</head>
+
+<body>
+    <script src="components/header.js"></script>
+
+    <main>
+        <!-- ===== HERO BANNER (FULL-WIDTH) ===== -->
+        <section class="hero-section">
+            <div class="container">
+                <div class="hero-inner" style="max-width: 820px; margin: 0 auto; text-align: center;">
+                    <div class="hero-eyebrow">
+                        HỌC VIỆN CÔNG NGHỆ BƯU CHÍNH VIỄN THÔNG
+                    </div>
+                    <h1 class="hero-h1">
+                        Tin Tức & <em>Truyền Thông PTIT</em>
+                    </h1>
+                    <p class="hero-p" style="margin: 0 auto 36px; max-width: 740px;">
+                        Cập nhật các sự kiện đào tạo nổi bật, nghiên cứu khoa học, hoạt động sinh viên và thông tin chuyển đổi số mới nhất từ Học viện PTIT.
+                    </p>
+                    <div class="hero-actions" style="justify-content: center;">
+                        <a href="#featuredNews" class="btn-hero-primary">Xem tin nổi bật</a>
+                        <a href="#newsGridSection" class="btn-hero-ghost">Tất cả tin tức</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== FEATURED SPOTLIGHT NEWS ===== -->
+        <section class="section" id="featuredNews" style="background: var(--bg-white); border-bottom: 1px solid var(--border);">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Tin tiêu điểm Học viện</h2>
+                    <p class="section-subtitle">Sự kiện chuyển đổi số và dấu ấn nổi bật trong giảng dạy tại PTIT</p>
+                </div>
+
+                <div id="featuredNewsContainer">
+                    <div style="text-align:center; padding: 40px; color: var(--text-3);">Đang tải bản tin tiêu điểm từ hệ thống...</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== NEWS CATEGORIES & GRID ===== -->
+        <section class="section" id="newsGridSection">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Danh mục bản tin PTIT</h2>
+                    <p class="section-subtitle">Thông tin đa dạng về phong trào, tuyển sinh và thành tựu khoa học công nghệ</p>
+                </div>
+
+                <!-- Tabs filter -->
+                <div class="news-tabs">
+                    <button class="tab-btn active" onclick="filterNews('all', this)">Tất cả tin tức</button>
+                    <button class="tab-btn" onclick="filterNews('academy', this)">Tin Học viện</button>
+                    <button class="tab-btn" onclick="filterNews('student', this)">Hoạt động sinh viên</button>
+                    <button class="tab-btn" onclick="filterNews('tech', this)">Khoa học công nghệ</button>
+                    <button class="tab-btn" onclick="filterNews('admission', this)">Tuyển sinh</button>
+                </div>
+
+                <div class="news-grid" id="newsGrid">
+                    <div style="grid-column: 1/-1; text-align:center; padding: 40px; color: var(--text-3);">Đang tải danh sách tin tức...</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CTA ===== -->
+        <section class="section">
+            <div class="container">
+                <div class="cta-section">
+                    <h2 class="cta-title">Bắt đầu quá trình học tập số tại PTIT</h2>
+                    <p class="cta-desc">Đăng nhập tài khoản sinh viên để truy cập toàn bộ tài nguyên học liệu</p>
+                    <a href="register.html" class="btn-hero-primary"
+                        style="display:inline-flex;position:relative;z-index:2;">Đăng ký tài khoản</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== MODAL XEM CHI TIẾT BÀI VIẾT ===== -->
+    <div class="news-modal-overlay" id="newsModalOverlay" onclick="closeNewsModalOnOverlay(event)">
+        <div class="news-modal-card">
+            <button class="news-modal-close" onclick="closeNewsModal()">&times;</button>
+            <img src="" alt="" id="modalNewsImg" class="news-modal-cover">
+            <div class="news-modal-content">
+                <div class="spotlight-meta">
+                    <span class="tag-badge" id="modalNewsCategory">CHUYỂN ĐỔI SỐ</span>
+                    <span class="news-date" id="modalNewsDate">---</span>
+                </div>
+                <h2 class="news-modal-title" id="modalNewsTitle">...</h2>
+                <div class="news-modal-summary" id="modalNewsSummary">...</div>
+                <div class="news-modal-body-text" id="modalNewsContent">...</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="components/footer.js"></script>
+
+    <script>
+        let allNewsData = [];
+
+        const catMap = {
+            'academy': 'TIN HỌC VIỆN',
+            'student': 'HOẠT ĐỘNG SINH VIÊN',
+            'tech': 'KHOA HỌC CÔNG NGHỆ',
+            'admission': 'TUYỂN SINH'
+        };
+
+        function fetchNewsFromBackend() {
+            fetch('/api/v1/news')
+                .then(res => res.json())
+                .then(resData => {
+                    if (resData && resData.success && resData.data && resData.data.length > 0) {
+                        allNewsData = resData.data;
+                        renderSpotlightNews();
+                        renderNewsGrid('all');
+                    } else {
+                        document.getElementById('featuredNewsContainer').innerHTML = `<div style="text-align:center; padding:40px; color:var(--text-3);">Chưa có bản tin tiêu điểm nào.</div>`;
+                        document.getElementById('newsGrid').innerHTML = `<div style="grid-column:1/-1; text-align:center; padding:40px; color:var(--text-3);">Không có tin tức nào trong hệ thống.</div>`;
+                    }
+                })
+                .catch(err => {
+                    console.error('Lỗi khi tải tin tức từ backend:', err);
+                    document.getElementById('featuredNewsContainer').innerHTML = `<div style="text-align:center; padding:40px; color:var(--text-3);">Không thể tải tin tức từ hệ thống.</div>`;
+                    document.getElementById('newsGrid').innerHTML = `<div style="grid-column:1/-1; text-align:center; padding:40px; color:var(--text-3);">Vui lòng kiểm tra lại kết nối server.</div>`;
+                });
+        }
+
+        function renderSpotlightNews() {
+            const spotlight = allNewsData.find(n => n.isSpotlight) || allNewsData[0];
+            if (!spotlight) return;
+
+            const container = document.getElementById('featuredNewsContainer');
+            if (!container) return;
+
+            const dateStr = spotlight.createdAt ? new Date(spotlight.createdAt).toLocaleDateString('vi-VN') : '---';
+            const catTag = catMap[spotlight.category] || (spotlight.category ? spotlight.category.toUpperCase() : 'TIN TỨC');
+
+            container.innerHTML = `
+                <div class="spotlight-card" style="cursor:pointer;" onclick="openNewsModal(${spotlight.id})">
+                    <img src="${spotlight.imageUrl || 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=80'}"
+                        alt="${spotlight.title}" class="spotlight-img">
+                    <div class="spotlight-body">
+                        <div class="spotlight-meta">
+                            <span class="tag-badge">${catTag}</span>
+                            <span class="news-date">${dateStr}</span>
+                        </div>
+                        <h3 class="spotlight-title">${spotlight.title}</h3>
+                        <p class="spotlight-excerpt">${spotlight.summary}</p>
+                        <button onclick="event.stopPropagation(); openNewsModal(${spotlight.id})" class="btn-hero-primary" style="align-self: flex-start; border:none; cursor:pointer;">Đọc toàn văn bài viết</button>
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderNewsGrid(category) {
+            const grid = document.getElementById('newsGrid');
+            if (!grid) return;
+
+            const filtered = category === 'all' 
+                ? allNewsData 
+                : allNewsData.filter(n => n.category === category);
+
+            if (filtered.length === 0) {
+                grid.innerHTML = `<div style="grid-column:1/-1; text-align:center; padding:40px; color:var(--text-3);">Không tìm thấy bài viết nào trong danh mục này.</div>`;
+                return;
+            }
+
+            grid.innerHTML = filtered.map(n => {
+                const dateStr = n.createdAt ? new Date(n.createdAt).toLocaleDateString('vi-VN') : '---';
+                const catTag = catMap[n.category] || (n.category ? n.category.toUpperCase() : 'TIN TỨC');
+
+                return `
+                    <div class="news-card" data-category="${n.category}" style="cursor:pointer;" onclick="openNewsModal(${n.id})">
+                        <div class="news-card-img-wrap">
+                            <img src="${n.imageUrl || 'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=800&q=80'}"
+                                alt="${n.title}" class="news-card-img">
+                        </div>
+                        <div class="news-card-body">
+                            <div class="spotlight-meta">
+                                <span class="tag-badge">${catTag}</span>
+                                <span class="news-date">${dateStr}</span>
+                            </div>
+                            <h3 class="news-card-title">${n.title}</h3>
+                            <p class="news-card-excerpt">${n.summary}</p>
+                            <a href="javascript:void(0)" onclick="event.stopPropagation(); openNewsModal(${n.id})" class="news-card-link">
+                                Xem chi tiết
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function filterNews(category, btn) {
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            renderNewsGrid(category);
+        }
+
+        function openNewsModal(newsId) {
+            const item = allNewsData.find(n => n.id === newsId);
+            if (!item) return;
+
+            document.getElementById('modalNewsImg').src = item.imageUrl || 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=80';
+            document.getElementById('modalNewsImg').alt = item.title || '';
+            document.getElementById('modalNewsCategory').textContent = catMap[item.category] || (item.category ? item.category.toUpperCase() : 'TIN TỨC');
+            document.getElementById('modalNewsDate').textContent = item.createdAt ? new Date(item.createdAt).toLocaleDateString('vi-VN') : '---';
+            document.getElementById('modalNewsTitle').textContent = item.title || '';
+            document.getElementById('modalNewsSummary').textContent = item.summary || '';
+            document.getElementById('modalNewsContent').textContent = item.content || item.summary || '';
+
+            const overlay = document.getElementById('newsModalOverlay');
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeNewsModal() {
+            const overlay = document.getElementById('newsModalOverlay');
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        function closeNewsModalOnOverlay(e) {
+            if (e.target.id === 'newsModalOverlay') {
+                closeNewsModal();
+            }
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeNewsModal();
+        });
+
+        document.addEventListener('DOMContentLoaded', fetchNewsFromBackend);
+    </script>
+</body>
+
+</html>

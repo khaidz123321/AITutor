@@ -126,6 +126,14 @@ public class UserController {
         return ResponseEntity.ok(ApiResponse.success("Cập nhật hồ sơ cá nhân thành công", response));
     }
 
+    @PostMapping("/me/avatar")
+    public ResponseEntity<ApiResponse<UserProfileResponse>> uploadAvatar(
+            @AuthenticationPrincipal UserPrincipal principal,
+            @RequestParam("file") org.springframework.web.multipart.MultipartFile file) {
+        UserProfileResponse response = userProfileService.uploadAvatar(principal.getId(), file);
+        return ResponseEntity.ok(ApiResponse.success("Tải ảnh đại diện lên thành công", response));
+    }
+
     @GetMapping("/{id}/profile")
     @PreAuthorize("hasRole('ADMIN')")
     public ResponseEntity<ApiResponse<UserProfileResponse>> getUserProfile(@PathVariable Long id) {

@@ -354,4 +354,47 @@ public class CourseServiceImpl implements CourseService {
             throw new BadRequestException("Không thể lưu tập tin tải lên: " + e.getMessage());
         }
     }
+
+    @Override
+    @Transactional
+    public CourseResponse uploadThumbnail(Long id, MultipartFile file) {
+        Course course = courseRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Không tìm thấy khóa học"));
+
+        if (file.isEmpty()) {
+            throw new BadRequestException("Tập tin tải lên trống");
+        }
+
+        String contentType = file.getContentType();
+        if (contentType == null || !contentType.startsWith("image/")) {
+            throw new BadRequestException("Chỉ chấp nhận file ảnh (jpg, png, gif, webp)");
+        }
+
+        try {
+            String uploadDirStr = "src/main/resources/static/uploads/thumbnails/";
+            File uploadDir = new File(uploadDirStr);
+            if (!uploadDir.exists()) {
+                uploadDir.mkdirs();
+            }
+
+            String originalFileName = file.getOriginalFilename();
+            String extension = (originalFileName != null && originalFileName.contains("."))
+                    ? originalFileName.substring(originalFileName.lastIndexOf("."))
+                    : ".jpg";
+            String newFileName = UUID.randomUUID().toString() + extension;
+
+            Path targetPath = Paths.get(uploadDirStr + newFileName);
+            Files.copy(file.getInputStream(), targetPath, StandardCopyOption.REPLACE_EXISTING);
+
+            String fileUrl = "/uploads/thumbnails/" + newFileName;
+            course.setThumbnailUrl(fileUrl);
+            course = courseRepository.save(course);
+
+            log.info("Đã tải ảnh đại diện cho khóa học ID: {}, URL: {}", id, fileUrl);
+            return buildCourseResponse(course);
+        } catch (Exception e) {
+            log.error("Lỗi khi tải lên ảnh đại diện: ", e);
+            throw new BadRequestException("Không thể lưu ảnh đại diện: " + e.getMessage());
+        }
+    }
 }

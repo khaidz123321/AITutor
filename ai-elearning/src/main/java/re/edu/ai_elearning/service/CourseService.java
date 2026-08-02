@@ -22,4 +22,5 @@ public interface CourseService {
     void deleteCourse(Long id);
     void toggleCourseVisibility(Long id, Boolean isVisible);
     CourseResponse uploadLecturePdf(Long id, org.springframework.web.multipart.MultipartFile file);
+    CourseResponse uploadThumbnail(Long id, org.springframework.web.multipart.MultipartFile file);
 }

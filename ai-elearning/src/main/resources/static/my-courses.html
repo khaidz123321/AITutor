@@ -7,6 +7,7 @@
     <title>Khóa học của tôi - PTIT E-Learning</title>
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/my-courses.css">
+    <script src="js/i18n.js"></script>
 </head>
 
 <body>
@@ -130,24 +131,16 @@
                 if (list.length === 0) {
                     grid.innerHTML = `
                 <div class="empty-state">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="120" height="90" viewBox="0 0 120 90" style="margin: 0 auto 12px; display: block;">
-                        <!-- Background paper -->
-                        <rect x="35" y="10" width="50" height="60" rx="3" fill="#e5e7eb" />
-                        <rect x="40" y="15" width="40" height="4" fill="#d1d5db" />
-                        <rect x="40" y="24" width="40" height="2" fill="#d1d5db" />
-                        <rect x="40" y="30" width="30" height="2" fill="#d1d5db" />
-                        
-                        <!-- Folder Back -->
-                        <path d="M20 40 L20 80 A 4 4 0 0 0 24 84 L96 84 A 4 4 0 0 0 100 80 L100 40 Z" fill="#1e88e5" opacity="0.8" />
-                        
-                        <!-- Open Front Flap -->
-                        <path d="M16 48 L24 85 A 4 4 0 0 0 28 88 L100 88 A 4 4 0 0 0 104 85 L96 48 Z" fill="#1976d2" />
-                        
-                        <!-- Magnifying glass lens -->
-                        <circle cx="75" cy="45" r="14" fill="none" stroke="#2196f3" stroke-width="3" />
-                        <line x1="85" y1="55" x2="95" y2="65" stroke="#2196f3" stroke-width="3" stroke-linecap="round" />
-                    </svg>
-                    <div class="empty-text">Không có khóa học</div>
+                    <div class="empty-icon-circle">
+                        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#7a1318" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+                            <circle cx="12" cy="10" r="2.5"/>
+                            <path d="m14 12 2.5 2.5"/>
+                        </svg>
+                    </div>
+                    <div class="empty-text">Chưa có khóa học nào</div>
+                    <div class="empty-subtext">Danh sách khóa học ở mục này hiện đang trống.</div>
                 </div>`;
                     grid.style.display = 'block';
                     return;

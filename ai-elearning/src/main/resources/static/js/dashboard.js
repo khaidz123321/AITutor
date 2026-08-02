@@ -3,8 +3,10 @@
 // =====================================================
 (function () {
     const token = localStorage.getItem('ptit_token');
-    if (!token) {
-        window.location.href = 'login.html';
+    if (!token || token === 'undefined' || token === 'null' || !token.trim()) {
+        localStorage.removeItem('ptit_token');
+        localStorage.removeItem('ptit_user');
+        window.location.replace('/login.html');
         return;
     }
 
@@ -19,264 +21,331 @@
     let reportCompletionChartInstance = null;
     let reportBloomChartInstance = null;
 
+    // Helper to safely extract list from API response (Array, items, or content)
+    function getListFromData(data) {
+        if (!data) return [];
+        if (Array.isArray(data)) return data;
+        if (Array.isArray(data.items)) return data.items;
+        if (Array.isArray(data.content)) return data.content;
+        return [];
+    }
+
+    // Helper to safely set element text content
+    function safeSetText(id, text) {
+        const el = document.getElementById(id);
+        if (el) el.textContent = text;
+    }
+
+    function handleAuthError() {
+        localStorage.removeItem('ptit_token');
+        localStorage.removeItem('ptit_user');
+        window.location.replace('/login.html');
+    }
+
     // Initialize Dashboard
     function init() {
-        // Fetch current user details to check roles
+        setupTabs();
+
+        // Load cached user profile if present to show initial names
+        const cachedUserStr = localStorage.getItem('ptit_user');
+        if (cachedUserStr) {
+            try {
+                currentUser = JSON.parse(cachedUserStr);
+                if (currentUser) {
+                    safeSetText('dbUserFullName', currentUser.name || currentUser.fullName || 'Quản trị viên');
+                    safeSetText('dbUserRole', (currentUser.role === 'ADMIN') ? 'Quản trị viên' : 'Giảng viên');
+                    setupRolePermissions();
+                }
+            } catch (e) { console.error(e); }
+        }
+
+        // Setup Logout button
+        const logoutBtn = document.getElementById('dbLogoutBtn');
+        if (logoutBtn) {
+            logoutBtn.onclick = (e) => {
+                e.preventDefault();
+                localStorage.removeItem('ptit_token');
+                localStorage.removeItem('ptit_user');
+                window.location.href = 'login.html';
+            };
+        }
+
+        // Trigger immediate data loading for overview stats, recent courses, and teachers list
+        loadOverview();
+        loadTeachersList();
+
+        // Fetch current user details from backend to verify token & sync profile asynchronously
         fetch('/api/v1/auth/me', {
             headers: { 'Authorization': 'Bearer ' + token }
         })
             .then(res => {
-                if (res.status === 401) {
-                    localStorage.removeItem('ptit_token');
-                    window.location.href = 'login.html';
-                    return;
+                if (!res.ok && (res.status === 401 || res.status === 403)) {
+                    handleAuthError();
+                    return null;
                 }
                 return res.json();
             })
             .then(resData => {
-                if (resData && resData.success) {
+                if (!resData) return;
+                if (resData.success && resData.data) {
                     currentUser = resData.data;
-                    if (currentUser.roles && currentUser.roles.length > 0) {
-                        currentUser.role = currentUser.roles[0];
-                    } else {
-                        currentUser.role = 'STUDENT';
-                    }
+                    currentUser.role = (currentUser.roles && currentUser.roles.length > 0) ? currentUser.roles[0] : 'ADMIN';
+
                     if (currentUser.role !== 'ADMIN' && currentUser.role !== 'TEACHER') {
-                        alert('Bạn không có quyền truy cập trang quản trị này!');
+                        if (window.showToast) window.showToast('Bạn không có quyền truy cập trang quản trị!', 'warning');
                         window.location.href = 'index.html';
                         return;
                     }
 
-                    // Set user profile info
-                    document.getElementById('dbUserFullName').textContent = currentUser.fullName;
-                    document.getElementById('dbUserRole').textContent = currentUser.role === 'ADMIN' ? 'Quản trị viên' : 'Giảng viên';
+                    localStorage.setItem('ptit_user', JSON.stringify({
+                        id: currentUser.id,
+                        fullName: currentUser.fullName,
+                        name: currentUser.fullName,
+                        email: currentUser.email,
+                        role: currentUser.role
+                    }));
+
+                    safeSetText('dbUserFullName', currentUser.fullName);
+                    safeSetText('dbUserRole', currentUser.role === 'ADMIN' ? 'Quản trị viên' : 'Giảng viên');
 
                     setupRolePermissions();
-                    setupTabs();
-                    loadOverview();
-                    loadTeachersList();
-
-                    // Setup Logout button
-                    document.getElementById('dbLogoutBtn').addEventListener('click', (e) => {
-                        e.preventDefault();
-                        localStorage.removeItem('ptit_token');
-                        localStorage.removeItem('ptit_user');
-                        window.location.href = 'index.html';
-                    });
-                } else {
-                    window.location.href = 'login.html';
+                } else if (resData && !resData.success) {
+                    handleAuthError();
                 }
             })
             .catch(err => {
-                console.error(err);
-                window.location.href = 'login.html';
+                console.error('Lỗi khi kiểm tra phiên làm việc:', err);
             });
+    }
+
+    // Helper to safely set element display style
+    function safeSetDisplay(id, displayStyle) {
+        const el = document.getElementById(id);
+        if (el) el.style.display = displayStyle;
     }
 
     // Role setup
     function setupRolePermissions() {
-        if (currentUser.role === 'ADMIN') {
-            document.getElementById('btnCreateCourse').style.display = 'inline-block';
-            document.getElementById('btnCreateLesson').style.display = 'inline-block';
-            document.getElementById('navUsers').style.display = 'flex';
-            document.getElementById('navReports').style.display = 'flex';
-            document.getElementById('navNotifications').style.display = 'flex';
-            document.getElementById('navReviews').style.display = 'flex';
-            document.getElementById('adminNotiForms').style.display = 'grid';
-            document.getElementById('statusGroup').style.display = 'block';
-        } else if (currentUser.role === 'TEACHER') {
-            document.getElementById('btnCreateCourse').style.display = 'none';
-            document.getElementById('btnCreateLesson').style.display = 'inline-block';
-            document.getElementById('navUsers').style.display = 'none';
-            document.getElementById('navReports').style.display = 'none';
-            document.getElementById('navNotifications').style.display = 'flex';
-            document.getElementById('navReviews').style.display = 'none';
-            document.getElementById('adminNotiForms').style.display = 'none';
-            document.getElementById('statusGroup').style.display = 'none';
-        }
+        const isAdmin = !currentUser || currentUser.role === 'ADMIN';
+
+        safeSetDisplay('btnCreateCourse', isAdmin ? 'inline-block' : 'none');
+        safeSetDisplay('btnCreateLesson', 'inline-block');
+        safeSetDisplay('navUsers', isAdmin ? 'flex' : 'none');
+        safeSetDisplay('navReports', isAdmin ? 'flex' : 'none');
+        safeSetDisplay('navNotifications', 'flex');
+        safeSetDisplay('navReviews', isAdmin ? 'flex' : 'none');
+        safeSetDisplay('navNews', isAdmin ? 'flex' : 'none');
+        safeSetDisplay('navSupport', isAdmin ? 'flex' : 'none');
+        safeSetDisplay('adminNotiForms', isAdmin ? 'grid' : 'none');
+        safeSetDisplay('statusGroup', isAdmin ? 'block' : 'none');
     }
 
     // Tab Switcher
     function setupTabs() {
         document.querySelectorAll('.db-nav-item').forEach(item => {
-            item.addEventListener('click', () => {
-                document.querySelectorAll('.db-nav-item').forEach(b => b.classList.remove('active'));
-                document.querySelectorAll('.db-panel').forEach(c => c.classList.remove('active'));
+            item.onclick = (e) => {
+                try {
+                    document.querySelectorAll('.db-nav-item').forEach(b => b.classList.remove('active'));
+                    document.querySelectorAll('.db-panel').forEach(c => c.classList.remove('active'));
 
-                item.classList.add('active');
-                const panelId = item.dataset.panel;
-                document.getElementById(panelId).classList.add('active');
+                    item.classList.add('active');
+                    const panelId = item.dataset.panel || item.getAttribute('data-panel');
+                    const targetPanel = document.getElementById(panelId);
+                    if (targetPanel) {
+                        targetPanel.classList.add('active');
+                    }
 
-                // Update Header Title
-                document.getElementById('dbTitle').textContent = item.textContent.replace(/[^\p{L}\s]/gu, '').trim();
+                    // Update Header Title safely
+                    const titleEl = document.getElementById('dbTitle');
+                    if (titleEl) {
+                        titleEl.textContent = item.textContent.trim();
+                    }
 
-                // Load panel-specific data
-                if (panelId === 'overviewPanel') loadOverview();
-                if (panelId === 'coursesPanel') loadCourses();
-                if (panelId === 'lessonsPanel') loadLessonsModule();
-                if (panelId === 'exercisesPanel') loadExercisesModule();
-                if (panelId === 'exercisesAiPanel') loadExercisesAiModule();
-                if (panelId === 'usersPanel') loadUsers();
-                if (panelId === 'reportsPanel') loadReports();
-                if (panelId === 'notificationsPanel') loadNotificationsPanel();
-                if (panelId === 'reviewsPanel') loadReviewsPanel();
-            });
+                    // Load panel-specific data
+                    if (panelId === 'overviewPanel') loadOverview();
+                    if (panelId === 'coursesPanel') loadCourses();
+                    if (panelId === 'lessonsPanel') loadLessonsModule();
+                    if (panelId === 'exercisesPanel') loadExercisesModule();
+                    if (panelId === 'exercisesAiPanel') loadExercisesAiModule();
+                    if (panelId === 'usersPanel') loadUsers();
+                    if (panelId === 'reportsPanel') loadReports();
+                    if (panelId === 'notificationsPanel') loadNotificationsPanel();
+                    if (panelId === 'reviewsPanel') loadReviewsPanel();
+                    if (panelId === 'newsPanel') loadNewsModule();
+                    if (panelId === 'supportPanel') loadSupportTicketsModule();
+                } catch (err) {
+                    console.error('Lỗi khi chuyển tab:', err);
+                }
+            };
         });
     }
 
     // Overview Panel
     function loadOverview() {
-        // Fetch courses list
-        fetch('/api/v1/courses/all?size=50', {
-            headers: { 'Authorization': 'Bearer ' + token }
+        const fetchCoursesUrl = (token && (!currentUser || currentUser.role === 'ADMIN' || currentUser.role === 'TEACHER')) ? '/api/v1/courses/all?size=50' : '/api/v1/courses?size=50';
+
+        fetch(fetchCoursesUrl, {
+            headers: token ? { 'Authorization': 'Bearer ' + token } : {}
         })
-            .then(res => res.json())
+            .then(res => {
+                if (!res.ok) {
+                    if (res.status === 401 || res.status === 403) {
+                        handleAuthError();
+                        return null;
+                    }
+                    return fetch('/api/v1/courses?size=50').then(r => r.json());
+                }
+                return res.json();
+            })
             .then(resData => {
-                if (resData && resData.success) {
-                    const list = resData.data.items || [];
-                    document.getElementById('statCourses').textContent = list.length;
+                if (!resData) return;
+                const list = (resData && resData.success) ? getListFromData(resData.data) : [];
+                safeSetText('statCourses', list.length);
 
-                    // Show recent courses
-                    const recent = list.slice(0, 5);
-                    document.getElementById('overviewCoursesTable').innerHTML = recent.map(c => {
-                        const statusText = c.isVisible ? 'PUBLISHED' : 'DRAFT';
-                        const catText = (c.level === 'BEGINNER' || c.level === 'INTERMEDIATE') ? 'Đại Cương' : 'Chuyên ngành';
-                        return `
-                    <tr>
-                        <td><strong>#${c.id}</strong></td>
-                        <td>${c.title}</td>
-                        <td>${c.createdByName || 'Chưa phân công'}</td>
-                        <td><span class="badge badge-primary">${catText}</span></td>
-                        <td><span class="badge ${c.isVisible ? 'badge-primary' : 'badge-info'}">${statusText}</span></td>
-                    </tr>`;
-                    }).join('');
-
-                    // Aggregate lessons count
-                    let totalLessons = 0;
-                    list.forEach(c => {
-                        totalLessons += (c.chapterCount || 0);
-                    });
-                    document.getElementById('statLessons').textContent = totalLessons;
-
-                    // Render overview charts
-                    if (window.Chart) {
-                        renderOverviewCharts(list);
+                const tableBody = document.getElementById('overviewCoursesTable');
+                if (tableBody) {
+                    if (list.length === 0) {
+                        tableBody.innerHTML = `<tr><td colspan="5" style="text-align: center; color: var(--text-3); padding: 20px;">Chưa có khóa học nào trong hệ thống.</td></tr>`;
+                    } else {
+                        const recent = list.slice(0, 5);
+                        tableBody.innerHTML = recent.map(c => {
+                            const statusText = c.isVisible ? 'PUBLISHED' : 'DRAFT';
+                            const catText = (c.level === 'BEGINNER' || c.level === 'INTERMEDIATE') ? 'Đại Cương' : 'Chuyên ngành';
+                            return `
+                        <tr>
+                            <td><strong>#${c.id}</strong></td>
+                            <td style="font-weight:700;">${c.title}</td>
+                            <td>${c.createdByName || 'Chưa phân công'}</td>
+                            <td><span class="badge badge-primary">${catText}</span></td>
+                            <td><span class="badge ${c.isVisible ? 'badge-primary' : 'badge-info'}">${statusText}</span></td>
+                        </tr>`;
+                        }).join('');
                     }
                 }
-            })
-            .catch(err => console.error(err));
 
-        // Fetch courses summary stats (Admin only)
-        if (currentUser.role === 'ADMIN') {
+                // Aggregate lessons count
+                let totalLessons = 0;
+                list.forEach(c => {
+                    totalLessons += (c.chapterCount || 0);
+                });
+                safeSetText('statLessons', totalLessons);
+
+                if (window.Chart) {
+                    renderOverviewCharts(list);
+                }
+            })
+            .catch(err => {
+                console.error(err);
+                fetch('/api/v1/courses?size=50')
+                    .then(r => r.json())
+                    .then(resData => {
+                        if (resData && resData.success) {
+                            const list = getListFromData(resData.data);
+                            safeSetText('statCourses', list.length);
+                        }
+                    })
+                    .catch(e => console.error(e));
+            });
+
+        // Fetch courses summary stats
+        if (token && (!currentUser || currentUser.role === 'ADMIN')) {
             fetch('/api/v1/reports/courses-summary', {
-                headers: { 'Authorization': 'Bearer ' + token }
+                headers: token ? { 'Authorization': 'Bearer ' + token } : {}
             })
                 .then(res => res.json())
                 .then(resData => {
-                    if (resData && resData.success) {
+                    if (resData && resData.success && resData.data) {
                         const summary = resData.data;
-                        document.getElementById('statCourses').textContent = summary.totalCourses;
-                        document.getElementById('statStudents').textContent = summary.totalStudents;
-                        document.getElementById('statEnrollments').textContent = summary.totalStudents; // Sử dụng tổng học viên làm proxy số lượt đăng ký
+                        safeSetText('statCourses', summary.totalCourses || 0);
+                        safeSetText('statStudents', summary.totalStudents || 0);
+                        safeSetText('statEnrollments', summary.totalStudents || 0);
                     }
                 })
                 .catch(err => console.error('Lỗi tải Courses Summary:', err));
         } else {
-            document.getElementById('statStudents').textContent = '20+';
-            document.getElementById('statEnrollments').textContent = '10+';
+            safeSetText('statStudents', '0');
+            safeSetText('statEnrollments', '0');
         }
     }
 
     // Helper to render Overview charts
     function renderOverviewCharts(coursesList) {
-        if (overviewStudentsChartInstance) overviewStudentsChartInstance.destroy();
-        if (overviewLevelsChartInstance) overviewLevelsChartInstance.destroy();
+        if (!window.Chart) return;
+        try {
+            if (overviewStudentsChartInstance) overviewStudentsChartInstance.destroy();
+            if (overviewLevelsChartInstance) overviewLevelsChartInstance.destroy();
 
-        // 1. Phân bố học viên theo khóa học
-        const courseLabels = coursesList.map(c => c.title);
-        const studentCounts = coursesList.map(c => c.studentCount || 0);
+            // 1. Phân bố học viên theo khóa học
+            const canvasStudents = document.getElementById('overviewStudentsChart');
+            if (canvasStudents) {
+                const courseLabels = coursesList.map(c => c.title);
+                const studentCounts = coursesList.map(c => c.studentCount || 0);
 
-        const ctxStudents = document.getElementById('overviewStudentsChart').getContext('2d');
-        overviewStudentsChartInstance = new Chart(ctxStudents, {
-            type: 'bar',
-            data: {
-                labels: courseLabels,
-                datasets: [{
-                    label: 'Số lượng học viên',
-                    data: studentCounts,
-                    backgroundColor: 'rgba(193, 32, 38, 0.75)', //PTIT Red
-                    borderColor: 'rgba(193, 32, 38, 1)',
-                    borderWidth: 1.5,
-                    borderRadius: 4
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: {
-                    legend: { display: false }
-                },
-                scales: {
-                    y: {
-                        beginAtZero: true,
-                        ticks: { stepSize: 1, precision: 0 }
+                overviewStudentsChartInstance = new Chart(canvasStudents.getContext('2d'), {
+                    type: 'bar',
+                    data: {
+                        labels: courseLabels,
+                        datasets: [{
+                            label: 'Số lượng học viên',
+                            data: studentCounts,
+                            backgroundColor: 'rgba(122, 19, 24, 0.75)', // PTIT Red
+                            borderColor: 'rgba(122, 19, 24, 1)',
+                            borderWidth: 1.5,
+                            borderRadius: 4
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: { legend: { display: false } },
+                        scales: { y: { beginAtZero: true, ticks: { stepSize: 1, precision: 0 } } }
                     }
-                }
+                });
             }
-        });
 
-        // 2. Phân loại cấp độ khóa học
-        let daiCuongCount = 0;
-        let chuyenNganhCount = 0;
-        coursesList.forEach(c => {
-            if (c.level === 'BEGINNER' || c.level === 'INTERMEDIATE') {
-                daiCuongCount++;
-            } else {
-                chuyenNganhCount++;
-            }
-        });
+            // 2. Phân loại cấp độ khóa học
+            const canvasLevels = document.getElementById('overviewLevelsChart');
+            if (canvasLevels) {
+                let daiCuongCount = 0;
+                let chuyenNganhCount = 0;
+                coursesList.forEach(c => {
+                    if (c.level === 'BEGINNER' || c.level === 'INTERMEDIATE') daiCuongCount++;
+                    else chuyenNganhCount++;
+                });
 
-        const ctxLevels = document.getElementById('overviewLevelsChart').getContext('2d');
-        overviewLevelsChartInstance = new Chart(ctxLevels, {
-            type: 'doughnut',
-            data: {
-                labels: ['Đại cương', 'Chuyên ngành'],
-                datasets: [{
-                    data: [daiCuongCount, chuyenNganhCount],
-                    backgroundColor: [
-                        'rgba(59, 130, 246, 0.8)', // blue
-                        'rgba(139, 92, 246, 0.8)'  // purple
-                    ],
-                    borderColor: ['#ffffff', '#ffffff'],
-                    borderWidth: 2
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: {
-                    legend: {
-                        position: 'bottom',
-                        labels: {
-                            padding: 16,
-                            font: { size: 12, weight: '600' }
-                        }
+                overviewLevelsChartInstance = new Chart(canvasLevels.getContext('2d'), {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Đại cương', 'Chuyên ngành'],
+                        datasets: [{
+                            data: [daiCuongCount, chuyenNganhCount],
+                            backgroundColor: ['rgba(59, 130, 246, 0.8)', 'rgba(139, 92, 246, 0.8)'],
+                            borderColor: ['#ffffff', '#ffffff'],
+                            borderWidth: 2
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: { legend: { position: 'bottom', labels: { padding: 16, font: { size: 12, weight: '600' } } } }
                     }
-                }
+                });
             }
-        });
+        } catch (e) {
+            console.error('Lỗi khi vẽ biểu đồ tổng quan:', e);
+        }
     }
 
     // Fetch Teachers List
     function loadTeachersList() {
-        if (currentUser.role !== 'ADMIN') return;
+        if (currentUser && currentUser.role !== 'ADMIN') return;
         fetch('/api/v1/users?size=1000', {
             headers: { 'Authorization': 'Bearer ' + token }
         })
             .then(res => res.json())
             .then(resData => {
                 if (resData && resData.success) {
-                    const users = (resData.data.items || []).map(u => {
+                    const users = getListFromData(resData.data).map(u => {
                         u.role = u.roles && u.roles.length > 0 ? u.roles[0] : 'STUDENT';
                         return u;
                     });
@@ -298,7 +367,7 @@
             .then(res => res.json())
             .then(resData => {
                 if (resData && resData.success) {
-                    const list = resData.data.items || [];
+                    const list = getListFromData(resData.data);
                     const tbody = document.getElementById('coursesTableBody');
 
                     if (list.length === 0) {
@@ -307,7 +376,7 @@
                     }
 
                     tbody.innerHTML = list.map(c => {
-                        const isCourseOwner = currentUser.role === 'ADMIN' || (currentUser.role === 'TEACHER' && c.createdById === currentUser.id);
+                        const isCourseOwner = !currentUser || currentUser.role === 'ADMIN' || (currentUser.role === 'TEACHER' && c.createdById === currentUser.id);
                         const statusText = c.isVisible ? 'PUBLISHED' : 'DRAFT';
                         const fileName = c.lecturePdf ? c.lecturePdf.split('/').pop().replace(/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}_/, '') : 'Chưa cập nhật';
 
@@ -330,7 +399,7 @@
                         <td><span class="badge ${c.isVisible ? 'badge-primary' : 'badge-info'}">${statusText}</span></td>
                         <td>
                             <div class="db-btn-actions">
-                                ${currentUser.role === 'ADMIN' ? `
+                                ${(!currentUser || currentUser.role === 'ADMIN') ? `
                                     <button class="btn btn-secondary btn-sm" onclick="editCourse(${c.id})">Sửa</button>
                                     <button class="btn btn-outline-primary btn-sm" style="color: #ef4444; border-color: #ef4444;" onclick="deleteCourse(${c.id})">Xóa</button>
                                 ` : ''}
@@ -396,6 +465,27 @@
         document.getElementById('mcAiPersonaHidden').value = document.getElementById('mcAiPersona').value;
     });
 
+    // Thumbnail image preview khi chọn file
+    document.getElementById('mcThumbnailFile').addEventListener('change', (e) => {
+        const file = e.target.files[0];
+        if (!file) return;
+        if (file.size > 5 * 1024 * 1024) {
+            alert('Ảnh quá lớn! Vui lòng chọn ảnh dưới 5MB.');
+            e.target.value = '';
+            return;
+        }
+        const reader = new FileReader();
+        reader.onload = (ev) => {
+            const preview = document.getElementById('thumbnailPreview');
+            const placeholder = document.getElementById('thumbnailPlaceholder');
+            preview.src = ev.target.result;
+            preview.style.display = 'block';
+            placeholder.style.display = 'none';
+            document.getElementById('thumbnailUploadArea').style.borderColor = '#10b981';
+        };
+        reader.readAsDataURL(file);
+    });
+
     const btnCreateCourse = document.getElementById('btnCreateCourse');
     if (btnCreateCourse) {
         btnCreateCourse.addEventListener('click', () => {
@@ -406,6 +496,13 @@
             document.getElementById('personaPreviewGroup').style.display = 'none';
             document.getElementById('mcAiPersona').value = '';
             document.getElementById('mcAiPersonaHidden').value = '';
+            // Reset thumbnail
+            document.getElementById('mcThumbnailFile').value = '';
+            document.getElementById('thumbnailPreview').style.display = 'none';
+            document.getElementById('thumbnailPreview').src = '';
+            document.getElementById('thumbnailPlaceholder').style.display = 'block';
+            document.getElementById('thumbnailUploadArea').style.borderColor = 'var(--border)';
+            document.getElementById('mcThumbnailCurrentLink').style.display = 'none';
             document.getElementById('courseModalTitle').textContent = 'Thêm khóa học mới';
             document.getElementById('courseModal').classList.add('show');
         });
@@ -465,6 +562,27 @@
                         }
                     };
 
+                    // Upload thumbnail nếu có chọn file ảnh mới
+                    const thumbnailFile = document.getElementById('mcThumbnailFile').files[0];
+                    const uploadThumbnailIfNeeded = (afterCallback) => {
+                        if (!thumbnailFile) { afterCallback(); return; }
+                        const thumbFormData = new FormData();
+                        thumbFormData.append('file', thumbnailFile);
+                        fetch(`/api/v1/courses/${savedCourseId}/upload-thumbnail`, {
+                            method: 'POST',
+                            headers: { 'Authorization': 'Bearer ' + token },
+                            body: thumbFormData
+                        })
+                            .then(r => r.json())
+                            .then(tRes => {
+                                if (!tRes.success) {
+                                    console.warn('Cảnh báo: Upload ảnh đại diện thất bại:', tRes.message);
+                                }
+                                afterCallback();
+                            })
+                            .catch(err => { console.error(err); afterCallback(); });
+                    };
+
                     const pdfFile = document.getElementById('mcPdfFile').files[0];
                     if (pdfFile) {
                         const submitBtn = document.querySelector('#courseForm button[type="submit"]');
@@ -514,7 +632,7 @@
                                             submitBtn.textContent = 'Lưu khóa học';
                                         }
                                         if (progressDiv) progressDiv.style.display = 'none';
-                                        handleVisibilityAndFinish();
+                                        uploadThumbnailIfNeeded(handleVisibilityAndFinish);
                                         return;
                                     }
 
@@ -545,7 +663,7 @@
                                                         submitBtn.textContent = 'Lưu khóa học';
                                                     }
                                                     progressDiv.style.display = 'none';
-                                                    handleVisibilityAndFinish();
+                                                    uploadThumbnailIfNeeded(handleVisibilityAndFinish);
                                                 }, 1500); // Wait 1.5s at 100% before closing
                                             }
                                         }, 400); // 400ms per tick ~ takes about 3 seconds total
@@ -561,7 +679,7 @@
                                 submitBtn.textContent = 'Lưu khóa học';
                             }
                             if (progressDiv) progressDiv.style.display = 'none';
-                            handleVisibilityAndFinish();
+                            uploadThumbnailIfNeeded(handleVisibilityAndFinish);
                         };
 
                         xhr.onerror = () => {
@@ -572,12 +690,12 @@
                                 submitBtn.textContent = 'Lưu khóa học';
                             }
                             if (progressDiv) progressDiv.style.display = 'none';
-                            handleVisibilityAndFinish();
+                            uploadThumbnailIfNeeded(handleVisibilityAndFinish);
                         };
 
                         xhr.send(formData);
                     } else {
-                        handleVisibilityAndFinish();
+                        uploadThumbnailIfNeeded(handleVisibilityAndFinish);
                     }
                 } else {
                     alert('Lỗi: ' + resData.message);
@@ -623,14 +741,39 @@
                         pdfLinkContainer.style.display = 'none';
                     }
 
+                    // Hiển thị ảnh đại diện hiện tại
+                    document.getElementById('mcThumbnailFile').value = '';
+                    const thumbnailPreview = document.getElementById('thumbnailPreview');
+                    const thumbnailPlaceholder = document.getElementById('thumbnailPlaceholder');
+                    const thumbnailCurrentLink = document.getElementById('mcThumbnailCurrentLink');
+                    if (c.thumbnailUrl && c.thumbnailUrl !== 'null' && c.thumbnailUrl !== 'undefined') {
+                        thumbnailPreview.src = c.thumbnailUrl;
+                        thumbnailPreview.style.display = 'block';
+                        thumbnailPlaceholder.style.display = 'none';
+                        document.getElementById('thumbnailUploadArea').style.borderColor = '#10b981';
+                        if (c.thumbnailUrl.startsWith('/uploads/')) {
+                            thumbnailCurrentLink.style.display = 'block';
+                            document.getElementById('mcThumbnailCurrentUrl').href = c.thumbnailUrl;
+                        } else {
+                            thumbnailCurrentLink.style.display = 'none';
+                        }
+                    } else {
+                        thumbnailPreview.src = '';
+                        thumbnailPreview.style.display = 'none';
+                        thumbnailPlaceholder.style.display = 'block';
+                        document.getElementById('thumbnailUploadArea').style.borderColor = 'var(--border)';
+                        thumbnailCurrentLink.style.display = 'none';
+                    }
+
                     document.getElementById('courseModalTitle').textContent = 'Sửa thông tin khóa học';
                     document.getElementById('courseModal').classList.add('show');
                 }
             });
     };
 
-    window.deleteCourse = (courseId) => {
-        if (!confirm('Bạn có chắc chắn muốn xóa khóa học này không?')) return;
+    window.deleteCourse = async (courseId) => {
+        const ok = await window.showConfirm('Bạn có chắc chắn muốn xóa khóa học này không?');
+        if (!ok) return;
         fetch(`/api/v1/courses/${courseId}`, {
             method: 'DELETE',
             headers: { 'Authorization': 'Bearer ' + token }
@@ -646,13 +789,13 @@
 
     // Lessons Module
     function loadLessonsModule() {
-        fetch('/api/v1/courses?size=100', {
+        fetch('/api/v1/courses/all?size=100', {
             headers: { 'Authorization': 'Bearer ' + token }
         })
             .then(res => res.json())
             .then(resData => {
                 if (resData.success) {
-                    const courses = resData.data.items || [];
+                    const courses = getListFromData(resData.data);
                     const selector = document.getElementById('lessonCourseSelector');
                     selector.innerHTML = `<option value="">-- Chọn khóa học quản lý --</option>` +
                         courses.map(c => `<option value="${c.id}">${c.title}</option>`).join('');
@@ -793,8 +936,9 @@
             });
     };
 
-    window.deleteLesson = (lessonId) => {
-        if (!confirm('Bạn có chắc chắn muốn xóa chương học này không? Cảnh báo: tất cả bài tập thuộc chương học cũng sẽ bị xóa!')) return;
+    window.deleteLesson = async (lessonId) => {
+        const ok = await window.showConfirm('Bạn có chắc chắn muốn xóa chương học này không? Cảnh báo: tất cả bài tập thuộc chương học cũng sẽ bị xóa!');
+        if (!ok) return;
         fetch(`/api/v1/chapters/${lessonId}`, {
             method: 'DELETE',
             headers: { 'Authorization': 'Bearer ' + token }
@@ -848,13 +992,13 @@
 
     // --- BT CHƯƠNG PANEL ---
     function loadExercisesModule() {
-        fetch('/api/v1/courses?size=100', {
+        fetch('/api/v1/courses/all?size=100', {
             headers: { 'Authorization': 'Bearer ' + token }
         })
             .then(res => res.json())
             .then(resData => {
                 if (resData.success) {
-                    const courses = resData.data.items || [];
+                    const courses = getListFromData(resData.data);
                     const selector = document.getElementById('exerciseCourseSelector');
                     selector.innerHTML = `<option value="">-- Chọn khóa học --</option>` +
                         courses.map(c => `<option value="${c.id}">${c.title}</option>`).join('');
@@ -926,13 +1070,13 @@
 
     // --- BT AI PANEL ---
     function loadExercisesAiModule() {
-        fetch('/api/v1/courses?size=100', {
+        fetch('/api/v1/courses/all?size=100', {
             headers: { 'Authorization': 'Bearer ' + token }
         })
             .then(res => res.json())
             .then(resData => {
                 if (resData.success) {
-                    const courses = resData.data.items || [];
+                    const courses = getListFromData(resData.data);
                     const selector = document.getElementById('exerciseAiCourseSelector');
                     selector.innerHTML = `<option value="">-- Chọn khóa học --</option>` +
                         courses.map(c => `<option value="${c.id}">${c.title}</option>`).join('');
@@ -1075,13 +1219,14 @@
     });
 
     // BT AI Auto Generate click
-    document.getElementById('btnAutoGenerateExerciseAi').addEventListener('click', () => {
+    document.getElementById('btnAutoGenerateExerciseAi').addEventListener('click', async () => {
         if (!currentSelectedChapterIdForExercisesAi) {
             alert('Vui lòng chọn khóa học và chương học trước!');
             return;
         }
         
-        if (confirm('AI (DeepSeek + Qwen) sẽ đọc lý thuyết và tự động sinh bài tập. Quá trình này có thể mất 30-60 giây. Bạn có muốn tiếp tục?')) {
+        const okAI = await window.showConfirm('AI (DeepSeek + Qwen) sẽ đọc lý thuyết và tự động sinh bài tập. Quá trình này có thể mất 30-60 giây. Bạn có muốn tiếp tục?');
+        if (okAI) {
             const btn = document.getElementById('btnAutoGenerateExerciseAi');
             const originalText = btn.innerHTML;
             btn.disabled = true;
@@ -1173,7 +1318,7 @@
                         .then(r => r.json())
                         .then(cData => {
                             if (cData.success) {
-                                const courses = cData.data.items || [];
+                                const courses = getListFromData(cData.data);
                                 const selector = document.getElementById('exerciseCourseSelector');
                                 selector.innerHTML = `<option value="">-- Chọn khóa học --</option>` +
                                     courses.map(c => `<option value="${c.id}">${c.title}</option>`).join('');
@@ -1213,7 +1358,7 @@
                         .then(r => r.json())
                         .then(cData => {
                             if (cData.success) {
-                                const courses = cData.data.items || [];
+                                const courses = getListFromData(cData.data);
                                 const selector = document.getElementById('exerciseAiCourseSelector');
                                 selector.innerHTML = `<option value="">-- Chọn khóa học --</option>` +
                                     courses.map(c => `<option value="${c.id}">${c.title}</option>`).join('');
@@ -1227,6 +1372,29 @@
     };
 
     // --- FORM ACTIONS AND CRUD IMPLEMENTATION ---
+    function parseOptionsFromQuestion(rawQ) {
+        if (!rawQ) return { q: '', a: '', b: '', c: '', d: '' };
+        const optionRegex = /(?:^|\n|\s*)([A-D])[\.\:\)]\s*([^\n]+)/gi;
+        const matches = [...rawQ.matchAll(optionRegex)];
+
+        if (matches.length >= 2) {
+            const firstIndex = rawQ.search(/(?:^|\n|\s*)[A-D][\.\:\)]/i);
+            const q = firstIndex > 0 ? rawQ.substring(0, firstIndex).trim() : rawQ.trim();
+            const opts = {};
+            matches.forEach(m => {
+                opts[m[1].toUpperCase()] = m[2].trim();
+            });
+            return {
+                q: q,
+                a: opts['A'] || '',
+                b: opts['B'] || '',
+                c: opts['C'] || '',
+                d: opts['D'] || ''
+            };
+        }
+        return { q: rawQ, a: '', b: '', c: '', d: '' };
+    }
+
     document.getElementById('exerciseForm').addEventListener('submit', (e) => {
         e.preventDefault();
         const exId = document.getElementById('modalExerciseId').value;
@@ -1235,15 +1403,22 @@
         const name = document.getElementById('meName').value.trim();
         const difficulty = document.getElementById('meDifficulty').value;
         const bloom = document.getElementById('meBloom').value;
-        const question = document.getElementById('meQuestion').value.trim();
-        const correct = document.getElementById('meCorrect').value.trim();
+
+        const qText = document.getElementById('meQuestion').value.trim();
+        const optA = document.getElementById('meOptA').value.trim();
+        const optB = document.getElementById('meOptB').value.trim();
+        const optC = document.getElementById('meOptC').value.trim();
+        const optD = document.getElementById('meOptD').value.trim();
+        const correct = document.getElementById('meCorrect').value;
+
+        const fullQuestion = `${qText}\nA. ${optA}\nB. ${optB}\nC. ${optC}\nD. ${optD}`;
 
         const payload = {
             exerciseCode: code,
             exerciseName: name,
             difficulty: difficulty,
             bloomLevel: bloom,
-            question: question,
+            question: fullQuestion,
             correctAnswer: correct
         };
 
@@ -1283,17 +1458,25 @@
                     document.getElementById('meName').value = ex.exerciseName || '';
                     document.getElementById('meDifficulty').value = ex.difficulty || 'EASY';
                     document.getElementById('meBloom').value = ex.bloomLevel || 'REMEMBERING';
-                    document.getElementById('meQuestion').value = ex.question || '';
-                    document.getElementById('meCorrect').value = '';
 
-                    document.getElementById('exerciseModalTitle').textContent = 'Sửa thông tin bài tập';
+                    const parsed = parseOptionsFromQuestion(ex.question || '');
+                    document.getElementById('meQuestion').value = parsed.q;
+                    document.getElementById('meOptA').value = parsed.a;
+                    document.getElementById('meOptB').value = parsed.b;
+                    document.getElementById('meOptC').value = parsed.c;
+                    document.getElementById('meOptD').value = parsed.d;
+
+                    document.getElementById('meCorrect').value = ex.correctAnswer ? ex.correctAnswer.trim().toUpperCase() : 'A';
+
+                    document.getElementById('exerciseModalTitle').textContent = 'Sửa bài tập trắc nghiệm cuối chương';
                     document.getElementById('exerciseModal').classList.add('show');
                 }
             });
     };
 
-    window.deleteExercise = (exId) => {
-        if (!confirm('Bạn có chắc chắn muốn xóa bài tập này không?')) return;
+    window.deleteExercise = async (exId) => {
+        const ok = await window.showConfirm('Bạn có chắc chắn muốn xóa bài tập này không?');
+        if (!ok) return;
         fetch(`/api/v1/exercises/${exId}`, {
             method: 'DELETE',
             headers: { 'Authorization': 'Bearer ' + token }
@@ -1448,16 +1631,15 @@
         xhr.send(formData);
     });
 
-    window.syncExercisesToAITutor = () => {
+    window.syncExercisesToAITutor = async () => {
         const chapterId = currentSelectedChapterIdForExercisesAi;
         if (!chapterId) {
             alert('Vui lòng chọn một chương học để đồng bộ bài tập');
             return;
         }
 
-        if (!confirm('Hệ thống sẽ đồng bộ toàn bộ bài tập AI của chương này sang AI Tutor. Việc này sử dụng AI để tự động sinh giáo án Socratic và có thể mất 1-3 phút. Bạn có muốn tiếp tục?')) {
-            return;
-        }
+        const okSync = await window.showConfirm('Hệ thống sẽ đồng bộ toàn bộ bài tập AI của chương này sang AI Tutor. Việc này sử dụng AI để tự động sinh giáo án Socratic và có thể mất 1-3 phút. Bạn có muốn tiếp tục?');
+        if (!okSync) return;
 
         const btn = document.getElementById('btnSyncExerciseAi');
         const originalText = btn.textContent;
@@ -1509,8 +1691,9 @@
             });
     };
 
-    window.deleteExerciseAi = (exId) => {
-        if (!confirm('Bạn có chắc chắn muốn xóa bài tập AI này không?')) return;
+    window.deleteExerciseAi = async (exId) => {
+        const ok = await window.showConfirm('Bạn có chắc chắn muốn xóa bài tập AI này không?');
+        if (!ok) return;
         fetch(`/api/v1/exercises-ai/${exId}`, {
             method: 'DELETE',
             headers: { 'Authorization': 'Bearer ' + token }
@@ -1526,14 +1709,14 @@
 
     // Users Panel (Admin only)
     function loadUsers() {
-        if (currentUser.role !== 'ADMIN') return;
+        if (currentUser && currentUser.role !== 'ADMIN') return;
         fetch('/api/v1/users?size=1000', {
             headers: { 'Authorization': 'Bearer ' + token }
         })
             .then(res => res.json())
             .then(resData => {
                 if (resData.success) {
-                    const users = (resData.data.items || []).map(u => {
+                    const users = getListFromData(resData.data).map(u => {
                         u.role = u.roles && u.roles.length > 0 ? u.roles[0] : 'STUDENT';
                         u.username = u.email ? u.email.split('@')[0] : '';
                         return u;
@@ -1609,8 +1792,9 @@
             });
     };
 
-    window.deleteUser = (userId) => {
-        if (!confirm('Bạn có chắc chắn muốn xóa thành viên này?')) return;
+    window.deleteUser = async (userId) => {
+        const ok = await window.showConfirm('Bạn có chắc chắn muốn xóa thành viên này?');
+        if (!ok) return;
         fetch(`/api/v1/users/${userId}`, {
             method: 'DELETE',
             headers: { 'Authorization': 'Bearer ' + token }
@@ -1626,14 +1810,14 @@
 
     // Reports Panel
     function loadReports() {
-        if (currentUser.role !== 'ADMIN') return;
+        if (currentUser && currentUser.role !== 'ADMIN') return;
         fetch('/api/v1/courses?size=100', {
             headers: { 'Authorization': 'Bearer ' + token }
         })
             .then(res => res.json())
             .then(resData => {
                 if (resData.success) {
-                    const list = resData.data.items || [];
+                    const list = getListFromData(resData.data);
                     // Sắp xếp các khóa học theo số lượng học viên giảm dần
                     list.sort((a, b) => (b.studentCount || 0) - (a.studentCount || 0));
 
@@ -1891,7 +2075,7 @@
             .then(resData => {
                 const tbody = document.getElementById('panelNotificationsTableBody');
                 if (resData.success) {
-                    const notifications = resData.data.items || [];
+                    const notifications = getListFromData(resData.data);
                     if (notifications.length === 0) {
                         tbody.innerHTML = `<tr><td colspan="6" style="text-align: center; color: var(--text-3);">Không có thông báo nào.</td></tr>`;
                         return;
@@ -1924,14 +2108,14 @@
             });
 
         // 2. Nếu là ADMIN, tải danh sách khóa học cho dropdown Broadcast
-        if (currentUser.role === 'ADMIN') {
-            fetch('/api/v1/courses?size=100', {
+        if (!currentUser || currentUser.role === 'ADMIN') {
+            fetch('/api/v1/courses/all?size=100', {
                 headers: { 'Authorization': 'Bearer ' + token }
             })
                 .then(res => res.json())
                 .then(resData => {
                     if (resData.success) {
-                        const courses = resData.data.items || [];
+                        const courses = getListFromData(resData.data);
                         const scopeSelector = document.getElementById('pbNotiScope');
                         if (scopeSelector) {
                             scopeSelector.innerHTML = '<option value="all">Toàn bộ người dùng hệ thống</option>' +
@@ -1960,8 +2144,9 @@
             });
     };
 
-    window.deletePanelNoti = (notiId) => {
-        if (!confirm('Bạn có chắc chắn muốn xóa thông báo này?')) return;
+    window.deletePanelNoti = async (notiId) => {
+        const ok = await window.showConfirm('Bạn có chắc chắn muốn xóa thông báo này?');
+        if (!ok) return;
         fetch(`/api/v1/notifications/${notiId}`, {
             method: 'DELETE',
             headers: { 'Authorization': 'Bearer ' + token }
@@ -2069,7 +2254,7 @@
     // REVIEWS PANEL MANAGEMENT (ADMIN ONLY)
     // ==========================================
     function loadReviewsPanel() {
-        if (currentUser.role !== 'ADMIN') return;
+        if (currentUser && currentUser.role !== 'ADMIN') return;
         fetch('/api/v1/reviews?size=100', {
             headers: { 'Authorization': 'Bearer ' + token }
         })
@@ -2077,7 +2262,7 @@
             .then(resData => {
                 const tbody = document.getElementById('panelReviewsTableBody');
                 if (resData.success) {
-                    const reviews = resData.data.items || [];
+                    const reviews = getListFromData(resData.data);
                     if (reviews.length === 0) {
                         tbody.innerHTML = `<tr><td colspan="8" style="text-align: center; color: var(--text-3);">Không có đánh giá nào trên hệ thống.</td></tr>`;
                         return;
@@ -2131,8 +2316,9 @@
             });
     };
 
-    window.deletePanelReview = (reviewId) => {
-        if (!confirm('Bạn có chắc chắn muốn xóa đánh giá này?')) return;
+    window.deletePanelReview = async (reviewId) => {
+        const ok = await window.showConfirm('Bạn có chắc chắn muốn xóa đánh giá này?');
+        if (!ok) return;
         fetch(`/api/v1/reviews/${reviewId}/admin`, {
             method: 'DELETE',
             headers: { 'Authorization': 'Bearer ' + token }
@@ -2146,5 +2332,224 @@
             });
     };
 
-    document.addEventListener('DOMContentLoaded', init);
+    // =====================================================
+    // NEWS MANAGEMENT MODULE
+    // =====================================================
+    let cachedNewsList = [];
+
+    function loadNewsModule() {
+        fetch('/api/v1/news', {
+            headers: { 'Authorization': 'Bearer ' + token }
+        })
+            .then(res => res.json())
+            .then(resData => {
+                const tbody = document.getElementById('newsTableBody');
+                if (resData.success) {
+                    cachedNewsList = resData.data || [];
+                    if (cachedNewsList.length === 0) {
+                        tbody.innerHTML = `<tr><td colspan="7" style="text-align: center; color: var(--text-3);">Chưa có tin tức nào. Bấm nút "+ Đăng tin tức mới" để thêm.</td></tr>`;
+                        return;
+                    }
+
+                    const catMap = {
+                        'academy': 'Tin Học viện',
+                        'student': 'Hoạt động sinh viên',
+                        'tech': 'Khoa học công nghệ',
+                        'admission': 'Tuyển sinh'
+                    };
+
+                    tbody.innerHTML = cachedNewsList.map(item => {
+                        const dateStr = item.createdAt ? new Date(item.createdAt).toLocaleDateString('vi-VN') : '---';
+                        const catLabel = catMap[item.category] || item.category;
+                        const spotlightBadge = item.isSpotlight
+                            ? `<span class="badge badge-primary" style="background:#7a1318; color:#fff;">Tiêu điểm (Spotlight)</span>`
+                            : `<span class="badge badge-secondary" style="background:#f1f5f9; color:#64748b;">Tin thường</span>`;
+
+                        return `
+                        <tr>
+                            <td><strong>#${item.id}</strong></td>
+                            <td><img src="${item.imageUrl}" alt="${item.title}" style="width:48px; height:32px; object-fit:cover; border-radius:4px;"></td>
+                            <td style="max-width:280px; font-weight:700; color:var(--text-1);">${item.title}</td>
+                            <td><span class="badge badge-info">${catLabel}</span></td>
+                            <td>${spotlightBadge}</td>
+                            <td>${dateStr}</td>
+                            <td>
+                                <div class="db-btn-actions">
+                                    <button class="btn btn-secondary btn-sm" onclick="editNews(${item.id})">Sửa</button>
+                                    <button class="btn btn-outline-primary btn-sm" style="color:#ef4444; border-color:#ef4444;" onclick="deleteNews(${item.id})">Xóa</button>
+                                </div>
+                            </td>
+                        </tr>`;
+                    }).join('');
+                } else {
+                    tbody.innerHTML = `<tr><td colspan="7" style="text-align: center; color: var(--text-3);">Không thể tải danh sách tin tức.</td></tr>`;
+                }
+            })
+            .catch(err => {
+                console.error(err);
+                document.getElementById('newsTableBody').innerHTML = `<tr><td colspan="7" style="text-align: center; color: var(--text-3);">Lỗi kết nối khi tải tin tức.</td></tr>`;
+            });
+    }
+
+    window.openNewsModal = () => {
+        document.getElementById('newsModalTitle').textContent = 'Đăng Tin Tức Mới';
+        document.getElementById('newsForm').reset();
+        document.getElementById('newsId').value = '';
+        document.getElementById('newsModal').style.display = 'flex';
+    };
+
+    window.closeNewsModal = () => {
+        document.getElementById('newsModal').style.display = 'none';
+    };
+
+    window.saveNews = (e) => {
+        e.preventDefault();
+        const newsId = document.getElementById('newsId').value;
+        const payload = {
+            title: document.getElementById('newsTitle').value.trim(),
+            category: document.getElementById('newsCategory').value,
+            imageUrl: document.getElementById('newsImageUrl').value.trim(),
+            summary: document.getElementById('newsSummary').value.trim(),
+            content: document.getElementById('newsContent').value.trim(),
+            isSpotlight: document.getElementById('newsIsSpotlight').checked
+        };
+
+        const url = newsId ? `/api/v1/news/${newsId}` : '/api/v1/news';
+        const method = newsId ? 'PUT' : 'POST';
+
+        fetch(url, {
+            method: method,
+            headers: {
+                'Authorization': 'Bearer ' + token,
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(payload)
+        })
+            .then(res => res.json())
+            .then(resData => {
+                if (resData.success) {
+                    alert(newsId ? 'Cập nhật tin tức thành công!' : 'Đăng tin tức mới thành công!');
+                    window.closeNewsModal();
+                    loadNewsModule();
+                } else {
+                    alert('Lỗi: ' + resData.message);
+                }
+            })
+            .catch(err => {
+                console.error(err);
+                alert('Có lỗi xảy ra khi lưu tin tức.');
+            });
+    };
+
+    window.editNews = (id) => {
+        const item = cachedNewsList.find(n => n.id === id);
+        if (!item) return;
+
+        document.getElementById('newsModalTitle').textContent = `Chỉnh Sửa Tin Tức #${item.id}`;
+        document.getElementById('newsId').value = item.id;
+        document.getElementById('newsTitle').value = item.title || '';
+        document.getElementById('newsCategory').value = item.category || 'academy';
+        document.getElementById('newsImageUrl').value = item.imageUrl || '';
+        document.getElementById('newsSummary').value = item.summary || '';
+        document.getElementById('newsContent').value = item.content || '';
+        document.getElementById('newsIsSpotlight').checked = !!item.isSpotlight;
+
+        document.getElementById('newsModal').style.display = 'flex';
+    };
+
+    window.deleteNews = async (id) => {
+        const ok = await window.showConfirm('Bạn có chắc chắn muốn xóa tin tức này khỏi hệ thống?');
+        if (!ok) return;
+
+        fetch(`/api/v1/news/${id}`, {
+            method: 'DELETE',
+            headers: { 'Authorization': 'Bearer ' + token }
+        })
+            .then(res => res.json())
+            .then(resData => {
+                if (resData.success) {
+                    alert('Xóa tin tức thành công!');
+                    loadNewsModule();
+                } else {
+                    alert('Lỗi khi xóa tin tức: ' + resData.message);
+                }
+            })
+            .catch(err => {
+                console.error(err);
+                alert('Có lỗi xảy ra khi xóa tin tức.');
+            });
+    };
+
+    // ===== SUPPORT TICKETS MODULE =====
+    window.loadSupportTicketsModule = function () {
+        fetch('/api/v1/support-tickets', {
+            headers: token ? { 'Authorization': 'Bearer ' + token } : {}
+        })
+            .then(res => res.json())
+            .then(resData => {
+                const tbody = document.getElementById('supportTicketsTableBody');
+                if (!tbody) return;
+
+                if (resData && resData.success && resData.data) {
+                    const list = resData.data;
+                    if (list.length === 0) {
+                        tbody.innerHTML = `<tr><td colspan="8" style="text-align: center; padding:24px; color: var(--text-3);">Chưa có yêu cầu hỗ trợ nào từ sinh viên.</td></tr>`;
+                        return;
+                    }
+
+                    tbody.innerHTML = list.map(t => {
+                        const isResolved = t.status === 'RESOLVED';
+                        const statusBadge = isResolved 
+                            ? `<span class="badge badge-success">ĐÃ XỬ LÝ</span>` 
+                            : `<span class="badge badge-warning" style="background:#fef3c7; color:#d97706; padding:3px 8px; border-radius:4px; font-weight:700; font-size:11px;">CHỜ XỬ LÝ</span>`;
+
+                        const formattedTime = t.createdAt ? new Date(t.createdAt).toLocaleString('vi-VN') : 'Vừa xong';
+
+                        return `
+                        <tr>
+                            <td><strong>#${t.id}</strong></td>
+                            <td style="font-weight:700;">${t.studentName}</td>
+                            <td><a href="mailto:${t.studentEmail}" style="color:var(--primary); font-weight:600;">${t.studentEmail}</a></td>
+                            <td><span class="badge badge-info">${t.problemType || 'Hỗ trợ'}</span></td>
+                            <td style="max-width:280px; white-space:pre-wrap; font-size:13px;">${t.message}</td>
+                            <td style="font-size:12.5px; color:var(--text-3);">${formattedTime}</td>
+                            <td>${statusBadge}</td>
+                            <td>
+                                ${!isResolved ? `
+                                <button class="btn btn-primary btn-sm" onclick="resolveSupportTicket(${t.id})" style="border-radius:6px; font-weight:700; background:#10b981; border-color:#10b981;">
+                                    Đã xử lý
+                                </button>` : `<span style="font-size:12px; color:#10b981; font-weight:700;">Hoàn tất</span>`}
+                            </td>
+                        </tr>`;
+                    }).join('');
+                }
+            })
+            .catch(err => console.error(err));
+    };
+
+    window.resolveSupportTicket = async function (id) {
+        const ok = await window.showConfirm('Xác nhận đánh dấu yêu cầu này đã được hỗ trợ xử lý xong?');
+        if (!ok) return;
+
+        fetch(`/api/v1/support-tickets/${id}/resolve`, {
+            method: 'PATCH',
+            headers: token ? { 'Authorization': 'Bearer ' + token } : {}
+        })
+            .then(res => res.json())
+            .then(resData => {
+                if (resData && resData.success) {
+                    alert('Đã cập nhật trạng thái yêu cầu hỗ trợ thành công!');
+                    loadSupportTicketsModule();
+                } else {
+                    alert('Cập nhật thất bại: ' + (resData.message || 'Lỗi hệ thống'));
+                }
+            })
+            .catch(err => console.error(err));
+    };
+
+    if (document.readyState === 'complete' || document.readyState === 'interactive') {
+        init();
+    } else {
+        document.addEventListener('DOMContentLoaded', init);
+    }
 })();

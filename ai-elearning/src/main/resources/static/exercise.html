@@ -6,6 +6,7 @@
     <title>Luyện tập & Làm bài tập - PTIT E-Learning</title>
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/exercise.css">
+    <script src="js/i18n.js"></script>
 </head>
 <body class="exercise-page">
     <script src="components/header.js"></script>
@@ -18,9 +19,9 @@
                 <h2 class="course-name-title" id="courseNameText">...</h2>
             </div>
             
-            <a href="#" class="sidebar-back-link" id="backToChatBtn">
-                <span>&#8592;</span> Quay lại phòng Chat AI
-            </a>
+            <div class="exercise-sidebar-back-wrap">
+                <a href="#" class="btn-back-chat" id="backToChatBtn">Quay lại phòng Chat AI</a>
+            </div>
 
             <div class="sidebar-chapter-info">
                 <div class="info-label">Đang làm bài tập cho:</div>
@@ -59,19 +60,24 @@
                     </div>
 
                     <div class="exercise-answer-section">
-                        <label for="answerInput" class="answer-label">Đáp án của bạn:</label>
-                        <div class="answer-input-wrap">
-                            <input type="text" id="answerInput" class="answer-control" placeholder="Nhập câu trả lời của bạn..." autocomplete="off">
-                            <button type="button" class="btn-submit" id="btnSubmitAnswer">Nộp bài</button>
+                        <label class="answer-label" style="font-weight:700; font-size:14px; color:var(--text-1); margin-bottom:14px; display:block;">Vui lòng chọn 1 đáp án trắc nghiệm đúng nhất (A, B, C, D):</label>
+                        
+                        <div class="mcq-options-grid" id="mcqOptionsGrid" style="display:flex; flex-direction:column; gap:12px; margin-bottom:24px;">
+                            <!-- Dynamically rendered MCQ 4 options -->
                         </div>
-                        <div class="answer-status-msg" id="answerStatusMsg"></div>
+
+                        <input type="hidden" id="answerInput" value="">
+
+                        <div style="display:flex; justify-content:flex-end;">
+                            <button type="button" class="btn-submit" id="btnSubmitAnswer" disabled style="padding:12px 36px; font-weight:800; font-size:14px; border-radius:24px; background:linear-gradient(135deg, #7a1318, #54090c); color:#fff; border:none; cursor:pointer; box-shadow:0 4px 14px rgba(122,19,24,0.3); transition:all 0.25s ease;">Nộp bài làm</button>
+                        </div>
+                        <div class="answer-status-msg" id="answerStatusMsg" style="margin-top:16px;"></div>
                     </div>
                 </div>
             </div>
 
             <!-- Celebration Screen (hidden initially) -->
             <div class="celebration-card" id="celebrationCard" style="display: none;">
-                <div class="celebrate-icon">🎉</div>
                 <h1 class="celebrate-title">Hoàn Thành 100% Điểm!</h1>
                 <p class="celebrate-desc">
                     Tuyệt vời! Bạn đã trả lời chính xác tất cả các bài tập của chương học này. Hệ thống đã ghi nhận kết quả và mở khóa kiến thức tiếp theo dành cho bạn.
@@ -79,7 +85,7 @@
 
                 <!-- Next Chapter Section -->
                 <div class="next-chapter-box" id="nextChapterBox" style="display: none;">
-                    <div class="next-chapter-label">🔓 CHƯƠNG TIẾP THEO ĐÃ MỞ KHÓA</div>
+                    <div class="next-chapter-label">CHƯƠNG TIẾP THEO ĐÃ MỞ KHÓA</div>
                     <div class="next-chapter-name" id="nextChapterNameText">...</div>
                 </div>
 

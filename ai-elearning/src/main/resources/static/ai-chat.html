@@ -16,24 +16,28 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Noto+Sans+Math&family=Noto+Color+Emoji&display=swap">
+    <script src="js/i18n.js"></script>
 </head>
 <body class="chat-page">
     <script src="components/header.js"></script>
 
     <div class="chat-layout">
-        <!-- Sidebar -->
+        <!-- Sidebar trái: Danh sách chương học -->
         <div class="chat-sidebar">
             <div class="chat-sidebar-header">
-                <div class="chat-sidebar-title">Đang học</div>
-                <div class="chat-course-name" id="chatCourseName">Khóa học</div>
+                <div class="chat-sidebar-title">Khóa học</div>
+                <div class="chat-course-name" id="chatCourseName">Đang tải...</div>
             </div>
-            <a href="course-detail.html" class="chat-sidebar-back" id="backBtn">&#8592; Trở lại khóa học</a>
-            <a href="#" class="chat-sidebar-back" id="goToExerciseBtn" style="background:#10b981; color:#fff; border-bottom:1px solid #059669; font-weight:700; transition: padding 0.2s ease;">📝 Làm bài tập chương</a>
+            <div class="chat-sidebar-back-wrap">
+                <a href="course-detail.html" class="btn-back-course" id="backBtn">Trở lại khóa học</a>
+            </div>
+            <div class="chat-chapters-title">DANH SÁCH CHƯƠNG</div>
             <div class="chat-chapters" id="chatChapters"></div>
         </div>
 
-        <!-- Main Chat -->
+        <!-- Khung chính: Gia sư AI Chat Room -->
         <div class="chat-main">
+            <!-- Header Chat -->
             <div class="chat-header">
                 <div class="chat-header-avatar">AI</div>
                 <div class="chat-header-info">
@@ -42,12 +46,27 @@
                 </div>
             </div>
 
+            <!-- Ô Bài Tập Chương Tinh Gọn -->
+            <div class="compact-exercise-bar" id="compactExerciseBar">
+                <div class="exercise-bar-info">
+                    <div>
+                        <div class="exercise-bar-title" id="exerciseBarTitle">Bài tập Chương 1</div>
+                        <div class="exercise-bar-sub">Hoàn thành bài tập để mở khóa chương tiếp theo</div>
+                    </div>
+                </div>
+                <div class="exercise-bar-actions">
+                    <span class="exercise-status-badge pending" id="exerciseStatusBadge">Chưa hoàn thành</span>
+                    <a href="#" class="btn-start-exercise-compact" id="btnStartExercise">Làm bài tập</a>
+                </div>
+            </div>
+
+            <!-- Khung Tin nhắn -->
             <div class="chat-messages" id="chatMessages"></div>
 
             <div class="quick-suggestions" id="quickSuggestions"></div>
 
+            <!-- Ô Nhập liệu Chat & Math Toolbar -->
             <div class="chat-input-area">
-                <!-- Bảng công cụ toán học -->
                 <div class="math-toolbar" id="mathToolbar">
                     <button type="button" class="math-btn" data-template-idx="0" title="Căn bậc hai (√)">√</button>
                     <button type="button" class="math-btn" data-template-idx="1" title="Lũy thừa (x²)">x²</button>
@@ -55,18 +74,17 @@
                     <button type="button" class="math-btn" data-template-idx="3" title="Phân số (½)">½</button>
                     <button type="button" class="math-btn" data-template-idx="4" title="Logarithm (log)">log</button>
                     <button type="button" class="math-btn" data-template-idx="5" title="Hằng số Pi (π)">π</button>
-                    <button type="button" class="math-btn" data-template-idx="6" title="Hàm lượng giác sin">sin</button>
-                    <button type="button" class="math-btn" data-template-idx="7" title="Hàm lượng giác cos">cos</button>
-                    <button type="button" class="math-btn" data-template-idx="8" title="Hàm lượng giác tan">tan</button>
+                    <button type="button" class="math-btn" data-template-idx="6" title="Hàm sin">sin</button>
+                    <button type="button" class="math-btn" data-template-idx="7" title="Hàm cos">cos</button>
+                    <button type="button" class="math-btn" data-template-idx="8" title="Hàm tan">tan</button>
                     <button type="button" class="math-btn" data-template-idx="9" title="Tổng (∑)">∑</button>
                     <button type="button" class="math-btn" data-template-idx="10" title="Tích phân (∫)">∫</button>
                     <button type="button" class="math-btn" data-template-idx="11" title="Vô cực (∞)">∞</button>
-                    <button type="button" class="math-btn" data-template-idx="12" title="Ký hiệu Alpha (α)">α</button>
-                    <button type="button" class="math-btn" data-template-idx="13" title="Ký hiệu Beta (β)">β</button>
-                    <button type="button" class="math-btn" data-template-idx="14" title="Ký hiệu Theta (θ)">θ</button>
+                    <button type="button" class="math-btn" data-template-idx="12" title="Alpha (α)">α</button>
+                    <button type="button" class="math-btn" data-template-idx="13" title="Beta (β)">β</button>
+                    <button type="button" class="math-btn" data-template-idx="14" title="Theta (θ)">θ</button>
                 </div>
 
-                <!-- Khung xem trước công thức toán học -->
                 <div class="math-preview-container" id="mathPreviewContainer" style="display: none;">
                     <div class="math-preview-title">Xem trước công thức:</div>
                     <div class="math-preview-content" id="mathPreview"></div>
@@ -75,7 +93,7 @@
                 <form class="chat-input-form" id="chatForm">
                     <textarea class="chat-input-textarea" id="chatInput"
                         placeholder="Đặt câu hỏi về bài học này..." rows="1"></textarea>
-                    <button type="submit" class="btn-send" id="sendBtn">&#10148;</button>
+                    <button type="submit" class="btn-send" id="sendBtn">Gửi</button>
                 </form>
             </div>
         </div>

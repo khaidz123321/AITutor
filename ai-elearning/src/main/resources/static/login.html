@@ -7,6 +7,7 @@
     <title>Đăng nhập - PTIT E-Learning</title>
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/auth.css">
+    <script src="js/i18n.js"></script>
 </head>
 <body class="auth-page">
 <div class="auth-layout">
@@ -16,19 +17,11 @@
             <div class="auth-banner-logo">
                 <img src="assets/images/Logo-Hoc-Vien-Cong-Nghe-Buu-Chinh-Vien-Thong-PTITSimple.webp" alt="PTIT Logo">
             </div>
-            <div class="auth-banner-tag" id="bannerTag">Nền tảng học tập trực tuyến</div>
-            <h2 id="bannerH2">Học thông minh hơn<br>cùng AI gia sư</h2>
-            <p id="bannerP">Tiếp cận hàng trăm bài giảng chất lượng cao, hỏi đáp tức thì với trí tuệ nhân tạo — mọi lúc, mọi nơi.</p>
-            <div class="auth-banner-features" id="bannerFeatures">
-                <div class="auth-feature">Dành riêng cho sinh viên PTIT</div>
-                <div class="auth-feature">AI gia sư sẵn sàng 24/7</div>
-                <div class="auth-feature">Nội dung chuẩn theo chương trình PTIT</div>
-                <div class="auth-feature">Theo dõi tiến độ học tập chi tiết</div>
-            </div>
-            <div class="slide-indicators">
+            <div class="slide-indicators" style="position: absolute; bottom: 30px; left: 52px; display: flex; gap: 8px;">
                 <span class="indicator active" data-index="0"></span>
                 <span class="indicator" data-index="1"></span>
                 <span class="indicator" data-index="2"></span>
+                <span class="indicator" data-index="3"></span>
             </div>
         </div>
     </div>
@@ -100,7 +93,7 @@
                     <div class="form-group" style="margin-bottom:20px;">
                         <label class="checkbox-label">
                             <input type="checkbox" id="agreeTerms" required>
-                            <span>Tôi đồng ý với <a href="#" class="link-primary">điều khoản dịch vụ</a> và <a href="#" class="link-primary">chính sách bảo mật</a></span>
+                            <span>Tôi đồng ý với <a href="#" class="link-primary" onclick="openTermsModal(event)">điều khoản dịch vụ</a> và <a href="#" class="link-primary" onclick="openPrivacyModal(event)">chính sách bảo mật</a></span>
                         </label>
                     </div>
                     <button type="submit" class="btn btn-primary btn-block btn-lg">Đăng ký</button>
@@ -111,6 +104,61 @@
         </div>
     </div>
 </div>
+
+<!-- Modal Điều khoản Dịch vụ -->
+<div class="legal-modal-overlay" id="termsModalOverlay" onclick="closeLegalModal(event)">
+    <div class="legal-modal-card" onclick="event.stopPropagation()">
+        <div class="legal-modal-header">
+            <h3>Điều khoản Dịch vụ Nền tảng PTIT E-Learning</h3>
+            <button class="legal-modal-close" onclick="closeLegalModal()">&times;</button>
+        </div>
+        <div class="legal-modal-body">
+            <h4>1. Quy định Tài khoản Sinh viên</h4>
+            <p>Nền tảng PTIT E-Learning cung cấp dịch vụ đào tạo trực tuyến tích hợp Trợ lý Gia sư AI dành riêng cho sinh viên và giảng viên Học viện Công nghệ Bưu chính Viễn thông. Người dùng có trách nhiệm bảo mật thông tin đăng nhập cá nhân.</p>
+            
+            <h4>2. Quyền Sở hữu Trí tuệ</h4>
+            <p>Toàn bộ tài nguyên học liệu, video bài giảng, ngân hàng bài tập và mô hình Trợ lý AI trên hệ thống thuộc bản quyền Học viện. Sinh viên không được phép sao chép, thương mại hóa hoặc phát tán dữ liệu ra bên ngoài mà không có sự đồng ý.</p>
+
+            <h4>3. Quy định Sử dụng Trợ lý AI</h4>
+            <p>Trợ lý Gia sư AI hoạt động 24/7 nhằm giải đáp thắc mắc chuyên môn, hướng dẫn giải bài tập và cá nhân hóa lộ trình học. Sinh viên không sử dụng công cụ AI vào các mục đích gian lận thi cử hoặc phát tán nội dung vi phạm pháp luật.</p>
+
+            <h4>4. Chấp nhận & Thay đổi Điều khoản</h4>
+            <p>Khi tích chọn đăng ký, bạn xác nhận đã đọc và tuân thủ các quy định trên. Hệ thống có quyền cập nhật điều khoản để phù hợp với quy định đào tạo số của Học viện.</p>
+        </div>
+        <div class="legal-modal-footer">
+            <button type="button" class="btn btn-secondary" onclick="closeLegalModal()">Đóng</button>
+            <button type="button" class="btn btn-primary" onclick="agreeLegalTerms()">Tôi đồng ý & Tiếp tục</button>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Chính sách Bảo mật -->
+<div class="legal-modal-overlay" id="privacyModalOverlay" onclick="closeLegalModal(event)">
+    <div class="legal-modal-card" onclick="event.stopPropagation()">
+        <div class="legal-modal-header">
+            <h3>Chính sách Bảo mật Thông tin PTIT E-Learning</h3>
+            <button class="legal-modal-close" onclick="closeLegalModal()">&times;</button>
+        </div>
+        <div class="legal-modal-body">
+            <h4>1. Thu thập Thông tin Dữ liệu</h4>
+            <p>Hệ thống thu thập các thông tin bao gồm: Họ tên, Email sinh viên PTIT, Số điện thoại, Mã sinh viên, Tiến độ học tập và Lịch sử tương tác với Trợ lý AI nhằm phục vụ mục đích đào tạo.</p>
+
+            <h4>2. Bảo mật & Mã hóa Thông tin</h4>
+            <p>Mật khẩu người dùng được mã hóa băm an toàn chuẩn BCrypt. Toàn bộ dữ liệu truyền tải giữa Trình duyệt và Server đều được bảo vệ qua đường truyền bảo mật mã hóa SSL/TLS và chuẩn Token JWT.</p>
+
+            <h4>3. Cam kết Không chia sẻ Dữ liệu</h4>
+            <p>Chúng tôi cam kết không kinh doanh, thương mại hoặc chia sẻ thông tin cá nhân của người học cho bất kỳ bên thứ ba nào nằm ngoài phạm vi quản lý của Học viện PTIT.</p>
+
+            <h4>4. Quyền Hạn Người dùng</h4>
+            <p>Sinh viên có quyền cập nhật thông tin cá nhân, thay đổi mật khẩu và quản lý hồ sơ học tập bất kỳ lúc nào tại mục Trang cá nhân.</p>
+        </div>
+        <div class="legal-modal-footer">
+            <button type="button" class="btn btn-secondary" onclick="closeLegalModal()">Đóng</button>
+            <button type="button" class="btn btn-primary" onclick="agreeLegalTerms()">Tôi đồng ý & Tiếp tục</button>
+        </div>
+    </div>
+</div>
+
 <script src="js/auth.js"></script>
 <script>
     // Auto switch to register tab if URL says so

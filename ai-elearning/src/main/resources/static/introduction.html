@@ -5,139 +5,180 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Giới thiệu về hệ thống PTIT E-Learning — nền tảng học tập trực tuyến tích hợp AI của Học viện Công nghệ Bưu chính Viễn thông.">
-    <title>Giới thiệu - PTIT E-Learning</title>
+        content="Giới thiệu hệ thống PTIT E-Learning — Nền tảng Đào tạo số tích hợp Trợ lý Gia sư AI dành riêng cho Sinh viên PTIT.">
+    <title>Giới thiệu Hệ thống - PTIT E-Learning</title>
     <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/introduction.css">
+    <script src="js/i18n.js"></script>
 </head>
 
 <body>
     <script src="components/header.js"></script>
 
     <main>
-        <!-- Hero -->
-        <section class="intro-hero">
-            <div class="container" style="position:relative;z-index:2;">
-                <div class="intro-eyebrow">Học viện Công nghệ Bưu chính Viễn thông</div>
-                <h1>PTIT E-Learning</h1>
-                <p>Nền tảng học tập trực tuyến hiện đại, tích hợp trí tuệ nhân tạo — giúp mỗi sinh viên học đúng cách,
-                    học hiệu quả và học vui hơn.</p>
-                <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
-                    <a href="courses.html" class="btn btn-white-primary">Khám phá khóa học</a>
-                    <a href="register.html" class="btn btn-outline-white">Đăng ký ngay</a>
+        <!-- ===== HERO BANNER (FULL-WIDTH) ===== -->
+        <section class="hero-section">
+            <div class="container">
+                <div class="hero-inner" style="max-width: 820px; margin: 0 auto; text-align: center;">
+                    <div class="hero-eyebrow">
+                        HỌC VIỆN CÔNG NGHỆ BƯU CHÍNH VIỄN THÔNG
+                    </div>
+                    <h1 class="hero-h1">
+                        Nền Tảng Đào Tạo Số<br>Tích Hợp <em>Gia Sư AI PTIT</em>
+                    </h1>
+                    <p class="hero-p" style="margin: 0 auto 36px; max-width: 740px;">
+                        Hệ thống PTIT E-Learning được xây dựng nhằm chuyển đổi số quy trình học tập, cung cấp hệ thống bài giảng chính quy và trợ lý Trí tuệ Nhân tạo (AI Tutor) đồng hành 24/7 — giúp sinh viên PTIT chủ động nắm vững kiến thức, ôn luyện đúng trọng tâm và đạt kết quả cao trong các kỳ thi.
+                    </p>
+                    <div class="hero-actions" style="justify-content: center;">
+                        <a href="courses.html" class="btn-hero-primary">Khám phá khóa học</a>
+                        <a href="register.html" class="btn-hero-ghost">Đăng ký tài khoản</a>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Features -->
+        <!-- ===== MISSION / PURPOSE ===== -->
+        <section class="section" style="background: var(--bg-white); border-bottom: 1px solid var(--border);">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Mục đích & Sứ mệnh hệ thống</h2>
+                    <p class="section-subtitle">Giải pháp hỗ trợ toàn diện cho sinh viên Học viện Công nghệ Bưu chính Viễn thông</p>
+                </div>
+                <div class="why-grid">
+                    <div class="why-card">
+                        <div class="card-icon-box">
+                            <svg width="42" height="42" viewBox="0 0 48 48" fill="none" stroke="#7a1318" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                <polygon points="24 6 42 15 24 24 6 15 24 6" />
+                                <polyline points="36 18 36 26 24 32 12 26 12 18" />
+                                <line x1="42" y1="15" x2="42" y2="25" />
+                                <circle cx="42" cy="27" r="1.5" fill="#7a1318" />
+                                <rect x="10" y="34" width="28" height="8" rx="4" />
+                                <path d="M16 34v8M32 34v8" />
+                            </svg>
+                        </div>
+                        <div class="why-label">HỌC LIỆU CHUẨN</div>
+                        <div class="why-title">Số hóa học liệu chính quy</div>
+                        <p class="why-desc">Hệ thống hóa toàn bộ bài giảng, slide giáo trình và ngân hàng tài liệu ôn tập chuẩn theo khung chương trình đào tạo của Học viện PTIT.</p>
+                    </div>
+
+                    <div class="why-card">
+                        <div class="card-icon-box">
+                            <svg width="42" height="42" viewBox="0 0 48 48" fill="none" stroke="#7a1318" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="28" cy="20" r="12" />
+                                <line x1="19.5" y1="28.5" x2="9" y2="39" />
+                                <path d="M22 20v-4M25 22v-7M28 23v-9M31 22v-5M34 20v-3" />
+                                <circle cx="34" cy="34" r="3" />
+                                <path d="M34 29v2M34 37v2M29 34h2M37 34h2" />
+                            </svg>
+                        </div>
+                        <div class="why-label">TRỢ LÝ AI</div>
+                        <div class="why-title">Giải đáp học tập 24/7</div>
+                        <p class="why-desc">Giải quyết triệt để rào cản thiếu hụt tương tác ngoài giờ. Trợ lý Gia sư AI giải đáp thắc mắc chi tiết theo từng chương học tức thì.</p>
+                    </div>
+
+                    <div class="why-card">
+                        <div class="card-icon-box">
+                            <svg width="42" height="42" viewBox="0 0 48 48" fill="none" stroke="#7a1318" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="5" y="8" width="30" height="22" rx="3" />
+                                <line x1="20" y1="30" x2="20" y2="38" />
+                                <line x1="14" y1="38" x2="26" y2="38" />
+                                <path d="M12 17l-4 3 4 3" />
+                                <path d="M18 17l4 3-4 3" />
+                                <ellipse cx="37" cy="18" rx="7" ry="3" />
+                                <path d="M30 18v8c0 1.65 3.13 3 7 3s7-1.35 7-3v-8" />
+                                <path d="M30 22c0 1.65 3.13 3 7 3s7-1.35 7-3" />
+                            </svg>
+                        </div>
+                        <div class="why-label">ĐÁNH GIÁ NĂNG LỰC</div>
+                        <div class="why-title">Mở khóa tiến độ tự động</div>
+                        <p class="why-desc">Cung cấp hệ thống câu hỏi kiểm tra tự động phân loại trình độ, giúp sinh viên nhận biết điểm yếu và tự động mở khóa chương học tiếp theo.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SYSTEM FEATURES OVERVIEW ===== -->
         <section class="section">
             <div class="container">
                 <div class="section-header">
-                    <h2 class="section-title">Hệ thống sản phẩm</h2>
-                    <p class="section-subtitle">Ba trụ cột chính của nền tảng PTIT E-Learning</p>
+                    <h2 class="section-title">Các chức năng chính của hệ thống</h2>
+                    <p class="section-subtitle">Bộ công cụ hoàn chỉnh hỗ trợ sinh viên trong suốt quá trình học tập</p>
                 </div>
-                <div class="feature-grid">
-                    <div class="feature-card">
-                        <div class="feature-tag">AI</div>
-                        <h3>Gia sư AI thông minh</h3>
-                        <p>Hỏi đáp tức thì với AI được huấn luyện từ giáo trình PTIT. Giải thích từng bước, kiên nhẫn và
-                            sẵn sàng 24/7 — như có thầy ngồi cạnh.</p>
+                <div class="features-overview-grid">
+                    <div class="feature-overview-card">
+                        <div class="f-badge">CHỨC NĂNG 01</div>
+                        <h3>Phòng Chat Gia Sư AI Tương Tác</h3>
+                        <p>Trò chuyện trực tiếp với Trợ lý AI theo ngữ cảnh từng bài học. AI có khả năng trích xuất thông tin từ tài liệu PDF giáo trình và hướng dẫn giải bài tập theo từng bước.</p>
                     </div>
-                    <div class="feature-card">
-                        <div class="feature-tag">ND</div>
-                        <h3>Nội dung chuẩn PTIT</h3>
-                        <p>Hàng trăm bài giảng, tài liệu được biên soạn và kiểm duyệt bởi giảng viên Học viện, đúng
-                            chương trình, đúng trọng tâm thi cử.</p>
+                    <div class="feature-overview-card">
+                        <div class="f-badge">CHỨC NĂNG 02</div>
+                        <h3>Kho Bài Giảng & Chương Học Số</h3>
+                        <p>Phân loại khóa học theo môn Đại cương và Chuyên ngành. Mỗi khóa học được chia thành các chương rõ ràng kèm slide PDF chính thức từ giảng viên.</p>
                     </div>
-                    <div class="feature-card">
-                        <div class="feature-tag">TD</div>
-                        <h3>Theo dõi tiến độ</h3>
-                        <p>Hệ thống tự động lưu tiến trình học, thống kê thời gian và phân tích điểm yếu — giúp bạn ôn
-                            tập đúng chỗ, không lãng phí thời gian.</p>
+                    <div class="feature-overview-card">
+                        <div class="f-badge">CHỨC NĂNG 03</div>
+                        <h3>Luyện Tập & Kiểm Tra Đánh Giá</h3>
+                        <p>Ngân hàng câu hỏi trắc nghiệm kiểm tra sau mỗi chương học. Hệ thống chấm điểm tự động, đưa ra đáp án giải thích chi tiết và cấp quyền mở khóa chương tiếp theo.</p>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Stats Banner -->
-        <section class="section-sm">
-            <div class="container">
-                <div class="stats-banner">
-                    <div>
-                        <div class="sn">50+</div>
-                        <div class="sl">Khóa học</div>
-                    </div>
-                    <div>
-                        <div class="sn">12K+</div>
-                        <div class="sl">Sinh viên</div>
-                    </div>
-                    <div>
-                        <div class="sn">200+</div>
-                        <div class="sl">Bài giảng</div>
-                    </div>
-                    <div>
-                        <div class="sn">98%</div>
-                        <div class="sl">Hài lòng</div>
+                    <div class="feature-overview-card">
+                        <div class="f-badge">CHỨC NĂNG 04</div>
+                        <h3>Quản Lý Tiến Độ & Hồ Sơ Cá Nhân</h3>
+                        <p>Theo dõi tỷ lệ hoàn thành các môn học đã đăng ký, xem lại lịch sử trò chuyện với AI và thống kê kết quả kiểm tra trực quan trên trang cá nhân.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- How it works -->
-        <section class="section" style="background:var(--bg-white);border-top:1px solid var(--border);">
+        <!-- ===== HOW IT WORKS ===== -->
+        <section class="section" style="background: var(--bg-white); border-top: 1px solid var(--border);">
             <div class="container">
                 <div class="how-grid">
                     <div>
-                        <h2 class="section-title" style="text-align:left;">Cách hoạt động</h2>
-                        <p class="section-subtitle" style="text-align:left;">Chỉ 3 bước để bắt đầu hành trình học tập
-                        </p>
+                        <h2 class="section-title" style="text-align:left;">Quy trình 3 bước sử dụng</h2>
+                        <p class="section-subtitle" style="text-align:left;">Bắt đầu học tập thông minh chỉ trong vài phút</p>
                         <div class="timeline">
                             <div class="timeline-item">
                                 <div class="timeline-step">1</div>
                                 <div>
-                                    <div class="timeline-title">Đăng ký tài khoản</div>
-                                    <div class="timeline-desc">Tạo tài khoản với email sinh viên PTIT trong vòng 1 phút.
-                                    </div>
+                                    <div class="timeline-title">Tạo tài khoản hoặc Đăng nhập</div>
+                                    <div class="timeline-desc">Sử dụng tài khoản sinh viên PTIT để truy cập đầy đủ các tài nguyên học tập trên hệ thống.</div>
                                 </div>
                             </div>
                             <div class="timeline-item">
                                 <div class="timeline-step">2</div>
                                 <div>
-                                    <div class="timeline-title">Chọn khóa học</div>
-                                    <div class="timeline-desc">Duyệt qua 50 khóa học theo danh mục và bắt đầu học ngay
-                                        lập tức.</div>
+                                    <div class="timeline-title">Chọn khóa học & Xem bài giảng</div>
+                                    <div class="timeline-desc">Duyệt qua danh mục môn Đại cương hoặc Chuyên ngành, xem slide PDF và nội dung lý thuyết từng chương.</div>
                                 </div>
                             </div>
                             <div class="timeline-item">
                                 <div class="timeline-step">3</div>
                                 <div>
-                                    <div class="timeline-title">Học cùng AI gia sư</div>
-                                    <div class="timeline-desc">Đặt câu hỏi về bài học và nhận giải thích chi tiết từ AI
-                                        ngay lập tức.</div>
+                                    <div class="timeline-title">Hỏi đáp AI & Làm bài kiểm tra</div>
+                                    <div class="timeline-desc">Vào phòng chat AI để giải đáp bài khó và hoàn thành bài trắc nghiệm chương để mở khóa nội dung mới.</div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="ai-showcase">
-                        <div class="ai-showcase-label">Gia sư AI PTIT</div>
-                        <h3>Hỏi bất kỳ điều gì về bài học</h3>
-                        <p>Được huấn luyện từ hàng nghìn trang giáo trình PTIT — sẵn sàng giải đáp mọi thắc mắc bất cứ
-                            lúc nào.</p>
-                        <a href="courses.html" class="btn btn-white-primary"
-                            style="margin-top:24px;display:inline-block;">Bắt đầu ngay</a>
+                        <div class="ai-showcase-label">GIA SƯ AI PTIT 24/7</div>
+                        <h3>Trợ lý học tập thông minh đồng hành cùng bạn</h3>
+                        <p>Được huấn luyện dựa trên bộ giáo trình và tài liệu chuẩn của Học viện PTIT. Sẵn sàng kiên nhẫn hướng dẫn bạn mọi lúc, mọi nơi.</p>
+                        <a href="courses.html" class="btn-hero-primary" style="margin-top:24px;display:inline-flex;">Bắt đầu học ngay</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- CTA -->
+        <!-- ===== CTA ===== -->
         <section class="section">
-            <div class="container" style="text-align:center;">
-                <h2 class="section-title">Sẵn sàng học thông minh hơn?</h2>
-                <p class="section-subtitle">Tham gia cùng 12.000 sinh viên PTIT</p>
-                <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
-                    <a href="register.html" class="btn btn-primary btn-lg">Đăng ký ngay</a>
-                    <a href="courses.html" class="btn btn-secondary btn-lg">Xem khóa học</a>
+            <div class="container">
+                <div class="cta-section">
+                    <h2 class="cta-title">Bắt đầu quá trình học tập số tại PTIT</h2>
+                    <p class="cta-desc">Đăng nhập tài khoản sinh viên để truy cập toàn bộ tài nguyên học liệu</p>
+                    <a href="register.html" class="btn-hero-primary"
+                        style="display:inline-flex;position:relative;z-index:2;">Đăng ký tài khoản</a>
                 </div>
             </div>
         </section>

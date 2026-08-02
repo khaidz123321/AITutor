@@ -1,4 +1,4 @@
-﻿// =====================================================
+// =====================================================
 // SHARED COURSE DATA + UTILITIES (no emoji)
 // =====================================================
 (function() {
@@ -37,29 +37,27 @@ function renderCourseCard(course, enrolled = false) {
 
     const isChuyenNganh = course.category === 'chuyennganh';
     const gradient = isChuyenNganh 
-        ? 'linear-gradient(135deg, #3d0709, #c12026)' 
-        : 'linear-gradient(135deg, #7a1318, #c12026)';
+        ? 'linear-gradient(135deg, #3d0507, #54090c)' 
+        : 'linear-gradient(135deg, #54090c, #7a1318)';
+
+    const hasImage = course.thumbnailUrl && course.thumbnailUrl !== 'null' && course.thumbnailUrl !== 'undefined' && course.thumbnailUrl.trim() !== '';
 
     return `
-    <div class="course-card" data-id="${cId}" style="border: 1.5px solid #f3f4f6; border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; background: #fff; transition: transform var(--transition), box-shadow var(--transition); box-shadow: 0 4px 20px rgba(0,0,0,0.04);">
+    <div class="course-card" data-id="${cId}" style="border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column; background: #fff; transition: transform var(--transition), box-shadow var(--transition); box-shadow: var(--shadow-sm);">
         <a href="course-detail.html?id=${cId}">
-            <div class="card-thumb" style="aspect-ratio: 16/9; background:${gradient}; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,.15); font-size: 80px; font-weight: 900; letter-spacing: -3px; border-radius: 16px 16px 0 0;">
+            <div class="card-thumb" style="aspect-ratio: 16/9; background:${gradient}; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,.2); font-size: 80px; font-weight: 900; letter-spacing: -3px; border-radius: var(--radius-lg) var(--radius-lg) 0 0;">
+                ${hasImage ? `<img src="${course.thumbnailUrl}" alt="${course.title}" style="width:100%; height:100%; object-fit:cover; position:absolute; inset:0; z-index:1;" onerror="this.style.display='none'">` : ''}
                 ${cThumbLabel}
             </div>
         </a>
         <div class="card-body" style="padding: 20px; display: flex; flex-direction: column; flex: 1;">
             <div style="margin-bottom: 12px;">
-                <span class="badge" style="background: #fff5f5; color: #c12026; padding: 4px 12px; border-radius: 100px; font-size: 11px; font-weight: 700; text-transform: none; letter-spacing: 0;">${cCategoryLabel}</span>
+                <span class="badge" style="background: #fdf4f4; color: #7a1318; border: 1px solid rgba(122, 19, 24, 0.15); padding: 3px 10px; border-radius: var(--radius-sm); font-size: 11px; font-weight: 700;">${cCategoryLabel}</span>
             </div>
             
             <div style="display:flex; align-items:center; gap:16px; font-size:12.5px; color:var(--text-3); margin-bottom:12px;">
                 <span style="display:inline-flex; align-items:center; gap:4px; font-weight: 600;">
-                    <svg style="color: #c12026;" xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
-                    ${cChapters} ChÆ°Æ¡ng há»c
-                </span>
-                <span style="display:inline-flex; align-items:center; gap:4px; font-weight: 600;">
-                    <svg style="color: #c12026;" xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-                    1023 học viên
+                    ${cChapters} Chương học
                 </span>
             </div>
             
@@ -68,8 +66,8 @@ function renderCourseCard(course, enrolled = false) {
             </a>
             
             ${enrolled
-                ? `<a href="course-detail.html?id=${cId}" style="display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; padding: 10px; background: #fdf2f2; color: #c12026; font-weight: 700; border-radius: 8px; font-size: 13.5px; text-decoration: none; transition: background 0.2s; margin-top: auto; font-family: var(--font);">Tiếp tục học &nearr;</a>`
-                : `<a href="course-detail.html?id=${cId}" style="display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; padding: 10px; background: #fdf2f2; color: #c12026; font-weight: 700; border-radius: 8px; font-size: 13.5px; text-decoration: none; transition: background 0.2s; margin-top: auto; font-family: var(--font);">Học ngay &nearr;</a>`
+                ? `<a href="course-detail.html?id=${cId}" style="display: flex; align-items: center; justify-content: center; width: 100%; padding: 9px; background: #fdf4f4; color: #7a1318; border: 1px solid rgba(122,19,24,0.2); font-weight: 700; border-radius: var(--radius); font-size: 13px; text-decoration: none; transition: all 0.2s; margin-top: auto; font-family: var(--font);">Tiếp tục học</a>`
+                : `<a href="course-detail.html?id=${cId}" style="display: flex; align-items: center; justify-content: center; width: 100%; padding: 9px; background: #7a1318; color: #ffffff; font-weight: 700; border-radius: var(--radius); font-size: 13px; text-decoration: none; transition: all 0.2s; margin-top: auto; font-family: var(--font);">Xem thông tin khóa học</a>`
             }
         </div>
     </div>`;
@@ -112,10 +110,86 @@ function doSearch() {
     if (val) window.location.href = `courses.html?search=${encodeURIComponent(val)}`;
 }
 
+function initHeroSlider() {
+    const slider = document.getElementById('heroSlider');
+    if (!slider) return;
+
+    const slides = slider.querySelectorAll('.slide');
+    const prevBtn = document.getElementById('sliderPrevBtn');
+    const nextBtn = document.getElementById('sliderNextBtn');
+    const dotsContainer = document.getElementById('sliderDots');
+
+    if (!slides.length) return;
+
+    let currentIndex = 0;
+    let timer = null;
+    const intervalTime = 3000; // Tự động chuyển ảnh sau mỗi 3 giây
+
+    // Động hóa việc tạo chấm tròn navigation (Dots)
+    if (dotsContainer) {
+        dotsContainer.innerHTML = '';
+        slides.forEach((_, idx) => {
+            const dot = document.createElement('div');
+            dot.className = `slider-dot ${idx === 0 ? 'active' : ''}`;
+            dot.addEventListener('click', () => {
+                goToSlide(idx);
+                startAutoPlay();
+            });
+            dotsContainer.appendChild(dot);
+        });
+    }
+
+    function updateDots() {
+        if (!dotsContainer) return;
+        const dots = dotsContainer.querySelectorAll('.slider-dot');
+        dots.forEach((dot, idx) => {
+            dot.classList.toggle('active', idx === currentIndex);
+        });
+    }
+
+    function goToSlide(index) {
+        slides[currentIndex].classList.remove('active');
+        currentIndex = (index + slides.length) % slides.length;
+        slides[currentIndex].classList.add('active');
+        updateDots();
+    }
+
+    function nextSlide() {
+        goToSlide(currentIndex + 1);
+    }
+
+    function prevSlide() {
+        goToSlide(currentIndex - 1);
+    }
+
+    function startAutoPlay() {
+        stopAutoPlay();
+        timer = setInterval(nextSlide, intervalTime);
+    }
+
+    function stopAutoPlay() {
+        if (timer) clearInterval(timer);
+    }
+
+    if (prevBtn) prevBtn.addEventListener('click', () => { prevSlide(); startAutoPlay(); });
+    if (nextBtn) nextBtn.addEventListener('click', () => { nextSlide(); startAutoPlay(); });
+
+    // Dừng auto-play khi người dùng rê chuột vào banner slider
+    const container = slider.closest('.hero-slider-container');
+    if (container) {
+        container.addEventListener('mouseenter', stopAutoPlay);
+        container.addEventListener('mouseleave', startAutoPlay);
+    }
+
+    startAutoPlay();
+}
+
 // =====================================================
 // HOMEPAGE INIT
 // =====================================================
 document.addEventListener('DOMContentLoaded', () => {
+    initHeroSlider();
+
     document.getElementById('heroSearch')?.addEventListener('keydown', e => {
         if (e.key === 'Enter') doSearch();
     });
@@ -153,12 +227,4 @@ document.addEventListener('DOMContentLoaded', () => {
         const grid = document.getElementById('featuredCourses');
         if (grid) grid.innerHTML = `<div style="grid-column: 1/-1; text-align: center; color: var(--text-3); padding: 40px 0;">Vui lòng đăng nhập để khám phá các khóa học.</div>`;
     });
-
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(e => {
-            if (e.isIntersecting) { animateCounters(); observer.disconnect(); }
-        });
-    }, { threshold: 0.3 });
-    const statsBar = document.querySelector('.stats-bar');
-    if (statsBar) observer.observe(statsBar);
 });

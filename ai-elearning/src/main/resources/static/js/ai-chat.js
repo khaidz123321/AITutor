@@ -115,9 +115,10 @@
         'Bài tập thực hành',
     ];
 
-    function init() {
+    async function init() {
         const token = localStorage.getItem('ptit_token');
         if (!token) {
+            alert('Vui lòng đăng nhập để truy cập phòng học Trợ lý AI PTIT!');
             window.location.href = 'login.html';
             return;
         }
@@ -146,16 +147,36 @@
                     // Select active lesson
                     activeLesson = lessons.find(l => l.id === activeLessonId) || lessons[0];
 
-                    // Fetch user learning profile for this course
+                    // Fetch user learning profile for this course (Auto-enroll if missing)
                     fetch(`/api/v1/learning-profiles/me?courseId=${currentCourse.id}`, {
                         headers: { 'Authorization': 'Bearer ' + token }
                     })
                     .then(r => r.json())
                     .then(enrData => {
-                        if (enrData && enrData.success) {
+                        if (enrData && enrData.success && enrData.data) {
                             enrolledData = enrData.data;
+                            renderChat();
+                        } else {
+                            // Auto-enroll user silently
+                            fetch(`/api/v1/courses/${currentCourse.id}/enroll`, {
+                                method: 'POST',
+                                headers: {
+                                    'Content-Type': 'application/json',
+                                    'Authorization': 'Bearer ' + token
+                                },
+                                body: JSON.stringify({})
+                            })
+                            .then(r => r.json())
+                            .then(autoRes => {
+                                if (autoRes && autoRes.success && autoRes.data) {
+                                    enrolledData = autoRes.data;
+                                }
+                                renderChat();
+                            })
+                            .catch(() => {
+                                renderChat();
+                            });
                         }
-                        renderChat();
                     })
                     .catch(() => {
                         renderChat();
@@ -172,6 +193,31 @@
         });
     }
 
+    function renderExercisePanel() {
+        if (!activeLesson) return;
+
+        const activeIdx = lessons.findIndex(l => l.id === activeLesson.id);
+        const chapterNum = activeIdx >= 0 ? (activeIdx + 1) : 1;
+        const activeTitle = activeLesson.chapterName || 'Chương học';
+
+        const barTitle = document.getElementById('exerciseBarTitle');
+        if (barTitle) barTitle.textContent = `Bài tập Chương ${chapterNum}: ${activeTitle}`;
+
+        const btnStart = document.getElementById('btnStartExercise');
+        if (btnStart) {
+            btnStart.href = `exercise.html?courseId=${courseId}&chapterId=${activeLesson.id}`;
+        }
+
+        const requiredPct = Math.round(((activeIdx + 1) / lessons.length) * 100);
+        const isCompleted = enrolledData ? (enrolledData.progressPercent >= requiredPct) : false;
+
+        const badge = document.getElementById('exerciseStatusBadge');
+        if (badge) {
+            badge.className = `exercise-status-badge ${isCompleted ? 'completed' : 'pending'}`;
+            badge.textContent = isCompleted ? 'Đã hoàn thành' : 'Chưa làm';
+        }
+    }
+
     function renderChat() {
         if (!currentCourse || !activeLesson) return;
 
@@ -181,14 +227,8 @@
         document.getElementById('chatChapterName').textContent = activeTitle;
         document.getElementById('backBtn').href = `course-detail.html?id=${courseId}`;
 
-        // Set dynamic exercise link
-        const activeIdx = lessons.findIndex(l => l.id === activeLesson.id);
-        const chapterNum = activeIdx >= 0 ? (activeIdx + 1) : 1;
-        const exerciseBtn = document.getElementById('goToExerciseBtn');
-        if (exerciseBtn) {
-            exerciseBtn.href = `exercise.html?courseId=${courseId}&chapterId=${activeLesson.id}`;
-            exerciseBtn.textContent = `📝 Làm bài tập chương ${chapterNum}`;
-        }
+        // Render exercise panel on the right
+        renderExercisePanel();
 
         // Sidebar lessons
         document.getElementById('chatChapters').innerHTML = lessons.map((les, i) => {

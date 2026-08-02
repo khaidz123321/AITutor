@@ -1,40 +1,80 @@
-// =====================================================
-// AUTH LOGIC — Single page (Login + Register toggle)
-// =====================================================
+// System Toast Notification Helper
+window.showSystemToast = function(message, type = 'error') {
+    let container = document.querySelector('.system-toast-container');
+    if (!container) {
+        container = document.createElement('div');
+        container.className = 'system-toast-container';
+        document.body.appendChild(container);
+    }
+
+    const toast = document.createElement('div');
+    toast.className = `system-toast toast-${type}`;
+    
+    let iconSvg = '';
+    if (type === 'success') {
+        iconSvg = `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>`;
+    } else if (type === 'warning') {
+        iconSvg = `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>`;
+    } else {
+        iconSvg = `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>`;
+    }
+
+    toast.innerHTML = `
+        <div class="system-toast-icon">${iconSvg}</div>
+        <div class="system-toast-msg">${message}</div>
+        <button class="system-toast-close" onclick="this.parentElement.remove()">&times;</button>
+    `;
+
+    container.appendChild(toast);
+
+    setTimeout(() => {
+        toast.style.opacity = '0';
+        toast.style.transform = 'translateY(-10px)';
+        setTimeout(() => toast.remove(), 300);
+    }, 4500);
+};
+
+// Override native browser alert with system toast
+window.alert = function(msg) {
+    let type = 'error';
+    if (msg.includes('thành công') || msg.includes('chuyển hướng')) type = 'success';
+    else if (msg.includes('Mật khẩu') || msg.includes('tích chọn') || msg.includes('ít nhất')) type = 'warning';
+    window.showSystemToast(msg, type);
+};
+
 document.addEventListener('DOMContentLoaded', () => {
 
-    // ===== BANNER SLIDESHOW =====
+    // ===== BANNER SLIDESHOW (4 IMAGES, 3 SECONDS EACH) =====
     const banner = document.getElementById('authBanner');
     if (banner) {
         const images = [
-            'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80',
-            'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=900&q=80',
-            'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=900&q=80',
+            'assets/images/auth_banner_1.png',
+            'assets/images/auth_banner_2.png',
+            'assets/images/auth_banner_3.png',
+            'assets/images/auth_banner_4.png'
         ];
-        let current = 0;
+        let currentIndex = 0;
         const indicators = document.querySelectorAll('.indicator');
-        const content = document.getElementById('bannerContent');
 
         banner.style.backgroundSize = 'cover';
         banner.style.backgroundPosition = 'center';
+        banner.style.transition = 'background-image 0.8s ease-in-out';
 
-        function goTo(idx) {
-            current = idx;
-            if (content) {
-                content.style.transition = 'opacity .4s ease';
-                content.style.opacity = '0';
-            }
-            setTimeout(() => {
-                banner.style.backgroundImage =
-                    `linear-gradient(160deg,rgba(0,0,0,.72),rgba(0,0,0,.52),rgba(0,0,0,.62)),url('${images[idx]}')`;
-                indicators.forEach((ind, i) => ind.classList.toggle('active', i === idx));
-                if (content) content.style.opacity = '1';
-            }, 350);
+        function showSlide(idx) {
+            currentIndex = idx;
+            banner.style.backgroundImage = `linear-gradient(160deg, rgba(15, 1, 2, 0.35), rgba(45, 5, 8, 0.25)), url('${images[idx]}')`;
+            indicators.forEach((ind, i) => ind.classList.toggle('active', i === idx));
         }
 
-        goTo(0);
-        indicators.forEach((ind, i) => ind.addEventListener('click', () => { clearInterval(timer); goTo(i); }));
-        const timer = setInterval(() => goTo((current + 1) % images.length), 5000);
+        showSlide(0);
+
+        indicators.forEach((ind, i) => {
+            ind.addEventListener('click', () => showSlide(i));
+        });
+
+        setInterval(() => {
+            showSlide((currentIndex + 1) % images.length);
+        }, 3000);
     }    // ===== LOGIN FORM =====
     const loginForm = document.getElementById('loginForm');
     if (loginForm) {
@@ -73,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             localStorage.setItem('ptit_user', JSON.stringify(userData));
                         }
                         const btn = loginForm.querySelector('button[type="submit"]');
-                        btn.textContent = '✓ Đang chuyển hướng...';
+                        btn.textContent = 'Đang chuyển hướng...';
                         btn.disabled = true;
                         if (userData.role === 'ADMIN' || userData.role === 'TEACHER') {
                             window.location.href = 'dashboard.html';
@@ -99,6 +139,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+
+
     // ===== REGISTER FORM =====
     const registerForm = document.getElementById('registerForm');
     if (registerForm) {
@@ -112,6 +154,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (pass1 !== pass2) { alert('Mật khẩu xác nhận không khớp!'); return; }
             if (pass1.length < 8) { alert('Mật khẩu phải chứa ít nhất 8 ký tự!'); return; }
+
+            const agreeCheckbox = document.getElementById('agreeTerms');
+            if (!agreeCheckbox || !agreeCheckbox.checked) {
+                alert('Bạn cần tích chọn đồng ý với Điều khoản dịch vụ và Chính sách bảo mật trước khi đăng ký tài khoản!');
+                return;
+            }
 
             let username = email.split('@')[0];
             if (username.length < 6) {
@@ -211,3 +259,45 @@ function showRegister(e) {
     document.getElementById('tabLogin').classList.remove('active');
     updateBanner('register');
 }
+
+// Quick Login Demo Helper
+window.quickLogin = function(email, password) {
+    const emailInput = document.getElementById('loginEmail');
+    const passwordInput = document.getElementById('loginPassword');
+    if (emailInput && passwordInput) {
+        emailInput.value = email;
+        passwordInput.value = password;
+        const form = document.getElementById('loginForm');
+        if (form) {
+            if (typeof form.requestSubmit === 'function') {
+                form.requestSubmit();
+            } else {
+                form.dispatchEvent(new Event('submit', { cancelable: true }));
+            }
+        }
+    }
+};
+
+// Legal Modals Helper Functions
+window.openTermsModal = function(e) {
+    if (e) e.preventDefault();
+    const modal = document.getElementById('termsModalOverlay');
+    if (modal) modal.classList.add('active');
+};
+
+window.openPrivacyModal = function(e) {
+    if (e) e.preventDefault();
+    const modal = document.getElementById('privacyModalOverlay');
+    if (modal) modal.classList.add('active');
+};
+
+window.closeLegalModal = function(e) {
+    if (e && e.target !== e.currentTarget && !e.target.classList.contains('legal-modal-close')) return;
+    document.querySelectorAll('.legal-modal-overlay').forEach(m => m.classList.remove('active'));
+};
+
+window.agreeLegalTerms = function() {
+    const agreeCheckbox = document.getElementById('agreeTerms');
+    if (agreeCheckbox) agreeCheckbox.checked = true;
+    closeLegalModal();
+};

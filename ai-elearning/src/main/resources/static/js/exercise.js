@@ -132,6 +132,35 @@
     }
 
     // Render active exercise question
+    function parseMcqOptions(raw) {
+        if (!raw) return { questionText: '', options: [] };
+
+        const optionRegex = /(?:^|\n|\s*)([A-D])[\.\:\)]\s*([^\n]+)/gi;
+        const matches = [...raw.matchAll(optionRegex)];
+
+        if (matches.length >= 2) {
+            const firstIndex = raw.search(/(?:^|\n|\s*)[A-D][\.\:\)]/i);
+            const questionText = firstIndex > 0 ? raw.substring(0, firstIndex).trim() : raw.trim();
+            const options = matches.map(m => ({
+                key: m[1].toUpperCase(),
+                text: m[2].trim(),
+                full: m[1].toUpperCase()
+            }));
+            return { questionText, options };
+        }
+
+        return {
+            questionText: raw,
+            options: [
+                { key: 'A', text: 'Đáp án A', full: 'A' },
+                { key: 'B', text: 'Đáp án B', full: 'B' },
+                { key: 'C', text: 'Đáp án C', full: 'C' },
+                { key: 'D', text: 'Đáp án D', full: 'D' }
+            ]
+        };
+    }
+
+    // Render active exercise question
     function renderExercise() {
         if (!activeExercise) return;
 
@@ -150,17 +179,81 @@
         document.getElementById('exDifficultyText').textContent = activeExercise.difficulty || 'Độ khó';
         document.getElementById('exBloomText').textContent = activeExercise.bloomLevel || 'Nhận thức';
         document.getElementById('exTitleText').textContent = activeExercise.exerciseName || 'Câu hỏi luyện tập';
-        document.getElementById('exQuestionText').textContent = activeExercise.question;
+
+        // Parse MCQ question and 4 Options
+        const parsed = parseMcqOptions(activeExercise.question);
+        document.getElementById('exQuestionText').textContent = parsed.questionText;
+
+        const grid = document.getElementById('mcqOptionsGrid');
+        if (grid) {
+            grid.innerHTML = '';
+            parsed.options.forEach(opt => {
+                const card = document.createElement('div');
+                card.className = 'mcq-option-card';
+                card.style.cssText = `
+                    padding: 14px 18px;
+                    border: 1.5px solid var(--border);
+                    border-radius: 12px;
+                    background: #ffffff;
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    gap: 14px;
+                    transition: all 0.2s ease;
+                    user-select: none;
+                `;
+
+                card.innerHTML = `
+                    <div class="opt-badge" style="width: 34px; height: 34px; border-radius: 50%; background: rgba(0,0,0,0.05); color: var(--text-2); font-weight: 800; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: all 0.2s;">${opt.key}</div>
+                    <div class="opt-text" style="font-size: 14px; font-weight: 600; color: var(--text-1); flex: 1;">${opt.text}</div>
+                `;
+
+                card.onclick = () => {
+                    grid.querySelectorAll('.mcq-option-card').forEach(c => {
+                        c.style.borderColor = 'var(--border)';
+                        c.style.background = '#ffffff';
+                        const b = c.querySelector('.opt-badge');
+                        b.style.background = 'rgba(0,0,0,0.05)';
+                        b.style.color = 'var(--text-2)';
+                    });
+
+                    card.style.borderColor = '#7a1318';
+                    card.style.background = 'rgba(122, 19, 24, 0.04)';
+                    const badge = card.querySelector('.opt-badge');
+                    badge.style.background = '#7a1318';
+                    badge.style.color = '#ffffff';
+
+                    const answerInput = document.getElementById('answerInput');
+                    if (answerInput) answerInput.value = opt.key;
+
+                    const btnSubmit = document.getElementById('btnSubmitAnswer');
+                    if (btnSubmit) {
+                        btnSubmit.disabled = false;
+                        btnSubmit.style.opacity = '1';
+                        btnSubmit.style.cursor = 'pointer';
+                    }
+                };
+
+                grid.appendChild(card);
+            });
+        }
 
         // Reset answer input
         const answerInput = document.getElementById('answerInput');
-        answerInput.value = '';
-        answerInput.disabled = false;
-        document.getElementById('btnSubmitAnswer').disabled = false;
+        if (answerInput) answerInput.value = '';
+
+        const btnSubmit = document.getElementById('btnSubmitAnswer');
+        if (btnSubmit) {
+            btnSubmit.disabled = true;
+            btnSubmit.style.opacity = '0.5';
+            btnSubmit.style.cursor = 'not-allowed';
+        }
 
         const statusMsg = document.getElementById('answerStatusMsg');
-        statusMsg.style.display = 'none';
-        statusMsg.className = 'answer-status-msg';
+        if (statusMsg) {
+            statusMsg.style.display = 'none';
+            statusMsg.className = 'answer-status-msg';
+        }
     }
 
     // Submit answer to server
@@ -199,7 +292,7 @@
                     if (result.isCorrect) {
                         statusMsg.style.background = '#ecfdf5';
                         statusMsg.style.color = '#059669';
-                        statusMsg.textContent = '✓ ' + (result.message || 'Chính xác! Chúc mừng bạn.');
+                        statusMsg.textContent = (result.message || 'Chính xác! Chúc mừng bạn.');
 
                         // Calculate and update progress bar before moving forward
                         const solvedCount = exercisesList.findIndex(ex => ex.id === activeExercise.id) + 1;
@@ -277,7 +370,7 @@
             nextChapterBox.style.display = 'block';
             nextChapterBox.style.background = '#eff6ff';
             nextChapterBox.style.borderColor = '#bfdbfe';
-            nextChapterBox.querySelector('.next-chapter-label').textContent = '🎓 BẠN ĐÃ HOÀN THÀNH KHÓA HỌC';
+            nextChapterBox.querySelector('.next-chapter-label').textContent = 'BẠN ĐÃ HOÀN THÀNH KHÓA HỌC';
             nextChapterBox.querySelector('.next-chapter-label').style.color = '#1d4ed8';
             document.getElementById('nextChapterNameText').textContent = currentCourse.title;
 

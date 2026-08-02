@@ -3,36 +3,82 @@
 // =====================================================
 (function () {
     const token = localStorage.getItem('ptit_token');
+    const currentPath = window.location.pathname;
+
+    // Check if token is missing and not on login/register pages
+    if (!token && !currentPath.endsWith('login.html') && !currentPath.endsWith('register.html')) {
+        window.location.href = 'login.html';
+        return;
+    }
+
     const isLoggedIn = localStorage.getItem('ptit_user') !== null;
     const user = isLoggedIn ? JSON.parse(localStorage.getItem('ptit_user')) : null;
-    const initials = user ? user.name.split(' ').map(w => w[0]).join('').slice(0, 2).toUpperCase() : 'PT';
+    const initials = user && user.name ? user.name.split(' ').filter(w => w).map(w => w[0]).join('').slice(0, 2).toUpperCase() : 'PT';
+    const avatarInner = (user && user.avatarUrl) 
+        ? `<img src="${user.avatarUrl}" alt="Avatar" style="width:100%; height:100%; border-radius:50%; object-fit:cover;">` 
+        : initials;
+
+    window.updateHeaderAvatar = function (avatarUrl) {
+        const btn = document.getElementById('userAvatarBtn');
+        if (!btn) return;
+        const storedUser = JSON.parse(localStorage.getItem('ptit_user') || '{}');
+        if (avatarUrl) {
+            storedUser.avatarUrl = avatarUrl;
+            btn.innerHTML = `<img src="${avatarUrl}" alt="Avatar" style="width:100%; height:100%; border-radius:50%; object-fit:cover;">`;
+        } else {
+            const inits = storedUser.name ? storedUser.name.split(' ').filter(w => w).map(w => w[0]).join('').slice(0, 2).toUpperCase() : 'PT';
+            btn.textContent = inits;
+        }
+        localStorage.setItem('ptit_user', JSON.stringify(storedUser));
+    };
+
+    if (!document.getElementById('i18nAutoEngine')) {
+        const s = document.createElement('script');
+        s.id = 'i18nAutoEngine';
+        s.src = 'js/i18n.js';
+        document.head.appendChild(s);
+    }
+
+    const currentLang = localStorage.getItem('ptit_lang') === 'en' ? 'en' : 'vi';
 
     const headerHTML = `
 <header class="site-header" id="siteHeader">
     <div class="container">
-        <a href="index.html" class="header-logo">
-            <img src="assets/images/Logo-Hoc-Vien-Cong-Nghe-Buu-Chinh-Vien-Thong-PTITSimple.webp" alt="PTIT Logo" style="height:48px;width:auto;object-fit:contain;">
+        <a href="index.html" class="header-logo" style="display:flex; align-items:center; text-decoration:none;">
+            <img src="assets/images/Logo-Hoc-Vien-Cong-Nghe-Buu-Chinh-Vien-Thong-PTITSimple.webp" alt="PTIT Logo" style="height:46px; width:auto; object-fit:contain; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.05));">
         </a>
 
-        <nav class="header-nav">
-            <a href="index.html" class="nav-link">Trang chủ</a>
-            <a href="courses.html" class="nav-link">Khóa học</a>
-            <a href="introduction.html" class="nav-link">Giới thiệu</a>
-            <a href="#" class="nav-link">Tin tức</a>
-            <a href="#" class="nav-link">Hỗ trợ</a>
-            ${isLoggedIn ? `<a href="my-courses.html" class="nav-link">Khóa học của tôi</a>` : ''}
-        </nav>
+        <div class="header-actions" style="display:flex; align-items:center; gap: 16px;">
+            <a href="my-courses.html" class="btn-my-courses" style="background: linear-gradient(135deg, #7a1318 0%, #54090c 100%); color: #ffffff; font-weight: 700; border-radius: 24px; padding: 9px 22px; font-size: 13.5px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 4px 14px rgba(122, 19, 24, 0.28); transition: all 0.25s ease;">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                <span data-i18n="my_courses">Khóa học của tôi</span>
+            </a>
 
-        <div class="header-actions">
+            <!-- Language Selector Dropdown Button -->
+            <div class="lang-selector" id="langSelectorBtn" onclick="if(window.toggleLangDropdown) window.toggleLangDropdown(event);" title="Chọn ngôn ngữ / Select Language" style="position: relative; display:flex; align-items:center; gap: 6px; font-size: 13px; font-weight: 700; color: var(--text-2); cursor: pointer; padding: 6px 14px; border-radius: 20px; background: rgba(0,0,0,0.04); border: 1px solid rgba(0,0,0,0.08); transition: all 0.2s ease; user-select:none;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                <span id="langCurrentText">${currentLang === 'en' ? 'EN' : 'VN'}</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+
+                <div class="lang-dropdown-menu" id="langDropdownMenu" style="display:none; position:absolute; top:calc(100% + 8px); right:0; background:#ffffff; border:1px solid rgba(0,0,0,0.1); border-radius:12px; box-shadow:0 12px 30px rgba(0,0,0,0.15); padding:6px; min-width:145px; z-index:9999;">
+                    <div class="lang-item" onclick="if(window.selectLanguage) window.selectLanguage('vi', event);" style="padding:10px 14px; border-radius:8px; display:flex; align-items:center; gap:10px; font-size:13px; color:#1e293b; font-weight:600; cursor:pointer; transition:background 0.2s;">
+                        <span style="font-size:16px;">🇻🇳</span> Tiếng Việt
+                    </div>
+                    <div class="lang-item" onclick="if(window.selectLanguage) window.selectLanguage('en', event);" style="padding:10px 14px; border-radius:8px; display:flex; align-items:center; gap:10px; font-size:13px; color:#1e293b; font-weight:600; cursor:pointer; transition:background 0.2s;">
+                        <span style="font-size:16px;">🇬🇧</span> English
+                    </div>
+                </div>
+            </div>
+
             ${isLoggedIn ? `
             <button class="noti-btn" id="notificationBtn" title="Thông báo"
-                style="position:relative;width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--bg);border:1.5px solid var(--border);color:var(--text-2);cursor:pointer;transition:all var(--transition);flex-shrink:0;">
+                style="position:relative; width:40px; height:40px; border-radius:50%; display:flex; align-items:center; justify-content:center; background: rgba(0,0,0,0.03); border: 1px solid rgba(0,0,0,0.06); color: var(--text-2); cursor:pointer; transition:all var(--transition); flex-shrink:0;">
                 <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="m13.73 21a2 2 0 0 1-3.46 0"/></svg>
-                <span id="notiBadge" style="display:none;position:absolute;top:-4px;right:-4px;background:var(--primary);color:#fff;font-size:10px;font-weight:700;min-width:16px;height:16px;border-radius:50%;align-items:center;justify-content:center;line-height:1;border:2px solid var(--bg-white);padding:0 2px;">0</span>
+                <span id="notiBadge" style="display:none; position:absolute; top:-3px; right:-3px; background:#ef4444; color:#fff; font-size:10px; font-weight:700; min-width:16px; height:16px; border-radius:50%; align-items:center; justify-content:center; line-height:1; border:2px solid var(--bg-white); padding:0 2px;">0</span>
             </button>
 
-            <div class="user-menu" id="userMenu">
-                <button class="user-avatar-btn" id="userAvatarBtn" title="${user.name}">${initials}</button>
+            <div class="user-menu" id="userMenu" style="position:relative;">
+                <button class="user-avatar-btn" id="userAvatarBtn" title="${user ? user.name : ''}" style="width:40px; height:40px; border-radius:50%; background: linear-gradient(135deg, #7a1318, #54090c); color:#fff; font-weight:800; font-size:14px; border:2px solid #ffffff; box-shadow:0 2px 8px rgba(122,19,24,0.25); cursor:pointer; display:flex; align-items:center; justify-content:center; overflow:hidden; padding:0; transition:all 0.2s ease;">${avatarInner}</button>
                 <div class="user-dropdown" id="userDropdown">
                     <div class="user-info">
                         <div class="name">${user.name}</div>
@@ -41,22 +87,30 @@
                     <hr>
                     <a href="profile.html">
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M6 20v-2a6 6 0 0 1 12 0v2"/></svg>
-                        Hồ sơ cá nhân
+                        <span data-i18n="profile">Hồ sơ cá nhân</span>
+                    </a>
+                    <a href="student-dashboard.html">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                        <span data-i18n="learning_mgmt">Quản lý học tập</span>
                     </a>
                     <a href="my-courses.html">
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
-                        Khóa học của tôi
+                        <span data-i18n="my_courses">Khóa học của tôi</span>
                     </a>
+                    ${(user && (user.role === 'ADMIN' || user.role === 'TEACHER')) ? `
+                    <a href="dashboard.html" style="color: #7a1318; font-weight: 700;">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18"/><path d="M14 9h7"/><path d="M14 15h7"/></svg>
+                        <span data-i18n="admin_mgmt">Quản trị Admin</span>
+                    </a>` : ''}
                     <hr>
                     <a href="#" id="logoutBtn" style="color:var(--primary);">
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
-                        Đăng xuất
+                        <span data-i18n="logout">Đăng xuất</span>
                     </a>
                 </div>
             </div>
             ` : `
-            <a href="login.html" class="btn btn-secondary btn-sm">Đăng nhập</a>
-            <a href="login.html?tab=register" class="btn btn-primary btn-sm">Đăng ký</a>
+            <a href="login.html" class="btn btn-secondary btn-sm" style="border-radius:20px; padding:7px 18px; font-weight:600;" data-i18n="login">Đăng nhập</a>
             `}
         </div>
     </div>
@@ -228,7 +282,7 @@
                 document.head.appendChild(styleSheet);
             }
 
-            const title = type === 'CHAPTER_UNLOCKED' ? '🔓 Chương Mới Đã Mở Khóa!' : (type === 'COURSE_UPDATE' ? '📚 Cập Nhật Khóa Học' : '🔔 Thông Báo Mới');
+            const title = type === 'CHAPTER_UNLOCKED' ? 'Chương Mới Đã Mở Khóa!' : (type === 'COURSE_UPDATE' ? 'Cập Nhật Khóa Học' : 'Thông Báo Mới');
             toast.innerHTML = `
                 <div style="font-weight: 800; font-size: 11.5px; color: var(--primary); text-transform: uppercase; letter-spacing: 0.5px;">${title}</div>
                 <div>${message}</div>
@@ -293,7 +347,7 @@
                     </div>
                     <div style="font-size:13px;color:var(--text-2);line-height:1.5;">${n.message}</div>
                     ${!n.isRead ? `<button onclick="markNotificationRead(${n.id})"
-                        style="align-self:flex-end;background:var(--primary-light);border:1px solid rgba(193,32,38,.2);color:var(--primary);font-size:12px;font-weight:600;cursor:pointer;padding:4px 10px;border-radius:var(--radius);font-family:var(--font);transition:all var(--transition);">✓ Đánh dấu đã đọc</button>` : ''}
+                        style="align-self:flex-end;background:var(--primary-light);border:1px solid rgba(193,32,38,.2);color:var(--primary);font-size:12px;font-weight:600;cursor:pointer;padding:4px 10px;border-radius:var(--radius);font-family:var(--font);transition:all var(--transition);">Đánh dấu đã đọc</button>` : ''}
                 </div>`;
             }).join('');
         }

@@ -1,0 +1,24 @@
+# Gradle cache (rất nặng, không cần trong image)
+.gradle/
+
+# Build output (multi-stage build tự build lại)
+build/
+
+# Logs
+*.log
+hs_err_pid*.log
+replay_pid*.log
+
+# Git
+.git/
+.gitignore
+.gitattributes
+
+# IDE
+.vscode/
+.idea/
+*.iml
+
+# Docs
+*.md
+AI_Elearning_Project.md

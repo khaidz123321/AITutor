@@ -2,88 +2,79 @@
     let currentCourse = null;
     let enrolledData = null;
 
-    function init() {
+    async function init() {
         const params = new URLSearchParams(window.location.search);
         const courseId = parseInt(params.get('id')) || 1;
         const token = localStorage.getItem('ptit_token');
 
-        if (!token) {
-            window.location.href = 'login.html';
-            return;
-        }
-
-        // 1. Fetch course details
-        fetch(`/api/v1/courses/${courseId}`, {
-            headers: { 'Authorization': 'Bearer ' + token }
-        })
-            .then(res => {
-                if (res.status === 401) {
-                    localStorage.removeItem('ptit_token');
-                    window.location.href = 'login.html';
-                    return;
-                }
-                return res.json();
-            })
-            .then(resData => {
-                if (resData && resData.success) {
-                    currentCourse = resData.data;
-                    document.title = `${currentCourse.title} - PTIT E-Learning`;
-
-                    // 2. Fetch course chapters
-                    fetch(`/api/v1/courses/${courseId}/chapters`, {
-                        headers: { 'Authorization': 'Bearer ' + token }
-                    })
-                        .then(r => r.json())
-                        .then(chapData => {
-                            if (chapData && chapData.success) {
-                                currentCourse.chapters = chapData.data || [];
-                            } else {
-                                currentCourse.chapters = [];
-                            }
-
-                            // 3. Fetch user learning profile for this course
-                            fetch(`/api/v1/learning-profiles/me?courseId=${currentCourse.id}`, {
-                                headers: { 'Authorization': 'Bearer ' + token }
-                            })
-                                .then(r => r.json())
-                                .then(enrData => {
-                                    if (enrData && enrData.success) {
-                                        enrolledData = enrData.data;
-                                    } else {
-                                        enrolledData = null;
-                                    }
-                                    renderDetails();
-                                })
-                                .catch(err => {
-                                    console.error('Fetch enrollments error:', err);
-                                    enrolledData = null;
-                                    renderDetails();
-                                });
-                        })
-                        .catch(err => {
-                            console.error('Fetch chapters error:', err);
-                            currentCourse.chapters = [];
-                            renderDetails();
-                        });
-                }
-            })
-            .catch(err => {
-                console.error('Fetch course error:', err);
+        try {
+            // 1. Fetch course details
+            const res = await fetch(`/api/v1/courses/${courseId}`, {
+                headers: token ? { 'Authorization': 'Bearer ' + token } : {}
             });
+
+            if (!res || !res.ok) {
+                throw new Error('Course fetch failed');
+            }
+
+            const resData = await res.json();
+            if (resData && resData.success) {
+                currentCourse = resData.data;
+                document.title = `${currentCourse.title} - PTIT E-Learning`;
+
+                // 2. Fetch course chapters
+                try {
+                    const r = await fetch(`/api/v1/courses/${courseId}/chapters`, {
+                        headers: token ? { 'Authorization': 'Bearer ' + token } : {}
+                    });
+                    const chapData = await r.json();
+                    if (chapData && chapData.success) {
+                        currentCourse.chapters = chapData.data || [];
+                    } else {
+                        currentCourse.chapters = [];
+                    }
+                } catch (e) {
+                    currentCourse.chapters = [];
+                }
+
+                // 3. Fetch user learning profile for this course (Auto-enroll if not enrolled yet)
+                try {
+                    const profileRes = await fetch(`/api/v1/learning-profiles/me?courseId=${currentCourse.id}`, {
+                        headers: token ? { 'Authorization': 'Bearer ' + token } : {}
+                    });
+                    const enrData = await profileRes.json();
+                    if (enrData && enrData.success && enrData.data) {
+                        enrolledData = enrData.data;
+                    } else if (token) {
+                        // Auto-enroll student seamlessly
+                        const autoRes = await fetch(`/api/v1/courses/${currentCourse.id}/enroll`, {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                                'Authorization': 'Bearer ' + token
+                            },
+                            body: JSON.stringify({})
+                        });
+                        const autoData = await autoRes.json();
+                        if (autoData && autoData.success && autoData.data) {
+                            enrolledData = autoData.data;
+                        }
+                    }
+                } catch (e) {
+                    console.error('Learning profile error:', e);
+                }
+
+                renderDetails();
+            }
+        } catch (err) {
+            console.error('Fetch course error:', err);
+        }
     }
 
     function renderDetails() {
         if (!currentCourse) return;
 
         const lessons = currentCourse.chapters || [];
-        const learnItems = [
-            'Nắm vững kiến thức lý thuyết cốt lõi của môn học',
-            'Làm quen với các dạng bài tập thực tế thường gặp',
-            'Hỏi đáp 24/7 trực tiếp cùng Trợ lý Gia sư AI',
-            'Theo dõi tiến độ học tập chi tiết từng chương',
-            'Ôn tập và chuẩn bị thi cử hiệu quả nhất',
-            'Truy cập miễn phí toàn bộ tài nguyên học liệu'
-        ];
 
         // Hero
         const isDaiCuong = currentCourse.level === 'BEGINNER' || currentCourse.level === 'INTERMEDIATE';
@@ -96,7 +87,6 @@
                 <div class="detail-hero-meta">
                     <span>${lessons.length} chương</span>
                     <span>${currentCourse.createdByName || 'GV. PTIT'}</span>
-                    <span>4.8 / 5 &nbsp;(100+ đánh giá)</span>
                 </div>
                 <p class="detail-hero-desc">${currentCourse.description || 'Chưa có mô tả chi tiết cho khóa học này.'}</p>
                 <a href="ai-chat.html?id=${currentCourse.id}" class="btn" style="background:#fff;color:var(--primary);font-weight:700;margin-top:8px;">
@@ -104,13 +94,23 @@
                 </a>
             </div>`;
 
-        // Learn grid
-        document.getElementById('learnGrid').innerHTML =
-            learnItems.map(item => `<div class="learn-item">${item}</div>`).join('');
+        // Learn grid - display only if learnItems exist from backend
+        const learnGrid = document.getElementById('learnGrid');
+        const learnTitle = document.getElementById('learnTitle');
+        if (currentCourse.learnItems && Array.isArray(currentCourse.learnItems) && currentCourse.learnItems.length > 0) {
+            if (learnTitle) learnTitle.style.display = 'block';
+            if (learnGrid) {
+                learnGrid.style.display = 'grid';
+                learnGrid.innerHTML = currentCourse.learnItems.map(item => `<div class="learn-item">${item}</div>`).join('');
+            }
+        } else {
+            if (learnTitle) learnTitle.style.display = 'none';
+            if (learnGrid) learnGrid.style.display = 'none';
+        }
 
         // Course desc
         document.getElementById('courseDesc').textContent =
-            (currentCourse.description || '') + ' Khóa học được thiết kế phù hợp với chương trình đào tạo tại Học viện Công nghệ Bưu chính Viễn thông (PTIT), giúp sinh viên nắm vững kiến thức lý thuyết và kỹ năng thực hành. Tích hợp AI gia sư sẵn sàng giải đáp mọi thắc mắc 24/7.';
+            currentCourse.description || 'Chưa có mô tả chi tiết cho khóa học này.';
 
         // Render PDF lecture preview if available
         const pdfSection = document.getElementById('pdfLectureSection');
@@ -143,9 +143,9 @@
             let exerciseHTML = '';
             if (enrolledData) {
                 if (les.isLocked) {
-                    exerciseHTML = `<div style="margin-top:12px; color:var(--text-3); font-size:13px; font-style:italic;">🔒 Bài tập chương này bị khóa cho đến khi hoàn thành chương trước.</div>`;
+                    exerciseHTML = `<div style="margin-top:12px; color:var(--text-3); font-size:13px; font-style:italic;">Bài tập chương này bị khóa cho đến khi hoàn thành chương trước.</div>`;
                 } else if (isCompleted) {
-                    exerciseHTML = `<div style="background:#f0fdf4; border:1px solid #bbf7d0; color:#16a34a; padding:12px; border-radius:8px; margin-top:12px; font-size:13px; font-weight:600;">✓ Bạn đã hoàn thành toàn bộ bài tập của chương này!</div>`;
+                    exerciseHTML = `<div style="background:#f0fdf4; border:1px solid #bbf7d0; color:#16a34a; padding:12px; border-radius:8px; margin-top:12px; font-size:13px; font-weight:600;">Bạn đã hoàn thành toàn bộ bài tập của chương này!</div>`;
                 } else {
                     exerciseHTML = `<div class="exercise-container" id="ex-container-${les.id}" style="margin-top:12px;">Đang tải bài tập...</div>`;
                 }
@@ -161,7 +161,7 @@
                     <svg class="chapter-toggle" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
                 </div>
                 <div class="chapter-body open" style="display:block; padding: 16px 20px;">
-                    <p style="font-size: 14px; color: var(--text-2); margin-bottom: 12px; line-height: 1.6;">${les.content || 'Nội dung chương học chuẩn chương trình PTIT.'}</p>
+                    <p style="font-size: 14px; color: var(--text-2); margin-bottom: 12px; line-height: 1.6;">${les.content || ''}</p>
                     <div style="display:flex; justify-content:space-between; align-items:center; margin-top:8px; border-top: 1px solid var(--border-light); padding-top: 12px; margin-bottom:8px;">
                         <span class="status-badge ${isCompleted ? '' : 'pending'}">${isCompleted ? 'Đã hoàn thành' : 'Chưa hoàn thành'}</span>
                     </div>
@@ -284,7 +284,7 @@
                     <div id="ex-msg-${ex.id}" style="font-size:13px; margin-top:8px; font-weight:600; display:none;"></div>
                 </div>`;
             } else {
-                container.innerHTML = `<div style="background:#f0fdf4; border:1px solid #bbf7d0; color:#16a34a; padding:12px; border-radius:8px; font-size:13px; font-weight:600;">✓ Chương học này không có bài tập bắt buộc.</div>`;
+                container.innerHTML = `<div style="background:#f0fdf4; border:1px solid #bbf7d0; color:#16a34a; padding:12px; border-radius:8px; font-size:13px; font-weight:600;">Chương học này không có bài tập bắt buộc.</div>`;
             }
         })
         .catch(err => {
@@ -322,7 +322,7 @@
                 const result = resData.data;
                 if (result.isCorrect) {
                     msgDiv.style.color = '#16a34a';
-                    msgDiv.textContent = '✓ ' + (result.message || 'Chính xác!');
+                    msgDiv.textContent = (result.message || 'Chính xác!');
                     showToast('Chúc mừng! Đáp án chính xác.');
                     setTimeout(() => {
                         init();
@@ -397,7 +397,7 @@
         }
 
         let reviewsHTML = `
-            <div style="background:var(--bg-white);border:1px solid var(--border);border-radius:var(--radius-lg);padding:28px;">
+            <div style="background:var(--bg-white);border:1px solid var(--border);border-radius:var(--radius-lg);padding:28px;width:100%;box-sizing:border-box;">
                 <div style="display:flex;gap:32px;align-items:center;margin-bottom:24px;padding-bottom:24px;border-bottom:1px solid var(--border);">
                     <div style="text-align:center;min-width:100px;">
                         <div style="font-size:52px;font-weight:900;color:var(--primary);line-height:1;">${avgRating}</div>

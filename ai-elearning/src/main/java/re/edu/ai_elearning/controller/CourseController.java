@@ -141,4 +141,13 @@ public class CourseController {
         CourseResponse response = courseService.uploadLecturePdf(id, file);
         return ResponseEntity.ok(ApiResponse.success("Tải lên bài giảng PDF thành công", response));
     }
+
+    @PostMapping("/{id}/upload-thumbnail")
+    @PreAuthorize("hasAnyRole('ADMIN', 'TEACHER')")
+    public ResponseEntity<ApiResponse<CourseResponse>> uploadThumbnail(
+            @PathVariable Long id,
+            @RequestParam("file") MultipartFile file) {
+        CourseResponse response = courseService.uploadThumbnail(id, file);
+        return ResponseEntity.ok(ApiResponse.success("Tải lên ảnh đại diện thành công", response));
+    }
 }
