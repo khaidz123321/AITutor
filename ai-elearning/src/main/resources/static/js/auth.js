@@ -44,36 +44,25 @@ window.alert = function(msg) {
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    // ===== BANNER SLIDESHOW (4 IMAGES, 3 SECONDS EACH) =====
-    const banner = document.getElementById('authBanner');
-    if (banner) {
-        const images = [
-            'assets/images/auth_banner_1.png',
-            'assets/images/auth_banner_2.png',
-            'assets/images/auth_banner_3.png',
-            'assets/images/auth_banner_4.png'
-        ];
+    // ===== BANNER SLIDESHOW (crossfade between real img tags) =====
+    const slides = document.querySelectorAll('.banner-slide');
+    if (slides.length > 0) {
         let currentIndex = 0;
         const indicators = document.querySelectorAll('.indicator');
 
-        banner.style.backgroundSize = 'cover';
-        banner.style.backgroundPosition = 'center';
-        banner.style.transition = 'background-image 0.8s ease-in-out';
-
         function showSlide(idx) {
+            slides[currentIndex].classList.remove('active');
             currentIndex = idx;
-            banner.style.backgroundImage = `linear-gradient(160deg, rgba(15, 1, 2, 0.35), rgba(45, 5, 8, 0.25)), url('${images[idx]}')`;
+            slides[currentIndex].classList.add('active');
             indicators.forEach((ind, i) => ind.classList.toggle('active', i === idx));
         }
-
-        showSlide(0);
 
         indicators.forEach((ind, i) => {
             ind.addEventListener('click', () => showSlide(i));
         });
 
         setInterval(() => {
-            showSlide((currentIndex + 1) % images.length);
+            showSlide((currentIndex + 1) % slides.length);
         }, 3000);
     }    // ===== LOGIN FORM =====
     const loginForm = document.getElementById('loginForm');

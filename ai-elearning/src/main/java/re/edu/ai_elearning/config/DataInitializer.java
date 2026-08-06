@@ -51,11 +51,12 @@ public class DataInitializer implements CommandLineRunner {
 
             log.info("Created default user: email={}, role={}", email, role);
         } else {
-            user.setPasswordHash(passwordEncoder.encode(rawPassword));
+            // KHÔNG reset password ở đây để admin có thể đổi pass trên server thật
+            // user.setPasswordHash(passwordEncoder.encode(rawPassword));
             user.setRole(role);
             user.setIsActive(true);
             userRepository.save(user);
-            log.info("Reset password, role & active status for existing user: email={}, role={}", email, role);
+            log.info("Updated role & active status for existing user (password unchanged): email={}, role={}", email, role);
         }
     }
 }

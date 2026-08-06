@@ -35,7 +35,7 @@ def _get_local_client() -> OpenAI:
     Tránh phải restart server khi đổi URL ngrok trong .env.
     """
     load_dotenv(os.path.join(BASE_DIR, ".env"), override=True)
-    base_url = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434/v1")
+    base_url = os.getenv("OLLAMA_BASE_URL", "https://ollama.ptitaitutor.com/v1")
     return OpenAI(
         api_key="sk-no-key-required",
         base_url=base_url,

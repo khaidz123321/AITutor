@@ -1,0 +1,267 @@
+{
+    "subject": "Toán discrete - PTIT",
+    "chapter_number": 1,
+    "chapter_name": "Logic, Tập hợp và ứng dụng",
+    "questions": [
+        {
+            "id": "GT1_C1_1.1_Easy_001",
+            "lesson_number": "1.1",
+            "lesson_name": "Giới thiệu chung về Logic và Tập hợp",
+            "topic": "Khái niệm cơ bản",
+            "difficulty": "Easy",
+            "bloom_level": "Remembering",
+            "question_text": "What is the basic definition of a set in mathematics?",
+            "full_answer": "A set is a collection of distinct objects, considered as an object in its own right. The objects are called elements or members of the set.",
+            "scaffolding_steps": [
+                {
+                    "step_number": 1,
+                    "hint": "What does it mean to 'collect' objects?",
+                    "step_detail": "A collection can be any group of items, like books on a shelf or numbers in a list."
+                },
+                {
+                    "step_number": 2,
+                    "hint": "What makes these collections special in mathematics?",
+                    "step_detail": "In math, collections are considered as single entities with specific properties, such as being well-defined and having distinct elements."
+                }
+            ],
+            "common_mistakes": [
+                "Thinking that a set is just any group without considering the mathematical definition.",
+                "Confusing sets with other data structures like lists or arrays."
+            ]
+        },
+        {
+            "id": "GT1_C1_1.2_Medium_Understanding_002",
+            "lesson_number": "1.2",
+            "lesson_name": "Những kiến thức cơ bản về Logic mệnh đề",
+            "topic": "Phép toán logic",
+            "difficulty": "Medium",
+            "bloom_level": "Understanding",
+            "question_text": "Explain the concept of logical equivalence between propositions.",
+            "full_answer": "Logical equivalence occurs when two statements have the same truth value under all possible interpretations. Common equivalents include conjunction and disjunction with implication and biconditional.",
+            "scaffolding_steps": [
+                {
+                    "step_number": 1,
+                    "hint": "What does it mean for two statements to have the same truth value?",
+                    "step_detail": "It means that under all possible interpretations, both statements are either true or false together."
+                },
+                {
+                    "step_number": 2,
+                    "hint": "Can you think of examples where two different statements always have the same truth value?",
+                    "step_detail": "Examples include logical equivalences like p ∧ q being equivalent to ¬(¬p ∨ ¬q)."
+                }
+            ],
+            "common_mistakes": [
+                "Thinking that similar wording implies equivalence, without checking all interpretations.",
+                "Overlooking cases where statements might not always align in truth values."
+            ]
+        },
+        {
+            "id": "GT1_C2_2.1_Hard_Evaluating_003",
+            "lesson_number": "2.1",
+            "lesson_name": "Nguyên lý đếm cơ bản",
+            "topic": "Principe of counting",
+            "difficulty": "Hard",
+            "bloom_level": "Evaluating",
+            "question_text": "Prove that the number of subsets of a set with n elements is 2^n.",
+            "full_answer": "Using the principle of multiplication, for each element in the set, there are two choices: either include it in the subset or not. Therefore, the total number of subsets is 2 multiplied by itself n times, which equals 2^n.",
+            "scaffolding_steps": [
+                {
+                    "step_number": 1,
+                    "hint": "Consider smaller cases, like when n=1 or n=2. How many subsets do they have?",
+                    "step_detail": "For n=1, there are 2 subsets; for n=2, there are 4 subsets."
+                },
+                {
+                    "step_number": 2,
+                    "hint": "What pattern emerges as you increase the number of elements?",
+                    "step_detail": "Each additional element doubles the number of subsets, leading to an exponential relationship: 2^n."
+                }
+            ],
+            "common_mistakes": [
+                "Trying to count subsets directly without recognizing the exponential growth pattern.",
+                "Forgetting that each element has two choices (included or not) when forming subsets."
+            ]
+        },
+        {
+            "id": "GT1_C2_2.3_Easy_Applying_004",
+            "lesson_number": "2.3",
+            "lesson_name": "Đếm các hoán vị và tổ hợp",
+            "topic": "Combinations and permutations",
+            "difficulty": "Easy",
+            "bloom_level": "Applying",
+            "question_text": "Calculate the number of ways to choose 3 books from a shelf of 10.",
+            "full_answer": "The number of combinations is C(10,3) = 120.",
+            "scaffolding_steps": [
+                {
+                    "step_number": 1,
+                    "hint": "Do you need to consider the order of selection?",
+                    "step_detail": "Since we're only choosing, not arranging, it's a combination problem."
+                },
+                {
+                    "step_number": 2,
+                    "hint": "What formula do you use for combinations?",
+                    "step_detail": "The combination formula is C(n, k) = n! / (k!(n - k)!), so C(10,3) = 120."
+                }
+            ],
+            "common_mistakes": [
+                "Using permutations instead of combinations when order doesn't matter.",
+                "Miscalculating factorials or misapplying the combination formula."
+            ]
+        },
+        {
+            "id": "GT1_C2_2.4_Medium_Analyzing_005",
+            "lesson_number": "2.4",
+            "lesson_name": "Hệ thức truy hồi",
+            "topic": "Recurrence relations",
+            "difficulty": "Medium",
+            "bloom_level": "Analyzing",
+            "question_text": "Solve the recurrence relation T(n) = T(n-1) + n with T(0) = 0.",
+            "full_answer": "The solution is T(n) = (n^2 + n)/2, which can be derived by expanding the recurrence and summing the terms.",
+            "scaffolding_steps": [
+                {
+                    "step_number": 1,
+                    "hint": "Write out the first few terms to see a pattern.",
+                    "step_detail": "T(1) = 1, T(2) = 3, T(3) = 6, which looks like triangular numbers."
+                },
+                {
+                    "step_number": 2,
+                    "hint": "What formula represents the sum of the first n natural numbers?",
+                    "step_detail": "The sum is (n(n + 1))/2, so T(n) = (n^2 + n)/2."
+                }
+            ],
+            "common_mistakes": [
+                "Trying to find a homogeneous solution without considering the non-homogeneous part.",
+                "Overcomplicating the recurrence by introducing unnecessary variables."
+            ]
+        },
+        {
+            "id": "GT1_C1_1.5_Hard_Evaluating_006",
+            "lesson_number": "1.5",
+            "lesson_name": "Những nội dung cần ghi nhớ về lý thuyết tập hợp",
+            "topic": "Properties of sets",
+            "difficulty": "Hard",
+            "bloom_level": "Evaluating",
+            "question_text": "Prove that the union and intersection of two sets are distributive over each other.",
+            "full_answer": "Using Venn diagrams or truth tables, it can be shown that A ∪ (B ∩ C) = (A ∪ B) ∩ (A ∪ C) and A ∩ (B ∪ C) = (A ∩ B) ∪ (A ∩ C), demonstrating the distributive property.",
+            "scaffolding_steps": [
+                {
+                    "step_number": 1,
+                    "hint": "What does distributivity mean in this context?",
+                    "step_detail": "It means that union distributes over intersection and vice versa, similar to logical OR distributing over AND."
+                },
+                {
+                    "step_number": 2,
+                    "hint": "How can you visualize this using Venn diagrams?",
+                    "step_detail": "By drawing overlapping circles, you can see that A ∪ (B ∩ C) equals (A ∪ B) ∩ (A ∪ C), showing distributivity."
+                }
+            ],
+            "common_mistakes": [
+                "Thinking that union and intersection are not related in terms of distribution.",
+                "Not using Venn diagrams or truth tables to verify the properties."
+            ]
+        },
+        {
+            "id": "GT1_C2_2.3_Medium_Applying_007",
+            "lesson_number": "2.3",
+            "lesson_name": "Chỉnh hợp không lặp",
+            "topic": "Permutations",
+            "difficulty": "Medium",
+            "bloom_level": "Applying",
+            "question_text": "How many ways can 5 people arrange themselves in a line?",
+            "full_answer": "The number of permutations is 5! = 120.",
+            "scaffolding_steps": [
+                {
+                    "step_number": 1,
+                    "hint": "Is the order important here?",
+                    "step_detail": "Yes, each different arrangement is unique, so it's a permutation problem."
+                },
+                {
+                    "step_number": 2,
+                    "hint": "What formula do you use for permutations of all items?",
+                    "step_detail": "It's n!, so 5! = 120 ways."
+                }
+            ],
+            "common_mistakes": [
+                "Using combinations instead when order matters.",
+                "Forgetting to calculate the factorial correctly."
+            ]
+        },
+        {
+            "id": "GT1_C2_2.4_Easy_Remembering_008",
+            "lesson_number": "2.4",
+            "lesson_name": "Giải công thức truy hồi tuyến tính thuận nhất",
+            "topic": "Recurrence relations solving",
+            "difficulty": "Easy",
+            "bloom_level": "Remembering",
+            "question_text": "What is the general solution of a linear homogeneous recurrence relation with constant coefficients?",
+            "full_answer": "The general solution is a combination of the homogeneous and particular solutions, expressed as C(r1^k + r2^k + ... + rn^k), where ri are the roots of the characteristic equation.",
+            "scaffolding_steps": [
+                {
+                    "step_number": 1,
+                    "hint": "What do you need to find first?",
+                    "step_detail": "You typically find the characteristic equation and its roots."
+                },
+                {
+                    "step_number": 2,
+                    "hint": "How do these roots form the general solution?",
+                    "step_detail": "The solution is a combination of terms like r^n, where r are the roots: C(r1^n + r2^n + ...)."
+                }
+            ],
+            "common_mistakes": [
+                "Ignoring repeated roots and not adjusting the solution accordingly.",
+                "Not considering the possibility of complex roots."
+            ]
+        },
+        {
+            "id": "GT1_C1_1.2_Hard_Evaluating_009",
+            "lesson_number": "1.2",
+            "lesson_name": "Suy tưởng tương đương giữa các mệnh đề",
+            "topic": "Logical equivalences",
+            "difficulty": "Hard",
+            "bloom_level": "Evaluating",
+            "question_text": "Prove that p → q is logically equivalent to ¬p ∨ q.",
+            "full_answer": "By constructing truth tables, we can see that both expressions have identical truth values under all possible interpretations, thus proving their logical equivalence.",
+            "scaffolding_steps": [
+                {
+                    "step_number": 1,
+                    "hint": "What does implication mean in terms of truth values?",
+                    "step_detail": "p → q is false only when p is true and q is false."
+                },
+                {
+                    "step_number": 2,
+                    "hint": "How can you express this using disjunction?",
+                    "step_detail": "¬p ∨ q covers all cases where either p is false or q is true, which matches the implication truth table."
+                }
+            ],
+            "common_mistakes": [
+                "Not constructing the truth tables to verify equivalence.",
+                "Confusing implication with other logical connectives like biconditional."
+            ]
+        },
+        {
+            "id": "GT1_C2_2.5_Easy_Understanding_010",
+            "lesson_number": "2.5",
+            "lesson_name": "Qui tắc các bài toán đơn giản",
+            "topic": "Counting rules",
+            "difficulty": "Easy",
+            "bloom_level": "Understanding",
+            "question_text": "Explain the difference between permutations and combinations.",
+            "full_answer": "Permutations consider the order of elements, while combinations do not. Therefore, there are more permutations than combinations for the same set.",
+            "scaffolding_steps": [
+                {
+                    "step_number": 1,
+                    "hint": "What role does order play in each?",
+                    "step_detail": "Permutations consider order, while combinations do not."
+                },
+                {
+                    "step_number": 2,
+                    "hint": "How does this affect the number of possible arrangements?",
+                    "step_detail": "Since permutations account for different orders, there are more permutations than combinations for the same set size."
+                }
+            ],
+            "common_mistakes": [
+                "Thinking that order doesn't matter in permutations.",
+                "Miscalculating the difference between C(n,k) and P(n,k)."
+            ]
+        }
+    ]
+}

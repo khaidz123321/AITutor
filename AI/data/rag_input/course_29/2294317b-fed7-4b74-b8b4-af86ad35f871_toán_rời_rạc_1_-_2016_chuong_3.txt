@@ -1,0 +1,475 @@
+# CHUƠNG 3. BÀI TOÁN LIỆT KÊ
+
+Nội dung bài toán đề là đếm xem có bao nhiêu cấu hình tối hợp thỏa mãn một số tính chất nào đó. Bài toán liệt kê không chỉ đếm được các cấu hình tối hợp thỏa mãn các tính chất đặt ra mà còn xét trung bình cấu hình tối hợp đó là gì. Đối với mỗi bài toán, khi chưa tìm được thuật giải thì liệt kê được xem là biện pháp cuối cùng để thực hiện với sức mạnh của máy tính. Có thể nói, liệt kê dùng được xem là phương pháp giải vấn đề một bài toán bằng máy tính. Nội dung chính của chương này tập trung giải quyết những vấn đề cơ bản sau:
+
+$\checkmark$ Giới thiệu bài toán liệt kê.   
+$\checkmark$ Thuật toán và độ phức tạp tính toán.   
+$\checkmark$ Giải quyết bài toán liệt kê bằng phương pháp sinh.   
+$\checkmark$ Giải quyết bài toán liệt kê bằng phương pháp quay lui.
+
+Bản đọc có thể tìm thấy cách giải nhiều bài toán liệt kê trong các tài liệu [1] và [2] trong tài liệu tham khảo.
+
+# 3.1 - GIỚI THIỆU BÀI TOÁN
+
+Bài toán đưa ra danh sách tất cả các cấu hình tối hợp có thể được gọi là bài toán liệt kê tối hợp. Khác với bài toán đếm là tìm kiếm một công thức cho lời giải, bài toán liệt kê lại cần xác định một thuật toán để theo đó có thể dựng lần lượt tất cả các cấu hình cần quan tâm. Một thuật toán liệt kê phải đảm bảo hai nguyên tắc:
+
+Không được lặp lại bất kỳ một cấu hình nào.   
+Không được bỏ sót bất kỳ một cấu hình nào.
+
+Vi dụ 1. Cho tập hợp các số $a_1, a_2, \ldots, a_n$ và số M. Hãy tìm tất cả các tập con k phần tử của dãy số $\{ a _ { n } \}$ sao cho tổng số các phần tử trong tập con đó đúng bằng M.
+
+Lời giải: Như chúng ta đã biết, số các tập con k phần tử của tập gồm n phần tử là $C(n,k)$. Như vậy chúng ta cần phải duyệt trong số $C(n,k)$ tập k phần tử để lấy ra những tập có tổng các phần tử đúng bằng M. Vì không thể xác định được có bao nhiêu tập k phần tử từ tập n phần tử có tổng các phần tử đúng bằng M nên chúng ta chỉ còn cách liệt kê các cấu hình thỏa mãn điều kiện đã cho.
+
+Vi dụ 2. Một thương nhân đi bán hàng tại nhiều thành phố. Chỉ ta có thể bắt đầu hành trình của mình tại một thành phố nào đó nhưng phải qua 7 thành phố kia theo bất kỳ thứ tự nào mà chỉ ta muốn. Hãy chỉ ra lộ trình ngắn nhất mà chỉ ta có thể đi.
+
+Lời giải: Vì thành phố xuất phát đã được xác định. Do vậy thương nhân có thể chọn tùy ý 7 thành phố con lại để hành trình. Như vậy, tất cả số hành trình của thương nhân có thể đi qua là $7! = 5040$ cách. Tuy nhiên trong 5040 cách chúng ta phải duyệt toàn bộ để chỉ ra một hành trình là ngắn nhất.
+
+Có thể nói phương pháp liệt kê là biện pháp cuối cùng nhưng cũng là biện pháp phù dụng nhất để giải quyết các bài toán phức tạp. Khó khăn chính của phương pháp này là sự bùng nó phức tạp. Để xây dựng chung 1 cấu hình (con số này không phải là lớn đối với các bài toán phức tạp như số mặt thể tích $\mathrm{D_n}$, số phần tử $\mathrm{U_n}$, số hình vuông là tính lũy thừa), ta giả sử cần 1 giây để liệt kê một cấu hình thì chung ta cũng cần 31 năm mới giải quyết xong. Tuy nhiên với sự phát triển nhanh chóng của máy tính, bằng phương pháp liệt kê, nhiều bài toán khó của lý thuyết phức tạp đã được giải quyết và góp phần thúc đẩy sự phát triển của nhiều ngành toán học.
+
+# 3.2. Thuật toán và số phức tập tin
+
+# 3.2.1. Ví dụ và Định nghĩa
+
+Định nghĩa. Dãy hữu hạn các thao tác số cặp $F = F_1, F_2, \ldots, F_n(\text{Input})$ $$\rightarrow Output$$ được gọi là mặt thuật toán trên tập thông tin vào Input để có được luồng ra Output. Dãy các thao tác số cặp ở đây được hiểu là các phép toán số học, các phép logic, các phép toán so sánh. Mặt thuật toán cần thỏa mãn các tính chất dưới đây:
+
+Tính đơn định. Ở mỗi bước của thuật toán, các thao tác số cấp phải hết sức rõ ràng, không gây nên sự lúng túng, nhập nhằng, đa nghĩa. Thực hiện đúng các bước của thuật toán trên tập dữ liệu vào, chỉ cho duy nhất một kết quả ra.
+
+Tính đình. Thuật toán không được rơi vào quá trình vô hạn. Phải định lại và cho kết quả sau một số hữu hạn các bước.
+
+Tính dung. Sau khi thực hiện tất cả các bước của thuật toán theo đúng qui trình đã định, ta phải nhận được kết quả mong muốn với mọi bộ dữ liệu đầu vào. Kết quả đó được kiểm chứng bằng yêu cầu của bài toán.
+
+Tính phù dụng. Thuật toán phải được sửa đổi để thích ứng được với bất kỳ bài toán nào trong lớp các bài toán cùng loại và có thể làm việc trên nhiều loại dữ liệu khác nhau.
+
+Tính khả thi. Thuật toán phải được hiểu, được cài đặt, thực hiện được trên máy tính với thời gian cho phép.
+
+# 3.2.2 Phương pháp biểu diễn thuật toán:
+
+Thường thường, để biểu diễn một thuật toán ta có thể sử dụng các phương pháp sau:
+
+Biểu diễn bằng ngôn ngữ tự nhiên. Ngôn ngữ tự nhiên là phương tiện giao tiếp giữa con người với con người. Ta có thể sử dụng chính ngôn ngữ này vào việc biểu diễn thuật toán.
+
+Ngôn ngữ hình thức. Ngôn ngữ hình thức là phương tiện giao tiếp trung gian giữa con người và hệ thống máy tính. Ví dụ ngôn ngữ so sánh khởi động, ngôn ngữ tra cứu tự nhiên, ngôn ngữ đặc tả. Đặc điểm chung của các loại ngôn ngữ này là việc sử dụng nó rất gần với ngôn ngữ tự nhiên và ngôn ngữ máy tính. Ngôn ngữ máy tính. Là phương tiện giao tiếp giữa máy tính và máy tính. Trong trường hợp này ta có thể sử dụng bất kỳ ngôn ngữ lập trình nào để mô tả thuật toán.
+
+Ghi chú. Trong các phương pháp biểu diễn thuật toán, phương pháp biểu diễn bằng ngôn ngữ hình thức được sử dụng rộng rãi vì nó gần với ngôn ngữ tự nhiên và không phụ thuộc vào ngôn ngữ máy tính.
+
+Ví dụ 1. Biểu diễn thuật toán tìm USCLN (a, b) bằng ngôn ngữ tự nhiên.
+
+Đầu ra (Output). Số nguyên lớn nhất để a và b đều chia hết cho u.
+Thuật toán (Euclid Algorithm): Bước 1. Đưa vào hai số tự nhiên a và b. Bước 2. Nếu $b \neq 0$ thì chuyển đến bước 3, nếu $\scriptstyle b = 0$ thì thực hiện bước 4. Bước 3. Đặt $r = a \mod b; a = b$, $b = r$; Sau đó quay trở lại bước 2. Bước 4 (Output). Kết luận $u = a$ là số nguyên cần tìm.
+
+Ví dụ 2. Biểu diễn thuật toán tìm USCLN (a, b) bằng ngôn ngữ hình thức.
+
+Thuật toán Euclid:  
+1. Đầu vào (Input): a∈N, b∈N.  
+Đầu ra (Output): $s = \max\{ u \in \mathbb{N} : a \mod u = 0 \text{ và } b \mod u = 0 \}$  
+Format: $s = \text{Euclid}(a, b)$.  
+Actions: while $(b \neq 0)$ do $r = a \mod b; a = b; b = r;$  
+endwhile; return(a);  
+Endactions.
+
+Ví dụ 3. Biểu diễn thuật toán tìm USCLN (a, b) bằng ngôn ngữ lập trình C++:  
+
+```cpp
+int USCLN(int a, int b) {  
+    while(b != 0) {  
+        int r = a % b;  
+        a = b;  
+        b = r;  
+    }  
+    return(a);  
+}
+```
+
+# 3.2.3. Đánh giá phức tạp thuật toán
+
+Một bài toán có thể thực hiện bằng nhiều thuật toán khác nhau. Chọn giải thuật nhanh nhất giải bài toán là một nhu cầu của thực tế. Vì vậy ta cần phải có sự ước lượng cụ thể để minh chứng bằng toán học mức độ nhanh chậm của mỗi giải thuật.
+
+Khái niệm đánh giá phức tạp thuật toán:
+
+Thời gian thực hiện một giải thuật bằng chương trình máy tính phụ thuộc vào các yếu tố:  
+Kích thước dữ liệu vào: Dữ liệu càng lớn thì thời gian xử lý càng chậm.  
+Phần cứng máy tính: Máy có tốc độ cao thể hiện nhanh hơn trên máy có tốc độ thấp. Tuy vậy, yếu tố này không ảnh hưởng đến quá trình xác định thời gian thực hiện của thuật toán nếu xem xét thời gian thực hiện thuật toán như một hàm của độ dài dữ liệu T(n).
+
+Tổng quát, cho hai hàm $f(x)$, $g(x)$ xác định trên tập các số nguyên dương hoặc tập các số thực vào tập các số thực. Hàm $f(x)$ được gọi là $O(g(x))$ nếu tồn tại một hằng số $C > 0$ và một số tự nhiên $n_0$ sao cho:
+
+$$
+| f(x) | \le C . | g(x) | \quad \forall x \ge n_0.
+$$
+
+Điều này có nghĩa với các giá trị $x \ge n_0$, hàm $f(x)$ bị chặn trên bởi hằng số $C$ nhân với $g(x)$. Nếu $f(x)$ là thời gian thực hiện của một thuật toán thì ta nói thuật toán có cấp $g(x)$ hay độ phức tạp thuật toán là $O(g(x))$.
+
+Ghi chú. Các hằng số $C, n_0$ thỏa mãn điều kiện trên không duy nhất. Nếu cùng lúc $f(x)$ là $O(g(x))$ và $h(x)$ thỏa mãn $g(x) < h(x)$ với $x > n_0$ thì ta cũng có $f(x)$ là $O(h(n))$.
+
+Ví dụ 1. Cho $f(x) = a_n x^n + a_{n-1} x^{n-1} + \ldots + a_1 x + a_0$. Trong đó, $a_i$ là các số thực $(i = 0, 1, 2, \ldots, n)$. Khi đó $f(x) = O(x^n)$.
+
+Chứng minh. Thật vậy, với mọi $x > 1$:
+
+$$
+\begin{array} { r l }
+& { \left| f ( x ) \right| = \left| a _ { n } x ^ { n } + a _ { n - 1 } x ^ { n - 1 } + \ldots + a _ { 1 } x + a _ { 0 } \right| } \\
+& { \qquad \ldots \leq \left| a _ { n } \right| x ^ { n } + \left| a _ { n - 1 } \right| x ^ { n - 1 } + \ldots + \left| a _ { 1 } \right| x + \left| a _ { 0 } \right| } \\
+& { \qquad \ldots \leq \left| a _ { n } \right| x ^ { n } + \left| a _ { n - 1 } \right| x ^ { n } + \ldots + \left| a _ { 1 } \right| x ^ { n } + \left| a _ { 0 } \right| x ^ { n } } \\
+& { \qquad \ldots \leq x ^ { n } \left( \left| a _ { n } \right| + \left| a _ { n - 1 } \right| + \ldots + \left| a _ { 1 } \right| + \left| a _ { 0 } \right| \right) } \\
+& { \qquad \ldots \leq C . x ^ { n } = O ( x ^ { n } ) . } \\
+& { C = \left( \left| a _ { n } \right| + \left| a _ { n - 1 } \right| + \ldots + \left| a _ { 1 } \right| + \left| a _ { 0 } \right| \right) }
+\end{array}
+$$
+
+Ví dụ 2. Tìm đạ phiríc tâp thuat toán sap xép kiểụ Bubble-Sort?
+
+Void Bubble-Sort (int A[], int n) {
+
+for $\scriptstyle ( { \mathrm { i = 1 } } ; { \mathrm { i < n } } ; { \mathrm { i + + } } )$ {
+    for $\scriptstyle { \mathrm { j = i + 1 } ; \mathrm { j <= n } ; \mathrm { j + + } }$ {
+        if $\mathrm { ( A [ i ] > A [ j ] ) }$ {
+            ${ \mathrm { t } } = { \mathrm { A [ i ] } } ;
+            { \mathrm { A [ i ] } } = { \mathrm { A [ j ] } } ;
+            { \mathrm { A [ j ] } } = { \mathrm { t } } ;
+        }
+    }
+}
+
+Lời giải. Sử dụng trực tiếp nguyên lý công ta có:
+
+Với $\mathrm{i} = 1$ ta cần sử dụng $n-1$ phép so sánh A[i] với A[j]; Với $\mathbf{i} = 2$ ta cần sử dụng $n-1$ phép so sánh A[i] với A[i-1]; So sánh Vói $\mathrm{i} = n - 1$ ta cần sử dụng 1 phép so sánh A[i] với A[j];
+
+Vì vậy tổng số các phép toán cần thực hiện là:
+
+$$
+\mathrm{S} = (n - 1) + (n - 2) + \ldots + 2 + 1 = n(n - 1)/2 \leq n^2 = O(n^2).
+$$
+
+Ghi chú. Đánh giá phức tạp thuật toán cũng là số lần thực hiện phép toán tích cực. Phép toán tích cực là phép toán thực hiện nhiều nhất đối với thuật toán.
+
+# Một số tính chất của độ phức tạp thuật toán:
+
+Với $\operatorname{P}(\mathfrak{n})$ là một đa thức bậc $k$ thì ${\mathrm{O}}(\mathrm{P}(\mathfrak{n})) = {\mathrm{O}}(\mathfrak{n}^{\mathrm{k}})$. Vì thế, ta nói, một thuật toán có độ phức tạp tập cấp đa thức là $\mathrm{O}(n^k)$.
+
+Với $a$, $b$ là hai cơ số tùy ý và $f(n)$ là một hàm xác định dương thì 
+\[20 \log_a f(n) = \log_a b . \log_b (f(n)).\]
+Vì vậy độ phức tạp thuật toán cấp logarit được ký hiệu là $\mathrm{O}(\log(f(n))$ mà không cần quan tâm đến cơ số.
+
+Nếu độ phức tạp thuật toán là hằng số, nghĩa là thời gian tính toán không phụ thuộc vào độ dài dữ liệu được ký hiệu là $\mathrm{O}(1)$.
+
+Một giải thuật có cấp $2^{\mathfrak{n}}$, $n!$, $n"$ được gọi là giải thuật hàm mũ. Những giải thuật này thường có tốc độ rất chậm.
+
+Độ phức tạp tính toán của một đoạn chương trình P chính bằng số lần thực hiện mỗi phép toán tích cực. Trong đó, phép toán tích cực trong một đoạn chương trình là phép toán mà số lần thực hiện nó không ít hơn các phép toán khác.
+
+Các dạng hàm đánh giá độ phức tạp thuật toán:
+
+![](images/f686cb0608b84468219cb10c8ae3beece454c6f60c48ca1fefe64093bdb7a064.jpg)
+
+# 3.2.4. Quy tắc xác định độ phức tạp thuật toán
+
+Qui tắc tổng: Nếu $\mathrm{f_{1}}(\mathbf{x})$ có độ phức tạp là $\mathrm{O}(g_{1}(\mathbf{x}))$ và $\mathrm{f_{2}}(\mathbf{x})$ có độ phức tạp là $\mathrm{O}(g_{2}(\mathbf{x}))$ thì độ phức tạp của ${\displaystyle (f_{1}(\mathbf{x}) + f_{2}(\mathbf{x}))}$ là $\mathbf{O} (\operatorname{Max}(g_{1}(\mathbf{x}), g_{2}(\mathbf{x})))$：
+
+# Chứng minh.
+
+Vì $f_1(x)$ có độ phức tạp là $\mathrm{O(g_1(x))}$ nên tồn tại hằng số $\mathrm{C_1}$ và $\mathbf{k_1}$ sao cho $\big| f_{1}(x) \big| \leq \big| g_{1}(x) \big|$ với mọi $x \geq k_1$，
+
+Vì $f_2(x)$ có độ phức tạp là $\mathrm{O(g_2(x))}$ nên tồn tại hằng số $\mathbf{C_2}$ và $\mathbf{k_2}$ sao cho $\big| f_{2}(x) \big| \leq \big| g_{2}(x) \big|$ với mọi $x \geq k_2$，
+
+Ta lại có :
+
+$$
+\begin{array} { r l }
+{ \left| \mathrm { f } _ { 1 } ( \mathrm { x } ) + \mathrm { f } _ { 2 } ( \mathrm { x } ) \right| \le \left| \mathrm { f } _ { 1 } ( \mathrm { x } ) \right| + \left| \mathrm { f } _ { 2 } ( \mathrm { x } ) \right| ~ } & { }
+\\
+{ \le \mathrm { C } _ { 1 } \bigl | \mathrm { g } _ { 1 } ( \mathrm { x } ) \bigr | + \mathrm { C } _ { 2 } \bigl | \mathrm { g } _ { 2 } ( \mathrm { x } ) \bigr | ~ } & { }
+\\
+{ \le \mathrm { C } \bigl | \mathrm { g } ( \mathrm { x } ) \bigr | \quad \forall \mathrm { x } > \mathrm { k } ; }
+\end{array}
+$$
+
+Trong dó, $\mathrm { C } = \mathrm { C } _ { 1 } + \mathrm { C } _ { 2 }, \mathrm { g } ( \mathrm { x } ) = \operatorname* { max } ( \mathrm { g } _ { 1 } ( \mathrm { x } ) , \mathrm { g } _ { 2 } ( \mathrm { x } ) ), \mathrm { k } = \operatorname* { max } ( \mathrm { k } _ { 1 } , \mathrm { k } _ { 2 } ).$
+
+Tổng quát. Nếu đồ phức tập của $\mathrm{f}_1(x), \mathrm{f}_2(x), \ldots, \operatorname{f_m}(x)$ lần lượt là $\mathrm{O}(\mathrm{g}_1(x)), \mathrm{O}(\mathrm{g}_2(x)), \ldots, \mathrm{O}(\mathrm{g}_m(x))$ thì đồ phức tập của $\mathrm{f_1(x) + f_2(x) + \ldots + f_m(x)}$ là $\mathrm{O}(\max(g_1(x), g_2(x), \ldots, g_m(x)))$:
+
+Quy tắc nhân: Nếu $\operatorname{f}(x)$ có đồ phức tập là $\mathrm{O}(g(x))$ thì đồ phức tập của $\mathbf{f^n}(x)$ là $\operatorname{O}(\mathbf{g^n}(x))$. Trong đó:
+
+$$
+\begin{array} { l } { { \bf f } ^ { \mathrm { n } } ( { \bf x } ) = { \bf f } ( { \bf x } ) . { \bf f } ( { \bf x } ) . . . . { \bf f } ( { \bf x } ) / / { \mathrm { n } } \mathrm { lần } } \\ { { \bf g } ^ { \mathrm { n } } ( { \bf x } ) = { \bf g } ( { \bf x } ) . { \bf g } ( { \bf x } ) . . . { \bf g } ( { \bf x } ) / / { \mathrm { n } } \mathrm { lần } }
+\end{array}
+$$
+
+Nói cách khác, đoạn chương trình $\mathrm { \bf P }$ có thời gian thực hiện $\mathrm { T } ( \mathfrak { n } ) = \mathrm { O } ( \operatorname { f } ( \mathfrak { n } ) )$. Khi đó, nếu thực hiện $\mathbf { k } ( \mathbf { n } )$ lần đoạn chương trình $\mathrm { \bf P }$ với $\mathbf { k } ( \mathbf { n } )$ là ${ \mathrm { O } } ( { \mathrm { g } } ( { \mathrm { n } } ) )$ thì độ phức tạp tập tính toán là $\operatorname { O } ( \operatorname { f } ( \mathbf { n } ) . \operatorname { g } ( \mathbf { n } ) )$.
+
+Chứng minh. Thật vậy, theo giả thiết $\operatorname { f } ( \mathbf { x } )$ là $\mathrm { O } ( g ( x ) )$, nên tồn tại hằng số $C$ và $\mathbf { k }$ sao cho với mọi $\mathbf { x } > \mathbf { k }$ thì ${ | \mathrm { f ( x ) } | \le C . | g ( x ) | }$. Ta có:
+
+$$
+\begin{array} { r l }
+& { \left| f ^ { n } \big( x \big) \right| = \left| f ^ { 1 } \big( x \big) . f ^ { 2 } \big( x \big) . . . f ^ { n } \big( x \big) \right| } \\
+& { \qquad \leq \left| C . g ^ { 1 } \big( x \big) . C . g ^ { 2 } \big( x \big) . . . C . g ^ { n } \big( x \big) \right| } \\
+& { \qquad \leq C ^ { n } \big| g ^ { n } \big( x \big) \big| = O \big( g ^ { n } \big( x \big) \big) }
+\end{array}
+$$
+
+# 3.2.5. Đánh giá độ phức tạp của các cấu trúc lệnh
+
+Để đánh giá độ phức tạp của một thuật toán đã được mã hóa thành chương trình máy tính ta thực hiện theo một số qui tắc sau.
+
+Độ phức tạp hang số O(1): đoạn chương trình không chứa vòng lặp hoặc lời gọi đệ qui có tham biến là một hằng số.
+
+Ví dụ 1.7. Đoạn chương trình dưới đây có độ phức tạp hàng số.
+```for ( i = I ; i <= c ; i++) {```
+- Đánh giá các chỉ thị có độ phức tạp ${\cal O}(l)$:
+
+Độ phức tạp O(n): Độ phức tạp của hàm hoặc đoạn code là O(n) nếu biến trong vòng lặp tăng hoặc giảm theo một hằng số C.
+
+Ví dụ 1.8. Đoạn code dưới đây có độ phức tạp hàng số.
+```for ( i = 1 ; i <= n ; i = i + c ) {```
+- Đánh giá các chỉ thị có độ phức tạp $O(l)$:
+```for ( i = n ; i > 0 ; i = i - c ) {```
+- Đánh giá các chỉ thị có độ phức tạp $O(l)$.
+
+Đặc biệt tập đa thức ${ \bf O } ( { \bf n } ^ { \mathrm { c } } ) { \bf : \mathrm { D } } \hat { \bf 0 }$ đặc biệt tập của $c$ vòng lặp liên tiếp, mỗi vòng lặp đều có đặc biệt tập ${ \mathrm { O } } ( { \mathfrak { n } } )$ là $\mathbf { O } ( \mathbf { n } ^ { \mathrm { c } } )$:
+
+Ví dụ 1.9. Đoạn code dưới đây có độ phức tạp $O(n^2)$ for $(\mathrm{i} = 1; \mathrm{i} <= \mathrm{n}; \mathrm{i} = \mathrm{i} + \mathrm{c})$ {
+
+for $(\mathrm{j} = 1; \mathrm{j} <= \mathrm{n}; \mathrm{j} = \mathrm{j} + \mathrm{c})$ { 
+
+$(20 < \text{Tổng các chỉ số có độ phức tạp } O(1) >)$
+
+}
+
+for $(\mathrm{i} = \mathrm{n}; \mathrm{i} > 0; \mathrm{i} = \mathrm{i} - \mathrm{c})$ {
+
+for $(\mathrm{j} = \mathrm{i} - 1; \mathrm{j} >= 1; \mathrm{j} = \mathrm{j} - \mathrm{c})$ { 
+
+$(20 < \text{Tổng các chỉ số có độ phức tạp } O(1) >)$
+
+}
+
+Độ phức tạp logarit ${\bf O} ( {\bf Log(n)} ) \colon {\mathrm{D}} \hat{\varrho}$ độ phức tạp của vòng lặp là $\log(n)$ nếu biểu thức khởi đầu của vòng lặp được chia hoặc nhân với một hằng số $c$.
+
+Ví dụ 1.10. Đoạn code dưới đây có độ phức tạp log cho $(\mathrm{i} = 1; \mathrm{i} < = \mathrm{n}; \mathrm{i} = \mathrm{i} * \mathrm{c})$ {l < Tạp các chỉ thị có độ phức tạp } for $(\mathrm{j} = \mathrm{n}; \mathrm{j} > 0; \mathrm{j} = \mathrm{j} / \mathrm{c}) \{$ Tạp các chỉ thị có độ phức tạp (1)>; 1
+
+Độ phức tạp hàng số O(Log (Log(n))): nếu biểu thức khởi đầu của vòng lặp được nhận hoặc chia cho một hàm mũ.
+
+Ví dụ 1.11. Đoạn code dưới đây có độ phức tạp log log(n). for $(\mathrm{i} = 1; \mathrm{j} < = \mathrm{n}$ ; j\*= Pow(i, c)) ? {Tạp các chỉ thị có độ phức tạp $O (l) >$ ·， for $(\mathrm{j} = \mathrm{n}; \mathrm{j} >= 0; \mathrm{j} = \mathrm{j}. }$ $\ L =$ {Ta $O (l) >$
+
+Độ phức tạp của chương trình: độ phức tạp của một chương trình bằng số lần thực hiện mặt chỉ thị tích cực trong chương trình đó. Trong đó, mặt chỉ thị được gọi là tích cực trong chương trình nếu chỉ thị đó phụ thuộc vào độ dài dữ liệu và thực hiện không ít hơn bất kỳ một chỉ thị nào khác trong chương trình.
+
+Vi dụ 1.12. Tìm đàm phức tập thuật toán sắp xếp kiểu Bubble-Sort? Void Bubble-Sort(int A[], int n) { for $(i = 1 ; i < n ; i + +)$ { for $(j = i + 1 ; j <= n ; j + +)$ { if $(A[i] > A[j])$ { đổi chính là chỉ thị tích cực $t = A[i]; A[i] = A[j]; A[j] = t;$ }
+
+Lời giải. Sử dụng trực tiếp nguyên lý công ta có:
+
+Với $\mathrm{i} = 1$ ta cần sử dụng $n-1$ phép so sánh $A[i]$ với $A[j];$
+Với $\mathbf{i} = 2$ ta cần sử dụng $n-1$ phép so sánh $A[i]$ với $A[j];$
+...
+Với $\dot{\mathrm{i}} = \mathrm{n - 1}$ ta cần sử dụng $1$ phép so sánh $A[i]$ với $A[j];$
+
+Vì vậy tổng số các phép toán cần thực hiện là:
+
+$$
+\mathbf{S} = (n-1) + (n-2) + \ldots + 2 + 1 = n(n - 1)/2 \leq n^2 = O(n^2).
+$$
+
+Ghi chú. Đàm phức tập thuật toán cũng là số lần thực hiện phép toán tích cực. Phép toán tích cực là phép toán thực hiện nhiều nhất đối với thuật toán.
+
+## 3.3 Phương pháp sinh
+
+Mô hình thuật toán sinh được dùng để giải quyết các bài toán liệt kê, bài toán đếm, bài toán tối ưu, bài toán tồn tại thỏa mãn hai điều kiện:
+
+Điều kiện 1: Có thể xác định được đồ thị thuật toán trên tập các cấu hình cần liệt kê của bài toán. Biết cấu hình đầu tiên, biết cấu hình cuối cùng. Điều kiện 2: Từ một cấu hình chưa phải cuối cùng, ta xây dựng thuật toán sinh ra cấu hình tiếp theo.
+
+Mô hình thuật toán sinh được biểu diễn thành hai bước: bước khởi tạo và bước lặp. Tại bước khởi tạo cấu hình đầu tiên của bài toán được thiết lập. Điều này bao giờ cũng thực hiện được theo giả thuyết của bài toán. Tại bước lặp, quá trình lặp được thực hiện khi gặp phải cấu hình cuối cùng. Điều kiện lặp của bài toán bao giờ cũng tồn tại theo giả thuyết của bài toán. Trong vòng lặp, cấu hình hiện tại được đưa ra và sinh ra cấu hình kế tiếp. Mô hình sinh kế tiếp tuỳ thuộc vào mỗi bài toán cụ thể. Tổng quát, mô hình thuật toán sinh được thể hiện như dưới đây.
+
+Thuật toán Generation;   
+begin Bước 1 (Khởi tạo): Thiết lập cấu hình đầu tiên; Bước 2 (Bước lặp): while (Lặp khi cấu hình chưa phải cuối cùng) do Đưa ra cấu hình hiện tại; Sinh ra cấu hình kế tiếp; endwhile;
+
+# End.
+
+Ví dụ 1. Vector $X = ( x _ { 1 } , x _ { 2 } , \ldots, x _ { n } )$, trong đó $x _ { i } = 0$ hoặc $1$ được gọi là một xâu nhị phân có độ dài $n$. Hay liệt kê tất cả các xâu nhị phân có độ dài $n$. Ví dụ với $\scriptstyle n = 4$, ta sẽ liệt kê được 24 xâu nhị phân có độ dài 4 như trong Bảng 2.1.
+
+Bảng 2.1. Các xâu nhị phân dài 4
+
+# Lời giải:
+
+Điều kiện 1: Gọi thứ tự của xâu nhị phân $X = (x_1, x_2, \ldots, x_n)$ là $f(X)$. Trong đó, $f(\mathbf{X}) = k$ (20 là số chuyển đổi xâu nhị $X$ thành số δ có số 10. Ví dụ, xâu $X = (1, 0, 1, 1)$ được chuyển thành số thập phân là 11 thì ta nói xâu $X$ có thứ tự 11. Với cách quan niệm này, xâu đúng sau xâu có thứ tự 11 là 12 chính là xâu tiếp theo ngay sau xau $X = (1, 0, 1, 1)$. Xâu đầu tiên có thứ tự là 0 ứng với xâu có n số 0. Xâu cuối cùng có thứ tự là $2^n - 1$ ứng với xâu có $n$ số 1. Như vậy, điều kiện 1 của thuật toán sinh đã được thỏa mãn.
+
+Điều kiện 2: Theo nguyên tắc ta có thể lấy $k = f(X)$ là thứ tự của một xâu bất kỳ theo nguyên tắc $\sigma$ trên, sau đó lấy thứ tự của xâu $k'$ tiếp là $(k + l)$ và chuyển vị trí $(k + l)$ thành số 1 ta sẽ được xâu nhị phân tiếp theo. Xâu cuối cùng sẽ là xâu có $n$ số 1 ứng với thứ tự $k = 2^n - 1$. Với cách làm này, ta có thể coi mỗi xâu nhị phân là một số, mỗi phần tử của xâu là một bit và chỉ cần cài đặt thuật toán chuyển đổi có số đó thành nhị phân. Ta có thể xây dựng thuật toán tổng quát hơn bằng cách xem mỗi xâu nhị phân là một mảng các phần tử có giá trị 0 hoặc 1. Sau đó, duyệt từ vị trí bên phải nhất của xâu nếu gặp số 1 ta chuyển thành 0 và gặp số 0 đầu tiên ta chuyển thành 1. Ví dụ với xâu $X = (0, 1, 1, 1)$ được chuyển thành xâu $X = (1, 0, 0, 0)$, xâu $\mathbf{X} = (1, 0, 0, 0)$ được chuyển thành xâu $X = (1, 0, 0, 1)$. Lời giải và thuật toán sinh xâu nhị phân $k'$ tiếp được thể hiện trong chương trình dưới đây. Trong đó, thuật toán sinh xâu nhị phân $k'$ tiếp theo một xâu nhị phân bất kỳ là hàm Next_Bits_String().
+
+#include <iostream>   
+#include <iomanip>   
+#define MAX 100   
+using namespace std;   
+int X[MAX], n, dem $= 0$ ; // sử dụng các biến toàn cục X[], n, OK, dem   
+bool OK $\ c =$ true;   
+void Init(void){ // khởi tạo xâu nhị phân đầu tiên cout<<"Nhập $\mathbf { n } = $" ·， $\mathrm { cin >> n }$ ， for(int $\dot { \mathbf { i } } = 1$ ·， $\scriptstyle \mathbf { i } <= \mathbf { n }$ $\mathrm { i } + { + }$ ) /thiết lập xâu với n số $\mathrm { X [ i ] = 0 ; }$   
+}   
+void Result(void){ // đưa ra xâu nhị phân hiện tại cout<<"\n Xâu thứ L for(int $\mathrm { i } = 1$ ;i<= n;it cout<<X[i]<<setw(3);   
+1   
+void Next_Bits_String(void){ / thuật toán sinh xâu nhị phân kế tiếp int i=n; while( $\mathrm { i > 0 }$ & X[i] $\scriptstyle = 0$ ; Nếu gặp $X [i] = 1$ ta chuyển thành 0 i--; // lui lại vị trí sau 1 if $( \mathrm { i > 0 })$ ： $\mathrm { X [ i ] = 1 }$ ; // gặp X[i] $\scriptstyle = 0$ đầu tiên ta chuyển thành 1
+
+else $\mathrm { OK } =$ false; // kết thúc khi gặp xâu có n số 1 int main(void){ / đây là thuật toán sinh Init(); // thiết lập cấu hình đầu tiên while(OK){// lặp khi chưa phải cấu hình cuối cùng Result(); // đưa ra cấu hình hiện tại Next_Bits_String(); // sinh ra cấu hình kế tiếp }
+
+Ví dụ 2. Liệt kê tập con m phần tử của tập n phần tử. Cho $\mathrm { X } = \{ 1, 2, ..., \mathrm { n } \}$ . Hay liệt kê tất cả các tập con $\mathbf { k }$ phần tử của X $( \mathbf { k } \leq \mathbf { n } )$ ：
+
+Lời giải: Mỗi tập con của tập hợp X có thể biểu diễn bằng bộ có thứ tự $\mathrm{g} \dot{\mathrm{o}} \mathrm{m} \mathrm{k}$ thành phần $\mathbf{a} = (\mathbf{a}_{1} \mathbf{a}_{2} . . . \mathbf{a}_{\mathrm{k}})$ thỏa mãn $1 \leq \mathbf{a}_{1} \leq \mathbf{a}_{2} \leq . . \leq \mathbf{a}_{\mathrm{k}} \leq \mathbf{n}$. Trên tập các tập con k phần tử của X có thể xác định nhiều thứ tự khác nhau. Thứ tự $\mathrm{d}$ nhìn thấy rõ nhất là thứ tự được định nghĩa như sau:
+
+Ta nói tập con $\mathbf{a} = \mathbf{a}_{1} \mathbf{a}_{2} . . . \mathbf{a}_{\mathrm{k}}$ đi trước tập con $\mathbf{a}' = \mathbf{a}_{1}' \mathbf{a}_{2}' . . . \mathbf{a}_{k}'$ trong thứ tự này và ký hiệu là $\mathsf{a} < \mathsf{a}'$, nếu tìm được chỉ số $j ( [ 1 \leq j \leq k ] )$ sao cho
+
+$$
+\mathrm{a_{1} = a_{1}', a_{2} = a_{2}', ~ \ldots, a_{j-1} = a_{j-1}', a_{j} < a_{j}'.}
+$$
+
+Chẳng hạn $\mathrm{X} = \{ 1, 2, 3, 4, 5 \}$, $\mathbf{k} = 3$. Các tập con 3 phần tử của X được liệt kê theo thứ tự này như sau:
+
+![](images/24979672d5a64d432eb692dc9b854d90b1f797f225e7f6e2865f33efc7f8fea1.jpg)
+
+Như vậy, tập con đầu tiên trong thuật thuật thuật diễn là $(1, 2, ..., k)$ và tập con cuối cùng là $(n - k + 1, n - k + 2, ..., n)$. Giả sử $a = (a_1, a_2, \dots, a_k)$ là tập con hiện tại và chưa phải là cuối cùng, khi đó có thể chứng minh được rằng tập con tiếp theo trong thuật thuật thuật diễn có thể được xây dựng bằng cách thực hiện các qui tắc biến đổi sau đối với tập con đang có.
+
+□ Tìm vị trí bên phải đầu tiên $a_i$ của $a_1, a_2, ..., a_k$ phần tử $\bf{a}_i \neq n - k + i$. Thay $\mathbf{a}_{\mathrm{i}}$ bằng $\mathbf{a}_{\mathrm{i}} + 1$, □Thay $\mathbf{a}_{\mathrm{j}}$ bằng $\mathbf{a}_{\mathrm{i}} + \mathrm{j} - \mathrm{i}$, với $\mathrm{j} := \mathrm{i} + 1, \mathrm{i} + 2, ..., k$.
+
+Chẳng hạn với $\mathtt{n} = 6$, $\mathrm{k} = 4$. Giả sử ta đang có tập con (1, 2, 5, 6), cần xây dựng tập con $\mathrm{k}$ tiếp theo trong thuật thuật. Duyệt từ bên phải ta nhận được $\mathrm{i} = 2$, thay ${\bf a}_2$ bằng ${\bf a}_2 + \beta$ $1 = 2 + 1 = 3$. Duyệt từ $1 + 1 = 3$ đến $\mathbf{k}$, ta thay thế $\mathtt{a}_3 = \mathtt{a}_2 + 3 - 2 = 3 + 3 - 2 = 4$, $\mathbf{a}_4 = \mathtt{a}_2 + 4 - 2 = 3 + 4 - 2 = 5$. Ta nhận được tập con $\mathrm{k}$ tiếp theo là (1, 3, 4, 5).
+
+Với qui tắc sinh như trên, chúng ta có thể mô tả thuật toán sau:
+
+# Thuật toán liệt kê tập con $\mathbf{k}$ tiếp theo của tập $n$ phần tử:
+
+void Next_Combination(void) {
+    int i = k; // Xuất phát từ vị trí thứ $k$
+    while (i > 0 && a[i] == n - k + i) // Xác định $i$ để $a_i \neq n - k + i$
+        i--;
+    if(i > 0) { // Nếu chưa phải là tổ hợp cuối cùng thì $i>0$
+        a[i] = a[i] + 1;
+        for (j = i + 1; j <= k; j++)
+            a[j] = a[i] + j - i;
+    }
+    else OK = False; // Nếu là tổ hợp cuối cùng thì $i = 0$
+
+# Dưới đây là chương trình liệt kê tổ hợp chập $k$ của $\mathbb{C}$
+
+Chương trình cài đặt thuật toán sinh tập con k phần tử được thể hiện như sau. Trong đó, thuật toán sinh tổ hợp kế tiếp có tên là Next_Combination().
+
+```cpp
+#include <iostream>
+#include <iomanip>
+#define MAX 100
+int X[MAX], n, k, dem = 0;
+bool OK = true;
+using namespace std;
+
+void Init(void){ //thiết lập tập con đầu tiên 
+    cout<<"\n Nhập n, k:";
+    cin>>n>>k;  
+    for(int i=1; i <= k; i++) {
+        // Tập con đầu tiên là 1, 2, ..., k
+        X[i] = i;
+    }
+}
+
+void Result(void){ //đưa ra tập con hiện tại 
+    cout<<"\n Kết quả "<<++dem<<":";
+    for(int i=1; i <= k; i++) {
+        // Đưa ra X[] = (x_1, x_2, ..., x_k)
+        cout<<X[i]<<setw(3);
+    }
+}
+
+void Next_Combination(void){ //sinh tập con k phần tử từ tập con bất kỳ
+    int i = k;
+    // Duyệt từ vị trí bên phải nhất của tập con 
+    while(i > 0 && X[i] == n - k + i) {
+        // Tìm i sao cho x_i ≠ n - k + i
+        i--;
+    }
+}
+```
+
+if $(\mathrm{i} > 0) \{ // neu chua phai là tập con cuối cùng $\mathrm{X[i] = X[i] + 1}$; //thay đổi giá trị tại vị trí i: $x_i = x_i + 1$  
+$\scriptstyle \mathrm{for (int~j = i + 1; ~ j <= k; ~ j++)}$  
+//các vị trí j từ $i + 1, ..., k$: $\mathrm{X[j] = X[i] + j - i;}$ // dùng thay đổi là $x_j = x_i + j - i$  
+} else  
+//nếu là tập con cuối cùng $\mathrm{OK = false;}$  
+//ta kết thúc duyệt   
+}
+
+int main(void){ Init(); //khởi tạo cấu hình đầu tiên while(OK){ //lặp trong khi cấu hình chưa phải cuối cùng Result(); //đưa ra cấu hình hiện tại Next_Combination(); //sinh ra cấu hình kế tiếp
+
+Vi dụ 3. Liệt kê $\mathrm{k}$ hoán vị của tập $n$ phần tử. Cho $\mathrm{X} = \{1, 2, ..., n\}$. Hay liệt kê các hoán vị từ $n$ phần tử của X.
+
+Lời giải: Mỗi hoán vị từ $n$ phần tử của X có thể biểu diễn bằng một chuỗi có thứ tự $n$ thành phần
+
+Trên tập các hoán vị từ $n$ phần tử X có thể xác định nhiều thứ tự khác nhau. Tuy nhiên, thứ tự $\mathrm{d}$ thay đổi nhất là thứ tự được định nghĩa như sau:
+
+Ta nói hoán vị $\mathbf{a} = \mathbf{a}_1 \mathbf{a}_2 \hdots \mathbf{a}_n$ đi trước hoán vị $\mathbf{a}^* = \mathbf{a}_1^* \mathbf{a}_2^* \cdot \cdot \cdot \mathbf{a}_n^*$ trong thứ tự và ký hiệu là $\mathsf{a < a'}$, nếu tìm được chỉ số $k ( 1 \leq k \leq n)$ sao cho
+
+$$
+\mathrm{a}_1 = \mathrm{a}_1', \mathrm{a}_2 = \mathrm{a}_2', \ldots, \mathrm{a}_{k-1} = \mathrm{a}_{k-1}', \mathrm{a}_k < \mathrm{a}_k'.
+$$
+
+Chẳng hạn $X = \{ 1, 2, 3, 4 \}$. Các hoán vị các phần tử của $\Delta X$ được liệt kê theo thứ tự như sau:
+
+1 2 3  
+1 3 2  
+2 1 3  
+2 3 1  
+3 1 2  
+3 2 1
+
+Như vậy, hoán vị đầu tiên trong thuật thuật thuật diễn là (1, 2,..., n) và hoán vị cuối cùng là (n, n-1,..., 1). Giả sử $\mathbf{a} = \mathbf{a}_1 \mathbf{a}_2 ... \mathbf{a}_n$ là một hoán vị chưa phải là cuối cùng. Khi đó ta có thể chứng minh được rằng, hoán vị tiếp theo trong thuật thuật thuật diễn có thể xây dựng bằng cách thực hiện các qui tắc biến đổi sau đối với hoán vị hiện tại:
+
+1. Tìm phần tử từ phải qua trái hoán vị có chỉ số j đầu tiên thỏa mãn $a_j < a_{j+1}$ (hay j là chỉ số lớn nhất để $a_j < a_{j+1}$).
+2. Tìm $\mathbf{a}_k$ là số nhỏ nhất còn lớn hơn $a_j$ trong các số bên phải $a_j$; Đổi chỗ $a_j$ với $\mathbf{a}_k$.
+3. Lật ngược đoạn từ $a_{j+1}$ đến $a_n$.
+
+Chúng ta đang có hoán vị (3, 6, 2, 5, 4, 1), cần xây dựng hoán vị kế tiếp theo thuật lý. Ta duyệt từ $\mathrm{j} = \mathrm{n} - 1$ sang bên trái để tìm $j$ đầu tiên thỏa mãn $\mathrm{a_j} < \mathrm{a_{j+1}}$, ta nhận được $\mathrm{j} = 3$ ($\mathrm{a_3} = 2 < \mathrm{a_4} = 5$). Số nhỏ nhất còn lớn hơn ${\bf a}_3$ trong các số bên phải ${\bf a}_3$ là $\mathbf{a}_5$ ( $\scriptstyle (\mathrm{a}_5 = 4)$): Đổi chỗ ${\bf a}_3$ cho $\mathbf{a}_5$, ta thu được (3, 6, 4, 5, 2, 1), lật ngược đoạn từ ${\bf a}_4$ đến ${\bf a}_6$ ta nhận được (3, 6, 4, 1, 2, 5).
+
+Từ đó thuật toán sinh $\mathrm{k}\acute{\hat{e}}$ tiếp có thể mô tả bằng thuật lý sau:
+
+# Thuật toán sinh hoán vị $\mathbf{k}\acute{\hat{e}}$ tiếp:
+
+`oid Next_Permutation(void) { $j = n \ - I$; //Duyệt từ vị trí $\scriptstyle{j = n - I}$ 
+while $( j > 0)$ && $a _ { j } > a _ { j + 1 }$ vi trí $a_j > a_{j+1}$
+\[
+j = j - l;
+\]
+$i f ( j > 0 ) \{ / / Nế u j > 0$ thì hoán vị chưa phải cuối cùng
+$k = n$ : //Xuất phát từ vị trí $k {= } n$
+while $(aj < ak)$// Tìm k để $a _ { j } < a _ { k }$
+\[
+k = k - {1};
+\]
+temp $a _ { j } = a _ { k }$, $a _ { k } =$ temp;//Đổi chỗ $a _ { j }$ cho $a _ { k }$
+$n; while ( r < s ) \{ / / Lật ngược lại đoạn từ $j + l$ đến n
+\[
+temp = a _ { r }; a _ { r } = a _ { s }; a _ { s } = temp;
+r = r + 1; \qquad s = s - 1;
+\]
+else OK = False;//Nếu là hoán vị cuối cùng thì $i {= } O$
+
+# CHƯƠNG 3. BÀI TOÁN LIỆT KÊ
+
+3.1. Giới thiệu bài toán...45   
+3.2. Thuật toán và độ phức tạp tính toán...46   
+3.2.1. Ví dụ và Định nghĩa...46
+
+3.2.2. Phương pháp biểu diễn thuật toán:...46   
+3.2.3. Độ phức tạp tính toán...48   
+3.2.4. Quy tắc xác định độ phức tạp thuật toán...51   
+3.3. Phương pháp sinh...54   
+3.4. Thuật toán quay lui (Back track)...64   
+3.5. Những nội dung cần ghi nhớ...70   
+ĐỀ TÀP CHƯƠNG 3... .71
+
+CHƯƠNG 4. BÀI TOÁN TỐI ƯU.. .74
+
+4.1. Giới thiệu bài toán 74   
+4.2. Phương pháp duyệt toàn bộ 77   
+4.3. Thuật toán nhanh cần. 80   
+4.4. Kỹ thuật rút gọn giải quyết bài toán người du lịch 90   
+4.4.1.Thủ tục rút gọn 91   
+4.5. Những điểm cần ghi nhớ 100
+
+BAI TAP CHUONG 4 100
+
+CHUONG 5. BÀI TOÁN TÔN TAI... 102
+
+4.1. Giới thiệu bài toán 102   
+5.2. Phương pháp phân chia 105   
+5.3 Nguyên lý Dirichlet 106   
+5.4. Những nội dung cần ghi nhớ 107
+
+BAI TAP 108

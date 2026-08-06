@@ -1,3 +1,9 @@
 AI/data/Docker Desktop Installer.exe
 **/*.pdf
 AI/uploads/
+
+# Secrets - KHÔNG commit .env thật lên git!
+AI/.env
+.env
+*.env
+!*.env.example

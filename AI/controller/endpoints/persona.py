@@ -17,7 +17,7 @@ import os
 from openai import OpenAI
 from core.config import settings
 
-OLLAMA_BASE_URL = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434/v1")
+OLLAMA_BASE_URL = os.getenv("OLLAMA_BASE_URL", "https://ollama.ptitaitutor.com/v1")
 LOCAL_MODEL = os.getenv("OLLAMA_MODEL", "qwen2.5:14b")
 
 local_client = OpenAI(

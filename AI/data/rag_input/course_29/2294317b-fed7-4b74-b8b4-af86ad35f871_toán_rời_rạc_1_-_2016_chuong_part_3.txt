@@ -1,0 +1,61 @@
+# Bài tập Chương 2
+
+Hãy đếm số cách nhẩm phân c6 độ dài n là thuận nghịch độc. 2. Có dấu và chữ ré moi bốn ban dính thành một hàng để chụp ảnh. Hỏi có bao nhiêu cách xếp hàng nếu:  
+a) Có dấu dùng cạnh chữ ré  
+b) Có dấu không dùng cạnh chữ ré  
+c) Có dấu dính ở phía bên phải chữ ré
+
+3. Có bao nhiêu xâu nhị phân dài 10 có chứa số 0 liên tiếp hoặc số 1 liên tiếp.
+
+4. Có bao nhiêu xâu nhị phân dài bằng 8 chứa 3 số 0 liên tiếp hoặc 4 số 1 liên tiếp.
+
+5. Mỗi sinh viên lớp toán học rỗ rách hoặc giỏi toán ở cấp giỏi tin học hoặc giỏi cả hai môn này. Trong lớp có bao nhiêu sinh viên nếu 38 người giỏi tin (kể cả người giỏi cả hai môn), 23 người giỏi toán $(\mathrm{k} \text{ không kể cả người giỏi cả hai môn}),$ và 7 người giỏi cả hai môn.
+
+6. Chứng tỏ rằng, trong $n+1$ số nguyên dư không vượt qua $2n$ tồn tại ít nhất một số chia hết cho một số khác. uyax1s0
+
+7. Chứng minh rằng, trong dãy $n^{2} + 1$ số thực phân biệt có một dãy con dài $n+1$ hoặc thực sự tăng, hoặc thực sự giảm.
+
+8. Giả sử trong một nhóm 6 người mỗi cặp hai hoặc là bạn, hoặc là kẻ thù. Chứng tỏ rằng trong nhóm có ba người là bạn của nhau hoặc là kẻ thù của nhau.
+
+10.Một đô vật tay tham gia thi đấu giành chức vô địch trong 75 giờ. Mỗi giờ anh ta thi đấu ít nhất một trận, nhưng tổng cộng anh ta không thi đấu quá 125 trận. Chứng tỏ rằng, có những giờ liên tiếp anh ta thi đấu 24 trận.
+
+11.Một nhân viên bắt đầu làm việc tại công ty từ năm 1987 với mức lương khởi điểm là 50000 đô la. Hàng năm anh ta được nhận thêm 1000 đô la và $5\%$ lương của năm trước.
+a) Hay thiết lập hệ thức truy hồi tính lương của nhân viên đó $n$ năm sau năm 1987.
+b) Lương vào năm
+
+Âm 1995 của anh ta là bao nhiêu? Hay tìm công thức tương ứng tính lương của nhân viên này n năm sau năm 1987.
+
+12. Tìm thuật thực truy hồi cho số hoán vị của tập n phần tử. Dùng thuật thực truy hồi để tính hoán vị của tập n phần tử.
+
+13.Một máy bán tem tự động nhận các đồng xu một đô la và các loại tờ tiền 1 đô la và 5 đô la.
+
+a) Hay tìm thuật thực truy hồi tính số cách đặt n đô la vào trong máy bán hàng, trong đó thu tự các đồng xu, các tờ tiền là quan trọng.   
+b) Tìm các điều kiện đầu.   
+c) Có bao nhiêu cách đặt 10 đô la vào máy để mua mặt bánh tem.
+
+14. Giải các $\mathrm { h } \hat { \mathrm { e } }$ thuật thực truy hồi với các điều kiện sau:
+
+a) $\mathrm{a_n} = \mathrm{a_{n-1}} + 6\mathrm{a_{n-2}}$ với $n \geq 2$, $\mathbf{a_0} = 3, \mathbf{a_1} = 6.$
+
+b) $\mathrm{a_n} = 7\mathrm{a_{n-1}} - 6\mathrm{a_{n-2}}$ với $n \geq 2$, $\mathbf{a_0} = 2, \mathbf{a_1} = 1.$
+
+c) $\mathrm{a_n} = 6\mathrm{a_{n-1}} - 8\mathrm{a_{n-2}}$ với $n \geq 2$, $\mathbf{a_0} = 4, \mathbf{a_1} = 10.$
+
+d) $\mathrm{a_n} = 2\mathrm{a_{n-1}} - \mathrm{a_{n-2}}$ với $n \geq 2$, $\mathbf{a_0} = 4, \mathbf{a_1} = 1.$
+
+e) $\mathrm{a_n} = \mathrm{a_{n-2}}$ với $n \geq 2,$
+
+f) $\mathrm{a_n} = -6\mathrm{a_{n-1}} - 9\mathrm{a_{n-2}}$ với $n \geq 2$, $\mathbf{a_0} = 3, \mathbf{a_1} = -3.$
+
+g) $\mathrm{a_{n+2}} = -4\mathrm{a_{n+1}} + 5\mathrm{a_n}$ với $n \geq 0$, $\mathbf{a_0} = 2, \mathbf{a_1} = 8.$
+
+15. Tìm các nghiệm đặc trưng của hệ thức truy hồi tuyến tính thuận nhất:
+
+a) $\mathrm{a_n} = 2\mathrm{a_{n-1}} - 2\mathrm{a_{n-2}}$ với $n \geq 0$
+
+b) Tìm nghiệm thỏa mãn hệ thức truy hồi trên và các điều kiện đầu $\mathbf{a_0} = 1, \mathbf{a_1} = 2.$
+
+16.a) Tìm nghiệm đặc trưng của hệ thức truy hồi tuyến tính thuận nhất $\mathtt { a _ { n } } = \mathtt { a _ { n - 4 }}$  
+b) Tìm nghiệm thỏa mãn hệ thức truy hồi trên và các điều kiện đầu $\mathrm { a } _ { 0 } = 1$, $\mathrm { a } _ { 1 } = 0$, $\mathrm { a } _ { 2 } = - 1$, $\mathbf { a } _ { 3 } = 1$
+
+17.Một báo cáo về thị trường máy tính cá nhân cho biết có 65.000 người sẽ mua modem cho máy tính của họ trong năm tới, 1.250.000 người sẽ mua ít nhất một sản phẩm phần mềm. Nếu báo cáo này nói rằng 1.450.000 người sẽ mua hoặc là modem hoặc là ít nhất một sản phẩm phần mềm thì sẽ có bao nhiêu người sẽ mua cả modem và mua ít nhất một sản phẩm phần mềm?

@@ -1,0 +1,77 @@
+# Bài tập Chương 1
+
+1. Lập bảng giá trị chân lý cho các mệnh đề phức hợp sau:
+
+a) $(\mathfrak{p} \to \mathfrak{q}) \land (\neg \mathfrak{q} \to \neg \mathfrak{p})$
+
+b) $(p \lor q) \land (q \lor p)$
+
+c) $(p \oplus q) \times (p \oplus \bar{q})$
+
+d) $(p \oplus q) \times (p \oplus \bar{q}')$
+
+e) $(\bar{p} \lor \bar{q}) \land (p \lor q)$
+
+f) $(p \wedge q) \times \bar{r}$
+
+g) $(p \vee q) \wedge \overline{r}$
+
+h) $(\bar{p} \lor \bar{q}) \land (q \rightarrow r)$
+
+i) $(p \oplus q) \times (\overline{q} \rightarrow r)$
+
+j) $(\bar{p} \lor \bar{q}) \land (q \rightarrow r)$
+
+2. Dùng bảng chân lý chứng minh:
+
+a) Luật giao hoán $p \lor q \Leftrightarrow q \lor p$
+
+$\mathfrak{p} \wedge \mathfrak{q} \Leftrightarrow \mathfrak{q} \wedge \mathfrak{p}$
+
+b) Luật kết hợp 
+\[
+( \mathfrak{p} \vee \mathfrak{q} ) \vee \mathfrak{r} \Leftrightarrow \mathfrak{p} \vee ( \mathfrak{q} \vee \mathfrak{r} )
+\]
+\[
+( \mathfrak{p} \wedge \mathfrak{q} ) \wedge \mathfrak{r} \Leftrightarrow \mathfrak{p} \wedge ( \mathfrak{q} \wedge \mathfrak{r} )
+\]
+
+c) Luật phân phối 
+\[ 
+\mathtt{p} \wedge (\mathtt{q} \vee \mathtt{r}) \Leftrightarrow (\mathtt{p} \wedge \mathtt{q}) \vee (\mathtt{p} \wedge \mathtt{r})
+\]
+
+3. Chứng minh các công thức sau đây là đồng nhất đúng bằng cách lập bảng giá trị chân lý:
+
+a) $(X \to (Y \to Z)) \to ((X \to Y) \to (X \to Z));$
+
+b) $(X \to Y) \to ((X \to Z) \to (X \to (Y \land Z)));$
+
+c) $(X \to Z) \to ((Y \to Z) \to ((X \vee Y) \to Z)).$
+
+20.4. Chứng minh các công thức sau đây là đúng trong logic
+
+$$
+\begin{array}{r}
+\begin{array}{rl}
+a) & X \times ( Y_{1} \land Y_{2} \land \dotsb \land Y_{n} ) \Leftrightarrow ( X \lor Y_{1} ) \land ( X \lor Y_{2} ) \land \dotsb \land ( X \lor Y_{n} ) \\
+b) & X \land ( Y_{1} \lor Y_{2} \lor \dotsb \lor Y_{n} ) \Leftrightarrow ( X \land Y_{1} ) \lor ( X \land Y_{2} ) \lor \dotsb \lor ( X \land Y_{n} ) \\
+c) & \overline{X_{1} \lor X_{2} \lor \cdots \lor X_{n}} \Leftrightarrow \overline{X_{1}} \land \overline{X_{2}} \land \dotsb \land \overline{X_{n}} \\
+d) & \overline{X_{1} \land X_{2} \land \cdots \land X_{n}} \Leftrightarrow \overline{X_{1}} \lor \overline{X_{2}} \lor \dotsb \lor \overline{X_{n}}
+\end{array}
+\end{array}
+$$
+
+5. Cho A, B, C là các tập hợp. Chứng minh rằng:
+
+$$
+\begin{array}{rl}
+a) & A \cap B \cap C = \overline{A} \cup \overline{B} \cup \overline{C} \\
+b) & ( A \cap B \cap C ) \subseteq ( A \cap B ) \\
+c) & ( A - B ) - C \subseteq ( A - C ) \\
+d) & ( A - C ) \cap ( C - B ) = \Phi \\
+e) & ( B - A ) \cup ( C - A ) = ( B \cup C ) - A \\
+f) & A - B = A \cap \overline{B} \\
+g) & ( A \cap B ) \cup ( A \cap \overline{B} ) = A
+\end{array}
+$$

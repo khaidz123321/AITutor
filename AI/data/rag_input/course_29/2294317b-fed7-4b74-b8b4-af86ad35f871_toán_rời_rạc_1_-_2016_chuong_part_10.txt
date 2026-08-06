@@ -1,0 +1,20 @@
+# Bài toán 2. Bài toán 4 màu
+
+Có nhiều bài toán mà nội dung của nó có thể giải thích được với bất kỳ ai, lời giải của nó ai cũng có gắng tìm nhưng khó có thể tìm được định lý Fermat thì bài toán bốn màu cũng là một bài toán như vậy. Bài toán có thể được phát biểu như sau: Chứng minh rằng mỗi bản đồ đều có thể tô bằng 4 màu sao cho không có hai nước láng giềng nào lại bị tô bởi cùng một màu. Trong đó, mỗi nước trên bản đồ được coi là một vùng liên thông, hai nước được gọi là láng giềng nếu chúng có chung đường biên giới là một đường liên tục.
+
+![](images/cc302a6691c1bd6f503354c30f1614245e15e3a74503278290c667872a097694.jpg)
+
+# Hình 5.1. Bản đồ tô bằng ít nhất bốn màu
+
+Số bốn màu không phải là ngẫu nhiên. Người ta đã chứng minh được rằng mỗi bản đồ đều có thể tô bằng số màu lớn hơn 4, còn với số màu ít hơn 4 thì không thể tô được, chẳng hạn bản đồ gồm 4 nước như trên Hình 5.1 không thể tô được với số màu ít hơn 4.
+
+Bài toán này xuất hiện vào những năm 1850 do một người Anh là Gazri khi ông đã có gắng chứng minh rằng nó có thể tô bằng bốn màu. Sau đó, năm 1852, ông đã viết thư cho De Morgan để thông báo về giả thuyết này.
+
+Năm 1878, kelley trong một bài báo đăng ở tạp chí Cương vấn các công trình nghiên cứu của Hội toán học Anh có hỏi bài toán này đã được giải quyết hay chưa? Từ đó bài toán trở nên nổi tiếng, trong suốt hơn một thế kỷ qua, nhiều nhà toán học đã cố chứng minh giả thuyết này. Tuy vậy, mãi đến năm 1976 hai nhà toán học Mỹ là K. Appel và W. Haken mới chứng minh được nó nhờ máy tính điện tử.
+
+Bài toán 3. Hình lục giác thách thức. Năm 1890 Clifford Adams đề ra bài toán hình lục giác thách thức sau:
+
+Trên một hình lục giác (như Hình 5.2) hãy điền các số từ 1 đến 19 sao cho tổng theo 6 hướng của lục giác là bằng nhau (và đều bằng 38). Sau 47 năm kiên trì cuối cùng Adams cũng đã tìm được lời giải. Sau đó vì số lượng yêu cầu đặt hàng ông đã tăng thêm 5 năm để hoàn thiện lại. Năm 1962 Adams đã công bố lời giải đó. Nhưng thật không thể ngờ được rằng đó là lời giải duy nhất.
+
+![](images/529e8c8937bbd6705df14e09a3c3032f592c25f3cf5dca321ec19b33de6c310c.jpg)  
+Hình 5.2. Hình lục giác thách thức

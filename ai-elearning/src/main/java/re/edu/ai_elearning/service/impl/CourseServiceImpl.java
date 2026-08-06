@@ -308,7 +308,7 @@ public class CourseServiceImpl implements CourseService {
         }
 
         try {
-            String uploadDirStr = "src/main/resources/static/uploads/";
+            String uploadDirStr = "uploads/";
             File uploadDir = new File(uploadDirStr);
             if (!uploadDir.exists()) {
                 uploadDir.mkdirs();
@@ -371,7 +371,7 @@ public class CourseServiceImpl implements CourseService {
         }
 
         try {
-            String uploadDirStr = "src/main/resources/static/uploads/thumbnails/";
+            String uploadDirStr = "uploads/thumbnails/";
             File uploadDir = new File(uploadDirStr);
             if (!uploadDir.exists()) {
                 uploadDir.mkdirs();

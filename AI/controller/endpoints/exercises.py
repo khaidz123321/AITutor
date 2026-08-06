@@ -97,7 +97,7 @@ router = APIRouter()
 # Đọc cấu hình từ .env — dùng chung cho cả import-pdf và generate-scaffold-local
 LOCAL_MODEL = os.getenv("OLLAMA_MODEL", "qwen2.5:14b")
 DEEPSEEK_MODEL = os.getenv("DEEPSEEK_MODEL", "deepseek-r1:14b")
-OLLAMA_BASE_URL = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434/v1")
+OLLAMA_BASE_URL = os.getenv("OLLAMA_BASE_URL", "https://ollama.ptitaitutor.com/v1")
 
 local_client = OpenAI(
     api_key="sk-no-key-required",

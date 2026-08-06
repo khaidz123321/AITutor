@@ -85,14 +85,10 @@ public class UserProfileServiceImpl implements UserProfileService {
                 });
 
         try {
-            String uploadDirSrc = "src/main/resources/static/uploads/avatars/";
-            String uploadDirBuild = "build/resources/main/static/uploads/avatars/";
+            String uploadDir = "uploads/avatars/";
 
-            File dirSrc = new File(uploadDirSrc);
-            if (!dirSrc.exists()) dirSrc.mkdirs();
-
-            File dirBuild = new File(uploadDirBuild);
-            if (!dirBuild.exists()) dirBuild.mkdirs();
+            File dir = new File(uploadDir);
+            if (!dir.exists()) dir.mkdirs();
 
             String originalName = file.getOriginalFilename();
             String ext = (originalName != null && originalName.contains("."))
@@ -101,13 +97,8 @@ public class UserProfileServiceImpl implements UserProfileService {
 
             String fileName = "avatar_" + userId + "_" + System.currentTimeMillis() + ext;
 
-            Path targetSrc = Paths.get(uploadDirSrc + fileName);
-            Files.copy(file.getInputStream(), targetSrc, StandardCopyOption.REPLACE_EXISTING);
-
-            try {
-                Path targetBuild = Paths.get(uploadDirBuild + fileName);
-                Files.copy(targetSrc, targetBuild, StandardCopyOption.REPLACE_EXISTING);
-            } catch (Exception ignored) {}
+            Path target = Paths.get(uploadDir + fileName);
+            Files.copy(file.getInputStream(), target, StandardCopyOption.REPLACE_EXISTING);
 
             String fileUrl = "/uploads/avatars/" + fileName;
             profile.setAvatarUrl(fileUrl);

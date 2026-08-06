@@ -11,7 +11,7 @@
 /* ─── Left Banner ─────────────────────────────────── */
 .auth-banner {
     flex: 1;
-    background: linear-gradient(160deg, rgba(15, 1, 2, 0.4), rgba(45, 5, 8, 0.3)), url('../assets/images/auth_banner.png') center/cover no-repeat;
+    background: #1a0102;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -19,6 +19,30 @@
     padding: 60px 52px;
     overflow: hidden;
     color: #fff;
+}
+
+/* Crossfade slideshow images */
+.banner-slide {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    pointer-events: none;
+}
+.banner-slide.active {
+    opacity: 1;
+}
+
+/* Gradient overlay on top of images */
+.banner-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(160deg, rgba(15, 1, 2, 0.45), rgba(45, 5, 8, 0.3));
+    pointer-events: none;
+    z-index: 1;
 }
 
 /* Animated grid pattern */
@@ -32,6 +56,7 @@
     background-size: 40px 40px;
     pointer-events: none;
     animation: gridShift 20s linear infinite;
+    z-index: 1;
 }
 @keyframes gridShift {
     0%   { background-position: 0 0; }
@@ -50,12 +75,13 @@
     border-radius: 50%;
     pointer-events: none;
     animation: float 10s ease-in-out infinite;
+    z-index: 1;
 }
 
 /* Banner content */
 .auth-banner-content {
     position: relative;
-    z-index: 2;
+    z-index: 3;
     animation: fadeUp .6s ease both;
 }
 

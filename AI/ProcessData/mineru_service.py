@@ -1,4 +1,4 @@
-import os
+﻿import os
 import requests
 import time
 
@@ -7,7 +7,7 @@ MAX_POLL_ATTEMPTS     = 960  # 960 × 15s = 4 tiếng tối đa / lần upload
 
 class MinerU:
     def __init__(self):
-        self.api_url = os.getenv("COLAB_API_URL")
+        self.api_url = os.getenv("COLAB_API_URL", "https://mineru.ptitaitutor.com")
         current_dir = os.path.dirname(os.path.abspath(__file__))
         ai_dir = os.path.dirname(current_dir)
         self.cache_dir = os.path.join(ai_dir, "data", "processed_text")

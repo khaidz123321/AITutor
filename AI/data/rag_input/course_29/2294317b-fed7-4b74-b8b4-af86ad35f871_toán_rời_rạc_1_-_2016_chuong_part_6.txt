@@ -1,0 +1,59 @@
+# Bài tập Chương 3
+
+1. Liệt kê tất cả các xâu nhị phân độ dài 5 không chứa hai $\mathrm {s} \acute{\boldsymbol{0}} 0$ liên tiếp.
+
+2. Liệt kê tất cả các phần tử của tập
+
+$$
+D = \left\{ x = (x_1, x_2, \cdots, x_n) : \sum_{j=1}^{n} a_j x_j = b, \quad x_j \in Z_+, j = 1, 2, \cdots, n
+\right\}
+$$
+
+Trong đó $a_1, a_2, \ldots, a_n, b$ là các số nguyên dương.
+
+3. Hình vuông tam biến ma phương bậc $\pmb{n}$ là ma trận vuông cấp $n$ với các phần tử là các số tự nhiên từ $\boldsymbol{1}$ đến $n^2$ thỏa mãn các tính chất: Tổng các phần tử trên mỗi dòng, cột và mỗi một trong hai đường chéo có cùng giá trị. Hãy liệt kê tất cả các ma phương bậc 3, 4 không sai khác nhau bởi các phép biến hình đơn giản (quay, đối xứng).
+
+Ví dụ dưới đây là một ma phương bậc 3 thỏa mãn tính chất tổng hàng, cột, đường chéo đều là 15.
+
+4. Tam giác tam biến. Cho một lưới vuông gồm $n \times n$ ô và số nguyên dương $k$. Tìm cách điền các số tự nhiên từ 1 đến $3n-3$ vào các ô ở cột đầu tiên, dòng cuối cùng và đường chéo chính sao cho tổng các số điền trong cột đầu tiên, dòng cuối cùng và đường chéo chính của lưới đều bằng $k$. Ví dụ $n = 5$, $k = 35$ ta có cách điền sau:
+
+![](images/74aa9587dcd7a3eacd69783e2e1ffc0b330438982dc9c2221ed461fedb91afdd.jpg)
+
+Phát triển thuật toán đồ thị trên thuật toán quay lui để chỉ ra với giá trị của n, k cho trước bài toán có lời giải hay không. Nếu có câu trả lời chỉ cần đưa ra một lời giải.
+
+5. Tìm tập con dài nhất có thể được sắp xếp theo thứ tự tăng dần hoặc giảm dần. Cho dãy số $\mathbf{a}_1$, $a_2$, ..., $\mathbf{a}_n$. Hay tìm dãy con dài nhất được sắp xếp theo thứ tự tăng hoặc giảm dần. Dữ liệu vào cho bằng file tapcon.in, dòng đầu tiên ghi lại số trận n $(n \leq 100)$, dòng kế tiếp ghi lại n số, mỗi số dùng phân biệt với nhau bởi một hay vài ký tự trắng. Kết quả ghi lại trong file tapcon.out. Ví dụ sau sẽ minh hoa cho file tapcon.in và tapcon.out.
+
+tapcon.in
+5
+7 13 8 9 6 12
+
+tapcon.out
+13 8 9
+
+6. Duyệt các tập con thỏa mãn điều kiện. Cho dãy số $\mathbf{a}_0$, $a_1$, $a_2$, ..., $\mathbf{a}_n$ và số M. Hay tìm tất cả các dãy con trong dãy số $\mathbf{a}_1$, ${\bf a}_2$, .., $\mathbf{a}_n$ sao cho tổng các phần tử trong dãy con đúng bằng M. Dữ liệu vào cho bằng file tapcon.in, dòng đầu tiên ghi lại hai số n và M, dòng kế tiếp ghi lại n số mỗi số dùng phân biệt với nhau bởi một hay vài ký tự trắng. Kết quả ghi lại trong file tapcon.out. Ví dụ sau sẽ minh hoa cho file tapcon.in và tapcon.out
+
+tapcon.in
+7 50
+1 5 10 15 20 25 35
+
+tapcon.out
+20 30
+15 35
+10 15 25
+5 20 25
+5 15 30
+5 35
+5 10 15 20
+
+7. Cho lưới hình chữ nhật gồm $( \mathsf{n} \times \mathsf{m})$ hình vuông đơn vị. Hãy liệt kê tất cả các đường đi từ điểm có tọa độ (0, 0) đến điểm có tọa độ $(\mathsf{n}, \mathsf{m})$. Biết rằng, điểm (0, 0) được coi là đỉnh dưới cùng của hình vuông bên trái dưới, mỗi bước đi chỉ được phép thực hiện lên trên hoặc xuống dưới theo cạnh của hình vuông đơn vị. Dữ liệu vào cho bằng file bai4.inp, kết quả ghi lại trong file bai4.out. Ví dụ sau sẽ minh họa cho file bai4.in và bai4.out.
+
+bai14.in   
+2 2   
+bai14.out   
+$\begin{array} { c c } { {0 0} } & { {1} } \\ { {0 1} } & { {0} } \\ { {0 1} } & { {1} } \\ { {1 0} } & { {0} } \\ { {1 0} } & { {1} } \\ { {1 1} } & { {0} } \end{array} \quad \begin{array} { c c } { {1} } \\ { {1} } \\ { {0} } \\ { {1} } \\ { {0} } \end{array}$
+
+8. Tìm ba giá trị của các biến $\mathrm{x}_1, \mathrm{x}_2, \ldots, \mathrm{x}_\mathrm{k}$ để hàm mục tiêu $\sin(\mathrm{x}_1 + \mathrm{x}_2 + \ldots + \mathrm{x}_\mathrm{k})$ đạt giá trị lớn nhất. Dữ liệu vào cho bằng file bai4.inp, kết quả ghi lại trong file bai4.out.
+
+9. Duyet moi phuong thuc trong tinh toan gia tri bieu thuc. Viet chuong trinh nhap tu ban phim hai so nguyen M, N. Hay tim cach thay cac dau ? trong bieu thuc sau boi cac phep toan $+$, $-$, $\*$, $\%$, / (chia nguyên) sao cho gia tri cua bieu thuc nhan duoc bang dung N:
+
+$( (( (M \times M) \div M) \div M) \div M) \div M$ Nếu không được hãy đưa ra thông báo là không thể được.

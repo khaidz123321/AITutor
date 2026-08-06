@@ -1,0 +1,15 @@
+# Bài Giảng
+
+# TOÁN RỘI RẮC 1
+
+NGUYỄN DUY PHƯƠNG
+
+# LỜI GIỚI THIỆU
+
+Toán rộn rắc là lĩnh vực nghiên cứu và lý thuyết các đối tượng trong rỗn rắc. Toán rộn rắc dùng để diễn dịch, quan sát, và lý thuyết mới quan hệ giữa các đối tượng trong các tập hợp khác nhau. Bản chất tính toán trên máy tính là rỗn rắc. Chính vì vậy, toán học rỗn rắc được xem là môn học kinh điển cho sinh viên các ngành Công nghệ thông tin và Điện tử Viễn thông. Tài liệu hướng dẫn môn học toán học rỗn rắc được xây dựng dựa trên cơ sở kinh nghiệm giảng dạy môn học và kế thừa nội dung từ giáo trình “Toán học rỗn rắc ứng dụng trong tin học” của Kenneth Rosen. Tài liệu được trình bày thành hai phần: Lý thuyết tập hợp (Toán rỗn rắc 1) và Lý thuyết đồ thị (Toán rỗn rắc 2).
+
+Phần I trình bày những kiến thức cơ bản về lý thuyết tập hợp thông qua việc giải quyết bốn bài toán cơ sở là: Bài toán diễn dịch, Bài toán tồn tại, Bài toán liệt kê và Bài toán tối ưu. Phần I trình bày những kiến thức cơ bản về Lý thuyết đồ thị: khái niệm, định nghĩa, các thuật toán trên đồ thị, đồ thị Euler, đồ thị Hamilton. Mặt khác một số bài toán có ứng dụng thực tiễn quan trọng khác của lý thuyết đồ thị cũng được chú trọng giải quyết đó là Bài toán tô màu đồ thị, Bài toán tìm đường đi ngắn nhất và Bài toán lượng cực đại trong mạng.
+
+Trong mỗi phần của tài liệu, chúng tôi cố gắng trình bày ngắn gọn trực tiếp vào bản chất của vấn đề. Các thuật toán dùng để trình bày và cải tiến bằng ngôn ngữ lập trình $\mathrm{C} {++}$, mặc dù đã rất cần thiết trong quá trình biên soạn, tuy nhiên tài liệu không tránh khỏi những thiếu sót và hạn chế. Chúng tôi rất mong được sự góp ý quý báu của tất cả độc giả và các bạn đồng nghiệp.
+
+Hà Nội, tháng 12 năm 2016

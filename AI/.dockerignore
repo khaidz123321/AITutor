@@ -1,0 +1,44 @@
+# Secrets - KHÔNG BAO GIỜ đưa vào image
+.env
+*.env
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Virtual envs
+.venv/
+venv/
+env/
+
+# Data & models (rất nặng, mount volume khi cần)
+data/vector_db/
+multilingual-e5-large-finetuned/
+uploads/
+
+# Logs
+*.log
+crash.log
+
+# Dev/Test files
+benchmark/
+rag_benchmark/
+main_test_ui.py
+finetuneMultilingual.py
+reindex_rag.py
+
+# Large data files
+training_data.json
+*.pdf
+*.docx
+
+# Git
+.git/
+.gitignore
+
+# IDE
+.vscode/
+.idea/
