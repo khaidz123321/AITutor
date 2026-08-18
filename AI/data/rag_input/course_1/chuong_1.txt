@@ -1,0 +1,38 @@
+# CHƯƠNG 1: SỐ PHỨC VÀ GIỚI HẠN CỦA DÃY SỐ
+
+## 1.1 TẬP SỐ PHỨC VÀ CÁC PHÉP TOÁN CƠ BẢN
+
+### 1.1.1 Khái niệm số phức
+Số phức z là một biểu thức có dạng: $z = a + bi$ trong đó $a, b \in \mathbb{R}$ và $i$ là đơn vị ảo thỏa mãn $i^2 = -1$.
+- $a = \text{Re}(z)$ gọi là phần thực của số phức $z$.
+- $b = \text{Im}(z)$ gọi là phần ảo của số phức $z$.
+
+### 1.1.2 Các phép toán trên tập số phức
+Cho hai số phức $z_1 = a_1 + b_1i$ và $z_2 = a_2 + b_2i$.
+1. **Phép cộng và trừ**:
+   $$z_1 \pm z_2 = (a_1 \pm a_2) + (b_1 \pm b_2)i$$
+2. **Phép nhân**:
+   $$z_1 \cdot z_2 = (a_1 a_2 - b_1 b_2) + (a_1 b_2 + a_2 b_1)i$$
+3. **Số phức liên hợp**:
+   Cho $z = a + bi$, số phức liên hợp của $z$ ký hiệu là $\bar{z} = a - bi$.
+   Môđun của $z$ ký hiệu là $|z| = \sqrt{a^2 + b^2}$.
+4. **Phép chia**:
+   Với $z_2 \neq 0$:
+   $$\frac{z_1}{z_2} = \frac{z_1 \cdot \bar{z}_2}{|z_2|^2} = \frac{(a_1 a_2 + b_1 b_2) + (a_2 b_1 - a_1 b_2)i}{a_2^2 + b_2^2}$$
+
+### 1.1.3 Dạng lượng giác và dạng mũ của số phức
+- **Dạng lượng giác**: $z = r(\cos\varphi + i\sin\varphi)$ với $r = |z| \ge 0$ và $\varphi = \text{Arg}(z)$.
+- **Công thức Moivre**: $z^n = r^n(\cos n\varphi + i\sin n\varphi)$.
+- **Công thức Euler**: $e^{i\varphi} = \cos\varphi + i\sin\varphi$, do đó $z = r e^{i\varphi}$.
+
+## 1.2 GIỚI HẠN CỦA DÃY SỐ THỰC
+
+### 1.2.1 Định nghĩa giới hạn
+Dãy số $(a_n)$ có giới hạn là số thực $L$ (ký hiệu $\lim_{n \to \infty} a_n = L$) nếu với mọi $\epsilon > 0$ nhỏ tùy ý, luôn tồn tại số nguyên $N_0 \in \mathbb{N}$ sao cho với mọi $n > N_0$ ta có: $|a_n - L| < \epsilon$.
+
+### 1.2.2 Các tính chất và nguyên lý hội tụ
+1. **Tính duy nhất của giới hạn**: Nếu dãy số có giới hạn thì giới hạn đó là duy nhất.
+2. **Nguyên lý kẹp (Squeeze Theorem)**: Nếu $x_n \le a_n \le y_n$ với mọi $n > N_0$ và $\lim x_n = \lim y_n = L$ thì $\lim a_n = L$.
+3. **Dãy đơn điệu và bị chặn**: Mọi dãy số tăng và bị chặn trên (hoặc giảm và bị chặn dưới) đều hội tụ.
+4. **Định lý Bolzano - Weierstrass**: Mọi dãy số bị chặn đều chứa một dãy con hội tụ.
+5. **Tiêu chuẩn Cauchy**: Dãy $(a_n)$ hội tụ khi và chỉ khi nó là dãy Cauchy, tức là với mọi $\epsilon > 0$, tồn tại $N_0$ sao cho với mọi $m, n > N_0$ ta có $|a_n - a_m| < \epsilon$.

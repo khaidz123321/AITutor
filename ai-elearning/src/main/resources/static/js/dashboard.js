@@ -13,6 +13,7 @@
     let currentUser = null;
     let teachers = []; // Store list of teachers for dropdowns
     let currentSelectedCourseIdForLessons = null;
+    let cachedExercisesAiList = [];
 
     // Chart instances for cleanup
     let overviewStudentsChartInstance = null;
@@ -1125,6 +1126,7 @@
             .then(resData => {
                 const tbody = document.getElementById('exerciseAiPanelTableBody');
                 if (resData.success && resData.data && resData.data.length > 0) {
+                    cachedExercisesAiList = resData.data;
                     tbody.innerHTML = resData.data.map(ex => `
                     <tr>
                         <td><strong>${ex.exerciseCode || ''}</strong></td>
@@ -1141,6 +1143,7 @@
                         </td>
                     </tr>`).join('');
                 } else {
+                    cachedExercisesAiList = [];
                     tbody.innerHTML = `<tr><td colspan="7" style="text-align: center; color: var(--text-3);">Chưa có bài tập AI nào cho chương này.</td></tr>`;
                 }
             });
@@ -1256,7 +1259,20 @@
                 method: 'POST',
                 headers: { 'Authorization': 'Bearer ' + token }
             })
-            .then(res => res.json().then(data => ({ ok: res.ok, status: res.status, data })))
+            .then(async res => {
+                const text = await res.text();
+                let data = {};
+                if (text && text.trim()) {
+                    try {
+                        data = JSON.parse(text);
+                    } catch (e) {
+                        data = { success: false, message: text };
+                    }
+                } else {
+                    data = { success: false, message: 'Phản hồi từ server rỗng (Timeout hoặc Lỗi kết nối).' };
+                }
+                return { ok: res.ok, status: res.status, data };
+            })
             .then(({ ok, status, data }) => {
                 clearInterval(progressInterval);
                 btn.innerHTML = originalText;
@@ -1272,6 +1288,45 @@
                         alert('✅ Sinh bài tập AI thành công!');
                         loadExercisesAiPanelTable(currentSelectedChapterIdForExercisesAi);
                     }, 500);
+                } else if (status === 504 || (data.message && (data.message.includes('504') || data.message.includes('Gateway time-out')))) {
+                    // Xử lý thông minh khi dính Cloudflare 504 Gateway Timeout
+                    const statusDesc = document.getElementById('exerciseAiStatusDesc');
+                    if (statusDesc) {
+                        statusDesc.textContent = 'Do AI đang suy luận toán học phức tạp, Cloudflare đã tạm ngắt kết nối HTTP nhưng AI VẪN ĐANG TIẾP TỤC CHẠY NGẦM TRÊN SERVER. Đang tự động theo dõi kết quả...';
+                    }
+                    progressBar.style.width = '100%';
+                    progressPercent.textContent = 'Đang chờ AI ngầm...';
+
+                    const initialLength = cachedExercisesAiList ? cachedExercisesAiList.length : 0;
+                    let pollCount = 0;
+
+                    const pollInterval = setInterval(() => {
+                        pollCount++;
+                        if (pollCount > 30) {
+                            clearInterval(pollInterval);
+                            loadingModal.classList.remove('show');
+                            btn.innerHTML = originalText;
+                            btn.disabled = false;
+                            alert('Quá thời gian chờ ngầm. Bạn có thể nhấn Đồng bộ hoặc chọn lại chương để xem bài tập mới.');
+                            return;
+                        }
+
+                        fetch(`/api/v1/chapters/${currentSelectedChapterIdForExercisesAi}/exercises-ai`, {
+                            headers: { 'Authorization': 'Bearer ' + token }
+                        })
+                        .then(r => r.json())
+                        .then(rData => {
+                            if (rData.success && rData.data && rData.data.length > initialLength) {
+                                clearInterval(pollInterval);
+                                loadingModal.classList.remove('show');
+                                btn.innerHTML = originalText;
+                                btn.disabled = false;
+                                alert('✅ AI đã hoàn tất sinh bài tập ngầm thành công!');
+                                loadExercisesAiPanelTable(currentSelectedChapterIdForExercisesAi);
+                            }
+                        })
+                        .catch(e => console.log('Polling...', e));
+                    }, 8000);
                 } else {
                     loadingModal.classList.remove('show');
                     // Lấy message lỗi từ nhiều field có thể có
@@ -1668,26 +1723,60 @@
             });
     };
 
+    window.openExerciseAiModal = (ex) => {
+        const modal = document.getElementById('exerciseAiModal');
+        if (!modal) return;
+
+        if (ex) {
+            document.getElementById('exerciseAiModalTitle').textContent = 'Sửa thông tin bài tập AI';
+            document.getElementById('modalExerciseAiId').value = ex.id || '';
+            document.getElementById('modalExerciseAiChapterId').value = ex.chapterId || currentSelectedChapterIdForExercisesAi || '';
+            document.getElementById('meAiCode').value = ex.exerciseCode || '';
+            document.getElementById('meAiName').value = ex.exerciseName || '';
+            document.getElementById('meAiDifficulty').value = ex.difficulty || 'EASY';
+            document.getElementById('meAiBloom').value = ex.bloomLevel || 'REMEMBERING';
+            document.getElementById('meAiQuestion').value = ex.question || '';
+            document.getElementById('meAiCorrect').value = ex.correctAnswer || '';
+        } else {
+            document.getElementById('exerciseAiModalTitle').textContent = 'Thêm bài tập AI mới';
+            document.getElementById('exerciseAiForm').reset();
+            document.getElementById('modalExerciseAiId').value = '';
+            document.getElementById('modalExerciseAiChapterId').value = currentSelectedChapterIdForExercisesAi || '';
+        }
+
+        modal.style.display = 'flex';
+        modal.classList.add('show');
+    };
+
+    window.closeExerciseAiModal = () => {
+        const modal = document.getElementById('exerciseAiModal');
+        if (modal) {
+            modal.classList.remove('show');
+            modal.style.display = 'none';
+        }
+    };
+
     window.editExerciseAi = (exId) => {
+        let ex = cachedExercisesAiList.find(item => item.id == exId);
+        if (ex) {
+            window.openExerciseAiModal(ex);
+            return;
+        }
+
         fetch(`/api/v1/exercises-ai/${exId}`, {
             headers: { 'Authorization': 'Bearer ' + token }
         })
             .then(res => res.json())
             .then(resData => {
-                if (resData.success) {
-                    const ex = resData.data;
-                    document.getElementById('modalExerciseAiId').value = ex.id;
-                    document.getElementById('modalExerciseAiChapterId').value = ex.chapterId || currentSelectedChapterIdForExercisesAi;
-                    document.getElementById('meAiCode').value = ex.exerciseCode || '';
-                    document.getElementById('meAiName').value = ex.exerciseName || '';
-                    document.getElementById('meAiDifficulty').value = ex.difficulty || 'EASY';
-                    document.getElementById('meAiBloom').value = ex.bloomLevel || 'REMEMBERING';
-                    document.getElementById('meAiQuestion').value = ex.question || '';
-                    document.getElementById('meAiCorrect').value = '';
-
-                    document.getElementById('exerciseAiModalTitle').textContent = 'Sửa thông tin bài tập AI';
-                    document.getElementById('exerciseAiModal').classList.add('show');
+                if (resData.success && resData.data) {
+                    window.openExerciseAiModal(resData.data);
+                } else {
+                    alert('Không thể tải thông tin bài tập AI.');
                 }
+            })
+            .catch(err => {
+                console.error(err);
+                alert('Có lỗi xảy ra khi tải thông tin bài tập AI.');
             });
     };
 

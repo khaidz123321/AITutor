@@ -1,0 +1,36 @@
+<think>\n\n</think>\n<think>
+To find the complex conjugate of \( z = a + bi \), I start by recalling that the complex conjugate of a complex number changes the sign of its imaginary part.
+
+By negating the imaginary component, if \( z = a + bi \), then its conjugate \( \overline{z} = a - bi \).
+
+To verify this, I will substitute sample values into both expressions to ensure they produce the expected results.
+</think>
+
+Muốn tìm **conjugate imaginay** của số phức \( z = a + bi \), ta làm như sau:
+
+1. **Khái niệm Complex Conjugate:**
+   - Complex conjugate (conjugate imaginay) của một số phức là số khác có cùng phần thực nhưng phần ảo ngược dấu.
+   
+2. **Công thức tìm complex conฎugate:**
+   
+   Gegeben:
+   \[
+   z = a + bi
+   \]
+   
+   Complex Conjugate (\( \overline{z} \)) được tìm bằng cách thêm dấu ngoặc.ReverseSign(){} vào phần ảo:
+   \[
+   \overline{z} = a - bi
+   \]
+
+3. **Ví dụ minh họa:**
+   - Giả sử \( z = 3 + 4i \).
+   - Complex conjugate của \( z \) là:
+     \[
+     \overline{z} = 3 - 4i
+     \]
+
+**Kết luận:**
+\[
+\boxed{\overline{z} = a - bi}
+\]

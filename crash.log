@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "D:\Project\AITutor\AI\controller\endpoints\exercises.py", line 642, in generate_from_theory
+    print(f"    -> Đang xử lý Stage 2 cho batch {i//chunk_size + 1} (Câu {i+1} đến {i+len(qa_chunk)})...")
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u0110' in position 7: character maps to <undefined>

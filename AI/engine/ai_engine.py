@@ -2,7 +2,7 @@ import json
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from schemas.evaluation import DiagnoseResult, GenerateResult
-from core.mapping import get_mapped_paths
+from core.mapping import get_mapped_paths, _get_default_folder_name
 import os
 from core.config import settings
 from langchain_openai import ChatOpenAI
@@ -16,10 +16,13 @@ _GEMINI_FALLBACK_EXCEPTIONS = (
     google_exc.InternalServerError,
     google_exc.DeadlineExceeded,
     google_exc.GoogleAPIError,
+    google_exc.PermissionDenied,
+    google_exc.InvalidArgument,
 )
 # Các chuỗi lỗi bổ sung khi exception không phải dạng google_exc
 _GEMINI_FALLBACK_KEYWORDS = [
-    "429", "RESOURCE_EXHAUSTED", "503", "504", "500",
+    "429", "RESOURCE_EXHAUSTED", "503", "504", "500", "403", "404",
+    "forbidden", "permission", "not_found", "invalid", "api_key",
     "quota", "OutputParserException", "output_parser",
     "invalid_json", "Could not parse", "JSONDecodeError"
 ]
@@ -335,7 +338,7 @@ class AItutor:
             "3. INCOMPLETE → Explicitly acknowledge the correct portion, then ask a probing question to extract the missing condition or step.\n"
             "4. CALCULATION_ERROR → Point out the general area of the mistake (e.g., signs, arithmetic rules). DO NOT fix it for them.\n"
             "5. CONCEPTUAL_ERROR → Dựa vào nội dung lý thuyết đã được cung cấp trong phần RETRIEVED KNOWLEDGE ở trên và các lỗi thường gặp, hãy đặt một câu hỏi Socratic để giúp sinh viên nhận ra hiểu lầm của mình.\n"
-            "6. VAGUE_OR_OFFTOPIC → Nhẹ nhàng hướng sinh viên quay lại mục tiêu scaffolding hiện tại. Nếu sinh viên hỏi lý thuyết đến từ đâu, hãy tra cứu thẻ [Nguồn: ...] trong phần RETRIEVED KNOWLEDGE và copy chính xác nhãn đó (vd: 'Giải tích 1 — Chương 1 — Mục: 1.1.2...'). Nếu không có thẻ [Nguồn], hãy thành thật nói không xác định được vị trí chính xác.\n"
+            "6. VAGUE_OR_OFFTOPIC → Nếu sinh viên chào hỏi (vd: 'chào bạn', 'hello', 'hi'), hãy chào lại thân thiện, giới thiệu bạn là Gia sư AI PTIT của môn học/chương này và sẵn sàng hỗ trợ giải đáp mọi thắc mắc lý thuyết hoặc bài tập. Nếu sinh viên nói chuyện ngoài lề không liên quan, hãy nhẹ nhàng hướng sinh viên quay lại nội dung bài học. Nếu sinh viên hỏi lý thuyết đến từ đâu, hãy tra cứu thẻ [Nguồn: ...] trong phần RETRIEVED KNOWLEDGE và copy chính xác nhãn đó.\n"
             "7. REQUEST_HINT → Provide a minimal, indirect hint to spark their thinking without giving away the exact operation.\n"
             "8. REQUEST_THEORY → KHÔNG sao chép nguyên văn từ phần RETRIEVED KNOWLEDGE. Chỉ dùng nó làm kiến thức nền để giải thích ngắn gọn, sau đó đặt câu hỏi Socratic để kết nối lý thuyết với bài toán hiện tại.\n"
             "   Bạn PHẢI trích dẫn nguồn vào trường JSON `source_citation`. Lấy vị trí từ thẻ `[Nguồn: ...]` trong phần RETRIEVED KNOWLEDGE và định dạng thành danh sách phân cấp nhiều dòng.\n"

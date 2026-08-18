@@ -61,9 +61,14 @@ public class ExerciseAiServiceImpl implements ExerciseAiService {
         ExerciseAi exercise = exerciseAiRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Không tìm thấy bài tập AI"));
 
-        Long courseId = exercise.getChapter().getCourse().getId();
-        if (!learningProfileRepository.existsByUserIdAndCourseId(userId, courseId)) {
-            throw new ForbiddenException("Bạn chưa đăng ký khóa học này");
+        User user = userRepository.findById(userId)
+                .orElseThrow(() -> new ResourceNotFoundException("Không tìm thấy người dùng"));
+
+        if (user.getRole() != re.edu.ai_elearning.entity.enums.Role.ADMIN && user.getRole() != re.edu.ai_elearning.entity.enums.Role.TEACHER) {
+            Long courseId = exercise.getChapter().getCourse().getId();
+            if (!learningProfileRepository.existsByUserIdAndCourseId(userId, courseId)) {
+                throw new ForbiddenException("Bạn chưa đăng ký khóa học này");
+            }
         }
 
         return exerciseAiMapper.toResponse(exercise);
@@ -492,8 +497,8 @@ public class ExerciseAiServiceImpl implements ExerciseAiService {
             headers.setContentType(MediaType.APPLICATION_JSON);
 
             Map<String, Object> requestBody = new java.util.HashMap<>();
-            requestBody.put("subject", chapter.getCourse().getTitle());
-            requestBody.put("chapter", chapter.getChapterName());
+            requestBody.put("subject", "course_" + chapter.getCourse().getId());
+            requestBody.put("chapter", "chuong_" + chapter.getChapterNumber());
             
             List<Map<String, Object>> exercisesList = new ArrayList<>();
             for (ExerciseAi ex : exercises) {

@@ -5,18 +5,30 @@ import glob
 # Pattern match tất cả variants: Chuong, Chương, CHU'ONG, Bai, Bài, Phan, Phần
 CHUONG_PATTERN = r'(?:Ch(?:u|ư)[\'\’]?(?:o|ơ)ng|CHƯƠNG|B(?:a|à)i|BÀI|Ph(?:a|ầ)n|PHẦN)'
 
-def auto_split_large_files():
+def auto_split_large_files(subject: str = None):
     CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
     AI_DIR = os.path.dirname(CURRENT_DIR)
     RAG_INPUT_DIR = os.path.join(AI_DIR, "data", "rag_input")
-    
-    print(f"ĐANG QUÉT TÌM TÌM GỘP TẠI: {RAG_INPUT_DIR}")
+
+    # Nếu truyền subject thì chỉ quét thư mục của môn đó, tránh làm hỏng dữ liệu môn khác
+    if subject:
+        search_path = os.path.join(RAG_INPUT_DIR, subject, "*.txt")
+    else:
+        search_path = os.path.join(RAG_INPUT_DIR, "**", "*.txt")
+
+    print(f"ĐANG QUÉT TÌM TÌM GỘP TẠI: {search_path}")
     print("=" * 60)
-    
-    # Quét tất cả file .txt 
-    txt_files = glob.glob(os.path.join(RAG_INPUT_DIR, "**", "*.txt"), recursive=True)
+
+    # Quét file .txt 
+    txt_files = glob.glob(search_path, recursive=True)
     files_processed = 0
     for file_path in txt_files:
+        # BỎ QUA file đã được tách rồi (có _chuong_ hoặc _loi_noi_dau trong tên)
+        # Tránh trường hợp tách đi tách lại → tên file dài vô tận
+        file_name_check = os.path.basename(file_path)
+        if "_chuong_" in file_name_check or "_loi_noi_dau" in file_name_check:
+            continue
+
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         

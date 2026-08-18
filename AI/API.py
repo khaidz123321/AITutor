@@ -1,4 +1,19 @@
 import sys
+import io
+
+# Force stdout & stderr encoding to UTF-8 with replace error handling to prevent UnicodeEncodeError
+if hasattr(sys.stdout, 'buffer'):
+    try:
+        sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
+    except Exception:
+        pass
+
+if hasattr(sys.stderr, 'buffer'):
+    try:
+        sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding='utf-8', errors='replace')
+    except Exception:
+        pass
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from controller.router import api_router

@@ -134,7 +134,7 @@ def process_document_background(doc_id: int, file_path: str, safe_filename: str,
                     f.write(text_result)
                 
                 print("[BACKGROUND] Đang chạy auto_split_large_files...")
-                auto_split_large_files()
+                auto_split_large_files(subject=subject)
                 
                 base_name_no_ext = safe_filename.replace(".pdf", "")
                 generated_files = glob.glob(os.path.join(rag_input_dir, f"{base_name_no_ext}*.txt"))
