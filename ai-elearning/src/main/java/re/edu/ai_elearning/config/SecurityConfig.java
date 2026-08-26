@@ -139,6 +139,12 @@ public class SecurityConfig {
                 .anyRequest().authenticated()
             );
 
+        // Mặc định Spring Security trả về X-Frame-Options: DENY cho MỌI response (kể cả file tĩnh
+        // /uploads/**), khiến trình duyệt từ chối hiển thị PDF giáo trình trong <iframe> ở trang chi
+        // tiết khóa học (course-detail.js) dù request bản thân trả về 200. Đổi sang sameOrigin để cho
+        // phép nhúng iframe từ chính domain của mình, vẫn chặn nhúng từ domain lạ (chống clickjacking).
+        http.headers(headers -> headers.frameOptions(frameOptions -> frameOptions.sameOrigin()));
+
         http.addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
 
         return http.build();

@@ -1,0 +1,73 @@
+{
+    "subject": "Đại số tuyến tính",
+    "chapter_number": "2",
+    "chapter_name": "chuong_2",
+    "questions": [
+        {
+            "id": "DSTT_C2_01",
+            "lesson_number": "2.1",
+            "lesson_name": "Định nghĩa và tính chất của không gian vector",
+            "topic": "Chuyên đề về không gian vector",
+            "theory_reference": "Không gian vector R^n",
+            "difficulty": "Easy",
+            "bloom_level": "Understanding",
+            "thought_process": "1. Neo lý thuyết: Định nghĩa không gian vector R^n.\n2. Xác định tập hợp các vectơ trong R^3 thỏa mãn điều kiện cho trước.",
+            "question_text": "Xét tập hợp các vectơ trong R^3 có dạng (x, y, z) sao cho x + 2y - z = 0. Tập hợp này là gì?",
+            "full_answer": "Tập hợp tất cả các vectơ trong R^3 thỏa mãn phương trình x + 2y - z = 0",
+            "detailed_solution": "1. Xác định tập hợp tất cả các vectơ (x, y, z) trong R^3.\n2. Áp dụng điều kiện x + 2y - z = 0 để xác định tập hợp cần tìm.",
+            "scaffolding_steps": [
+                {
+                    "step_number": 1,
+                    "hint": "Gợi ý",
+                    "step_detail": "Xác định tập hợp tất cả các vectơ trong R^3."
+                }
+            ],
+            "common_mistakes": []
+        },
+        {
+            "id": "DSTT_C2_02",
+            "lesson_number": "2.2",
+            "lesson_name": "Đại lượng và phương trình vector",
+            "topic": "Chuyên đề về đại lượng và phương trình vector",
+            "theory_reference": "Định lý về phương trình vector",
+            "difficulty": "Hard",
+            "bloom_level": "Evaluating",
+            "thought_process": "1. Neo lý thuyết: Định lý về phương trình vector.\n2. Biến đổi trung gian... 3. Giải nghiệm... 4. Kiểm chứng...",
+            "question_text": "Cho vectơ a = (1, -2, 3) và vectơ b = (-1, 0, 2). Tìm tọa độ của vectơ c sao cho a + c = 2b.\na) Tọa độ của vectơ c là gì?\nb) Kiểm tra lại kết quả.",
+            "full_answer": "a) (1, -4, 1); b) Đúng",
+            "detailed_solution": "1. Áp dụng phương trình a + c = 2b.\n2. Giải phương trình để tìm tọa độ của vectơ c.\n3. Kiểm tra lại kết quả.",
+            "scaffolding_steps": [
+                {
+                    "step_number": 1,
+                    "hint": "Gợi ý ý a",
+                    "step_detail": "Áp dụng công thức a + c = 2b."
+                },
+                {
+                    "step_number": 2,
+                    "hint": "Gợi ý ý b",
+                    "step_detail": "Thay tọa độ của vectơ c vào phương trình ban đầu để kiểm tra."
+                }
+            ],
+            "common_mistakes": []
+        },
+        {
+            "id": "DSTT_C2_03",
+            "lesson_number": "2.1",
+            "lesson_name": "Không gian vector và ánh xạ tuyến tính",
+            "topic": "Ánh xạ tuyến tính trong không gian vector",
+            "difficulty": "Medium",
+            "bloom_level": "Applying",
+            "question_text": "Cho hàm f: R^2 -> R^2, f(x,y) = (ax + by, cx + dy). Tìm điều kiện cần và đủ để f là ánh xạ tuyến tính.",
+            "full_answer": "f là ánh xạ tuyến tính khi a, b, c, d là hằng số.",
+            "detailed_solution": "Ánh xạ tuyến tính phải thỏa mãn hai điều kiện: f(u + v) = f(u) + f(v) và f(ku) = kf(u).",
+            "scaffolding_steps": [
+                {
+                    "step_number": 1,
+                    "hint": "Xác định điều kiện cần để f là ánh xạ tuyến tính",
+                    "step_detail": "Áp dụng hai điều kiện của ánh xạ tuyến tính vào hàm f."
+                }
+            ],
+            "common_mistakes": []
+        }
+    ]
+}

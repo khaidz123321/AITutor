@@ -1,8 +1,8 @@
-﻿import os
+import os
 import requests
 import time
 
-MAX_CONNECTION_ERRORS = 5
+MAX_CONNECTION_ERRORS = 60  # 60 × 15s = 15 phút kiên nhẫn khi mạng tunnel/ngrok chập chờn
 MAX_POLL_ATTEMPTS     = 960  # 960 × 15s = 4 tiếng tối đa / lần upload
 
 class MinerU:

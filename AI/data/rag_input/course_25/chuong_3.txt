@@ -1,0 +1,1840 @@
+# 3.1. Tích Phân Xác Định
+
+# 3.1.1. Định Nghĩa
+
+Cho hàm số $f ( x )$ xác định trên $[ a , b ]$
+
++ **Phép** chia $P$ đoạn $[ a , b ]$ (hay còn gọi là phân hoạch) bằng $n$ điểm
+
+$$
+x _ { 0 } = a < x _ { 1 } < \ldots < x _ { n } = b .
+$$
+
+Đặt $\Delta _ { x _ { i } } = x _ { i } - x _ { i - 1 } \ \forall i = 1 , 2 , . . . , n , \Delta _ { P } = \operatorname*{max} \{ \Delta _ { x _ { 1 } } , \Delta _ { x _ { 2 } } , . . . , \Delta _ { x _ { n } } \}$ (được gọi là độ dài của phân hoạch $P$）
+
+Khi đó
+
+$$
+\sigma _ { n } = \sum _ { k = 1 } ^ { n } f ( \xi _ { k } ) \Delta _ { x _ { i } }
+$$
+
+được gọi là một tổng tích phân (hay còn gọi là tổng Riemann) của $f ( x )$ trên $[ a , b ]$. Xét giới hạn
+
+$$
+\quad I = \operatorname*{lim} _ { \Delta _ { P } \to 0 } \sigma _ { n } .
+$$
+
+Nếu $I$ tồn tại hữu hạn, không phụ thuộc vào phép chia $P$ và phép chọn các điểm $\xi _ { i } \ i = 1 , 2 , . . . , n .$ thì $\boldsymbol{ I }$ được gọi là tích phân xác định của $f ( x )$ trên $[ a , b ]$ và được ký hiệu $\textstyle \int f ( x ) d x$. Khi đó hàm số $f ( x )$ được gọi là khả tích trên $[ a , b ]$：
+
+Trong trường hợp đặc biệt, phép chia $P$ đoạn $[ 0 , 1 ]$ bằng $n$ điểm cách đều nhau
+
+$$
+0 < \frac { 1 } { n } < \frac { 2 } { n } < \ldots < \frac { n } { n } = 1 .
+$$
+
+Với $f ( x )$ khả tích trên $[ 0 , 1 ]$, ta có
+
+$$
+\operatorname*{lim}_{n \to \infty} \frac{1}{n} \left( f\left(\frac{1}{n}\right) + f\left(\frac{2}{n}\right) + \ldots + f\left(\frac{n}{n}\right) \right) = \int_{0}^{1} f(x) dx.
+$$
+
+Ý nghĩa: Dùng tích phân để tính giới hạn.
+
+Ví dụ 3.1. Giả sử $I = \int x^2 dx$ tồn tại. Dùng định nghĩa tích phân để tính I.
+
+Giải Chia đoạn $[-1, 2]$ thành $n$ phần bằng nhau và chọn $\xi_i$ là mút bên trái của mỗi đoạn $[x_{i-1}, x_i]$, ta nhận được
+
+$$
+\sigma_P = \frac{3}{n} \sum_{k=1}^{n} \left( -1 + \frac{3(k-1)}{n} \right)^2 = \frac{3}{n} \sum_{k=1}^{n} \left( 1 - \frac{6(k-1)}{n} + \frac{9(k-1)^2}{n^2} \right)
+$$
+
+Vậy
+
+$$
+I = \int_{-1}^{2} x^2 dx = \operatorname*{lim}_{n \to \infty} \sigma_n = 3.
+$$
+
+## 3.1.2. Ý nghĩa hình học
+
+Nếu $f(x) \geq 0 \forall x \in [a, b]$, thì $\sigma_n$ là tổng diện tích các hình chữ nhật có kích thước $\Delta_{x_i}$ và $f(\xi_i)$ $\forall i = 1, 2, ..., n$. Khi $\Delta_P$ đủ nhỏ, $\sigma_n$ gần đúng với diện tích hình thang cong tạo bởi các đường $x=a$, $x=b$, $Ox$ và $y=f(x)$.
+
+# 3.1.3. TỔNG DARBOUX TRÊN VÀ DƯỚI
+
+Giả sử $f ( x )$ xác định và bị chặn trên $[ a , b ]$. Khi đó, tồn tại
+
+$$
+m _ { i } = \operatorname * { inf } _ { x \in [ x _ { i - 1 } , x _ { i } ] } f ( x ) , \quad M _ { i } = \operatorname * { sup } _ { x \in [ x _ { i - 1 } , x _ { i } ] } f ( x ) \forall i = 1 , 2 , . . . , n .
+$$
+
+Ta gọi
+
+$$
+s _ { P } = \sum _ { k = 1 } ^ { n } m _ { i } \Delta _ { x _ { i } }
+$$
+
+là tổng Darboux dưới của hàm $f ( x )$ trên $[ a , b ]$ và
+
+$$
+S _ { P } = \sum _ { k = 1 } ^ { n } M _ { i } \Delta _ { x _ { i } }
+$$
+
+là tổng Darboux trên của hàm $f ( x )$ trên $[ a , b ]$.
+
+Cho hai phân hoạch $P _ { 1 }$ và $P _ { 2 }$. Khi đó, $P _ { 1 } \subseteq P _ { 2 }$, nếu mọi điểm chia của $P _ { 1 }$ đều thuộc tập các điểm chia của $P _ { 2 }$. Đặt
+
+$$
+\mathcal{I} ^ { * } = \operatorname * { inf } _ { \mathcal{P} } \{ S _ { \mathcal{P} } \} , \quad \mathcal{I} _ { * } = \operatorname * { sup } _ { \mathcal{P} } \{ s _ { \mathcal{P} } \} .
+$$
+
+Định lý 3.2.
+
+i) $s _ { P } \leq S _ { P } \forall P$.
+
+ii) $P _ { 1 } \subseteq P _ { 2 } \Rightarrow s _ { P _ { 1 } } \leq s _ { P _ { 2 } }$, $S _ { P _ { 1 } } \leq S _ { P _ { 2 } }$.
+
+iii) $s _ { P _ { 1 } } \leq S _ { P _ { 2 } } \forall P _ { 1 } , P _ { 2 }$
+
+iv) $\mathcal{I} _ { * } \leq \mathcal{I} ^ { * }$.
+
+Chứng minh i):
+
+$$
+f ( x ) \leq f ( \xi _ { i } ) \leq \operatorname*{sup}_{[x_{i-1}, x_i]} f(x) \Rightarrow m_i \Delta x_i \leq f(\xi_i) \Delta x_i \leq M_i \Delta x_i \quad \forall i = 1, \ldots, n.
+$$
+
+$$
+\Rightarrow \sum_{i=1}^n m_i \Delta x_i \leq \sum_{i=1}^n f(\xi_i) \Delta x_i \leq \sum_{i=1}^n M_i \Delta x_i \Rightarrow s_P \leq \sigma_P \leq S_P \quad \forall P.
+$$
+
+ii) Cho $P_1 \subseteq P_2$, không mất tính tổng quát, giả sử $P_1$ gồm các điểm chia
+
+$$
+x_0 = a < x_1 < x_2 < \ldots < x_n = b
+$$
+
+và $P_2$ gồm các điểm chia
+
+$$
+x_0 = a < x_1 < x_2 < \ldots < x_{k-1} < x^* < x_k < \ldots < x_n = b.
+$$
+
+Đặt
+
+$$
+\Phi_{k1} = x^* - x_{k-1}, \quad \Delta_{x_{k2}} = x_k - x^*, \quad m_{k1}^* = \operatorname*{inf}_{[x_{k-1}, x^*]} f(x), \quad m_{k2}^* = \operatorname*{inf}_{[x^*, x_k]} f(x) = 0.
+$$
+
+Từ $[x_{k-1}, x_k] = [x_{k-1}, x^*] \cup [x^*, x_k]$, ta có
+
+$$
+\begin{array} { r l }
+{ m _ { k } . \Delta _ { x _ { k } } = \displaystyle \operatorname* { inf } _ { [ x _ { k - 1 } , x _ { k } ] } f ( x ) . \Delta _ { x _ { k } } } & {}
+{ = \displaystyle \operatorname* { inf } _ { [ x _ { k - 1 } , x _ { k } ] } f ( x ) . \Delta _ { x _ { k 1 } } + \displaystyle \operatorname* { inf } _ { [ x _ { k - 1 } , x _ { k } ] } f ( x ) . \Delta _ { x _ { k 2 } } } & {}
+{ \leq \displaystyle \operatorname* { inf } _ { [ x _ { k - 1 } , x ^ { * } ] } f ( x ) . \Delta _ { x _ { k 1 } } + \displaystyle \operatorname* { inf } _ { [ x ^ { * } , x _ { k } ] } f ( x ) . \Delta _ { x _ { k 2 } } } & {}
+{ = m _ { k 1 } ^ { * } . \Delta _ { x _ { k 1 } } + m _ { k 2 } ^ { * } . \Delta _ { x _ { k 2 } } . } & {}
+\end{array}
+$$
+
+Khi đố
+
+$$
+\begin{array} { r l }
+{ \rho _ { R1 } = } & { \displaystyle \sum _ { j = 1 } ^ { n } m _ { 2 } \Delta \alpha _ { 2 , 1 } } \\
+& { \mathrm { ~ } } \\
+{ \displaystyle \sum _ { j = 1 } ^ { n } m _ { 3 } \Delta \alpha _ { 3 , 1 } \quad \mathrm { mad }_{ 3, \infty } } \\
+& { \mathrm { ~ } } \\
+{ \rho _ { 1 } = 1 } \\
+{ \rho _ { 2 } \neq k } \\
+& { \mathrm { ~ } } \\
+\leq & { \displaystyle \sum _ { j = 1 } ^ { n } \quad \mathrm { max }_{ 1 } + \mathrm { m }_{ k + 1 }^{ \alpha } \Delta _{ \alpha _{ 3 }, 1 } - \mathrm { m }_{ k + 1 }^{ \alpha } \Delta _{ \alpha _{ 3 }, 1 } } \\
+& { j = 1 } \\
+& { j \neq k } \\
+- s _ { 0 } , 
+\end{array}
+$$
+
+Bằng cách chứng minh tương tự, ta cũng có $S_{P_1} \geq S_{P_2}$.
+
+ii) Đặt $P = P_1 \cup P_2$ ($P$ gồm các điểm chia của $P_1$ và $P_2$, suy ra $P_1 \subseteq P, P_2 \subseteq P$). Theo i) và ii), ta có
+
+$$
+\left\{ 
+\begin{array} { l l }
+s_{P_1} \leq s_P \\
+s_P \leq S_P \\
+S_P \leq S_{P_2}
+\end{array} 
+\right.
+\Rightarrow s_{P_1} \leq S_{P_2} \forall P_1, P_2.
+$$
+
+3.1.4. Các điều kiện khả tích
+
+Định lý 3.3. Cho hàm số $f(x)$ xác định trên $[a, b]$. Khi đó các mệnh đề sau tương đương.
+
+i) $f ( x )$ khả tích trên $[ a , b ]$: ii) $\operatorname *{lim} _{\Delta _{P} \to 0} ( S_{P} - s_{P} ) = 0.$ 
+
+Chứng minh i) $\Rightarrow$ ii): Giả sử $f ( x )$ khả tích trên $[ a , b ]$. Hợp giới hạn $I$ sau tồn tại hữu hạn, không phụ thuộc vào phép chia $P$ và phép chọn $\xi _{k} \in [x_{k-1}, x_k]$
+
+$$
+I = \operatorname *{lim}_{\Delta_P \to 0} \sigma_P.
+$$
+
+Theo định nghĩa,
+
+$$
+\exists \delta > 0, \forall P : 0 < \Delta_P < \delta \Rightarrow |\sigma_P - I| < \frac{\epsilon}{4} \Rightarrow I - \frac{\epsilon}{4} < \sigma_P < I + \frac{\epsilon}{4}
+$$
+
+Mặt khác, $s_{P} = \sum _{k=1}^{n} m_k \Delta x_k$, $S_{P} = \sum _{k=1}^{n} M_k \Delta x_k$, theo định nghĩa của inf, sup và định lý 3.2, ta có
+
+$$
+\left\{
+\begin{array}{l}
+s_P + \frac{\epsilon}{4} > \sigma_P \\
+S_P - \frac{\epsilon}{4} < \sigma_P 
+\end{array}
+\right.
+\Rightarrow I - \frac{\epsilon}{2} < s_P \leq S_P \leq \sigma_P + \frac{\epsilon}{4} < I
+$$
+
+Vậy
+
+|sp−I| < \frac{\epsilon}{2}, |S_{P} - I| < \frac{\epsilon}{2} \Rightarrow |S_{P} - s_{P}| \leq |s_{P} - I| + |S_{P} - I| < \epsilon \Rightarrow \lim_{\Delta_{P} \to 0}(S_{P} - I) < \epsilon, \lim_{\Delta_{P} \to 0}(S_{P} - s_{P}) = 0. ■
+
+(ii) Theo định lý 3.2, dãy $\left(s_{P}\right)$ đơn điệu tăng và bị chặn trên và dãy $(S_{P})$ đơn  
+điệu giảm và bị chặn dưới, suy ra tồn tại giới hạn hữu hạn $\lim_{\Delta_{P} \to 0}s_{P}$ và $\lim_{\Delta_{P} \to 0}S_{P}.$
+
+Theo tính chất của dãy đơn điệu trong chương 2.2, ta có
+
+$$
+\lim_{\Delta_{P} \to 0} s_{P} = \inf_{P} s_{P} = I_{*}, \quad \lim_{\Delta_{P} \to 0} S_{P} = \sup_{P} S_{P} = I^{*}.
+$$
+
+Từ giả thiết $\lim_{\Delta_{P} \to 0}(S_{P} - s_{P}) = 0 \Rightarrow I^{*} = I_{*}$ Theo định lý 3.2,
+
+$$
+s_{P} \leq \sigma_{P} \leq S_{P} \Rightarrow \lim_{\Delta_{P} \to 0}\sigma_{P} = I^{*}.
+$$
+
+(ii) $\Leftrightarrow$ (iii)
+
+Định lý 3.4. Nếu $f(x)$ liên tục trên $[a, b]$, thì $f(x)$ khả tích trên $[a, b]$.
+
+Chứng minh Giả thiết cho $f(x)$ liên tục trên $[a, b]$, nên $f(x)$ liên tục tại $\bar{x}_k \in [a, b]$ bất kỳ. Hay
+
+$$
+0, \exists \delta > 0 \forall x \in [a, b]: 0 < |x - \bar{x}_k| < \delta \Rightarrow |f(x) - f(\bar{x}_k)| < \frac{\epsilon}{b - a}.
+$$
+
+Giả sử $P$ là một phân hoạch bất kỳ sao cho $\Delta_P < \delta$. Do $f(x)$ liên tục trên $[x_{k-1}, x_k]$, nên
+
+$$
+\operatorname*{inf}_{[x_{k-1}, x_k]} f(x) = \operatorname*{min}_{[x_{k-1}, x_k]} f(x) = f(\bar{x}_k)
+$$
+
+và
+
+$$
+\operatorname*{sup}_{[x_{k-1}, x_k]} f(x) = \operatorname*{max}_{[x_{k-1}, x_k]} f(x) = f(\hat{x}_k).
+$$
+
+Do đó,
+
+$$
+|f(\hat{x}_k) - f(\bar{x}_k)| < \frac{\epsilon}{b - a} \Rightarrow M_k - m_k < \frac{\epsilon}{b - a}.
+$$
+
+Do đó
+
+$$
+(M_k - m_k)\Delta x_k < \sum_{k=1}^n \frac{\epsilon}{b - a}\Delta x_k = \epsilon \Rightarrow |S_P - s_P| < \epsilon \Rightarrow \lim_{\Delta_P \to 0}(S_P - s_P) = S - s,
+$$
+
+Theo định lý 3.3, ta có $f(x)$ khả tích trên $[a, b]$.
+
+Định lý 3.5. Nếu $f ( x )$ bị chặn và có hứa hạn tại điểm gian đoạn trên $[ a , b ]$, thì $f ( x )$ khả tích trên $[ a , b ]$.
+
+Chứng minh Không mất tính tổng quát, ta giả sử rằng $f ( x )$ có đúng một điểm gian đoạn $x _ { 0 } \in [ a , b ]$. Đặt
+
+$$
+m = \operatorname*{min}_{[a,b]} f(x), M = \operatorname*{max}_{[a,b]} f(x), \Delta_{x_0} = [ x_0 - \epsilon^2, x_0 + \epsilon^2 ].
+$$
+
+Vì $x _ { 0 }$ là điểm gian đoạn, suy ra $m < M$. Với mọi $\begin{array}{r} 0 < \epsilon < \frac{1}{8(M-m)} \end{array}$ chọn $0 < \delta < \epsilon.$ Ta có $f ( x )$ khả tích trên $[ a , x _ { 0 } - \epsilon ^ { 2 } ]$ và $[ x _ { 0 } + \epsilon ^ { 2 }, b ]$. Gọi $P_1$ là phân hoạch trên $[a, x_0 - \epsilon^2]$ và $P_2$ là phân hoạch trên $[x_0 + \epsilon^2, b]$ sao cho $\Delta_{P_1} < \delta$, $\Delta_{P_2} < \delta$. Ta đều có
+
+$$
+\operatorname*{lim}_{\Delta_{P_j} \to 0} (M_{P_j} - m_{P_j}) = 0 \Rightarrow \sum_{k=1}^{n}\left(M_k(P_j) - m_k(P_j)\right) < \frac{\epsilon}{2} \forall j = 1, 2.
+$$
+
+Xét phân hoạch $P$ bất kỳ của $[a,b]$ sao cho $\Delta_P < \delta$, ta có
+
+$$
+\sum _ { k = 1 } ^ { n } ( M _ { k } - m _ { k } ) \Delta _ { x _ { k } } = \sum _ { \Delta _ { x _ { k } } \cap \Delta _ { x _ { j } } = \emptyset } ( M _ { k } - m _ { k } ) \Delta _ { x _ { k } } + \sum _ { \Delta _ { x _ { k } } \cap \Delta _ { x _ { j } } \neq \emptyset } ( M _ { k } - m _ { k } ) \Delta _ { x _ { k } } .
+$$
+
+Theo (3.1) ta có
+
+$$
+\sum _ { \Delta _ { x _ { k } } \cap \Delta _ { x _ { j } } = \emptyset } ( M _ { k } - m _ { k } ) \Delta _ { x _ { k } } < \frac { \epsilon } { 2 } .
+$$
+
+Mặt khác, do $M _ { k } - m _ { k } < M - m$, nên
+
+$$
+\begin{array} { r l }
+{ \displaystyle \sum _ { \Delta _ { x _ { k } } \cap \Delta _ { x _ { j } } \neq \emptyset } ( M _ { k } - m _ { k } ) \Delta _ { x _ { k } } \leq ( M - m ) \sum _ { \Delta _ { x _ { k } } \cap \Delta _ { x _ { j } } \neq \emptyset } \Delta _ { x _ { k } } } & { }
+\\
+{ \leq ( M - m ) ( 2 \epsilon ^ { 2 } + 2 \delta ) } & { }
+\\
+{ \leq ( M - m ) 4 \epsilon ^ { 2 } } & { }
+\\
+{ < ( M - m ) 4 \epsilon \frac { 1 } { 8 ( M - m ) } } & { }
+\\
+{ = \frac { \epsilon } { 2 } . } &
+\end{array}
+$$
+
+Vậy $\begin{array} { r } { \sum _ { k = 1 } ^ { n } ( M _ { k } - m _ { k } ) \Delta _ { x _ { k } } < \epsilon . } \end{array}$ Theo định lý 3.3, $f ( x )$ khả tích trên $[ a , b ]$.
+
+Định lý 3.6. Nếu hàm số $f ( x )$ đơn điệu và bị chặn trên $[ a , b ]$, thì $f ( x )$ khả tích trên $[ a , b ]$.
+
+Chứng minh Giả sử $f ( x )$ đơn điệu tăng trên $[ a , b ]$. Khi đó
+
+$m_k = \inf_{[x_{k-1}, x_k]} f(x) = f(x_{k-1}), M_k = \sup_{[x_{k-1}, x_k]} f(x) = f(x_k) \Rightarrow M_k - m_k = f(x_k) - f(x_k-1)$.
+
+Với mọi $\epsilon > 0$ chọn
+
+$$
+\delta = \frac{\epsilon}{f(b) - f(a)}.
+$$
+
+Khi đó mỗi phân hoạch $P, |P| < \delta$ đều có
+
+$$
+\sum_{k=1}^{n} (M_k - m_k) \Delta x_k < \delta \sum_{k=1}^{n} \left( f(x_k) - f(x_{k-1}) \right) = \delta \left( f(b) - f(a) \right) =
+$$
+
+Vậy hàm số $f(x)$ khả tích trên $[a, b]$.
+
+# 3.2. Tính chất
+
+Cho $f(x), g(x)$ là hai hàm số khả tích trên $[a, b]$. Khi đó
+
+$$
+\begin{array}{c} 
+\begin{array} { l } 
+{ \displaystyle { \begin{array} { l } { \dot{\gamma} } \\ { \dot{\alpha} } \end{array} } \left( f ( x ) + g ( x ) \right) d x = \int _ { a } ^ { b } f ( x ) d x + \int _ { a } ^ { b } g ( x ) d x . } 
+\\ 
+{ \displaystyle { \begin{array} { l } { \dot{\alpha} } \\ { \dot{\beta} } \\ { \dot{\alpha} } \end{array} } } 
+\\ 
+{ \begin{array} { l } { \dot{\beta} } \\ { \dot{\alpha} } \end{array} } \left( f ( x ) - g ( x ) \right) d x = \int _ { a } ^ { b } f ( x ) d x - \int _ { a } ^ { b } g ( x ) d x . 
+\\ 
+{ \dot{\beta} } \\ 
+{ \dot{\alpha} } 
+\end{array} 
+\\ 
+{ \begin{array} { l } { \dot{\beta} } \\ { \dot{\alpha} } \end{array} } \left( k f ( x ) \right) d x = k \int _ { a } ^ { b } f ( x ) d x \quad \text{nếu} \quad k = const. 
+\\ 
+{ \boldsymbol{\alpha} } \\ 
+{ \begin{array} { l } { \dot{\beta} } \\ { \mathrm{Nếu} \, \tilde{\partial}(x) \leq g(x) \forall x \in [a, b], \text{thì} \int _ { a } ^ { b } f ( x ) d x \leq \int _ { a } ^ { b } g ( x ) d x . } 
+\end{array} } 
+\end{array}
+$$
+
+${ \begin{array} { r l } & { { \mathrm { \it ~b } } } \\ & { + \int f(x) dx = \frac{c}{a} f(x) dx + \int_{c}^{b} f(x) dx \quad \forall c \in ( a , b ) . } \\ & { { \mathrm { \it ~b } } } \\ & { + \int f(x) dx = -\int f(x) dx . } \\ & { { \mathrm { \it ~a } } } \\ & { + \left| \int f(x) dx \right| \leq \int \left| f(x) \right| dx . } \\ & { { \mathrm { \it ~b } } } \\ & { + \int f(x) dx = \frac{b}{a} f(t) dt \quad (\text{tích phân không phụ thuộc biến}) } \end{array} }$
+
+Định lý 3.7. (Định lý giá trị trung bình)
+
+Nếu $f(x)$ khả tích trên $[ a , b ]$ và $m \leq f(x) \leq M \quad \forall x \in [ a , b ]$, thì tồn tại số $\mu \in [ m , M ]$ sao cho
+
+$$
+\mu = { \frac{1}{b - a} } \intop_{a}^{b} f(x) dx.
+$$
+
+Chứng minh Ta có
+
+$$
+\begin{array} { r } { \forall x \in [ a , b ] : m \leq f(x) \leq M \Rightarrow m ( b - a ) \leq \displaystyle \int_{a}^{b} f(x) dx \leq M ( b - a ). } \end{array}
+$$
+
+Hay
+
+Đặt $\begin{array} { r } { \mu = \frac{1}{b - a} \int_{a}^{b} f(x) dx } \end{array}$ ta có 56 $\mu$ cần tìm.
+
+Ví dụ 3.8. (Bất đẳng thức Cauchy-Schwarz)
+
+Nếu $f(x), g(x)$ liên tục trên $[ a , b ]$, thì
+
+$$
+\left( \int_{a}^{b} f(x) g(x) dx \right)^{2} \leq \int_{a}^{b} f^2(x) dx . \int_{a}^{b} g^2(x) dx.
+$$
+
+Chứng minh rằng $\overset { b } { \underset { a } { \int } } \left( y f ( x ) + g ( x ) \right) ^ { 2 } d x \geq 0 \forall y \in \mathbb { R } . \mathrm { H }$ ày
+
+$$
+A y ^ { 2 } + 2 B y + C \geq 0 \forall y ,
+$$
+
+với
+
+$$
+A = \int _ { a } ^ { b } f ^ { 2 } ( x ) d x , B = \int _ { a } ^ { b } f ( x ) g ( x ) d x , C = \int _ { a } ^ { b } g ^ { 2 } ( x ) d x .
+$$
+
+Do $\begin{array} { r } { A = \int f ^ { 2 } ( x ) d x \geq 0 } \end{array}$, nên ta xét hai trường hợp:
+
+- Nếu $B > 0$, thì $2 B y + C \ge 0 \Rightarrow 0 \le \lim_{y \to -\infty} ( 2 B y + C ) = - \infty$, mâu thuẫn.
+
+- Nếu $B < 0$, thì $2 B y + C \ge 0 \Rightarrow 0 \le \lim_{y \to +\infty} ( 2 B y + C ) = - \infty$, mâu thuẫn.
+
+Vậy bất đẳng thức trên luôn đúng.
+
+Trường hợp 2: Nếu $A > 0$, thì theo định lý dấu tam thức bậc hai, ta có $\Delta' = B ^ { 2 } - A C \leq 0$ , hay
+
+$$
+\left( \int _ { a } ^ { b } f ( x ) g ( x ) d x \right) ^ { 2 } \leq \int _ { a } ^ { b } f ^ { 2 } ( x ) d x . \int _ { a } ^ { b } g ^ { 2 } ( x ) d x .
+$$
+
+3.3. Mối quan hệ giữa nguyên hàm và tích phân xác định
+
+Ta nhắc lại một số nét cơ bản của nguyên hàm.
+
+## 3.3.1. Nguyên hàm
+
+- Hàm số $F ( x )$ được gọi là một nguyên hàm của $f ( x )$, nếu $F ^ { \prime } ( x ) = f ( x )$.
+
+Nhận xét $3.9.$ Nếu $F(x)$ là một nguyên hàm của $f(x)$, thì $F(x) + C$ với $C = const$ cũng là nguyên hàm của $f(x)$:
+
+Nếu $F(x)$ và $G(x)$ là hai nguyên hàm của $f(x)$, thì tồn tại $C = const$ sao cho $G(x) = F(x) + C.$
+
+- Nếu $F(x)$ là một nguyên hàm của $f(x)$, thì $F(x) + C$, với $C = const$, được gọi là họ nguyên hàm của $f(x)$ được ký hiệu bởi $\textstyle \int f ( x ) d x$ (còn gọi là tích phân không xác định). Hay
+
+$$
+\int f ( x ) d x = F ( x ) + C .
+$$
+
+Chú ý rằng: Vi phân của hàm $f(x)$ là $d f (x) = f'(x) dx$
+
+Các công thức cơ bản của nguyên hàm:
+
+$$
+\begin{array} { r l }
+& { \int \omega ^ { \epsilon } d x = \frac { 1 } { n + 1 } \frac { 1 } { n + 1 } \epsilon ^ { 2 \epsilon + 1 } - C \Delta w d \epsilon \varphi - 1, \mathscr{C} = \mathrm{const.}} \\
+& { \int \frac { 1 } { n } d x = - h [ x ] \Delta [ \Omega ] \Omega C , } \\
+& { \int \bar{\omega} ^ { \epsilon } d x = e ^ { - 1 } \cdot C , } \\
+& { \int \omega ^ { \epsilon } d x = \frac { 1 } { h _ { 1 } \alpha _ { k } ^ { \epsilon } } - C \Delta w d \Omega \varphi \Delta \varphi \varphi _0, } \\
+& { \int d x \mathrm{inc} i z e - \mathrm{const.} + \mathscr{C}, } \\
+& { \int d x \mathrm{ex} dx = \mathrm{in} x \partial \mathscr{C} \Delta \varphi } \\
+& { \int d x \mathrm{inc} ix \partial \mathscr{C} \Delta \varphi = - \mathrm{const.} } \\
+& { \int d x ^ { \omega } e ^ { - 1 } e ^ { - 1 } e ^ { - 1 } e ^ { - 1 } e ^ { - 1 } e ^ { - 1 } } \\
+& { \int d x ^ { \omega } e ^ { - 1 } e ^ { - 1 } e ^ { - 1 } e ^ { - 1 } e ^ { - 1 } }
+\end{array}
+$$$$
+\begin{array} { r l }
+& { \int _ { 0 } ^ { x } e ^ { - i x } e ^ { - i x } + }
+\end{array}
+$$
+
+mathcal { Q } ^ { \prime } \ dt } \\
+{ \int _ { 0 } ^ { x } e ^ { i x } - \mathrm { h } _ { 0 } ^ { - 1 } e ^ { i x } \ dt \mathcal { L } ^ { 2 } \ dt \mathcal { L } ^ { 2 } \ dt \mathcal { L } ^ { 2 } \ dt \mathcal { L } ^ { 2 } \ dt \mathcal { L } ^ { 2 } } \\
+{ \int _ { 0 } ^ { x } e ^ { i x } - \mathrm { sinh } _ { 0 } ^ { - 1 } \ dx \mathcal { L } ^ { 2 } \ dt } \\
+{ \int _ { 0 } ^ { x } e ^ { - i x } e ^ { - i x } - \mathrm { sinh } _ { 0 } ^ { - 1 } \ dx \mathcal { L } ^ { 2 } \ dt } \\
+{ \int _ { 0 } ^ { x } \frac { 1 } { \mathrm { sinh } _ { 0 } ^ { - 1 } } \ dx \mathcal { L } ^ { 2 } \ dt \mathcal { L } ^ { 2 } \ dt } \\
+{ \int _ { 0 } ^ { x } \frac { 1 } { \mathrm { sinh } _ { 0 } ^ { - 1 } } \ dx \mathcal { L } ^ { 2 } \ dt \mathcal { L } ^ { 2 } \ dt \mathcal { L } ^ { 2 } } \\
+{ \int _ { 0 } ^ { x } \frac { 1 } { \mathrm { sinh } _ { 0 } ^ { - 1 } } \ dx \mathcal { L } ^ { 2 } \ dt \mathcal { L } ^ { 2 } \ dt \mathcal { L } ^ { 2 } \ dt } \\
+{ \int _ { 0 } ^ { x } \frac { 1 } { \mathrm { sinh } _ { 0 } ^ { - 1 } } \ dx \mathcal { L } ^ { 2 } \ dt \mathcal { L } ^ { 2 } \ dt \mathcal { L } ^ { 2 } \ dt \mathcal { L } ^ { 2 } } \\
+{ \int _ { 0 } ^ { x } \frac { 1 } { \mathrm { sinh } _ { 0 } ^ { - 1 } } \ dx \mathcal { L } ^ { 2 } \ dt \mathcal { L } ^ { 2 } \ dt \mathcal { L } ^ { 2 } \ dt \mathcal { L } ^ { 2 } \ dt }
+
+$$
+\begin{array}{l}
+m \left\{ s i x \right\}_{0}^{-1} \, dt \mathcal{L}^{2} \, dt \mathcal{L}^{2} \, dt \mathcal{L}^{2} \, dt \mathcal{L}^{2} \, dt \\
+& \int_{0}^{x} \frac{1}{\mathrm{s i x}_{0}^{-1}} \, dt \mathcal{L}^{2} \, dt \mathcal{L}^{2} \, dt \mathcal{L}^{2} \, dt \mathcal{L}^{2} \, dt \mathcal{L}^{2} \, dt \mathcal{L}^{2} \, dt \mathcal{L}^{2} \, dt \mathcal{L}^{2} \end{array}
+$$
+
+$$
+\begin{array} { r l }
+& { \int _ { \Omega } \exp \varepsilon } \\
+& { = \int _ { \Omega } \exp \varepsilon \, \mathrm { d } \varepsilon \times \mathrm { d } \varepsilon \times \mathrm { d } \varepsilon } \\
+& { \quad \times \int _ { \Omega } \exp \varepsilon \, \mathrm { d } \varepsilon \times \mathrm { d } \varepsilon } \\
+& { \quad \times \int _ { \Omega } \frac { 1 } { \sqrt { \pi } } \exp \varepsilon \, \mathrm { d } \varepsilon \times \mathrm { d } \varepsilon } \\
+& { \quad \times \mathrm { e } ^ { \int _ { \Omega } \varepsilon } \int _ { \Omega } \exp \varepsilon \, \mathrm { d } \varepsilon \times \mathrm { d } \varepsilon } \\
+& { \quad \quad \quad \int _ { \Omega } \frac { 1 } { \sqrt { \pi } \, \mathrm { d } \varepsilon } \int _ { \Omega } ^ { \varepsilon } \exp \varepsilon \, \mathrm { d } \varepsilon \times \mathrm { d } \varepsilon } \\
+& { \quad \quad \times \mathrm { e } ^ { \int _ { \Omega } \varepsilon } \int _ { \Omega } \exp \varepsilon }
+\end{array}
+$$
+
+{ \Omega } ^ { \varepsilon } \exp \varepsilon \, \mathrm { d } \varepsilon \times \mathrm { d } \varepsilon } $$
+
+# 3.3.2. Hàm tích phân
+
+- Cho hàm số $f(x)$ khả tích trên $[a, b]$. Hàm số
+
+$$
+\varphi (x) = \intop_{a}^{x} f(t) dt
+$$
+
+xác định trên $[a, b]$ được gọi là hàm tích phân từng phần.
+
+Định lý 3.10. Nếu $f(x)$ liên tục trên $[a, b]$, thì
+
+$$
+\varphi'(x) = f(x) \quad \forall x \in [a, b].
+$$
+
+Chứng minh: Với mỗi $x \in [a, b]$, giả sử $\Delta_x > 0 : x + \Delta_x \in [a, b]$ (nếu $\Delta_x < 0$ chứng minh tương tự). Khi đó
+
+$$
+\begin{array}{l}
+\displaystyle \Delta_\varphi = \varphi(x + \Delta_x) - \varphi(x) \\
+\displaystyle = \int_{a}^{x+\Delta_x} f(t) dt - \int_{a}^{x} f(t) dt \\
+\displaystyle = \int_{x}^{x+\Delta_x} f(t) dt.
+\end{array}
+$$
+
+Theo định lý giá trị trung bình 3.7 và tính liên tục của hàm $f(x)$, ta có tồn tại $c_x \in [x, x + \Delta_x]$ sao cho
+
+$$
+\begin{array} { r } { \Delta _ { \varphi } = \displaystyle \int ^ { x \top \sum _ { j } x } f ( t ) d t = f ( c _ { x } ) . \Delta _ { x } \Rightarrow \varphi ^ { \prime } ( x ) = \operatorname* { lim } _ { \Delta _ { x } \to 0 } \frac { \Delta _ { \varphi } } { \Delta _ { x } } = \operatorname* { lim } _ { \Delta _ { x } \to 0 } f ( c _ { x } ) = f } \end{array}
+$$
+
+# 3.3.3. Công thức Newton-Leibnitz
+
+Với mỗi $F(x)$ xác định trên $[a, b]$, ta ký hiệu
+
+$$
+F(b) - F(a) = F(x) \Big|_a^b.
+$$
+
+Định lý 3.11. (Công thức Newton-Leibnitz)
+
+Nếu $f(x)$ liên tục trên $[a, b]$ và $F(x)$ là một nguyên hàm của $f(x)$, thì
+
+$$
+\int_a^b f(x) dx = F(x) \Big|_a^b.
+$$
+
+Chứng minh Theo định lý 3.10, $\varphi(x) = \int f(t) dt$ là một nguyên hàm của $f(x)$: a Theo định lý 3.9, tồn tại $\mathbf{s} \in [a, b]$ sao cho $\varphi(x) = F(x) + C \forall x \in [a, b]$. Vì
+
+$$
+\varphi(a) = F(a) + C = 0 \Rightarrow C = -F(a),
+$$
+
+nên
+
+$$
+\int_a^b f(x) dx = \varphi(b) = F(b) + C = F(b) - F(a).
+$$
+
+Ví dụ 3.12. Tính tích phân
+
+$$
+\int_0^2 \frac{1}{\sqrt{4 + x^2}} dx.
+$$
+
+Giải Ta có
+
+$$
+{ \frac { 1 } { \sqrt { 4 + x ^ { 2 } } } } d x = { \frac { 1 } { 2 } } \int _ { 0 } ^ { 2 } { \frac { 1 } { \sqrt { 1 + ( { \frac { x } { 2 } } ) ^ { 2 } } } } d x = \int _ { 0 } ^ { 2 } { \frac { 1 } { \sqrt { 1 + ( { \frac { x } { 2 } } ) ^ { 2 } } } } d { \frac { x } { 2 } } = \arctan { \frac { x } { 2 } } \Big | _ { 0 } ^ { 2 }
+$$
+
+3.4. Các phương pháp tính tích phân
+
+3.4.1. Phương pháp đổi biến
+
+Đạng 1 $\therefore x = \varphi ( t )$，
+
+Định lý 3.13. Nếu hàm $f ( x )$ liên tục trên $[ a , b ]$ và hàm số $\varphi ( t )$ thỏa mãn:
+
+${ \bf { \Psi } } + \varphi ( \alpha ) = a , \varphi ( \beta ) = b$ $\mathbf { \nabla } + \varphi ^ { \prime } ( t )$ liên tục trên $[ \alpha , \beta ]$ $+ \forall t \in [ \alpha , \beta ] \Rightarrow x = \varphi ( t ) \in [ a , b ] ,$ （20
+
+thì
+
+$$
+\int _ { a } ^ { b } f ( x ) d x = \int _ { \alpha } ^ { \beta } f { \big ( } \varphi ( t ) { \big ) } \varphi ^ { \prime } ( t ) d t .
+$$
+
+Chứng minh Vì $f ( x )$ liên tục, nên theo định lý 3.10, tồn tại nguyên hàm $F ( x )$, hay $F ^ { \prime } ( x ) = f ( x )$. Khi đó rõ ràng $G ( t ) = F ( \varphi ( t ) )$ là một nguyên hàm của $f ( \varphi ( t ) ) . \varphi ^ { \prime } ( t )$
+
+$$
+\begin{array} { c } { \displaystyle \int _ { a } ^ { b } f ( x ) d x = F ( b ) - F ( a ) } \\ { } \\ { \displaystyle \int _ { a } ^ { b } f ( \varphi ( t ) ) \varphi ^ { \prime } ( t ) d t = F ( \alpha ) - F ( \beta ) } \\ { } \\ { = F ( \varphi ( \alpha ) ) - F ( \varphi ( \beta ) ) } \\ { = F ( b ) - F ( a ) } \end{array}
+$$
+
+Vậy ta có công thức cần chứng minh.
+
+Ví dụ 3.14. Tính tích phân
+
+$$
+I = \int _ { 0 } ^ { 3 } \sqrt { 9 - x ^ { 2 } } d x .
+$$
+
+Giải Đặt $x = 3 \sin t$ thì $\begin{array} { r } { x = 0 \Rightarrow t = 0 , x = 3 \Rightarrow t = \frac { \pi } { 2 } , d x = 3 \cos t d t . } \end{array}$ Theo định lý 3.13, ta có
+
+$$
+\int _ { 0 } ^ { 3 } \sqrt { 9 - x ^ { 2 } } d x = \int _ { 0 } ^ { \frac { \pi } { 2 } } \sqrt { 9 - 9 \sin ^ { 2 } t } . 3 \cos t d t = 9 \int _ { 0 } ^ { \frac { \pi } { 2 } } | \cos t | . \cos t d t = \frac { 9 \pi } { 4 }
+$$
+
+Đẳng thức 2: $\boldsymbol{t} = \varphi (\boldsymbol{x})$:
+
+Định lý 3.15. Nếu $f(x)$ liên tục trên $[a, b]$ và hàm $\varphi(t)$ thỏa mãn các điều kiện:
++ Tăng ngắt trên $[a, b]$
++ $\varphi'(x)$ liên tục trên $[a, b]$
++ $Nếu f(x) dx = g(t) dt$, thì $g(t)$ liên tục trên $[\varphi(a), \varphi(b)]$,
+
+thì
+
+$$
+\int _ { a } ^ { b } f ( x ) d x = \int _ { \varphi ( a ) } ^ { \varphi ( b ) } g ( t ) d t .
+$$
+
+Chứng minh Bằng cách chứng minh tương tự như định lý 3.13 với $x = \varphi (t)$:
+
+Ví dụ 3.16. Tính tích phân
+
+$$
+I = \int_{0}^{\ln 3} \frac{e^{x} d x}{\sqrt{(1 + e^{x})^{3}}}.
+$$
+
+Giải Đặt $t = \sqrt{1 + e^{x}} \Rightarrow e^{x} = t^{2} - 1 \Rightarrow e^{x} dx = 2t dt, x = 0 \to t = \sqrt{2}, x = \ln 3 \to t = 2$
+
+$$
+I = \int_{0}^{\ln 3} \frac{e^{x} d x}{\sqrt{(1 + e^{x})^{3}}} = \int_{\sqrt{2}}^{2} \frac{2t dt}{t^{3}} = 2 \int_{\sqrt{2}}^{2} \frac{1}{t^{2}} dt = \left. -\frac{2}{t} \right|_{\sqrt{2}}^{2} = \sqrt{2} - 1.
+$$
+
+Ví dụ 3.17. Cho các hàm trong dấu tích phân liên tục.
+
+i) Chứng minh:
+
+$$
+\int_{0}^{\frac{\pi}{2}} f(\sin x) dx = \int_{0}^{\frac{\pi}{2}} f(\cos x) dx.
+$$
+
+Trong định $I_1 = \int_{0}^{\frac{\pi}{2}} \frac{\sqrt[3]{\sin x}}{\sqrt[3]{\sin x} + \sqrt[3]{\cos x}} dx$
+
+ii) Chứng minh:
+
+$$
+\int_{0}^{\pi} x f(\sin x) dx = \frac{\pi}{2} \int_{0}^{\pi} f(\sin x) dx.
+$$
+
+Từ đó tính $I_2 = \int_{0}^{\pi} \frac{x \sin x}{1 + \cos^{2} x} dx$
+
+Giải i) Đặt biến $t = \frac{\pi}{2} - x$, ta có
+
+$$
+\int _ { 0 } ^ { \frac { \pi } { 2 } } f ( \sin x ) d x = \int _ { \frac { \pi } { 2 } } ^ { 0 } f ( \cos t ) ( - d t ) = \int _ { 0 } ^ { \frac { \pi } { 2 } } f ( \cos t ) d t = \int _ { 0 } ^ { \frac { \pi } { 2 } } f ( \cos x ) d x .
+$$
+
+Từ đó,
+
+$$
+\int_0^{\frac{\pi}{2}} \frac{\sqrt[3]{\cos x}}{\sqrt[3]{\cos x} + \sqrt[3]{\sin x}} dx \Rightarrow 2 I _ { 1 } = \int \frac {\sqrt[3]{\sin x}}{\sqrt[3]{\sin x} + \sqrt[3]{\cos x}} dx + \int \frac {\sqrt[3]{\cos x}}{2 \sqrt[3]{\cos x}} dx
+$$
+
+Vậy,
+
+$$
+2 I _ { 1 } = \int_0^{\frac{\pi}{2}} dx = \frac{\pi}{2} \Rightarrow I _ { 1 } = \frac{\pi}{4}.
+$$
+
+ii) Đổi biến $t = \pi - x$, ta nhận được
+
+$$
+\int _ { 0 } ^ { \pi } x f ( \sin x ) d x = \int _ { 0 } ^ { \pi } (\pi - t) f ( \sin t ) d t = \pi \int _ { 0 } ^ { \pi } f ( \sin t ) d t - \int_0^{\pi} t f ( \sin t ) dt
+$$
+
+Vậy,
+
+$$
+\int_0^{\pi} x f ( \sin x ) d x = \frac {\pi}{2} \int_0^{\pi} f ( \sin x ) d x.
+$$
+
+Từ đó,
+
+$$
+\tau _ { 2 } = \frac {\pi}{2} \int _ { 0 } ^ { \pi } \frac {\sin x}{2 - \sin ^ { 2 } x} dx = \frac {\pi}{2} \int _ { 0 } ^ { \pi } \frac {d (\cos x)}{1 + \cos ^ { 2 } x} = \frac {\pi}{2} \arctan ( \cos x ) \bigg|_0^{\frac{\pi}{2}} = \frac {\pi^{2}}{4}.
+$$
+
+# 3.4.2. Phương pháp tích phân từng phần
+
+Cho $u = u(x), v = v(x)$ là hàm số liên tục trên $[a, b]$. Từ công thức vi phân
+
+$$
+d(uv) = u\,dv + v\,du,
+$$
+
+ta có công thức tích phân từng phần sau
+
+$$
+\int_{a}^{b} u\,dv = (uv)\Big|_{a}^{b} - \int_{a}^{b} v\,du.
+$$
+
+Ví dụ 3.18. Tính tích phân
+
+$$
+I = \int_{0}^{3} \arcsin \sqrt{\frac{x}{1 + x}}\,dx.
+$$
+
+Giải Dùng công thức tích phân từng phần, với
+
+$$
+u = \arcsin \sqrt{\frac{x}{1+x}}, dv = dx \Rightarrow du = \frac{1}{2\sqrt{x(1+x)}}\,dx, v = x.
+$$
+
+Khi đó
+
+$$
+\begin{array}{l}
+I = x \arcsin \sqrt{\frac{x}{1 + x}} \Big|_{0}^{3} - \int_{0}^{3} \frac{x\,dx}{2\sqrt{x(1+x)}} \\
+= 3 \arcsin \frac{\sqrt{3}}{2} - \frac{1}{2} \int \frac{( \sqrt{x})^2 d(\sqrt{x})}{1 + (\sqrt{x})^2} \\
+= \pi - \sqrt{x} \Big|_{0}^{3} + \arctan \sqrt{x} \Big|_{0}^{3} \\
+= \frac{4\pi}{3} - \sqrt{3}.
+\end{array}
+$$
+
+# 3.5. Tích phân của hàm phân thức hữu tỉ
+
+$$
+{ \cal I } = \int _ { a } ^ { b } \frac { P _ { n } ( x ) } { Q _ { m } ( x ) } d x ~ \text{với} ~ P _ { n } ( x ) , Q _ { m } ( x ) \text{là hai đa thức bậc} \Delta n \text{và} m
+$$
+
+# 3.5.1. Các dạng cơ bản
+
+$$
+\begin{array} { r l }
+{ f _ { 1 } = \displaystyle \frac { \int _ { 0 } ^ { \infty } d u } { \pi } } & { ( \sigma , \frac { 2 } { \sigma } ) , } \\
+{ f _ { 2 } = \displaystyle \frac { \int _ { 0 } ^ { \infty } d u } { \pi } } & { ( \sigma , \delta ( q , \gamma , \varepsilon ) ) } \\
+{ f _ { 3 } = \displaystyle \frac { \int _ { 0 } ^ { \infty } d u } { \pi } , } \\
+{ f _ { 4 } = \displaystyle \frac { \int _ { 0 } ^ { \infty } d u } { \pi } , } \\
+{ f _ { 5 } = \displaystyle \frac { \int _ { 0 } ^ { \infty } d u } { \pi } , } \\
+{ f _ { 6 } = \displaystyle \frac { \int _ { 0 } ^ { \infty } d u } { \pi } , } \\
+{ f _ { 7 } = \displaystyle \frac { \int _ { 0 } ^ { \infty } d u } { \pi } , } \\
+{ f _ { 8 } = \displaystyle \frac { \int _ { 0 } ^ { \infty } d u } { \pi } , } \\
+{ f _ { 9 } = \displaystyle \frac { \int _ { 0 } ^ { \infty } d u } { \pi } }
+\end{array}
+$$
+
+$$
+\begin{array} { l }
+{ \displaystyle I_{1} = \frac { 1 } { a } \int \frac { a d x } { a x + b } = \int \frac { d ( a x + b ) } { a x + b } = \frac { 1 } { a } \ln { \left| a x + b \right| } \Bigg |_{\alpha}^{\beta} = \frac { 1 } { a } \ln { \left| \frac { a \beta + b } { a \alpha + b } \right| }. }
+\\
+{ \displaystyle I_{2} = \frac { 1 } { a } \int \frac { a d x } { ( a x + b ) ^ { \gamma } } = \frac { 1 } { a } \int \frac { d ( a x + b ) } { ( a x + b ) ^ { \gamma } } = \frac { 1 } { ( 1 - \gamma ) ( a x + b ) ^ { \gamma - 1 } } \Bigg |_{\alpha}^{\beta}. }
+\end{array}
+$$
+
+$$
+\begin{array} { l }
+{ \displaystyle I_{3} = \frac { 1 } { a^{2} } \int \frac { d x } { 1 + ( \frac { x } { a } ) ^ { 2 } } = \frac { 1 } { a } \arctan \frac { x } { a } \Bigg |_{\alpha}^{\beta}. }
+\\
+{ \displaystyle I_{4} = \frac { 1 } { a } \int \frac { d ( x^{2} + a^{2} ) } { x^{2} + a^{2} } = \frac { 1 } { a } \ln ( x^{2} + a^{2} ) \Bigg |_{\alpha}^{\beta}. }
+\end{array}
+$$
+
++$ Phương pháp tính ${\cal I}_5 = \int_{\alpha}^{\beta} \frac{dx}{(x^2 + a^2)^{\gamma}} = J_\gamma$ (đặt) $(\gamma \geq 2, \gamma \in \mathbb{N})$. Đặt $u = x^2 + a^2$, dv = dx. Khi đó
+
+$$
+du = \frac{-2\gamma x dx}{(x^2 + a^2)^{\gamma+1}}, v = x.
+$$
+
+Theo công thức tích phân từng phần, ta có
+
+$$
+I_5 = \left[ \frac{x}{(x^2 + a^2)^\gamma} \right]_{\alpha}^{\beta} + 2\gamma \int \frac{x^2 dx}{(x^2 + a^2)^{\gamma+1}}.
+$$
+
+Mặt khác
+
+$$
+\frac{x^2 dx}{(x^2 + a^2)^{\gamma+1}} = \int_{\alpha}^{\beta} \frac{(x^2 + a^2 - a^2) dx}{(x^2 + a^2)^{\gamma+1}} = \int_{\alpha}^{\beta} \frac{dx}{(x^2 + a^2)^\gamma} - a^2 \int_{\alpha}^{\beta} \frac{dx}{(x^2 + a^2)}.
+$$
+
+Suy ra
+
+$$
+J_\gamma = \left[ \frac{x}{(x^2 + a^2)^\gamma} \right]_{\alpha}^{\beta} + 2\gamma J_\gamma - 2a^2 \gamma J_{\gamma+1}.
+$$
+
+Như vậy
+
+$$
+J_{\gamma+1} = \frac{x}{2\gamma a^2 (x^2 + a^2)^\gamma} \Bigg|_{\alpha}^{\beta} + \frac{2\gamma - 1}{2a^2 \gamma} J_\gamma.
+$$
+
+Theo quy nạp toán học, ta tính được $J_\gamma$ theo quá trình
+
+$$
+J_1 \to J_2 \to \ldots \to J_\gamma,
+$$
+
+trong đồ $J_{1} = I_{3}$:
+
+$\begin{array}{rl}
++ \operatorname{Tính} \ I_{6} = \int \frac{\beta}{\alpha} \frac{x dx}{(x^{2} + a^{2})^{\gamma}} & (\gamma \geq 2, \gamma \in \mathbb{N}). 
+\end{array}$
+
+$$
+I_{6} = \frac{1}{2} \int \frac{dz d(x^{2} + a^{2})}{(x^{2} + a^{2})^{\gamma}} = \frac{1}{2 (1 - \gamma)} (x^{2} + a^{2})^{1 - \gamma} \Big|_{\alpha}^{\beta}.
+$$
+
+Bước $O$ Nếu $n \geq m$ thì ta chia đa thức $P_{n}(x)$ cho đa thức $Q_{m}(x)$ sao cho phần thức $\frac{P_{n}(x)}{Q_{m}(x)}$ có $n < m$.
+
+Bước $\boldsymbol{I}$. Phân tích $P_{n}(x)$ thành nhân tử:
+
+$$
+Q_{m}(x) = a (x - x_{1})^{\alpha_{1}} \ldots (x - x_{k})^{\alpha_{k}} . (x^{2} + b_{1}x + c_{1})^{\beta_{1}} \ldots (x^{2} + b_{h}x + c_{h})
+$$
+
+sao cho $\Delta_{i} = b_{i}^{2} - 4c_{i} < 0 \forall i = 1, 2, \ldots, h.$ Bước 2. Quy tắc đồng nhất hệ số:
+
+$$
+\begin{array} { r l }
+& \frac { P _ { \mathrm { r } } ( x , y ) } { Q _ { \mathrm { m } } ( x ) } = \frac { a _ { 1 1 } } { ( x - x _ { 1 } ) ^ { 1 } } + \frac { a _ { 1 2 } } { ( x - x _ { 1 } ) ^ { 2 } } + \ldots + \frac { a _ { 1 \alpha } } { ( x - x _ { 1 } ) ^ { \alpha _ { 1 } } } \\
+& \phantom { \frac { P _ { \mathrm { r } } ( x , y ) } { Q _ { \mathrm { m } } ( x ) } = } + \ldots \\
+& \phantom { \frac { Q _ { \mathrm { m } } } { Q _ { \mathrm { m } } ( x ) } = } + \frac { a _ { \mathrm { d r } } } { ( x - x _ { k } ) ^ { 1 } } + \frac { a _ { \mathrm { d r } } } { ( x - x _ { k } ) ^ { 2 } } + \ldots + \frac { \widehat { a } _ { \mathrm { t a r } } } { ( x - x _ { k } ) ^ { \alpha _ { k } } } \\
+& \phantom { \frac { P _ { \mathrm { r } } ( x , y ) } { Q _ { \mathrm { m } } ( x ) } = } + \frac { b _ { 1 1 } x + c _ { 1 1 } } { ( x ^ { 2 } + b _ { 1 } x + c _ { 1 } ) ^ { 1 } } + \frac { b _ { 1 2 } x + c _ { 1 2 } } { ( x ^ { 2 } + b _ { 1 } x + c _ { 1 } ) ^ { 2 } } + \ldots + \frac { b _ { 1 3 } x + c _ { 1 3 } } { ( x ^ { 2 } + b _ { 1 } x + c _ { 1 } ) ^ { 3 } } \\
+& \phantom { \frac { P _ { \mathrm { r } } ( x , y ) } { Q _ { \mathrm { m } } ( x ) } = } + \ldots \\
+& \phantom { \frac { P _ { \mathrm { r } } ( x , y ) } { Q _ { \mathrm { m } } ( x ) } = } + \frac { b _ { 1 2 } x + c _ { \mathrm { d r } } } { ( x ^ { 2 } + b _ { 1 } x + c _ { k } ) ^ { 1 } } + \frac { b _ { 1 3 } x + c _ { 1 2 } } { ( x ^ { 2 } + b _ { 1 } x + c _ { k } ) ^ { 2 } }
+\end{array}
+$$
+
+$$
+\frac{a_0}{x^2 + b_0 x + c_0} + \frac{b_1 x + c_1}{(x^2 + b_0 x + c_0)^2} + \ldots + \frac{b_{13} x + c_{12}}{(x^2 + b_{1} x + c_{1})^3}
+$$
+
+Nhận xét 3.19. Từ
+
+$$
+\frac { p x + q } { ( b x + c ) ^ { \alpha } } = \frac { p t + \bar { q } } { ( t ^ { 2 } + a ^ { 2 } ) ^ { \alpha } } \text{ với } t = x + \frac { b } { 2 } , a ^ { 2 } = c - \frac { b ^ { 2 } } { 4 } > 0 , \bar { q } = q + \frac { p } { 2 }
+$$
+
+suy ra việc tính $\begin{array} { r } { I = \int _ { a } ^ { b } { \frac { P _ { n } ( x ) } { Q _ { m } ( x ) } d x } } \end{array}$ được chuyển về việc tính các tích phân dạng $I _ { 1 } , . . . , I _ { 6 }$.
+
+Ví dụ 3.20. Tính tích phân
+
+$$
+I = \int _ { 1 } ^ { \sqrt { 3 } } \frac { 3 x + 1 } { x ( 1 + x ^ { 2 } ) ^ { 2 } } d x .
+$$
+
+Giải Đồng nhất hệ số
+
+$$
+\frac { 3 x + 1 } { x ( 1 + x ^ { 2 } ) ^ { 2 } } = \frac { A } { x } + \frac { B x + C } { 1 + x ^ { 2 } } + \frac { D x + E } { ( 1 + x ^ { 2 } ) ^ { 2 } } .
+$$
+
+$$
+3 x + 1 = ( A + B ) x ^ { 4 } + C x ^ { 3 } + ( 2 A + B + D ) x ^ { 2 } + ( C + E ) x + A .
+$$
+
+Hệ số các lũy thừa hai vế bằng nhau.
+
+$$
+\left\{ \begin{array} { l l }
+A + B = 0 \\
+C = 0 \\
+2 A + B + D = 0 \\
+C + E = 3 \\
+A = 1 .
+\end{array} \right.
+$$
+
+Tiếp tục
+
+$$
+\begin{array} { l } { I = \int \int \frac { d x } { x } - \int \int \frac { x \hat{\Im} } { 1 + x ^ { 2 } } - \int \int \frac { x d x } { 1 } ~ } \\ { \qquad = \left( \ln x - \frac { 1 } { 2 } \ln ( 1 + x ^ { 2 } ) \right) \Big| _ { 1 } ^ { \sqrt { 3 } } - \frac { \sqrt { 3 } } { 2 } \int ( 1 + x ^ { 2 } ) ^ { - 2 } d ( 1 + x ^ { 2 } ) + 3 \int \frac { x d x } { ( 1 + x ^ { 2 } ) ^ { - 2 } } } \\ { \qquad = \left( \ln x - \frac { 1 } { 2 } \ln ( 1 + x ^ { 2 } ) + \frac { \sqrt { 3 } } { 2 ( 1 + x ^ { 2 } ) ^ { 2 } } \right) \Big| _ { 1 } ^ { \sqrt { 3 } } + 3 . 3 } \\ { \qquad = - \frac { 1 } { 8 } + 3 J , }
+\end{array}
+$$
+
+Tính $\begin{array} { r } { J = \int _ { 1 } ^ { \sqrt { 3 } } \frac { d x } { ( 1 + x ^ { 2 } ) ^ { 2 } } . } \end{array}$ Theo công thức tính $I_5$, ta có
+
+$$
+J = \frac { 1 } { 2 } \left( \frac { x } { 1 + x ^ { 2 } } \right) \Big| _ { 1 } ^ { \sqrt { 3 } } + \frac { 1 } { 2 } \int \frac { d x } { 1 + x ^ { 2 } } = \frac { 1 } { 8 } + \frac { 1 } { 2 } \arctan x \Big| _ { 1 } ^ { \sqrt { 3 } } = \frac { 1 } { 8 } + \frac { \pi } { 24 } .
+$$
+
+Vậy $\begin{array} { r } { I = - \frac { 1 } { 8 } + 3 J = \frac { 1 } { 4 } + \frac { \pi } { 8 } } \end{array}$
+
+# 3.6. Tích phân của hàm lượng giác
+
+Xét tích phân có dạng
+
+$$
+I = \int _ { \alpha } ^ { \beta } R ( \sin x , \cos x ) d x .
+$$
+
+Đạng 1. (phương pháp chung) Đổi biến $\begin{array} { r } { t = \tan { \frac { x } { 2 } } } \end{array}$
+
+Khi đó
+
+$$
+d t = { \frac { 1 } { 2 \cos ^ { 2 } { \frac { x } { 2 } } } } d x = { \frac { 1 } { 2 } } ( 1 + \tan ^ { 2 } { \frac { x } { 2 } } ) d x = { \frac { 1 } { 2 } } ( 1 + t ^ { 2 } ) d x \Rightarrow d x = { \frac { 2 d t } { 1 + t ^ { 2 } } } ,
+$$
+
+và
+
+$$
+\sin x = { \frac { 2 \tan { \frac { x } { 2 } } } { 1 + \tan ^ { 2 } { \frac { x } { 2 } } } } = { \frac { 2 t } { 1 + t ^ { 2 } } } , \cos x = { \frac { 1 - \tan ^ { 2 } { \frac { x } { 2 } } } { 1 + \tan ^ { 2 } { \frac { x } { 2 } } } } = { \frac { 1 - t ^ { 2 } } { 1 + t ^ { 2 } } } .
+$$
+
+Ví dụ 3.21. Tính tích phân
+
+$$
+I = \int _ { 0 } ^ { 2 } { \frac { d x } { 2 \sin x - \cos x + 5 } } .
+$$
+
+Giải Đặt $\begin{array} { r } { t = \tan { \frac { x } { 2 } } } \end{array}$, $\begin{array} { r } { x = 0 \Rightarrow t = 0 , x = 2 \Rightarrow t = \frac { \pi } { 4 } } \end{array}$. Ta có
+
+$$
+d x = { \frac { 2 d t } { 1 + t ^ { 2 } } } , \sin x = { \frac { 2 t } { 1 + t ^ { 2 } } } , \cos x = { \frac { 1 - t ^ { 2 } } { 1 + t ^ { 2 } } } .
+$$
+
+Vậy
+
+$$
+I = \int _ { 0 } ^ { \frac { \pi } { 4 } } \frac { dt } { 3t^2 + 2t + 2 } = \frac { 1 } { \sqrt { 5 } } \arctan \frac { 3t + 1 } { \sqrt { 5 } } \bigg| _ { 0 } ^ { \frac { \pi } { 4 } } = \frac { 1 } { \sqrt { 5 } } \left( \arctan \frac { 3\pi + 4 } { 4 \sqrt { 5 } } - \arctan \frac { 1 } { \sqrt { 5 } } \right)
+$$
+
+Dạng 2. $R(\sin x, \cos x)$ chẵn đối với $\sin x$, $\cos x$, hay $R(-\sin x, -\cos x) = R(\sin x, \cos x) \ \forall x \in D$ (tập xác định của $R(\sin x, \cos x))$. Phương pháp giải: Đặt 
+$$
+t = \tan x \Rightarrow dt = \frac{1}{\cos^2 x} dx = (1 + t^2) dx \Rightarrow dx = \frac{dt}{1 + t^2}
+$$
+
+hoặc 
+$$
+t = \cot x \Rightarrow dt = -\frac{1}{\sin^2 x} dx = -(1 + t^2) dx \Rightarrow dx = -\frac{dt}{1 + t^2}.
+$$
+
+Ví dụ 3.22. Tính tích phân 
+$$
+I = \int _ { \frac{\pi } { 4 } } ^ { \frac {\pi } { 3 } } \frac { dx } { \sin^3 x \cos^5 x }.
+$$
+
+Giải Đặt $t = \tan x \Rightarrow dx = \frac{dt}{1 + t^2}$. Khi đó, 
+$$
+x = \frac{\pi}{4} \to t = 1, \quad x = \frac{\pi}{3} \to t = \sqrt{3}.
+$$
+
+$$
+I = \int \limits _ { \frac { \pi } { 4 } } ^ { \frac { \pi } { 3 } } \frac { d x } { \sin ^ { 3 } x \cos ^ { 5 } x } = \int \frac { \frac { \pi } { 3 } } { \frac { ( 1 + \tan ^ { 2 } x ) ^ { 3 } } { \tan ^ { 3 } x } \frac { 1 } { \cos ^ { 2 } x } d x }
+$$
+
+$$
+= \int _ { 1 } ^ { \sqrt { 3 } } \frac { ( 1 + t ^ { 2 } ) ^ { 3 } } { t ^ { 3 } } d t = \left( - \frac { 1 } { 2 t ^ { 2 } } + 3 \ln t + \frac { 3 } { 2 } t ^ { 2 } + \frac { 1 } { 4 } t ^ { 4 } \right) \Big | _ { 1 } ^ { \sqrt { 3 } } .
+$$
+
+Vậy $\begin{array} { r } { I = \frac { 3 } { 2 } \ln 3 + \frac { 19 } { 3 } } \end{array}$
+
+Đẳng thức 3 $R ( \sin x , \cos x )$ đối với sin $x$, hay
+
+$R ( - \sin x , \cos x ) = - R ( \sin x , \cos x ) \quad \forall x \in D$ (tập xác định của $R ( \sin x , \cos x )$).
+
+(Phương pháp giải: Đặt $t = \cos x \Rightarrow d t = - \sin x d x .$)
+
+Ví dụ 3.23. Tính tích phân
+
+$$
+I = \int _ { 0 } ^ { \frac { \pi } { 4 } } \frac { \sin x d x } { \cos x \sqrt { 1 + \sin ^ { 2 } x } } .
+$$
+
+Giải Đặt $\cos x = t \Rightarrow dt = -\sin x dx$, $x = 0 \to t = 1, x = \frac{\pi}{4} \to t = \frac{\sqrt{2}}{2}$ .
+
+$$
+\begin{array} { l } { I = - \displaystyle \int _ { 0 } ^ { \frac { \bar { z } } { 2 } } \frac { - \sin x d x } { \cos x \sqrt { 2 - \cos ^ { 2 } x } } = - \displaystyle \int _ { 1 } ^ { \frac { \bar { z } ^ { 2 } } { 2 } } \frac { d t } { t \sqrt { 2 - t ^ { 2 } } } } \\ { \quad = - \displaystyle \int _ { 1 } ^ { \frac { \bar { z } ^ { 2 } } { 2 } } \frac { d t } { t ^ { 2 } \sqrt { \frac { \bar { z } ^ { 2 } - 1 } { t ^ { 2 } } - 1 } } = - \displaystyle \int _ { 1 } ^ { \frac { \bar { z } ^ { 2 } } { 2 } } \frac { d t } { \sqrt { \frac { \bar { z } ^ { 2 } - 1 } { t ^ { 2 } } - 1 } } } \\ { \int \frac { d t } { \sqrt { x ^ { 2 } + a } } = \ln | x + \sqrt { x ^ { 2 } + a } | + C , }
+\end{array}
+$$
+
+Theo công thức
+
+ta có
+
+$$
+I = \frac { 1 } { \sqrt { 2 } } \ln \left| \frac { \sqrt { 2 } } { t } + \sqrt { \frac { 2 } { t ^ { 2 } } - 1 } \right| \Bigg| _ { 1 } ^ { \frac { \sqrt { 2 } } { 2 } } = - \frac { 1 } { \sqrt { 2 } } \ln \frac { 2 + \sqrt { 3 } } { 1 + \sqrt { 2 } } .
+$$
+
+Đạng 4. $R ( \sin x , \cos x )$ đối với $\cos x$, hay
+
+$R(\sin x, -\cos x) = -R(\sin x, \cos x) \quad \forall x \in D$ (tập xác định của $R (\sin x, \cos x))$
+
+Phương pháp giải: Đặt $t = \sin x \Rightarrow d t = \cos x d x.$
+
+Ví dụ 3.24. Tính tích phân
+
+$$
+I = \int _ { 0 } ^ { \frac { \pi } { 2 } } \frac { (\sin 2x + \cos x) dx } { \sqrt { 1 + 3 \sin x } } .
+$$
+
+Giải Đặt $\begin{array} { r } { \sqrt { 1 + 3 \sin x } = t \Rightarrow d t = \frac { 3 \cos x d x } { 2 \sqrt { 1 + 3 \sin x } } , x = 0 \to t = 1 , x = \frac { \pi } { 2 } \to t = 2 , } \end{array}$ ta có
+
+$$
+\int_{0}^{\frac{\pi}{2}} \frac{(2 \sin x + 1) \cos x d x}{(2 \sin x + 1) \cos x} = \frac{2}{3} \int_{0}^{\frac{\pi}{2}} \frac{(2 \sin x + 1) 3 \cos x d x}{2 \sqrt{1 + 3 \sin x}} = \frac{2}{3} \int_{1}^{2} (2 \left(\frac{t^2 - 1}{3}\right) - 1)^{\frac{\pi}{2}}.
+$$
+
+$$
+\bf \displaystyle \frac { 2 } { 9 } \int _ { 1 } ^ { 2 } ( 2 t + 1 ) d t = \frac { 2 } { 9 } \left( \frac { 2 } { 3 } t^3 + t \right) \Bigg|_{1}^{2} = \frac{34}{27}.
+$$
+
+Muốn quan sát các dạng tích phân khác, ta có thể tham khảo thêm các dạng trong phần bài tập.
+
+# 3.7. Một vài ứng dụng của tích phân
+
+## 3.7.1. Tính diện tích
+
+Đẳng $I$ Hình tạo bởi các đường cong trên hệ trục tọa độ Oxy.
+
+$$
+( H ) \left\{ \begin{array} { l } y = f ( x ) \\ y = g ( x ) \\ x = a ~ ( a < b ) \\ x = b \end{array} \right. \Rightarrow S _ { H } = \intop _ { a } ^ { b } | f ( x ) - g ( x ) | d x .
+$$
+
+Ví dụ 3.25. Tính diện tích hình tạo bởi các đường cong
+
+$$
+( H ) \left\{ \begin{array} { l } x + y = 0 \\ y = 2x - x^2 \end{array} \right.
+$$
+
+Góc Parabol và đường thẳng cắt nhau tại các điểm có hoành độ $x_{1} = 0, x_{2} = 3$. Vậy, diện tích được tính bởi
+
+$$
+S_{H} = \int_{0}^{3} (2x - x^2 + x) dx = \left( \frac{3}{2} x^2 - \frac{x^3}{3} \right) \Bigg|_{0}^{3} = \frac{9}{2}.
+$$
+
+$+$ Như hình $(H)$ được cho bởi:
+
+![](images/87f4b19008a513266174025ee173773c78a1a5e8fe61617b79ae1f0bcf364406.jpg)  
+Hình 3: Biểu diễn hình $\left( H_{2} \right)$
+
+Ví dụ 3.26. Hình tạo bởi các đường cong parabol $y^2 = 2x$ chia diện tích hình tròn
+
+$x^2 + y^2 \leq 8$ theo tỷ số nào?
+
+![](images/14a9147724f0ff2981596f9e8596277fce5f246c56680b88b13d165af610319f.jpg)  
+Hình 4: Hình vẽ của ví dụ 3.26
+
+Giải Kỹ hiểu diện tích hình tròn là $S_{1}$, còn diện tích phần giới hạn bởi parabol và hình tròn (như trên hình vẽ) là $S_{2}$. Rõ ràng $S_{1} = 8\pi$. Tìm hoành độ giao điểm của parabol và đường tròn; muốn vậy ta giải phương trình
+
+$$
+x^2 + 2x + 1 = 9 \Rightarrow x = 2 \Rightarrow y_1 = 2, y_2 = -2.
+$$
+
+Từ phương trình đường tròn
+
+$$
+x^2 + y^2 = 8 \Leftrightarrow x^2 = 8 - y^2 \Rightarrow cùng (AB): x = \sqrt{8 - y^2}.
+$$
+
+Đưa vào đồ thị và công thức tính diện tích hình $\left( H_{2} \right)$, ta có
+
+$$
+\begin{array} { r l } & { \bar { S } _ { 2 } - \displaystyle \int _ { - 2 } ^ { 2 } ( \sqrt { 8 - y ^ { 2 } } - \frac { 1 } { 2 } y ^ { 2 } ) d y } \\ & { \quad - \displaystyle \int _ { - 2 } ^ { 2 } } \\ & { \quad - 2 } \\ & { \quad - 2 } \\ & { \quad = \mathcal { J } - \displaystyle \frac { 8 } { 3 } } \\ & { \quad = \mathcal { J } - \displaystyle \frac { 8 } { 3 } } \\ & { \quad \mathcal { J } - \displaystyle \int _ { - 2 } ^ { 2 } \sqrt { 8 - y ^ { 2 } } d y , } \end{array}
+$$
+
+$$
+\begin{array} { r } { y = 2 \sqrt { 2 } \sin t , d y = 2 \sqrt { 2 } \cos t , y = - 2 \quad t = - \frac { \pi } { 4 } , y = 2 \quad t = \frac { \pi } { 4 } . } \end{array}
+$$
+
+$$
+J = 8 \intop _ { - \frac { \pi } { 4 } } ^ { \frac { \pi } { 4 } } { \left| \cos t \right| } \cos t d t = 4 \intop _ { - \frac { \pi } { 4 } } ^ { \frac { \pi } { 4 } } ( 1 + \cos 2 t ) d t = 2 \pi + 4 .
+$$
+
+Khi đó
+
+$$
+S _ { 2 } = 2 \pi + \frac { 4 } { 3 } \Rightarrow \frac { S _ { 1 } - S _ { 2 } } { S _ { 2 } } = \frac { 9 \pi - 2 } { 3 \pi + 2 } .
+$$
+
+Đẳng thức hình tạo bởi các đường cong trên hệ tọa độ cực $r = r ( \varphi )$:
+
+Mối quan hệ giữa hệ trục tọa độ Oxy và hệ trục tọa độ cực là
+
+$$
+\left\{ { \begin{array} { l } { x = r ( \varphi ) \cos \varphi } \\ { y = r ( \varphi ) \sin \varphi . } \end{array} } \right.
+$$
+
+Khi đó diện tích hình tạo bởi
+
+$$
+( H ) : r = r ( \varphi ) \quad ( \alpha \leq \varphi \leq \beta ) .
+$$
+
+là
+
+$$
+S_{H} = \frac{1}{2} \int_{\alpha}^{\beta} r^{2}(\varphi) d\varphi.
+$$
+
+Ví dụ 3.27. Tính diện tích tạo bởi đường cong Cardioid (hình trái tim) có phương trình
+
+$$
+(H): r = a(1 + \cos \varphi).
+$$
+
+Giải Đường Cardioid có tính chất đối xứng qua trục $Ox$, nên ta có
+
+$$
+= \int_{0}^{\pi} a^{2}(1 + \cos \varphi)^{2} d\varphi = a^{2} \int_{0}^{\pi} (1 + 2 \cos \varphi + \cos^{2} \varphi) d\varphi = a^{2}\left(\pi + \frac{1}{2} \pi\right).
+$$
+
+Đẳng thức $3$ Hình tạo bởi các đường cong dạng tham số.
+
+Cho hình $(H)$ được tạo bởi đường cong dạng tham số
+
+$$
+\begin{cases}
+x = x(t) \\
+y = y(t), & t_{1} \leq t \leq t_{2}.
+\end{cases}
+$$
+
+$$
+S_{H} = \int_{t_{1}}^{t_{2}} |y(t).x'(t)| dt.
+$$
+
+Ví dụ 3.28. Tính diện tích hình tạo bởi elip có phương trình
+
+$$
+(E): \frac{x^{2}}{a^{2}} + \frac{y^{2}}{b^{2}} = 1.
+$$
+
+![](images/a10ba9e462efb1d7229aa0ddbe7043f911da240b0d008f29ef808a36f6a8b8e8.jpg)  
+Hình 5: Đường cong Cardioid
+
+Giải Phương trình chính tắc của $(E)$ được viết dưới dạng tham số
+
+$$
+(E): \begin{cases}
+x = a \cos t \\
+y = b \sin t, & 0 \leq t \leq 2\pi.
+\end{cases}
+$$
+
+Do $(E)$ có tính chất đối xứng qua trục $Ox$, $Oy$, nên diện tích của $(E)$ được tính bằng
+
+$$
+S_{E} = 4 \intop_{0}^{\frac{\pi}{2}} | y(t) . x'(t) | dt = 4 \intop_{0}^{\frac{\pi}{2}} ab \sin^{2} t dt = \pi a b.
+$$
+
+# 3.7.2. Tính độ dài đường cong
+
+Dạng $\boldsymbol{I}$ Đường cong trên hệ trục toạ độ Oxy.
+
+Cho đường cong $AB$ có phương trình
+
+$$
+\widetilde{AB}: y = f(x) \quad x \in [a, b].
+$$
+
+Khi đó, độ dài đường cong $AB$ được xác định bởi công thức
+
+$$
+|\widetilde{AB}| = \int_{a}^{b} \sqrt{1 + f'(x)^2} dx.
+$$
+
+Dạng 2 Đường cong trên hệ trục toạ độ cực.
+
+Cho đường cong $AB$ có phương trình
+
+$$
+\widetilde{AB}: r = r(\varphi) \quad \varphi \in [\alpha, \beta].
+$$
+
+Khi đó
+
+$$
+|\widetilde{AB}| = \int_{\alpha}^{\beta} \sqrt{r^2(\varphi) + r'(\varphi)^2} d\varphi.
+$$
+
+Dạng 3 Đường cong dạng tham số.
+
+Khi đó
+
+$$
+\begin{array}{c}
+\widetilde{AB}: \left\{
+\begin{array}{l}
+x = x(t), \\
+y = y(t) \quad t_1 \leq t \leq t_2.
+\end{array} \right. \\
+| \widetilde{AB}| = \int_{t_1}^{t_2} \sqrt{x'(t)^2 + y'(t)^2} dt.
+\end{array}
+$$
+
+Ví dụ 3.29. Tính độ dài đường cong Astroid cho bởi phương trình tham số
+
+$$
+\widetilde{AB} : \left\{
+\begin{array}{ll}
+x = a \cos^3 t \\
+y = a \sin^3 t \quad (a > 0)
+\end{array}
+\right.
+$$
+
+Giải Theo công thức dạng 3, ta có
+
+![](images/fe1ea479bd6561975bb4bd2c1395bbe1dcb9e53b55b5747481c17ac287e858f3.jpg)
+
+$$
+\begin{array}{rl}
+\| \overline{AB} - \displaystyle{\int_{0}^{\infty} \sqrt{x_i^2 + y_i^2} dt} & {} \\
+= & -\frac{1}{2} \displaystyle{\int_{0}^{\infty} \sqrt{(-3a \cos^2 t \sin t)^2 + (3a \sin^2 t \cos t)^2} dt} \\
+= & 6a \displaystyle{\int_{0}^{\frac{\pi}{2}} \sin 2t dt} \\
+= & -\frac{3a}{2} \cos 2t \Big|_0^\frac{\pi}{2} \\
+= & 6a.
+\end{array}
+$$
+
+# 3.7.3. Tính thể tích của vật thể
+
+Cho vật thể $(H)$ nằm giữa hai mặt phẳng vuông góc với $Ox$
+
+$$
+(\alpha) : \ x = a, (\beta) : \ x = b \quad (a < b).
+$$
+
+Khi đó với mỗi $x_0 \in [a, b]$, mặt phẳng $(\gamma)$ có phương trình $x = x_0$ cắt vật thể $(H)$ theo thiết diện có diện tích $S(x_0)$. Khi đó thể tích vật thể $(H)$ được tính bằng công thức
+
+$$
+V_H = \int_a^b S(x) dx.
+$$
+
+Trong trường hợp đặc biệt, $(H)$ là một vật thể tạo bởi: Quay hình
+
+$$
+\left\{ 
+\begin{array}{l}
+y = f(x) \geq 0 \forall x \in [a, b] \\
+x = a, \\
+x = b.
+\end{array} 
+\right.
+$$
+
+xung quanh trục $Ox$. Khi đó, thể tích được xác định bằng công thức
+
+$$
+V_H = \pi \int_{a}^{b} f^2(x) dx.
+$$
+
+Thế nên, do $(\gamma)$ cắt hình $(H)$ theo thiết diện là một hình tròn có bán kính $R = f(x_0)$ nên $S(x_0) = \pi R^2 = \pi f^2(x_0)$,
+
+![](images/9bd134ceb9bb85d1ae1b960a9cc351f89b5d38c0c6d860fe5d3105d0fd82ef5c.jpg)  
+Hình 7: Hình biểu diễn thể tích của $(H)$
+
+Ví dụ 3.30. Tính thể tích của vật thể
+
+![](images/7eca3f5cbbe7e15ae57f8ce11618dc7ad2885d9d01e219dcf82334b1d0dcfc51.jpg)
+
+![](images/8a0617ca3591841082cd83cc2b5471d4769b7623c5350568cb857b75820acff5.jpg)
+
+Giải Thiết diện tạo bởi mặt phẳng $(\gamma) : x \equiv x_0$ là một hình chữ nhật. Từ sự đồng dạng của tam giác $OAB$ và $OCD$ ta có
+
+$$
+\frac{AB}{DC} = \frac{OA}{OD},
+$$
+
+từ đó được
+
+$$
+DC = \frac{AB . OD}{OA} = \frac{cx_0}{a}.
+$$
+
+Diện tích $S(x)$ của thiết diện bất kỳ vuông góc với trục $Ox$ sẽ bằng
+
+$$
+S(x) = \frac{2bcx}{a}\sqrt{1 - \frac{x^2}{a^2}}.
+$$
+
+Vậy
+
+$$
+V = \frac{2bc}{a} \int_{0}^{a} x \sqrt{1 - \frac{x^2}{a^2}} dx = \frac{2abc}{3} \left( 1 - \frac{x^2}{a^2} \right)^{\frac{3}{2}} \Bigg|_a^0 = \frac{2}{3} abc.
+$$
+
+# 3.7.4. Tính diện tích của mặt tròn xoay
+
+Mặt tròn xoay $(H)$ được tạo thành do cung $AB$ quanh trục $Ox$: 
+
+Dạng 1 Cung $AB$ cho bởi phương trình dạng tổng quát
+
+$$
+\widetilde{AB} : y = f(x) \geq 0 \quad a \leq x \leq b.
+$$
+
+Khi đó, diện tích mặt tròn xoay được định bởi công thức
+
+$$
+S_H = 2\pi \int_a^b f(x) \sqrt{1 + f'(x)^2} dx.
+$$
+
+![](images/f1fd3adcd8a68bcbdbba4fd7ef15b39cc60b8d3c1ffe462dc14d686512160ace.jpg)  
+Hình 8: Hình vẽ của ví dụ 3.31
+
+Dạng 2 Cung $AB$ cho bởi phương trình trong hệ tọa độ cực
+
+$$
+r = r(\varphi) \quad \text{với} \quad \sin\varphi \geq 0 \quad \forall \varphi \in [\alpha, \beta].
+$$
+
+Khi đó, diện tích mặt tròn xoay được định bởi công thức
+
+$$
+S_H = 2\pi \int_\alpha^\beta r(\varphi) \sin\varphi \sqrt{r^2(\varphi) + r'(\varphi)^2} d\varphi.
+$$
+
+Dạng 3 Cung $AB$ cho bởi phương trình dạng tham số
+
+$$
+\widetilde{AB} : \left\{
+\begin{array}{l}
+x = x(t) \\
+y = y(t) \geq 0 
+\end{array}
+\right. \quad t_1 \leq t \leq t_2.
+$$
+
+Khi đó, diện tích mặt tròn xoay được định bởi công thức
+
+$$
+S_{H} = 2 \pi \intop_{t_{1}}^{t_{2}} y(t) \sqrt{x^{\prime 2}(t) + y^{\prime 2}(t)} d t.
+$$
+
+Ví dụ 3.31. Cho đường cong cycloide cho bởi phương trình dạng tham số
+
+$$
+\widetilde{AB} : \left\{
+\begin{array}{ll}
+x = a(t - \sin t) \\
+y = a(1 - \cos t)
+\end{array}
+\right.
+\quad 0 \leq t \leq 2 \pi, a > 0.
+$$
+
+Tính diện tích mặt tròn xoay khi xoay cung $\widetilde{AB}$ xung quanh trục $Ox$:
+
+Giải Theo công thức tính diện tích mặt tròn xoay dạng 3, ta có
+
+$$
+{ \begin{array} { r l }
+& S _ { B } = 2 { \small \int _ { 0 } ^ { \infty } } \sqrt { \sinh ( { \sqrt [ x ] { x '' } } ) + { \sqrt [ x ] { \sinh ^ { 2 } ( { \sqrt [ x ] { x '' } } ) } } }
+\\
+& \qquad = 2 \left( { \frac { \cosh { \sqrt [ x ] { x '' } } + \sinh ( { \sqrt [ x ] { x '' } } ) + \sinh ^ { 2 } ( { \sqrt [ x ] { x '' } } ) } { \sinh ^ { 2 } ( { \sqrt [ x ] { x '' } } ) } } \right)
+\\
+& \qquad = { \frac { \sinh ^ { 2 } } { \sinh ^ { 2 } } } \left\{ 1 - \cosh { \sqrt [ x ] { x '' } } \sinh { \frac { \sinh ^ { 2 } } { \sinh ^ { 2 } ( { \sqrt [ x ] { x '' } } ) } } \right\}
+\\
+& \qquad - 4 \kappa '' \left[ { \frac { \sinh { \sqrt [ x ] { x '' } } + \sinh { \frac { \sqrt [ x ] { x '' } } { \cosh ^ { 2 } ( { \sqrt [ x ] { x '' } } ) } } } { \sinh { \frac { \sqrt [ x ] { x '' } } { \cosh ^ { 2 } ( { \sqrt [ x ] { x '' } } ) } } } } \right] \sinh { \frac { \sqrt [ x ] { x '' } } { 3 } }
+\\
+& \qquad - 2 \alpha '' \left[ { \sqrt [ x ] { 3 \sinh ^ { 2 } { \frac { \sqrt [ x ] { x '' } } { 3 } } } } \right] \sinh { \frac { \sqrt [ x ] { x '' } } { 3 } }
+\end{array} }
+$$
+
+t = \left\{ x \right\} \left\{ x^{\prime\prime} \right\} + \frac{\sinh^{2}\left( \sqrt{x^{\prime\prime}} \right)}{3}. } \end{array} }
+
+# 3.8. Tích phân với cận vô hạn
+
+# 3.8.1. Định nghĩa
+
+Cho hàm $f ( x )$ khả tích trên $[ a , b ] \forall b > a$. Nếu tồn tại hữu hạn giới hạn
+
+$$
+\operatorname*{lim}_{b \to +\infty} \int_{a}^{b} f(x) dx,
+$$
+
+thì giới hạn này được gọi là tích phân suy rộng của hàm số $f ( x )$ với $\mathrm{cận} +\infty$ và ký hiệu là
+
+$$
+\int_{a}^{+\infty} f(x) dx.
+$$
+
+Khi tích phân hội tụ, ta nói rằng tích phân hội tụ. Ngược lại, tích phân suy rộng trên là phần kỳ.
+
+Tương tự như vậy, ta định nghĩa tích phân suy rộng với cận $-\infty$
+
+$$
+\operatorname*{lim}_{a \to -\infty} \int_{a}^{b} f(x) dx = \int_{-\infty}^{b} f(x) dx.
+$$
+
+Tích phân suy rộng của hàm số $f ( x )$ với hai cận $+\infty, -\infty$, ký hiệu là $\int_{-\infty}^{+\infty} f(x) dx$. Tích phân này hội tụ khi và chỉ khi cả hai tích phân suy rộng
+
+$$
+\int_{a}^{+\infty} f(x) dx, \int_{-\infty}^{b} f(x) dx \forall a , b \in \mathbb{R}
+$$
+
+cũng hội tụ. Khi đó
+
+$$
+\int_{-\infty}^{+\infty} f(x) dx = \int_{a}^{+\infty} f(x) dx + \int_{-\infty}^{a} f(x) dx \forall a \in \mathbb{R}.
+$$
+
+Ví dụ 3.32. Cho $a > 0$, xét sự hội tụ hay phân kỳ của các tích phân sau.
+
+$$
+\begin{array} { r l }
+& { \dot{\gamma} ^ {\infty} } \\
+{ \dot{i} \dot{\gamma} \ \stackrel{d \times}{ \left( \begin{array} { l l } { \dot{\pi} } \\ { 0 } \end{array} \right) } \ \stackrel{d \times}{ \left( \begin{array} { l l } { \dot{\pi} ^ {2} + a ^ {2} } \end{array} \right) } . } \\
+& { \dot{\left. \begin{array} { l l } { 0 } \\ { \dot{\pi} ^ {3} } \end{array} \right) } \ \stackrel{d \times}{ \left( \begin{array} { l l } { \dot{\pi} ^ {2} + a ^ {2} } \\ { - \frac{\pi}{x ^ {2} + a ^ {2}} } \end{array} \right) } . } \\
+& { \qquad \dot{\gamma} ^ {\infty} } \\
+& { \dot{i} \dot{i} \dot{\eta} \ \stackrel{d \times}{ \left( \begin{array} { l l } { \dot{\pi} ^ {2} } \\ { -\infty } \end{array} \right) } \ \stackrel{d \times}{ \sqrt{x ^ {2} + a ^ {2}} } \cdot } \\
+& { \qquad \dot{\gamma} ^ {\infty} } \\
+& { \dot{i} \dot{\nu} \stackrel{d \times}{ \left( \begin{array} { l l } { \dot{\pi} ^ {2} } \\ { 1 } \end{array} \right) } \ \stackrel{d \times}{ \left( \begin{array} { l l } { \dot{\pi} ^ {2} } \\ { -\dot{\pi} ^ {2} } \end{array} \right) } \ \stackrel{d \times}{ \left( \begin{array} { l l } { \mathbb{R}. } \\ { 0 } \end{array} \right) } . }
+\end{array}
+$$
+
+Giải
+
+$$
+\begin{array} { c }
+i) \int _ { 0 } ^ { + \infty } \frac { d x } { x ^ { 2 } + a ^ { 2 } } = \lim _ { b \to + \infty } \int _ { 0 } ^ { b } \frac { d x } { x ^ { 2 } + a ^ { 2 } } \\
+= \lim _ { b \to + \infty } \frac { 1 } { a } \arctan \frac { x } { a } \Big| _ { 0 } ^ { b } = \frac { \pi } { 2 a }
+\end{array}
+$$
+
+$$
+\begin{array} { l }
+ii) \int _ { - \infty } ^ { 0 } \left. \frac { x d x } { x ^ { 2 } + a ^ { 2 } } = \frac { 1 } { 2 } \ln ( x ^ { 2 } + a ^ { 2 } ) \right| _ { - \infty } ^ { 0 } = - \infty \quad (\text{phân kỳ}). \\
+iii) \int _ { - \infty } ^ { 0 } \left. \frac { d x } { x ^ { 2 } + a ^ { 2 } } = \frac { 1 } { a } \arctan \frac { x } { a } \right| _ { - \infty } ^ { 0 } + \left. \frac { 1 } { a } \arctan \frac { x } { a } \right| _ { 0 } ^ { + \infty } \\
+\qquad = \frac { \pi } { 2 a } + \frac { \pi } { 2 a } = \frac { \pi } { a } \quad (\text{hội tụ}).
+\end{array}
+$$
+
+$$
+i v ) \int \displaylimits _ { 1 } ^ { + \infty } \frac { d x } { x ^ { \alpha } } = \left. \begin{array} { l l } { \frac { 1 } { ( 1 - \alpha ) x ^ { \alpha - 1 } } \Big | _ { 1 } ^ { + \infty } } & { \mathrm { n \lessgtr u ~ } \alpha \neq 1 } \\ { \ln x \Big | _ { 1 } ^ { + \infty } } & { \mathrm { n \lessgtr u ~ } \alpha = 1 . } \end{array} \right. = \left. \begin{array} { l l } { \frac { 1 } { 1 - \alpha } } & { \mathrm { n \lessgtr u ~ } \alpha > 0 } \\ { +\infty } & { \mathrm { n \lessgtr u ~ } \alpha \leq 1 } \end{array} \right.
+$$
+
+Nhận xét $\text{T3.3.7: tích phân suy giảm}$ khi $\int _ { a } ^ { + \infty } f ( x ) d x$ hội tụ khi và chỉ khi $\int _ { b } ^ { + \infty } f ( x ) d x$ hội tụ.
+
+$$
+\int _ { a } ^ { + \infty } f ( x ) d x = \int _ { a } ^ { b } f ( x ) d x + \int _ { b } ^ { + \infty } f ( x ) d x .
+$$
+
+# 3.8.2. Các điều kiện hội tụ của tích phân suy giảm
+
+Ta xét các điều kiện hội tụ của tích phân suy giảm với cận $+\infty$.
+
+Định lý 3.34. Cho hàm số $f(x) \geq 0$ và khả tích trên $[a, b] \quad \forall b > a$. Khi đó
+
+$$
+\int _ { a } ^ { + \infty } f ( x ) d x \text{ hội tụ}
+$$
+
+khi và chỉ khi hàm số
+
+$$
+\varphi(x) = \int _ { a } ^ { x } f(t) dt \text{ bị chặn trên} [a, b]
+$$
+
+Chứng minh Theo định nghĩa,
+
+$$
+\begin{array} { l } { \displaystyle { \int _ { a } ^ { + \infty } f ( x ) d x = \lim_{x \to + \infty} \varphi ( x ) . } } \end{array}
+$$
+
+Do $f(x) \geq 0$, nên $\varphi(x)$ đồng điều tăng. Theo tính chất của giới hạn hàm số đồng điều, giới hạn $\lim_{x \to +\infty} \varphi(x)$ tồn tại khi và chỉ khi $\varphi(x)$ bị chặn trên $[a, +\infty)$. □
+
+Định lý 3.35. (Được hiểu so sánh)
+
+Cho hai hàm số $f(x), g(x)$ khả tích trên $[a, b] ~ \forall b > a$ 
+$$
+0 \leq f(x) \leq g(x) \quad \forall x \in [a, +\infty).
+$$
+
+Khi đó,
+
+$$
+\begin{array} { l } { \text{Nếu} \int_{a}^{+\infty} g(x) dx hội tụ, thì \int_{a}^{+\infty} f(x) dx hội tụ. } \\ { \quad } \\ { \text{Nếu} \int_{a}^{+\infty} f(x) dx phân kỳ, thì \int_{a}^{+\infty} g(x) dx phân kỳ. } \\ { \quad } \\ { a } \end{array}
+$$
+
+Chứng minh
+
+$+ \mathrm{Nếu} \int_{a}^{b} g(x) dx \mathrm{hội},$ thì theo định lý 3.34, ta có $\begin{array}{c}
+\int_{a}^{b} g(x) dx \leq M \forall b > a
+\end{array}$ . Mặt khác, vì $f(x) \leq g(x) \forall x \in [a, +\infty)$ suy ra $\begin{array}{r}
+\varphi(b) = \int_{a}^{b} f(x) dx \leq \int_{a}^{b} g(x) dx \leq M \forall b > a
+\end{array}$ . Theo định lý 3.34, ta có tu. $\begin{array}{l}
++ \infty \\
+\int g(x) dx \\
+0 
+\end{array}$
+
+Nếu $\int_{a}^{+\infty} f(x)dx$ phân kỳ, thì phân kỳ. Ta chứng minh bằng phương pháp tương tự và sử dụng chứng minh trên. □
+
+Ví dụ 3.36. Xét sự hội tụ hay phân kỳ của tích phân
+
+$$
+\int_{1}^{+\infty} \frac{x dx}{2x^5 + x^2 - 1}.
+$$
+
+$\begin{array}{r}
+f(x) = \frac{x}{2x^5 + x^2 - 1} \geq 0 \forall x \geq 1
+\end{array}$ và $\begin{array}{r}
+f(x) \leq g(x) = \frac{1}{x^4} \forall x \geq 2.
+\end{array}$ Mặt khác
+
+$$
+\int _ { 1 } ^ { + \infty } g ( x ) d x = \int _ { 1 } ^ { + \infty } \frac { 1 } { x ^ { 4 } } d x = - \frac { 1 } { 3 x ^ { 3 } } \Big | _ { 1 } ^ { + \infty } = \frac { 1 } { 3 } .
+$$
+
+$\prod _ { 1 } ^ { + \infty } \frac { x d x } { 2 x ^ { 5 } + x ^ { 2 } - 1 }$
+
+**1. Theo định lý 3.35, từ.**
+
+Dinh ly 3.37. (Đấu hiệu giới hạn)
+
+Cho hai hàm số $f ( x ) , g ( x )$ khả tích trên $[ a , b ] \ \forall b > 0 , f ( x ) \geq 0 . g ( x ) \geq 0 \ \forall x \geq a$
+
+$$
+\operatorname* { lim } _ { b \to + \infty } \frac { f ( x ) } { g ( x ) } = M \geq 0 .
+$$
+
+Khi đó,
+
+i) Nếu $M \in ( 0 , + \infty )$, thì hội tụ (phần tích phân) khi và chỉ khi hội tụ (phần tích phân).
+
+$$
+\begin{array} { l } { { \cdots \nonumber N \hat { e u } ~ M = 0 ~ \nu \dot { a } ~ \stackrel { + \infty } { \int } ~ g ( x ) d x ~ h \hat { \varrho } i ~ t \llap / _ { i } ~ \stackrel { \displaystyle + \infty } { \int } ~ f ( x ) d x ~ h \hat { \varrho } i ~ t \llap / _ { i } } } \\ { { \nonumber _ { a } \nonumber } } \\ { { \cdots \qquad \hat { \nu } \hat { e u } ~ M = + \infty ~ \nu \dot { a } ~ \stackrel { \displaystyle + \infty } { \int } ~ g ( x ) d x ~ p h \hat { a } n ~ k \hat { y } , t h \hat { \jmath } ~ \stackrel { \displaystyle + \infty } { \int } ~ f ( x ) d x ~ p h \hat { a } n ~ k \hat { y } . } } \end{array}
+$$
+
+Chứng minh i) Giả sử $M \in ( 0 , + \infty )$, theo định nghĩa,
+
+$$
+\cdot \epsilon > 0 , \exists x_0 > 0 \forall x > x_0 \Rightarrow | \frac { f ( x ) } { g ( x ) } - M | < \epsilon \Rightarrow M - \epsilon < \frac { f ( x ) } { g ( x ) } < M + \epsilon
+$$
+
+$$
+\Rightarrow ( M - \epsilon ) g ( x ) < f ( x ) < ( M + \epsilon ) g ( x ) .
+$$
+
+Theo định lý $\begin{array} { l l } { \gamma \ 3 . 3 5 , \ H } \\ { \textup{i}_{a}^{\infty} f(x) dx \ \mathrm{h} \mathring{\mathfrak{g}}^{\mathrm{i}} \ \mathfrak{t}, \ \mathrm{w h} \ ; \ \textup{ray} \ \textup{ra} \int (M + \epsilon) g(x) dx \Rightarrow \textup{\textstyle\int} g(x) dx } \\ { \ + \infty } \\ { \int\displaylimits_{a}^{+\infty} g(x) dx \ \mathrm{h} \mathring{\mathfrak{g}}^{\mathrm{i}} \ \mathfrak{t}\mathfrak{h} \ \overset{\mathrm{i}}{\underset{a}{\int}} (M - \epsilon) g(x) dx \ \mathrm{h} \mathring{\mathfrak{g}}^{\mathrm{i}} \ \mathfrak{t}, \ \mathrm{s u p} \ \textup{ra} \int\displaylimits_{a}^{+\infty} f(x) dx \ \mathrm{h} \mathring{\mathfrak{g}}^{\mathrm{i}} } \\ { \textup{i}_{a}^{\infty} } \\ { \textup{i}\int\displaylimits} \ f(x) dx \ \mathrm{h} \mathring{\mathfrak{g}}^{\mathrm{i}} \ \mathrm{t u} \ \mathrm{k h i} \ \mathrm{v a} \ \mathrm{c h} \mathrm{i} \ \mathrm{k h i} \ \textup{\texttt{i}}\int g(x) dx \ \mathrm{h} \mathring{\mathfrak{g}}^{\mathrm{i}} \ \mathfrak{t}. \ \mathrm{P h i a} \ \mathrm{k} \mathrm{\dot{y}} \ \mathrm{d u o}  \end{array}$ (20)   
+hỏi tu. Nếu tu. Như vay  
+chung
+
+minh tưởng tu.
+ii) Giả sử $M = 0$ và $\begin{array} { l } { + \infty } \\ { \int \displaylimits _ { a } ^ { \infty } g ( x ) d x } \end{array}$ hội tụ. Từ định nghĩa $\lim_{x \to +\infty} \frac { f ( x ) } { g ( x ) } = 0 \Leftrightarrow \forall \epsilon > 0 , \exists b , \forall x > b \Rightarrow | \frac { f ( x ) } { g ( x ) } | < \epsilon \Rightarrow 0 \leq f ( x ) < \epsilon g(x)$
+b
+và $\begin{array} { l } { + \infty } \\ { \int _ { a } ^ { \infty } g ( x ) d x } \end{array}$ hội tụ, suy ra $\int_{+ \infty} f ( x ) d x$ hội tụ.
+iii) Giả sử $M = +\infty$ và $\begin{array} { l } { + \infty } \\ { \int _ { a } ^ { \infty } g ( x ) d x } \end{array}$ phân kỳ. Ta có A
+
+$$
+\operatorname*{lim}_{x \to +\infty} \frac{f(x)}{g(x)} = +\infty \Leftrightarrow \forall K > 0, \exists b > 0, \forall x > b
+$$
+
+$$
+\Rightarrow \left| \frac{f(x)}{g(x)} \right| > K \Rightarrow f(x) > K g(x) \forall x > b.
+$$
+
++8 ? $\stackrel{+\infty}{\int} f(x) dx$ Theo định lý 3.37 và giả thiết $g(x)dx$, ta có phần kỳ．□ a Ví dụ 3.38. Xét sự hội tụ hay phân kỳ của tích phân sau
+
+$$
+I_1 = \int_{1}^{+\infty} \frac{(2x^2 + 1) dx}{x^3 \sqrt[3]{x^4 + 2x + 1}}, I_2 = \int_{3}^{+\infty} \frac{\ln(x - 2) dx}{3x^3 + x^2 + 1}.
+$$
+
+Giả sử xét $I_1$ với hàm số 
+\[
+f(x) = \frac{(2x^2 + 1)}{x^3 \sqrt[3]{x^4 + 2x + 1}} \geq 0 \forall x \geq 1.
+\]
+Đặt
+$$
+g(x) = \frac{x^2}{x^3 \sqrt[3]{x^4}} \geq 0 \forall x \geq 1 \Rightarrow \operatorname*{lim}_{x \to +\infty} \frac{f(x)}{g(x)} = 2 \in (0, +\infty).
+$$
+
+Mặt khác, theo ví dụ 3.32,
+\[
+\int_{1}^{+\infty} g(x) dx
+\]
+hội tụ. Do đó $I_1$ hội tụ.
+
+$\begin{array} { r } {\text{Xét } I _ { 2 } , f ( x ) = \frac { \ln ( x - 2 ) } { 3 x ^ { 3 } + x ^ { 2 } + 1 } \geq 0 \forall x \geq 3, g ( x ) = \frac { \ln x } { x ^ { 3 } } \geq 0 \forall x \geq 3 .} \end{array}$ Khi đó, theo quy tắc L'Hospital, ta có
+
+$$
+\operatorname* { lim } _ { x \to + \infty } { \frac { f ( x ) } { g ( x ) } } = \operatorname* { lim } _ { x \to + \infty } { \frac { x ^ { 3 } } { 3 x ^ { 3 } + x ^ { 2 } + 1 } } { \frac { \ln ( x - 2 ) } { \ln x } } = \operatorname* { lim } _ { x \to + \infty } { \frac { 1 } { 3 } } { \frac { \ln ( x - 2 ) } { \ln x } }
+$$
+
+$$
+= \operatorname* { lim } _ { x \to + \infty } \frac { 1 } { 3 } \frac { \frac { 1 } { x - 2 } } { \frac { 1 } { x } } = \frac { 1 } { 3 } \in ( 0 , + \infty ) .
+$$
+
+Mặt khác $\begin{array}{c} \begin{array} { l } { \int _ { 3 } ^ { + \infty } g ( x ) d x = \int _ { 3 } ^ { + \infty } x ^ { - 3 } \ln x d x } \\ { 3 } \end{array} \end{array}$ hội tụ (Dùng tích phân từng phần với $u = \ln x$, $dv = x ^ { - 3 } dx )$. Vậy $I _ { 2 }$ hội tụ.
+
+# 3.8.3. Hội tụ tuyệt đối và bán hội tụ
+
++ Tích phân suy rộng $\int _ { + \infty } ^ { a } f ( x ) d x$ được gọi là hội tụ tuyệt đối, nếu $\int _ { a } ^ { + \infty } | f ( x ) | d x$ hội tụ.
+
+$+$ Tích phân suy rộng $\stackrel{+\infty}{\int} f(x) dx$ được gọi là hội tụ, nếu 
+$\begin{array}{c}
+\begin{array}{l}
+{\begin{array}{l}
+{+\infty}\\
+{\int}
+\end{array}} f(x)dx \text{ hội tụ khi } a \\
+\underset{a}{\overset{+\infty}{\mathop{\int}}} |f(x)| dx < +\infty.
+\end{array}$
+  
+Định lý 3.39. (không chứng minh)
+
+$+ \infty$ Nếu $\int_a^{+\infty} |f(x)|dx$ hội tụ, thì $\int_a^{+\infty} f(x)dx$ cũng hội tụ. Điều ngược lại có thể không đúng.
+
+Ví dụ 3.40.
+i) Xét sự hội tụ của tích phân
+$$
+I_1 = \int_{1}^{+\infty} \frac{\cos x}{x^2} dx.
+$$
+
+ii) Cho tích phân
+$$
+I_2 = \int_{1}^{+\infty} \frac{\sin x}{x} dx.
+$$
+
+Chứng minh rằng: $I_2$ hội tụ.
+
+Giải:
+i) Ta có
+$$
+0 \leq \frac{|\cos x|}{x^2} \leq \frac{1}{x^2} \forall x \geq 1 \text{ và } \int_{1}^{+\infty} \frac{1}{x^2} dx = 1.
+$$
+
+Do đó $I_1$ hội tụ (Theo định lý 3.39).
+
+ii) $I_2$ hội tụ.
+
+Thật vậy,
+$$
+I_2 = \int_{1}^{+\infty} \frac{\sin x}{x} dx = \int_{1}^{+\infty} \frac{1}{x} d(-\cos x) = -\frac{\cos x}{x}\Big|_{1}^{+\infty} + \int_{1}^{+\infty} \frac{-1}{x^2} \cos x dx.
+$$
+
+Mà $\lim_{x \to +\infty} \frac{1}{x} \cos x = 0$ và theo i), 
+\[ I_1 = \int_1^{+\infty} \frac{\cos x}{x^2} dx \]
+hội tụ. Do vậy $I_2$ hội tụ.
+
+$I_2$ không hội tụ tuyệt đối.
+
+Thật vậy, từ bất đẳng thức
+
+\[
+\left| \frac{\sin x}{x} \right| \geq \frac{\sin^2 x}{x} ~ \forall x \geq 1,
+\]
+
+ta xét tích phân 
+\[ J = \int_1^{+\infty} \frac{\sin^2 x}{x} dx. \]
+
+\[
+J = \int_{1}^{+\infty} \frac{1 - \cos 2x}{2x} dx = \frac{1}{2} \int_{1}^{+\infty} \frac{1}{x} dx - \int_{1}^{+\infty} \frac{\cos 2x}{2x} dx.
+\]
+
+Tương tự như $I_2$ a $\mathrm{d}$ dạng chứng minh được 
+\[ \int_{1}^{+\infty} \frac{\cos 2x}{2x} dx \]
+hội tụ. Từ
+
+\[
+\int \frac{1}{x} dx = \lim_{b \to +\infty} \ln x \Big|_1^b = +\infty
+\]
+
+suy ra $J = +\infty$. Hay 
+\[ \int_1^{+\infty} \left| \frac{\sin x}{x} \right| dx \]
+phần kỳ. Vậy $I_2$ không hội tụ tuyệt đối.
+
+# 3.9. Tích phân suy rộng với cấp hữu hạn
+
+## 3.9.1. Định nghĩa
+
+$^+$ Cho hàm số $f(x)$ khả tích trên $[a,c] \ \forall c \in (a,b)$ và $\operatorname*{lim}_{x \to b^{-}} f(x) = \infty$. Khi đó
+
+$$
+I = \operatorname*{lim}_{c \to b^{-}} \int_{a}^{c} f(x) dx
+$$
+
+được gọi là tích phân suy rộng với cực điểm $b$ và ký hiệu là $\begin{array}{l}
+\quad {b}\\
+{\int f(x)dx. \text{Nếu } I}\\
+{a}
+\end{array}$ tồn tại hữu hạn, thì $\stackrel{b}{\int} f(x) dx$ được gọi là hội tụ. Ngược lại, gọi là phân kỳ.
+
+$^+$ Cho hàm số $f(x)$ khả tích trên $[c,b] \forall c \in (a,b)$ và $\operatorname*{lim}_{x \to a^{+}} f(x) = \infty$. Khi đó
+
+$$
+I = \operatorname*{lim}_{c \to a^{+}} \int_{c}^{b} f(x) dx
+$$
+
+được gọi là tích phân suy rộng với cực điểm $a$ và ký hiệu là $\begin{array}{l}
+\quad {b}\\
+{\int f(x)dx. \text{Nếu } I}\\
+{a}
+\end{array}$ tồn tại hữu hạn, thì $\stackrel{b}{\int} f(x) dx$ được gọi là hội tụ. Ngược lại, gọi là phân kỳ.
+
+U $+$ Cho hàm số $f ( x )$ khả tích trên $[ c , b ] \forall c \in ( x _ { 0 } , b )$, và $[ a , c ] \forall c \in ( a , x _ { 0 } )$ và $\operatorname*{lim}_{x \to x_{0}} f(x) = +\infty$. Khi đó $\int_a^b f(x)\,dx$ được gọi là tích phân suy rộng với cực điểm $x_0$. Nếu $\int_a^{x_0} f(x)\,dx$ và $\int_{x_0}^b f(x)\,dx$ hội tụ, thì $\int_a^b f(x)\,dx$ được gọi là hội tụ. Ngược lại, gọi là phân kỳ.
+
+$+$ Cho hàm số $f ( x )$ khả tích trên $[ c , b ] \forall b > c > a$ và $\operatorname*{lim}_{c \to a^{+}} f(x) = +\infty$. Khi đó $\int_a^b f(x)\,dx$ được gọi là tích phân suy rộng với cực điểm $x_0$ và cần vô hạn. Nếu 
+$\int_{a}^{b} f(x)\,dx$ hội tụ, thì $\int_{a}^{b} f(x)\,dx$ được gọi là hội tụ. Ngược lại, gọi
+là phân kỳ.
+
+Ví dụ 3.41. Tính tích phân suy rộng
+
+$$
+\int \limits _ { a } ^ { b } \frac { d x } { ( x - a ) ^ { \alpha } } ( a < b , \alpha \in \mathbb{R} ).
+$$
+
+Giải Nếu $\alpha > 0$, thì $\operatorname*{lim}_{x \to a^{+}} \frac{1}{(x-a)^{\alpha}} = +\infty \Rightarrow x = a$ là cực điểm. Ta xét các trường hợp sau:
+
+$+$ Nếu $\alpha > 1$, thì
+
+$$
+\int _ { \imath } ^ { b } \frac { d x } { ( x - a ) ^ { \alpha } } = \int _ { a } ^ { b } ( x - a ) ^ { - \alpha } d ( x - a ) = \frac { 1 } { ( 1 - \alpha ) ( x - a ) ^ { \alpha - 1 } } \Big | _ { a } ^ { b } = + \infty .
+$$
+
++ Nếu $\alpha = 1$, thì
+
+$$
+\int _ { a } ^ { b } \frac { d x } { x - a } = \ln ( x - a ) \Big| _ { a } ^ { b } = + \infty .
+$$
+
++ Nếu $\alpha < 1$, thì
+
+$$
+\int _ { a } ^ { b } \frac { d x } { ( x - a ) ^ { \alpha } } = \int _ { a } ^ { b } ( x - a ) ^ { - \alpha } d ( x - a ) = \frac { 1 } { 1 - \alpha } ( x - a ) ^ { 1 - \alpha } \bigg| _ { a } ^ { b } = \frac { 1 } { ( 1 - \alpha ) ( b - a ) ^ { 1 - \alpha } } .
+$$
+
+Như vậy
+
+$$
+\int _ { a } ^ { b } \frac { d x } { ( x - a ) ^ { \alpha } } = \left\{ \begin{array} { l l } { + \infty } & { \text{nếu } \alpha \geq 1 } \\ { \frac { 1 } { ( 1 - \alpha ) ( b - a ) ^ { 1 - \alpha } } } & { \text{nếu } \alpha < 1 . } \end{array} \right.
+$$
+
+# 3.9.2. Quan hệ giữa hai loại tích phân suy rộng
+
+Xét tích phân suy rộng với cận hữu hạn có cực điểm $a$
+
+$$
+\int _ { a } ^ { b } f ( x ) d x .
+$$
+
+Đổi biến $\begin{array} { r } { x = a + \frac { 1 } { y }, \quad y \to + \infty } \end{array}$, ta có
+
+$$
+\quad : x = \operatorname*{lim}_{c \to a^+} \int f(x) dx = \operatorname*{lim}_{y \to +\infty} \int f(a + \frac{1}{y}) \frac{-dy}{y^2} = \operatorname*{lim}_{y \to +\infty} \int_{\frac{1}{b-a}}^{y} \frac{f(a + \frac{1}{y})}{y^2}
+$$
+
+Nhu vậy
+
+$$
+\int_a^b f(x) dx = \int_\alpha^{+\infty} g(x) dx \quad \text{với } g(x) = \frac{f(a + \frac{1}{x})}{x^2}, \alpha = \frac{1}{b-a}.
+$$
+
+3.9.3. Các định lý hội tụ
+
+Tương tự như chứng minh đối với tích phân suy rộng với cận vô hạn. Ta có các định lý dưới đây.
+
+Định lý 3.42. (Đầu hiệu so sánh)
+
+Cho các hàm $f, g \quad 0 \leq f(x) \leq g(x) \forall x \in [a,b)$ và $\operatorname*{lim}_{x \to b^+} f(x) = \operatorname*{lim}_{x \to b^+} g(x) = +\infty$. Khi đó.
+
+- Nếu $\int_a^b g(x) dx$ hội tụ, thì $\int_a^b f(x) dx$ hội tụ.
+- Nếu $\int_a^b f(x) dx$ phân kỳ, thì $\int_a^b g(x) dx$ phân kỳ.
+
+Ví dụ 3.43. Khảo sát sự hội tụ của tích phân
+
+$$
+I = \int_0^1 \frac{|\ln x|}{x^\alpha} dx \quad (\alpha \in \mathbb{R}).
+$$
+
+Giải Trường hợp $\boldsymbol{I}$. Nếu $\alpha < 1$, Đặt $\epsilon = 1 - \alpha$, khi đó $\epsilon > 0$. Ta có
+
+$$
+\frac { | \ln x | } { x ^ { \alpha } } = \frac { | \ln x | } { x ^ { 1 - \epsilon } } = \frac { x ^ { \frac { \epsilon } { 2 } } | \ln x | } { x ^ { 1 - \frac { \epsilon } { 2 } } } .
+$$
+
+Vì $\lim_{x \to 0^+} x ^ { \frac { \epsilon } { 2 } } | \ln x | = 0$ suy ra tồn tại $x _ { 0 }$ sao cho
+
+$$
+\left. x ^ { \frac { \epsilon } { 2 } } \right| \ln x | < 1 \forall x \in ( 0 , x _ { 0 } ) .
+$$
+
+Vậy
+
+$$
+\frac { | \ln x | } { x ^ { \alpha } } = \frac { x ^ { \frac { \epsilon } { 2 } } | \ln x | } { x ^ { 1 - \frac { \epsilon } { 2 } } } < \frac { 1 } { x ^ { 1 - \frac { \epsilon } { 2 } } } . \forall x \in ( 0 , x _ { 0 } ) .
+$$
+
+Theo ví dụ 3.41, ta có $\int \limits _ { 0 } ^ { 1 } \frac { 1 } { x ^ { 1 - \frac { \epsilon } { 2 } } } d x$ hội tụ. Khi đó, theo định lý 3.42, tích phân $I$ hội tụ.
+
+Định lý 3.44. (Đấu hiệu giới hạn)
+
+Cho các hàm số $0 \leq f(x), 0 \leq g(x) \forall x \in [a,b)$, $\lim_{x \to b^+} f(x) = \lim_{x \to b^+} g(x) = +\infty$.
+
+Nếu
+
+$$
+\lim_{x \to b^+} \frac{f(x)}{g(x)} = M \geq 0,
+$$
+
+khi đó
+
+b $\underset { a } { \overset { b } { \mathop { \int } } } g(x) dx h \underset { \cdot } { \hat { \varrho } } i \underset { \cdot } { \overset { \quad } { \boldsymbol { t u . } } }$
+
+- Nếu $M \in (0, +\infty)$ thì $\int f(x) dx$ hội tụ khi và chỉ khi $\int_a^b g(x)dx$ hội tụ. 
+
+- Nếu $M = 0$ và $\int_a^b g(x)dx$ hội tụ, thì $\int_a^b f(x)dx$ hội tụ.
+
+- Nếu $M = +\infty$ và $\int_a^b g(x)dx$ phân kỳ, thì $\int_a^b f(x)dx$ phân kỳ.
+
+Vi dụ 3.45. Khảo sát sự hội tụ của các tích phân sau
+
+$$
+\begin{array} { r l }
+& I _ { 1 } = \displaystyle \int _ { 0 } ^ { 1 } \frac { d x } { \sqrt { ( 1 - x ^ { 2 } ) ( 1 - k ^ { 2 } x ^ { 2 } ) } } ~ \nu o t ~ | k | < 1 . \\
+& I _ { 2 } = \displaystyle \int _ { 0 } ^ { 1 } \frac { d x } { \sqrt [ 3 ] { x ( e ^ { x } - e ^ { - x } ) } } . \\
+& I _ { 3 } = \displaystyle \int _ { 0 } ^ { \frac { \pi } { 2 } } \frac { \ln ( \sin x ) } { \sqrt { x } } d x .
+\end{array}
+$$
+
+Giải
+
+- Xét $I _ { 1 }$
+
+Do $| k | < 1$ nên $1 - k ^ { 2 } x ^ { 2 } > 0 \forall x \in [ 0 , 1 ]$. Xét giới hạn
+
+$$
+\operatorname*{lim}_{x \to 1^-} \frac { 1 } { \sqrt { ( 1 - x ^ { 2 } ) ( 1 - k ^ { 2 } x ^ { 2 } ) } } = + \infty .
+$$
+
+Vậy $x = 1$ là cực điểm.
+
+Đặt
+
+$$
+f(x) = \frac { 1 } { \sqrt { ( 1 - x ^ { 2 } ) ( 1 - k ^ { 2 } x ^ { 2 } ) } }, g(x) = \frac { 1 } { 1 - x } = \frac { 1 } { ( 1 - x ) ^ { \frac { 1 } { 2 } } }
+$$
+
+$$
+\lim_{x \to 1^-} \frac{f(x)}{g(x)} = \lim_{x \to 1^-} \frac{1}{\sqrt{(1 + x)(1 - k^2 x^2)}} = \frac{1}{\sqrt{2(1 - k^2)}} \in (0, +\infty).
+$$
+
+Theo ví dụ 3.41, 
+\[ \int \frac{dx}{\sqrt{1 - x}} = \hat{\mathrm{H}}_0(x) \quad \text{tại} \quad x=0. \]
+Khi đó, theo định lý 3.44, $I_1$ hội tụ.
+
+Xét $I_2$: 
+
+Xét giới hạn
+$$
+\lim_{x \to 0^+} \frac{1}{\sqrt[3]{x(e^x - e^{-x})}} = \lim_{x \to 0^+} \sqrt[3]{\frac{e^x}{x(e^{2x} - 1)}} = +\infty.
+$$
+
+Đặt $g(x) = \frac{1}{\sqrt[3]{x^2}}$ suy ra
+$$
+\lim_{x \to 0^+} \frac{f(x)}{g(x)} = \frac{1}{\sqrt[3]{2}} \in (0, +\infty).
+$$
+
+Mà 
+\[ \int_0^1 g(x) dx = 3. \]
+Hội tụ. Vậy $\mathcal{I}_2$ hội tụ.
+
+Xét $I_3$: 
+
+Đặt $x = 0$ là cực điểm. Đặt
+$$
+f(x) = \frac{\ln(\sin x)}{\sqrt{x}}, \quad g(x) = \frac{1}{x^\lambda} \text{ với } \lambda \in \left( \frac{1}{2}, 1 \right).
+$$
+
+Theo quy tắc L'Hôpital, ta có
+
+$$
+\begin{array} { l } { \displaystyle \lim_{x \to 0^+} \frac { f ( x ) } { g ( x ) } = \displaystyle \lim_{x \to 0^+} \frac { \ln ( \sin { x } ) } { x ^ { \frac { 1 } { 2 } - \lambda } } } \\ { = \displaystyle \lim_{x \to 0^+} \frac { \cot x } { ( \frac { 1 } { 2 } - \lambda ) x ^ { - \frac { 1 } { 2 } - \lambda } } } \\ { = \displaystyle \lim_{x \to 0^+} \frac { x ^ { \frac { 1 } { 2 } + \lambda } } { ( \frac { 1 } { 2 } - \lambda ) \tan x } } \\ { = \displaystyle \lim_{x \to 0^+} \frac { x ^ { \frac { 1 } { 2 } + \lambda } } { ( \frac { 1 } { 2 } - \lambda ) x } } \\ { = 0 . } \end{array}
+$$
+
+Theo ví dụ 3.41, $\begin{array} { l } { \mathbf{\Lambda}_{0}^{1} \qquad \quad \overset{}{\int} g ( x ) d x } \\ { 0 \qquad \quad \qquad \quad ~ } \end{array}$ hội tụ, nên $I _ { 3 }$ hội tụ.

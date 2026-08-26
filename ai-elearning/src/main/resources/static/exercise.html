@@ -6,6 +6,10 @@
     <title>Luyện tập & Làm bài tập - PTIT E-Learning</title>
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/exercise.css">
+    <!-- KaTeX: Render công thức toán LaTeX -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
     <script src="js/i18n.js"></script>
     <link rel="icon" href="/favicon.ico?v=2" type="image/x-icon">
 </head>
@@ -104,5 +108,21 @@
 
     <script src="js/index.js"></script>
     <script src="js/exercise.js"></script>
+    <!-- Auto-render KaTeX sau khi trang load xong -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof renderMathInElement !== 'undefined') {
+                renderMathInElement(document.body, {
+                    delimiters: [
+                        {left: '$$', right: '$$', display: true},
+                        {left: '$', right: '$', display: false},
+                        {left: '\\(', right: '\\)', display: false},
+                        {left: '\\[', right: '\\]', display: true}
+                    ],
+                    throwOnError: false
+                });
+            }
+        });
+    </script>
 </body>
 </html>

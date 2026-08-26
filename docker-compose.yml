@@ -32,7 +32,7 @@ services:
     image: vuquockhai/aitutor-ai-api:latest
     container_name: ai_api
     ports:
-      - "8001:8001"
+      - "127.0.0.1:8001:8001"
     env_file:
       - ./AI/.env
     environment:
@@ -45,6 +45,10 @@ services:
       - ./AI/uploads:/app/uploads
       # Mount vector DB để persist dữ liệu RAG
       - ./AI/data/vector_db:/app/data/vector_db
+      # Mount rag_input để dữ liệu giáo trình đồng bộ trực tiếp từ server
+      - ./AI/data/rag_input:/app/data/rag_input
+      # Mount prompts để question bank và persona đồng bộ trực tiếp từ server
+      - ./AI/prompts:/app/prompts
     extra_hosts:
       - "host.docker.internal:host-gateway"
     depends_on:
@@ -56,7 +60,7 @@ services:
     image: vuquockhai/aitutor-spring-api:latest
     container_name: spring_api
     ports:
-      - "8080:8080"
+      - "127.0.0.1:8080:8080"
     environment:
       # Ghi đè các cấu hình kết nối ứng dụng Spring Boot trỏ tới các services trong Docker network
       - spring.datasource.url=jdbc:postgresql://postgres:5432/${POSTGRES_DB:-ai_elearning_db}

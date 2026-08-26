@@ -1,0 +1,1426 @@
+# 4.1. Khái niệm chung về phương trình vi phân
+
+Có rất nhiều mô hình toán học liên quan đến việc nghiên cứu và giải các phương trình vi phân, ta nhắc lại một số mô hình bài toán quen thuộc thường gặp trong chương trình phổ thông liên quan đến phương trình vi phân.
+
+# 4.1.1. Các bài toán
+
+Bài toán 1. Một vật có khối lượng $m$ được đặt lên một lò xo đàn hồi với hệ số $k > 0$. Hãy xác định quy luật dao động của vật?
+
+Giải. Chọn trục Oy thẳng đứng hướng từ trên xuống, gốc $O$ đặt tại trong tâm vật ở vị trí cân bằng. Từ đó ta dễ dàng đưa ra phương trình chuyển động của vật theo định luật Newton:
+
+$$
+m \frac{d^2 y}{dt^2} = -k y - \lambda \frac{dy}{dt}.
+$$
+
+Đặt $\textstyle a = \frac{k}{m}$ và $\textstyle b = \frac{\lambda}{m}$ thì ta có phương trình chuyển động của lò xo có dạng thu gọn:
+
+$$
+y'' + a y' + b y = 0.
+$$
+
+Đây là phương trình vi phân bậc 2 tuyến tính.
+
+Bài toán 2. Một thanh kim loại được nung nóng đến $120^{\circ} C$ được đặt trong môi trường luôn có nhiệt độ không đổi $25^{\circ} C$. Tìm quy luật thay đổi nhiệt độ của thanh kim loại.
+
+Giải. Gọi $y(x)$ là nhiệt độ của thanh kim loại tại thời điểm $x$. Theo định luật Newton về sự giảm nhiệt của vật thì tốc độ giảm nhiệt tỷ lệ với nhiệt độ của vật và nhiệt độ $y(x) - 25$ của môi trường tại thời điểm đó. Do vậy, ta có
+
+$$
+\frac{dy}{dt} = -k \big( y(t) - 25 \big), \ k > 0,
+$$
+
+là phương trình vi phân cấp 1.
+
+4.1.2. Định nghĩa
+
+Phương trình vi phân là phương trình quan hệ giữa biến độc lập $x$, hàm số cần tìm $y$ và các đạo hàm $y', y'', ..., y^{(n)}$ của nó. Hay phương trình có dạng như sau:
+
+$$
+F(x, y, y', y'', ..., y^{(n)}) = 0
+$$
+
+hoặc
+
+$$
+y^{(n)} = f(x, y, y', y'', ..., y^{(n-1)}).
+$$
+
+Cấp cao nhất $n$ của đạo hàm của hàm số $y$ được gọi là cấp của phương trình vi phân. Ví dụ như, phương trình vi phân (4.2) là phương trình vi phân cấp 1 và (4.1) là phương trình vi phân cấp 2. Nghiệm của phương trình vi phân (4.3) là tất cả các hàm số $y = \varphi(x)$ thỏa mãn phương trình.
+
+4.2. Phương trình vi phân cấp một
+
+## 4.2.1. Định nghĩa và sự tồn tại nghiệm
+
+Phương trình vi phân cấp một là phương trình vi phân có dạng
+
+$$
+F(x, y, y') = 0.
+$$
+
+Phương trình (4.4) được gọi là giải được đối với $y'$, nếu nó có thể viết được dưới dạng:
+
+$$
+y' = f(x, y).
+$$
+
+Bài toán Cauchy: Tìm hàm số $y = y(x)$ là nghiệm của phương trình (4.4) hoặc (4.5) và điều kiện ban đầu $y(x_0) = y_0$：
+
+Ví dụ 4.1. Giải bài toán Cauchy
+
+$$
+y' = 3x^2, \quad y(0) = 1.
+$$
+
+Giải: Dễ thấy $y = x^3 + C$ là nghiệm của phương trình. Với $x = 0$, $y = 1$, ta có $C = 1$. Vậy nghiệm của bài toán là $y = x^3 + 1$：
+
+Hàm số $y = \varphi(x, C)$, với $C$ là một hằng số tùy ý, được gọi là nghiệm tổng quát của phương trình vi phân cấp một trên miền $D \subseteq \mathbb{R}^2$, nếu $y = \varphi(x, C)$ thỏa mãn phương trình (4.4) với mọi hằng số $C$ và tồn tại duy nhất hằng số $C_0$ sao cho $y = \varphi(x, C_0)$ là nghiệm của bài toán Cauchy. Nếu không tìm được nghiệm tổng quát mà tìm được nghiệm dưới dạng một hệ thức dạng ẩn $\phi(x, y, C) = 0$, thì hệ thức này được gọi là tích phân tổng quát của
+
+phương trình vi phân cấp 1. Chú ý rằng, không phải bất kỳ nghiệm nào của phương trình vi phân cũng nhận được từ nghiệm tổng quát bằng cách cho hằng số $C$ các giá trị cụ thể $\tilde { \mathrm { e } }$. Nghiệm không thay đổi $\ddot { \mathrm { ~ e ~ } }$ nhận được từ nghiệm tổng quát dù $C$ lấy bất kỳ giá trị nào gọi là nghiệm kỳ dị (ta không nghiên cứu sau về nghiệm này).
+
+Định lý 4.2. Nếu hàm $f ( x , y )$ liên tục trong miền $D \subseteq \mathcal { R } ^ { n }$ chứa $( x _ { 0 } , y _ { 0 } )$, thì bài toán Cauchy (4.5) và điều kiện ban đầu $y ( x _ { 0 } ) = y _ { 0 }$ có nghiệm $y = y ( x )$ xác định trong lân cận của điểm $x _ { 0 }$. Hơn nữa, nếu $\textstyle { \frac { \partial f } { \partial y } }$ cũng liên tục trên $D$ thì $y = y ( x )$ là nghiệm duy nhất.
+
+Hiện tại, không có một phương pháp tổng quát nào để giải phương trình vi phân cấp 1. Dưới đây, ta xét một số phương trình vi phân cấp 1 thông dụng được giải bằng phương pháp tích phân.
+
+4.2.2.Phương trình tách biệt Phương trình tách biệt là một phương trình vi phân cấp 1 có dạng
+
+$$
+f ( x ) d x + g ( y ) d y = 0 .
+$$
+
+Phương pháp giải: Lấy tích phân hai vế, ta có
+
+$$
+\int f ( x ) d x + \int g ( y ) d y = C .
+$$
+
+Nếu có $F ^ { \prime } ( x ) = f ( x )$ và $G ^ { \prime } ( y ) = g ( y)$, thì ta có tích phân tổng quát có dạng
+
+$$
+F ( x ) + G ( y ) = C .
+$$
+
+Ví dụ 4.3. Giải phương trình vi phân
+
+$$
+\frac{x \, dx}{1 + x^2} + \frac{y \, dy}{1 + y^2} = 0.
+$$
+
+Giải: Lấy tích phân hai vế, ta có
+
+$$
+\int \frac{x \, dx}{1 + x^2} + \int \frac{y \, dy}{1 + y^2} = 0.
+$$
+
+Khi đó,
+
+$$
+\frac{1}{2} \ln (1 + x^2) + \frac{1}{2} \ln (1 + y^2) = C_0,
+$$
+
+$$
+(1 + x^2)(1 + y^2) = e^{2C_0} = C > 0.
+$$
+
+Vậy phương trình có nghiệm dạng tích phân tổng quát
+
+$$
+(1 + x^2)(1 + y^2) = C > 0.
+$$
+
+Chú ý 4.4. Nếu phương trình tách biến có dạng
+
+$$
+f_1(x) g_1(y) \, dx + f_2(x) g_2(y) \, dy = 0,
+$$
+
+thì ta có thể đưa về phương trình tách biến. Đúng vậy, nếu $f_2(x) g_1(y) \neq 0$, bằng cách chia hai vế cho $f_2(x) g_1(y)$, ta nhận được
+
+$$
+\frac{f_1(x)}{f_2(x)} \, dx + \frac{g_1(y)}{g_2(y)} \, dy = 0,
+$$
+
+đó là phương trình tách biến. Ta xét các nghiệm kỳ dị trong các trường hợp $f_2(x) g_1(y) = 0$:
+
+Ví dụ 4.5. Giải phương trình vi phân cấp một
+
+$$
+y' = xy(y + 2).
+$$
+
+Giải: Phương trình đã cho được viết dưới dạng:
+
+$$
+dy = xy(y + 2) \, dx.
+$$
+
+-Nếu $y(y + 2) \neq 0$, phương trình có dạng tách biến
+
+$$
+\frac{dy}{y(y + 2)} - x \, dx = 0.
+$$
+
+Lấy tích phân hai vế, ta có
+
+$$
+\int { \frac { d y } { y ( y + 2 ) } } - \int x d x = 0.
+$$
+
+Đề dạng nhận được
+
+$$
+\ln \left| { \frac { y } { y + 2 } } \right| - x ^ { 2 } = \ln | C | , C \neq 0.
+$$
+
+$$
+\frac { y } { y + 2 } = C e ^ { x ^ { 2 } } , C \neq 0
+$$
+
+là tích phân tổng quát của phương trình đã cho.
+
+-Nếu $y ( y + 2 ) = 0$ , thì $y = 0$ và $y = - 2$ cũng là nghiệm của phương trình đã cho.
+
+Ví dụ 4.6. Giải phương trình $( 1 + x ) y d x + ( 1 - y ) x d y = 0.$
+
+Giải: Nếu $x \neq 0 , \ y \neq 0$, phương trình trở thành:
+
+$$
+( \frac { 1 } { x } + 1 ) d x = ( 1 - \frac { 1 } { y } ) d y.
+$$
+
+Lấy tích phân hai vế, ta được
+
+$$
+\ln | x | + x = y - \ln | y | + C,
+$$
+
+$$
+\ln | x y | + x - y = C.
+$$
+
+Với $x = 0 , \ y = 0$ cũng thỏa mãn phương trình, chúng biểu diễn hai đường tích phân kỳ dị.
+
+Chú ý 4.7. Phương trình dạng
+
+$$
+y ^ { \prime } = f ( a x + b y + c )
+$$
+
+có thể đưa về được dạng tách biến. Điều này hiển nhiên với $b = 0$. Bằng cách sử dụng chú ý 4.5 trong trường hợp $a = 0$. Nếu $a b \neq 0$, thì đặt $z = a x + b y + c$. Khi đó, $z ^ { \prime } = a + b y ^ { \prime }$ và phương trình có dạng tách biến với biến $z$
+
+$$
+z ^ { \prime } = b f ( z ) + a.
+$$
+
+Phương trình được giải bằng cách sử dụng chú ý 4.5.
+
+Ví dụ 4.8. Giải phương trình
+
+$$
+y ^ { \prime } = \cos ( x - y - 1 ).
+$$
+
+Giải:
+
+Đặt $z = x - y - 1$, ta có $\cos z' = 1 - z'$, thay vào phương trình đã cho, ta được
+
+- Nếu $1 - \cos z \neq 0$, ta có 
+\[
+\int \frac{dz}{1 - \cos z} = dx.
+\]
+Đây là phương trình tách biến. Lấy tích phân hai vế, ta nhận được
+$$
+\int { \frac { d z } { 1 - \cos z } } = \int d x \quad \text{hay} \quad -2 \cot \left( \frac{z}{2} \right) = x + C.
+$$
+
+Thay $z = x - y - 1$, ta nhận được
+$$
+y = 1 - x - 2 \mathrm { arccot } ( x + C ) + k \pi, \quad y \in \mathbb{Z}.
+$$
+
+- Nếu $1 - \cos z = 0$, thì $z = k 2\pi$ hay $y = x - 1 + k 2\pi$ là nghiệm. Vậy phương trình có các nghiệm
+$$
+\begin{array} { l } 
+{ y = x - 1 + k 2 \pi, } \\ 
+{ y = 1 - x - 2 \mathrm { arccot } ( x + C ) + k \pi, \quad y \in \mathbb{Z}. }
+\end{array}
+$$
+
+# 4.2.3 Phương trình tuyến tính
+
+Phương trình tuyến tính cấp 1 là phương trình vi phân có dạng:
+$$
+y' + f(x)y = g(x),
+$$
+trong đó $f(x), g(x)$ là các hàm liên tục. Phương trình tuyến tính cấp 1 (4.6) được gọi là thuận nhất nếu $g(x) = 0$, là không thuận nhất nếu $g(x) \neq 0$. Để giải phương trình (4.6), trước hết ta giải phương trình thuận nhất tương ứng
+$$
+y' + p(x)y = 0.
+$$
+
+Nếu $y \neq 0$ phương trình trở thành
+$$
+\frac{dy}{y} = -f(x)dx,
+$$
+đây là phương trình tách biến có nghiệm:
+
+$$
+\ln | y | = - \int f (x) dx + \ln | C | ,
+$$
+
+với $C \neq 0$ là hằng số tùy ý. Do đó
+
+$$
+y = C e ^ { - \int f ( x ) d x }
+$$
+
+đây là nghiệm tổng quát của phương trình (4.7). Chú ý $y = 0$ cũng là một nghiệm của (4.7) và là một nghiệm riêng ứng với $\scriptstyle C = 0$
+
+Để tìm nghiệm tổng quát của phương trình (4.6), ta coi $C$ là hàm số đối với biến $x$, ta cần tìm $C(x)$ để (4.8) thỏa mãn (4.6). Lấy đạo hàm hai vế của (4.8) rồi thay vào (4.6) ta được:
+
+$$
+\begin{array} { c } { e ^ { - \int f ( x ) d x } C ^ { \prime } ( x ) - C ( x ) f ( x ) e ^ { - \int f ( x ) d x } + f ( x ) C ( x ) e ^ { - \int f ( x ) d x } = g ( x ), } \\ { \frac { d C ( x ) } { d x } = g ( x ) e ^ { \int f ( x ) d x }. } \end{array}
+$$
+
+$$
+C ( x ) = \int g ( x ) e ^ { \int f ( x ) d x } dx + K ,
+$$
+
+trong đó $K$ là hằng số tùy ý. Khi đó
+
+$$
+y = K e ^ { - \int f ( x ) d x } + e ^ { - \int f ( x ) d x } \int g ( x ) e ^ { \int f ( x ) d x } dx ,
+$$
+
+là nghiệm tổng quát của phương trình (4.6). Phương pháp giải như trên gọi là phương pháp biến thiên hằng số $C$.
+
+Ví dụ 4.9. Giải phương trình
+
+$$
+( x ^ { 2 } + 1 ) y ^ { \prime } + x y = 1 ,
+$$
+
+thỏa mãn điều kiện $y | _ { x = 0 } = 2$
+
+Giải: Phương trình thuận nhất tương ứng:
+
+$$
+( x ^ { 2 } + 1 ) y ^ { \prime } + x y = 0 \quad hay \quad \frac { d y } { y } = - \frac { x } { x ^ { 2 } + 1 }.
+$$
+
+Lấy tích phân hai vế, ta được
+
+$$
+y = \frac{C}{\sqrt{x^2 + 2}}.
+$$
+
+Đây là nghiệm tổng quát của phương trình thuận nhât. Ta xem $C$ là hàm số của $x$, thay vào phương trình không thuận nhât, ta có
+
+$$
+C' = \frac{1}{\sqrt{x^2 + 1}} \text{ nên } C = \ln(x + \sqrt{x^2 + 1}) + K.
+$$
+
+Vậy nghiệm tổng quát của phương trình không thuận nhât là:
+
+$$
+y = \frac{\ln(x + \sqrt{x^2 + 1}) + K}{\sqrt{x^2 + 1}}.
+$$
+
+Thay $x = 0, y = 2$ vào nghiệm tổng quát, ta nhận được $K = 2$ và do đó
+
+$$
+y = \frac{\ln(x + \sqrt{x^2 + 1}) + 2}{\sqrt{x^2 + 1}}.
+$$
+
+4.2.4 Phương trình Bernoulli
+
+Phương trình vi phân có dạng
+
+trong đó $f(x), g(x)$ là các hàm số liên tục, $\alpha$ là một số thực khác 0 và 1, được gọi là phương trình Bernoulli. Với $\alpha = 0$ hoặc $\alpha = 1$, thì phương trình (4.10) trở thành phương trình tuyến tính. Nếu $y^\alpha \neq 0$, chia hai vế của (4.10) cho $y^\alpha$, ta được
+
+$$
+y' y^{-\alpha} + f(x) y^{1 - \alpha} = g(x).
+$$
+
+Đặt $z = y^{1 - \alpha}$, phương trình (4.10) trở thành
+
+$$
+z' + (1 - \alpha) f(x) z = (1 - \alpha) g(x).
+$$
+
+Đây là phương trình tuyến tính cấp một đối với ẩn $z$
+
+Ví dụ 4.10. Giải phương trình
+
+$$
+y' + \frac{2}{x} y = 3 x^2 y^\frac{4}{3}.
+$$
+
+Giải: Đây là phương trình Bernoulli với $\textstyle \alpha = \frac{4}{3}$. Nếu $y \neq 0$, chia hai vế của phương trình cho $y^{\frac{4}{3}}$, ta có
+
+$$
+y^{\frac{4}{3}} y' + \frac{2}{x} y^{1 - \frac{4}{3}} = 3 x^2.
+$$
+
+Đặt $z = y^{-\frac{1}{3}}$. Khi đó, $z' = -\frac{1}{3} y^{-\frac{4}{3}} y'$ và phương trình có dạng
+
+$$
+z' - \frac{2}{3x} z = - x^2.
+$$
+
+Đây là phương trình tuyến tính bậc 1 đối với biến $z$. Giải phương trình này, ta nhận được nghiệm tổng quát
+
+$$
+z = \left( -\frac{3}{7} x^{\frac{7}{3}} + C \right) x^{\frac{2}{3}}.
+$$
+
+Vậy phương trình đã cho có tích phân tổng quát là
+
+$$
+y^{-\frac{1}{3}} = \left( -\frac{3}{7} x^{\frac{7}{3}} + C \right) x^{\frac{2}{3}}.
+$$
+
+Ngoài ra, $y = 0$ cũng là nghiệm của phương trình đã cho.
+
+Chú ý 4.11: Một số phương trình vi phân, khi coi $y$ là hàm của biến số $x$, nhận được phương trình không thuộc dạng xét. Do đó, ta có thể coi $x$ là hàm của biến số $y$ để nhận được phương trình quen thuộc.
+
+Ví dụ 4.12: Giải phương trình
+
+$$
+(x^2 y^3 + xy) dy - dx = 0.
+$$
+
+Giải: Coi $x$ là một hàm số theo biến $y$, phương trình có dạng
+
+$$
+x' - y x = y^3 x^2,
+$$
+
+là một dạng của phương trình Bernoulli $\mathrm{d}o1$ với $x$, ở đây $\alpha = 2$. Khi đó, với $x \neq 0$, chia hai vế cho $x^2$, ta nhận được
+
+$$
+x^{-2} x' - y x^{-1} = y^3.
+$$
+
+Đặt $z = x^{-1}$, suy ra $z' = -x^{-2} x'$. Khi đó, phương trình có dạng
+
+$$
+z' + y z = -y^3,
+$$
+
+là phương trình tuyến tính cấp 1. Dùng công thức nghiệm tổng quát, ta có
+
+$$
+z = \left( -y^2 e^{\frac{y^2}{2}} + 2 e^{\frac{y^2}{2}} + C \right).
+$$
+
+Do đó, tích phân tổng quát của phương trình ban đầu là
+
+$$
+\frac{1}{x} = -y^2 + 2 + C e^{-\frac{y^2}{2}}.
+$$
+
+Hơn nữa, $x = 0$ cũng là nghiệm của phương trình đã cho.
+
+# 4.2.5 Phương trình vi phân toàn phần
+
+Phương trình vi phân toàn phần là một phương trình vi phân cấp 1 có dạng
+
+$$
+F(x, y) dx + G(x, y) dy = 0,
+$$
+
+trong đó $F(x, y)$, $G(x, y)$ và các đạo hàm riêng cấp một của chúng liên tục trong một miền đơn liên $D$ thỏa mãn điều kiện
+
+$$
+\frac{\partial F(x, y)}{\partial y} = \frac{\partial G(x, y)}{\partial x}.
+$$
+
+Nếu $D = \mathcal{R}^2$, theo định lý bổn mệnh đề tương đương, tồn tại một hàm $u(x, y)$ sao cho $du(x, y) = F(x, y)dx + G(x, y)dy$ và phương trình trên có dạng $du(x, y) = 0$. Khi đó, hàm số $u(x, y)$ được xác định bằng công thức
+
+hoặc
+
+$$
+\begin{array}{l}
+\displaystyle u(x, y) = \int_{x_0}^x F(x, y_0)dx + \int_{y_0}^y G(x, y)dy + K, \\
+\displaystyle u(x, y) = \int_{y_0}^y F(x_0, y)dy + \int_{x_0}^x G(x, y)dx + K.
+\end{array}
+$$
+
+Ví dụ 4.13. Giải phương trình:
+
+$$
+\begin{array}{c}
+i) (3x^2 + 4y^3)dx + (12y^2x + 5y)dy = 0, \\
+ii) (2xy^2 - 3y^3)dx + (7 - 3xy^2)dy = 0.
+\end{array}
+$$
+
+Giải:
+
+i) Ta thấy $\frac{\partial F}{\partial y} = 12y^2 = \frac{\partial G}{\partial x}$, nên đây là phương trình vi phân toàn phần. Nên hàm số $u(x,y) = \int_{x_0}^x (3x^2 + 4y^3)dx + \int_{y_0}^y (12y^2x + 5y)dy = x^3|_{x_0}^x + 4y^3x|_{x_0}^x + 4y^3x|_{y_0}^y + \frac{5}{2}y^2|_{y_0}^y = C$.
+
+Chọn $x_0 = 0, y_0 = 0$, ta có tích phân tổng quát dạng
+
+$$
+x ^ { 3 } + 4 y ^ { 3 } x + 4 y ^ { 4 } + \frac { 5 } { 2 } y ^ { 2 } = C.
+$$
+
+ii) Với $y \neq 0$, chia hai vế cho $y^2$, ta được phương trình vi phân toàn phần
+
+$$
+( 2 x - 3 y ) d x + ( \frac { 7 } { y ^ { 2 } } - 3 x ) d y = 0.
+$$
+
+Vậy nghiệm tổng quát của phương trình là
+
+$$
+x ^ { 2 } - \frac { 7 } { y } - 3 x y = C.
+$$
+
+Ngoài ra, $y = 0$ cũng là nghiệm của phương trình.
+
+Chú ý 4.14. Khi điều kiện (4.12) không thỏa mãn thì phương trình (4.11) không phải  
+phương trình vi phân toàn phần. Nhưng ta có thể tìm một hàm $u(x, y)$ sao cho phương trình   
+$$
+u(x, y) F(x, y) dx + u(x, y) G(x, y) dy = 0 
+$$
+là phương trình vi phân toàn phần, hàm $u(x, y)$ gọi  
+là thừa số tích phân.
+
+Ví dụ 4.15. Giải phương trình vi phân
+
+$$
+( x ^ { 2 } - \sin ^ { 2 } y ) d x + x \sin 2 y d y = 0.
+$$
+
+Giải: Đặt $F = x^2 - \sin^2 y$ và $G = x \sin 2y$, ta có
+
+$$
+\frac{\partial F}{\partial y} = -2 \sin y \cos y, \quad \frac{\partial G}{\partial x} = \sin 2y.
+$$
+
+Như vậy, $\frac{\partial F}{\partial y} \neq \frac{\partial G}{\partial x}$ . Tìm thừa số tích phân $u(x, y)$ sao cho
+
+$$
+\frac{\partial (uF)}{\partial y} = \frac{\partial (uG)}{\partial x}, \quad \forall (x, y) \in \mathbb{R}^2.
+$$
+
+Khi đó, ta có
+
+$$
+u = e ^ { - \int { \frac { 2 } { x } } d x } = e ^ { - 2 \ln x } = { \frac { 1 } { x ^ { 2 } } }.
+$$
+
+Phương trình vi phân có dạng
+
+$$
+\left( 1 - { \frac { \sin ^ { 2 } y } { x ^ { 2 } } } \right) d x + { \frac { \sin 2 y } { x } } d y = 0,
+$$
+
+là một phương trình vi phân toàn phần. Giải phương trình này, ta có tích phân tổng quát
+
+$$
+x + { \frac { \sin ^ { 2 } y } { x } } = C.
+$$
+
+4.3.Phương trình vi phân cấp hai
+
+4.3.1. Định nghĩa và sự tồn tại nghiệm
+
+Phương trình vi phân cấp hai là phương trình có dạng
+
+$$
+F ( x , y , y ^ { \prime } , y ^ { \prime \prime } ) = 0,
+$$
+
+trong đó $F$ là hàm số xác định trên một miền $U$ trong $\mathcal{R}^4$. Phương trình (4.13) được gọi là giải độc đối với đạo hàm $y ^ { \prime \prime }$, nếu nó có thể viết dưới dạng
+
+$$
+y ^ { \prime \prime } = f ( x , y , y ^ { \prime } ).
+$$
+
+Bài toán Cauchy là bài toán tìm nghiệm của phương trình (4.14) thỏa mãn các điều kiện ban đầu:
+
+$$
+y ( x _ { 0 } ) = y _ { 0 }, y ^ { \prime } ( x _ { 0 } ) = y _ { 0 } ^ { \prime }.
+$$
+
+Hàm số $y = \varphi(x, C_1, C_2)$, trong đó $C_1, C_2$ là các hằng số tùy ý, được gọi là nghiệm tổng quát của phương trình (4.13) trong miền $D \subseteq \mathcal{R}^3$, nếu nó là nghiệm của phương trình với mọi $C_1, C_2$ và với mọi điểm $(x_0, y_0, y'_0) \in D$, tồn tại duy nhất cặp số $(C_1^0, C_2^0)$ sao cho $y = \varphi(x, C_1^0, C_2^0)$ là nghiệm của bài toán Cauchy. Hệ thức $\Phi(x, y, C_1, C_2) = 0$ xác định nghiệm tổng quát của phương trình cặp hai dưới dạng hàm ẩn theo $y$ được gọi là tích phân tổng quát của phương trình đó.
+
+Sau đây ta cũng đưa ra điều kiện để phương trình (4.14) tồn tại nghiệm và có duy nhất nghiệm.
+
+Định lý 4.16. Cho phương trình (4.14). Nếu $f(x, y, y')$, $\frac{\partial f}{\partial y}(x, y, y')$ và $\frac{\partial f}{\partial y'}(x, y, y')$ liên tục trong một miền $D$ nào đó trong $\mathcal{R}^3$ và $(x_0, y_0, y'_0)$ là một điểm thuộc $D$, thì trong một lân cận nào đó của điểm ${\boldsymbol{x}} = {\boldsymbol{x}}_0$, tồn tại duy nhất một nghiệm $y = y(x)$ của phương trình (4.14) thỏa mãn các điều kiện
+
+$$
+\begin{array} { r } { y | _ { x = x _ { 0 } } = y _ { 0 } , y ^ { \prime } | _ { x = x _ { 0 } } = y _ { 0 } ^ { \prime } . } \end{array}
+$$
+
+Định lý này ta sẽ không chứng minh mà thừa nhận nó. Sau đây, ta sẽ trình bày một số phương pháp giải phương trình vi phân cấp hai.
+
+# 4.3.2.Phương trình khuyết
+
+a) Phương trình khuyết $y , y ^ { \prime }$ ： $F ( x , y ^ { \prime \prime } ) = 0$
+
+Đặt $y ^ { \prime } = z$. Khi đó, ta được $F ( x , z ^ { \prime } ) = 0$ là một phương trình vi phân cấp nhất đối với biến $z$, 
+
+Ví dụ 4.17. Giải phương trình $x = y ^ { \prime \prime 2 } + 1$
+
+Giải: Đặt $z = y ^ { \prime }$, ta được $x = z ^ { \prime 2 } + 1$. Phương trình tham số của đường tích phân tổng
+
+quátcité $\begin{array} { r l } & { \mathrm { ~ làn \diamond ~ l\hat{a}: ~ } \left\{ \begin{array} { l l } { x = } & { t ^ { 2 } + 1 , } \\ { z = } & { \frac { 1 } { 3 } t ^ { 3 } + t + C _ { 1 } . } \end{array} \right. } \\ & { y = \int z d x = \int \left( \frac { 1 } { 3 } t ^ { 3 } + t + C _ { 1 } \right) ( 2 t ) d t = \int \left( \frac { 2 } { 3 } t ^ { 4 } + 2 t ^ { 2 } + 2 C _ { 1 } t \right) d t = \frac { 2 } { 15 } t ^ { 5 } + \frac { 2 } { 3 } t ^ { 3 } + C _ { 1 } t ^ { 2 } } \\ & { \mathrm { hiệmcập phươngtrìnhcảndạng: ~ } \left\{ \begin{array} { l l } { x = } & { t ^ { 2 } + 1 , } \\ { z = } & { \frac { 2 } { 15 } t ^ { 5 } + \frac { 2 } { 3 } t ^ { 3 } + C _ { 1 } t ^ { 2 } + C _ { 2 } . } \end{array} \right. } \end{array}$ Do đó, $+ C_2$. Vậy ng
+
+b) Phương trình khuyết $y \colon F ( x , y ^ { \prime } , y ^ { \prime \prime } ) = 0$:
+
+Bằng cách đổi biến $z = y ^ { \prime }$. Phương trình vi phân có dạng một phương trình vi phân cấp 1: $F ( x , z , z ^ { \prime } ) = 0$:
+
+Ví dụ 4.18. Giải phương trình
+
+$$
+y ^ { \prime \prime } + 2 y ^ { \prime } = e ^ { x } y ^ { \prime 2 },
+$$
+
+với điều kiện ban đầu $y ( 0 ) = 1 , y ^ { \prime } ( 0 ) = 1$:
+
+Giải: Đặt $z = y ^ { \prime }$. Phương trình có dạng
+
+là một phương trình Bernouli đối với biến $z$. Ta có $z = 0$ hay $y = C$ là một hoán nghiệm nhưng không thỏa mãn điều kiện ban đầu. Với $z \neq 0$, phương trình có dạng
+
+$$
+z^{-2}z' + 2z^{-1} = e^x.
+$$
+
+Đặt $z^{-1} = u$, ta được
+
+$$
+u' - 2u = -e^x,
+$$
+
+là một phương trình tuyến tính cấp 1 đối với biến $u$. Ta nhận được nghiệm tổng quát
+
+$$
+u = e^x + C_1 e^{2x}.
+$$
+
+Khi đó, ta có
+
+$$
+y' = \frac{1}{u} = \frac{1}{e^x + C_1 e^{2x}}.
+$$
+
+Kết hợp điều này với điều kiện $y'(0) = 1$, ta nhận được $C_1 = 0$. Như vậy,
+
+$$
+y = \int \frac{dx}{e^x} + C_2 = e^{-x} + C_2.
+$$
+
+Từ $y(0) = 1$, kéo theo $C_2 = 2$. Vậy, nghiệm cần tìm là $y = -e^{-x} + 2$.
+
+b） Phương trình khuyết $x \colon F(y, y', y'') = 0$：
+
+Bằng cách đổi biến $z = y'$, khi đó ta có
+
+$$
+y'' = \frac{dz}{dx} = \frac{dz}{dy}\frac{dy}{dx} = z\frac{dz}{dy},
+$$
+
+và phương trình có dạng $\begin{array}{r} F(y, z, z\frac{dz}{dy}) = 0 \end{array}$ là phương trình vi phân cấp 1 đối với biến $z$，
+
+Ví dụ 4.19. Giải phương trình
+
+$$
+yy'' - y'^2 = y^4,
+$$
+
+với điều kiện ban đầu $y(0) = 1, y'(0) = 1$：
+
+Bài giải: Đặt $z = y'$. Ta có $\begin{array}{r} y'' = z\frac{dz}{dy} \end{array}$ và
+
+$$
+yz\frac{dz}{dy} - z^2 = y^4.
+$$
+
+-Nếu $y \neq 0$, thì phương trình có dạng
+
+$$
+z \frac{d z}{d y} - \frac{1}{y} z^2 = y^3,
+$$
+
+là một phương trình dạng Bernoulli. Đặt $v = z^2$. Khi đó, ta có phương trình dạng vi phân tuyến tính cấp 1:
+
+$$
+v' - \frac{2}{y} v = 2 y^3.
+$$
+
+Giải ra
+
+$$
+v = (y^2 + C_1) y^2.
+$$
+
+Mà $z^2 = y'^2 = v$. Kết hợp điều này với $y'(0) = 1, y(0) = 1$, ta nhận được $C_1 = 0$ và $y' = y^2$. Vì $y'(0) = 1 > 0$, nên $y' = y^2$. Hay
+
+$$
+-\frac{1}{y} = x + C_2.
+$$
+
+Kết hợp với $y(0) = 1$, ta có $C_2 = -1$. Như vậy, nghiệm của phương trình là
+
+$$
+y = \frac{1}{1 - x}.
+$$
+
+Ngoài ra, $y = 0$ là nghiệm của phương trình ban đầu, nhưng nó không thỏa mãn các điều kiện ban đầu.
+
+4.3.3. Phương trình vi phân tuyến tính cấp 2
+
+Phương trình vi phân tuyến tính cấp $\mathcal{Z}$ là một phương trình vi phân có dạng
+
+$$
+y'' + p(x) y' + q(x) y = f(x),
+$$
+
+trong đó các hàm số $p(x), q(x)$ và $f(x)$ liên tục trên khoảng $(a, b)$. Nếu $f(x) \neq 0$ với mọi $x \in (a, b)$, thì (4.15) được gọi là phương trình vi phân tuyến tính cấp 2 không thuận nhất. Nếu $f(x) = 0$ với mọi $x \in (a, b)$, thì (4.15) có dạng
+
+$$
+y^{\prime \prime} + p(x) y^{\prime} + q(x) y = 0,
+$$
+
+và được gọi là phương trình vi phân tuyến tính cấp 2 thuận nhất.
+
+4.3.3.1. Cấu trúc nghiệm
+
+Định lý 4.20. Nếu $y_{1} = y_{1}(x)$ và $y_{2} = y_{2}(x)$ là hai nghiệm của phương trình thuận nhất (4.16), thì $\bar{y} = C_{1} y_{1} + C_{2} y_{2}$ với $C_{1}, C_{2}$ là các hằng số tùy ý, cũng là nghiệm của phương trình thuận nhất (4.16).
+
+Chứng minh: Ta chỉ cần thay $\bar{y} = C_{1} y_{1}(x) + C_{2} y_{2}(x)$ vào phương trình (4.11) và dựa vào $y_{1}(x), y_{2}(x)$ là nghiệm của phương trình này, ta có điều phải chứng minh.
+
+Định nghĩa 4.21. Các hàm số $\hat{y}_{1} = y_{1}(x), y_{2} = y_{2}(x)$ được gọi là độc lập tuyến tính trên khoảng $(a, b)$, nếu tỉ lệ $\frac{y_{1}}{y_{2}} \neq C$, trong đó $C$ là hằng số trên khoảng $(a, b)$. Trong trường hợp trái lại, hai hàm số này được gọi là phụ thuộc tuyến tính.
+
+Việc xét một hệ hàm phụ thuộc tuyến tính hay độc lập tuyến tính nhiều khi gặp khó khăn, trong trường hợp các hàm đã cho khả vi một số lần cần thiết, việc nghiên cứu đó có thể đơn giản hơn nhờ định thức Wronski dưới đây.
+
+Định nghĩa 4.22. Giả sử các hàm số $y_{1}(x)$, $y_{2}(x)$ khả vi trên khoảng $(a, b)$. Khi đó định thức
+
+$$
+\begin{array} { r l }
+W ( y _ { 1 } ( x ) , ~ y _ { 2 } ( x ) ) = W ( x )
+& = \left| 
+\begin{matrix}
+y _ { 1 } ( x ) & y _ { 2 } ( x ) \\
+y _ { 1 } ^ { \prime } ( x ) & y _ { 2 } ^ { \prime } ( x )
+\end{matrix} 
+\right|
+\end{array}
+$$
+
+được gọi là định nghĩa Vronski của các hàm $y_1(x), y_2(x)$ trên $(a, b)$.
+
+Định lý 4.23. Nếu hai hàm số $y _ { 1 } ( x ) , \ y _ { 2 } ( x )$ phụ thuộc tuyến tính trên $( a , b )$ thì $W ( y _ { 1 } , y _ { 2 } ) = 0$ trên đoạn đó.
+
+Chứng minh: Thay $y _ { 2 } ( x ) = k y _ { 1 } ( x )$ vào định nghĩa Vronski ta có điều phải chứng minh.
+
+Định lý 4.24. Các nghiệm $y _ { 1 } , y _ { 2 }$ của phương trình vi phân tuyến tính cấp 2 thuận nhất (4.16) là độc lập tuyến tính trên đoạn $( a , b )$ khi và chỉ khi định thức Vronski $W ( y _ { 1 } , y _ { 2 } ) \neq 0$ tại mọi điểm trên khoảng đó.
+
+Chứng minh: Nếu $W ( y _ { 1 } , y _ { 2 } ) \neq 0$ trên $( a , b )$, thì theo định lý 4.23, các hàm số $y _ { 1 } , y _ { 2 }$ là độc lập tuyến tính trên đoạn $( a , b )$. Ngược lại, cho các nghiệm $y _ { 1 } , y _ { 2 }$ của phương trình vi phân tuyến tính cấp 2 thuận nhất (4.16) là độc lập tuyến tính trên đoạn $( a , b )$. Bằng phản chứng, giả sử rằng tồn tại $x _ { 0 } \in ( a , b )$ sao cho $W ( y _ { 1 } ( x _ { 0 } ) , y _ { 2 } ( x _ { 0 } ) ) = 0$. Khi đó, ta có hệ phương trình
+
+$$
+\left\{ \begin{array} { l l } { \alpha _ { 1 } y _ { 1 } ( x ) + \alpha _ { 2 } y _ { 2 } ( x ) = 0 , } \\ { \alpha _ { 1 } y _ { 1 } ^ { \prime } ( x ) + \alpha _ { 2 } y _ { 2 } ^ { \prime } ( x ) = 0 , } \end{array} \right.
+$$
+
+có nghiệm không tầm thường $(\alpha_1, \alpha_2) \neq (0, 0)$. Theo định lý 4.20, $y = \alpha _ { 1 } y _ { 1 } ( x ) + \alpha _ { 2 } y _ { 2 } ( x )$ cũng là nghiệm của phương trình thuần nhất (4.16). Hơn nữa, theo điều kiện ban đầu (4) thì nghiệm đó thỏa mãn $y(x_0) = 0$, $y'(x_0) = 0$.
+
+Theo tính duy nhất nghiệm của bài toán Cauchy, thì $y = 0$ là nghiệm trên $(a, b)$. Như vậy, $y = \alpha _ { 1 } y _ { 1 } ( x ) + \alpha _ { 2 } y _ { 2 } ( x ) = 0$ trên $( a , b )$, hay $y_1$ và $y_2$ phụ thuộc tuyến tính trên $(a, b)$. Điều này trái với giả thiết. Định lý được chứng minh.
+
+Định lý sau đây chỉ ra rằng nếu có hai nghiệm riêng độc lập tuyến tính của phương trình (4.16) thì ta đưa ra được nghiệm tổng quát của phương trình này.
+
+Định lý 4.25. Nếu $y_1, y_2$ là hai nghiệm độc lập tuyến tính của phương trình (4.16) thì nghiệm tổng quát của (4.16) là
+
+$$
+y = C _ { 1 } y _ { 1 } ( x ) + C _ { 2 } y _ { 2 } ( x ),
+$$
+
+trong đó $C_1, \ C_2$ là các hằng số tùy ý.
+
+Chứng minh: Theo định lý 4.20, nếu $y_1, y_2$ là hai nghiệm của phương trình (4.16) thì 
+$$
+y = C_1 y_1(x) + C_2 y_2(x)
+$$
+cũng là nghiệm của (4.16). Ngược lại, giả sử $y = C_1 y_1(x) + C_2 y_2(x)$ là một nghiệm của (4.16) với điều kiện ban đầu
+
+$$
+y_0 = y(x_0), \quad y'_0 = y'(x_0), \quad x_0 \in (a, b).
+$$
+
+Khi đó, ta có hệ phương trình
+
+$$
+\left\{ 
+\begin{array}{ll}
+C_1 y_1(x_0) + C_2 y_2(x_0) = y_0, \\
+C_1 y'_1(x_0) + C_2 y'_2(x_0) = y'_0.
+\end{array} 
+\right.
+$$
+
+Vì $y_1$ và $y_2$ độc lập tuyến tính trên $(a, b)$, theo định lý 4.24, nên determinant Wronski của hệ phương trình
+
+$$
+W(y_1(x_0), y_2(x_0)) = W(x_0) 
+= \left| 
+\begin{array}{cc}
+y_1(x_0) & y_2(x_0) \\
+y'_1(x_0) & y'_2(x_0)
+\end{array} 
+\right|
+\neq 0.
+$$
+
+Như vậy, tồn tại duy nhất cặp số $(C_1, C_2)$ của hệ phương trình (4) sao cho $C_1 y_1 + C_2 y_2$ là nghiệm của phương trình (4.16). Định lý được chứng minh.
+
+Định lý 4.26. Nếu đã biết một nghiệm riêng $y_{1}(x) \neq 0$ của phương trình tuyến tính thuần nhất (4.16), ta có thể tìm được một nghiệm riêng $y_{2}(x)$ của phương trình đó, độc lập tuyến tính với cùng dạng trong đó $y_{1}(x)$: 
+$$
+u(x) = \int \frac{e^{-\int p(x) dx}}{y_{1}^{2}(x)} dx.
+$$
+
+Chứng minh: Giả sử $y_{1} = y_{1}(x) \neq 0$ trên $(a, b)$ là một nghiệm của phương trình thuần nhất (4.16) và $y_{2} = y_{1}(x).u(x)$. Khi đó, ta có
+
+$$
+y_{2}' = y_{1}' u + y_{1} u', \quad y_{2}'' = y_{1}'' u + 2 y_{1}' u' + y_{1} u''.
+$$
+
+Thay thế $y_{2}'$ và $y_{2}''$ vào (4.16), ta nhận được
+
+$$
+y_{1} u'' + [2 y_{1}' + p(x) y_{1}] u' + [y_{1}'' + p(x) y_{1}' + q(x)] = 0.
+$$
+
+Vì $y_{1}$ là nghiệm của phương trình (4.16), nên $y_{1}'' + p(x) y_{1}' + q(x) = 0$ và do đó
+
+$$
+y_{1} u'' + [2 y_{1}' + p(x) y_{1}] u' = 0.
+$$
+
+Đặt $z = u'$, ta có
+
+$$
+y_{1} z' + [2 y_{1}' + p(x) y_{1}] z = 0,
+$$
+
+là một phương trình tách biệt. Giải phương trình này được nghiệm
+
+$$
+z = \frac{1}{y_{1}^{2}} e^{-\int p(x) dx}.
+$$
+
+Mà $z = u'$, nên ta có
+
+$$
+u(x) = \int \frac{e^{-\int p(x) dx}}{y_{1}^{2}(x)} dx
+$$
+
+là điều phải chứng minh.
+
+Định lý dưới đây sẽ đưa việc giải phương trình (4.15) về việc giải phương trình (4.16) và tìm một nghiệm riêng của nó.
+
+Định lý 4.27. Nghiệm tổng quát của phương trình không thuần nhất (4.15) bằng nghiệm tổng quát $y$ của phương trình thuần nhất (4.16) cộng với một nghiệm riêng nào đó $y_{0}$ của nó.
+
+Chứng minh: Theo giả thiết, ta có
+
+$$
+\begin{array}{r}
+\bar{y}'' + p(x)\bar{y}' + q(x)y = 0 \\
+y_{0}'' + p(x)y_{0} + q(x)y = f(x).
+\end{array}
+$$
+
+Cộng hai đẳng thức trên, ta nhận được
+
+$$
+y'' + p(x)y' + q(x)y = f(x),
+$$
+
+ở đây $y = y + y_{0}$. Vậy $y$ là nghiệm của phương trình (4.15). Vì $y$ là nghiệm tổng quát của (4.16), nên $y$ phụ thuộc vào $C_{1}, C_{2}$. Bằng cách làm tương tự như trong chứng minh của định lý 4.25, ta có $y = \bar{y} + y_{0}$ là nghiệm tổng quát của phương trình (4.15).
+
+Định lý 4.28. Cho phương trình
+
+$$
+y'' + f(x)y' + g(x)y = h_{1}(x) + h_{2}(x).
+$$
+
+Nếu $y_1(x)$ là một nghiệm riêng của phương trình
+
+$$
+y'' + f(x)y' + g(x)y = h_1(x),
+$$
+
+và $y_2(x)$ là một nghiệm riêng của phương trình
+
+$$
+y'' + f(x)y' + g(x)y = h_2(x).
+$$
+
+thì $y_0 = y_1(x) + y_2(x)$ là một nghiệm riêng của phương trình vi phân (4.17).
+
+Chứng minh: Dễ dàng thấy được bằng cách thay trực tiếp $y_0$ vào phương trình (4.17).
+
+### 4.3.3.2 Phương trình vi phân tuyến tính cấp hai với hệ số hằng số
+
+Phương trình vi phân tuyến tính cấp hai với hệ số hằng số là phương trình
+
+$$
+y'' + py' + qy = f(x),
+$$
+
+trong đó $p, q$ là hai hằng số.
+
+#### a) Phương trình thuần nhất
+
+Xét phương trình dạng thuần nhất của (4.18):
+
+$$
+y'' + py' + qy = 0,
+$$
+
+trong đó $p, q$ là hai hằng số. Ta chỉ cần tìm hai nghiệm riêng độc lập tuyến tính của phương trình thì ta sẽ tìm được nghiệm tổng quát. Ta sẽ tìm nghiệm riêng này dưới dạng
+
+$$
+y = e^{kx},
+$$
+
+với $k$ là một hằng số. Thay $y' = ke^{kx}$, $y'' = k^2e^{kx}$ vào phương trình (4.19), ta có
+
+$$
+e^{kx}(k^2 + pk + q) = 0.
+$$
+
+Vì $e^{kx} > 0$, nên
+
+Phuong trinh (4.2O) duoc goi la phuong trinh dac trung cüa phuong trinh vi phan (4.19). Ta sé xét truong hop nghiem phuc va thuc cüa phuong trinh (4.20) ung voi $\Delta = p ^ { 2 } - 4 q$ ：
+
+· Néu $\Delta > 0$ ， phuong trinh (4.20) có hai nghiem $k _ { 1 } , \ k _ { 2 }$ thuc va khac nhau. Khi d6 phuong trinh (4.19) có hai nghiem rieng doc lap voi nhau
+
+$$
+y _ { 1 } ( x ) = e ^ { k _ { 1 } x } , \quad y _ { 2 } ( x ) = e ^ { k _ { 2 } x } .
+$$
+
+Do d6, nghiem tóng quat cua phuong trinh (4.19) la
+
+$$
+y = C _ { 1 } e ^ { k _ { 1 } x } + C _ { 2 } e ^ { k _ { 2 } x } ,
+$$
+
+voi $C _ { 1 } , C _ { 2 }$ la cac hang só tuy y.
+
+· Néu $\Delta \ : = \ : 0$ ， phuong trinh (4.20) có nghiem kép $k _ { 1 } ~ = ~ k _ { 2 }$ . Ta c6 mot nghiem rieng （20 $y _ { 1 } ~ = ~ k _ { 1 } x$ ， va ta xé tim mot nghiem rieng $y _ { 2 }$ doc lap tuyén tinh voi $y _ { 1 }$ duoi dang $y _ { 2 } = y _ { 1 } . u ( x ) = u ( x ) e ^ { k _ { 1 } x }$ . Ta c6
+
+$$
+\begin{array} { r l } & { y _ { 2 } ^ { \prime } = u ^ { \prime } e ^ { k _ { 1 } x } + k _ { 1 } u e ^ { k _ { 1 } x } , } \\ & { y _ { 2 } ^ { \prime \prime } = u ^ { \prime \prime } e ^ { k _ { 1 } x } + 2 k _ { 1 } u ^ { \prime } e ^ { k _ { 1 } x } + k _ { 1 } ^ { 2 } u e ^ { k _ { 1 } x } , } \end{array}
+$$
+
+thay vao phuong trinh (4.19), ta duoc
+
+$$
+e ^ { k _ { 1 } x } [ u ^ { \prime \prime } + ( 2 k _ { 1 } + p ) u ^ { \prime } + ( k _ { 1 } ^ { 2 } + p k _ { 1 } + q ) u ] = 0 .
+$$
+
+Vi $k _ { 1 }$ la nghiem cia phuong trinh dac trung nen ta c6 $\begin{array} { r } { k _ { 1 } ^ { 2 } + p k _ { 1 } + q = 0 , \ k _ { 1 } = - \frac { p } { 2 } } \end{array}$ . Do d6, ta dugc $e ^ { k _ { 1 } x } u ^ { \prime \prime } = 0$ nen $u = a x + b$ ，voi $a , \ b$ la cac hang só. Chon $u = x$ hay $y _ { 2 } = x e ^ { k _ { 1 } x }$ . Vay, nghiem tóng quat cüa phuong trinh (4.19) la
+
+$$
+y = e ^ { k _ { 1 } x } ( C _ { 1 } + C _ { 2 } x ) ,
+$$
+
+voi $C _ { 1 } , C _ { 2 }$ la cac häng só bat ky.
+
+·N $\hat { \mathrm { e } }$ u $\Delta < 0$ , phuong trinh (4.20) c6 hai nghiem phuc: $k _ { 1 } = \alpha + i \beta , ~ k _ { 2 } = \alpha - i \beta$ .Theo cong thuc Ole, hai nghiem rieng cüa phuong trinh la
+
+$$
+\begin{array} { l } { { \bar { y } _ { 1 } = e ^ { ( \alpha + i \beta ) x } = e ^ { \alpha x } e ^ { i \beta x } = e ^ { \alpha x } ( \cos \beta x + i \sin \beta x ) , } } \\ { { \bar { y } _ { 2 } = e ^ { ( \alpha - i \beta ) x } = e ^ { \alpha x } e ^ { - i \beta x } = e ^ { \alpha x } ( \cos \beta x - i \sin \beta x ) . } } \end{array}
+$$
+
+Vi tó hop tuyén tinh cua hai nghiem nay cung la cac nghiem rieng cüa phuong trinh (4.19), nen ta lay
+
+$$
+\begin{array} { c } { { y _ { 1 } = \displaystyle \frac { 1 } { 2 } [ \bar { y } _ { 1 } + \bar { y } _ { 2 } ] = e ^ { \alpha x } \cos \beta x , \hfill } } \\ { { y _ { 2 } = \displaystyle \frac { 1 } { 2 i } [ \bar { y } _ { 1 } - \bar { y } _ { 2 } ] = e ^ { \alpha x } \sin \beta x . \hfill } } \end{array}
+$$
+
+Vi hai nghiem $y _ { 1 } , y _ { 2 }$ doc lap tuyén tinh, nen nghiem tóng quat cüa phuong trinh (4.19) la $y = e ^ { \alpha x } ( C _ { 1 } \cos { \beta x } + \sin { \beta x } )$
+
+b) Phuong trinh tuyén tinh khong thuan nhat
+
+Ta da biét räng nghiem tong quat cua phuong trinh vi phan tuyén tinh cáp 2 voi hé só hang só (4.18) có dang
+
+$$
+y = \bar { y } + y _ { 0 } ,
+$$
+
+trong d6 $y$ la nghiem tóng quat cüa phuong trinh (4.19) va mot nghiem rieng $y _ { 0 }$ cüa phuong trinh (4.19). Ngoai phuong phap bién thien häng só Lagrange dé tim nghiem rieng $y _ { 0 }$ ,ta c6 phuong pháp khac dé tim nghiem rieng $y _ { 0 }$ tien loi cho truong hop he só häng só nhu trong (4.19), dó la phuong pháp hé só bát dinh. Ta xét mot só truong hop sau:
+
+Truong hop 1: $f ( x ) = e ^ { \alpha x } P _ { n } ( x )$ ， trong d6 $\alpha$ la mot häng só thuc, $P _ { n } ( x )$ la da thuc bac $n$ ：
+
+Khi d6, nghiem rieng $y _ { 0 }$ xac dinh boi
+
+$$
+y _ { 0 } = { \left\{ \begin{array} { l l } { e ^ { \alpha x } Q _ { n } ( x ) { \mathrm { ~ n } } { \dot { \hat { \mathrm { e } } } } { \mathrm { u } } \alpha { \mathrm { ~ k h } } { \hat { \mathrm { o n g } } } { \mathrm { ~ l } } { \mathrm { \bar { a } ~ n g h i } } { \hat { \mathrm { e } } } { \mathrm { m ~ c } } { \mathrm { \bar { u } } } { \mathrm { a ~ p h u t o n g ~ t r i n h ~ d i \bar { c } ~ t r u n g , } } } \\ { x e ^ { \alpha x } Q _ { n } ( x ) { \mathrm { ~ n } } { \dot { \hat { \mathrm { e } } } } { \mathrm { u } } \alpha { \mathrm { ~ l } } { \mathrm { \bar { a } } } { \mathrm { ~ l } } { \mathrm { ~ n g h i } } { \hat { \mathrm { e } } } { \mathrm { m ~ d o n ~ c \bar { u } } } { \mathrm { ~ p h u t o n g ~ t r i n h ~ d i \bar { d } c ~ t r u n g , } } } \\ { x ^ { 2 } e ^ { \alpha x } Q _ { n } ( x ) { \mathrm { ~ n } } { \hat { \mathrm { e } } } { \mathrm { u } } \alpha { \mathrm { ~ l \bar { a } ~ n g h i } } { \hat { \mathrm { e } } } { \mathrm { m ~ k } } { \hat { \mathrm { e } } } { \mathrm { p ~ c i a ~ p h u t o n g ~ t r i n h ~ d i \bar { d } c ~ t r u n g , } } } \end{array} \right. }
+$$
+
+trong d6, $Q _ { n } ( x )$ la mot da thuc bac $n$ ：
+
+Vi du 4.29. Giai phuong trinh vi phan
+
+$$
+y ^ { \prime \prime } - y ^ { \prime } - 2 y = 2 x ^ { 2 } .
+$$
+
+Giai: $^ +$ Giai phuong trinh dac trung
+
+c6 hai nghiem $k _ { 1 } = - 1 , k _ { 2 } = 2$ . Vay nghiem tóng quat cüa phuong trinh thuan nhat $y ^ { \prime \prime } -$ $y ^ { \prime } - 2 y = 0$ la □
+
+$$
+\bar{y} = C_{1} e^{-x} + C_{2} e^{2x}.
+$$
+
+$^+$ Tìm nghiệm riêng $y_0$: Vì $\alpha = 0$ không là nghiệm của phương trình đặc trưng và $P_n(x) = 2x^2$, nên theo công thức (4.21), ta có
+
+$$
+y_{0} = ax^{2} + bx + c.
+$$
+
+Thay $y_0$ vào phương trình ban đầu, ta nhận được
+
+$$
+-2ax^{2} + (-2a - 2b)x + (2a - 2b - 2c) = 2x^2, \forall x.
+$$
+
+Đồng nhất hệ số hai vế theo lũy thừa của $x$, ta nhận được
+
+$$
+\left\{
+\begin{array}{l}
+-2a = 2, \\
+-2a - 2b = 0, \\
+2a - 2b - 2c = 0,
+\end{array}
+\right.
+\quad \Longrightarrow a = -1, b = 1, c = -\frac{3}{2}.
+$$
+
+Do đó, phương trình có một nghiệm riêng $y_0 = -x^2 + x - \frac{3}{2}$. Vậy nghiệm tổng quát là
+
+$$
+y = \bar{y} + y_{0} = C_{1} e^{-x} + C_{2} e^{2x} - x^2 + x - \frac{3}{2},
+$$
+
+trong đó $C_1, C_2$ là các hằng số tùy ý.
+
+Ví dụ 4.3. Giải phương trình vi phân
+
+$$
+y'' + y' = 3x^{2} + 4.
+$$
+
+Giải: $^+$ Giải phương trình đặc trưng
+
+$$
+k^{2} + k = 0,
+$$
+
+có hai nghiệm $k_1 = 0, k_2 = -1$. Vậy nghiệm tổng quát của phương trình thuận nhất $y'' + y' = 0$ là
+
+$$
+\bar{y} = C_{1} + C_{2} e^{-x}.
+$$
+
+(20) Tìm nghiệm riêng \( y_0 \): Vì \(\alpha = 0 = k_1\) là nghiệm của phương trình đặc trưng và \(P_n(x) = 3x^2 + 4\), nên theo công thức (4.21), ta có
+
+$$
+y_0 = x(ax^2 + bx + c).
+$$
+
+Thay \( y_0 \) vào phương trình ban đầu, ta nhận được
+
+$$
+3ax^2 + (6a + 2b)x + (2a + c) = 3x^2 + 4, \forall x.
+$$
+
+Đồng nhất hệ số hai vế theo lũy thừa của \(x\), ta nhận được
+
+$$
+\left\{ 
+\begin{array}{ll}
+3a = 3, \\
+6a + 2b = 0, \\
+2a + c = 4,
+\end{array} \right.
+\Longrightarrow a = 1, b = -3, c = 2.
+$$
+
+Do đó, phương trình có một nghiệm riêng \( y_0 = x^2 - 3x + 2 \). Vậy nghiệm tổng quát là
+
+$$
+y = \bar{y} + y_0 = C_1 e^{-\frac{x}{2}} \cos\left(\frac{\sqrt{3}}{2}x\right) + C_2 e^{-\frac{x}{2}} \sin\left(\frac{\sqrt{3}}{2}x\right) + x^2 - 3x + 2,
+$$
+
+trong đó \(C_1, C_2\) là các hằng số tùy ý.
+
+Ví dụ 4.31. Giải phương trình vi phân
+
+$$
+y'' + y' + y = xe^x + 2e^{-x}.
+$$
+
+Giải: Giải phương trình đặc trưng
+
+$$
+k^2 + k + 1 = 0,
+$$
+
+có hai nghiệm \(k_1 = \frac{-1 + \sqrt{3}i}{2}, k_2 = \frac{-1 - \sqrt{3}i}{2}\). Vậy nghiệm tổng quát của phương trình thuận nhất \(y'' + y' + y = 0\) là
+
+$$
+\bar{y} = e^{- \frac{x}{2}} \left( C_1 \cos \frac{\sqrt{3}}{2} x + C_2 \sin \frac{\sqrt{3}}{2} x \right) .
+$$
+
+$^+$ Tìm nghiệm riêng $y_{01}$ của phương trình $y'' + y' + y = xe^x$: Vì $\alpha = 1$ không là nghiệm của phương trình đặc trưng và $P_n(x) = x$, nên theo công thức (4.21), ta có
+
+$$
+y_{01} = e^x(ax + b).
+$$
+
+Thay $y_{01}$ vào phương trình $y'' + y' + y = xe^x$, ta nhận được
+
+$$
+2axe^x + (2a + 2b)e^x = x e^x, \forall x.
+$$
+
+Đồng nhất hệ số theo lũy thừa của $x$, ta nhận được
+
+$$
+\left\{ 
+\begin{array}{ll}
+2a = 1, & \\
+2a + 2b = 0,
+\end{array} 
+\right. \Longrightarrow a = \frac{1}{2}, b = -\frac{1}{2}.
+$$
+
+Do đó, phương trình có nghiệm riêng $y_{01} = e^x(\frac{1}{2}x - \frac{1}{2})$.
+
+$^{20}$ + Tìm nghiệm riêng $y_{02}$ của phương trình $y'' + y' + y = 2e^{-x}$: Vì $\alpha = 1$ không là nghiệm của phương trình đặc trưng và $P_n(x) = x$, nên theo công thức (4.21), ta có
+
+$$
+y_{02} = ce^{-x}.
+$$
+
+Thay $y_{02}$ vào phương trình $y^{\prime\prime} + y^{\prime} + y = 2e^{-x}$, ta nhận được $c = 1$. Do đó, phương trình có 1 nghiệm riêng $y_{02} = e^{-x}$. Do vậy, nghiệm riêng của phương trình ban đầu là
+
+$$
+y_0 = y_{01} + y_{02}.
+$$
+
+Nghiệm tổng quát dạng
+
+$$
+y = \bar{y} + y_0 = e^{-\frac{x}{2}} \left(C_1 \cos{\frac{\sqrt{3}}{2}} x + C_2 \sin{\frac{\sqrt{3}}{2}} x\right) + e^x \left(\frac{1}{2} x - \frac{1}{2}\right) + e^{-x},
+$$
+
+trong đó $C_1, C_2$ là các hằng số bất kỳ.
+
+Trường hợp 2: $f(x) = e^{\alpha x}[P_n(x)\cos\beta x + Q_m(x)\sin\beta x]$, trong đó $\alpha, \beta$ là các hằng số thực, $P_n(x), Q_m(x)$ là các đa thức bậc $n, m$ tương ứng.
+
+Đặt $k = \max\{m, n\}$, $R_k(x)$ và $S_k(x)$ là các đa thức bậc $k$. Khi đó, nghiệm riêng $y_0$ của phương trình (4.18) được xác định bởi
+
+$$
+y_{0} = \left\{
+\begin{array}{ll}
+e^{\alpha x} [R_k(x) \cos \beta x + \bar{R}_k(x) \sin \beta x] & \text{nếu } \alpha + i \beta \text{ không là nghiệm của phương trình đặc trưng (4.19)} \\
+x e^{\alpha x} [R_k(x) \cos \beta x + \bar{R}_k(x) \sin \beta x] & \text{nếu } \alpha + i \beta \text{ là nghiệm của phương trình đặc trưng (4.19)}
+\end{array}
+\right.
+$$
+
+Ví dụ 4.32. Giải phương trình vi phân
+
+$$
+y'' + 2 y' - 3 y = \cos x .
+$$
+
+Giải: + Giải phương trình đặc trưng
+
+$$
+k^2 + 2 k - 3 = 0 ,
+$$
+
+có hai nghiệm $k_1 = 1, k_2 = -3$. Vậy nghiệm tổng quát của phương trình thuận nhất $y'' + 2 y' - 3 y = 0$ là
+
+$$
+\bar{y} = C_1 e^x + C_2 e^{-3 x}.
+$$
+
++ Tìm nghiệm riêng $y_0$: Vì $\alpha = 0, \beta = 1$ và $\alpha + i \beta = i$ không là nghiệm của phương trình đặc trưng, nên theo công thức (4.22), ta có 
+
+$$
+y_0 = a \cos x + b \sin x.
+$$
+
+Thay $y_0$ vào phương trình ban đầu, ta nhận được
+
+$$
+( - 4a + 2b ) \cos x + ( - 2a - 4b ) \sin x = \cos x, \forall x.
+$$
+
+Đồng nhất hệ số hai vế theo các hệ số của $\cos x$ và $\sin x$, ta nhận được
+
+$$
+\left\{ \begin{array} { l l } 
+{ \displaystyle - 4a + 2b = 1, } \\ 
+{ \displaystyle - 2a - 4b = 0, } 
+\end{array} \right. \Longrightarrow a = - \frac { 1 } { 5 }, b = \frac { 1 } { 10 }.
+$$
+
+Do đó, phương trình có một nghiệm riêng $\begin{array} { r } 
+{ y _ { 0 } = - \frac { 1 } { 5 } \cos x + \frac { 1 } { 10 } \sin x } \end{array}$ . Vậy nghiệm tổng quát là
+
+$$
+y = \bar{y} + y _ { 0 } = C _ { 1 } e ^ { x } + C _ { 2 } e ^ { - 3x } - \frac { 1 } { 5 } \cos x + \frac { 1 } { 10 } \sin x,
+$$
+
+trong đó $C _ { 1 }, C _ { 2 }$ là các hệ số tùy ý.
+
+Ví dụ 4.33. Giải phương trình vi phân
+
+$$
+y ^ { \prime \prime } + 4 y = e ^ { x } - \cos 2x.
+$$
+
+Giải: 
++ Giải phương trình đặc trưng
+
+$$
+k ^ { 2 } + 4 = 0,
+$$
+
+có hai nghiệm $k _ { 1 } = 2i, k _ { 2 } = - 2i$. Vậy nghiệm tổng quát của phương trình thuần nhất $y ^ { \prime \prime } + 4 y = 0$ là
+
+$$
+\bar{y} = C _ { 1 } \cos 2x + C _ { 2 } \sin 2x.
+$$
+
++ Tìm nghiệm riêng $y_{01}$ của phương trình $y ^ { \prime \prime } + 4 y = e ^ { x }$: Vì $\alpha = 1$ không là nghiệm của phương trình đặc trưng, nên theo công thức (4.21), ta có
+
+$$
+y _ { 01 } = a e ^ { x }.
+$$
+
+Thay $y_{0}$ vào phương trình $y^{\prime\prime} + 4y = e^{x}$, ta nhận được $\textstyle a = \frac{1}{5}$. Vậy, phương trình $y^{\prime\prime} + 4y = e^{x}$ có một nghiệm riêng $\textstyle y_{01} = \frac{1}{5}e^{x}$.
+
+(2.0) Tìm nghiệm riêng $y_{02}$ của phương trình $y^{\prime\prime} + 4y = -\cos 2x$: Vì $\alpha = 0, \beta = 2$ và $\alpha + i\beta = 2i$ là nghiệm của phương trình đặc trưng, nên theo công thức (4.22), ta có
+
+$$
+y_{02} = x(a\cos 2x + b\sin 2x).
+$$
+
+Thay $y_{02}$ vào phương trình $y^{\prime\prime} + 4y = -\cos 2x$, ta nhận được
+
+$$
+4b\cos 2x - 4a\sin 2x = -\cos 2x, \forall x.
+$$
+
+Đồng nhất hệ số hai vế theo các hệ số của $\cos 2x$ và $\sin 2x$, ta nhận được $a = 0, b = -\frac{1}{4}$. Do đó, phương trình $y^{\prime\prime} + 4y = -\cos 2x$ có một nghiệm riêng $y_{02} = -\frac{1}{4}x\sin 2x$. Theo nguyên lý chống nghiệm, nghiệm riêng của phương trình ban đầu dạng $y_0 = y_{01} + y_{02}$. Vậy, nghiệm tổng quát là
+
+$$
+y = \bar{y} + y_0 = C_1\cos 2x + C_2\sin 2x - \frac{1}{4}x\sin 2x,
+$$
+
+trong đó $C_1, C_2$ là các hằng số bất kỳ.
+
+Ví dụ 4.34. Bằng cách đặt $\textstyle y = \frac{u}{x^2}$, hãy tìm nghiệm tổng quát của phương trình vi phân.
+
+$$
+x ^ { 2 } y ^ { \prime \prime } + x ( 4 - x ) y ^ { \prime } + 2 ( 1 - x ) y = x e ^ { x } .
+$$
+
+Giải: Lấy đạo hàm của hàm $u$, ta có
+
+$$
+\begin{array} { l }
+{ u ^ { \prime } = y ^ { \prime } x ^ { 2 } + 2 x y , } \\
+{ u ^ { \prime \prime } = y ^ { \prime \prime } x ^ { 2 } + 2 x y ^ { \prime } + 2 x y ^ { \prime } + 2 y = y ^ { \prime \prime } x ^ { 2 } + 4 x y ^ { \prime } + 2 y . }
+\end{array}
+$$
+
+Khi đó, phương trình có dạng:
+
+$$
+u ^ { \prime \prime } - u ^ { \prime } = x e ^ { x } .
+$$
+
+Giải phương trình đặc trưng
+
+$$
+k ^ { 2 } - k = 0 ,
+$$
+
+có hai nghiệm $k _ { 1 } = 0 , k _ { 2 } = 1$. Vậy nghiệm tổng quát của phương trình thuận nhất $u ^ { \prime \prime } - u ^ { \prime } = 0$ là
+
+$$
+\bar{u} = C _ { 1 } + C _ { 2 } e ^ { x } .
+$$
+
++ Tìm nghiệm riêng $u_0$: Vì $\alpha = 1$ là nghiệm của phương trình đặc trưng, nên theo công thức (4.21), ta có
+
+$$
+u _ { 0 } = x ( a x + b ) e ^ { x } .
+$$
+
+Thay $u_0$ vào phương trình $u ^ { \prime \prime } - u ^ { \prime } = x e ^ { x }$, ta nhận được $\textstyle a = \frac{1}{2} , b = - 1$. Do đó, phương trình ban đầu có nghiệm tổng quát là
+
+$$
+y = \frac { u } { x ^ { 2 } } = \frac { C _ { 1 } } { x ^ { 2 } } + C _ { 2 } \frac { e ^ { x } } { x ^ { 2 } } + e ^ { x } \left( \frac { 1 } { 2 } - \frac { 1 } { x } \right) ,
+$$
+
+trong đó $C _ { 1 } , C _ { 2 }$ là các hằng số bất kỳ.
+
+4.4. Hệ phương trình vi phân
+
+# 4.4.1. Hệ phương trình vi phân cấp 1
+
+Hệ $n$ phương trình vi phân cấp 1 có dạng:
+
+$$
+\left\{ \begin{array} { l l } { y _ { 1 } ^ { \prime } = f _ { 1 } ( x , y _ { 1 } , y _ { 2 } , . . . , y _ { n } ) , } \\ { y _ { 2 } ^ { \prime } = f _ { 2 } ( x , y _ { 1 } , y _ { 2 } , . . . , y _ { n } ) , } \\ { \quad } \\ { y _ { n } ^ { \prime } = f _ { n } ( x , y _ { 1 } , y _ { 2 } , . . . , y _ { n } ) , } \end{array} \right.
+$$
+
+được gọi là hệ chuẩn tắc, trong đó $x$ là biến độc lập và $y _ { 1 } , y _ { 2 } , . . . , y _ { n }$ là các hàm cần tìm. Bài toán Cauchy đối với hệ phương trình (4.23): Tìm các nghiệm ($y _ { 1 } = y _ { 1 } ( x ) , y _ { 2 } = y _ { 2 } ( x ) , . . . , y _ { n } = y _ { n } ( x )$) thỏa mãn điều kiện ban đầu:
+
+$$
+y _ { i } ( x _ { 0 } ) = y _ { 0 i } , \forall i = 1 , 2 , . . . , n ,
+$$
+
+trong đó $x _ { 0 } , y _ { 0 1 } , y _ { 0 2 } , . . . , y _ { 0 n }$ là những số cho trước. Tập hợp $n$ hàm số
+
+$$
+y _ { i } = y _ { i } ( x , C _ { 1 } , C _ { 2 } , . . . , C _ { n } ) , i = 1 , 2 , . . . , n ,
+$$
+
+trong đồ thị $C_1, C_2, \ldots, C_n$ là các hàm số tùy ý và $(x, y_1, y_2, \ldots, y_n) \in D$, được gọi là nghiệm tổng quát của hệ phương trình vi phân (4.23), nếu các hàm số trên thỏa mãn các điều kiện sau: Điều kiện 1: $y_i$ ($i = 1, 2, \ldots, n$) là nghiệm của (4.23) với mọi $C_1, C_2, \ldots, C_n$. Điều kiện 2: Với mỗi điểm $(x_0, y_{01}, y_{02}, \ldots, y_{0n}) \in D$, hệ phương trình
+
+$$
+y_{0i} = y_i(x_0, C_1, C_2, \ldots, C_n), i = 1, 2, \ldots, n,
+$$
+
+giải ra đúng đối với các hằng số $C_1, C_2, \ldots, C_n$:
+
+Định lý 4.35. Giả sử các hàm số $f_i(x, y, y_1, y_2, \ldots, y_n)$ và các đạo hàm riêng $\frac{\partial f_i}{\partial y_i}(x, y_1, y_2, \ldots, y_n) (i = 1, 2, \ldots, n)$ liên tục trên miền $D \subseteq \mathcal{R}^{n+1}, (x_0, y_{01}, y_{02}, \ldots, y_{0n}) \in D$. Khi đó, tồn tại một lân cận của điểm $x_0$ sao cho bài toán Cauchy có duy nhất một nghiệm.
+
+# 4.4.2 Phương pháp giải hệ phương trình vi phân cấp 1
+
+Từ hệ phương trình vi phân cấp 1 (4.23), ta biến đổi được một phương trình vi phân đối với mộtẩn $x$ bằng cách khi các hàm ẩn chưa biết của hệ (4.23) được một phương trình vi phân cấp cao. Giải phương trình vi phân cấp cao đó, sau đó tìm các hàm còn lại. Phương pháp đó gọi là phương pháp khử.
+
+Ví dụ 4.36. Giải hệ phương trình vi phân
+
+$$
+\left\{ \begin{array} { l l } { y _ { 1 } ^ { \prime } = \cos x - y _ { 2 } , } \\ { y _ { 2 } ^ { \prime } = 4 \cos x - \sin x + 3 y _ { 1 } - 4 y _ { 2 } . } \end{array} \right.
+$$
+
+Giải: Lấy đạo hàm hai vế của phương trình thứ nhất theo $x$, ta có
+
+Kết hợp với phương trình thứ hai, ta nhận được
+
+$$
+\begin{array} { c } { y _ { 1 } ^ { \prime \prime } = - \sin x - 4 \cos x + \sin x - 3 y _ { 1 } + 4 y _ { 2 } } \\ { = - 4 \cos x - 3 y _ { 1 } + 4 y _ { 2 } . } \end{array}
+$$
+
+Thay $y _ { 2 } = \cos x - y _ { 1 } ^ { \prime }$, ta có
+
+$$
+y _ { 1 } ^ { \prime \prime } + 4 y _ { 1 } ^ { \prime } + 3 y _ { 1 } = 0 .
+$$
+
+Khi đó, nghiệm thu được có dạng
+
+$$
+y _ { 1 } = C _ { 1 } e ^ { - x } + C _ { 2 } e ^ { - 3 x } .
+$$
+
+Từ hệ thức $y _ { 2 } = \cos x - y _ { 1 } ^ { \prime }$, suy ra
+
+$$
+y _ { 2 } = \cos x - C _ { 1 } e ^ { - x } - 3 C _ { 2 } e ^ { - 3 x } .
+$$
+
+Vậy, nghiệm của hệ phương trình đã cho là
+
+$$
+\left\{ \begin{array} { l l } { y _ { 1 } = C _ { 1 } e ^ { - x } + C _ { 2 } e ^ { - 3 x } } \\ { y _ { 2 } = \cos x - C _ { 1 } e ^ { - x } - 3 C _ { 2 } e ^ { - 3 x } . } \end{array} \right.
+$$
+
+Hệ phương trình vi phân cấp 1 với hệ số hàm số có nhiều phương pháp giải. Sau đây, ta sẽ trình bày một phương pháp, gọi là phương pháp Euler. Không mất tính tổng quát, ta xét hệ phương trình có 3 ẩn hàm $x , y , z$ và biến độc lập $t$
+
+$$
+\left\{ \begin{array} { l l } { x _ { t } ^ { \prime } = a _ { 1 1 } x + a _ { 1 2 } y + a _ { 1 3 } z } \\ { \qquad \quad } \\ { y _ { t } ^ { \prime } = a _ { 2 1 } x + a _ { 2 2 } y + a _ { 2 3 } z } \\ { \qquad \quad } \\ { z _ { t } ^ { \prime } = a _ { 3 1 } x + a _ { 3 2 } y + a _ { 3 3 } z . } \end{array} \right.
+$$
+
+Giả sử nghiệm của hệ phương trình (4.24) có dạng:
+
+$$
+x = \alpha e ^ { \lambda t } , y = \beta e ^ { \lambda t } , z = \gamma e ^ { \lambda t },
+$$
+
+trong đó các tham số $\alpha, \beta, \gamma, \lambda$ là các hằng số cần xác định sao cho $(x, y, z)$ là nghiệm của (4.24). Thay $(x, y, z)$ vào hệ phương trình (4.24), ta có
+
+$$
+\left\{ \begin{array} { l l } { ( a _ { 1 1 } - \lambda ) \alpha + a _ { 1 2 } \beta + a _ { 1 3 } \gamma = 0 } \\ { \qquad \quad } \\ { a _ { 2 1 } \alpha + ( a _ { 2 2 } - \lambda ) \beta + a _ { 2 3 } \gamma = 0 } \\ { \qquad \quad } \\ { a _ { 3 1 } \alpha + a _ { 3 2 } \beta + ( a _ { 3 3 } - \lambda ) \gamma = 0 . } \end{array} \right.
+$$
+
+Hệ phương trình (4.25) là hệ phương trình tuyến tính thuận nhất, có nghiệm khác không thường khi và chỉ khi
+
+$$
+\left| { \begin{array} { c c c } { a _ { 1 1 } - \lambda } & { a _ { 1 2 } } & { a _ { 1 3 } } \\ { a _ { 2 1 } } & { a _ { 2 2 } - \lambda } & { a _ { 2 3 } } \\ { a _ { 3 1 } } & { a _ { 3 2 } } & { a _ { 3 3 } - \lambda } \end{array} } \right| = 0 .
+$$
+
+Đẳng thức này là một phương trình bậc 3 đối với $\lambda$ và được gọi là phương trình đặc trưng của hệ phương trình (4.25). Nghiệm của nó được gọi là giá trị riêng của hệ. Ta hãy xét phương trình đặc trưng có 3 nghiệm thực phân biệt $\lambda _ { 1 } , \lambda _ { 2 } , \lambda _ { 3 }$. Thay lần lượt các giá trị riêng $\lambda _ { 1 } , \lambda _ { 2 } , \lambda _ { 3 }$ vào hệ phương trình (4.25), ta nhận được các cặp số tương ứng
+
+$$
+( \alpha _ { 1 } , \beta _ { 1 } , \gamma _ { 1 } ) , ( \alpha _ { 2 } , \beta _ { 2 } , \gamma _ { 2 } ) , ( \alpha _ { 3 } , \beta _ { 3 } , \gamma _ { 3 } ) .
+$$
+
+Khi đó, nghiệm của hệ phương trình (4.24) có dạng
+
+$$
+\left\{ \begin{array} { l l } { x ( t ) = C _ { 1 } \alpha _ { 1 } e ^ { \lambda _ { 1 } t } + C _ { 2 } \alpha _ { 2 } e ^ { \lambda _ { 2 } t } + C _ { 3 } \alpha _ { 3 } e ^ { \lambda _ { 3 } t } } \\ { y ( t ) = C _ { 1 } \beta _ { 1 } e ^ { \lambda _ { 1 } t } + C _ { 2 } \beta _ { 2 } e ^ { \lambda _ { 2 } t } + C _ { 3 } \beta _ { 3 } e ^ { \lambda _ { 3 } t } } \\ { z ( t ) = C _ { 1 } \gamma _ { 1 } e ^ { \lambda _ { 1 } t } + C _ { 2 } \gamma _ { 2 } e ^ { \lambda _ { 2 } t } + C _ { 3 } \gamma _ { 3 } e ^ { \lambda _ { 3 } t } . } \end{array} \right.
+$$
+
+Ví dụ 4.37. Tìm nghiệm tổng quát của hệ phương trình vi phân
+
+$$
+\left\{ { \begin{array} { l } { x ^ { \prime } = - x - 2 y } \\ { y ^ { \prime } = 3 x + 4 y . } \end{array} } \right.
+$$
+
+Giải: Giải phương trình đặc trưng
+
+$$
+\left| - 1 - \lambda ~ \sigma ~ - 2 ~ \sigma ~ 3 ~ \sigma ~ 4 - \lambda \right| = 0 \Leftrightarrow \lambda ^ { 2 } - 3 \lambda + 2 = 0 \Leftrightarrow \lambda _ { 1 } = 1 , \lambda _ { 2 } = 2 .
+$$
+
+$+ \ \mathrm { V } \widetilde { \mathrm { O i } } \ \lambda _ { 1 } = 1$, ta có hệ phương trình
+
+$$
+\left\{ \begin{array} { l l } { ( - 1 - \lambda ) \alpha - 2 \beta = 0 , } \\ { 3 \alpha + ( 4 - 1 ) \beta = 0 } \end{array} \right. \Leftrightarrow \alpha + \beta = 0 .
+$$
+
+Lấy $\alpha = 1, \beta = - 1$. Khi đó, ta có các nghiệm riêng
+
+$$
+x _ { 1 } = e ^ { t } , y _ { 1 } = - e ^ { t } .
+$$
+
+$+ \ \mathrm { V } \widetilde { \mathrm { O i } } \ \lambda _ { 2 } = 2$, tương tự ta có các nghiệm riêng
+
+Vậy nghiệm tổng quát của hệ là
+
+$$
+\left\{ 
+\begin{array} { l }
+x = C _ { 1 } e ^ { t } + 2 C _ { 2 } e ^ { 2 t } \\
+y = - C _ { 1 } e ^ { t } - 3 C _ { 2 } e ^ { 2 t }
+\end{array} 
+\right.
+$$
+
+trong đó $C _ { 1 } , C _ { 2 }$ là các hàng số bất kỳ.

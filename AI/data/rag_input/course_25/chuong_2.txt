@@ -1,0 +1,2623 @@
+# 2.1. Các khái niệm cơ bản
+
+## 2.1.1. Hàm một biến thực
+
+Cho $X \subseteq \mathbb{R}, Y \subseteq \mathbb{R}$, ánh xạ
+
+$$
+\begin{array}{c}
+f : X \rightarrow Y \\
+x \mapsto y = f(x)
+\end{array}
+$$
+
+được gọi là một hàm số một biến, tập $X$ được gọi là miền xác định của hàm số $f$. Thông thường ký hiệu $x$ là đối số, $y$ là hàm số.
+
+## 2.1.2. Hàm số chẵn, lẻ
+
+$x \in D \Rightarrow -x \in D$, hàm số $y = f(x)$ được gọi là chẵn trên miền $D$ nếu $f(-x) = f(x) \forall x \in D$. Hàm số được gọi là lẻ trên miền $D$ nếu $x \in D \Rightarrow -x \in D, y = f(x), f(-x) = -f(x) \forall x \in D$. Ví dụ: $f_1(x) = |1 - x| + |1 + x|$ là hàm số chẵn trên $\mathbb{R}$. $f_2(x) = x^4 \sin x$ là hàm số lẻ trên $\mathbb{R}$.
+
+## 2.1.3. Hàm số tuần hoàn
+
+Hàm số $y = f(x)$ được gọi là tuần hoàn trên miền $D \Leftrightarrow$ tồn tại $T > 0$ sao cho $f(x + T) = f(x) \forall x \in D$. Khi đó $T$ được gọi là chu kỳ của $f$.
+
+Ví dụ: Hàm số $y = \sin(ax + b)$ với $a > 0$ tuần hoàn với chu kỳ $T = \frac{2\pi}{a}$ trên $\mathbb{R}$.
+
+## 2.1.4. Hàm số đơn điệu (tăng hoặc giảm)
+
++ Hàm số $y = f(x)$ được gọi là tăng trên miền $D$ khi và chỉ khi
+
+$$
+\forall x_1, x_2 \in D, x_1 < x_2 \Rightarrow f(x_1) \leq f(x_2).
+$$
+
++ Hàm số $y = f(x)$ được gọi là tăng nghiêm (hay còn gọi là đồng biến) trên miền $D$ khi và chỉ khi
+
+$$
+\forall x_1, x_2 \in D, x_1 < x_2 \Rightarrow f(x_1) < f(x_2).
+$$
+
+$+ \ : \mathrm{Hàm} \ : \mathrm{số} \ \hat{0} \ : y = f(x)$ được gọi là giảm trên miền $D$ khi và chỉ khi
+
+$$
+\forall x_1, x_2 \in D, x_1 < x_2 \Rightarrow f(x_1) \geq f(x_2).
+$$
+
++ Hàm số $y = f(x)$ được gọi là giảm ngặt (hay còn gọi là nghịch biến) trên miền $D$ khi và chỉ khi
+
+$$
+\forall x_1, x_2 \in D, x_1 < x_2 \Rightarrow f(x_1) > f(x_2).
+$$
+
+# 2.1.5. Hàm số bị chặn
+
++ Hàm số $y = f(x)$ được gọi là bị chặn trên trên miền $D$ khi và chỉ khi tồn tại $M \in \mathbb{R}$ sao cho
+
+$$
+f(x) \leq M \ \forall x \in D.
+$$
+
++ Hàm số $y = f(x)$ được gọi là bị chặn dưới trên miền $D$ khi và chỉ khi tồn tại $m \in \mathbb{R}$ sao cho
+
+$$
+f(x) \geq m \ \forall x \in D.
+$$
+
++ Hàm số $y = f(x)$ được gọi là bị chặn trên miền $D$ khi và chỉ khi $f$ bị chặn trên và bị chặn dưới trên $D$.
+
+# 2.1.6. Cân trên đúng và cân dưới đúng
+
+$+ \ \mathrm{Số} \ \tilde{\sigma} \ m$ được gọi là cân dưới đúng (infimum) của hàm $f$ trên miền $D$, ký hiệu $m = \operatorname*{inf}_{x \in D} f(x).$ khi và chỉ khi $m$ là số lớn nhất thỏa mãn
+
+$$
+f(x) \geq m \ \forall x \in D.
+$$
+
+$+ \ \mathrm{Số} \ \tilde{\sigma} \ M$ được gọi là cân trên đúng (supremum) của hàm $f$ trên miền $D$, ký hiệu
+
+$$
+M = \operatorname*{sup}_{x \in D} f(x)
+$$
+
+khi và chỉ khi $M$ là số nhỏ nhất thỏa mãn
+
+$$
+f(x) \leq M \ \forall x \in D.
+$$
+
+\*Hết
+
+$M$ là can trên đúng của hàm $f(x)$ trên $D$ khi và chỉ khi
+
+$$
+\left\{
+\begin{array}{ll}
+M \geq f(x) & \forall x \in D, \\
+\forall \epsilon > 0 \Rightarrow \exists x_0 \in D \text{ sao cho } M < f(x_0) + \epsilon.
+\end{array}
+\right.
+$$
+
+$m$ là can dưới đúng của hàm $f(x)$ trên $D$ khi và chỉ khi
+
+$$
+\left\{
+\begin{array}{ll}
+m \leq f(x) & \forall x \in D, \\
+\forall \epsilon > 0 \Rightarrow \exists x_0 \in D \text{ sao cho } m + \epsilon > f(x_0).
+\end{array}
+\right.
+$$
+
+Chứng minh: Ta chứng minh với can trên đúng, còn can dưới đúng được chứng minh tương tự.
+
+$(\Rightarrow)$ Giả sử $M = \operatorname*{sup}_{x \in D} f(x)$, theo định nghĩa $f(x) \leq M \forall x \in D$. Ta cần chứng minh rằng:
+
+Giả sử điều này không đúng. Hay
+
+$$
+\exists \epsilon > 0 : M < f(x_0) + \epsilon \forall x_0 \in D \Rightarrow f(x_0) \leq M - \epsilon \forall x_0 \in D.
+$$
+
+Điều này mâu thuẫn với giả thiết $M$ là can trên đúng.
+
+$(\Leftarrow)$ Giả sử cho $M$ thỏa mãn
+
+$$
+\left\{
+\begin{array}{ll}
+M \geq f(x) & \forall x \in D, \\
+\forall \epsilon > 0 \Rightarrow \exists x_0 \in D \text{ sao cho } M < f(x_0) + \epsilon.
+\end{array}
+\right.
+$$
+
+Ta chứng minh bằng phản chứng, giả sử $M$ không là số nhỏ nhất thỏa mãn $f(x) \leq M \ \forall x \in D$, hay tồn tại $M_0 < M$ sao cho $f(x) \leq M_0 \ \forall x \in D$. Đặt $\epsilon = M - M_0 > 0 \Rightarrow \exists x_0 \in D$ sao cho $M < f(x_0) + \epsilon = f(x_0) + M - M_0 \Leftrightarrow f(x_0) > M_0$, mâu thuẫn. Vậy $M = \operatorname*{sup}_{x \in D} f(x)$ □
+
+\* Tiên đề
+
+- Nếu $f$ bị chặn trên trên $D$, thì tồn tại $\operatorname*{sup}_{x \in D} f(x)$.
+- Nếu $f$ bị chặn dưới trên $D$, thì tồn tại $\operatorname*{inf}_{x \in D} f(x).$
+
+Cho hàm $f$ tồn tại cận trên đúng và cận dưới đúng. Khi đó
+
+$$
+\operatorname*{sup}_{x \in D} f(x) \geq \operatorname*{max}_{x \in D} f(x),
+$$
+
+dấu "=" xảy ra khi và chỉ khi tồn tại $x_0 \in D$ sao cho $f(x_0) = \operatorname*{sup}_{x \in D} f(x)$:
+
+$$
+\operatorname*{inf}_{x \in D} f(x) \leq \operatorname*{min}_{x \in D} f(x),
+$$
+
+dấu "=" xảy ra khi và chỉ khi tồn tại $x_0 \in D$ sao cho $f(x_0) = \operatorname*{inf}_{x \in D} f(x)$.
+
+\* Ví dụ
+
+Cho $f$ tồn tại cận dưới đúng trên $D$. Chứng minh rằng
+
+$$
+\operatorname*{inf}_{x \in D} f(x) = -\operatorname*{sup}_{x \in D}\{-f(x)\}.
+
+$$
+\begin{array} { r l }
+& {\cdot \ : minh \ : \mathrm { D } \hat{\mathfrak{a}} \mathfrak{t} \ : m = \operatorname*{inf}_{x \in D} f(x) \Rightarrow -f(x) \leq -m \ : \forall x \in D \ : \Rightarrow \ : \underset{x \in D}{\operatorname*{sup}} \{-f(x)\}}
+\\
+& {\mathrm {M} \hat{\mathfrak{a}} \mathfrak{t} \ : \mathrm{kha}c - f(x) \leq \underset{x \in D}{\operatorname*{sup}} \{-f(x)\} \Rightarrow f(x) \geq \underset{x \in D}{\operatorname*{inf}} \{-f(x)\} \ : \forall x \in D}
+\\
+& { \ : f(x) \geq \underset{x \in D}{\operatorname*{sup}} \{-f(x)\}. \mathrm{Như} \ : \mathrm{vậy} \ : m = \underset{x \in D}{\operatorname*{inf}} \{-f(x)\}. }
+\end{array}
+$$
+
+# 2.1.7. Hàm số ngược
+
+Cho $X, Y \subseteq \mathbb{R}$ và một song ánh $f : X \to Y$. Khi đó, ảnh xạ ngược $f^{-1} : Y \to X$ xác định một hàm số $y = f^{-1}(x)$ được gọi là hàm số ngược của hàm số $y = f(x)$. Ví dụ: Hàm số $y := a^x$ với $a > 0, a \neq 1$ có hàm số ngược là $y = \log_a x$ với $x \in (0; +\infty)$.
+
+Tính chất đồ thị của hàm số $y = f(x)$ và đồ thị hàm ngược $y = f^{-1}(x)$ đối xứng qua đường thẳng $y = x$:
+
+1. Hàm $y = \arcsin x$
+   * Định nghĩa
+
+$$
+y = \arcsin x \Leftrightarrow \left\{
+\begin{array}{ll}
+x = \sin y \\
+y \in \left[ -\frac{\pi}{2} ; \frac{\pi}{2} \right].
+\end{array}
+\right.
+$$
+
+Như vậy, miền xác định của $y = \arcsin x$ là $D = [-1 ; 1]$ và tập giá trị là $D_f = \left[ -\frac{\pi}{2} ; \frac{\pi}{2} \right]$.
+
+*Ví dụ: Tính $\arcsin \frac{1}{2} = ?$
+
+Giải Đặt $\arcsin \frac{1}{2} = y \Rightarrow \frac{1}{2} = \sin y \Rightarrow y = \frac{\pi}{6}$, $y \in \left[ -\frac{\pi}{2} ; \frac{\pi}{2} \right]$. $\sqrt{\mathrm{ay}} \arcsin \frac{1}{2} = \frac{\pi}{6}$.
+
+*Định nghĩa
+
+$$
+y = \arccos x \Leftrightarrow \left\{
+\begin{array}{ll}
+x = \cos y \\
+y \in [0 ; \pi].
+\end{array}
+\right.
+$$
+
+Như vậy, miền xác định của $y = \arccos x$ là $D = [-1 ; 1]$ và tập giá trị là $D_f = \left[ 0 ; \pi \right]$.
+
+*Ví dụ: Chứng minh rằng
+
+$$
+\arcsin x + \arccos x = \frac{\pi}{2} ~ \forall x \in [-1 ; 1].
+$$
+
+Chứng minh Từ $\arcsin x \in \left[ -\frac{\pi}{2} ; \frac{\pi}{2} \right] \Rightarrow \frac{\pi}{2} - \arcsin x \in [0 ; \pi]$
+
+$$
+\Rightarrow \cos \left( \frac{\pi}{2} - \arcsin x \right) = \sin (\arcsin x) = x = \cos (\arccos x) \quad \forall x \in [-1, 1]
+$$
+
+$$
+\begin{array}{r}
+\Rightarrow \frac{\pi}{2} - \arcsin x = \arccos x.
+\end{array}
+$$
+
+3. Hàm $y = \arctan x$
+
+*Dinh nghĩa*
+
+$$
+y = \arctan x \Leftrightarrow \left\{
+\begin{array}{ll}
+x = \tan y \\
+y \in \left( -\frac{\pi}{2}, \frac{\pi}{2} \right).
+\end{array}
+\right.
+$$
+
+Như vậy, miền xác định của $y = \arctan x$ là $D = \mathbb{R}$ và tập giá trị là $D_f = \left( -\frac{\pi}{2}, \frac{\pi}{2} \right)$.
+
+Ví dụ: Tính $\arctan \sqrt{3} = ?$
+
+Giải Đặt $\arctan \sqrt{3} = y \Rightarrow \sqrt{3} = \tan y \Rightarrow y = \frac{\pi}{3}$ (vì $y \in (-\frac{\pi}{2}, \frac{\pi}{2})$). Vậy $\arctan \sqrt{3} = \frac{\pi}{3}$.
+
+4. Hàm $y = \text{arccot } x$
+
+*Dinh nghĩa*
+
+$$
+y = \text{arccot } x \Leftrightarrow \left\{
+\begin{array}{ll}
+x = \cot y \\
+y \in (0, \pi).
+\end{array}
+\right.
+$$
+
+Như vậy, miền xác định của $y = \text{arccot } x$ là $D = \mathbb{R}$ và tập giá trị là $D_f = (0, \pi)$.
+
+*Ví dụ: Chứng minh rằng*
+
+$$
+\arctan x + \text{arccot } x = \frac{\pi}{2}.
+$$
+
+Theo định nghĩa $\arctg x \in \left( -\frac{\pi}{2}, \frac{\pi}{2} \right)$, ta có:
+$$
+\frac{\pi}{2} - \arctg x \in (0, \pi).
+$$
+Do vậy
+
+$$
+\cot \left( \frac{\pi}{2} - \arctg x \right) = \tan (\arctg x) \Leftrightarrow \frac{\pi}{2} - \arctg x = \arcctgx.
+$$
+
+# 2.1.8. Hàm hypebolic
+
+1. Hàm sinh hypebolic: Ký hiệu $y = sh(x)$, được xác định bằng công thức:
+
+$$
+sh(x) = \frac{1}{2} (e^x - e^{-x}).
+$$
+
+2. Hàm cosh hypebolic: Ký hiệu $y = ch(x)$, được xác định bằng công thức:
+
+$$
+ch(x) = \frac{1}{2} (e^x + e^{-x}).
+$$
+
+Ví dụ Cho $x, y \in \mathbb{R}$, dùng định nghĩa chứng minh rằng:
+
+$$
+\begin{array} { r l }
+& {\delta \dot{\mathcal{H}}(x, y) = \langle y \dot{N}(x^{\dagger}) x (x^{\dagger}) \delta \dot{N}(y) + c \dot{N}(x^{\dagger}) x(y) \delta \dot{N}(y),} \\
+& {\delta \dot{N}(x^{\dagger}) = \langle x \dot{N}(x^{\dagger}) x(\dot{N} y) - \delta \dot{N}(x^{\dagger}) x (\dot{N} y) \delta \dot{N}(y),} \\
+& {c \dot{N}(x^{\dagger} - y) = c \dot{N}(x) c(\dot{N} y) + \delta \dot{N}(x^{\dagger}) \delta \dot{N}(y),} \\
+& {c \dot{N}(x^{\dagger} - y) = c \dot{N}(x^{\dagger}) c \dot{N}(\dot{N} y) - \delta \dot{N}(\dot{N} y) \delta \dot{N}(\dot{y}),} \\
+& {c \dot{N}(x^{\dagger}) = -\delta \dot{N}^{2}(x^{\dagger}) = 1,} \\
+& {c \dot{N}^{2}(x^{\dagger}) + \delta \dot{N}^{2}(x^{\dagger}) - c \dot{N}(\dot{x} y),} \\
+& {\delta \dot{N}(x^{\dagger}) = \delta \dot{N}(x^{\dagger}) - c \dot{N}(\dot{x} y),} \\
+& {\delta \dot{N}(x^{\dagger}) = \mathrm{~ch}(xy) = 2c y \dot{N}(x^{\dagger}),} \\
+& {c \dot{N}(x) = \mathrm{~ch}(xy) = 2cy \dot{N}\dot{x}^{\frac{\partial}{\partial x^{\dagger}}} \delta \dot{N}^{\frac{\partial}{\partial y}},} \\
+& {c \dot{N}(x) - c \dot{N}(\dot{y}) = 2cy \dot{N}}
+\end{array}
+$$
+
+\begin{array}{l}
+^{\frac{\partial}{\partial x^{\dagger}}}\delta\dot{N}^{\frac{\partial}{\partial y}}, \\
+\delta\dot{N}(x^{\dagger}) = \delta\dot{N}(\dot{y}) - 2c\dot{N}\dot{x}^{\frac{\partial}{\partial x^{\dagger}}}\delta\dot{N}^{\frac{\partial}{\partial y}}, \\
+\delta\dot{N}(x^{\dagger}) = \delta\dot{N}(\dot{y}) - 2c\dot{N}(x^{\dagger}), \\
+\delta\dot{N}(x^{\dagger}) = \delta\dot{N}(\dot{x}^{\dagger}) - c\dot{N}(x^{\dagger}) = 0,
+\end{array}
+$$
+
+3. Hàm tang hyperbolic Ký hiệu $y = \tanh(x)$, được xác định bởi công thức:
+
+$$
+\tanh(x) = \frac{\sinh(x)}{\cosh(x)}.
+$$
+
+4. Hàm cotang hyperbolic Ký hiệu $y = \coth(x)$, được xác định bởi công thức:
+
+$$
+\coth(x) = \frac{\cosh(x)}{\sinh(x)}.
+$$
+
+Ví dụ Cho $x, y \in \mathbb{R}$, dùng định nghĩa, chứng minh rằng:
+
+$$
+\tanh(x + y) = \frac{\tanh(x) + \tanh(y)}{1 + \tanh(x) . \tanh(y)} \quad \text{với} \quad xy(x + y) \neq 0,
+$$
+
+$$
+\tanh(x - y) = \frac{\tanh(x) - \tanh(y)}{1 - \tanh(x) . \tanh(y)} \quad \text{với} \quad xy(x - y) \neq 0,
+$$
+
+$$
+\tanh(2x) = \frac{2\tanh(x)}{1 + \tanh^2(x)} \quad \text{với} \quad x \neq 0.
+$$
+
+Giải
+
+$$
+\frac{\tanh(x) + \tanh(y)}{1 + \tanh(x) . \tanh(y)} = \frac{\frac{\sinh(x)}{\cosh(x)} + \frac{\sinh(y)}{\cosh(y)}}{1 + \frac{\sinh(x)}{\cosh(x)} . \frac{\sinh(y)}{\cosh(y)}}
+$$
+
+$$
+= \frac{\sinh(x) . \cosh(y) + \cosh(x) . \sinh(y)}{\cosh(x) . \cosh(y) + \sinh(x) . \sinh(y)} = \frac{\sinh(x + y)}{\cosh(x + y)} = \tanh(x + y).
+$$
+
+Các kết quả còn lại được chứng minh tương tự.
+
+# 2.2. Giới hạn của hàm một biến số
+
+Cho hàm số $f(x)$ xác định trong khoảng $(a, b)$ và $x_0 \in [a, b]$. Ta nói rằng $f(x)$ có giới hạn $A$ (hữu hạn) khi $x$ dần tới $x_0$, ký hiệu là $\lim_{x \to x_0} f(x) = A$ khi và chỉ khi $x \to x_0$.
+
+$$
+0 < | x - x _ { 0 } | < \delta \quad \forall x \in ( a , b ) \Rightarrow | f ( x ) - A | < \epsilon .
+$$
+
+$+$ Cho hàm số $f ( x )$ xác định trong khoảng $( a , b )$, và $x _ { 0 } \in [ a , b ]$. Ta nói rằng $f ( x )$
+
+có giới hạn trái $A$ (hữu hạn) khi $x$ dần đến $x _ { 0 }$, ký hiệu là $\operatorname*{lim}_{x \to x_{0}^{-}} f(x) = A$ khi và chỉ khi
+
+$$
+\forall x \in ( a , b ) : 0 > x - x _ { 0 } > - \delta \Rightarrow | f ( x ) - A | < \epsilon .
+$$
+
+$+$ Cho hàm số $f ( x )$ xác định trong khoảng $( a , b )$, và $x _ { 0 } \in [ a , b ]$. Ta nói rằng $f ( x )$
+
+có giới hạn phải $A$ (hữu hạn) khi $x$ dần đến $x _ { 0 }$, ký hiệu là $\operatorname*{lim}_{x \to x_{0}^{+}} f(x) = A$ khi và chỉ khi
+
+$\forall \epsilon > 0 \exists \delta > 0$ sao cho $\forall x \in ( a , b ) : 0 < x - x _ { 0 } < \delta \Rightarrow | f ( x ) - A | < \epsilon .$
+
+Nhận xét:
+
+$$
+\operatorname*{lim}_{x \to x_{0}} f(x) = A \Leftrightarrow 
+\left\{
+\begin{array}{ll}
+\displaystyle \operatorname*{lim}_{x \to x_{0}^{-}} f(x) = A \\
+\displaystyle \operatorname*{lim}_{x \to x_{0}^{+}} f(x) = A
+\end{array}
+\right.
+$$
+
+$+$ Cho hàm số $f(x)$ xác định trong khoảng $(a, b)$ và $x_0 \in [a, b]$. Ta nói rằng $f(x)$ có giới hạn $+\infty$ (vô cực) khi $x$ dần tới $x_0$, ký hiệu là $\lim_{x \to x_0} f(x) = +\infty$ chỉ khi
+
+$$
+0 < |x - x_0| < \delta, \forall x \in (a, b) \Rightarrow f(x) > A.
+$$
+
+$+$ Cho hàm số $f(x)$ xác định trong khoảng $(a, b)$ và $x_0 \in [a, b]$. Ta nói rằng $f(x)$ có giới hạn $-\infty$ (vô cực) khi $x$ dần tới $x_0$, ký hiệu là $\lim_{x \to x_0} f(x) = -\infty$ chỉ khi
+
+$$
+0 < |x - x_0| < \delta, \forall x \in (a, b) \Rightarrow f(x) < A.
+$$
+
+$+$ Cho hàm số $f(x)$ xác định trong khoảng $(a, +\infty)$. Ta nói rằng $f(x)$ có giới hạn $A$ (hữu hạn) khi $x$ dần tới $+\infty$, ký hiệu là $\lim_{x \to +\infty} f(x) = A$ chỉ khi
+
+$$
+\forall \epsilon > 0, \exists x_0 \text{ sao cho } \forall x > x_0 \Rightarrow |f(x) - A| < \epsilon.
+$$
+
+$+$ Cho hàm số $f(x)$ xác định trong khoảng $(-\infty, a)$. Ta nói rằng $f(x)$ có giới hạn $A$ (hữu hạn) khi $x$ dần tới $-\infty$, ký hiệu là $\lim_{x \to -\infty} f(x) = A$ chỉ khi
+
+$$
+\forall \epsilon > 0, \exists x_0 \text{ sao cho } \forall x < x_0 \Rightarrow |f(x) - A| < \epsilon.
+$$
+
++$ Cho hàm số $f ( x )$ xác định trong khoảng $( a , +\infty )$. Ta nói rằng $f ( x )$ có giới hạn $+\infty (-\infty)$ (vô hạn) khi $x$ dần tới $+\infty$, ký hiệu là $\lim_{x \to +\infty} f(x) = +\infty$ (tương tự: $-\infty$) khi và chỉ khi
+
+$$
+\forall A \ \exists x_0 \ {\text{sao cho}} \ \forall x > x_0 \Rightarrow f(x) > A
+$$
+
++$ Cho hàm số $f ( x )$ xác định trong khoảng $( -\infty, a )$. Ta nói rằng $f ( x )$ có giới hạn $+\infty$ (tương tự: $-\infty$, khi $x$ dần tới $-\infty$, ký hiệu là $\lim_{x \to -\infty} f(x) = +\infty$ (tương ứng: $-\infty$) khi và chỉ khi
+
+Ví dụ 2.1. Dùng định nghĩa chứng minh rằng
+
+$$
+\lim_{x \to 1} \frac{x+1}{2x-1} = 2.
+$$
+
+Giải Theo định nghĩa,
+
+$$
+\lim_{x \to 1} \frac{x+1}{2x-1} = 2
+$$
+
+khi và chỉ khi
+
+$$
+\exists \delta = \delta(\epsilon) {\text{sao cho}} \forall x : |x - 1| < \delta \Rightarrow \left|\frac{x + 1}{2x - 1} - 2\right| = |x - 1| \cdot \frac{3}{|2x - 1|} <
+$$
+
+Nếu ta chọn $\delta < \frac{1}{2}$, thì
+
+$\forall x : |x-1|< \delta \Leftrightarrow 1 - \delta < x < 1 + \delta \Rightarrow |2x - 1| = 2x - 1 > 2(1 - \delta) - 1 = 1 - 2\delta > 0$
+
+Do đó, với $\delta < \frac{1}{2}$, ta có
+
+$$
+\forall x : | x - 1 | < \delta \Rightarrow \left| \frac{x + 1}{2x - 1} - 2 \right| = | x - 1 | \cdot \frac{3}{| 2x - 1 |} < \frac{3\delta}{1 - 2\delta},
+$$
+
+mà $\begin{array}{r}\frac{3\delta}{1 - 2\delta} < \epsilon \Leftrightarrow \delta < \frac{\epsilon}{2\epsilon + 3}\end{array}$. Như vậy, $\delta = \delta(\epsilon)$ được xác định bởi
+
+$$
+0 < \delta < \min \left\{ \frac{1}{2}, \frac{\epsilon}{2\epsilon + 3} \right\}.
+$$
+
+# 2.2.2. Quan hệ giữa giới hạn của dãy số và giới hạn của hàm số
+
+$$
+\lim_{x \to x_0} f(x) = A \Leftrightarrow \{\forall x_n : \lim_{n \to \infty} x_n = x_0 \Rightarrow \lim_{n \to \infty} f(x_n) = A\}.
+$$
+
+Chứng minh $(\Rightarrow)$: Giả sử $\lim_{x \to x_0} f(x) = A$ và $\lim_{n \to \infty} x_n = x_0$. Theo định nghĩa, ta có
+
+$\begin{array} { r } { \left\{ \begin{array} { l l } { \forall \epsilon > 0 \exists \delta > 0 \mathrm{~sao~cho~} 0 < | x - x _ { 0 } | < \delta \forall x \in ( a , b ) \Rightarrow | f ( x ) - A | } \\ { \exists n _ { 0 } \in \mathbb { N } \forall n \geq n _ { 0 } \Rightarrow | x _ { n } - x _ { 0 } | < \delta } \end{array} \right. } \end{array}$
+
+$\Rightarrow | f ( x _ { n } ) - A | < \epsilon$, điều này có nghĩa là $\lim_{n \to \infty} f(x_n) = A$.
+
+$(\Leftarrow)$ Giả sử rằng dãy $(x_n)$ bất kỳ thỏa mãn $\lim_{n \to \infty} x_n = x_0$ và $\lim_{n \to \infty} f(x_n) = A$.
+
+$\operatorname*{lim}_{x \to x _ { 0 }} f ( x ) \neq A$. Theo định nghĩa,
+
+Ta chọn $\delta := \frac{1}{n} \Rightarrow \exists x _ { n } : 0 < | x _ { n } - x _ { 0 } | < \delta ~ vớ i | f ( x _ { n } ) - A | \geq \epsilon$.
+
+Khi đó, ta có
+
+$$
+\lim_{n \to \infty} x_n = x_0 \quad \text{và} \quad \lim_{n \to \infty} f(x_n) \neq A.
+$$
+
+Điều này mâu thuẫn với giả thiết trên. Như vậy $\lim_{x \to x _ { 0 }} f ( x ) = A$.
+
+Dựa vào mối quan hệ này và tính chất duy nhất của giới hạn dãy số, ta có kết quả dưới đây.
+
+Nhận xét: Nếu tồn tại $\operatorname*{lim}_{x \to x_0} f(x) = A$ thì $A$ là duy nhất.
+
+# 2.2.3. Tính chất
+
+1. Tính bị chặn
+
+Định lý 2.2. Nếu $\lim_{x \to x_0} f(x) = A$ và $|f(x_0)| < +\infty$, thì $f(x)$ bị chặn trong một khoảng của $x_0$:
+
+Chứng minh Giả sử $\lim_{x \to x_0} f(x) = A$, theo định nghĩa,
+
+$\forall \epsilon > 0$ (cho trước) $\exists \delta > 0$ sao cho $\forall x \in (a, b): 0 < |x - x_0| < \delta \Rightarrow |f(x) - A| < \epsilon.$
+
+Hay với $\epsilon > 0$ cho trước, ta có $\delta > 0$ cũng dùng được cho trước và
+
+$$
+A - \epsilon < f(x) < A + \epsilon \quad \forall x \in (x_0 - \delta; x_0) \cup (x_0; x_0 + \delta).
+$$
+
+Khi đó, $\forall x \in (x_0 - \delta; x_0 + \delta)$ ta có
+
+$$
+n := \min\{-|f(x_0)|, A - \epsilon\} \leq f(x) \leq M := \max\{|f(x_0)|, A + \epsilon\}.
+$$
+
+2. Tính thích thú
+
+Định lý 2.3.
+
+i) Giả sử tồn tại giới hạn $\lim_{x \to x_0} f(x)$ và $\lim_{x \to x_0} g(x)$. Nếu $f(x) \leq g(x) \forall x \in (x_0 - \delta_0, x_0 + \delta_0)$ thì $\lim_{x \to x_0} f(x) \leq \lim_{x \to x_0} g(x)$.
+
+ii) Nếu $\lim_{x \to x_0} f(x) > m$, thì tồn tại $\delta > 0$ sao cho $f(x) > m \forall x \in (x_0 - \delta, x_0 + \delta)$.
+
+iii) Nếu $f(x) \leq g(x) \forall x \in (x_0 - \delta, x_0 + \delta)$ và $\lim_{x \to x_0} f(x) = +\infty$, thì $\lim_{x \to x_0} g(x) = +\infty$.
+
+Chứng minh i): Giả sử ngược lại rằng $A = \lim_{x \to x_0} f(x) > \lim_{x \to x_0} g(x) = B$. Đặt $\epsilon = \frac{A - B}{2} > 0$, theo định nghĩa, tồn tại $\delta_1$ và $\delta_2$ sao cho
+
+$$
+\begin{array}{r}
+\left\{
+\begin{array}{l}
+\forall x: 0 < |x - x_0| < \delta_1 \Rightarrow |f(x) - A| < \epsilon \\
+\forall x: 0 < |x - x_0| < \delta_2 \Rightarrow |g(x) - B| < \epsilon
+\end{array}
+\right.
+\end{array}
+$$
+
+Ta đặt $\delta := \min\{\delta_1, \delta_2\}$. Khi đó
+
+$$
+| x - x _ { 0 } | < \delta \Rightarrow \left\{ \begin{array} { l l }
+{ | f ( x ) - A | < \epsilon \Rightarrow f ( x ) > A - \epsilon = A - \frac { A - B } { 2 } = \frac { A + B } { 2 } } \\
+{ | g ( x ) - B | < \epsilon \Rightarrow g ( x ) < B + \epsilon = B + \frac { A - B } { 2 } = \frac { A + B } { 2 } }
+\end{array} \right.
+$$
+
+$\Rightarrow g ( x ) < f ( x )$ . Điều này mâu thuẫn với giả thiết. Như vậy $\operatorname* { lim } _ { x \to x _ { 0 } } f ( x ) \leq \operatorname* { lim } _ { x \to x _ { 0 } } g ( x )$ .
+
+ii) Giả sử $A = \operatorname* { lim } _ { x \to x _ { 0 } } f ( x ) = A > m$, đặt $\epsilon = A - m > 0$. Theo định nghĩa,
+
+$\exists \delta > 0$ sao cho $\forall x : 0 < | x - x _ { 0 } | < \delta \Rightarrow | f ( x ) - A | < \epsilon \Rightarrow f ( x ) > A - \epsilon = m$
+
+i) Theo định nghĩa của lim $f ( x ) = + \infty, \forall A , \exists \delta _ { 1 } > 0$ sao cho
+
+$\forall x : 0 < | x - x _ { 0 } | < \delta _ { 1 } \Rightarrow f ( x ) > A$. Đặt $\delta _ { 2 } = \min \{ \delta , \delta _ { 1 } \}$. Khi đó
+
+$$
+\begin{array} { r }
+{ 0 < | x - x _ { 0 } | < \delta _ { 2 } \Rightarrow \left\{ \begin{array} { l l }
+{ f ( x ) > A } & \\
+{ g ( x ) > f ( x ) }
+\end{array} \right. \Rightarrow g ( x ) > A \Rightarrow \underset { x \to x _ { 0 } } { \operatorname* { lim } } g ( x ) = + \infty }
+\end{array}
+$$
+
+Đưa vào tính chất i), ta được dạng kết quả sau:
+
+Nguyên lý kẹp: Nếu $f(x) \leq g(x) \leq h(x) \forall x \in (x_0 - \delta, x_0 + \delta)$ và $\lim_{x \to x_0} f(x) = A$, $\lim_{x \to x_0} h(x) = A$, thì $\lim_{x \to x_0} g(x) = A$.
+
+Ví dụ 2.4. Chứng minh rằng
+
+$$
+\lim_{x \to \infty} \left(1 + \frac{1}{x}\right)^x = e.
+$$
+
+Chứng minh: Xét trường hợp $x \to +\infty$. Với mỗi $x > 1$, luôn tồn tại $n \in \mathbb{N}$ sao cho $n \leq x \leq n+1 \Rightarrow \frac{1}{n+1} \leq \frac{1}{x} \leq \frac{1}{n}$. Khi đó, theo định nghĩa $\lim_{n \to \infty} \left(1 + \frac{1}{n}\right)^n = e$, ta có
+
+$$
+e \left(1 + \frac{1}{n+1}\right)^n \leq \left(1 + \frac{1}{x}\right)^n \leq \left(1 + \frac{1}{x}\right)^x \leq \left(1 + \frac{1}{n}\right)^x
+$$
+
+$$
+\leq \left(1 + \frac{1}{n}\right)^{n+1} = \left(1 + \frac{1}{n}\right)^n . \left(1 + \frac{1}{n}\right) \to e.
+$$
+
+Suy ra $\lim_{x \to +\infty} \left(1 + \frac{1}{x}\right)^x = e$.
+
+Trong trường hợp $x \to -\infty$. Đổi biến $x = -y$, ta có $x \to -\infty \Leftrightarrow y \to +\infty$ và
+
+$$
+\operatorname*{lim}_{x \to -\infty} \left( 1 + { \frac { 1 } { x } } \right) ^ { x } = \operatorname*{lim}_{y \to +\infty} \left( 1 + { \frac { 1 } { - y } } \right) ^ { - y } = \operatorname*{lim}_{y \to +\infty} \left( { \frac { y } { y - 1 } } \right) ^ { y }
+$$
+
+$$
+= \operatorname*{lim}_{y \to +\infty} \Big ( 1 + \frac { 1 } { y - 1 } \Big ) ^ { y - 1 } . \Big ( 1 + \frac { 1 } { y - 1 } \Big ) = e .
+$$
+
+Như vậy, $\begin{array}{r} {\mathbf{\Psi}_{\times} \left( 1 + \frac { 1 } { x } \right) ^ { x } = e .} \end{array}$
+
+Ta được các công thức dưới đây.
+
+Một số tính chất về số $e$
+
+Tính chất I $\operatorname*{lim}_{y \to 0} ( 1 + y ) ^ { \frac { 1 } { y } } = e .$ Tính chất II $\begin{array}{r} {\operatorname*{lim}_{y \to 0} \frac { \ln ( 1 + y ) } { y } = 1 .} \end{array}$ Tính chất III $\begin{array}{r} {\operatorname*{lim}_{y \to 0} \frac { e ^ { y } - 1 } { y } = 1 } \end{array}$
+
+Ví dụ 2.5. Tìm giới hạn
+
+$$
+\operatorname*{lim}_{x \to 0} \log_{1 - x \sin 3x} (\cos 4x + x^2).
+$$
+
+$$
+\begin{array} { r l }
+& { \underset{x \to 0}{\operatorname*{lim}} \log_{1-x} (\cos x + x^2) - \underset{x \to \pi}{\operatorname*{lim}} \frac{\ln(\cos 4x + x^2)}{\ln(1 - x \sin \lambda x)} } \\
+& { = \frac{\underset{x \in [-2]}{\operatorname*{lim}} - \underset{x \in [-2]}{\operatorname*{lim}}}{\operatorname*{lim}} \frac{\ln (1 - 2 \sin^2 x + x^2)}{\sin(1 - x \sin \lambda x)}, \quad c = 2 \sin^2 x } \\
+& { = \underset{x \in [-3]}{\operatorname*{lim}} \frac{\frac{\lambda + 2 \sin^2 x}{\cos (1 - x \sin \lambda x)}}{\frac{\lambda + 2 \sin^2 x}{\cos (1 - x \sin \lambda x)}}, }
+\end{array}
+$$
+
+$$
+\begin{array}{l}
+\displaystyle \lim_{x \to \infty} \left( (1 - x \cos \lambda x) - \frac{3 (\sin^2 x + 2 \cos^2 x)}{\sin x} \right) { \bigg / } \left( \frac{ \frac{\lambda + 2 \sin^2 x + 2 \sin^2 x}{\cos (1 - x \cos \lambda x)}} {\frac{\lambda + 2 \sin^2 x}{\cos (1 - x \cos \lambda x)}} \right) \\[5ex]
+\displaystyle = \lim_{x \to [-2] \times \operatorname{inans}} - \frac{\frac{\lambda + 2 \sin^2 x + 2 \sin^2 x}{\sin (1 - x)} \cdot \frac{\lambda + 2 \sin^2 x}{\sin x}}
+\end{array}
+$$
+
+# 2.2.4. Các phép toán về giới hạn
+
+Cho các giới hạn hữu hạn $\lim_{x \to x_0} f(x) = A$ và $\lim_{x \to x_0} g(x) = B$ (với $x_0 \in \bar{\mathbb{R}}$). Khi $x \to x_0$, ta có các phép toán giới hạn sau:
+
+$$
+\begin{array}{rl}
+& \lim_{x \to x_0} [f(x) + g(x)] = \lim_{x \to x_0} f(x) + \lim_{x \to x_0} g(x). \\
+& \lim_{x \to x_0} [f(x) - g(x)] = \lim_{x \to x_0} f(x) - \lim_{x \to x_0} g(x). \\
+& \lim_{x \to x_0} [k \cdot f(x)] = k \lim_{x \to x_0} f(x), \text{ với mọi } k \in \mathbb{R}. \\
+& \lim_{x \to x_0} [f(x) \cdot g(x)] = \lim_{x \to x_0} f(x) \cdot \lim_{x \to x_0} g(x). \\
+& \lim_{x \to x_0} \frac{f(x)}{g(x)} = \frac{\lim_{x \to x_0} f(x)}{\lim_{x \to x_0} g(x)}
+\end{array}
+$$
+
+# 2.2.5. Giới hạn của hàm đơn điệu
+
+Định lý 2.6.
+
+i) Cho hàm số $f(x)$ tăng trên $(a, x_0)$. Nếu $f(x)$ bị chặn trên, thì tồn tại giới hạn $\lim_{x \to x_0^-} f(x)$. Nếu $f(x)$ không bị chặn trên, thì $\operatorname*{lim}_{x \to x_0^-} f(x) = +\infty.$
+
+ii) Cho hàm số $f(x)$ giảm trên $(a, x_0)$. Nếu $f(x)$ bị chặn dưới, thì tồn tại giới hạn $\lim_{x \to x_0^-} f(x)$. Nếu $f(x)$ không bị chặn dưới, thì $\operatorname*{lim}_{x \to x_0^-} f(x) = -\infty.$
+
+Chứng minh i): Giả sử $f(x)$ tăng và bị chặn trên $(a, x_0)$. Tồn tại giá trị lớn nhất $A = \sup f(x)$. Theo kết quả của $\sup$, ta có $\forall \epsilon > 0$，$\exists x^* \in (a, x_0): A - \epsilon < f(x) \leq A \quad \forall x \in (a, x_0)$.
+
+Mặt khác $f(x)$ tăng, nên $f(x) \geq f(x^*) \quad \forall x \in (x^*, x_0)$. Do đó, với
+
+$$
+\epsilon < f(x) - A \leq 0 \quad \forall x \in (x^*, x_0) \Rightarrow |f(x) - A| < \epsilon \quad \forall x: 0 > x - x_0 >
+$$
+
+Như vậy $\operatorname*{lim}_{x \to x_0^-} f(x) = A.$
+
+Nếu $f(x)$ không bị chặn trên, tức là $\forall A$, $\exists x^* \in (a, x_0) : f(x^*) > A$. Do $f(x)$ tăng trên $(a, x_0)$, nên $f(x) \geq f(x^*) > A \forall x \in (x^*, x_0) \Rightarrow f(x) > A \forall x \in (a, x_0) : x - x_0 > -\delta$ với $\delta = x_0 - x^*$. Như vậy $\lim_{x \to x_0^-} f(x) = +\infty$.
+
+ii) Chứng minh tương tự như trong i) hoặc áp dụng i) cho hàm số $g(x) = -f(x)$: □
+
+# 2.3. Đại lượng vô cùng bé và vô cùng lớn
+
+## 2.3.1. Định nghĩa
+
+$+ \ : \mathrm{Hàm} \ : \mathrm{s} \widetilde{0} \ : \alpha(x)$ được gọi là vô cùng bé, viết tắt là VCB tại $x_0$ nếu $\lim_{x \to x_0} \alpha(x) = 0$
+
+$+ \ \mathbf{Cho} \ \alpha(x), \beta(x)$ là hai VCB tại $x_0$
+$\begin{array}{r}
+\mathrm{i.} \ \mathrm{Nếu} \lim_{x \to x_0} \frac{\alpha(x)}{\beta(x)} = 0
+\end{array}$ thì $\alpha(x)$ được gọi là VCB bậc cao hơn $\beta(x)$ tại $x_0$, ký hiệu là $\alpha(x) = o(\beta(x))$ tại $x_0$
+
+$+ \ \mathbf{Cho} \ \alpha(x), \beta(x)$ là hai VCB tại $x_0$
+Nếu $\lim_{x \to x_0} \frac{\alpha(x)}{\beta(x)} = m \neq 0$ thì $\alpha(x), \beta(x)$ được gọi là hai VCB cùng cấp tại $x_0$. Đặc biệt, khi $m = 1$, ta gọi $\alpha(x), \beta(x)$ là hai VCB tương đương tại $x_0$, ký hiệu $\alpha(x) \sim \beta(x)$ tại $x_0$
+
+$+ \mathrm{Hàm} \ s \ a(x) \ được \ gọi \ là \ vô \ cùng \ lớn, \ viết \ tắt \ là \ VCL \ tại \ x_0$ nếu hàm số $a(x)$
+
+Tham khảo các định nghĩa dưới đây:
+Quy tắc cộng lớn viêt tắt là hàm số được gọi là vô cùng bé tại $x_0$
+
+$+ \mathrm{Cho} \alpha(x), \beta(x)$ là hai VCL tại $x_0$ và $\lim_{x \to x_0} \frac{\alpha(x)}{\beta(x)} = m$. Nếu $m$
+
+Khi $\lim_{x \to x_0} \frac{\alpha(x)}{\beta(x)} = \infty$ thì $\alpha ( x )$ được gọi là VCL bậc cao hơn $\beta ( x )$ tại $x _ { 0 }$. Nếu $m \neq 0$ thì $\alpha ( x ) , \beta ( x )$ được gọi là hai VCL cùng cấp tại $x _ { 0 }$. Đặc biệt, khi $m = 1$, ta gọi $\alpha ( x ) , \beta ( x )$ được gọi là hai VCL tương đương tại $x _ { 0 }$.
+
+Hề qua: Nếu $\alpha(x) \sim \alpha_1(x)$ và $\beta(x) \sim \beta_1(x)$ tại $x_0$, thì
+
+$$
+\lim_{x \to x_0} \frac{\alpha(x)}{\beta(x)} = \lim_{x \to x_0} \frac{\alpha_1(x)}{\beta_1(x)}.
+$$
+
+Ví dụ 2.7. Dùng VCB tương đương, tìm giới hạn
+
+$$
+\lim_{x \to 0} \frac{\sin^2 3x}{x \sin 5x}.
+$$
+
+Giải Theo công thức $\lim_{x \to 0} \frac{\sin x}{x} = 1$, ta có $6 \sin(kx) \sim kx$. Từ đó suy ra
+
+$$
+\lim_{x \to 0} \frac{\sin^2 3x}{x \sin 5x} = \lim_{x \to 0} \frac{(3x)^2}{x \cdot 5x} = \frac{9}{5}.
+$$
+
+# 2.3.2. Tính chất
+
+Dựa vào định nghĩa VCB và tính chất của giới hạn, ta có các tính chất đại số của VCB như sau:
+
+1. Nếu $\alpha_i(x), i = 1, 2, ..., n$ là các VCB tại $x_0$, thì $\sum_{i=1}^{n} \alpha_i(x)$ và $\prod_{i=1}^{n} \alpha_i(x)$ cũng là VCB tại $x_0$.
+
+2. Nếu $\alpha(x)$ là VCB tại $x_0$ và $\beta(x)$ bị chặn trong lân cận của điểm $x_0$, thì $\alpha(x) . \beta(x)$ cũng là VCB tại $x_0$.
+
+3. Cho $\alpha(x), \beta(x)$ là hai VCB tại $x_0$, nếu $\alpha(x) \sim \beta(x)$, thì $c . \alpha(x) \sim c . \beta(x)$.
+
+Ví dụ 2.8. Cho $\alpha \neq \beta$, tìm giới hạn
+
+$$
+\operatorname*{lim}_{x \to 0} \frac{e^{ax} - e^{bx}}{\sin(\alpha x) - \sin(\beta x)}.
+$$
+
+Giải Theo công thức $\operatorname*{lim}_{x \to 0} \frac{e^x - 1}{x} = 1$ ta có $e^x - 1 \sim x$ khi $x \to 0 \Rightarrow e^{ax} - e^{bx} \sim (a - b)x$. Từ $\sin(x) \sim x \Rightarrow \sin(\alpha x) - \sin(\beta x) \sim (\alpha - \beta)x$. Do đó
+
+$$
+\operatorname*{lim}_{x \to 0} \frac{e^{ax} - e^{bx}}{\sin(\alpha x) - \sin(\beta x)} = \operatorname*{lim}_{x \to 0} \frac{(a - b)x}{(\alpha - \beta)x} = \frac{a - b}{\alpha - \beta}.
+$$
+
+# 2.4. Hàm liên tục
+
+## 2.4.1. Định nghĩa
+
+Cho hàm số $y = f(x)$ xác định trên miền $D$ và $x_0 \in D$:
+
+$+ \operatorname{Hàm} s\tilde{0} f(x)$ được gọi là liên tục tại $x_0$ khi và chỉ khi $\lim_{x \to x_0} f(x) = f(x_0).$
+
+Hay $\forall \epsilon > 0, \exists \delta > 0, \forall x : 0 < |x - x_0| < \delta \Rightarrow |f(x) - f(x_0)| < \epsilon.$
+
+$+ \operatorname{Hàm} s\tilde{0} f(x)$ được gọi là liên tục trái tại $x_0$ khi và chỉ khi $\lim_{x \to x_0^-} f(x) = f(x_0).$
+
+Hay $\forall \epsilon > 0, \exists \delta > 0, \forall x : 0 < x - x_0 < -\delta \Rightarrow |f(x) - f(x_0)| < \epsilon.$
+
+$+ \operatorname{Hàm} s\tilde{0} f(x)$ được gọi là liên tục phải tại $x_0$ khi và chỉ khi $\lim_{x \to x_0^+} f(x) = f(x_0).$
+
+Hay $\forall \epsilon > 0, \exists \delta > 0, \forall x : 0 < x - x_0 < \delta \Rightarrow |f(x) - f(x_0)| < \epsilon.$
+
+Nhận xét: $f(x)$ liên tục tại $x_0$ khi và chỉ khi $f(x)$ liên tục trái và liên tục phải tại $x_0$.
+
+$+ \operatorname{Hàm} s\tilde{0} f(x)$ được gọi là gián đoạn tại $x_0$, nếu $f(x)$ không liên tục tại $x_0$.
+
++ Nếu $x_0$ là điểm gián đoạn của $f(x)$ và tồn tại hữu hạn các giới hạn $\lim_{x \to x_0^+} f(x) = f(x_0^+)$, $\lim_{x \to x_0^-} f(x) = f(x_0^-)$, thì $h = |f(x_0^+) - f(x_0^-)|$ được gọi là độ dài của bước nhảy của hàm $f(x)$ tại $x_0$.
+
++ Hàm số $f(x)$ được gọi là liên tục trên khoảng $(a, b)$ nếu $f(x)$ liên tục tại $\forall x_0 \in (a, b).$
+
++ Hàm số $f(x)$ được gọi là liên tục trên đoạn $[a, b]$, nếu $f(x)$ liên tục trên khoảng $(a, b)$, liên tục trái tại $b$ và liên tục phải tại $a.$
+
+Ví dụ 2.9. Tìm $a, b$ để hàm số sau liên tục trên $\mathbb{R}$:
+
+$$
+f ( x ) = \left\{
+\begin{array}{ll}
+ax^2 - bx + 1 & \text{nếu } x < 1, \\
+2a - b & \text{nếu } 1 \leq x \leq 2, \\
+bx + a - 1 & \text{nếu } x > 2.
+\end{array}
+\right.
+$$
+
+Giải: 
+- Nếu $x < 1$, thì $f(x) = ax^2 - bx + 1$ liên tục trên $\mathbb{R}$, suy ra $f(x)$ liên tục trên $( - \infty , 1 )$. 
+
+- Nếu $x \in [1, 2]$, thì $f(x) = 2a - b$ liên tục trên $\mathbb{R}$, suy ra $f(x)$ liên tục trên $[1, 2]$.
+
+- Nếu $x > 2$, thì $f(x) = bx + a - 1$ liên tục trên $\mathbb{R}$, suy ra $f(x)$ liên tục trên $(2, +\infty).$
+
+Như vậy $f(x)$ liên tục trên $\mathbb{R}$ khi và chỉ khi $f(x)$ liên tục trái tại 1 và liên tục phải tại 2. Tức là
+
+$$
+\left\{
+\begin{array}{l l}
+\displaystyle \lim_{x \to 1^-} f(x) = f(1), \\
+\displaystyle \lim_{x \to 2^+} f(x) = f(2),
+\end{array}
+\right.
+\Leftrightarrow
+\left\{
+\begin{array}{l l}
+\displaystyle \lim_{x \to 1^-} (ax^2 - bx + 1) = 2a - b, \\
+\displaystyle \lim_{x \to 2^+} (bx + a - 1) = 2a - b,
+\end{array}
+\right.
+$$
+
+$$
+\Leftrightarrow
+\left\{
+\begin{array}{l}
+a - b + 1 = 2a - b, \\
+2b + a - 1 = 2a - b.
+\end{array}
+\right.
+$$
+
+Vậy $a = 1$ và $\begin{array} { r } { b = \frac { 2 } { 3 } } \end{array}$, hàm số $f(x)$ liên tục trên $\mathbb{R}$.
+
+# 2.4.2. Tính chất đại số
+
+Cho $f(x), g(x)$ là hai hàm số liên tục trên miền $D$, dùng định nghĩa hàm liên tục và các định lý về giới hạn hàm số, ta có các tính chất sau:
+
++ Hàm số $f(x) + g(x)$ liên tục trên miền $D$.
+
++ Hàm số $f(x).g(x)$ liên tục trên miền $D$.
+
++ Hàm số $\frac{g(x)}{k}$ liên tục trên miền $D$, với $k = const$.
+
+$+ \ : \mathrm{Hàm} \ : \mathrm{số} \widetilde{0} \ : | f ( x ) |$ liên tục trên miền $D$ ：   
+$+ \ \mathrm{Hàm \ số} \ \frac { f ( x ) } { g ( x ) }$ liên tục trên miền $D$ trừ những điểm $x _ { 0 }$ sao cho $g ( x _ { 0 } ) = 0$. Từ các tính chất này suy ra các kết quả sau:
+
+Kết quả
+
+$+ \ \mathrm{Hàm} \ đa thức bậc $n$, $y = P _ { n } ( x )$ liên tục trên $\mathbb { R }$ ：   
+$+ \ \mathrm{Hàm \ phân \ thức} \ y = \begin{array}{r} y = \frac { P _ { n } ( x ) } { Q _ { m } ( x ) } \end{array}$ liên tục trên $\mathbb { R }$ trừ những điểm $x _ { 0 }$ sao cho $Q _ { m } ( x _ { 0 } ) = 0$. $+ \mathrm{Các} \ hàm số lượng giác, hàm số mũ, hàm số logarit, các hàm hyperbolic và các hàm ngược liên tục trên tập xác định của chúng.
+
+Ví dụ 2.10. Cho $f ( x ) , g ( x )$ liên tục trên miền $D$. Chứng minh rằng các hàm số：
+
+$$
+\operatorname*{max} \{ f ( x ) , g ( x ) \} = { \frac { 1 } { 2 } } { \Big( } f ( x ) + g ( x ) + | f ( x ) - g ( x ) | { \Big) } \forall x \in D,
+$$
+
+$$
+\operatorname*{min} \{ f ( x ) , g ( x ) \} = { \frac { 1 } { 2 } } { \Big( } f ( x ) + g ( x ) - | f ( x ) - g ( x ) | { \Big) } \forall x \in D
+$$
+
+và các tính chất trên, ta có các hàm 
+\[
+\begin{array}{r}
+\operatorname{somín}\{f(x), g(x)\} \text{ và } \operatorname{max}\{f(x), g(x)\}
+\end{array}
+\]
+cũng liên tục trên $D$.
+
+2.4.3. Cực trị của hàm liên tục
+
+Định lý 2.11. Nếu hàm số $f ( x )$ liên tục trên $[ a , b ]$ và $f ( a ) . f ( b ) < 0$, thì tồn tại $c \in ( a , b )$ sao cho $f ( c ) = 0$.
+
+Chứng minh (phương pháp chia đôi)
+
+Từ $f ( a ) . f ( b ) < 0$, không mất tính tổng quát, ta giả sử rằng $f ( a ) < 0$ và $f ( b ) > 0$. Bước 1: Chia đoạn $[ a , b ]$ thành 2 đoạn $[ a , c ]$ và $[ c , b ]$ với $\textstyle c = \frac{a + b}{2}$. Xảy ra 3 trường hợp
+
++ Trường hợp 1: Nếu $f ( c ) > 0$ thì đặt $a _ { 1 } = a, b _ { 1 } = c$. Ta luôn có
+\[
+f ( a _ { 1 } ) < 0 , f ( b _ { 1 } ) > 0 , [ a _ { 1 } , b _ { 1 } ] \subset [ a , b ] \text{ và } b _ { 1 } - a _ { 1 } = \frac{b - a}{2}.
+\]
+
++ Trường hợp 2: Nếu $f ( c ) < 0$ thì đặt $a _ { 1 } = c, b _ { 1 } = b$. Ta cũng có
+\[
+f ( a _ { 1 } ) < 0 , f ( b _ { 1 } ) > 0 , [ a _ { 1 } , b _ { 1 } ] \subset [ a , b ] \text{ và } b _ { 1 } - a _ { 1 } = \frac{b - a}{2}.
+\]
+
++ Trường hợp 3: Nếu $f ( c ) = 0$ thì dừng.
+
+Bước 2: Chia đoạn $[ a _ { 1 } , b _ { 1 } ]$ thành 2 đoạn $[ a _ { 1 } , c ]$ và $[ c , b _ { 1 } ]$ với $\begin{array}{r}c = \frac{a _ { 1 } + b _ { 1 }}{2}\end{array}$. Xảy ra 2 trường hợp
+
+$+$ Trường hợp 1: Nếu $f(c) > 0$ thì đặt $a_2 = a_1, b_2 = c$. Ta luôn có
+
+$$
+f(a_2) < 0, f(b_2) > 0, [a_2, b_2] \subset [a_1, b_1], \text{ và } b_2 - a_2 = \frac{b - a}{2^2}.
+$$
+
+$+$ Trường hợp 2: Nếu $f(c) < 0$ thì đặt $a_2 = c, b_2 = b_1$. Ta cũng có
+
+$$
+f(a_2) < 0, f(b_2) > 0, [a_2, b_2] \subset [a_1, b_1], \text{ và } b_2 - a_2 = \frac{b - a}{2^2}.
+$$
+
+Bước $n$: Chia đoạn $\left[ a_{n-1}, b_{n-1} \right]$ thành 2 đoạn $\left[ a_{n-1}, c \right] \text{ và } \left[ c, b_{n-1} \right] \text{ với } c = \frac{a_{n-1} + b_{n-1}}{2}$.
+
+Xảy ra 2 trường hợp
+
+$+$ Trường hợp 1: Nếu $f(c) > 0$ thì đặt $a_n = a_{n-1}, b_n = c$. Ta luôn có
+
+$$
+f(a_n) < 0, f(b_n) > 0, [a_n, b_n] \subset [a_{n-1}, b_{n-1}], \text{ và } b_n - a_n = \frac{b - a}{2^n}.
+$$
+
+$+$ Trường hợp 2: Nếu $f(c) < 0$ thì đặt $a_n = c, b_n = b_{n-1}$. Ta cũng có
+
+$$
+f(a_n) < 0, f(b_n) > 0, [a_n, b_n] \subset [a_{n-1}, b_{n-1}], b_n - a_n = \frac{b-a}{2^n}.
+$$
+
+Như vậy, nếu tìm được $c$ sẽ dùng lại, nếu không tìm được $c$ thì nhận được hai dãy $\mathrm{k} \hat{\mathbf{e}}$ nhau $(a_n)$ và $(b_n)$. Khi đó, tồn tại duy nhất $c$ sao cho $\lim_{n \to \infty} a_n = \lim_{n \to \infty} b_n = c.$ Kết hợp điều này với tính liên tục của hàm $f(x)$, ta có
+
+$$
+\lim_{n \to \infty} f(a_n) = f(c) \leq 0 \quad \text{và} \quad \lim_{n \to \infty} f(b_n) = f(c) \geq 0 \Rightarrow f(c) = 0.
+$$
+
+Ví dụ 2.12. Tìm nghiệm xấp xỉ của phương trình
+
+$$
+\sin x - \frac{x}{2} = 0
+$$
+
+trên $[1,3]$ đến độ chính xác 2 chữ số thập phân.
+
+Giải Đặt $f(x) = \sin x - \frac{x}{2}$, ta có $f(x)$ liên tục trên $[1, 3]$ và $f(1)f(3) \approx 0.34(-1.36) < 0$. Dùng phương pháp chia đôi, suy ra
+
+![](images/6eaee5a33dc700360f8144500656ce075e41400f9c8c64b43ae99730332c4b70.jpg)
+
+Như vậy, nghiệm xấp xỉ là $x_0 \approx 1.90 \pm 0.01$.
+
+Ví dụ 2.13. Cho hàm số $f(x)$ liên tục trên $[a,b]$ và $\gamma \in (f(a), f(b))$. Chứng minh rằng tồn tại $c \in (a, b)$ sao cho $f(c) = \gamma$.
+
+Giải Đặt \( g(x) = f(x) - \gamma \). Do \( f(x) \) liên tục trên \([a, b]\) và \( f(a) < \gamma < f(b) \), nên \( g(x) \) cũng liên tục trên \([a, b]\) và \( g(a) \cdot g(b) < 0 \). Theo tính chất trung điểm của \( f(x) \), ta có tồn tại \( c \in (a, b) \) sao cho \( g(c) = 0 \Rightarrow f(c) = \gamma \).
+
+# 2.4.4. Tính chất biên chặn
+
+Định lý 2.14. Nếu hàm số \( f(x) \) liên tục trên \([a, b]\) thì \( f(x) \) đạt giá trị lớn nhất và nhỏ nhất trên \([a, b]\). Hay tồn tại \( x_1, x_2 \in [a, b] \) sao cho
+
+\[
+f(x_1) = \min_{x \in [a, b]} f(x), \quad f(x_2) = \max_{x \in [a, b]} f(x).
+\]
+
+Chứng minh \(^+\) Hàm số \( f(x) \) bị chặn trên \([a, b]\) (phần chứng).
+
+Thật vậy, giả sử \( f(x) \) không bị chặn trên \([a, b] \), hay \(\forall n \in \mathbb{N}\), \(\exists y_n \in [a, b]\) sao cho \( f(y_n) \geq n \). Dãy \((y_n)\) bị chặn, theo Bolzano-Weierstrass, tồn tại dãy con \((y_{n_k})\) sao cho \(\lim_{k \to \infty} y_{n_k} = y^* \in [a, b] \Rightarrow \lim_{k \to \infty} f(y_{n_k}) = f(y^*)\). Mặt khác \( f(y_{n_k}) \geq n_k \Rightarrow \lim_{k \to \infty} f(y_{n_k}) = +\infty \). Điều này mâu thuẫn. Như vậy, \( f(x) \) bị chặn trên \([a, b]\).
+
+$+ \ \mathrm{Hàm} \ s \tilde{ố} \ f(x)$ bị chặn dưới trên $[a, b]$ (chứng minh tương tự).
+
+Như vậy, hàm số $f(x)$ bị chặn dưới trên $[a, b]$. Nếu tồn tại điểm $x_1 \in [a, b]$ sao cho $f(x_1) = \operatorname*{min}_{x \in [a, b]} f(x)$
+
+Thế vậy, do $f(x)$ bị chặn dưới trên $[a, b]$ nên tồn tại cận dưới của $f(x)$ trên $[a, b]$. Đặt $m = \operatorname*{inf}_{x \in [a, b]} f(x)$. Theo định nghĩa, với mọi $\epsilon = \frac{1}{n} > 0$, tồn tại $y_n \in [a, b]$ sao cho:
+
+$$
+m \leq f(y_n) \leq m + \frac{1}{n}
+$$
+
+Từ $y_n \in [a, b]$ và định lý Bolzano-Weierstrass, tồn tại một dãy con $(y_{n_k})$ sao cho:
+
+$$
+\left\{
+\begin{array}{l l}
+0 \leq f(y_{n_k}) - m \leq \frac{1}{n_k} \\
+\displaystyle \lim_{k \to \infty} y_{n_k} = x_1 \in [a, b] & 
+\Rightarrow
+\left\{
+\begin{array}{l l}
+\displaystyle \lim_{k \to \infty} f(y_{n_k}) = m \\
+\displaystyle \lim_{k \to \infty} f(y_{n_k}) = f(x_1)
+\end{array}
+\right.
+& 
+\Rightarrow m = f(x_1) 
+\end{array}
+\right.
+$$
+
+Như vậy $f(x_1) = \operatorname*{min}_{x \in [a, b]} f(x)$
+
+$+ \arcsin$ tại $x _ { 2 } \in [ a , b ]$ sao cho $f ( x _ { 2 } ) = \operatorname* { max } _ { x \in [ a , b ] } f ( x )$
+
+Ta đặt $M = \operatorname* { sup } \ f ( x )$ và được chứng minh tương tự. 
+
+Ví dụ 2.15. Cho hai hàm số $f ( x )$ và $g ( x )$ liên tục trên $[ a , b ]$ thỏa mãn
+
+$$
+0 < g ( x ) < f ( x ) \forall x \in [ a , b ] .
+$$
+
+Chứng minh rằng: Tồn tại $\lambda > 0$ sao cho $( 1 + \lambda ) g ( x ) \leq f ( x ) \ \forall x \in [ a , b ] .$ 
+
+Đặt $h ( x ) = \frac { f ( x ) } { g ( x ) }$, theo tính chất của hàm liên tục, ta có $h ( x )$ liên tục trên $[ a , b ]$. Theo tính chất biên chọn của $h ( x )$, tồn tại $x _ { 1 } \in [ a , b ]$ sao cho $h ( x _ { 1 } ) = \operatorname* { min } _ { x \in [ a , b ] } h ( x )$. Từ $0 < g ( x ) < f ( x ) \forall x \in [ a , b ]$, suy ra $h ( x _ { 1 } ) > 1$. Đặt $\lambda = h ( x _ { 1 } ) - 1 > 0$ (const). Khi đó
+
+$$
+\forall x \in [ a , b ] : h ( x ) \geq h ( x _ { 1 } ) = 1 + \lambda \Rightarrow f ( x ) \geq ( 1 + \lambda ) g ( x ) .
+$$
+
+# 2.5. Hàm liên tục đều
+
+## 2.5.1. Định nghĩa
+
+Hàm số $f ( x )$ được gọi là liên tục đều trên miền $D$ khi và chỉ khi
+
+$$
+\forall \epsilon > 0 , \exists \delta = \delta ( \epsilon ) > 0 , \forall x , x ^ { \prime } \in D : | x - x ^ { \prime } | < \delta \Rightarrow | f ( x ) - f ( x ^ { \prime } ) | < \epsilon
+$$
+
+## 2.5.2. Quan hệ giữa tính liên tục và liên tục đều
+
+Chứng minh Với mọi $x _ { 0 } \in D$, theo định nghĩa của liên tục đều, chọn đặc biệt $x ^ { \prime } = x _ { 0 }$，
+
+$$
+\forall \epsilon > 0 , \exists \delta > 0 , \forall x : | x - x _ { 0 } | < \delta \Rightarrow | f ( x ) - f ( x _ { 0 } ) | < \epsilon
+$$
+
+$\Rightarrow f ( x )$ liên tục tại $x _ { 0 }$. Như vậy $f ( x )$ liên tục trên $D$：
+
+Nhận xét 2.17. Nếu hàm $f ( x )$ liên tục trên $D \not \Rightarrow f ( x )$ liên tục đều trên $D$
+
+Ví dụ Hàm số $f ( x ) = x ^ { 2 }$ liên tục trên $\mathbb { R }$,nhưng $f ( x )$ không liên tục đều trên $\mathbb { R }$. Vậy, theo định nghĩa của liên tục đều, $f ( x )$ không liên tục đều trên $\mathbb { R }$ khi và chỉ khi
+
+$$
+\exists \epsilon > 0 , \forall \delta > 0 , \exists x , x ^ { \prime } \in \mathbb { R } : | x - x ^ { \prime } | < \delta \Rightarrow | f ( x ) - f ( x ^ { \prime } ) | \geq \epsilon .
+$$
+
+Ta chọn $\begin{array} { r } { \epsilon = \frac { 1 } { 2 } , x = \frac { 1 } { \delta ^ { 3 } } , x ^ { \prime } = \frac { 1 } { \delta ^ { 3 } } + \frac { \delta } { 2 } , } \end{array}$ Suy ra
+
+$$
+| x - x ^ { \prime } | = \frac { \delta } { 2 } < \delta \forall \delta > 0 ~ và ~ | f ( x ) - f ( x ^ { \prime } ) | = \left| \frac { 1 } { \delta ^ { 6 } } - \left( \frac { 1 } { \delta ^ { 3 } } + \frac { \delta } { 2 } \right) ^ { 2 } \right|
+$$
+
+$$
+= \frac{1}{\delta^{2}} + \frac{\delta^{2}}{4} \geq 1 > \frac{1}{2} = \epsilon.
+$$
+
+Như vậy, $f(x)$ không liên tục đều trên $\mathbb{R}$:
+
+Tuy nhiên, nếu $f(x)$ liên tục trên một đoạn thì ta có định lý (Heine) sau:
+
+Định lý 2.18. Nếu hàm $f(x)$ liên tục trên $[a, b]$, thì $f(x)$ liên tục đều trên $[a, b]$:
+
+Chứng minh giả sử ngược lại rằng $f(x)$ không liên tục đều trên $[a, b]$, hay
+
+$$
+\exists \epsilon > 0, \forall \delta > 0, \exists x, x^{\prime} \in [a, b]: |x - x^{\prime}| < \delta \Rightarrow |f(x) - f(x^{\prime})| \geq \epsilon.
+$$
+
+Chọn $\begin{array}{r}\delta = \frac{1}{n}, \forall n \geq 1 \Rightarrow x_{n}, x_{n}^{\prime} \in [a, b]:\end{array}$ $$
+|x_{n} - x_{n}^{\prime}| < \frac{1}{n}, |f(x_{n}) - f(x_{n}^{\prime})| \geq \epsilon.
+$$
+
+Từ $x_{n} \in [a, b] \forall n \geq 1$, theo Bolzano-Weierstrass, tồn tại dãy con $(x_{n_k})$ thỏa mãn
+
+$$
+\lim _{k \to \infty} x_{n_k} = x^{*} \in [a, b].
+$$
+
+Kết hợp điều này với 
+\[
+\begin{array} { r } { | x _ { n _ { k } } - x _ { n _ { k } } ^ { \prime } | < \frac { 1 } { n _ { k } } , ~ | f ( x _ { n _ { k } } ) - f ( x _ { n _ { k } } ^ { \prime } ) | \geq \epsilon }
+\end{array}
+, cho $k \to \infty$ suy ra $x _ { n _ { k } } ^ { \prime } \to x ^ { * }$ và $| f ( x ^ { * } ) - f ( x ^ { * } ) | \geq \epsilon$, mâu thuẫn với giả thiết $\epsilon > 0$ ： □
+
+Ví dụ 2.19. Chứng minh rằng $f ( x ) = \sqrt{x}$ liên tục đều trên $[ 0 , +\infty )$ ：
+
+C Theo định lý 2.18, hàm $f(x)$ trên đoạn $[0, 1]$, theo định lý 2.18, $f(x)$ liên tục đều trên $[0, 1]$ ：
+
++ Xét hàm $f ( x )$ trên đoạn $[ 1 , +\infty ) , \forall x _ { 1 } , x _ { 2 } \in [ 1 , +\infty ) : | x _ { 1 } - x _ { 2 } | < \delta$, ta có
+
+$$
+| f ( x _ { 1 } ) - f ( x _ { 2 } ) | = | \sqrt{x_1} - \sqrt{x_2} | = \frac{|x_1 - x_2|}{\sqrt{x_1} + \sqrt{x_2}} \leq \frac{1}{2}|x_1 - x_2| < \frac{\delta}{2}.
+$$
+
+Chọn $\delta : 0 < \delta < 2\epsilon$. Theo định nghĩa, hàm $f ( x )$ liên tục đều trên $[ 1 , +\infty )$. Do vậy, $f(x)$ liên tục đều trên $[ 0 , +\infty )$
+
+Ví dụ 2.20. Chứng minh rằng $f ( x ) = \cos x^2$ không liên tục đều trên $[ 0 , +\infty )$ ：
+
+Giải Theo định nghĩa, $f(x)$ không liên tục đều trên $D$ khi và chỉ khi
+
+$$
+\exists \epsilon > 0 , \forall \delta > 0 , \exists x_1, x_2 \in D : |x_1 - x_2| < \delta \Rightarrow |f(x_1) - f(x_2)| \geq \epsilon.
+$$
+
+Trong bài này, chọn $\epsilon \in (0, 2]$. Với mọi $\delta > 0$, ta chọn
+
+$$
+x_k = \sqrt{2k\pi}, \quad x_k' = \sqrt{(2k + 1)\pi} \quad \text{với} \ k \in \mathbb{N}, k > \frac{\pi}{2\delta^2}.
+$$
+
+Khi đó,
+
+$$
+|x_k' - x_k| = |\sqrt{2k\pi} - \sqrt{(2k + 1)\pi}| = \frac{\pi}{\sqrt{2k\pi} + \sqrt{(2k + 1)\pi}} < \frac{\pi}{\sqrt{2k\pi}} < \delta
+$$
+
+và
+
+$$
+|f(x_k) - f(x_k')| = |\cos(2k\pi) - \cos((2k + 1)\pi)| = 2 \geq \epsilon.
+$$
+
+Như vậy, hàm $f(x) = \cos x^2$ không liên tục đều trên $[0, +\infty)$.
+
+# 2.6. Đạo Hàm
+
+## 2.6.1. Định Nghĩa
+
+Cho hàm số $f(x)$ xác định trên khoảng $(a, b)$.
+
++ **Hàm** số $f(x)$ được gọi là khả vi (còn gọi là có đạo hàm) tại điểm $x_0 \in (a, b)$ nếu tồn tại hữu hạn giới hạn
+
+$$
+\lim_{x \to x_0} \frac{f(x) - f(x_0)}{x - x_0} \quad \text{hay} \quad \lim_{\Delta_x \to 0} \frac{f(x_0 + \Delta_x) - f(x_0)}{\Delta_x}.
+$$
+
+Giới hạn này được ký hiệu bởi $f ^ { \prime } ( x _ { 0 } )$ hay $\textstyle { \frac { d f } { d x } } ( x _ { 0 } )$ và được gọi là đạo hàm của hàm $f ( x )$ tại $x _ { 0 }$:
+
++ Nếu $f ( x )$ khả vi tại mọi điểm $x _ { 0 } \in ( a , b )$ thì $f ( x )$ được gọi là khả vi trên $( a , b )$:
+
+Nhận xét 2.21. Nếu hàm số $f ( x )$ khả vi tại điểm $\mathbf { x } _ { 0 }$ thì $f ( x )$ liên tục tại $x _ { 0 }$:
+
+Thật vậy, $f ( x )$ khả vi tại điểm $x _ { 0 }$ hay tồn tại giới hạn
+
+$$
+\operatorname* { lim } _ { x \to x _ { 0 } } { \frac { f ( x ) - f ( x _ { 0 } ) } { x - x _ { 0 } } } \Rightarrow \operatorname* { lim } _ { x \to x _ { 0 } } { \Big ( } f ( x ) - f ( x _ { 0 } ) { \Big ) } = 0 \Rightarrow \operatorname* { lim } _ { x \to x _ { 0 } } f ( x ) = f ( x )
+$$
+
+Vậy $f ( x )$ liên tục tại $x _ { 0 }$:
+
+Ví dụ 2.22. Dùng định nghĩa, tìm đạo hàm của hàm số $f ( x ) = \sin 2 x$ tại $\begin{array} { r } { x _ { 0 } = \frac { \pi } { 6 } } \end{array}$
+
+Giải Tìm giới hạn
+
+$$
+\operatorname* { lim } _ { x \to x _ { 0 } } { \frac { f ( x ) - f ( x _ { 0 } ) } { x - x _ { 0 } } } = \operatorname* { lim } _ { x \to { \frac { \pi } { 6 } } } { \frac { \sin 2 x - \sin { \frac { \pi } { 3 } } } { x - { \frac { \pi } { 6 } } } }
+$$
+
+$$
+= \operatorname* { lim } _ { x \to { \frac { \pi } { 6 } } } { \frac { 2 \cos ( x + { \frac { \pi } { 6 } } ) . \sin ( x - { \frac { \pi } { 6 } } ) } { x - { \frac { \pi } { 6 } } } } = 2 \cos { \frac { \pi } { 3 } } = 1 .
+$$
+
+Vậy $\begin{array} { r } { f ^ { \prime } ( \frac { \pi } { 3 } ) = 1 } \end{array}$:
+
+$+ \ \mathrm { Hàm }$ số $f ( x )$ được gọi là khả vi phải (còn gọi là có đạo hàm phải) tại điểm $x _ { 0 } \in ( a , b )$, nếu tồn tại hữu hạn giới hạn
+
+$$
+\operatorname* { lim } _ { x \to x _ { 0 } ^ { + } } { \frac { f ( x ) - f ( x _ { 0 } ) } { x - x _ { 0 } } } \ \mathrm { hay } \quad \operatorname* { lim } _ { \Delta _ { x } \to 0 ^ { + } } { \frac { f ( x _ { 0 } + \Delta _ { x } ) - f ( x _ { 0 } ) } { \Delta _ { x } } } .
+$$
+
+Giới hạn này được ký hiệu bởi $f _ { + } ^ { \prime } ( x _ { 0 } )$ và được gọi là đạo hàm phải của hàm $f ( x )$ tại $x _ { 0 }$.
+
+$+ \ \mathrm { Hàm }$ số $f ( x )$ được gọi là khả vi trái (còn gọi là có đạo hàm trái) tại điểm $x _ { 0 } \in ( a , b )$, nếu tồn tại hữu hạn giới hạn
+
+$$
+\operatorname* { lim } _ { x \to x _ { 0 } ^ { - } } { \frac { f ( x ) - f ( x _ { 0 } ) } { x - x _ { 0 } } } \ \mathrm { hay } \quad \operatorname* { lim } _ { \Delta _ { x } \to 0 ^ { - } } { \frac { f ( x _ { 0 } + \Delta _ { x } ) - f ( x _ { 0 } ) } { \Delta _ { x } } } .
+$$
+
+Giới hạn này được ký hiệu bởi $f _ { - } ^ { \prime } ( x _ { 0 } )$ và được gọi là đạo hàm trái của hàm $f ( x )$ tại $x _ { 0 }$:
+
+Nhận xét 2.23. Hàm số $f(x)$ có đạo hàm tại $x_0$ khi và chỉ khi $f(x)$ có đạo hàm phải $f_{+}'(x_0)$, đạo hàm trái $f_{-}'(x_0)$ và $f_{-}'(x_0) = f_{+}'(x_0)$.
+
+Ví dụ 2.24. Chứng minh rằng: Hàm số $f(x) = x |x - 1|$ tồn tại $f_{-}'(1), f_{+}'(1)$, nhưng không tồn tại $f'(1)$:
+
+Giải
+
+$$
+f_{+}'(1) = \lim_{\Delta x \to 0^{+}} \frac{f(1 + \Delta x) - f(1)}{\Delta x} = \lim_{\Delta x \to 0^{+}} \frac{(1 + \Delta x) |\Delta x|}{\Delta x} = \lim_{\Delta x \to 0^{+}} (1 + \Delta x) |\Delta x|,
+$$
+
+$$
+f_{-}'(1) = \lim_{\Delta x \to 0^{-}} \frac{f(1 + \Delta x) - f(1)}{\Delta x} = \lim_{\Delta x \to 0^{-}} \frac{(1 + \Delta x) |\Delta x|}{\Delta x} = -1.
+$$
+
+Do đó $f_{+}'(1) = 1 \neq -1 = f_{-}'(1)$. Vậy $f(x)$ không khả vi tại 1.
+
+## 2.6.2. Các công thức của đạo hàm
+
+Cho các hàm số $f(x), g(x)$ khả vi trên $(a, b)$:
+
+$$
+\begin{array} { r l }
+& + \left( f ( x ) + g ( x ) \right) ^ { \prime } = f ^ { \prime } ( x ) + g ^ { \prime } ( x ) . \\
+& + \left( f ( x ) - g ( x ) \right) ^ { \prime } = f ^ { \prime } ( x ) - g ^ { \prime } ( x ) . \\
+& + \left( f ( x ) . g ( x ) \right) ^ { \prime } = f ^ { \prime } ( x ) . g ( x ) + f ( x ) . g ^ { \prime } ( x ) . \\
+& + \left( \frac { f ( x ) } { g ( x ) } \right) ^ { \prime } = \frac { f ^ { \prime } ( x ) . g ( x ) - f ( x ) . g ^ { \prime } ( x ) } { g ^ { 2 } ( x ) } . \\
+& + \left( k . f ( x ) \right) ^ { \prime } = k f ^ { \prime } ( x ).
+\end{array}
+$$
+
+$+$ Đạo hàm của hàm hợp $y = f(u), u = u(x)$. Khi đó $f_x' = f_u'.u_x'$.
+
++ Đạo hàm của hàm ngược $\begin{array} { r }
+y_x' = \frac { 1 } { x_y' }
+\end{array}$
+
+# 2.6.3. Đạo hàm của các hàm số thông dụng
+
+$$
+\begin{array} { r l }
+& y = C (const) \Rightarrow y ^ { \prime } = 0 \forall x \in \mathbb { R } . \\
+& y = x ^ { \alpha } (\alpha \in \mathbb { R }) \Rightarrow y ^ { \prime } = \alpha x ^ { \alpha - 1 } \forall x \in \mathbb { R } . \\
+& y = \sin x \Rightarrow y ^ { \prime } = \cos x \forall x \in \mathbb { R } .
+\end{array}
+$$
+
+$y = \cos x \Rightarrow y' = -\sin x \forall x \in \mathbb { R }.$
+
+y = tanx ⇒ y' = 1 : ∀x ∈ ℝ\{+kπ : k ∈ ℤ}.  
+cos² x  
+y = cotx ⇒ y' = -sin²x 1 ∀x ∈ ℝ\{kπ : k ∈ ℤ}.  
+y = e^x = y' = e^x ∀x ∈ ℝ.  
+
+$\begin{array} { r l } & { \mathrm { ~ \mathcal{~ y ~} ~ } \mathrm { ~  ~ { ~ \psi ~ } ~ } _ { \mathrm { { g } } } ^ { \mathrm { { ~ \tiny ~ { ~ \chi ~ } ~ } } } \mathrm { ~ { ~ \varphi ~ } ~ } _ { \mathrm { { s } } } ^ { \mathrm { { ~ \tiny ~ { ~ \chi ~ } ~ } } } \mathrm { ~ { ~ \psi ~ } ~ } _ { \mathrm { { a } } } ^ { \mathrm { { ~ \tiny ~ { ~ \chi } ~ } } } = a ^ { x } \mathrm { l } \mathrm { ~ n } \mathrm { ~ \psi ~ } x \in \mathbb { R } . } \\ & { \mathrm { ~ \mathcal{~ y ~} ~ } = a ^ { x } ( \mathrm { ~ v \widetilde { \otimes i } ~ } 1 ) \mathrm { ~ \overline { { ~ } { ~ / ~ } } ~ } a > 0 ) \Rightarrow y ^ { \prime } = a ^ { x } \mathrm { l n } a \mathrm { ~ \forall ~ } x \in \mathbb { R } ^ { * } = \{ x \in \mathbb { R } : \mathrm { ~ } x > 0 \} \\ & { \mathrm { ~ \mathcal{~ y ~} ~ } = sh \mathrm { ~ } x \Rightarrow y ^ { \prime } = ch x \forall x \in \mathbb { R } . } \\ & { \mathrm { ~ \mathcal{~ y ~} ~ } = ch \mathrm { ~ } x \Rightarrow y ^ { \prime } = sh x \forall x \in \mathbb { R } . } \\ & { \mathrm { ~ \mathcal{~ y ~} ~ } = th \mathrm { ~ } x \Rightarrow y ^ { \prime } = ch x \forall x \in \mathbb { R } . } \\ & { \mathrm { ~ \mathcal{~ y ~} ~ } = th \mathrm { ~ } x \Rightarrow y ^ { \prime } = \frac { 1 } { ch ^ { 2 } x } \mathrm { ~ \forall ~ } x \in \mathbb { R } . } \\ & { \mathrm { ~ \mathcal{~ y ~}
+
+~ } = \mathrm{coth} ~ x \Rightarrow y ^ { \prime } = \frac { - 1 } { \mathrm{sh} ^ { 2 } x } ~ \forall ~ x \in \mathbb { R } \setminus \{ 0 \}.  
+# 2.6.4. Đạo hàm của các hàm số ngược
+
+$$
+\begin{array}{r}
+y = \arcsin x \Rightarrow y' = \frac{1}{\sqrt{1 - x^2}}.
+\end{array}
+$$
+
+Chứng minh Theo định nghĩa $y = \arcsin x \Leftrightarrow x = \sin y$ và $y \in \left[-\frac{\pi}{2}, \frac{\pi}{2}\right]$. Ta có
+
+$$
+y' = \frac{1}{x_y'} = \frac{1}{(\sin y)_y'} = \frac{1}{\cos y} = \frac{1}{\sqrt{1 - x^2}}.
+$$
+
+Tương tự như chứng minh trên, ta có các kết quả sau:
+
+$$
+\begin{array}{rl}
++ & y = \operatorname{arccos} x \Rightarrow y' = \frac{-1}{\sqrt{1 - x^2}} \quad \forall x \in (-1, 1). \\
++ & y = \arctan x \Rightarrow y' = \frac{1}{1 + x^2} \quad \forall x \in \mathbb{R}. \\
++ & y = \operatorname{arccot} x \Rightarrow y' = \frac{-1}{1 + x^2} \quad \forall x \in \mathbb{R}.
+\end{array}
+$$
+
+Ví dụ 2.25 Cho hàm số $\begin{array}{r} f(x) = \left( x + \frac{1}{x} \right)^{2x+1} \end{array}$ với $x > 0$. Tìm $f'(x)$:
+
+Giải $\begin{array}{r} \ln f(x) = (2x + 1) \ln \left( x + \frac{1}{x} \right) \end{array}$. Đạo hàm hai vế, ta có
+
+$$
+\begin{array} { c } { \displaystyle \frac 1 { f ( x ) } f ^ { \prime } ( x ) = 2 x \ln ( x + \frac 1 x ) + ( 2 x + 1 ) \frac 1 { x + \frac 1 x } ( 1 - \frac { 1 } { x ^ { 2 } } ) } \\ { = 2 x \ln ( 1 + x ) + \displaystyle \frac { ( 2 x + 1 ) ( x - 1 ) } { x ( x + 1 ) } . } \end{array}
+$$
+
+$$
+\begin{array} { l } { f ^ { \prime } ( x ) = f ( x ) \Big ( 2 x \ln ( 1 + x ) + \displaystyle \frac { ( 2 x + 1 ) ( x - 1 ) } { x ( x + 1 ) } \Big ) } \\ { = \Big ( x + \displaystyle \frac { 1 } { x } \Big ) ^ { 2 x + 1 } \Big ( 2 x \ln ( 1 + x ) + \displaystyle \frac { ( 2 x + 1 ) ( x - 1 ) } { x ( x + 1 ) } \Big ) . } \end{array}
+$$
+
+Cho hàm $f ( x )$ khả vi tại $x$, theo định nghĩa
+
+$$
+\operatorname* { lim } _ { \Delta _ { x } \to 0 } { \frac { f ( x + \Delta _ { x } ) - f ( x ) } { \Delta _ { x } } } = f ^ { \prime } ( x ) .
+$$
+
+Điều này có nghĩa là
+
+$$
+f ( x + \Delta _ { x } ) - f ( x ) = f ^ { \prime } ( x ) \Delta _ { x } + o ( \Delta _ { x } ) .
+$$
+
+Tích số $f ^ { \prime } ( x ) \Delta _ { x }$ được gọi là vi phân của $f ( x )$ tại điểm $x$, ký hiệu là $d f ( x )$. Hay
+
+$$
+d f ( x ) = f ^ { \prime } ( x ) d x .
+$$
+
+Tương tự như đạo hàm của hàm số $f ( x )$ tại điểm $x$, ta có các tính chất của vi phân.
+
+$$
+\begin{array} { r l }
+& { + d \Big ( f ( x ) + g ( x ) \Big ) = d \Big ( f ( x ) \Big ) + d \Big ( g ( x ) \Big ) , } \\
+& { + d \Big ( f ( x ) - g ( x ) \Big ) = d \Big ( f ( x ) \Big ) - d \Big ( g ( x ) \Big ) . } \\
+& { + d \Big ( f ( x ) . g ( x ) \Big ) = g ( x ) d \Big ( f ( x ) \Big ) + f ( x ) d \Big ( g ( x ) \Big ) . } \\
+& { + d \Big ( \frac { f ( x ) } { g ( x ) } \Big ) = \frac { g ( x ) d \Big ( f ( x ) \Big ) - f ( x ) d \Big ( g ( x ) \Big ) } { g ^ { 2 } ( x ) } . }
+\end{array}
+$$
+
+2.8. Đạo hàm và vi phân cấp cao
+
+# 2.8.1. Định nghĩa
+
+Cho hàm $f(x)$ xác định trên miền $D$, $x \in D$:
+
++ Nếu $f(x)$ khả vi tại $x$, thì $f'(x)$ được gọi là đạo hàm cấp 1 của $f(x)$:
+
++ Nếu $f'(x)$ khả vi tại $x$, thì $(f'(x))'$ được gọi là đạo hàm cấp 2 của $f(x)$, ký hiệu là $f''(x)$:
+
++ Nếu $f''(x)$ khả vi tại $x$, thì $(f''(x))'$ được gọi là đạo hàm cấp 3 của $f(x)$, ký hiệu là $f^{(3)}(x)$:
+
++ Nếu $f^{(n-1)}(x)$ khả vi tại $x$, thì $(f^{(n-1)}(x))'$ được gọi là đạo hàm cấp $n$ của $f(x)$, ký hiệu là $f^{(n)}(x)$:
+
+Tương tự như vậy, một cách quy nạp, vi phân cấp $n$ của hàm $f(x)$, ký hiệu $d^n f(x)$ được xác định bởi công thức
+
+$$
+d ^ { n } f ( x ) = d ( d ^ { n - 1 } f ( x ) ) = f ^ { ( n ) } ( x ) d x ^ { n }.
+$$
+
+# 2.8.2. Tính chất
+
+Bảng quy tắc toán học, ta chứng minh được các tính chất sau:
+
+Với đạo hàm cấp $n$
+
+$$
+\begin{array}{l}
+{\left( f(x) + g(x) \right)^{(n)} = \left( f(x) \right)^{(n)} + \left( g(x) \right)^{(n)}.} \\
+{\left( f(x) - g(x) \right)^{(n)} = \left( f(x) \right)^{(n)} - \left( g(x) \right)^{(n)}.} \\
+{\left( k f(x) \right)^{(n)} = k \left( f(x) \right)^{(n)} \text{ với } k = const.} \\
+{\left( u v \right)^{(n)} = \displaystyle\sum_{k=0}^{n} C_{n}^{k} u^{(k)} v^{(n-k)} \text{ với } u = u(x), v = v(x), u^{(0)} = u, v^{(0)} = v.}
+\end{array}
+$$
+
+Với vi phân cấp $n$ tương tự như đạo hàm cấp $n$:
+
+Ví dụ 2.26. Tìm đạo hàm cấp $n$ của hàm số
+
+$$
+f(x) = \sin(ax + b) \text{ với } a, b: const.
+$$
+
+Giải
+
+$f^{\prime}(x) = a \cos(ax + b) = a \sin\left(ax + b + 1 \cdot \frac{\pi}{2}\right).$
+
+$(f^{\prime\prime}(x) = -a^{2} \sin(ax + b) = a^{2} \sin\left(ax + b + 2 \cdot \frac{\pi}{2}\right).)$
+
+Bằng quy nạp toán học, ta chứng minh được rằng
+
+$$
+f^{(n)}(x) = a^n \sin\left(ax + b + \frac{n\pi}{2}\right).
+$$
+
+Ví dụ 2.27. Tìm đạo hàm cấp $n$ của hàm số
+
+$$
+f(x) = \frac{1}{ax + b} \quad \text{với } a \neq 0, b: const.
+$$
+
+Giải $f(x) = (ax + b)^{-1} \Rightarrow f^{\prime}(x) = (-1)1!a^{1}(ax + b)^{-2}.$
+$f^{\prime\prime}(x) = (-1)(-2)a^{2}(ax + b)^{-3} = (-1)^{2}2!a^{2}(ax + b)^{-3}.$
+
+Bằng quy nạp toán học, ta chứng minh được rằng
+
+$$
+f^{(n)}(x) = (-1)^{n} a^n (ax + b)^{-n-1} = \frac{(-1)^{n} n! a^n}{(ax + b)^{n+1}}.
+$$
+
+Ví dụ 2.28. Tìm đạo hàm cấp $n$ của hàm số
+
+$$
+f(x) = \frac{x^2 + 1}{(x - 1)^3 (x + 3)}.
+$$
+
+Giải Đồng nhất hệ số
+
+$$
+\frac{x^2 + 1}{(x - 1)^3 (x + 3)} = \frac{A}{x + 3} + \frac{B}{(x - 1)^3} + \frac{C}{(x - 1)^2} + \frac{D}{x - 1} \quad \forall x \neq 1, x \neq
+$$
+
+Ta nhận được
+
+$$
+A = -\frac{5}{32}, B = \frac{1}{2}, C = \frac{3}{8}, D = \frac{5}{32}.
+$$
+
+Như vậy, $f(x)$ được viết lại dưới dạng
+
+$$
+f(x) = -\frac{5}{32} (x + 3)^{-1} + \frac{1}{2} (x - 1)^{-3} + \frac{3}{8} (x - 1)^{-2} + \frac{5}{32} (x - 1)^{-1}.
+$$
+
+Tương tự như ví dụ 2.27, ta có
+
+$$
+\begin{array}{l}
+((x + 3)^{-1})^{(n)} = (-1)^n n! (x + 3)^{-n-1}, \\
+((x - 1)^{-3})^{(n)} = \frac{1}{2} (-1)^n (n + 2)! (x - 1)^{-n-3}, \\
+((x - 1)^{-2})^{(n)} = (-1)^n (n + 1)! (x - 1)^{-n-2}, \\
+((x - 1)^{-1})^{(n)} = (-1)^n n! (x - 1)^{-n-1}.
+\end{array}
+$$
+
+Như vậy
+
+$$
+\begin{array} { c } { f^{(n)}(x) = - \frac {5}{32} (-1)^n n! (x + 3)^{-n-1} + \frac {1}{4} (-1)^n (n+2)! (x - 1)^{-n-3}, } \\ { + \frac {3}{8} (-1)^n (n+1)! (x - 1)^{-n-2} + \frac {5}{32} (-1)^n n! (x - 1)^{-n-1}. } \end{array}
+$$
+
+Ví dụ 2.29. Tìm đạo hàm cấp $n$ của hàm số
+
+$$
+f(x) = (x^2 - 3x + 7)\cos(3x).
+$$
+
+Giải: $f(x) = (x^2 - 3x + 7)\sin\left(3x + \frac{\pi}{2}\right)$. Theo công thức $(uv)^{(n)} = \sum_{k=0}^{n} C_n^k u^{(k)} v^{(n-k)},$
+
+ta có
+
+$$
+f^{(n)}(x) = \sum_{k=0}^{n} C_n^k (x^2 - 3x + 7)^{(k)} \left(\sin\left(3x + \frac{\pi}{2}\right)\right)^{(n-k)}
+$$
+
+Từ ví dụ 2.26, suy ra
+
+$$
+\left(\sin\left(3x + \frac{\pi}{2}\right)\right)^{(n-k)} = 3^{n-k} \sin\left(3x + (n - k + 1) \frac{\pi}{2}\right).
+$$
+
+Do đó
+
+$$
+(x^2 - 3x + 7)' = 6x - 3, \quad (x^2 - 3x + 7)'' = 6, \quad (x^2 - 3x + 7)^{(k)} = 0 \forall k \geq 3
+$$
+
+nên
+
+$$
+\begin{array} { l }
+O = C_{n}^{0}(x^2 - 3x + 7)3^n \sin(3x + (n+1)\frac{\pi}{2}) + C_{n}^{1}(2x-3)3^{n-1} \sin(3x) \\
+O \qquad + 2C_{n}^{2}3^{n-2}\sin(3x + (n-1)\frac{\pi}{2})
+\end{array}
+$$
+
+$$
+\begin{array} { l }
+c = (x^2 - 3x + 7)3^n \sin(3x + n\frac{\pi}{2}) + n(2x-3)3^{n-1}\sin(3x + (n-1)\frac{\pi}{2}) \\
++ \frac{n}{n-1}3^{n-2}\sin(3x + (n-2)\frac{\pi}{2})
+\end{array}
+$$
+
+# 2.8.3. Các định lý về hàm khả vi
+
+Cho hàm số $f(x)$ xác định trên miền $D$ và $x_0 \in D$:
+
+$+ f(x)$ được gọi là đạt cực đại (còn gọi là cực đại địa phương) tại điểm $x_0$, nếu tồn tại $(x_0 - \delta, x_0 + \delta) \subseteq D$ sao cho
+
+$$
+f(x) \leq f(x_0) \forall x \in (x_0 - \delta, x_0 + \delta).
+$$
+
+$+ f(x)$ được gọi là đạt cực tiểu (còn gọi là cực tiểu địa phương) tại điểm $x_0$, nếu tồn tại $(x_0 - \delta, x_0 + \delta) \subseteq D$ sao cho 
+
+$$
+f(x) \geq f(x_0) \forall x \in (x_0 - \delta, x_0 + \delta).
+$$
+
+$+ f(x)$ được gọi là đạt cực đại toàn cục (còn gọi là giá trị lớn nhất) tại điểm $x_0$, nếu 
+
+$$
+f(x) \leq f(x_0) \forall x \in D.
+$$
+
+$+ f(x)$ được gọi là đạt cực trị toàn cục (còn gọi là giá trị nhỏ nhất) tại điểm $x_0$, nếu
+
+$$
+f(x) \geq f(x_0) \forall x \in D.
+$$
+
+$+ f(x)$ đạt cực trị tại $x_0$, nếu $f(x)$ đạt cực đại hoặc cực tiểu tại $x_0$:
+
+Định lý 2.30. (Fermat) Nếu $f(x)$ khả vi tại $x_0$ và đạt cực trị tại $x_0$, thì $f'(x_0) = 0$:
+
+Chứng minh Giả sử $f(x)$ xác định trên $D$ và đạt cực đại tại điểm $x_0$, tồn tại $\delta > 0$ sao cho
+
+$$
+f(x) \leq f(x_0) \forall x \in (x_0 - \delta, x_0 + \delta) \subseteq D.
+$$
+
+Suy ra
+
+$$
+\left\{ 
+\begin{array}{ll}
+f'(x_0) = f'_+(x_0) = \lim_{x \to x_0^+} \frac{f(x) - f(x_0)}{x - x_0} \leq 0 \\
+f'(x_0) = f'_-(x_0) = \lim_{x \to x_0^-} \frac{f(x) - f(x_0)}{x - x_0} \geq 0
+\end{array}
+\right. 
+\Rightarrow f'(x_0) = 0.
+$$
+
+Nhận xét 2.31.
+
+1. Hàm số $f(x)$ đạt cực trị tại điểm $x_0$ chưa chắc đã khả vi tại $x_0$: Ví dụ như $f(x) = |x|$ đạt cực tiểu tại $x_0 = 0$, nhưng $f(x)$ không khả vi tại $x_0$.
+
+2. Nghiệm $x_0$ của phương trình $f'(x) = 0$ được gọi là điểm đọng của hàm số $f(x)$. Điểm $x_0$ có thể là điểm đọng của hàm số $f(x)$, nhưng $x_0$ có thể không phải là điểm cực trị. Ví dụ như $f(x) = x^3$ không có điểm cực trị, nhưng $x_0 = 0$ là điểm đọng.
+
+Định lý 2.32. (Rolle)
+
+Cho hàm số $f(x)$ liên tục trên $[a, b]$, khả vi trong $(a, b)$ và $f(a) = f(b)$. Khi đó, tồn tại $c \in (a, b)$ sao cho $f'(c) = 0$.
+
+Chứng minh: Do $f(x)$ liên tục trên $[a, b]$, nên tồn tại $x_1, x_2 \in [a, b]$ sao cho
+
+$$
+f(x_1) = \max_{x \in [a, b]} f(x) \quad \text{và} \quad f(x_2) = \min_{x \in [a, b]} f(x) \Rightarrow f(x_2) \leq f(x_1).
+$$
+
+Nếu $f(x_1) = f(x_2)$, thì $f(x) = f(x_1) (\text{const}) \forall x \in [a, b]$ suy ra $\forall c \in (a, b)$. Nếu $f(x_2) < f(x_1)$ và từ $f(a) = f(b)$ suy ra $x_1 \in (a, b)$ hay $x_2 \in (a, b)$. Giả sử $x_1 \in (a, b)$, tồn tại $(x_1 - \delta, x_1 + \delta) \subseteq (a, b)$ sao cho $f(x_1) \geq f(x) \forall x \in (x_0 - \delta, x_0 + \delta)$. Do đó, $x_1$ là điểm cực đại, theo Fermat, $f'(x_1) = 0 \Rightarrow c = x_1$: Với $x_2 \in (a, b)$ bằng tương tự như trường hợp $x_1 \in (a, b)$, chọn $c = x_2$：□
+
+Ví dụ 2.33. Cho hàm số $f(x)$ liên tục trên $[a; b]$, khả vi trên $(a; b)$ và thỏa mãn
+
+$$
+\left\{ \begin{array}{ll}
+f(a) = f(b) = 0 \\
+f'_+(a) > 0 \\
+f'_-(b) < 0.
+\end{array} \right.
+$$
+
+Chứng minh rằng: $c_1, c_2, c_3 \in (a, b)$ sao cho
+
+$$
+\left\{
+\begin{array}{l}
+c_1 < c_2 < c_3 \\
+f(c_2) = 0 \\
+f'(c_1) = f'(c_3) = 0.
+\end{array} \right.
+$$
+
+Giải Theo định nghĩa đạo hàm, ta có
+
+$$
+f'_+(a) = \lim_{\Delta x \to 0^+} \frac{f(a + \Delta x) - f(a)}{\Delta x} > 0
+$$
+
+$$
+\Rightarrow \exists \delta _ { 1 } > 0 : f ( x ) > 0 \forall x \in ( a , a + \delta _ { 1 } ) \Rightarrow f ( a + \frac { \delta _ { 1 } } { 2 } ) > 0 .
+$$
+
+$$
+f '_{ -} = \operatorname*{lim}_{\Delta_{x} \to 0^{-}} \frac { f ( b + \Delta_{x} ) - f ( b ) } { \Delta_{x} } < 0
+$$
+
+$$
+\Rightarrow \exists \delta _ { 2 } > 0 : f ( x ) < 0 \forall x \in ( b - \delta _ { 2 } , b ) \Rightarrow f ( b - \frac { \delta _ { 2 } } { 2 } ) < 0 .
+$$
+
+Như vậy $\begin{array} { r } { f ( a + \frac { \delta _ { 1 } } { 2 } ) f ( b - \frac { \delta _ { 2 } } { 2 } ) < 0 \Rightarrow \exists c _ { 2 } \in ( a , b ) : f ( c _ { 2 } ) = 0 } \end{array}$ (do $f ( x )$ liên tục). Theo định lý Rolle, tồn tại $c _ { 1 } \in ( a , c _ { 2 } ) : f ^ { \prime } ( c _ { 1 } ) = 0$ và $c _ { 3 } \in ( c _ { 2 } , b ) : f ^ { \prime } ( c _ { 3 } ) = 0$. Ví dụ dưới đây được xem như là một sự mở rộng của định lý Rolle.
+
+Ví dụ 2.34. Cho hàm số $f ( x )$ liên tục trên đoạn $[ a , b ]$, khả vi phải và trái trên khoảng $( a , b )$, ví dụ $f ( a ) = f ( b )$. Chứng minh rằng tồn tại $c \in ( a , b )$ sao cho
+
+$$
+f '_{ +} ( c ) . f '_{ -} ( c ) \leq 0 .
+$$
+
+Giải Đặt
+
+$$
+f ( x _ { 1 } ) = \operatorname*{min}_{x \in [ a , b ]} f ( x ) , f ( x _ { 2 } ) = \operatorname*{max}_{x \in [ a , b ]} f ( x ) .
+$$
+
+-Nếu $f(x_1) = f(x_2)$ thì $f(x) = const \Rightarrow f_{+}^{\prime}(c).f_{-}^{\prime}(c) = 0.$
+
+-Nếu $f(x_1) < f(x_2)$, từ $f(a) = f(b) \Rightarrow x_1 \in (a,b)$ hay $x_2 \in (a,b)$, không mất tính tổng quát, giả sử $x_1 \in (a,b)$. Khi đó
+
+$$
+\left\{ 
+\begin{array}{ll}
+f_{+}^{\prime}(x_1) = \displaystyle \lim_{x \to x_1^{+}} \frac{f(x) - f(x_1)}{x - x_1} \geq 0 \\
+f_{-}^{\prime}(x_1) = \displaystyle \lim_{x \to x_1^{-}} \frac{f(x) - f(x_1)}{x - x_1} \leq 0 
+\end{array}
+\right.
+\Rightarrow f_{+}^{\prime}(x_1).f_{-}^{\prime}(x_1) \leq 0 \Rightarrow c = x_1.
+$$
+
+Định lý 2.35. (Lagrange) Cho hàm $f(x)$ liên tục trên $[a,b]$ và khả vi trên $(a,b)$: Chứng minh rằng: Tồn tại $c \in (a,b)$ sao cho
+
+$$
+\frac{f(b) - f(a)}{b - a} = f^{\prime}(c).
+$$
+
+![](images/a9d066eeafb92b7fd04dfa5906dd8b3610370dffea9f03255c5d300143e0c083.jpg)  
+Hình 1: Biểu diễn hình học của định lý Lagrange
+
+Ý nghĩa hình học Tiếp tuyến của đồ thị hàm số $y = f(x)$ tại điểm $c$ song song với đường thẳng $AB$, với $A(a, f(a)), B(b, f(b))$
+
+Chứng minh Đặt
+
+$$
+g ( x ) = f ( x ) - \frac{f(b) - f(a)}{b - a} (x - a).
+$$
+
+Do $f(x)$ liên tục trên $[a, b]$ và khả vi trên $(a, b)$, nên $g(x)$ cũng liên tục trên $[a, b]$ và khả vi trên $(a, b)$. Hơn nữa, $g(a) = f(a)$ và $g(b) = f(b) - \frac{f(b) - f(a)}{b - a}(b - a) = 0$. Theo định lý Rolle, với hàm $g(x)$ trên $[a, b]$, tồn tại $c \in (a, b)$ sao cho $g'(c) = 0$. Mà
+
+$$
+g'(x) = f'(x) - \frac{f(b) - f(a)}{b - a} \Rightarrow g'(c) = f'(c) - \frac{f(b) - f(a)}{b - a} = 0.
+$$
+
+Ví dụ 2.36. Cho hàm $f(x)$ liên tục trên $[a, b]$ và khả vi trên $(a, b)$ trừ ra $n$ điểm. Chứng minh rằng tồn tại $n + 1$ số dương $\alpha_1$, $\alpha_2$, ..., $\alpha_{n+1}$ và $n + 1$ số $c_i \in (i = 1, 2, ..., n + 1)$ sao cho
+
+$$
+\left\{
+\begin{array}{ll}
+\sum_{i=1}^{n+1} \alpha_i = 1 \\
+a < c_1 < c_2 < ... < c_{n+1} < b \\
+\frac{f(b) - f(a)}{b - a} = \sum_{i=1}^{n+1} \alpha_i f'(c_i).
+\end{array}
+\right.
+$$
+
+Giả sử $f(x)$ không khả vi tại $n$ điểm trên khoảng $(a, b): a < d_1 < d_2 < ... < d_n < b$. Theo định lý Lagrange, trên các đoạn $[a, d_1], [d_1, d_2], ..., [d_n, b]$, ta có
+
+$$
+\left\{ \begin{array} { l l } { \exists c _ { 1 } \in ( a , d _ { 1 } ) : \frac { f ( d _ { 1 } ) - f ( a ) } { d _ { 1 } - a } = f ^ { \prime } ( c _ { 1 } ) \Rightarrow f ( d _ { 1 } ) - f ( a ) = ( d _ { 1 } - a ) f ^ { \prime } ( c _ { 1 } ) } \\ { \exists c _ { 2 } \in ( d _ { 1 } , d _ { 2 } ) : \frac { f ( d _ { 2 } ) - f ( d _ { 1 } ) } { d _ { 2 } - d _ { 1 } } = f ^ { \prime } ( c _ { 2 } ) \Rightarrow f ( d _ { 2 } ) - f ( d _ { 1 } ) = ( d _ { 2 } - d _ { 1 } ) f ^ { \prime } ( c _ { 2 } ) } \\ { \dots } \\ { \exists c _ { n + 1 } \in ( d _ { n } , b ) : \frac { f ( b ) - f ( d _ { n } ) } { b - d _ { n } } = f ^ { \prime } ( c _ { n + 1 } ) \Rightarrow f ( b ) - f ( d _ { n } ) = ( b - d _ { n } ) f ^ { \prime } ( c _ { n + 1 } ) } \end{array} \right.
+$$
+
+Suy ra
+
+$$
+f ( b ) - f ( a ) = ( d _ { 1 } - a ) f ^ { \prime } ( c _ { 1 } ) + ( d _ { 2 } - d _ { 1 } ) f ^ { \prime } ( c _ { 2 } ) + \ldots + ( b - d _ { n } ) f ^ { \prime } ( c _ { n + 1 } )
+$$
+
+Hay
+
+$$
+{ \begin{array} { r l } { f(b) - f(a) } & { = \cfrac { d _ { 1 } - a } { b - a } f ^ { \prime } ( c _ { 1 } ) + \cfrac { d _ { 2 } - d _ { 1 } } { b - a } f ^ { \prime } ( c _ { 2 } ) + \ldots + \cfrac { b - d _ { n } } { b - a } f ^ { \prime } ( c _ { n + 1 } ) . } \\ { } & { = \sum _ { i = 1 } ^ { n + 1 } \alpha _ { i } f ^ { \prime } ( c _ { i } ) \quad \text{với} \ d _ { 0 } = a , d _ { n + 1 } = b , \alpha _ { j } = \cfrac { d _ { j } - d _ { j - 1 } } { b - a } \ \forall j = } \end{array} }
+$$
+
+Định lý 2.37. (Cauchy)
+
+Cho $f(x), g(x)$ là hai hàm số liên tục trên $[a, b]$, khả vi trong khoảng $(a, b)$ và $g'(x) \neq 0 \forall x \in (a, b)$. Khi đó tồn tại $c \in (a, b)$ sao cho
+
+$$
+{ \frac { f(b) - f(a) } { g(b) - g(a) } } = { \frac { f'(c) } { g'(c) } }.
+$$
+
+Chứng minh Theo định lý Lagrange, tồn tại $c_0 \in (a, b)$ sao cho
+
+$$
+{ \frac { g(b) - g(a) } { b - a } } = g'(c_0) \neq 0 \Rightarrow g(b) \neq g(a).
+$$
+
+Đặt
+
+$$
+\varphi(x) = f(x) - f(a) - { \frac { f(b) - f(a) } { g(b) - g(a) } } [g(x) - g(a)].
+$$
+
+Do $f(x), g(x)$ liên tục trên $[a, b]$, khả vi trên khoảng $(a, b)$ nên $\varphi(x)$ cũng liên tục trên $[a, b]$ và khả vi trên khoảng $(a, b)$. Ta có $\varphi(a) = 0 = \varphi(b)$, theo định lý Rolle, tồn tại $c \in (a, b)$ sao cho $\varphi'(c) = 0$. Từ
+
+$$
+\varphi'(x) = f'(x) - \frac{f(b) - f(a)}{g(b) - g(a)} g'(x),
+$$
+
+suy ra
+
+$$
+\varphi'(c) = f'(c) - \frac{f(b) - f(a)}{g(b) - g(a)} g'(c) = 0 \Rightarrow \frac{f(b) - f(a)}{g(b) - g(a)} = \frac{f'(c)}{g'(c)}.
+$$
+
+Trong trường hợp đặc biệt: Nếu $g(x) = x \forall x \in [a, b]$, thì định lý Cauchy trở về định lý Lagrange.
+
+Ví dụ 2.38. Cho hàm $f(x)$ khả vi trên $[a, b]$ với $0 < a < b$. Chứng minh rằng: Tồn tại $c \in (a, b)$ sao cho
+
+$$
+\frac{af(b) - bf(a)}{b - a} = cf'(c) - f(c).
+$$
+
+Giải Ta có
+
+$$
+\frac{af(b) - bf(a)}{b - a} = \frac{\frac{f(b)}{b} - \frac{f(a)}{a}}{-\frac{1}{b} + \frac{1}{a}} = \frac{\varphi(b) - \varphi(a)}{\phi(b) - \phi(a)},
+$$
+
+trong đó
+
+$$
+\varphi(x) = \frac{f(x)}{x}, \quad \phi(x) = -\frac{1}{x}.
+$$
+
+là các hàm liên tục trên $[ a, b ]$ và khả vi trên $( a, b )$: $\mathrm{Với} \quad 0 < a < b$, nên các hàm $\varphi(x)$ và $\phi(x)$ thỏa mãn tất cả các điều kiện của định lý Cauchy trên $[a, b]$. Bỏi vậy, tồn tại $c \in (a, b)$ sao cho
+
+$$
+\frac{\varphi(b) - \varphi(a)}{\phi(b) - \phi(a)} = \frac{\varphi'(c)}{\phi'(c)} = c f'(c) - f(c).
+$$
+
+$$
+\frac{a f(b) - b f(a)}{b - a} = c f'(c) - f(c).
+$$
+
+Dưới đây là một vài ứng dụng của các định lý giá trị trung bình.
+
+# 2.9. Công thức Taylor
+
+## 2.9.1. Đa thức Taylor
+
+Cho hàm số $f(x)$ khả vi đến cấp $n + 1$ trong lân cận của điểm $x_0$. Khi đó, đa thức bậc $n$, $P_n(x)$ được gọi là đa thức Taylor bậc $n$ của hàm $f(x)$ tại điểm $x_0$ khi và chỉ khi
+
+$$
+\left\{
+\begin{array}{ll}
+P_n(x_0) = f(x_0) \\
+P_n'(x_0) = f'(x_0) \\
+\dots \\
+P_n^{(n)}(x_0) = f^{(n)}(x_0).
+\end{array}
+\right.
+$$
+
+Trong trường hợp đặc biệt, nếu $x_0 = 0$ thì $P_n(x)$ được gọi là đa thức Maclaurin của hàm $f(x)$:
+
+Định lý 2.39. Nếu $P_n(x)$ là đa thức Taylor của hàm $f(x)$ tại điểm $x_0$, thì
+
+$$
+x ) = f ( x _ { 0 } ) + { \frac { 1 } { 1 ! } } f ^ { \prime } ( x _ { 0 } ) ( x - x _ { 0 } ) ^ { 1 } + { \frac { 1 } { 2 ! } } f ^ { \prime \prime } ( x _ { 0 } ) ( x - x _ { 0 } ) ^ { 2 } + . . . + { \frac { 1 } { n ! } } f ^ { ( n ) } ( x _ { 0 } ) ( x - x _ { 0 } ) ^ { 3 } .
+$$
+
+Chứng minh: Do $P _ { n } ( x )$ là đa thức bậc $n$, nên $P _ { n } ( x )$ bao giờ cũng biểu diễn được dưới dạng
+
+$$
+P _ { n } ( x ) = A _ { 0 } + A _ { 1 } ( x - x _ { 0 } ) ^ { 1 } + A _ { 2 } ( x - x _ { 0 } ) ^ { 2 } + . . . + A _ { n } ( x - x _ { 0 } ) ^ { n } .
+$$
+
+- Thay $x = x _ { 0 }$ vào (2.1), ta có $A _ { 0 } = P _ { n } ( x _ { 0 } )$. Theo định nghĩa của đa thức Taylor $P _ { n } ( x )$, suy ra $A _ { 0 } = f ( x _ { 0 } )$.
+
+- Đạo hàm cấp 1 hai vế của (2.1), ta có
+
+$$
+P _ { n } ^ { \prime } ( x ) = A _ { 1 } + 2 A _ { 2 } ( x - x _ { 0 } ) ^ { 1 } + . . . + n A _ { n } ( x - x _ { 0 } ) ^ { n - 1 } .
+$$
+
+Thay $x = x _ { 0 }$ vào $P _ { n } ^ { \prime } ( x )$, ta có $A _ { 1 } = 1 ! P _ { n } ^ { \prime } ( x _ { 0 } )$. Theo định nghĩa của đa thức Taylor $P_n(x)$, suy ra $A_1 = f'(x_0)$.
+
+- Đạo hàm cấp $n$ hai vế của (2.1), ta có
+
+$$
+P _ { n } ^ { ( n ) } ( x ) = n ! A _ { n } \Rightarrow A _ { n } = \frac { P _ { n } ^ { ( n ) } ( x _ { 0 } ) } { n ! } .
+$$
+
+Theo định nghĩa của đa thức Taylor $P _ { n } ( x )$, suy ra $\begin{array} { r } { A _ { n } = \frac { f ^ { ( n ) } ( x _ { 0 } ) } { n ! } } \end{array}$.
+
+2.9.2. Phần dư Taylor
+
+Cho \( P_n(x) \) là đa thức Taylor bậc \( n \) tại \( x_0 \) của hàm \( f(x) \). Khi đó, phần dư Taylor bậc \( n \) của hàm \( f(x) \), ký hiệu \( R_n(x) \), được xác định bởi
+
+\[
+R_n(x) = f(x) - P_n(x).
+\]
+
+Định lý 2.40. Nếu \( f(x) \) khả vi cấp \( n + 1 \) trong khoảng \( (x_0 - \delta, x_0 + \delta) \), thì tồn tại số \( c \) nằm giữa hai số \( x \) và \( x_0 \) hay tồn tại \( c = x_0 + \lambda(x - x_0) \) với \( \lambda \in (0, 1) \) sao cho
+
+\[
+R_n(x) = \frac{1}{(n+1)!} f^{(n+1)}(c)(x-x_0)^{n+1}.
+\]
+
+Chứng minh: Từ \( f(x) \) khả vi cấp \( n + 1 \), suy ra \( R_n(x) \) khả vi cấp \( n + 1 \) và
+
+\[
+R_n^{(k)}(x) = f^{(k)}(x) - P_n^{(k)}(x) \quad \forall k = 1, 2, \ldots, n.
+\]
+
+Khi đó,
+
+\[
+R_n(x_0) = R_n'(x_0) = \ldots = R_n^{(n)}(x_0) = 0.
+\]
+
+Đặt \( g(x) = (x - x_0)^{n+1} \). Ta cũng có
+
+\[
+g(x_0) = g'(x_0) = \ldots = g^{(n)}(x_0) = 0 \quad \text{và} \quad g^{(n+1)}(x) = (n+1)!.
+\]
+
+Theo định lý Cauchy, ta có tồn tại \( c_1 = x_0 + \lambda_1(x - x_0) \) với \( \lambda_1 \in (0, 1) \) sao cho
+
+$$
+{ \frac { R _ { n } ( x ) } { g ( x ) } } = { \frac { R _ { n } ( x ) - R _ { n } ( x _ { 0 } ) } { g ( x ) - g ( x _ { 0 } ) } } = { \frac { R _ { n } ^ { \prime } ( c _ { 1 } ) } { g ^ { \prime } ( c _ { 1 } ) } } .
+$$
+
+Tồn tại $c _ { 2 } = x _ { 0 } + \lambda _ { 2 } ( c _ { 1 } - x _ { 0 } )$ với $\lambda _ { 2 } \in ( 0 , 1 )$ sao cho
+
+$$
+{ \frac { R _ { n } ^ { \prime } ( c _ { 1 } ) } { g ^ { \prime } ( c _ { 1 } ) } } = { \frac { R _ { n } ^ { \prime } ( c _ { 1 } ) - R _ { n } ^ { \prime } ( x _ { 0 } ) } { g ^ { \prime } ( c _ { 1 } ) - g ^ { \prime } ( x _ { 0 } ) } } = { \frac { R _ { n } ^ { \prime \prime } ( c _ { 2 } ) } { g ^ { \prime \prime } ( c _ { 2 } ) } } .
+$$
+
+Tồn tại $\varphi _ { n + 1 } = x _ { 0 } + \lambda _ { n } ( c _ { n } - x _ { 0 } )$ với $\lambda _ { n } \in ( 0 , 1 ) \Leftrightarrow c _ { n + 1 } = x _ { 0 } + \lambda ( x - x _ { 0 } )$ với $\lambda \in ( 0 , 1 )$ sao cho
+
+$$
+\frac { R _ { n } ^ { ( n ) } ( c _ { n } ) } { g ^ { ( n ) } ( c _ { n } ) } = \frac { R _ { n } ^ { ( n ) } ( c _ { n } ) - R _ { n } ^ { ( n ) } ( x _ { 0 } ) } { g ^ { ( n ) } ( c _ { n } ) - g ^ { ( n ) } ( x _ { 0 } ) } = \frac { R _ { n } ^ { ( n + 1 ) } ( c _ { n + 1 } ) } { g ^ { ( n + 1 ) } ( c _ { n + 1 } ) } = \frac { R _ { n } ^ { ( n + 1 ) } ( c _ { n + 1 } ) } { ( n + 1 ) ! } .
+$$
+
+Như vậy
+
+$$
+{ \frac { R _ { n } ( x ) } { g ( x ) } } = { \frac { R _ { n } ^ { ( n + 1 ) } ( c _ { n + 1 } ) } { ( n + 1 ) ! } } \Rightarrow R _ { n } ( x ) = { \frac { 1 } { ( n + 1 ) ! } } f ^ { ( n + 1 ) } ( c ) ( x - x _ { 0 } ) ^ { n + 1 } ,
+$$
+
+với $\lambda \in ( 0 , 1 ) , \ c = c _ { n + 1 } = x _ { 0 } + \lambda ( x - x _ { 0 } ) .$ （20）
+
+# 2.9.3. Công thức khai triển Taylor.
+
+Cho $f(x)$ là một hàm khả vi cấp $n+1$ trong lân cận của điểm $x_0$, $P_n(x)$ là đa thức Taylor bậc $n$ và $R_n(x)$ là phần dư bậc $n$ của $f(x)$ tại $x_0$. Khi đó
+
+$$
+f(x) = P_n(x) + R_n(x)
+$$
+
+hay
+
+$$
+f(x) = f(x_0) + \frac{f'(x_0)}{1!}(x - x_0)^1 + \frac{f''(x_0)}{2!}(x - x_0)^2 + \ldots + \frac{f^{(n)}(x_0)}{n!}(x - x_0)^n + R_n(x),
+$$
+
+với $\lambda \in ( 0 , 1 )$, $c = x _ { 0 } + \lambda ( x - x _ { 0 } )$, $R _ { n }(x) = \frac{1}{(n+1)!} f^{(n+1)}(c)(x-x_0)^{n+1}$ được gọi là khai triển Taylor bậc $n$ của hàm $f(x)$ tại điểm $x_0$:
+
+Nhận xét 2.41. 1. Trong trường hợp đặc biệt $x _ { 0 } = 0$, khai triển Taylor của $f(x)$ có dạng
+
+$$
+f(x) = f(0) + \frac{f'(0)}{1!} x^1 + \frac{f''(0)}{2!} x^2 + \ldots + \frac{f^{(n)}(0)}{n!} x^n + R_n(0),
+$$
+
+với $\begin{array}{r}\lambda \in \Gamma(0, 1), c = \lambda x, R_n(0) = \frac{1}{(n+1)!} f^{(n+1)}(c) x^{n+1}\end{array}$ được gọi là khai triển Maclaurin bậc $n$ của hàm $f(x)$:
+
+2. Trong trường hợp $\begin{array}{r}R_n(x_0) = \frac{1}{(n+1)!} f^{(n+1)}(c) (x - x_0)^{n+1} \Rightarrow R_n(x_0) = o\big((x - x_0)^n\big)\end{array}$, vậy khai triển Taylor của $f(x)$ còn được viết dưới dạng
+
+$$
+f(x) = f(0) + \frac{f'(0)}{1!} x^1 + \frac{f''(0)}{2!} x^2 + \ldots + o\big((x - x_0)^n\big).
+$$
+
+Các khai triển quan trọng nhất theo công thức Maclaurin là:
+
+$$
+\begin{array} { l } { \displaystyle e ^ { x } = 1 + x + \frac { x ^ { 2 } } { 2 ! } + \ldots + \frac { x ^ { n } } { n ! } + o ( x ^ { n } ) = \sum _ { k = 0 } ^ { n } \frac { x ^ { k } } { k ! } + o ( x ^ { n } ). } \\ { \displaystyle \sin x = x - \frac { x ^ { 3 } } { 3 ! } + \ldots + ( - 1 ) ^ { n - 1 } \frac { x ^ { 2 n - 1 } } { ( 2 n - 1 ) ! } + o ( x ^ { 2 n + 1 } ) = \sum _ { k = 0 } ^ { n } ( - 1 ) ^ { k - 1 } \frac { x ^ { 2 k - 1 } } { ( 2 k - 1 ) ! }. } \\ { \displaystyle \cos x = 1 - \frac { x ^ { 2 } } { 2 ! } + \ldots + ( - 1 ) ^ { n } \frac { x ^ { 2 n } } { ( 2 n ) ! } + o ( x ^ { 2 n + 2 } ) = \sum _ { k = 0 } ^ { n } ( - 1 ) ^ { k } \frac { x ^ { 2 k } } { ( 2 k ) ! }. } \\ { \displaystyle \ln ( 1 + x ) = x - \frac { x ^ { 2 } } { 2 } + \ldots + ( - 1 ) ^ { n - 1 } \frac { x ^ { n } } { n } + o ( x ^ { n + 1 } ) = \sum _ { k = 1 } ^ { n } ( - 1 ) ^ { k - 1 } \frac { x ^ { k } } { k }. }
+\end{array}
+$$
+
+Ví dụ 2.42. Khai triển hàm số
+
+$$
+f ( x ) = ( x - 2 ) e ^ { 3 x }
+$$
+
+theo công thức Maclaurin đến số hạng $o ( x ^ { n } )$
+
+Giải: Ta có $f ( x ) = x e ^ { 3 x } - 2 e ^ { 3 x }$. Sử dụng công thức trên, ta thu được
+
+$$
+\begin{array} { l } { f ( x ) = x \Big ( \displaystyle \sum _ { k = 0 } ^ { n - 1 } \frac { 3 ^ { k } x ^ { k } } { k ! } + o ( x ^ { n - 1 } ) \Big ) - 2 \Big ( \displaystyle \sum _ { k = 0 } ^ { n } \frac { 3 ^ { k } x ^ { k } } { k ! } + o ( x ^ { n } ) \Big ) . } \\ { = \displaystyle \sum _ { k = 0 } ^ { n - 1 } \frac { 3 ^ { k } x ^ { k + 1 } } { k ! } - \displaystyle \sum _ { k = 0 } ^ { n } \frac { 2 . 3 ^ { k } x ^ { k } } { k ! } + o ( x ^ { n } ) . } \end{array}
+$$
+
+$\displaystyle \operatorname{Vi} \sum _ { k = 0 } ^ { n - 1 } { \frac { 3 ^ { k } x ^ { k + 1 } } { k ! } } = \sum _ { k = 1 } ^ { n } { \frac { 3 ^ { k - 1 } } { ( k - 1 ) ! } } x ^ { k }$, nên ta có
+
+$$
+\begin{array} { l } { f ( x ) = \displaystyle - 2 + \sum _ { k = 1 } ^ { n } \frac { 3 ^ { k - 1 } } { ( k - 1 ) ! } x ^ { k } - \sum _ { k = 1 } ^ { n } \frac { 2 . 3 ^ { k } x ^ { k } } { k ! } + o ( x ^ { n } ) . } \\ { \displaystyle \qquad = - 2 + \sum _ { k = 1 } ^ { n } \Big ( \frac { 3 ^ { k - 1 } } { ( k - 1 ) ! } - \frac { 2 . 3 ^ { k } } { k ! } \Big ) x ^ { k } + o ( x ^ { n } ) . } \\ { \displaystyle \qquad = - 2 + \sum _ { k = 1 } ^ { n } \frac { ( k - 6 ) 3 ^ { k - 1 } } { k ! } x ^ { k } + o ( x ^ { n } ) . } \end{array}
+$$
+
+Ví dụ 2.43. Khai triển hàm số
+
+$$
+f ( x ) = \ln ( 2 x - x ^ { 2 } + 3 )
+$$
+
+theo công thức Taylor tại điểm $x _ { 0 } = 2$ đến số hạng $o { \big ( } ( x - 2 ) ^ { n } { \big ) }$
+
+Giải: Ta biểu diễn $f ( x )$ dưới dạng
+
+$$
+f(x) = \ln 3 + \ln \left(1 - (x - 2)\right) + \ln \left(1 + \frac{x - 2}{3}\right),
+$$
+
+và áp dụng công thức IV ta thu được
+
+$$
+\begin{array} { l }
+{
+\displaystyle = \ln 3 + \sum _ { k = 1 } ^ { n } \frac { ( - 1 ) ^ { k - 1 } } { k } ( x - 2 ) ^ { k } + \sum _ { k = 1 } ^ { n } \frac { ( - 1 ) ^ { k - 1 } } { k ^ { 3 k } } ( x - 2 ) ^ { k } + o \big( ( x - 2 ) ^ { n } \big)
+} \\
+{
+\displaystyle = \ln 3 + \sum _ { k = 1 } ^ { n } \frac { ( - 1 ) ^ { k - 1 } ( 1 + 3 ^ { k } ) } { k ^ { 3 k } } ( x - 2 ) ^ { k } + o \big( ( x - 2 ) ^ { n } \big).
+}
+\end{array}
+$$
+
+# 2.10. Quy tắc L'Hôpital
+
+Định lý 2.44. Cho hai hàm số $f(x)$ và $g(x)$ xác định và khả vi trên một khoảng của điểm $x_0$ (có thể trừ điểm $x_0$) thỏa mãn:
+
+i）$\lim_{x \to x_0} f(x) = \lim_{x \to x_0} g(x) = 0$
+
+ii）$g'(x) \neq 0$ trong khoảng đã chỉ ra (có thể trừ điểm $x_0$)
+
+iii）Tồn tại giới hạn $\lim_{x \to x_0} \frac{f'(x)}{g'(x)} = A$
+
+Khi đó, tồn tại giới hạn
+
+$$
+\operatorname*{lim}_{x \to x_{0}} \frac{f(x)}{g(x)} = \operatorname*{lim}_{x \to x_{0}} \frac{f'(x)}{g'(x)}.
+$$
+
+Chứng minh: Đặt $f(x_0) = 0 = g(x_0)$. Khi đó, $f(x)$ và $g(x)$ liên tục trên lân cận của $x_0$. Theo định lý Cauchy ta có
+
+$$
+\frac{f(x)}{g(x)} = \frac{f(x) - f(x_0)}{g(x) - g(x_0)} = \frac{f'(c)}{g'(c)},
+$$
+
+với $c$ nằm giữa $x$ và $x_0$. Mặt khác, theo định nghĩa của $\operatorname*{lim}_{x \to x_{0}} \frac{f'(x)}{g'(x)} = A;$
+
+$$
+\forall \epsilon > 0, \exists \delta > 0, \forall x : 0 < |x - x_0| < \delta \Rightarrow \left|\frac{f'(x)}{g'(x)} - A\right| < \epsilon.
+$$
+
+Do đó
+
+$$
+\forall \epsilon > 0, \exists \delta > 0, \forall x : 0 < |x - x_0| < \delta \Rightarrow \left|\frac{f(x)}{g(x)} - A\right| < \epsilon.
+$$
+
+Hay $\operatorname*{lim}_{x \to x_{0}} \frac{f(x)}{g(x)} = A.$ Ta có thể chứng minh được nhận xét dưới đây.
+
+Nhận xét 2.45. Nếu ta thay $x \to x_0$ bằng $x \to \infty$ hoặc giả thiết
+
+$$
+\operatorname*{lim}_{x \to x_{0}} f(x) = \operatorname*{lim}_{x \to x_{0}} g(x) = \infty,
+$$
+
+thì kết quả của định lý 2.44 không thay đổi.
+
+Ví dụ 2.46. Tìm giới hạn
+
+$$
+\begin{array}{l}
+I_{1} = \lim_{x \to 1} \frac{x^{x} - 1}{\ln x + x - 1}. \\
+I_{2} = \lim_{x \to 0} \frac{1}{x} \left( \frac{1}{\sin x} - \frac{1}{\tan x} \right). \\
+I_{3} = \lim_{x \to +\infty} \left( x + \sqrt{x^{2} + 1} \right)^{\frac{1}{\ln x}}.
+\end{array}
+$$
+
+Giải Theo công thức $x = e^{\ln x} \forall x > 0$ và quy tắc L'Hospital, ta có
+
+$$
+\begin{array}{rl}
+& I_{1} = \lim_{x \to 1} \frac{x^{x} - 1}{\ln x + x - 1} \ (\text{đạng: } \frac{0}{0}) \\
+& \quad = \lim_{x \to 1} \frac{e^{x \ln x} - 1}{\ln x + x - 1} \\
+& \quad = \lim_{x \to 1} \frac{e^{x \ln x} (\ln x + 1)}{\frac{1}{x} + 1} \\
+& \quad = \frac{1}{2}.
+\end{array}
+$$
+
+$$
+\begin{array} { r l }
+& I _ { 2 } = \underset { x \to 0 } { \operatorname* { lim } } \frac { 1 } { x } \left( \frac { 1 } { \sin x } - \frac { 1 } { \tan x } \right) \\
+& \quad = \underset { x \to 0 } { \operatorname* { lim } } \frac { \tan x - \sin x } { x \cdot \sin x } ~ ( \mathrm { dạng : } ~ \frac { 0 } { 0 } ) \\
+& \quad = \underset { x \to 0 } { \operatorname* { lim } } \frac { \frac { 1 } { \cos ^ { 2 } x } - \frac { 1 } { \sqrt { 1 + \sin ^ { 2 } x } } } { \sin x \tan x + \frac { x \tan x } { \epsilon h ^ { 2 } x } + \frac { x \tan x } { \cos ^ { 2 } x } } \\
+& \quad = 0 . \\
+& I _ { 3 } = \underset { x \to \infty } { \operatorname* { lim } } \left( x + \sqrt { x ^ { 2 } + 1 } \right) ^ { \frac { 1 } { \ln x } } = \underset { x \to +\infty } { \operatorname* { lim } } e ^ { \frac { \tan ( x + \sqrt { x ^ { 2 } + 1 } ) } { \tan x } } .
+\end{array}
+$$
+
+Theo quy tắc L'Hôpital, ta có
+
+$$
+\operatorname* { lim } _ { x \to + \infty } \frac { \ln ( x + \sqrt { x ^ { 2 } + 1 } ) } { \ln x } = \operatorname* { lim } _ { x \to + \infty } \frac { \frac { 1 } { \sqrt { x ^ { 2 } + 1 } } } { \frac { 1 } { x } } = \operatorname* { lim } _ { x \to + \infty } \frac { x } { \sqrt { x ^ { 2 } + 1 } } = 1 .
+$$
+
+Vậy $I _ { 3 } = e$.
+
+# 2.11. Ham lồi (đọc thêm)
+
+## 2.11.1. Định nghĩa
+
+Tập $D \subseteq \mathbb{R}$ được gọi là tập lồi khi và chỉ khi
+
+$$
+\forall x_1, x_2 \in D, \lambda \in [0, 1] \Rightarrow \lambda x_1 + (1 - \lambda) x_2 \in D.
+$$
+
+- Hàm số $f(x)$ được gọi là hàm lồi trên tập lồi $D$, nếu
+
+$$
+\forall x_1, x_2 \in D, \forall \lambda \in [0, 1] \Rightarrow f(\lambda x_1 + (1 - \lambda) x_2) \leq \lambda f(x_1) + (1 - \lambda) f(x_2).
+$$
+
+- Hàm số $f(x)$ được gọi là hàm lồi chặt trên tập lồi $D$, nếu
+
+$$
+\forall x_1, x_2 \in D, \forall \lambda \in (0, 1) \Rightarrow f(\lambda x_1 + (1 - \lambda) x_2) < \lambda f(x_1) + (1 - \lambda) f(x_2).
+$$
+
+- Hàm số $f(x)$ là hàm lõm trên miền $D$, nếu $-f(x)$ là hàm lồi trên $D$:
+
+- Hàm số $f(x)$ là hàm lõm chặt trên miền $D$, nếu $-f(x)$ là hàm lồi chặt trên $D$:
+
+# 2.11.2. Bất đẳng thức Jensen
+
+Cho $f(x)$ là hàm lồi trên $D$, $x_1, x_2, \ldots, x_n \in D$ và $\lambda_1, \lambda_2, \ldots, \lambda_n \in [0, 1]$ : $\lambda_1 + \lambda_2 + \ldots + \lambda_n = 1$. Khi đó
+
+$$
+f(\lambda_1 x_1 + \lambda_2 x_2 + \ldots + \lambda_n x_n) \leq \lambda_1 f(x_1) + \lambda_2 f(x_2) + \ldots + \lambda_n f(x_n).
+$$
+
+![](images/d8a27b8432af1e4c39cf3cdea965b3566e94607826d2ca910b8c010b9e6eb961.jpg)  
+Hình 2: Biểu diễn hình học của hàm lồi
+
+Chứng minh quy nạp theo $n$ ：
+
+$+ \Delta V_i$ khi $n = 1 \Rightarrow (2.2)$ đúng. Với $n = 2 \Rightarrow (2.2)$ đúng theo định nghĩa của hàm liên.
+
+$+$ Giả sử tính chất trên đúng với $n$, hay $\forall x_1, x_2, ..., x_n \in D$ và $\lambda_1, \lambda_2, ..., \lambda_n \in [0, 1] : \lambda_1 + \lambda_2 + ... + \lambda_n = 1$ ta có
+
+$$
+f(\lambda_1 x_1 + \lambda_2 x_2 + ... + \lambda_n x_n) \leq \lambda_1 f(x_1) + \lambda_2 f(x_2) + ... + \lambda_n f(x_n).
+$$
+
+$+\mathrm{Cần chứng minh tính chất trên đúng với $n + 1$, hay $\forall \bar{x}_1, \bar{x}_2, ..., \bar{x}_{n}, \bar{x}_{n+1} \in D$ và $x_1,x_2,...,x_n, x_{n+1} \in [0,1]$ : }$
+$\bar{\lambda}_1 + \bar{\lambda}_2 + ... + \bar{\lambda}_n + \bar{\lambda}_{n+1} = 1$, ta có $f(\bar{\lambda}_1\bar{x}_1 + \bar{\lambda}_2\bar{x}_2 + ... + \bar{\lambda}_n\bar{x}_n + \bar{\lambda}_{n+1}\bar{x}_{n+1}) \leq \bar{\lambda}_1 f(\bar{x}_1) + \bar{\lambda}_2 f(\bar{x}_2) + ... + \bar{\lambda}_{n+1}f(x_{n+1}).$ Nếu $\bar{\lambda}_1 = \bar{\lambda}_2 = ... = \bar{\lambda}_n = 0$, thì bất đẳng thức trên luôn đúng. Nếu $\bar{\lambda}_1^2 + \bar{\lambda}_2^2 + ... + \bar{\lambda}_n^2 > 0$, thì đặt
+
+$$
+\mu = \bar{\lambda}_1 + \bar{\lambda}_2 + ... + \bar{\lambda}_n \Rightarrow \mu = 1 - \bar{\lambda}_{n+1} \in [0, 1].
+$$
+
+Theo giả thiết quy nạp, với $\begin{array}{r}\lambda_k = \frac{\bar{\lambda}_k}{\mu} \forall k = 1, 2, ..., n.\end{array}$
+
+$$
+\begin{array} { r } { \bar { x } _ { 1 } + \bar { \lambda } _ { 2 } \bar { x } _ { 2 } + \ldots + \bar { \lambda } _ { n } \bar { x } _ { n } + \bar { \lambda } _ { n + 1 } \bar { x } _ { n + 1 } ) = f \left( \mu \left( \sum _ { k = 1 } ^ { n } \frac { \bar { \lambda } _ { k } } { \mu } x _ { k } \right) + ( 1 - \mu ) x _ { n + 1 } \right)} \\ { \leq \mu f \left( \sum _ { k = 1 } ^ { n } \frac { \bar { \lambda } _ { k } } { \mu } x _ { k } \right) + ( 1 - \mu ) f \left( x _ { n + 1 } \right). } \end{array}
+$$
+
+$$
+\begin{array} { l } { \leq \mu \sum _ { k = 1 } ^ { n } \frac { \bar { \lambda } _ { k } } { \mu } f ( x _ { k } ) + ( 1 - \mu ) f ( x _ { n + 1 } ) } \\ { = \sum _ { k = 1 } ^ { n + 1 } \bar { \lambda } _ { k } f ( x _ { k } ). } \end{array}
+$$
+
+Theo quy tắc toán học, bất đẳng thức được chứng minh.
+
+Đặc biệt: $\lambda _ { 1 } = \lambda _ { 2 } = \ldots = \lambda _ { n } = \frac { 1 } { n }$, bất đẳng thức Jensen có dạng:
+
+$$
+f \left( \frac { x _ { 1 } + x _ { 2 } + \ldots + x _ { n } } { n } \right) \leq \frac { f ( x _ { 1 } ) + f ( x _ { 2 } ) + \ldots + f ( x _ { n } ) } { n }.
+$$
+
+# 2.11.3. Điều kiện cần và đủ của hàm lồi
+
+Cho hàm số $f ( x )$ xác định trên miền lồi $D$:
+
+Định lý 2.47. Hàm số $f ( x )$ lồi trên miền $D$ khi và chỉ khi
+
+$$
+\forall a \in D \Rightarrow g ( x ) = \frac { f ( x ) - f ( a ) } { x - a }
+$$
+
+tăng trên miền \( D_{1} = \{ x \in D : x < a \} \) và \( D_{2} = \{ x \in D : x > a \} \)
+
+Chứng minh \((\Rightarrow)\) Với mọi \( x_{1}, x_{2} \in D_{1}, a < x_{1} < x_{2} \), tồn tại
+
+$$
+\lambda = \frac{x_{1} - x_{2}}{a - x_{2}} \in (0, 1) : x_{1} = \lambda a + (1 - \lambda) x_{2}.
+$$
+
+Khi đó
+
+$$
+\Leftrightarrow f(x_{1}) \leq \frac{x_{1} - x_{2}}{a - x_{2}} f(a) + \left( 1 - \frac{x_{1} - x_{2}}{a - x_{2}} \right) f(x_{2})
+$$
+
+$$
+\begin{array}{r l}
+& \Leftrightarrow (a - x_{2}) f(x_{1}) \leq (x_{1} - x_{2}) f(a) + (a - x_{1}) f(x_{2}) \\
+& \Leftrightarrow (x_{2} - a) f(x_{1}) \leq (x_{2} - x_{1}) f(a) + (x_{1} - a) f(x_{2}) \\
+& \Leftrightarrow \frac{f(x_{1}) - f(a)}{x_{1} - a} \leq \frac{f(x_{2}) - f(a)}{x_{2} - a}.
+\end{array}
+$$
+
+Vậy \( g(x) \) tăng trên \( D_{1} \), tương tự ta cũng có \( f(x) \) tăng trên \( D_{2} \):
+
+\((\Leftarrow)\) Với mọi \( x_{1}, x_{2} \in D, x_{1} < x_{2}, \lambda \in (0, 1) \) đặt \( x_{3} = \lambda x_{1} + (1 - \lambda) x_{2} \Rightarrow x_{1} < x_{3} < x_{2} \). Theo giả thiết hàm số
+
+$$
+g(x) = \frac{f(x) - f(x_1)}{x - x_1}
+\quad \text{trên} \quad 
+D_1 = \{ x \in D : x > x_1 \}.
+$$
+
+Suy ra
+
+$$
+\frac{f(x_3) - f(x_1)}{x_3 - x_1} \leq \frac{f(x_2) - f(x_1)}{x_2 - x_1}.
+$$
+
+Theo chứng minh trên, điều này tương đương với
+
+$$
+f\left( \lambda x_1 + (1 - \lambda)x_2 \right) \leq \lambda f(x_1) + (1 - \lambda)f(x_2).
+$$
+
+Như vậy
+
+$$
+\begin{array}{r}
+\left( \lambda x_1 + (1 - \lambda)x_2 \right) \leq \lambda f(x_1) + (1 - \lambda)f(x_2) \quad \forall x_1, x_2 \in D, \lambda \in [0, 1].
+\end{array}
+$$
+
+Định lý 2.48. Cho hàm số $f(x)$ khả vi trên miền định nghĩa $D$. Khi đó $f(x)$ lồi trên $D$ khi và chỉ khi hàm số $f'(x)$ tăng trên $D$.
+
+Chứng minh $(\Rightarrow)$ Giả sử $f(x)$ lồi trên $D$, với mọi $a, b \in D, a < b$. Theo định lý 2.47, hàm số
+
+$$
+g(x) = \frac{f(x) - f(a)}{x - a}
+$$
+
+tăng trên miền $D_1 = \{ x \in D : x > a \}$ và hàm số
+
+$$
+g(x) = \frac{f(x) - f(b)}{x - b}
+$$
+
+tăng trên miền $D_2 = \{ x \in D : x < b \}$. Suy ra
+
+$$
+f^{\prime}(a) = \lim_{x \to a^{+}} \frac{f(x) - f(a)}{x - a} \leq \frac{f(b) - f(a)}{b - a} \leq \lim_{x \to b^{-}} \frac{f(x) - f(b)}{x - b} = f^{\prime}(b)
+$$
+
+Vậy $f^{\prime}(a) \leq f^{\prime}(b)$ hay $f^{\prime}(x)$ tăng trên $D$:
+
+（2 $(\Leftarrow)$ Giả sử $f^{\prime}(x)$ tăng trên $D$. Với mọi $a, b \in D, a < b, \lambda \in [0, 1]$ và $x = \lambda a + (1 - \lambda) b$. Theo định lý Lagrange, ta có
+
+$$
+f(x) - f(a) = (x - a)f^{\prime}(c) = (1 - \lambda)(b - a)f^{\prime}(c) \quad \text{với} \quad c \in [a, x],
+$$
+
+$$
+f(b) - f(x) = (b - x)f^{\prime}(d) = \lambda(b - a)f^{\prime}(d) \quad \text{với} \quad d \in [x, b].
+$$
+
+Vì $f^{\prime}(x)$ tăng trên $D$, nên
+
+$$
+\begin{array}{c}
+f^{\prime}(c) \leq f^{\prime}(d) \Rightarrow \lambda(f(x) - f(a)) \leq (1 - \lambda)(f(b) - f(x)) \\
+\Leftrightarrow f(x) \leq \lambda f(a) + (1 - \lambda)f(b).
+\end{array}
+$$
+
+Vậy $f(x)$ lồi trên $D$:
+
+Hệ quả 2.49. Cho $f(x)$ có đạo hàm cấp 2 liên tục trên miền lồi $D$. Khi đó, $f(x)$ lồi trên miền $D$ khi và chỉ khi
+
+$$
+f^{\prime\prime}(x) \geq 0 \quad \forall x \in D.
+$$
+
+Chứng minh Theo định lý 2.48, $f(x)$ lồi trên $D$ khi và chỉ khi $f'(x)$ tăng trên $D$. Ta đã biết $f'(x)$ tăng trên $D$ khi và chỉ khi $\left(f'(x)\right)' = f''(x) \geq 0 \forall x \in D.$
+
+# 2.11.4. Cực trị của hàm lồi
+
+Cho hàm số $f(x)$ lõi trên miền lõi $D$:
+
+Định lý 2.50.
+
+i) Nếu $f(x)$ đạt cực tiểu toàn cục trên $D$, thì tập các điểm cực tiểu toàn cục là một tập lõi.
+
+ii) Nếu $f(x)$ là hàm lõi và có cực tiểu toàn cục trên $D$, thì có duy nhất một điểm cực tiểu toàn cục. 
+
+iii) Cho $f(x)$ là hàm lõi, khả vi trên $D$ và $\nu \dot{a}(x_0 - \delta, x_0 + \delta) \subseteq D$. Khi đó, $f(x)$ đạt cực tiểu toàn cục tại $x_0$ khi và chỉ khi $f'(x_0) = 0$.
+
+Chứng minh:
+
+i) Giả sử $x_1, x_2 \in D$ sao cho
+
+$$
+f(x_1) = f(x_2) \leq f(x) \quad \forall x \in D.
+$$
+
+Do $f(x)$ lõi trên $D$, ta có
+
+$$
+\forall \lambda \in [0, 1] \Rightarrow f(\lambda x_1 + (1 - \lambda)x_2) \leq \lambda f(x_1) + (1 - \lambda)f(x_2) = f(x_1).
+$$
+
+ii) (Phần chứng minh) Giả sử ngược lại rằng tồn tại $x_1, x_2 \in D$, $x_1 \neq x_2$ sao cho
+
+$$
+f(x_1) = f(x_2) \leq f(x) \quad \forall x \in D.
+$$
+
+Do $f(x)$ lõi trên $D$, ta có
+
+$$
+\forall \lambda \in (0, 1) \Rightarrow f \left( \lambda x_1 + (1 - \lambda) x_2 \right) < \lambda f(x_1) + (1 - \lambda) f(x_2) = f \left( x_1' \right),
+$$
+
+Điều này có nghĩa là $x_1$ không phải là điểm cực tiểu toàn cục, trái giả thuyết. Vậy tập các điểm cực tiểu nếu tồn tại thì tập điểm đó có duy nhất một phần tử.
+
+ii) Phần thuận dễ dàng được suy ra từ định lý Fermat. Đảo lại, giả sử cho $f'(x_0) = 0$. Theo định lý 2.48, $f'(x)$ tăng trên miền $D$. Vậy $f'(x)$ đổi dấu từ "$-$" sang "$+$" qua điểm $x_0$. Vậy $x_0$ là điểm cực tiểu toàn cục.
+
+Ví dụ 2.51. (Bất đẳng thức Cauchy)
+
+Cho $a_k \geq 0 ~\forall k = 1, 2, ..., n$. Chứng minh rằng
+
+$$
+\frac{a_1 + a_2 + ... + a_n}{n} \geq \sqrt[n]{a_1 a_2 ... a_n}.
+$$
+
+Giải Nếu tồn tại $k : a_k = 0$, thì bất đẳng thức trên luôn đúng.
+
+Nếu $a_k > 0 ~\forall k = 1, 2, ..., n$, thì bất đẳng thức trên có dạng
+
+$$
+\ln \left( \frac{a_1 + a_2 + ... + a_n}{n} \right) \geq \frac{1}{n} \left( \ln a_1 + \ln a_2 + ... + \ln a_n \right)
+$$
+
+$$
+\ln \left( \frac{1}{n} a_1 + \frac{1}{n} a_2 + \ldots + \frac{1}{n} a_n \right) \leq \frac{1}{n} (-\ln a_1) + \frac{1}{n} (-\ln a_2) + \ldots + \frac{1}{n} (-\ln a_n)
+$$
+
+$$
+\left( \frac{1}{n} a_1 + \frac{1}{n} a_2 + \ldots + \frac{1}{n} a_n \right) \leq \frac{1}{n} (-\ln a_1) + \frac{1}{n} (-\ln a_2) + \ldots + \frac{1}{n} (-\ln a_n)
+$$
+
+$$
+\Leftrightarrow f \left( \frac{1}{n} a_1 + \frac{1}{n} a_2 + \ldots + \frac{1}{n} a_n \right) \leq \frac{1}{n} f(a_1) + \frac{1}{n} f(a_2) + \ldots + \frac{1}{n} f(a_n),
+$$
+
+với $f(x) = -\ln x$:
+
+Mặt khác $\textstyle f(x) = -\ln x \Rightarrow f''(x) = \frac{1}{x^2} > 0 \forall x \in (0, +\infty)$. Theo hệ quả 2.49, $f(x)$ lồi trên $(0, +\infty)$. Theo bất đẳng thức Jensen, bất đẳng thức Cauchy được chứng minh.
+
+Ví dụ 2.52. (Bất đẳng thức Schwartz)
+
+Cho $b_k > 0 \forall k = 1, 2, \ldots, n.$ Chứng minh rằng
+
+$$
+\frac { a _ { 1 } ^ { 2 } } { b _ { 1 } } + \frac { a _ { 2 } ^ { 2 } } { b _ { 2 } } + \ldots + \frac { a _ { n } ^ { 2 } } { b _ { n } } \geq \frac { ( a _ { 1 } + a _ { 2 } + \ldots + a _ { n } ) ^ { 2 } } { b _ { 1 } + b _ { 2 } + \ldots + b _ { n } } \quad \forall a _ { 1 } , a _ { 2 } , . . . , a _ { n } .
+$$
+
+Chứng minh Đặt $b = \sum _ { k = 1 } ^ { n } b _ { k }$. Khi đó
+
+$$
+\begin{array} { c }
+{
+\displaystyle \frac { a _ { 1 } ^ { 2 } } { b _ { 1 } } + \frac { a _ { 2 } ^ { 2 } } { b _ { 2 } } + \ldots + \frac { a _ { n } ^ { 2 } } { b _ { n } } \geq \frac { ( a _ { 1 } + a _ { 2 } + \ldots + a _ { n } ) ^ { 2 } } { b _ { 1 } + b _ { 2 } + \ldots + b _ { n } }
+}
+\\
+{
+\displaystyle \Leftrightarrow b _ { 1 } \left( \frac { a _ { 1 } } { b _ { 1 } } \right) ^ { 2 } + b _ { 2 } \left( \frac { a _ { 2 } } { b _ { 2 } } \right) ^ { 2 } + \ldots + b _ { n } \left( \frac { a _ { n } } { b _ { n } } \right) ^ { 2 } \geq ( a _ { 1 } + a _ { 2 } + \ldots + a _ { n } ) ^ { 2 }
+}
+\\
+{
+\displaystyle \Leftrightarrow \frac { b _ { 1 } } { b } \left( \frac { a _ { 1 } } { b _ { 1 } } \right) ^ { 2 } + \frac { b _ { 2 } } { b } \left( \frac { a _ { 2 } } { b _ { 2 } } \right) ^ { 2 } + \ldots + \frac { b _ { n } } { b } \left( \frac { a _ { n } } { b _ { n } } \right) ^ { 2 } \geq \left( \frac { b _ { 1 } } { b } \frac { a _ { 1 } } { b _ { 1 } } + \frac { b _ { 2 } } { b } \frac { a _ { 2 } } { b _ { 2 } } + \ldots + \frac { b _ { n } } { b } \frac { a _ { n } } { b _ { n } } \right) ^ { 2 }
+}
+\\
+{
+\displaystyle \Leftrightarrow \lambda _ { 1 } \left( \frac { a _ { 1 } } { b _ { 1 } } \right) ^ { 2 } + \lambda _ { 2 } \left( \frac { a _ { 2 } } { b _ { 2 } } \right) ^ { 2 } + \ldots + \lambda _ { n } \left( \frac { a _ { n } } { b _ { n } } \right) ^ { 2 } \geq \left( \lambda _ { 1 } \frac { a _ { 1 } } { b _ { 1 } } + \ldots
+}
+
++ \lambda _ { 2 } \frac { a _ { 2 } } { b _ { 2 } } + \ldots + \lambda _ { n } \frac { a _ { n } } { b _ { n } } } \\ { \displaystyle \Leftrightarrow \lambda _ { 1 } f ( x _ { 1 } ) + \lambda _ { 2 } f ( x _ { 2 } ) + \ldots + \lambda _ { n } f ( x _ { n } ) \geq f \big ( \lambda _ { 1 } x _ { 1 } + \lambda _ { 2 } x _ { 2 } + \ldots + \lambda _ { n } x _ { n } \big) }
+$$
+
+trong đồ đố
+
+$$
+= \frac{b_k}{b} \in (0, 1) : \lambda_1 + \lambda_2 + \ldots + \lambda_n = 1, x_k = \frac{a_k}{b_k}, f(x) = x^2 \forall k = 1, 2
+$$
+
+Do $f(x) = x^2$ là hàm lồi trên $\mathbb{R}$, nên bất đẳng thức Schwartz được chứng minh.
+
+Ví dụ 2.53. (Bất đẳng thức Minkowski)
+
+Cho $a_k > 0, b_k > 0 \forall k = 1, 2, . . . , n$. Chứng minh rằng
+
+$$
+\sqrt[n]{a_1 a_2 . . . a_n} + \sqrt[n]{b_1 b_2 . . . b_n} \leq \sqrt[n]{(a_1 + b_1)(a_2 + b_2) . . . (a_n + b_n)}.
+$$
+
+Giải Ta có
+
+$$
+\begin{array}{rlr}
+& & \sqrt[n]{a_1 a_2 . . . a_n} + \sqrt[n]{b_1 b_2 . . . b_n} \leq \sqrt[n]{(a_1 + b_1)(a_2 + b_2) . . . (a_n + b_n)} \\
+& & \Leftrightarrow 1 + \sqrt[n]{\frac{b_1}{a_1} \frac{b_2}{a_2} . . . \frac{b_n}{a_n}} \leq \sqrt[n]{(1 + \frac{b_1}{a_1})(1 + \frac{b_2}{a_2}) . . . (1 + \frac{b_n}{a_n})}
+\end{array}
+$$
+
+$$
+\begin{array} { r l r }
+& {} & {\Leftrightarrow \ln \left( 1 + \sqrt[n]{\frac{b_1}{a_1} \frac{b_2}{a_2} \ldots \frac{b_n}{a_n}} \right) \leq \frac{1}{n} \left( \ln (1 + \frac{b_1}{a_1}) + \ldots + \ln (1 + \frac{b_n}{a_n}) \right)} \\
+& {} & {\Leftrightarrow \ln \left( 1 + e^{\frac{1}{n} \left( \ln \frac{a_1}{b_1} + \ldots + \ln \frac{a_n}{b_n} \right)} \right) \leq \frac{1}{n} \left( \ln (1 + \frac{b_1}{a_1}) + \ldots + \ln (1 + \frac{b_n}{a_n}) \right)} \\
+& {} & {\quad \sin \left( 1 + e^{\frac{1}{n} \left( \ln \frac{a_1}{b_1} + \ln \frac{a_2}{b_2} + \ldots + \ln \frac{a_n}{b_n} \right)} \right) \leq \frac{1}{n} \left( \ln (1 + e^{\ln \frac{b_1}{a_1}}) + \ldots + \ln (1 + e^{\ln}) } \\
+& {} & {\Leftrightarrow f(\lambda_1 x_1 + \lambda_2 x_2 + \ldots + \lambda_n x_n) \leq \lambda_1 f(x_1) + \lambda_2 f(x_2) + \ldots + \lambda_n f(x_n)}
+\end{array}
+$$
+
+với $\begin{array} { r }
+{\lambda_k = \frac{1}{n}, x_k = \ln \frac{b_k}{a_k} \forall k = 1, 2, \ldots, n, f(x) = \ln (1 + e^x).}
+\end{array}$
+
+Đoạn $\begin{array} { r } { f ^ { \prime \prime } ( x ) = \frac { e ^ { x } } { ( 1 + e ^ { x } ) ^ { 2 } } > 0 \forall x \in \mathbb { R } } \end{array}$ nên $f ( x )$ là hàm lồi trên $\mathbb { R }$. Vây bất đẳng thức Minkowski được chứng minh.
+
+# Bài 2.1. Dùng định nghĩa, chứng minh rằng
+
+1 
+\[
+\lim_{x \to 1} (2x + x^2) = 3,
+\]
+\[
+\lim_{x \to 1^{+}} \sqrt{x^2 - x} = 0.
+\]
+
+2
+\[
+\lim_{x \to -1} \frac{2x + 7}{x + 2} = 5,
+\]
+\[
+\lim_{x \to 2^{-}} (\sqrt{2 - x} + x) = 2.
+\]
+
+3 Bài 2.2. Tìm các giới hạn sau:
+
+1 $\begin{array} { l } { \displaystyle { \lim_{x \to -\infty} \frac{\sqrt{x^2 - 3x + 1} + 2x + 3}{x} } } \\ { \displaystyle { ) \lim_{x \to 0} \frac{\sqrt{1 + \alpha x} - 1}{x} \mathrm{~với~}\alpha \neq 0, n \geq 2 } } \\ { \displaystyle { ) \lim_{x \to 0} \frac{\sqrt{1 + \alpha x} - w(1 + \beta x)}{x} \mathrm{~với~}\alpha . \beta \neq 0, n , m \geq 2 } } \\ { \displaystyle { ) \lim_{x \to 0} \frac{\sqrt{1 + \alpha x} - (1 + \beta x) - 1}{x} \mathrm{~với~}\alpha . \beta \neq 0, n , m \geq 2 } } \end{array}$
+
+ds: 1.2 $\begin{array} { r l } & { \mathrm{\bf ds : ~} 1 . } \\ & { \mathrm{ds : ~} \displaystyle \frac{\alpha}{n} . } \\ & { \mathrm{\bf ds : ~} \displaystyle \frac{\alpha}{n} . } \\ & { \mathrm{\bf ds : ~} \displaystyle \frac{\alpha}{n} - \frac{\beta}{m} . } \\ & { \mathrm{\bf ds : ~} \displaystyle \frac{\alpha}{n} + \frac{\beta}{m} . } \end{array}$
+
+# Bài 2.3. Tìm các giới hạn sau
+
+1) $\lim_{x \to 18} (\sqrt{x^2 - 3x + 1} + x)$  
+$\begin{array}{r}
+\tiny \mathrm{ds}: \displaystyle \frac{3}{2}. \\
+\tiny \mathrm{ds}: \displaystyle \frac{1}{6}. \\
+\tiny \mathrm{ds}: \displaystyle \frac{5}{6}.
+\end{array}$  
+
+2) $\lim_{x \to 0} (\sqrt[8]{x^3 + 2x^2 + 1} - 2x)$  
+
+3) $\lim_{x \to 0} (\sqrt{x^3 + 4x^2 + 1} - \sqrt{x^2 + x - 1})$
+
+Bài 2.4. Tìm các giới hạn sau
+
+$\frac{\sin ax}{x}$  
+1) $\lim_{x \to 0} \mathrm{ds}: a$  
+
+2) $\lim_{x \to 0} (1 - \cos ax)$  
+$\begin{array}{l}
+\displaystyle \mathrm{ds}: \frac{a^2}{2}. \\
+\displaystyle \mathrm{ds}: \frac{n(n+1)(2n+1)}{12}. \\
+\displaystyle \mathrm{ds}: \frac{2b^2 - 3a^2}{12c}.
+\end{array}$  
+
+3) $\lim_{x \to 0} (1 - \cos x)\cos^2...\cos^n x$  
+4) $\lim_{x \to 0} \frac{\sqrt{\cos ax}\sqrt{\cos bx}}{x \sin cx}$ với $c \neq 0$
+
+Bài 2.5. Tìm các giới hạn sau
+
+$$
+\begin{array} { r l } & { \underset { x \to +\infty } { \operatorname* {lim} } ( \frac { 2 x ^ { 2 } + x + 1 } { x ^ { 2 } - 3 x - 2 } ) ^ { \frac { x ^ { 3 } - 3 x } { 1 - x ^ { 2 } } } } \\ & { \underset { x \to \infty } { \operatorname* {lim} } ( \frac { 2 x + 1 } { 2 x - 3 } ) ^ { x } } \\ & { \underset { x \to \infty } { \operatorname* {lim} } ( \frac { 2 x ^ { 2 } + x - 1 } { 2 x ^ { 2 } - x - 2 } ) ^ { 1 - 3 x } } \\ & { \underset { x \to 0 } { \operatorname* {lim} } ( \frac { 2 x ^ { 2 } - x - 2 } { x ^ { 3 } + \frac { x - 1 } { 2 } } ) ^ { 1 - 3 x } } \\ & { \underset { x \to 0 } { \operatorname* {lim} } ( \cos a x ) ^ { \frac { 1 } { x \sin b x } } } \end{array}
+$$
+
+5 $\begin{array} { l } { \mathfrak { z } ) \underset{x \to 0}{\operatorname*{lim}} \left( \frac { 1 + \tan x } { 1 + \sin x } \right) ^ { \frac { 1 } { \sin x } } } \\ { \mathfrak { z } ) \underset{x \to 0}{\operatorname*{lim}} \frac { \log _ { 2 } ( 1 + x \sin 3 x ) } { 2 ^ { x ^ { 2 } } - 1 } } \end{array}$
+
+ds: 1. $\begin{array} { l } { \displaystyle \mathrm { ds } : \frac { 3 } { \ln ^ { 2 } 2 } . } \\ { \displaystyle \mathrm { ds } : \frac { - 1 } { 4 } . } \end{array}$
+
+7) $\underset{x \to +\infty}{\operatorname*{lim}} x\sqrt{x}(\sqrt{x+1}+\sqrt{x-1}-2\sqrt{x})$
+
+8) $\underset{x \to 0}{\operatorname*{lim}} \frac{\ln(1+x+x^2)+\ln(1-x+x^2)}{x-\cos x}$
+
+9) $\underset{x \to 0}{\operatorname*{lim}} \frac{\arcsin x - \arctan x}{x}$
+
+ds: 2.
+
+10) $\underset{x \to 0}{\operatorname*{lim}} \ln(1+x^3)$
+
+11) $\underset{x \to 1}{\operatorname*{lim}} \frac{\sin(\pi x)}{e^{x-1}-1}$
+
+Bài 2.6. Tìm các hàm số $f(x)$ xác định trên $\mathbb{R}$ sao cho:
+1) $f(x)f(x^2 - 1) = \sin x \quad \forall x$
+Hướng dẫn: Đặt $x = 0$ và $x = -1 \Rightarrow f(0) = 1, f(-1) = -1.$
+   
+2) $xf(x) + f(1-x) = x^3 + 1 \quad \forall x$
+Hướng dẫn: Thay $x$ và $1-x \Rightarrow f(x) = x^2 - x + 1.$
+
+3) $f(x + y^2) = f(x^2) + f(y) \quad \forall x, y$
+Hướng dẫn: $f(0) = 0, f(y^2) = f(0 + y^2), f(-y^2 + y^2) = 0.$
+
+4) $f(x + y) - f(x - y) = 2y(3x^2 + y^2) \quad \forall x, y$
+Hướng dẫn: $f(X) - f(Y) = X^3 - Y^3 \Rightarrow f(x) = x^3 + f(0).$
+
+Bài 2.7. Chứng minh rằng phương trình
+
+$$
+x^{17} = x^{11} + 1
+$$
+
+có ít nhất một nghiệm $x > 0$.
+
+Hướng dẫn: Xét hàm số $f(x) = x^{17} - x^{11} - 1 \Rightarrow f(0).f(2) < 0$ và $f(x)$ liên tục trên $[0,2]$.
+
+Bài 2.8. Cho hai hàm số $f(x), g(x)$ liên tục trên $[0, 1]$ và
+
+$$
+f(0) = g(1) = 0, f(1) = g(0) = 1.
+$$
+
+Chứng minh rằng: Với mọi $\lambda \in \mathbb{R}, \lambda > 0$, tồn tại $x \in [0, 1]$ sao cho $f(x) = \lambda g(x)$.
+
+Hướng dẫn: Sử dụng định lý 2.11 cho hàm số $\varphi(x) = f(x) - \lambda g(x)$ trên $[0, 1]$.
+
+Bài 2.9. Chứng minh rằng: Hàm số
+
+$$
+f(x) = \sin{\frac{\pi}{x}}
+$$
+
+liên tục nhưng không đều liên tục trên khoảng $(0, 1)$.
+
+HD: $f(x)$ không liên tục đều: $\begin{array} { r } { \epsilon \in (0,1) , \forall \delta > 0 , k \geq \frac { 1 } { \delta } , x = \frac { 1 } { 2 k + 1 } , x ^ { \prime } = \frac { 2 } { 1 + 4 k } . } \end{array}$
+
+Bài 2.10. Dùng định nghĩa tìm đạo hàm của các hàm số sau
+
+$$
+\mathrm{Tìm} y _ { + } ^ { \prime } ( 1 ) , y _ { - } ^ { \prime } ( 1 ) \ \mathrm{đs:} y _ { + } ^ { \prime } ( 1 ) = e , y _ { - } ^ { \prime } ( 1 ) = - e .
+$$
+
+Bài 2.11. Tìm đạo hàm $y _ { x } ^ { \prime }$ của các hàm số dưới dạng tham số
+
+$$
+\begin{array} { l } { \left\{ \begin{array} { l } { x = e ^ { - t } } \\ { y = t ^ { 3 } , t \in \mathbb { R } . } \end{array} \right. } \\ { \left\{ \begin{array} { l } { x = a ( t - \sin t ) } \\ { y = a ( 1 - \cos t ) , t \in \mathbb { R } . } \end{array} \right. } \end{array}
+$$
+
+$$
+\begin{array} { r } { \mathrm{đs:} y _ { x } ^ { \prime } = - 3 t ^ { 2 } e ^ { t } . } \end{array}
+$$
+
+$$
+\mathrm{đs:} y _ { x } ^ { \prime } = \cot { \frac { t } { 2 } } .
+$$
+
+1) \( y = (2x + 1) \sin^2{3x} \)
+\[
+\begin{array}{r l}
+& \mathrm{d}\sin^2{3x} + 3(2x + 1)\sin{6x}, \\
+& \mathrm{d}\sin{\left(2x^3 - x^1\right)} \sin{3\left(3x^3 - x^3 - 1\right)}, \\
+& \mathrm{d}\sin{\left(2x^2 + 3x - (x^2 + 1)3x^2 + 1\right)}, \\
+& \mathrm{d}\sin{(x^4)} \cos^2{\left(1 - x \sin^2{x}\right)}, \\
+& \mathrm{d}\sin{x} \cos^2{\left(\frac{\sin{x}}{x} - \sin^2{x}\right)}, \\
+& \mathrm{d}\sin{(2x - \sin{x} \sin{(2\cos{x})})}, \\
+& \mathrm{d}\sin{\left(\frac{1}{\sqrt{x^2 + \alpha^2}}\right)}, \\
+& \mathrm{d}\sin{\left(\frac{1}{x}\right)} \cos^2{\left(1 - \frac{1}{x^2 - \alpha^2}\right)}.
+\end{array}
+\]
+2) \( y = e^2 + x^3 \)
+3) \( y = \log_x{(x^2 + 1)}, \quad 0 < x \neq 1 \)
+4) \( y = x^{\cos{x}}, \quad x > 0 \)
+5) \( y = \sin^2{(\cos{x})} \)
+6) \( y = \ln(x + \sqrt{x^2 + \alpha^2}) \)
+7) \( y = \frac{1}{2\alpha} \ln{\left|\frac{x - \alpha}{x + \alpha}\right|}, \quad x^2 \neq \alpha^2 \)
+8) \( y = \sin(\arcsin(2x)), \quad x \in (-\frac{1}{2}, \frac{1}{2}) \)
+\( ds: 2 \cos(\arcsin(2x)) \sqrt{1 - 4x^2} \)
+9) \( y = \arctan(\tan{x}) \)
+
+, \( x \neq \frac{\pi}{2} + k\pi \) (\( k \in \mathbb{Z} \))  
+   
+10) \( y = \mathrm{sh}^2(x^2 + 1) \), ds: \( 2x \mathrm{sh}(2x^2 + 2) \)
+
+Bài 2.13. Tìm đạo hàm cấp cao của các hàm số sau
+
+2)  
+1) $y = x^2e^{2x}$, $y = \sqrt{x}$  
+ds: $16e^{2x}(x^2 + 4x + 3)$  
+ds: $\frac{1 \cdot 3 \cdot 5 \cdots 17}{2^{10} x^9 \sqrt{x}}$  
+ds: $\frac{3 \cdot 100!}{(x - 1)^{101}}$  
+ds: $12xf''(x^2 + 1) + 8x^3f'''(x^2 + 1)$  
+
+3) $y = \frac{2x + 1}{x - 1}$, tìm $y^{(4)}$  
+4) $y = f(x^2 + 1)$, tìm $y^{(3)}$
+
+5) $y = \sqrt[3]{ax + b}$, tìm $y^{(n)}$  
+ds: $a^n \frac{1}{3} \left(\frac{1}{3} - 1\right)\left(\frac{1}{3} - 2\right) \cdots \left(\frac{1}{3} - (n + 1)\right)(ax + b)^{\frac{1}{3} - n}$  
+
+6) $y = \ln(ax + b)$, tìm $y^{(n)}$  
+ds: $(−1)^{n-1} a^n (n − 1)! \frac{1}{(ax + b)^n}$ với $ax + b > 0$
+
+7) $y = x^4 + 8x - 3$  
+ds: $2^{n+1}\left(\frac{3}{2} - 1\right)\left(\frac{3}{2} - 2\right) \cdots \left(\frac{3}{2} - n + 1\right)(2x + 1)^{\frac{3}{2} - n} - 2^n \left(-\frac{1}{2} - 1\right)\left(-\frac{1}{2}\right)$
+
+} - 2 ) . . \qquad (-1-n + 1)(2x + 1)^{-\frac{n}{2}}.  
+8 $y = \sin ^ { 3 } ( a x + b ) \ \mathrm{tính}\ y^{(n)}$ ：
+
+$$
+\begin{array} { r } { \mathrm { ds } : \frac { 3 } { 4 } \sin ( a x + b + \frac { n \pi } { 2 } ) - \frac { 1 } { 4 } ( 3 a ) ^ { n } \sin ( 3 a x + 3 b + \frac { n \pi } { 2 } ). } \end{array}
+$$
+
+$$
+\left\{ { \begin{array} { l } { x = a \cos ^ { 2 } t } \\ { y = b \sin ^ { 2 } t } \end{array} } \right.
+$$
+
+Tìm $\begin{array} { r } { y _ { x } ^ { ( n ) } \mathrm { ~ ds ~ } : y _ { x } ^ { \prime } = - \frac { b } { a }, y _ { x } ^ { ( n ) } = 0 \mathrm { ~ } n \geq 2. } \end{array}$
+
+$$
+\left\{ { \begin{array} { l } { x = \frac { t } { t + 1 } } \\ { y = \frac { 2 t ^ { 2 } + t } { ( t + 1 ) ^ { 2 } } } \end{array} } \right.
+$$
+
+Bài 2.14. Chứng minh rằng
+
+1) $\begin{array} { r l } & { x y ^ { \prime 3 } = 1 + y ^ { \prime } \mathrm { ~ với ~ } i x = \frac { 1 + t } { t ^ { 3 } }, y = \frac { 3 } { 2 t ^ { 3 } } + \frac { 2 } { t }. } \\ & { y \sqrt { 1 + y ^ { \prime 2 } } = y ^ { \prime } \mathrm { ~ với ~ } i x = \frac { 1 } { 1 + t ^ { 2 } } - \ln \frac { 1 + \sqrt { 1 + t ^ { 2 } } } { t }, y = \frac { t } { \sqrt { 1 + t ^ { 2 } }. } } \end{array}$   
+2)   
+3) $y.y' = 2xy^2 + 1 ~ với ~ x = 1 + \ln t, y = \frac { 3 + 2 \ln t } { t }.$  
+4 $\begin{array} { r } { f ( 1 ) + \frac { f ^ { \prime } ( 1 ) } { 1 ! } + . . . + \frac { f ^ { ( n ) } ( 1 ) } { n ! } = 2 ^ { n } } \end{array}$ vì $f^{(n)}(1)=2^n$ khi $f(x) = x^n.$
+
+Bài 2.15. Chứng minh rằng:
+
+1) arctan 
+\[
+x = \arcsin \frac{x}{\sqrt{1 + x^2}}.
+\]
+2) arcsin 
+\[
+x = \arctan \frac{x}{\sqrt{1 - x^2}}.
+\]
+3)
+\[
+x - \frac{x^2}{2} \leq \ln(1 + x) \leq x \quad \forall x \geq 0.
+\]
+4 
+\[
+\ln(x^2 + 1) \leq 2x \arctan x \quad \forall x. \quad (\text{20})
+\]
+5)
+\[
+e^x > 1 + x + \frac{x^2}{2} \quad \forall x > 0. \quad (\text{20})
+
+Bài 2.16. Kiểm tra định lý Rolle đối với hàm số
+
+$$
+f(x) = (x - 1)(x - 2)(x - 3)
+$$
+
+trên các đoạn [1,2], [2,3].
+
+Hướng dẫn: Trên 
+\[
+[1, 2] \Rightarrow c_1 = 2 - \frac{1}{\sqrt{3}}, \quad trên [2, 3] \Rightarrow c_2 = 2 + \frac{1}{\sqrt{3}}.
+\]
+
+Bài 2.17. Cho hàm số $f(x)$ khả vi cấp $n$ trên $[x_0, x_n]$ và
+
+$$
+f(x_0) = f(x_1) = \ldots = f(x_n) \quad \text{với} \quad x_0 < x_1 < \ldots < x_n.
+$$
+
+Chứng minh rằng: Tồn tại ít nhất một điểm $c \in (x_0, x_n)$ sao cho $f^{(n)}(c) = 0$.
+
+Bài 2.18. Kiểm tra định lý Lagrange đối với hàm số
+
+$$
+f(x) = \left\{ \begin{array}{ll} 
+\frac{3 - x^2}{2} & \text{nếu } 0 \leq x \leq 1 \\ 
+\frac{1}{x} & \text{nếu } x > 1. 
+\end{array} \right.
+$$
+
+trên $[0, 2]$. Xác định điểm trung bình $c$: 
+$$
+\begin{array}{r}
+c_1 = \frac{1}{2}, \\
+c_2 = \sqrt{2}.
+\end{array}
+$$
+
+Bài 2.19. Dùng định lý Lagrange, chứng minh các bất đẳng thức sau:
+
+$$
+\begin{array}{rl}
+& |\sin x - \sin y| \le |x - y| \quad \forall x, y. \\
+& p y^{p-1} (x - y) \le x^p - y^p \le p x^{p-1} (x - y) \quad \forall 0 < x < y, p > 0. \\
+& |\arctan x - \arctan y| \le |x - y| \quad \forall x, y. \\
+& \frac{a - b}{a} < \ln \frac{a}{b} < \frac{a - b}{b} \quad \forall 0 < b < a. \\
+& \frac{x - y}{\cos^2 y} \le \tan x - \tan y \le \frac{x - y}{\cos^2 x} \quad \forall 0 < y \le x < \frac{\pi}{2}.
+\end{array}
+$$
+
+Bài 2.20. Cho hàm $f(x)$ khả vi trên $(a, b)$. Dùng định lý Lagrange, chứng minh rằng: Nếu hàm số $f(x)$ có đạo hàm bị chẵn trên miền $(a, b)$, thì $f(x)$ liên tục đều trên $(a, b)$.
+
+Bài 2.21. Cho hàm số $f ( x )$ liên tục trên $[ a , b ]$, khả vi trên $( a , b )$ và $f ( x ) \neq mx + n \forall m, n$. Chứng minh rằng: Tồn tại ít nhất $c \in ( a , b )$ sao cho
+
+$$
+\left| \frac { f ( b ) - f ( a ) } { b - a } \right| < | f ^ { \prime } ( c ) | .
+$$
+
+Hướng dẫn: Chia $[ a , b ]$ thành $a = x _ { 0 } < x _ { 1 } < . . . < x _ { n } = b$ và áp dụng định lý Lagrange cho các đoạn $[ x _ { k - 1 } , x _ { k } ] \forall k = 1, 2, ..., n$
+
+Bài 2.22.
+
+Khai triển Taylor của các hàm số sau:
+
+1) $f(x) = \ln \cos x$ tại $x_0 = 0$ đến số hạng $o(x^4)$:
+$$ f(x) = -\frac{x^2}{2} - \frac{x^4}{12} + o(x^4). $$   
+2) $f(x) = e^{x \cos x}$ tại $x_0 = 0$ đến số hạng $o(x^3)$:
+$$ f(x) = 1 + x + \frac{1}{2} x^2 - \frac{1}{6} x^3 + o(x^3). $$   
+3) $f(x) = \arcsin x$ tại $x_0 = 0$ đến số hạng $o(x^6)$:
+$$ f(x) = x + \frac{1}{6} x^3 + \frac{3}{40} x^5 + o(x^6). $$   
+4) $f(x) = (x^2 - 1)e^{2x}$ tại $x_0 = -1$ đến số hạng $o\big((x+1)^n\big)$:
+$$ f(x) = \sum_{k=0}^n \frac{e^{-2} 2^{k-2}(k-5)}{(k-1)!} (x+1)^k + o\bigl( (x+1)^n \bigr). $$
+5) $f(x) = x^2 - 3x + 3$ tại $x_0 = 3$ đến số hạng $o\big((x-3)^n\big)$:
+$$ f(x) = 3 + \sum_{k=0}^n (-1)^k (x-3)^k + o\big( (x-3)^n \big). $$
+
+Bài 2.23. Dùng quy tắc L'Hospital, tìm các giới hạn sau:
+
+1) $\begin{array} { r l }
+& { \frac { \lim_{\theta \to \infty} \sqrt { \frac { 1 } { \vartheta + 3 \pi ^ { 4 } } - \sqrt { \pi - 2 \pi } } } { \pi - \Theta } } \\
+& { \frac { \lim_{\theta \to \infty} \sqrt { \frac { 1 } { \vartheta + 1 } - \sqrt { \pi - 2 } } } { \pi } \quad \forall \widehat{\mathbf{u}} : \forall \widehat{\mathbf{u}} : \forall } \\
+& { \frac { \lim_{\theta \searrow \infty} \sqrt { \frac { 1 } { \vartheta + \sigma } - \sqrt { \pi - 2 } } } { \pi } \forall \widehat{\mathbf{u}} : \forall \widehat{\mathbf{u}} : \forall } \\
+& { \frac { \lim_{\theta \searrow \infty} } { \pi - \Theta } \left( 2 \ln ( \sin \gamma ) \right) } \\
+& { \frac { \lim_{\theta \searrow \infty} \sqrt { \frac { 1 } { \vartheta + 1 } + 2 \ln ( \sin \gamma ) } } { \pi } } \\
+& { \frac { \lim_{\theta \searrow \infty} } { \pi - \Theta } } \\
+& { \frac { \lim_{\theta \searrow \infty} } { \pi - \Theta }
+\end{array}$
+
+$( 2 \shuffle \chi ) ^ { \mathrm { tm } \geq 2 }$  
+$\frac { \operatorname* { lim } _ { \theta \searrow \infty } ^ { \infty } } { \pi - \Theta }$
+
+ds: $\frac{2\sqrt{a}}{na}$
+
+ds: $\frac{1}{2}.$
+
+ds: $-\frac{5}{2}.$
+
+ds: $\frac{1}{e}.$
+
+5) ds: $e^{-1}$
+
+7) ds:= $e$
+
+Bài 2.24. (Tìm cực tiểu toàn cục của hàm số) Chi phí khi tàu chạy cả ngày và đêm gồm hai phần: Phần cố định bằng $a$ đồng, phần biến đổi tăng tỷ lệ với lập phương của tốc độ. Hỏi tàu chạy với tốc độ $v$ nào thì kinh tế nhất.
+
+Hướng dẫn: Gọi thời gian tàu chạy là $t$ ngày đêm. Khi đó chi phí là $R = a t + k t v ^ { 3 }$ ($k$ là hệ số tỷ lệ). Vì $\begin{array} { r } { t = \frac { S } { v } } \end{array}$ suy ra
+
+$$
+R = \frac { S a } { v } + k S v ^ { 2 }
+$$
+
+Tìm cực tiểu toàn cục của $R$:
+
+$$
+0 = R' \Leftrightarrow v = \sqrt[3]{\frac{a}{2k}}
+$$
+
+vì hàm số $R$ là lồi trên $(0, +\infty)$.
+
+Bài 2.25. Cho $f ( x ) = - \ln ( \ln x )$ với $x \in D = ( 0 , + \infty )$. a) Chứng minh rằng $f ( x )$ lồi trên $D$:   
+b) Từ đó, chứng minh rằng
+
+$$
+\ln { \frac { x + y } { 2 } } \geq \sqrt { \ln x \ln y } \quad \forall x , y > 1.
+$$
+
+Bài 2.26. Cho $f ( x ) = x \ln x$ với $x \in D = ( 0 , + \infty )$: 
+
+a) Chứng minh rằng $f ( x )$ lồi trên $D$:  
+
+b) Từ đó, chứng minh rằng
+
+$$
+x \ln { \frac { x } { a } } + y \ln { \frac { y } { b } } \geq ( x + y ) \ln { \frac { x + y } { a + b } } \quad \forall a , b , x , y > 0.
+$$

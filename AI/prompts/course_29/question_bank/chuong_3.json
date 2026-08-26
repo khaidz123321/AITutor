@@ -1,0 +1,79 @@
+{
+    "subject": "Toán Rời Rạc 1",
+    "chapter_number": "3",
+    "chapter_name": "chuong_3",
+    "questions": [
+        {
+            "id": "TRR1_C3_01",
+            "lesson_number": "3.1",
+            "lesson_name": "Giới thiệu về thuật toán và độ phức tạp thời gian",
+            "topic": "Thuật toán cơ bản",
+            "difficulty": "Easy",
+            "bloom_level": "Understanding",
+            "question_text": "Cho một mảng số nguyên A có kích thước n. Hãy viết thuật toán để tìm phần tử lớn nhất trong mảng.",
+            "full_answer": "Phần tử lớn nhất là max(A)",
+            "detailed_solution": "Để tìm phần tử lớn nhất trong mảng, ta khởi tạo biến max với giá trị ban đầu là phần tử đầu tiên của mảng. Sau đó duyệt qua tất cả các phần tử còn lại và cập nhật max nếu gặp phần tử lớn hơn.",
+            "scaffolding_steps": [
+                {
+                    "step_number": 1,
+                    "hint": "Khởi tạo biến max",
+                    "step_detail": "max = A[0]"
+                },
+                {
+                    "step_number": 2,
+                    "hint": "Duyệt qua mảng",
+                    "step_detail": "for i in range(1, n):"
+                }
+            ],
+            "common_mistakes": []
+        },
+        {
+            "id": "TRR1_C3_03",
+            "lesson_number": "3.3",
+            "lesson_name": "Thuật toán tối ưu hóa và độ phức tạp thời gian không gian",
+            "topic": "Tối ưu hóa thuật toán",
+            "difficulty": "Hard",
+            "bloom_level": "Evaluating",
+            "question_text": "Cho một mảng số nguyên A có kích thước n. Hãy chứng minh rằng thuật toán sắp xếp chèn có độ phức tạp thời gian là O(n^2).",
+            "full_answer": "a) Thuật toán sắp xếp chèn thực hiện n-1 vòng lặp chính; b) Mỗi vòng lặp có thể thực hiện từ 0 đến i-1 so sánh và di chuyển phần tử;",
+            "detailed_solution": "Để chứng minh độ phức tạp thời gian của thuật toán sắp xếp chèn là O(n^2), ta cần xem xét số lượng phép so sánh và di chuyển phần tử mà thuật toán thực hiện trong quá trình sắp xếp.",
+            "scaffolding_steps": [
+                {
+                    "step_number": 1,
+                    "hint": "Xác định số vòng lặp",
+                    "step_detail": "(n-1) vòng lặp chính"
+                },
+                {
+                    "step_number": 2,
+                    "hint": "Tính toán số phép so sánh và di chuyển",
+                    "step_detail": "Mỗi vòng lặp có thể thực hiện từ 0 đến i-1 so sánh và di chuyển phần tử"
+                },
+                {
+                    "step_number": 3,
+                    "hint": "Chứng minh độ phức tạp thời gian",
+                    "step_detail": "Tổng số phép so sánh và di chuyển là O(n^2)"
+                }
+            ],
+            "common_mistakes": []
+        },
+        {
+            "id": "TRR1_C3_03",
+            "lesson_number": "3.1",
+            "lesson_name": "Đại số tuyến tính cơ bản",
+            "topic": "Phép cộng và phép nhân ma trận",
+            "difficulty": "Medium",
+            "bloom_level": "Applying",
+            "question_text": "Cho hai ma trận A = \\begin{pmatrix} 1 & 2 \\ 3 & 4 \\\nend{pmatrix} và B = \\begin{pmatrix} -1 & 0 \\ 5 & 6 \\\nend{pmatrix}. Tính tổng của A và B.",
+            "full_answer": "\\begin{pmatrix} 0 & 2 \\ 8 & 10 \\\nend{pmatrix}",
+            "detailed_solution": "Để tính tổng hai ma trận, ta cộng từng phần tử tương ứng của chúng. Kết quả là: A + B = \\begin{pmatrix} 1-1 & 2+0 \\ 3+5 & 4+6 \\\nend{pmatrix} = \\begin{pmatrix} 0 & 2 \\ 8 & 10 \\\nend{pmatrix}",
+            "scaffolding_steps": [
+                {
+                    "step_number": 1,
+                    "hint": "Gợi ý",
+                    "step_detail": "Cộng từng phần tử tương ứng của hai ma trận"
+                }
+            ],
+            "common_mistakes": []
+        }
+    ]
+}

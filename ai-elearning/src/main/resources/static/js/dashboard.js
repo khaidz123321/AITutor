@@ -493,7 +493,8 @@
             document.getElementById('courseForm').reset();
             document.getElementById('modalCourseId').value = '';
             document.getElementById('mcPdfFile').value = '';
-            document.getElementById('mcPdfLinkContainer').style.display = 'none';
+            document.getElementById('mcPdfLink').style.display = 'none';
+            document.getElementById('mcPdfNone').style.display = 'inline';
             document.getElementById('personaPreviewGroup').style.display = 'none';
             document.getElementById('mcAiPersona').value = '';
             document.getElementById('mcAiPersonaHidden').value = '';
@@ -734,12 +735,15 @@
                     }
 
                     document.getElementById('mcPdfFile').value = '';
-                    const pdfLinkContainer = document.getElementById('mcPdfLinkContainer');
+                    const pdfLink = document.getElementById('mcPdfLink');
+                    const pdfNone = document.getElementById('mcPdfNone');
                     if (c.lecturePdf && c.lecturePdf !== 'null' && c.lecturePdf !== 'undefined') {
-                        pdfLinkContainer.style.display = 'block';
-                        document.getElementById('mcPdfLink').href = c.lecturePdf;
+                        pdfLink.style.display = 'inline';
+                        pdfLink.href = c.lecturePdf;
+                        pdfNone.style.display = 'none';
                     } else {
-                        pdfLinkContainer.style.display = 'none';
+                        pdfLink.style.display = 'none';
+                        pdfNone.style.display = 'inline';
                     }
 
                     // Hiển thị ảnh đại diện hiện tại
@@ -1228,119 +1232,164 @@
             return;
         }
         
-        const okAI = await window.showConfirm('AI (DeepSeek + Qwen) sẽ đọc lý thuyết và tự động sinh bài tập. Quá trình này có thể mất 30-60 giây. Bạn có muốn tiếp tục?');
+        const okAI = await window.showConfirm('AI sẽ đọc lý thuyết thực tế của chương và tự động biên soạn 3 bài tập tự luận bậc Đại học. Quá trình này thường mất 30-60 giây.\n\nBạn có muốn tiếp tục?');
         if (okAI) {
             const btn = document.getElementById('btnAutoGenerateExerciseAi');
             const originalText = btn.innerHTML;
             btn.disabled = true;
 
-            // Mở Modal Loading
+            const chapterId = currentSelectedChapterIdForExercisesAi;
+
+            // 1. Lấy chính xác danh sách ID hiện tại trong Database làm mốc so sánh (Baseline)
+            let baselineCount = 0;
+            let baselineIds = new Set();
+            try {
+                const currentRes = await fetch(`/api/v1/chapters/${chapterId}/exercises-ai`, {
+                    headers: { 'Authorization': 'Bearer ' + token }
+                });
+                const currentData = await currentRes.json();
+                if (currentData && currentData.success && Array.isArray(currentData.data)) {
+                    baselineCount = currentData.data.length;
+                    baselineIds = new Set(currentData.data.map(x => x.id));
+                }
+            } catch (e) {
+                console.log('Error fetching baseline exercises count:', e);
+            }
+
+            // 2. Mở Modal Loading và hiển thị bộ đếm thời gian thực
             const loadingModal = document.getElementById('aiLoadingModal');
             const progressBar = document.getElementById('aiLoadingBar');
             const progressPercent = document.getElementById('aiLoadingPercent');
             const statusTitle = document.getElementById('aiLoadingTitle');
+            const statusDesc = document.getElementById('aiLoadingDesc');
             
-            statusTitle.textContent = 'AI đang xử lý...';
-            progressBar.style.width = '0%';
-            progressPercent.textContent = '0%';
+            statusTitle.textContent = 'AI đang phân tích lý thuyết & trích xuất kiến thức trọng tâm...';
+            if (statusDesc) {
+                statusDesc.innerHTML = 'Hệ thống đang đọc toàn bộ giáo trình, tính toán ma trận độ khó và biên soạn bài tập tự luận chuyên sâu.<br><span id="aiElapsedTimer" style="color: #4f46e5; font-weight: 600;">Thời gian xử lý: 0 giây</span>';
+            }
+            progressBar.style.width = '10%';
+            progressPercent.textContent = '10%';
             loadingModal.classList.add('show');
             
-            // Giả lập thanh tiến trình chạy đều đến 95% trong 45s
-            let progress = 0;
-            const progressInterval = setInterval(() => {
-                if (progress < 95) {
-                    progress += 2; // Tăng 2% mỗi giây -> khoảng 47s là tới 94%
-                    progressBar.style.width = progress + '%';
-                    progressPercent.textContent = progress + '%';
+            let elapsedSeconds = 0;
+            let currentProgress = 10;
+            const timerInterval = setInterval(() => {
+                elapsedSeconds++;
+                const timerEl = document.getElementById('aiElapsedTimer');
+                if (timerEl) {
+                    timerEl.textContent = `Thời gian xử lý: ${elapsedSeconds} giây`;
+                }
+
+                // Cập nhật trạng thái động theo từng giai đoạn xử lý
+                if (statusTitle) {
+                    if (elapsedSeconds < 15) {
+                        statusTitle.textContent = 'Đang phân tích lý thuyết & trích xuất kiến thức trọng tâm...';
+                    } else if (elapsedSeconds < 45) {
+                        statusTitle.textContent = 'AI đang suy luận toán học & thiết lập các bối cảnh thực tiễn...';
+                    } else if (elapsedSeconds < 90) {
+                        statusTitle.textContent = 'Đang biên soạn đề bài chi tiết, đáp số và các bước hướng dẫn...';
+                    } else {
+                        statusTitle.textContent = 'Đang hoàn tất và đồng bộ bài tập vào cơ sở dữ liệu...';
+                    }
+                }
+
+                // Thanh tiến trình tăng mượt mà đến 95% trong khi chờ
+                if (currentProgress < 95) {
+                    if (currentProgress < 50) {
+                        currentProgress += 2;
+                    } else if (currentProgress < 85) {
+                        currentProgress += 1;
+                    } else {
+                        currentProgress += (elapsedSeconds % 3 === 0 ? 1 : 0);
+                    }
+                    if (currentProgress > 95) currentProgress = 95;
+                    progressBar.style.width = currentProgress + '%';
+                    progressPercent.textContent = currentProgress + '%';
                 }
             }, 1000);
-            
-            fetch(`/api/v1/chapters/${currentSelectedChapterIdForExercisesAi}/exercises-ai/generate-auto`, {
+
+            // 3. Cơ chế Polling kiên nhẫn: Giữ popup mở cho đến khi bài tập thực tế xuất hiện trong Database
+            let isCompleted = false;
+            let pollAttempts = 0;
+            const maxPollAttempts = 600; // 600 * 3s = 1800s (30 phút - không bao giờ tự đóng giữa chừng)
+
+            function finishSuccess(newCount) {
+                if (isCompleted) return;
+                isCompleted = true;
+                clearInterval(timerInterval);
+                clearInterval(pollInterval);
+                
+                progressBar.style.width = '100%';
+                progressPercent.textContent = '100%';
+                statusTitle.textContent = 'Đã biên soạn bài tập thành công!';
+                if (statusDesc) {
+                    statusDesc.innerHTML = `<span style="color: #16a34a; font-weight: 600; font-size: 15px;">Đã lưu thành công ${newCount} bài tập tự luận mới vào chương học.</span>`;
+                }
+
+                // Chờ 1.8s cho người dùng nhìn thấy thông báo thành công rồi mới đóng popup và refresh bảng
+                setTimeout(() => {
+                    loadingModal.classList.remove('show');
+                    btn.innerHTML = originalText;
+                    btn.disabled = false;
+                    loadExercisesAiPanelTable(chapterId);
+                }, 1800);
+            }
+
+            function finishTimeoutOrError(msg) {
+                if (isCompleted) return;
+                isCompleted = true;
+                clearInterval(timerInterval);
+                clearInterval(pollInterval);
+                
+                loadingModal.classList.remove('show');
+                btn.innerHTML = originalText;
+                btn.disabled = false;
+                loadExercisesAiPanelTable(chapterId);
+                if (msg) alert(msg);
+            }
+
+            const pollInterval = setInterval(() => {
+                if (isCompleted) return;
+                pollAttempts++;
+
+                if (pollAttempts > maxPollAttempts) {
+                    finishTimeoutOrError('Quá trình sinh bài tập mất nhiều thời gian hơn dự kiến. Vui lòng bấm chọn lại chương học để tải bài tập mới.');
+                    return;
+                }
+
+                fetch(`/api/v1/chapters/${chapterId}/exercises-ai`, {
+                    headers: { 'Authorization': 'Bearer ' + token }
+                })
+                .then(r => r.json())
+                .then(rData => {
+                    if (rData.success && Array.isArray(rData.data)) {
+                        // Tìm xem có bài tập nào có ID mới (chưa từng có trong baselineIds) không
+                        const newItems = rData.data.filter(x => !baselineIds.has(x.id));
+                        if (newItems.length > 0 || rData.data.length > baselineCount) {
+                            const addedCount = newItems.length > 0 ? newItems.length : (rData.data.length - baselineCount);
+                            finishSuccess(addedCount);
+                        }
+                    }
+                })
+                .catch(e => console.log('Polling exercises-ai status...', e));
+            }, 3000);
+
+            // 4. Gửi request kích hoạt sinh bài tập chạy nền
+            fetch(`/api/v1/chapters/${chapterId}/exercises-ai/generate-auto`, {
                 method: 'POST',
                 headers: { 'Authorization': 'Bearer ' + token }
             })
             .then(async res => {
                 const text = await res.text();
                 let data = {};
-                if (text && text.trim()) {
-                    try {
-                        data = JSON.parse(text);
-                    } catch (e) {
-                        data = { success: false, message: text };
-                    }
-                } else {
-                    data = { success: false, message: 'Phản hồi từ server rỗng (Timeout hoặc Lỗi kết nối).' };
-                }
-                return { ok: res.ok, status: res.status, data };
+                try { data = JSON.parse(text); } catch (e) { data = { message: text }; }
+                return { status: res.status, data };
             })
-            .then(({ ok, status, data }) => {
-                clearInterval(progressInterval);
-                btn.innerHTML = originalText;
-                btn.disabled = false;
-                
-                if (ok && data.success) {
-                    progressBar.style.width = '100%';
-                    progressPercent.textContent = '100%';
-                    statusTitle.textContent = 'Sinh bài tập thành công!';
-                    
-                    setTimeout(() => {
-                        loadingModal.classList.remove('show');
-                        alert('✅ Sinh bài tập AI thành công!');
-                        loadExercisesAiPanelTable(currentSelectedChapterIdForExercisesAi);
-                    }, 500);
-                } else if (status === 504 || (data.message && (data.message.includes('504') || data.message.includes('Gateway time-out')))) {
-                    // Xử lý thông minh khi dính Cloudflare 504 Gateway Timeout
-                    const statusDesc = document.getElementById('exerciseAiStatusDesc');
-                    if (statusDesc) {
-                        statusDesc.textContent = 'Do AI đang suy luận toán học phức tạp, Cloudflare đã tạm ngắt kết nối HTTP nhưng AI VẪN ĐANG TIẾP TỤC CHẠY NGẦM TRÊN SERVER. Đang tự động theo dõi kết quả...';
-                    }
-                    progressBar.style.width = '100%';
-                    progressPercent.textContent = 'Đang chờ AI ngầm...';
-
-                    const initialLength = cachedExercisesAiList ? cachedExercisesAiList.length : 0;
-                    let pollCount = 0;
-
-                    const pollInterval = setInterval(() => {
-                        pollCount++;
-                        if (pollCount > 30) {
-                            clearInterval(pollInterval);
-                            loadingModal.classList.remove('show');
-                            btn.innerHTML = originalText;
-                            btn.disabled = false;
-                            alert('Quá thời gian chờ ngầm. Bạn có thể nhấn Đồng bộ hoặc chọn lại chương để xem bài tập mới.');
-                            return;
-                        }
-
-                        fetch(`/api/v1/chapters/${currentSelectedChapterIdForExercisesAi}/exercises-ai`, {
-                            headers: { 'Authorization': 'Bearer ' + token }
-                        })
-                        .then(r => r.json())
-                        .then(rData => {
-                            if (rData.success && rData.data && rData.data.length > initialLength) {
-                                clearInterval(pollInterval);
-                                loadingModal.classList.remove('show');
-                                btn.innerHTML = originalText;
-                                btn.disabled = false;
-                                alert('✅ AI đã hoàn tất sinh bài tập ngầm thành công!');
-                                loadExercisesAiPanelTable(currentSelectedChapterIdForExercisesAi);
-                            }
-                        })
-                        .catch(e => console.log('Polling...', e));
-                    }, 8000);
-                } else {
-                    loadingModal.classList.remove('show');
-                    // Lấy message lỗi từ nhiều field có thể có
-                    const errMsg = data.message || data.detail || data.error || JSON.stringify(data);
-                    alert('❌ Lỗi khi gọi AI Service sinh bài tập: ' + status + ' - ' + errMsg);
-                }
+            .then(({ status, data }) => {
+                console.log('Generate request triggered, status:', status, data);
             })
             .catch(err => {
-                clearInterval(progressInterval);
-                loadingModal.classList.remove('show');
-                btn.innerHTML = originalText;
-                btn.disabled = false;
-                console.error(err);
-                alert('❌ Lỗi kết nối khi sinh bài tập AI: ' + err.message);
+                console.log('Network trigger notice (polling is actively waiting):', err);
             });
         }
     });
@@ -1651,7 +1700,12 @@
 
         xhr.onload = () => {
             if (xhr.status >= 200 && xhr.status < 300) {
-                const resData = JSON.parse(xhr.responseText);
+                let resData = {};
+                try {
+                    resData = JSON.parse(xhr.responseText);
+                } catch (e) {
+                    resData = { success: true };
+                }
                 if (resData.success) {
                     progressBar.style.width = '100%';
                     progressPercent.textContent = '100%';
@@ -1666,15 +1720,50 @@
                     progressDiv.style.display = 'none';
                 }
             } else {
-                let errorMsg = 'AI phân tích thất bại. Vui lòng kiểm tra lại file hoặc dịch vụ AI.';
-                try {
-                    const resData = JSON.parse(xhr.responseText);
-                    if (resData && resData.message) {
-                        errorMsg = resData.message;
-                    }
-                } catch (err) { }
-                alert('Lỗi: ' + errorMsg);
-                progressDiv.style.display = 'none';
+                const textToCheck = ((xhr.responseText || '')).toLowerCase();
+                const isTimeoutError = xhr.status === 524 || xhr.status === 504 || xhr.status === 502 || xhr.status === 522 || xhr.status === 520 ||
+                    textToCheck.includes('524') || textToCheck.includes('504') || textToCheck.includes('timeout') ||
+                    textToCheck.includes('timed out') || textToCheck.includes('cloudflare');
+                if (isTimeoutError) {
+                    statusText.textContent = 'AI vẫn đang tiếp tục phân tích file PDF ngầm trên server...';
+                    let pollCount = 0;
+                    const initialLen = cachedExercisesAiList ? cachedExercisesAiList.length : 0;
+                    const pollPdf = setInterval(() => {
+                        pollCount++;
+                        if (pollCount > 40) {
+                            clearInterval(pollPdf);
+                            progressDiv.style.display = 'none';
+                            closeExerciseAiPdfUploadModal();
+                            alert('AI vẫn đang xử lý file PDF trên server. Bạn có thể chọn lại chương sau ít phút để xem kết quả.');
+                            loadExercisesAiPanelTable(chapterId);
+                            return;
+                        }
+                        fetch(`/api/v1/chapters/${chapterId}/exercises-ai`, {
+                            headers: { 'Authorization': 'Bearer ' + token }
+                        })
+                        .then(r => r.json())
+                        .then(rData => {
+                            if (rData.success && rData.data && rData.data.length > initialLen) {
+                                clearInterval(pollPdf);
+                                progressDiv.style.display = 'none';
+                                closeExerciseAiPdfUploadModal();
+                                alert('✅ AI đã hoàn tất nhập bài tập từ PDF thành công!');
+                                loadExercisesAiPanelTable(chapterId);
+                            }
+                        })
+                        .catch(e => console.log('Polling PDF...', e));
+                    }, 4000);
+                } else {
+                    let errorMsg = 'AI phân tích thất bại. Vui lòng kiểm tra lại file hoặc dịch vụ AI.';
+                    try {
+                        const resData = JSON.parse(xhr.responseText);
+                        if (resData && resData.message) {
+                            errorMsg = resData.message;
+                        }
+                    } catch (err) { }
+                    alert('Lỗi: ' + errorMsg);
+                    progressDiv.style.display = 'none';
+                }
             }
         };
 
@@ -1705,20 +1794,34 @@
             method: 'POST',
             headers: { 'Authorization': 'Bearer ' + token }
         })
-            .then(res => res.json())
-            .then(resData => {
+            .then(async res => {
+                const text = await res.text();
+                let resData = {};
+                try {
+                    resData = JSON.parse(text);
+                } catch (e) {
+                    resData = { success: false, message: text };
+                }
+                return { ok: res.ok, status: res.status, resData, text };
+            })
+            .then(({ ok, status, resData, text }) => {
                 btn.disabled = false;
                 btn.textContent = originalText;
-                if (resData.success) {
-                    alert('Đồng bộ bài tập sang AI Tutor thành công! Học sinh đã có thể làm các bài tập này.');
+                if (ok && resData.success) {
+                    alert('✅ Đồng bộ bài tập sang AI Tutor thành công! Học sinh đã có thể làm các bài tập này.');
                 } else {
-                    alert('Lỗi đồng bộ: ' + (resData.message || 'Lỗi không xác định'));
+                    const textLower = (text + ' ' + (resData.message || '')).toLowerCase();
+                    if (status === 524 || status === 504 || textLower.includes('524') || textLower.includes('timeout') || textLower.includes('cloudflare')) {
+                        alert('ℹ️ Tiến trình đồng bộ Socratic đang tiếp tục chạy ngầm trên server Hetzner. Quá trình này sẽ hoàn tất sau 1-2 phút.');
+                    } else {
+                        alert('Lỗi đồng bộ: ' + (resData.message || 'Lỗi không xác định'));
+                    }
                 }
             })
             .catch(err => {
                 btn.disabled = false;
                 btn.textContent = originalText;
-                alert('Lỗi kết nối khi đồng bộ bài tập');
+                alert('ℹ️ Đã gửi yêu cầu đồng bộ. Hệ thống AI đang xử lý ngầm trên server.');
                 console.error(err);
             });
     };
@@ -2642,3 +2745,4 @@
         document.addEventListener('DOMContentLoaded', init);
     }
 })();
+

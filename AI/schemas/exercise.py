@@ -11,7 +11,7 @@ mà nó đang mong đợi từ response:
 """
 
 from pydantic import BaseModel, Field
-from typing import List
+from typing import List, Optional
 from enum import Enum
 
 
@@ -61,6 +61,9 @@ class GenerateFromTheoryRequest(BaseModel):
     """Request từ Admin/Giảng viên để tự sinh bài tập AI (JSON) từ file lý thuyết .txt"""
     subject: str
     chapter: str
+    course_name: Optional[str] = None  # Tên môn học thật từ DB (ưu tiên hơn _COURSE_FOLDER_MAP)
+    chapter_title: Optional[str] = None  # Tên chương thật từ DB (Chapter.chapterName), dùng để khớp nội dung
+    # theo ngữ nghĩa khi số thứ tự file trên đĩa lệch so với số chương trong DB (ví dụ do OCR gộp/lệch chương).
 
 class GenerateFromTheoryResponse(BaseModel):
     success: bool

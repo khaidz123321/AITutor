@@ -1,0 +1,1440 @@
+1.1.1.Mở đầu  
+1.1.2.Các tính chất của tập số thực  
+
+1.2.Số phức  
+1.2.1.Mở đầu  
+1.2.2. Định nghĩa và các phép toán  
+1.2.3.Tính chất  
+1.2.4.Biểu diễn hình học  
+1.2.5.Công thức Moivre  
+1.2.6.Căn bậc n của số phức  
+1.2.7.Công thức Euler
+
+1.3.Dãy số thực  
+1.3.1.Các khái niệm cơ bản  
+1.3.2.Tính chất  
+1.3.3.Các phép toán về giới hạn  
+1.3.4.Dãy đơn điệu  
+1.3.5.Hai dãy kề nhau  
+1.3.6.Dãy con  
+1.3.7.Dãy Cauchy  
+
+Bài tập chương 1
+
+# CHUONG 1. SỐ THỰC, SỐ PHỨC VÀ GIỚ HẠN CỦA DÃY SỐ
+
+# 1.1. Số thực
+
+## 1.1.1. Mở đầu
+
+Nhắc lại một số tập hợp quen thuộc:
+
++ Tập các số tự nhiên
+$$
+\mathbb{N} = \{0, 1, 2, \ldots\}.
+$$
+
++ Tập các số nguyên
+$$
+\mathbb{Z} = \{0, \pm 1, \pm 2, \ldots\}.
+$$
+
++ Tập các số hữu tỉ
+$$
+\mathbb{Q} = \left\{\frac{p}{q} : p \in \mathbb{Z}, q \in \mathbb{N} \backslash \{0\}\right\}.
+$$
+
+Ta có $\mathbb{N} \subset \mathbb{Z} \subset \mathbb{Q}$.
+
+Trong tập các số hữu tỉ $\mathbb{Q}$ có thể thực hiện các phép toán cộng, trừ, nhân và chia cho số khác 0. Trong $\mathbb{Q}$ còn có quan hệ thứ tự $\leq, \geq, =$. Theo ngôn ngữ đại số, $\mathbb{Q}$ cùng với các phép toán và quan hệ thứ tự đã cho là một trường được sắp xếp thứ tự.
+
+Tuy nhiên, từ lâu người ta đã thấy tập $\mathbb{Q}$ chưa đầy đủ. Chẳng hạn, không có số hữu tỷ nào biểu diễn độ dài đường chéo của một hình vuông có cạnh bằng 1 đơn vị, biểu diễn số $\pi$ là tỉ số giữa độ dài của một đường tròn và đường kính của nó.
+
+Một số hữu tỷ $x$, bằng cách viết $\textstyle x = \frac{p}{q}$ với $p, q \in \mathbb{Z}, q \neq 0$ và thực hiện phép chia $p$ cho $q$, ta có thể dừng lại với dãy sau đây sẽ được gọi là số thập phân:
+
+$$
+x = x_0 , x_1 x_2 \ldots
+$$
+
+trong đó $x_0 \in \mathbb{Z}$ và $x_1, x_2, \ldots \in \{ 0, 1, 2, \ldots, 9 \}$. Số thập phân này hoặc hữu hạn, tức là tồn tại $\mathbf{s} \geq 0$ sao cho $x_n = 0 \forall n > k$ hay
+
+$$
+x = x_0 , x_1 x_2 \ldots x_k ,
+$$
+
+hoặc vô hạn tuần hoàn với chu kỳ $p$, tức là
+
+$$
+x = x_0 , x_1 x_2 \ldots x_k \underbrace{x_{k+1} x_{k+2} \ldots x_{k+p}}_{p} \underbrace{x_{k+1} x_{k+2} \ldots x_{k+p}}_{p} \cdots \underbrace{x_{k+1} x_{k+2} \ldots x_{k+p}}_{p}.
+$$
+
+Hiển nhiên
+
+$$
+x = x_0 + \frac{x_1}{10} + \ldots + \frac{x_k}{10^k},
+$$
+
+hoặc
+
+$$
+x = x_{0} + \frac{x_{1}}{10} + \ldots + \frac{x_{y}}{10^{k}} + x_{k_{1}} x_{k_{2}} \ldots x_{k_{p}} . \frac{1}{10^{k}(1 - 10^{-p})}.
+$$
+
+Ngược lại, mỗi số thập phân hữu hạn hay vô hạn tuần hoàn đều được biểu diễn dưới dạng một số hữu tỷ. Như vậy, ta có thể đồng nhất tập các số hữu tỷ $\mathbb{Q}$ với tập các số thập phân hữu hạn hay vô hạn tuần hoàn.
+
+Một cách tổng quát, ta coi mỗi số thập phân vô hạn không tuần hoàn là một số mới và gọi là số vô tỷ. Tập các số hữu tỷ và vô tỷ gọi là tập các số thực, ký hiệu là $\mathbb{R}$. Mỗi phần tử của $\mathbb{R}$ được gọi là một số thực.
+
+Cho số thực
+
+Khi đó
+
+$x_{0}$ được gọi là phần nguyên của $x$, ký hiệu là $[x]$
+
+$x_{n}$ được gọi là phần thập phân thứ $n$ của $x$:
+
+Nếu tồn tại số nguyên $m$ sao cho
+
+$$
+m \leq x < m + 1
+$$
+
+thì $m$ được gọi là sàn của $x$, ký hiệu $\lfloor x \rfloor$
+
+Nếu tồn tại số nguyên $m$ sao cho
+
+$$
+m - 1 < x \leq m
+$$
+
+thì $m$ được gọi là trần của $x$, ký hiệu $\lceil x \rceil$:
+
+Giả sử $x, y \in \mathbb{R}$
+
+$$
+x = x_{0}, x_{1} x_{2} \ldots \quad \text{và} \quad y = y_{0}, y_{1} y_{2} \ldots
+$$
+
+Ta viết $x < y$ nếu $x_{0} < y_{0}$ hay tồn tại $k$ sao cho $x_{0} = y_{0}, \ldots, x_{k} = y_{k}$ và $x_{k+1} < y_{k+1}$. Hai số bằng nhau $x = y$ nếu $x_{i} = y_{i} \forall i = 0, 1, \ldots$
+
+# 1.1.2. Các tính chất của tập số thực
+
++ Tính sắp thứ tự
+
+Cho hai số thực $a, b$. Khi đó, $a$ và $b$ so sánh được với nhau, tức là $a \leq b$ hoặc $a > b$. Vậy, giả sử $a = a_0, a_1 a_2 ...$, $b = b_0, b_1 b_2 ...$. Nếu $a \neq b$ thì tồn tại $k \in \mathbb{N}$ sao cho
+
+$$
+a_0 = b_0, ..., a_k = b_k
+$$
+
+nhưng
+
+$$
+a_{k+1} < b_{k+1} \text{ hay } a_{k+1} > b_{k+1}.
+$$
+
+Như vậy $a < b$ hoặc $a > b$.
+
++ Tính trù mật
+
+Cho 2 số thực $a, b$ và $a < b$. Tồn tại số hữu tỷ $r \in \mathbb{Q}$ sao cho $a < r < b$. Vậy, giả sử $a = a_0, a_1 a_2 ...$, $b = b_0, b_1 b_2 ...$, từ $a < b$ suy ra tồn tại $k \in \mathbb{N}$ sao cho
+
+$$
+a_0 = b_0, ..., a_k = b_k, a_{k+1} < b_{k+1}.
+$$
+
+Khi đó, ta chọn số hữu tỷ là
+
+$$
+r = \left\{
+\begin{array}{ll}
+a_0, a_1 ... a_k b_{k+1} & \text{nếu } b \in \mathbb{Q} \\
+\frac{1}{2}(a_0, a_1 ... a_k a_{k+1} + a_0, a_1 ... a_k b_{k+1}) & \text{nếu } b \notin \mathbb{Q}
+\end{array}
+\right.
+$$
+
+thỏa mãn $a < r < b$.
+
++ Tính đày đủ
+
+Cho $A \subseteq \mathbb{R}$. Khi đó
+
+$m \in \mathbb{R}$ được gọi là can dưới của $A$ nếu $m \leq a \forall a \in A$. Nếu $m$ là can dưới lớn nhất trong các can dưới của $A$ thì $m$ được gọi là can dưới đúng của $A$, ký hiệu $m = \operatorname{inf} A.$
+
+$M \in \mathbb{R}$ được gọi là can trên của $A$ nếu $a \leq M \forall a \in A$. Nếu $M$ là can trên nhỏ nhất trong các can trên của $A$ thì $M$ được gọi là can trên đúng của $A$, ký hiệu $M = \operatorname{sup} A.$
+
+Theo tính sắp thứ tự của tập số thực, nên nếu tồn tại thì $\sup A$, $\inf A$ là duy nhất. Tính tồn tại được thừa nhận bởi nguyên lý dưới đây.
+
+Định lý 1.1. Mỗi tập con khác rỗng của tập số thực $\mathbb{R}$ có ít nhất một can trên (tương ứng một can dưới) thì tồn tại duy nhất can trên đúng (tương ứng can dưới đúng).
+
+Chú ý rằng tập các số hữu tỉ $\mathbb{Q}$ không có tính đầy đủ. Ví dụ trong $\mathbb{Q}$ có tập $A = \{ x : \ x^2 < 2 \}$ không có can trên đúng trong $\mathbb{Q}$.
+
++ Các tập số thực thông dụng.
+
+- Đoạn trên $\mathbb{R}$
+$$
+[a, b] = \{ x \in \mathbb{R} : a \leq x \leq b \}.
+$$
+
+- Nửa đoạn trên $\mathbb{R}$
+$$
+[a, b) = \{ x \in \mathbb{R} : a \leq x < b \}, [a, +\infty) = \{ x \in \mathbb{R} : a \leq x \}.
+$$
+
+- Nửa khoảng trên $\mathbb{R}$
+$$
+(a, b] = \{ x \in \mathbb{R} : a < x \leq b \}, (-\infty, b] = \{ x \in \mathbb{R} : x \leq b \}.
+$$
+
+- Khoảng trên $\mathbb{R}$
+
+$$
+( a , b ) = \{ x \in \mathbb { R } : \ a < x < b \} , \mathbb { R } = ( - \infty , + \infty ) .
+$$
+
+- Cho $a \in \mathbb { R }$ và $\epsilon > 0$, khoảng
+
+$$
+( a - \epsilon , a + \epsilon ) = \{ x \in \mathbb { R } : | x - a | < \epsilon \} = B _ { \epsilon } ( a )
+$$
+
+được gọi là một lân cận của điểm $a$.
+
+# 1.2. Số phức
+
+# 1.2.1. Mở đầu
+
+Tập số thực $\mathbb { R }$ đã rất phong phú, nhưng nếu ta xét phương trình bậc 2
+
+$$
+a x ^ { 2 } + b x + c = 0 ,
+$$
+
+đây $a \neq 0 , a , b , c \in \mathbb { R }$ với $\Delta : = b ^ { 2 } - 4 a c < 0$, thì phương trình sẽ vô nghiệm trên $\mathbb { R }$. Để mở rộng lớp nghiệm của phương trình này, ta mở rộng tập số thực thành tập số phức (ký hiệu: $\mathbb { C }$). Muốn xây dựng tập số phức, ta quan tâm đến số $i$ thỏa mãn $i ^ { 2 } = - 1$, số $i$ không phải là số thực và được gọi là đơn vị ảo.
+
+# 1.2.2. Định nghĩa và các phép toán
+
+· Tập số phức là một tập hợp xác định bởi
+
+$$
+\mathbb { C } : = \{ z = a + b i : \ a , b \in \mathbb { R }, i ^ { 2 } = - 1 \} .
+$$
+
+· Cho số phức $z := a + b i$ với $a, b \in \mathbb { R }$ (còn gọi là dạng chính tắc của $z$), khi đó $a$ được gọi là phần thực của $z$, ký hiệu tắt bởi $\mathrm{Re} z$ (Real of $z$).
+
+· $b$ được gọi là phần ảo của $z$, ký hiệu tắt bởi $\mathrm{Im} z$ (Image of $z$).
+
+· $\sqrt { a ^ { 2 } + b ^ { 2 }}$ được gọi là môđun (còn gọi là độ dài) của $z$, ký hiệu tắt bởi $| z |$.
+
+. Số phức $a - b i$ được gọi là số phức liên hợp của số phức $z$, ký hiệu tắt bằng $\bar{z}$: Số phức $- a + b i$ được gọi là số phức đối của số phức $z$: 
+
+（20）Cho 2 số phức dưới dạng chính tắc $x = x_{1} + x_{2} i, y = y_{1} + y_{2} i$. Các phép toán trên tập số phức $\mathbb{C}$ được xác định bằng các quy tắc sau:
+
+- Quy tắc cộng: $x + y = (x_{1} + y_{1}) + (x_{2} + y_{2}) i.$
+- Quy tắc trừ: $x - y = (x_{1} - y_{1}) + (x_{2} - y_{2}) i$
+- Quy tắc nhân: $x . y = (x_{1} y_{1} - x_{2} y_{2}) + (x_{1} y_{2} + x_{2} y_{1}) i.$
+- Quy tắc bằng nhau:
+$$
+x = y \Leftrightarrow { \left\{ \begin{array}{ll}
+{x_{1} = y_{1}} \\
+{x_{2} = y_{2}}
+\end{array} \right. }
+$$
+
+1.2.3. Tính chất
+
+a) Tính chất kết hợp (với phép cộng): $(x + y) + z = x + (y + z) \forall x, y, z \in \mathbb{C}.$
+b) Tính chất kết hợp (với phép nhân): $(xy)z = x(yz) \forall x, y, z \in \mathbb{C}.$
+
+c) Tính chất giao hoán: $x + y = y + x \forall x, y \in \mathbb{C}.$
+d) Tính chất phân phối của phép nhân với phép cộng: $x(y + z) = xy + xz \forall x, y, z \in \mathbb{C}$.
+
+e) $\overline{x \pm y} = \bar{x} \pm \bar{y} \quad \forall x, y \in \mathbb{C}.$
+
+f) $\overline{x . y} = \bar{x} . \bar{y} \quad \forall x, y \in \mathbb{C}.$
+
+g) $x . \bar{x} = |x|^2 \quad \forall x \in \mathbb{C}.$
+
+h) $\overline{\left( \frac{x}{y} \right)} = \frac{\bar{x}}{\bar{y}} \quad \forall x, y \in \mathbb{C}, y \neq 0.$
+
+i) $|x| \geq 0 \quad \forall x \in \mathbb{C}, |x| = 0 \Leftrightarrow x = 0.$
+
+j) $|x . y| \leq |x| . |y| \quad \forall x, y \in \mathbb{C}.$
+
+k) $|x + y| \leq |x| + |y| \quad \forall x, y \in \mathbb{C}.$
+
+Chứng minh biểu diễn các số phức dưới dạng chính tắc và dùng định nghĩa 1.2.
+
+Ví dụ 1.2. Giải và biện luận phương trình sau trên tập các số phức $\mathbb{C}$:
+
+$$
+a x^2 + b x + c = 0 \quad \text{với} \ a \neq 0.
+$$
+
+Giải
+
+$\Delta := b^2 - 4ac.$
+
+- Nếu $\Delta = 0$, thì phương trình có nghiệm kép $x_1 = x_2 = \frac{-b}{2a}$.
+
+- Nếu $\Delta > 0$, thì phương trình có 2 nghiệm thực phân biệt:
+
+$$
+x_{1, 2} = \frac{-b \pm \sqrt{\Delta}}{2a}.
+$$
+
+- Nếu $\Delta < 0$, thì $\Delta = -(-\Delta) = (i \sqrt{-\Delta})^2$. Khi đó, phương trình có 2 nghiệm phức phân biệt:
+
+$$
+x_{1, 2} = \frac{-b \pm i \sqrt{-\Delta}}{2a}.
+$$
+
+Vi dụ 1.3. Cho số phức $\begin{array} { r } { z = \frac { a - b i } { a + b i } } \end{array}$ với $a , b \in \mathbb { R } , b \neq 0$. Hãy tính $Im(z), Re(z), |z|$:
+
+Giải
+
+Nhân cả tử và mẫu số với $a - bi$, ta có
+
+$$
+\begin{array} { l } { z = \cfrac { ( a - b i ) ^ { 2 } } { a ^ { 2 } - b ^ { 2 } i ^ { 2 } } } \\ { \displaystyle = \cfrac { a ^ { 2 } - b ^ { 2 } - 2 a b i } { a ^ { 2 } + b ^ { 2 } } } \\ { \displaystyle = \cfrac { a ^ { 2 } - b ^ { 2 } } { a ^ { 2 } + b ^ { 2 } } + \cfrac { - 2 a b } { a ^ { 2 } + b ^ { 2 } } . i } \end{array}
+$$
+
+Khi đó. $\begin{array} { r } { Re(z) = \frac { a ^ { 2 } - b ^ { 2 } } { a ^ { 2 } + b ^ { 2 } } , Im(z) = \frac { - 2 a b } { a ^ { 2 } + b ^ { 2 } } } \end{array}$ và $|z|=√Re^2(z)+Im^2(z)=1$.
+
+Vi dụ 1.4. Bất đẳng thức Cauchy-Schwarz
+
+Cho các số phức $a _ { 1 } , a _ { 2 } , . . . , a _ { n }$ và $b _ { 1 } , b _ { 2 } , . . . , b _ { n }$. Khi đó
+
+$$
+| \sum _ { i = 1 } ^ { n } a _ { i } . b _ { i } | ^ { 2 } \leq \sum _ { i = 1 } ^ { n } | a _ { i } | ^ { 2 } . \sum _ { i = 1 } ^ { n } | b _ { i } | ^ { 2 } .
+$$
+
+Chứng minh
+
+Đặt
+
+$$
+a = \sum _ { i = 1 } ^ { n } | a _ { i } | ^ { 2 } , b = \sum _ { i = 1 } ^ { n } | b _ { i } | ^ { 2 } , c = \sum _ { i = 1 } ^ { n } a _ { i } . \bar{b _ { i }} .
+$$
+
+Nếu $b = 0$ thì $b _ { 1 } = b _ { 2 } = \ldots = b _ { n }$, bất đẳng thức luôn đúng. Nếu $b > 0$, theo tính chất 1.3.e) và $\mathbf{g}$, ta có
+
+$$
+\begin{array}{rl}
+\displaystyle \sum_{i=1}^{n} |b . a _ { i } - c . b _ { i }|^2 &= \displaystyle \sum_{i=1}^{n} (b . a _ { i } - c . b _ { i }) (b . a _ { i } - c . b _ { i }) \\
+&= \displaystyle \sum_{i=1}^{n} (b . a _ { i } - c . b _ { i }) (b . \bar{a} _ { i } - c . \bar{b} _ { i }) \\
+&= b^2 \displaystyle \sum_{i=1}^{n} |a _ { i }|^2 - bc \sum_{i=1}^{n} a _ { i }. \bar{b} _ { i } - bc \sum_{i=1}^{n} \bar{a} _ { i }. b _ { i } + |c|^2 \sum_{i=1}^{n} | \\
+&= b^2 . a - b|c|^2 \\
+&= b (ab - |c|^2).
+\end{array}
+$$
+
+Vì $b > 0$, nên $a . b - | c | ^ { 2 } \geq 0$
+
+# 1.2.4. Biểu diễn hình học của số phức
+
+Cho mặt phẳng tọa độ Descartes vuông góc (Oxy). Xét một ánh xạ
+
+$$
+f : \mathbb{C} \to (Oxy)
+$$
+
+$$
+z = a + bi \mapsto f(z) = M(a; b) \in (Oxy)
+$$
+
+Ánh xạ $f$ là một sự tương ứng 1-1 (còn gọi là một song ánh) giữa tập số phức $\mathbb{C}$ và tập các điểm trên mặt phẳng tọa độ $(Oxy)$. Khi đó, mặt phẳng $(Oxy)$ còn được gọi là mặt phẳng phức.
+
+![](images/07be22ce4a2a820389348df75fd208d9c93b876098c74ad5b211d317f63678af.jpg)
+Hình 1: Biểu diễn hình học của $z = a + bi$
+
+Vi dụ 1.5. Cho \( z \in \mathbb{C} \) thỏa mãn \(\textstyle \frac{z^2}{z + i} \in i\mathbb{R}\). Hãy biểu diễn hình học của \( z \) trên mặt phẳng phức \((Oxy)\):
+
+Giải
+
+Giả sử \( z = x + yi \), khi đó
+
+$$
+\frac{z^2}{z + i} = \frac{z^2 (\bar{z} - i)}{|z + i|^2} = \frac{(x + yi)^2 (x - y(i+1))}{|z + i|^2}
+$$
+
+Giả thiết cho \(\textstyle \frac{z^2}{z + i} \in i\mathbb{R}\), điều này có nghĩa là \( \operatorname{Re} \left( \frac{z^2}{z + i} \right) = 0 \) hay
+
+$$
+(x + yi)^2 (x - y(i+1)) = 0 \quad \Rightarrow \quad x(x^2 - y^2 + 2xy(y+1)) = 0 \quad \Rightarrow \quad x(x^2 + y^2 + 2y) = 0
+$$
+
+Hay \( x = 0 \) hoặc \( x^2 + (y + 1)^2 = 1 \). Khi đó, điểm biểu diễn \( M(x, y) \) nằm trên trục \( Oy \) hoặc nằm trên đường tròn tâm \( I(0, -1) \) bán kính \( R = 1 \).
+
+Đưa vào biểu diễn hình học của \( z \), ta có \( OM = \sqrt{x^2 + y^2} = |z| \) và
+
+$$
+\left\{
+\begin{array}{l}
+x = |z| \cos \varphi \\
+y = |z| \sin \varphi 
+\end{array}
+\right.
+$$
+
+Do đó, số phức \( z \) có thể được viết lại là
+
+$$
+z = |z| (\cos \varphi + i \sin \varphi),
+$$
+
+trong đó \(\varphi\) gọi là Argumen của \( z \) và được ký hiệu bởi \( \operatorname{Arg}(z) \). Như vậy, với mỗi \( z \in \mathbb{C} \), ta có:
+
+$$
+\boxed{x = 0 \text{ hoặc } x^2 + (y+1)^2 = 1}
+$$
+
+$$
+z = | z | . [ \cos \operatorname{Arg}(z) + i \sin \operatorname{Arg}(z) ]
+$$
+
+Biểu thức này được gọi là dạng lượng giác của $z$.
+
+$\operatorname{Arg}(z)$ có một vài tính chất sau:
+
+1) Nếu $\varphi$ là một Argumen của số phức $z$, thì $\varphi + k 2 \pi (k \in \mathbb{Z})$ cũng là Argumen của $z$. Như vậy $\operatorname{Arg}(z)$ có thể sai khác số lần $2\pi$:
+
+$$
+\operatorname{Arg}(\bar{z}) = -\operatorname{Arg}(z) \quad \forall z \in \mathbb{C}.
+$$
+
+Chứng minh Giả sử $z = |z| . (\cos \varphi + i \sin \varphi)$, theo định nghĩa của $\bar{z}$ ta có
+
+$$
+\bar{z} = |z| . (\cos \varphi - i \sin \varphi) = |z| . [\cos (-\varphi) + i \sin (-\varphi)].
+$$
+
+Do vậy $\operatorname{Arg}(\bar{z}) = -\varphi = -\operatorname{Arg}(z)$.
+
+$$
+\operatorname{Arg}(z_1 z_2) = \operatorname{Arg}(z_1) + \operatorname{Arg}(z_2) \quad \forall z_1, z_2 \in \mathbb{C}.
+$$
+
+Dùng quy nạp toán học, ta có tổng quát như sau:
+
+$$
+\operatorname{Arg}(z^n) = n . \operatorname{Arg}(z) \quad \forall z \in \mathbb{C}.
+$$
+
+Chứng minh Giả sử $: z_1 = |z_1| . (\cos \varphi_1 + i \sin \varphi_1), \ z_2 = |z_2| . (\cos \varphi_2 + i \sin \varphi_2)$. Khi đó
+
+$$
+\begin{array} { r l }
+& z_2 = |z_1| . |z_2| . (\cos \varphi_1 + i \sin \varphi_1) . (\cos \varphi_2 + i \sin \varphi_2) \\
+& = |z_1| . |z_2| . [\cos \varphi_1 \cos \varphi_2 - \sin \varphi_1 \sin \varphi_2 + i (\sin \varphi_1 \cos \varphi_2 + \cos \varphi_2)] \\
+& = |z_1| . |z_2| . [\cos (\varphi_1 + \varphi_2) + i \sin (\varphi_1 + \varphi_2)],
+\end{array}
+$$
+
+ta có $Arg(z_1 z_2) = \varphi_1 + \varphi_2,$
+
+Bằng cách chứng minh tương tự như tính chất 3), ta có các tính chất sau:
+
+4) $Arg(\textstyle{\frac{1}{\bar{z}}}) = - Arg(z) \forall z \in \mathbb{C}.$ □  
+5) $Arg(\Sigma_{z_2}) = Arg(z_1) - Arg(z_2) \forall z_1, z_2 \in \mathbb{C}.$   
+6) $|z_1 + z_2| \leq |z_1| + |z_2| \forall z_1, z_2 \in \mathbb{C}. \mathrm{Đ} \tilde{\mathrm{a}u}: = \mathrm{x} \acute{\mathrm{a}} \mathrm{y ~ r} \acute{\mathrm{a}} \mathrm{k} \ell$ khi $Arg(z_1) = Arg(z_2).$
+
+Ví dụ 1.6. Cho a, b, c ∈ C sao cho $|a| = |b| = |c| = 1, a \neq c, b \neq c$. Chứng minh rằng:
+
+$$
+Arg\left(\frac{c - b}{c - a}\right) = \frac{1}{2} Arg\left(\frac{b}{a}\right).
+$$
+
+Giải
+
+Theo tính chất 5), ta có
+
+$$
+\frac{c - b}{c - a} \Leftrightarrow Arg \frac{c - b}{c - a} - \frac{1}{2} Arg \frac{b}{a} = 0 \Leftrightarrow Arg \left[ \left( \frac{c - b}{c - a} \right)^2 . \frac{a}{b} \right] = 0.
+$$
+
+Từ nhận xét $Arg(z) = 0 \Leftrightarrow z \in \mathbb{R} \Leftrightarrow \bar{z} = z$ ta đặt $\textstyle z = \left( \frac{c - b}{c - a} \right)^2 . \frac{a}{b}$
+
+$$
+\overline{\left( \frac{c - b}{c - a} \right)^2 . \frac{a}{b}} = \overline{\left( \frac{c - b}{c - a} \right)^2} . \frac{\bar{a}}{b} = \left( \frac{\frac{1}{c} - \frac{1}{b}}{\frac{1}{c} - \frac{1}{a}} \right)^2 \frac{1}{\frac{a}{b}} = \left( \frac{b - c}{a - c} . \frac{a}{b} \right)^2 \frac{b}{a} = \left( \frac{c - b}{c - a} \right)^2 \frac{a}{b}
+$$
+
+Cho số phức $z$ được biểu diễn dưới dạng lượng giác $z = | z | (\cos \varphi + i \sin \varphi)$, ta có công thức Moivre:
+
+$$
+z^n = | z |^n (\cos n\varphi + i \sin n\varphi) \quad \forall n \in \mathbb{N}^*, z \in \mathbb{C}.
+$$
+
+Chứng minh:
+
+-Với $n = 1$, (1.2) luôn đúng.
+
+-Giả sử (1.2) đúng với $n = k$ , ta có: 
+\[ z^k = |z|^k (\cos k\varphi + i \sin k\varphi). \]
+Khi đó, 
+\[ z^{k+1} = z^k . z = |z|^k (\cos k\varphi + i \sin k\varphi) . |z| (\cos \varphi + i \sin \varphi) = |z|^{k+1} [(\cos k\varphi \cdot \cos \varphi - \sin k\varphi \cdot \sin \varphi) + i (\sin k\varphi \cdot \cos \varphi + \cos k\varphi \cdot \sin \varphi)] = |z|^{k+1} [\cos (k+1)\varphi + i \sin (k+1)\varphi]. \]
+Điều này có nghĩa là (1.2) đúng với $n = k + 1$. Theo quy nạp toán học, (1.2) được chứng minh. > □
+
+Ví dụ 1.7. Hãy biểu diễn $\sin 10x$ và $\cos 10x$ theo các hàm $\sin x$, $\cos x$:
+
+Giải
+
+Áp dụng công thức Moivre với $n = 10, |z| = 1$, ta được:
+\[ (\cos x + i \sin x)^{10} = \cos 10x + i \sin 10x. \]
+
+Mặt khác, theo công thức khai triển Newton
+\[ (a + b)^n = \sum_{k=0}^n C_n^k a^{n-k} b^k, \]
+ta có:
+\[
+(\cos x + i \sin x)^{10} = C_{10}^0 \cos^{10} x + i C_{10}^1 \cos^9 x \sin x + \ldots + i^{10} C_{10}^{10} \sin^{10} x
+\]
+\[ 
+= \left( C_{10}^0 \cos^{10} x - C_{10}^2 \cos^8 x \sin^2 x + \ldots - C_{10}^{10} \sin^{10} x \right) 
++ i \left( C_{10}^1 \cos^9 x \sin x - \ldots + C_{10}^9 \cos x \sin^9 x \right).
+\]
+
+Kết hợp (1.3), (1.4) với nhận xét $i^{2n} = (-1)^{n}$, ta nhận được
+
+$$
+\sin 10x = C_{10}^0 \cos^{10} x - C_{10}^2 \cos^8 x \sin^2 x + \ldots - C_{10}^{10} \sin^{10} x
+$$
+
+và
+
+$$
+\cos 10x = C_{10}^1 \cos^9 x \sin x - C_{10}^3 \cos^7 x \sin^3 x + \ldots + C_{10}^9 \cos x \sin^9 x.
+$$
+
+# 1.2.6. Căn bậc $n$ của một số phức
+
+Cho số phức $z$ biểu diễn dưới dạng lượng giác $z = | z | (\cos \varphi + i \sin \varphi)$. Căn bậc $n$ của $z$ được xác định bởi công thức
+
+$$
+\sqrt[n]{z} = \sqrt[n]{|z|} \left( \cos \frac{\varphi + k 2\pi}{n} + i \sin \frac{\varphi + k 2\pi}{n} \right) \quad \text{với } k = 0, 1, 2, \ldots, n-1,
+$$
+
+trong đó $\sqrt[n]{|z|} \in \mathbb{R}^+ := \{ x \in \mathbb{R} : x \geq 0 \}$.
+
+Chứng minh
+
+Giả sử $z_0 = \sqrt[n]{z} = | z_0 | (\cos \varphi_0 + i \sin \varphi_0)$, từ $z_0^n = z$ suy ra
+
+$$
+| z | (\cos \varphi + i \sin \varphi) = [ | z_0 | (\cos \varphi_0 + i \sin \varphi_0) ]^n.
+$$
+
+Theo công thức Moivre,
+
+$$
+| z | (\cos \varphi + i \sin \varphi) = | z_0 |^n (\cos n\varphi_0 + i \sin n\varphi_0).
+$$
+
+Do đó
+
+$$
+\left\{ \begin{array} { l l } { \lvert z \rvert = \lvert z _ { 0 } \rvert ^ { n } } \\ { \cos \varphi = \cos n \varphi _ { 0 } } \\ { \sin \varphi = \sin n \varphi _ { 0 } } \end{array} \right. \Leftrightarrow \left\{ \begin{array} { l l } { \lvert z _ { 0 } \rvert = \sqrt [ n ] { \lvert z \rvert } } \\ { \varphi _ { 0 } = \frac { \varphi + k 2 \pi } { n } , k = 0 , 1 , . . , n - 1 . } \end{array} \right.
+$$
+
+Ví dụ 1.8. Dùng công thức (1.5), tính căn bậc 3 của $-1$ trên $\mathbb{C}$.
+
+Giải
+
+Từ $-1 = \cos \pi + i \sin \pi$, ta có các căn bậc 3 của $-1$ là
+
+$$
+z _ { k } = \cos \frac { \pi + k 2 \pi } { 3 } + i \sin \frac { \pi + k 2 \pi } { 3 } , \quad k = 0, 1, 2.
+$$
+
+Vậy có ba căn bậc 3 khác nhau của $-1$ là
+
+$$
+\begin{array} { l }
+k = 0 \Rightarrow z _ { 0 } = \cos \frac { \pi } { 3 } + i \sin \frac { \pi } { 3 } = \frac { \sqrt { 3 } } { 2 } + \frac { 1 } { 2 } i , \\
+k = 1 \Rightarrow z _ { 1 } = \cos \frac { 3 \pi } { 3 } + i \sin \frac { 3 \pi } { 3 } = - 1, \\
+k = 2 \Rightarrow z _ { 2 } = \cos \frac { 4 \pi } { 3 } + i \sin \frac { 4 \pi } { 3 } = - \frac { \sqrt { 3 } } { 2 } - \frac { 1 } { 2 } i .
+\end{array}
+$$
+
+# 1.2.7. Công thức Euler (Euler)
+
+$$
+e ^ { \alpha i } = \cos \alpha + i \sin \alpha , \quad \forall \alpha \in \mathbb{R}.
+$$
+
+Ví dụ 1.9. Tính tổng
+
+$$
+4_{n} = \sum_{k=1}^{n} \cos (a + k b), B_{n} = \sum_{k=1}^{n} \sin (a + k b) \quad \forall a, b \in \mathbb{R}, b \notin 2\pi \mathbb{Z}.
+$$
+
+Giải
+
+Dùng công thức Euler, ta có
+
+$$
++ i B_{n} = \sum_{k=1}^{n} [\cos (a + k b) + i \sin (a + k b)] = \sum_{k=1}^{n} e^{i(a + k b)} = e^{ai} \sum_{k=1}^{n} (e^{ib})
+$$
+
+Từ giả thiết $b \notin 2\pi \mathbb{Z}$, nên tổng các số hạng của một cấp số nhân được xác định
+
+bởi
+
+$$
+\sum_{k=1}^{n} (e^{i b})^k = e^{i b} \frac{(e^{i b})^n - 1}{e^{i b} - 1}.
+$$
+
+Do đó, theo công thức Euler và Moivre, ta có
+
+$$
+\begin{array}{l}
+= e^{i(a + b)} \frac{(e^{ib})^n - 1}{e^{ib} - 1} = \frac{(\cos (a + b) + i \sin (a + b)) [ (\cos b + i \sin b)^n - \cos (a + b) + i \sin b]}{\cos b + i \sin b - 1} \\
+= \cos(a + b + \frac{n b}{2}) . \frac{\sin \frac{nb}{2}}{\sin \frac{b}{2}} + i \sin(a + b + \frac{n b}{2}) . \frac{\sin \frac{nb}{2}}{\sin \frac{b}{2}}.
+\end{array}
+$$
+
+Vì vậy,
+
+$$
+A_{n} = \cos \left( a + b + \frac{n b}{2} \right) . \frac{\sin \frac{nb}{2}}{\sin \frac{b}{2}}, \quad B_{n} = \sin \left( a + b + \frac{n b}{2} \right) . \frac{\sin \frac{nb}{2}}{\sin \frac{b}{2}}.
+$$
+
+Nhận xét. Giả thiết cho $b \notin 2\pi \mathbb{Z}$ và $\sin \frac{b}{2} \neq 0$. Bài toán trên có thể giải bằng cách nhân $A_{n}$ hoặc $B_{n}$ với $\sin \frac{b}{2}$, sau đó phân tích "tích" tổng.
+
+Ví dụ 1.10. Tìm ánh xạ $f : \mathbb{C} \to \mathbb{C}$ thỏa mãn
+
+$$
+f(z) + z f(-z) = 1 + z \quad \text{với mọi } z \in \mathbb{C}.
+$$
+
+Giải
+
+Thay $z$ bằng $-z$ vào (1.6), ta có
+
+$$
+f(-z) - z f(z) = 1 - z.
+$$
+
+Khi đó, thay $f(-z)$ từ (1.7) vào (1.6), ta nhận được
+
+$$
+(1 + z^2) f(z) = 1 + z^2.
+$$
+
+- Nếu $z = i$, thì thay $z = i$ vào phương trình (1.6), ta thấy đúng với mọi $f(z)$. Không mất tính tổng quát, ta đặt $f(i) = \alpha + i\beta$ với $\alpha, \beta \in \mathbb{R}$:
+
+- Nếu $z = -i$, thì thay $z = -i$ vào (1.6), ta nhận được
+
+$$
+f(-i) = 1 + i \Leftrightarrow if(-i) = 1 + i - \alpha - \beta i \Leftrightarrow f(-i) = 1 - \beta + (\alpha - 1)i.
+$$
+
+- Nếu $z \neq \pm i$, thì $f(z) = 1$:
+
+Như vậy, hàm $f(z)$ cần tìm có dạng
+
+$$
+f(z) = \left\{ \begin{array} { l l } { 1 } & { \text{nếu: } z \neq \pm i, } \\ { \alpha + i \beta } & { \text{nếu: } z = i, } \\ { 1 - \beta + (\alpha - 1)i } & { \text{nếu: } z = -i. } \end{array} \right.
+$$
+
+Ví dụ 1.11. Chứng minh rằng: Với mọi số phức $z \neq 1, |z| = 1$ đều tồn tại $x \in \mathbb{R}$ sao cho $z$ được biểu diễn dưới dạng
+
+$$
+z = { \frac{x + i}{x - i} }.
+$$
+
+Giải
+
+Đưa vào bảng biến thiên dưới đây và
+
+![](images/d3b11128b88a057bf1e56e89697d4b58c5674140aec1597ef7082c794284cdbf.jpg)
+
+$$
+\Big( \frac{x^2 - 1}{x^2 + 1} \Big)^2 + \Big( \frac{2x}{x^2 + 1} \Big)^2 = 1,
+$$
+
+ta có $z = a + bi$ với giả thiết cho $a^2 + b^2 = 1$, luôn tồn tại $x \in \mathbb{R}$ sao cho
+
+$$
+\left\{ \begin{array}{l l}
+{ a = \frac{x^2 - 1}{x^2 + 1}, } \\
+{ b = \frac{2x}{x^2 + 1}. }
+\end{array} \right.
+$$
+
+Do đó,
+
+$$
+z = { \frac{x^2 - 1}{x^2 + 1} } + i { \frac{2x}{x^2 + 1} } = { \frac{(x + i)^2}{x^2 - i^2} } = { \frac{x + i}{x - i} }.
+$$
+
+Ví dụ 1.12. Cho $z \in \mathbb{C}$ thỏa mãn
+
+$$
+z + { \frac{1}{z} } = 2 \cos \varphi.
+$$
+
+Chứng minh rằng:
+
+$$
+z^n + { \frac{1}{z^n} } = 2 \cos n\varphi.
+$$
+
+Ta có $\begin{array} { r } { z + \frac { 1 } { z } = 2 \cos \varphi \Leftrightarrow z ^ { 2 } - 2 z \cos \varphi + 1 = 0 \Leftrightarrow z = \cos \varphi \pm i \sin \varphi . } \end{array}$ (20 Trường hợp $\boldsymbol { I }$ $z = \cos \varphi + i \sin \varphi \Rightarrow | z | = 1 \Rightarrow z \bar { z } = 1 \Rightarrow { \textstyle { \frac { 1 } { z } } } = { \bar { z } } = \cos \varphi - i \sin \varphi \Rightarrow \frac { 1 } { z ^ { n } } = ( \bar { z } ) ^ { n } = \cos n \varphi - i \sin n \varphi . \mathtt { M } \check { \mathfrak { a } }$) khác $z ^ { n } = \cos n \varphi + i \sin n \varphi$. Do vậy, (1.8) đúng.
+
+Trường hợp 2. $z = \cos \varphi - i \sin \varphi$, tương tự như trường hợp 1.
+
+Ví dụ 1.13. Chứng minh rằng:
+
+$$
+\left( \frac { 1 + i \tan \alpha } { 1 - i \tan \alpha } \right) ^ { n } = \frac { 1 + i \tan n \alpha } { 1 - i \tan n \alpha } \forall n \in \mathbb { N } ^ { * } , n \alpha - \frac { \pi } { 2 } \notin \pi \mathbb { Z } .
+$$
+
+Giải
+
+Theo giả thiết $n \alpha - { \textstyle { \frac { \pi } { 2 } } } \not\in \pi \mathbb { Z }$ suy ra $\cos n \alpha \neq 0$. Khi đó, theo công thức Moivre,
+
+$$
+{ \left( \frac { i \tan \alpha } { i \tan \alpha } \right) ^ { n } = \left( \frac { \cos \alpha + i \sin \alpha } { \cos \alpha - i \sin \alpha } \right) ^ { n } = \frac { \cos n \alpha + i \sin n \alpha } { \cos n \alpha - i \sin n \alpha } = \frac { 1 + i \tan n \alpha } { 1 - i \tan n \alpha } . }
+$$
+
+Vi dụ 1.14. Giải phương trình $z \in \mathbb{C}$, biết phương trình có một nghiệm dạng ix với $x \in \mathbb{R}$ (còn gọi là nghiệm thuần ảo).
+
+$$
+z ^ { 3 } + ( 1 - 2 i ) z ^ { 2 } + ( 1 - i ) z - 2 i = 0 .
+$$
+
+Do $ix$ là nghiệm, nên thay $ix$ vào phương trình, ta nhận được
+
+$$
+\begin{array} { c }
+{-i x ^ { 3 } - ( 1 - 2 i ) x ^ { 2 } + ( 1 - i ) i x - 2 i = 0 \Leftrightarrow (-x ^ { 2 } + x) + (-x ^ { 3 } + 2 x ^ { 2 } + x - 2) = 0 \\
+\Leftrightarrow \left\{ 
+\begin{array} { l l }
+{-x ^ { 2 } + x = 0 , } & {\Leftrightarrow x = 1 . } \\
+{-x ^ { 3 } + 2 x ^ { 2 } + x - 2 = 0 . }
+\end{array}
+\right. 
+\end{array}
+$$
+
+Như vậy, $z = i$ là nghiệm. Phân tích thành nhân tử, phương trình được viết dưới dạng
+
+$$
+(z - i) \left( z ^ { 2 } + (1 - i) z + 2 \right) = 0 .
+$$
+
+Nghiệm của phương trình là:
+
+$$
+\left\{ 
+\begin{array} { l l }
+z _ { 1 } = i , \\
+z _ { 2 } = \frac { 1 } { 2 } \Big( (-1 - \sqrt{\sqrt{17} - 4}) + (1 + \sqrt{\sqrt{17} + 4})i \Big) , \\
+z _ { 3 } = \frac { 1 } { 2 } \Big( (-1 - \sqrt{\sqrt{17} - 4}) + (1 - \sqrt{\sqrt{17} + 4})i \Big) ,
+\end{array}
+\right.
+$$
+
+# 1.3. Dãy số thực
+
+## 1.3.1. Các khái niệm cơ bản
+
+-Một ánh xạ
+
+$$
+n \mapsto f ( n ) = x _ { n } ,
+$$
+
+Khi $\mathbb{K} = \mathbb{R}$, ta sẽ nhận được một dãy số thực, gọi tắt là dãy $(x_n)_{n=1}^{\infty}$ hay $(x_n)$ hay $(x_n)_{n \geq 0}$. Trong trường hợp $\mathbb{K} = \mathbb{C}$, $(x_n)$ được gọi là dãy số phức. Khi đó, $x_n$ được gọi là số hạng tổng quát thứ $n$ của dãy số $(x_n)$. Ví dụ: Dãy số $\left( \frac{1}{n} \right): \left\{ 1, \frac{1}{2}, \ldots, \frac{1}{n}, \ldots \right\}$.
+
+Dãy số $\begin{array}{r}\left((1 + \frac{1}{n})^n\right): (1 + \frac{1}{1}), (1 + \frac{1}{2}), \ldots\end{array}$
+
+-Dãy số $(x_n)$ gọi là bị chặn dưới, nếu tồn tại $m \in \mathbb{R}$ sao cho $m \leq x_n \forall n$.
+
+-Dãy số $(x_n)$ gọi là bị chặn trên, nếu tồn tại $M \in \mathbb{R}$ sao cho $x_n \leq M \forall n$.
+
+-Dãy số $(x_n)$ gọi là bị chặn, nếu dãy $(x_n)$ bị chặn dưới và bị chặn trên.
+
+-Ta nói dãy số $(x_n)$ tiến đến $-\infty$, ký hiệu $\lim x_n = -\infty$ khi và chỉ khi $x_n \to -\infty$ khi $n \to \infty$.
+
+-Ta nói dãy số $(x_n)$ tiến đến $+\infty$, ký hiệu $\lim x_n = +\infty$ khi và chỉ khi $x_n \to +\infty$ khi $n \to \infty$.
+
+-Số $A$ được gọi là giới hạn của dãy số $(x_n)$ khi $n$ dần ra vô cùng, hay ta còn nói dãy số $(x_n)$ hội tụ đến $A$, ký hiệu $\lim_{n \to \infty} x_n = A$ khi và chỉ khi:
+
+Vi dụ 1.15. Dùng định nghĩa, chứng minh rằng $\operatorname*{lim}_{n \to \infty} \frac{a}{n} = 0.$
+
+Chứng minh:
+- Nếu $a = 0$, thì kết luận trên đúng.
+- Nếu $a \neq 0$, ta đặt $x_n = \frac{a}{n}, \forall \epsilon > 0$ và xét
+$$
+| x_n - 0 | = \frac{|a|}{n} < \epsilon \Leftrightarrow n > \frac{|a|}{\epsilon} \Rightarrow \text{chọn } n_0 = \left[ \frac{|a|}{\epsilon} \right] + 1.
+$$
+Thì lại định nghĩa:
+$$
+\exists n_0 = \left[ \frac{|a|}{\epsilon} \right] + 1, \text{khi đó: } n > n_0 \Rightarrow | x_n - 0 | = \frac{|a|}{n} < \frac{|a|}{n_0} < \frac{|a|}{\frac{|a|}{\epsilon}} = \epsilon.
+$$
+
+# 1.3.2. Tính chất
+
+1) Tính duy nhất
+
+Định lý 1.16. Nếu dãy $(x_n)$ hội tụ đến $A$, thì $A$ là duy nhất.
+
+Chứng minh: Giả sử $(x_n)$ hội tụ đến $A_1$ và hội tụ đến $A_2$ và $A_1 \neq A_2$. Đặt $\epsilon = \frac{1}{2} |A_1 - A_2| > 0.$
+
+Vì $(x_n)$ hội tụ đến $A_1$, theo định nghĩa, tồn tại số $n_1 \in \mathbb{N}$ sao cho $| x_n - A_1 | < \epsilon \forall n \geq n_1 .$
+
+Tương tự, $(x_n)$ hội tụ đến $A_2$, theo định nghĩa, tồn tại số $n_2 \in \mathbb{N}$ sao cho $| x_n - A_2 | < \epsilon ~\forall n \geq n_2.$
+
+Đặt $n_0 = \max \{ n_1 , n_2 \}$, ta có
+
+$$
+\left\{
+\begin{array}{l}
+|x_n - A_1| < \epsilon \\
+|x_n - A_2| < \epsilon 
+\end{array} \right. ~\forall n \geq n_0,
+$$
+
+suy ra $\begin{array}{r}|A_1 - A_2| = |A_1 - x_n + x_n - A_2| \leq |x_n - A_1| + |x_n - A_2| < 2\epsilon = 2.\frac{1}{2} |A_1 - A_2|,\end{array}$ điều này chứng tỏ $A_1 = A_2$. □
+
+2) Tính bị chặn
+
+Định lý $\mathbf{1.17. +}$ Nếu $\lim x_n = A \neq \infty$, thì $(x_n)$ bị chặn.
+
+$+ ~\text{Nếu}~ \lim_{n \to \infty} x_n = +\infty$, thì $(x_n)$ bị chặn dưới.
+
+$+ ~\text{Nếu}~ \lim_{n \to \infty} x_n = -\infty$, thì $(x_n)$ bị chặn trên.
+
+Chứng minh $+$ Giả sử $\lim x_n = A \neq \infty$, theo định nghĩa,
+
+$$
+\forall \epsilon > 0, \exists n_0 \in \mathbb{N}, \forall n \geq n_0 \Rightarrow |x_n - A| < \epsilon.
+$$
+
+$$
+|x_n| = |x_n - A + A| \leq |x_n - A| + |A| < \epsilon + |A| ~\forall n \geq n_0.
+$$
+
+Đặt
+
+$$
+m = \operatorname*{min} \{ x_0, x_1, . . . , x_{n_0 - 1}, -( \epsilon + | A | ) \},
+$$
+
+$$
+M = \operatorname*{max} \{ x_0, x_1, . . . , x_{n_0 - 1}, \epsilon + | A | \},
+$$
+
+suy ra $m \leq x_n \leq M \forall n \in \mathbb{N}.$
+
+$+$ Giả sử $\operatorname*{lim}_{n \to \infty} x_n = +\infty$, theo định nghĩa,
+
+$$
+\forall M > 0, \ \exists n_0 \in \mathbb{N} \text{ sao cho } \forall n \geq n_0 \Rightarrow x_n \geq M.
+$$
+
+Đặt $m = \operatorname*{min} \{ x_0, x_1, . . . , x_{n_0 - 1}, M \}$, ta có $x_n \geq m \forall n \in \mathbb{N}$.
+
+3) Tính thuần tuý
+
+Định lý 1.18. Cho $\lim\limits_{n \to \infty} x_n = A$ và $\operatorname*{lim}_{n \to \infty} y_n = B.$
+
+a) Nếu $a \in \mathbb{R}, A < a$, thì $\exists n_0$ sao cho $x_n < a \forall n \geq n_0$. 
+
+b) Nếu $a \in \mathbb{R}, A > a$, thì $\exists n_0$ sao cho $x_n > a \forall n \geq n_0$.
+
+c) Nếu $a, b \in \mathbb{R}$, $A \in (a, b)$, thì $\exists n_0$ sao cho $x_n \in (a, b) \forall n \geq n_0$.
+
+d) Nếu tồn tại $n_1$ sao cho $x_n \leq y_n \forall n \geq n_1$, thì $A \leq B$.
+
+Chứng minh:
+
+a) Giả sử $a \in \mathbb{R}$ và $A = \lim_{n \to \infty} x_n < a$. Đặt $\epsilon = a - A > 0$, theo định nghĩa, tồn tại $n_0 \in \mathbb{N}$ sao cho
+
+$$
+\forall \epsilon > 0 , \exists n_0 \in \mathbb{N}, \forall n \geq n_0 \Rightarrow |x_n - A| < \epsilon,
+$$
+
+suy ra $x_n < A + \epsilon = a$.
+
+b) và c) Nếu $A = \lim_{n \to \infty} x_n < a$ hoặc $A = \lim_{n \to \infty} x_n \in (a, b)$ tương tự chứng minh trên.
+
+d) Đặt giả sử $A > B$. Đặt $\epsilon = \frac{A - B}{2}$, theo định nghĩa, tồn tại $n_2, n_3$ sao cho
+
+$$
+\left\{
+\begin{array}{l}
+|x_n - A| < \epsilon ~ \forall n \geq n_2, \\
+|y_n - B| < \epsilon ~ \forall n \geq n_3.
+\end{array}
+\right.
+$$
+
+Đặt $n_0 = \max\{n_1, n_2, n_3\}$, ta có
+
+$$
+\left\{
+\begin{array}{ll}
+a_n \leq b_n, \\
+|x_n - A| < \epsilon ~ \forall n \geq n_0 & \Rightarrow \left\{
+\begin{array}{ll}
+y_n < B + \epsilon = \frac{A + B}{2}, \\
+A - \epsilon = \frac{A + B}{2} < x_n.
+\end{array}
+\right. & \Rightarrow y_n < x_n, \\
+|y_n - B| < \epsilon ~ \forall n \geq n_0.
+\end{array}
+\right.
+$$
+
+Vi dụ 1.19. Cho $a > 1$ và $\alpha \in \mathbb{N}^*$ cố định. Chứng minh rằng
+
+$$
+\lim_{n \to \infty} \frac{a^n}{n^\alpha} = +\infty.
+$$
+
+Chứng minh: Ta có 
+$$
+\frac{a^n}{n^\alpha} = \left( \frac{\sqrt[\alpha]{a}}{n} \right)^\alpha,
+$$
+đặt $\sqrt[\alpha]{a} = 1 + h$. Do $a > 1$, nên $h > 0$. Khi đó, theo khai triển Newton, ta có
+
+$$
+\left( 1 + h \right)^n = \sum_{k=0}^{n} C_n^k h^k \geq 1 + nh + \frac{n(n+1)}{2}h^2 \geq \frac{n(n+1)}{2}h^2.
+$$
+
+Vậy, 
+$$
+\frac{\sqrt[\alpha]{a^n}}{n} \geq \frac{n+1}{2} h^2 \Rightarrow \lim_{n \to \infty} \frac{\sqrt[\alpha]{a^n}}{n} = +\infty.
+$$
+
+Định lý 1.20. (Định lý kẹp) Nếu tồn tại $n_0 \in \mathbb{N}$ sao cho $x_n \leq y_n \leq z_n$ $\forall n \geq n_0$ và
+
+$$
+\lim_{n \to \infty} x_n = \lim_{n \to \infty} z_n = A,
+$$
+
+thì 
+$$
+\lim_{n \to \infty} y_n = A.
+$$
+
+Chứng minh Giả sử $\epsilon > 0$ và $\lim_{n \to \infty} x_n = \lim_{n \to \infty} z_n = A$, theo định nghĩa, tồn tại $n_1, n_2$ sao cho
+
+$$
+\left\{ 
+\begin{array}{l}
+|x_n - A| < \epsilon ~ \forall n \geq n_1, \\
+|z_n - A| < \epsilon ~ \forall n \geq n_2.
+\end{array} 
+\right.
+$$
+
+Đặt $n_0 = \max\{n_1, n_2\}$, ta có
+
+$$
+\forall n \geq n_0 \Rightarrow \left\{
+\begin{array}{ll}
+|x_n - A| < \epsilon ~ \forall n \geq n_1, \\
+|z_n - A| < \epsilon ~ \forall n \geq n_2, \\
+x_n \leq y_n \leq z_n
+\end{array} 
+\right.
+$$
+
+$$
+\Rightarrow -\epsilon \leq x_n - A \leq y_n - A \leq z_n - A < \epsilon \Rightarrow |y_n - A| < \epsilon.
+$$
+
+Theo định nghĩa, $\lim_{n \to \infty} y_n = A$.
+
+Chú ý: Ta có thể chứng minh định lý kép bằng cách dùng tính chất thứ tự d).
+
+Ví dụ 1.21. Cho $a$ cố định. Chứng minh rằng
+
+$$
+\lim_{n \to \infty} \frac{a^n}{n!} = 0.
+$$
+
+Chứng minh Đặt $n_0 = [a] + 1$, từ $n > n_0 ~ \forall n \geq n_0$ suy ra
+
+$$
+0 \leq \left| \frac{a^n}{n!} \right| = \left( \frac{|a|}{1} . \frac{|a|}{2} ... \frac{|a|}{n_0} \right) . \left( \frac{|a|}{n_0 + 1} . \frac{|a|}{n_0 + 2} ... \frac{|a|}{n} \right)
+$$
+
+$$
+\leq \left( \frac{|a|}{1} . \frac{|a|}{2} ... \frac{|a|}{n_0} \right) \frac{|a|}{n} \to 0 \text{ khi } n \to \infty.
+$$
+
+Theo định lý kép, ta có kết luận đúng.
+
+Ví dụ 1.22. Chứng minh rằng
+
+$$
+\lim_{n \to \infty} \sqrt[n]{n} = 1
+$$
+
+Chứng minh Từ $n \to \infty$, suy ra $n > 1$, áp dụng công thức khai triển Newton:
+
+$$
+n = (\sqrt[n]{n})^n = (1 + \sqrt[n]{n} - 1)^n = \sum_{k=0}^{n} C_n^k (\sqrt[n]{n} - 1)^k
+$$
+
+$$
+\geq 1 + C_n^2 (\sqrt[n]{n} - 1)^2 = 1 + \frac{n(n-1)}{2} (\sqrt[n]{n} - 1)^2,
+$$
+
+suy ra $0 \leq \sqrt[n]{n} - 1 \leq \sqrt{\frac{2}{n}}$. Theo định lý kép, ta có
+
+$$
+\lim_{n \to \infty} \sqrt[n]{n} = 1.
+$$
+
+Ví dụ 1.23. Chứng minh rằng
+
+$$
+\operatorname*{lim}_{n \to \infty} q^n = \begin{cases}
+0 & \text{nếu $|q| < 1$,} \\
+1 & \text{nếu $q = 1$,} \\
++\infty & \text{nếu $|q| > 1$.}
+\end{cases}
+$$
+
+Chứng minh - Nếu $q > 1$, đặt $q = 1 + h \Rightarrow h > 0$. Theo khai triển Newton,
+
+$$
+q^n = (1 + h)^n = \sum_{k=0}^n C_n^k h^k \geq 1 + nh,
+$$
+
+ta có $\operatorname*{lim}_{n \to \infty} q^n = +\infty$.
+
+Nếu $|q| < 1$, $q \neq 0 \Rightarrow \frac{1}{|q|} > 1 \Rightarrow \operatorname*{lim}_{n \to \infty} \left(\frac{1}{|q|}\right)^n = +\infty$ (theo chứng minh trên) $\Rightarrow \operatorname*{lim}_{n \to \infty} q^n = 0.$
+
+-Nếu $q = -1$, thì $\operatorname*{lim}_{n \to \infty} q^n$ không tồn tại.
+-Nếu $q = 0$, thì $\operatorname*{lim}_{n \to \infty} q^n = 0$.
+-Nếu $q = 1$, thì $\operatorname*{lim}_{n \to \infty} q^n = 1$.
+
+Ví dụ 1.24. Cho $q > -1$, tìm giới hạn
+
+$$
+\operatorname*{lim}_{n \to \infty} x_n = \operatorname*{lim}_{n \to \infty} (1 + q + \ldots + q^n).
+$$
+
+Giải - Nếu $q = 1$, thì $x_n = n + 1 \Rightarrow \operatorname*{lim}_{n \to \infty} x_n = +\infty.$
+
+-Nếu $q \neq 1$, thì $x _ { n } = 1 + q + . . . + q ^ { n } )$ là tổng của $n + 1$ số hạng của cấp số nhân. Do vậy, 
+\[
+x _ { n } = \frac { q ^ { n + 1 } - 1 } { q - 1 }
+\]
+-1.Theo Ví dụ 1.23, ta có
+
+$$
+\operatorname*{lim}_{n \to \infty} x_{n} = \operatorname*{lim}_{n \to \infty} \frac{q^{n + 1} - 1}{q - 1} = \left\{
+\begin{array}{ll}
+\frac{1}{1 - q} & \text{nếu } |q| < 1, \\
++\infty & \text{nếu } q > 1.
+\end{array}\right.
+$$
+
+Như vậy
+
+$$
+\operatorname*{lim}_{n \to \infty} x_{n} = \left\{
+\begin{array}{ll}
+\frac{1}{1 - q} & \text{nếu } |q| < 1, \\
++\infty & \text{nếu } q \geq 1.
+\end{array}\right.
+$$
+
+Ví dụ 1.25. Cho $a , b > 0$, hãy tìm giới hạn
+
+$$
+\operatorname*{lim}_{n \to \infty} x_{n} = \sum _ { k = 1 } ^ { n } \frac{n}{an^2 + bk}.
+$$
+
+Giải Từ $a, b > 0$ suy ra
+
+$$
+\begin{array} { l } { \displaystyle _ { \vphantom { \sum } k = 1 } ^ { \vphantom { n } } \frac { n } { a n ^ { 2 } + b k } = \frac { n } { a n ^ { 2 } + b } + \frac { n } { a n ^ { 2 } + 2 b } + . . . + \frac { n } { a n ^ { 2 } + n b } } \\ { \displaystyle _ { \vphantom { \sum } a = 1 } \frac { n } { a n ^ { 2 } + b } + \frac { n } { a n ^ { 2 } + b } + . . . + \frac { n } { a n ^ { 2 } + b } = \frac { n ^ { 2 } } { a n ^ { 2 } + b } - } \\ { \displaystyle _ { \vphantom { \sum } a = 1 } \frac { n } { a n ^ { 2 } + b k } \geq \frac { n } { a n ^ { 2 } + b n } + \frac { n } { a n ^ { 2 } + b n } + . . . + \frac { n } { a n ^ { 2 } + b n } = \frac { n ^ { 2 } } { a n ^ { 2 } + b } } \end{array}
+$$
+
+Theo định lý kép, ta có $n \to \infty$ $\begin{array} { r } { x _ { n } = \frac { 1 } { a } } \end{array}$ .
+
+# 1.3.3. Các phép toán về giới hạn
+
+Định lý 1.26. Cho lim $x_n = A$, lim $y_n = B$ và $A, B ≠ 0$. 
+
+a) $\lim_{n \to \infty} x_n = 0 \Leftrightarrow \operatorname*{lim}_{n \to \infty} | x _ { n } | = 0$ ：   
+b) $x _ { n } = 0 \vee y _ { n }$ bị chặn ⇒ $\lim_{n \to \infty} x_ny_n = 0$.  
+c) lim$(x_n±y_n) = \lim x_n ± \lim y_n$.   
+d) lim $(λx_n) = λ\lim x_n$.   
+e) lim$(x_n.y_n)=\lim x_n.\lim y_n$.   
+f） $\lim_{n \to \infty} (x_n/y_n)$ với $B ≠ 0$ và $\lim_{n \to \infty} y_n = B$.
+
+Chứng minh Gia thuyết cho $\lim_{n \to \infty} x_n = A$, $\lim_{n \to \infty} y_n = B$ và $A, B \neq \infty$:
+
+a) - Nếu $\lim_{n \to \infty} x_n = 0$, theo định nghĩa, ta có $\lim_{n \to \infty} |x_n| = 0$. 
+
+- Nếu $\lim_{n \to \infty} |x_n| = 0$, dựa vào bất đẳng thức $-|x_n| \leq x_n \leq |x_n|$ và định lý kẹp, ta có $\lim_{n \to \infty} x_n = 0$.
+
+b) Giả sử $|y_n| < C \forall n$, theo định nghĩa, với mỗi $\epsilon > 0 \Leftrightarrow \frac{\epsilon}{C} > 0$ tồn tại $n_0$ sao cho
+
+$$
+|x_n| < \frac{\epsilon}{C} \Leftrightarrow |x_n y_n| < C|x_n| < C.\frac{\epsilon}{C} = \epsilon.
+$$
+
+c) Theo định nghĩa, với mỗi $\epsilon > 0 \Leftrightarrow \frac{\epsilon}{2} > 0$ tồn tại $n_1, n_2$ sao cho
+
+$$
+\left\{ 
+\begin{array}{l}
+|x_n - A| < \frac{\epsilon}{2} \forall n \geq n_1, \\
+|y_n - B| < \frac{\epsilon}{2} \forall n \geq n_2.
+\end{array} 
+\right.
+$$
+
+Đặt $n_0 = \max\{n_1, n_2\}$. Ta có
+
+$$
+\begin{array} { r l }
+| x _ { n } - A | < \frac { \epsilon } { 2 } , & \\
+| y _ { n } - A | < \frac { \epsilon } { 2 } & \forall n \geq n _ { 0 } \Rightarrow | x _ { n } \pm y _ { n } - ( a \pm b ) | \leq | x _ { n } - a | + | y _ { n } - b | < \frac { \epsilon } { 2 }
+\end{array}
+$$
+
+d) Nếu $\lambda = 0$ , thì kết luận luôn đúng. Ta xét trường hợp nếu $\lambda \neq 0$, theo định nghĩa, với mọi $\epsilon > 0 \Leftrightarrow \frac { \epsilon } { | \lambda | } > 0$ tồn tại $n _ { 0 }$ sao cho
+
+$$
+| x _ { n } | < \frac { \epsilon } { | \lambda | } \Rightarrow | \lambda x _ { n } | = | \lambda | | x _ { n } | < \epsilon .
+$$
+
+e) Dùng tính chất b), c), d) và tính bổ chẵn của $( y _ { n } )$, ta có
+
+$$
+\lim_{n \to \infty} x _ { n } y _ { n } = \lim_{n \to \infty} ( x _ { n } - a ) y _ { n } + a \lim_{n \to \infty} y _ { n } = A B = \lim_{n \to \infty} x _ { n } . \lim_{n \to \infty} y _ { n } .
+$$
+
+f) Ta có $\lim_{n \to \infty} x_n = A$ và $\lim_{n \to \infty} y_n = B \neq 0$. Khi đó, bất đẳng thức $|y_n - B| \leq |x_n - A|$ suy ra:
+
+$$
+\lim_{n \to \infty} |y_n| = |B| > \frac{|B|}{2} > 0 \Rightarrow \exists n_1 \text{ sao cho } |y_n| > \frac{|B|}{2} \forall n \geq n_1.
+$$
+
+Cho $\epsilon > 0$, tồn tại $n_2$:
+
+$$
+| y _ { n } - B | < \frac{\epsilon B^2}{2} \Rightarrow \left| \frac{1}{y_n} - \frac{1}{B} \right| = \frac{|y_n - B|}{|y_n| \cdot |B|} < \frac{2}{B^2} | y _ { n } - B | < \epsilon \forall n \geq n_0
+$$
+
+đây $n_0 = \operatorname*{max}\{n_1, n_2\}$.
+
+# 1.3.4. Dãy đơn điệu
+
+a) Định nghĩa  
+- Dãy số $( x _ { n } )$ được gọi là dãy tăng, nếu $x _ { n } \leq x _ { n + 1 } \forall n$  
+- Dãy $( x _ { n } )$ được gọi là dãy giảm, nếu $x _ { n } \geq x _ { n + 1 } \forall n$
+
+b) Tính chất
+
+Định lý 1.27.
+-Nếu dãy số $( x _ { n } )$ tăng và bị chặn trên thì tồn tại giới hạn hữu hạn  
+$\lim_{n \to \infty} x _ { n }$ (hay dãy $( x _ { n } )$ hội tụ).   
+- Nếu dãy $s \boldsymbol { \hat{o}^\prime } ( \boldsymbol{x_n} )$ giảm và bị chặn dưới thì dãy $( x _ { n } )$ hội tụ.
+
+Chứng minh  
+Trước hết ta quan tâm đến khái niệm cận trên đúng (supremum) và cận dưới đúng (infimum) của một tập hợp $M \subset \mathbb{R}$:  
+
+-Số $\alpha$ được gọi là cận trên đúng của $M$, ký hiệu $\alpha = \operatorname*{sup} M$, nếu $\alpha$ là số nhỏ nhất thỏa mãn $x \leq \alpha \forall x \in M$
+
+-Số $\beta$ được gọi là cận dưới đúng của $M$, ký hiệu $\beta = \operatorname*{inf} M$, nếu $\beta$ là số lớn nhất thỏa mãn $x \geq \beta \forall x \in M$
+
+Tiền đề  
+Nếu $M$ bị chặn dưới thì tồn tại inf $M$, nếu $M$ bị chặn trên thì tồn tại sup $M$:  
+
+-Nếu $( x _ { n } )$ tăng và bị chặn trên, theo tiền đề trên, tồn tại $A = \operatorname*{sup} \{ x _ { n } : n \in \mathbb{N} \}$:  
+Với mọi $\epsilon > 0$, tồn tại $n_0$ sao cho  
+$$
+x_{n_0} > A - \epsilon.
+$$
+
+Do $( x _ { n } )$ tăng hay $x _ { n } \leq x _ { n + 1 } \leq \ldots$, nên $x _ { n _ { 0 } } \leq x _ { n } \forall n \geq n _ { 0 }$. Khi đó
+
+$$
+x_{n} \geq x_{n_{0}} > A - \epsilon \quad \forall n \geq n_{0}.
+$$
+
+Mặt khác, theo định nghĩa của $A$ ta có $x_{n} \leq A < A + \epsilon$. Do đó
+
+$$
+A + \epsilon > x_{n} > A - \epsilon \quad \forall n \geq n_{0}.
+$$
+
+Vậy $\lim x_{n} = A$.
+
+-Nếu $(x_{n})$ giảm và bị chặn dưới, bằng cách làm tương tự, ta đặt $B = \inf\{x_{n} : n \in \mathbb{N}\}$, ta cũng chứng minh được rằng $\lim x_{n} = B$.
+
+Ví dụ 1.28. Chứng minh dãy $\left( e_{n} \right)$ sau hội tụ
+
+$$
+e_{n} = \left( 1 + \frac{1}{n} \right)^{n}.
+$$
+
+Chứng minh: Dãy $\left( e_{n} \right)$ tăng. Thật vậy, dùng công thức khai triển Newton, ta có
+
+$$
+\begin{array} { l } { \displaystyle { \mathrm { ~ \hat {\rho} ~ } _ { n } = \left( 1 + \frac { 1 } { n } \right) ^ { n } } } \\ { \displaystyle { \mathrm { ~ \hat {\rho} ~ } _ { n } = C _ { n } ^ { 0 } + C _ { n } ^ { 1 } ( \frac { 1 } { n } ) ^ { 1 } + C _ { n } ^ { 2 } ( \frac { 1 } { n } ) ^ { 2 } + . . . + C _ { n } ^ { n } ( \frac { 1 } { n } ) ^ { n } } } \\ { \displaystyle { \mathrm { ~ \hat {\rho} ~ } _ { n } = 1 + n . \frac { 1 } { n } + \frac { n ( n - 1 ) } { 1 . 2 } . \frac { 1 } { n ^ { 2 } } + . . . + \frac { n ( n - 1 ) . . . ( n - ( n - 1 ) ) } { 1 . 2 . 3 . . n } . \frac { 1 } { n ^ { n } } } } \\ { \displaystyle { \mathrm { ~ \hat {\rho} ~ } _ { n + 1 } = 1 + \frac { 1 } { 2 ! } ( 1 - \frac { 1 } { n } ) + \frac { 1 } { 3 ! } ( 1 - \frac { 1 } { n } ) ( 1 - \frac { 2 } { n } ) + . . . + \frac { 1 } { n ! } ( 1 - \frac { 1 } { n } ) . . . ( 1 - \frac { 1 } { n } ) ^ { 2 } + . . . + \frac { 1 } { n ! } } } \end{array}
+$$
+
+Tương tự
+
+$$
+\begin{array} { l } { \displaystyle + 1 = \left( 1 + \frac 1 { n + 1 } \right) ^ { n + 1 } } \\ { \displaystyle = 1 + 1 + \frac 1 { 2 ! } \left( 1 - \frac 1 { n + 1 } \right) + \ldots + \frac 1 { ( n + 1 ) ! } \left( 1 - \frac 1 { n + 1 } \right) \ldots \left( 1 - \frac n { n + 1 } \right) } \\ { \displaystyle > 1 + 1 + \frac 1 { 2 ! } \left( 1 - \frac 1 { n + 1 } \right) + \ldots + \frac 1 { n ! } \left( 1 - \frac 1 { n + 1 } \right) \ldots \left( 1 - \frac { n - 1 } { n + 1 } \right) } \\ { \displaystyle > 2 + \frac 1 { 2 ! } \left( 1 - \frac 1 { n } \right) + \frac 1 { 3 ! } \left( 1 - \frac 1 n \right) \left( 1 - \frac 2 n \right) + \ldots + \frac 1 { n ! } \left( 1 - \frac 1 n \right) \ldots \left( 1 - \frac n { n + 1 } \right) } \end{array}
+$$
+
+Từ (1.9) và (1.10) suy ra $e _ { n } < e _ { n + 1 }$:
+
+Đây $( e _ { n })$ bị chặn trên. Vậy, cũng dùng công thức khai triển Newton, ta có
+
+$$
+\begin{array} { r l } { \frac { 1 } { \lambda } } & { \frac { 1 } { \gamma } , } \\ & { \frac { 1 } { \lambda } , } \\ & { \frac { 1 } { \lambda } , } \\ & { \frac { 1 } { \lambda } , } \\ & { + \lambda , \frac { 1 } { \gamma } , } \\ & { - \lambda , } \\ & { \frac { 1 } { \lambda } , } \\ & { - \lambda , } \\ & { \frac { 1 } { \lambda } , } \\ & { \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad } \\ & { \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad } \\ & { \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad } \\ & { \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad } \\ & { \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad 
+
+\quad \quad \quad } \\ & { \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad } \\ & { \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad } \\ & { \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad } \\ & { \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad } \\ & { \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad } \\ &  \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \end{array}
+$$
+
+Vậy đây số $\left( e_{n} \right)$ hội tụ. Giới hạn này được gọi là số $e \approx 2,71828...$. Khi đó, ta có định nghĩa
+
+$$
+e = \lim _{ n \to \infty } ( 1 + \frac { 1 } { n } ) ^ { n }.
+$$
+
+Ví dụ 1.29. Chứng minh rằng:
+
+$$
+\lim _{ n \to \infty } x_{n} = \lim _{ n \to \infty } \sum _{ k = 0 } ^ { n } { \frac { 1 } { k ! } } = e.
+$$
+
+Chứng minh Theo Ví dụ 1.28, ta có
+
+$$
+e_{n} \leq x_{n} \quad \forall n
+$$
+
+và
+
+$$
+\begin{array}{l}
+{\displaystyle c_{m} = 1 + 1 + \frac { 1 } { 2 ! } ( 1 - \frac { 1 } { m } ) + \ldots + \frac { 1 } { m ! } ( 1 - \frac { 1 } { m } ) ( 1 - \frac { 2 } { m } ) . . . ( 1 - \frac { m - 1 } { m } )} \\
+{\displaystyle = 2 + \frac { 1 } { 2 ! } ( 1 - \frac { 1 } { m } ) + \ldots + \frac { 1 } { n ! } ( 1 - \frac { 1 } { m } ) ( 1 - \frac { 2 } { m } ) . . . ( 1 - \frac { n - 1 } { m } ) + . . .} \\
+{\displaystyle > 2 + \frac { 1 } { 2 ! } ( 1 - \frac { 1 } { m } ) + \ldots + \frac { 1 } { n ! } ( 1 - \frac { 1 } { m } ) ( 1 - \frac { 2 } { m } ) . . . ( 1 - \frac { n - 1 } { m } ).}
+\end{array}
+$$
+
+Cho $m \to \infty$, ta có
+
+$$
+e \geq x_{n}.
+$$
+
+Từ (1.11) và (1.12), suy ra $e_{n} \leq x_{n} \leq e$. Chuyển qua giới hạn khi $n \to \infty$ cho $\lim _{ n \to \infty } x_{n} = e$.
+
+Ví dụ 1.30. Chứng minh rằng $(x_{n})_{n \geq 1}$ hội tụ, với
+
+$$
+x _ { n } = C _ { 2 n } ^ { n } . \frac { \sqrt { n } } { 4 ^ { n } } .
+$$
+
+Chứng minh - Dãy $\left( x _ { n } \right)$ tăng. Thật vậy, ta có
+
+$$
+\frac{x_{n+1}}{x_n} = \frac{(2n + 2)(2n + 1)}{4(n + 1)^2} \frac{\sqrt{n + 1}}{\sqrt{n}} = \frac{n + \frac{1}{2}}{\sqrt{n(n + 1)}} = \left( 1 + \frac{1}{4(n^2 + n)} \right)^\frac{1}{2} > 1
+$$
+
+suy ra $x _ { n } < x _ { n + 1 }$.
+
+- Dãy $( x _ { n } )$ bị chặn trên. Thật vậy, từ bất đẳng thức trên và bất đẳng thức $\ln ( 1 + x ) \leq x \ \forall x \ge 0$, ta có
+
+$$
+\begin{array} { r l }
+\ln \frac{x_{n+1}}{x_n} = \ln x_{n+1} - \ln x_n \\
+= \ln \left( 1 + \frac{1}{4(n^2 + n)} \right)^\frac{1}{2} \\
+= \frac{1}{2} \ln \left( 1 + \frac{1}{4(n^2 + n)} \right) \\
+\leq \frac{1}{8(n^2 + n)} \\
+= \frac{1}{8} \left( \frac{1}{n} - \frac{1}{n+1} \right).
+\end{array}
+$$
+
+Cộng $n$ bất đẳng thức trên lại, ta nhận được
+
+$\lfloor x_{n+1} - \ln x_1 = \sum_{k=1}^n (\ln x_{k+1} - \ln x_k) \leq \frac{1}{8} \sum_{k=1}^n \left( \frac{1}{k} - \frac{1}{k+1} \right) = \frac{1}{8} \left( 1 - \frac{1}{n-1} \right)$ nghĩa là 
+\[
+\ln x_{n+1} < \ln x_1 + \frac{1}{8} \Rightarrow x_{n+1} < x_1 e^{\frac{1}{8}} \quad \forall n.
+\]
+
+# 1.3.5. Hai dãy $\mathbf{k}\hat{\mathbf{e}}$ nhau
+
+a) Định nghĩa: Hai dãy $(x_n)$ và $(y_n)$ gọi là $\mathbf{k}\hat{\mathbf{e}}$ nhau khi và chỉ khi $(x_n)$ tăng, $(y_n)$ giảm và 
+\[
+\lim_{n \to \infty} (y_n - x_n) = 0.
+\]
+
+b) Tính chất
+
+Định lý 1.31: Nếu hai dãy $(x_n)$ và $(y_n)$ ke nhau, thì cả hai dãy hội tụ cùng điểm.
+
+Chứng minh Gia su hai dãy $(x_n)$ và $\left( y_n \right)$ ke nhau, theo định nghĩa, dãy $z_n = y_n - x_n$ hội tụ về $0$. Do vậy $z_n \ge 0\ \forall n \Leftrightarrow x_n \le y_n$. Kết hợp điều này với $\left( y_n \right)$ giảm, ta có $(x_n)$ tăng và bị chặn trên, dãy $\left( y_n \right)$ giảm và bị chặn dưới. Theo tính chất của dãy đơn điệu, hai dãy $\left(x_n\right)$ và $\left(y_n\right)$ hội tụ. Vì $\lim_{n \to \infty} (y_n - x_n) = 0$, suy ra 
+$$
+\lim_{n \to \infty} x_n = \lim_{n \to \infty} y_n.
+$$
+
+Hè qua (định lý Cantor) Nếu dãy đoạn $\left[ x_n, y_n \right]$ thỏa mãn
+
+$$
+\begin{cases}
+\left[x_{n+1}, y_{n+1}\right] \subseteq \left[x_n, y_n\right]\ \forall n \\
+\lim_{n \to \infty} (y_n - x_n) = 0,
+\end{cases}
+$$
+
+thì tồn tại duy nhất số $A$ sao cho
+$$
+\bigcap_{n=0}^{\infty}[x_n, y_n] = \{ A \}.
+$$
+
+Chứng minh rằng $[ x _ { n + 1 } , y _ { n + 1 } ] \subseteq [ x _ { n } , y _ { n } ] \forall n$, suy ra $( x _ { n } )$ tăng và $\left( y _ { n } \right)$ giảm. Như vậy, hai dãy $( x _ { n } )$ và $( y _ { n } )$ kẹp nhau. Theo định lý trên, tồn tại duy nhất $A$ sao cho $\lim_{n \to \infty} x _ { n } = \lim_{n \to \infty} y _ { n } = A .$ □
+
+Ví dụ 1.32. Chứng minh rằng $( x _ { n } )$ và $( y _ { n } )$ kẹp nhau, với
+
+$$
+x _ { n } = \sum _ { k = 3 } ^ { n } { \frac { 1 } { 1 + k ^ { 2 } } } , y _ { n } = x _ { n } + { \frac { 1 } { n } } - { \frac { 1 } { 2 n ^ { 2 } } } \quad (n \geq 3).
+$$
+
+Chứng minh: Theo giả thiết $x _ { n } = \sum _ { k = 3 } ^ { n } { \frac { 1 } { 1 + k ^ { 2 } } }$, ta có
+
+$$
+x _ { n + 1 } - x _ { n } = { \frac { 1 } { ( n + 1 ) ^ { 2 } + 1 } } \geq 0 \quad \forall n \geq 3,
+$$
+
+vậy dãy số $( x _ { n } )$ tăng.
+
+Theo giả thiết $x _ { n } = \sum _ { k = 3 } ^ { n } { \frac { 1 } { 1 + k ^ { 2 } } }, y _ { n } = x _ { n } + { \frac { 1 } { n } } - { \frac { 1 } { 2 n ^ { 2 } } } \quad (n \geq 3)$, ta có
+
+$$
+\begin{array} { c } { y _ { n + 1 } - y _ { n } = ( x _ { n + 1 } - x _ { n } ) + \displaystyle \frac { 1 } { n + 1 } - \displaystyle \frac { 1 } { n } - \displaystyle \frac { 1 } { 2 ( n + 1 ) ^ { 2 } } + \displaystyle \frac { 1 } { 2 n ^ { 2 } } } \\ { = \displaystyle \frac { - ( n - 1 ) ^ { 2 } + 3 } { 2 n ^ { 2 } ( n + 1 ) ^ { 2 } ( n ^ { 2 } + 2 n + 2 ) } } \\ { \leq 0 \forall n \geq 3 , } \end{array}
+$$
+
+Vậy đây $( y _ { n } )$ là dãy giảm.
+
+Theo giả thiết $y _ { n } = x _ { n } + \frac { 1 } { n } - \frac { 1 } { 2 n ^ { 2 } } \quad n \geq 3 ,$
+
+$$
+\lim_{n \to \infty} \left( y _ { n } - x _ { n } \right) = \lim_{n \to \infty} \left( \frac { 1 } { n } - \frac { 1 } { 2 n ^ { 2 } } \right) = 0 .
+$$
+
+Theo định nghĩa, hai dãy $\left( x _ { n } \right)$ và $( y _ { n } )$ kề nhau.
+
+# 1.3.6. Dãy con
+
+a) Định nghĩa Cho một dãy số $( x _ { n } )$. Dãy $( x _ { n _ { k } } )$ được gọi là dãy con của dãy $( x _ { n } )$, nếu
+
+$$
+n _ { 1 } < n _ { 2 } < \ldots < n _ { k } < \ldots
+$$
+
+b) Các tính chất
+
++ Tính chất I Nếu dãy $( x _ { n } )$ hội tụ đến $x ^ { * }$, thì mọi dãy con $( x _ { n _ { k } } )$ của nó cũng hội tụ đến $x ^ { * }$:
+
+Chứng minh Theo giả thiết $\lim_{n \to \infty} x _ { n } = x ^ { * }$, theo định nghĩa,
+
+Chọn $k_{0}$ thỏa mãn $n_{k_{0}} \geq n_{0}$, ta có $n_{k} \geq n_{0} \forall k \geq k_{0}$. Vậy
+
+Điều đó có nghĩa là $\lim _{k \to \infty} x_{n_{k}} = x^{*}$.
+
+$+$ Tính chất 2: Dãy $(x_{n})$ hội tụ đến $x^{*}$ khi và chỉ khi hai dãy con $\left(x_{2n}\right)$ và $\left(x_{2n+1}\right)$ đều hội tụ đến $x^{*}$:
+
+Chứng minh $(\Rightarrow)$: Hiện nhiên theo tính chất 1.
+
+$(\Leftarrow)$ Giả thiết cho mỗi $\lim _{k \to \infty} x_{2k} = x^{*} = \lim _{k \to \infty} x_{2k+1}$, theo định nghĩa, tồn tại $k_{1}, k_{2}$ sao cho
+
+$$
+\left\{
+\begin{array}{l}
+|x_{2k} - x^{*}| < \epsilon ~ \forall k \geq k_{1} \\
+|x_{2k+1} - x^{*}| < \epsilon ~ \forall k \geq k_{2}.
+\end{array}
+\right.
+$$
+
+Đặt $n_{0} = \max \{2k_{1}, 2k_{2} + 1\}$. Khi đó,
+
+$$
+\forall n \geq n_{0} \Rightarrow 
+\left\{
+\begin{array}{ll}
+n \geq 2k_{1} \\
+n \geq 2k_{2} + 1.
+\end{array}
+\right.
+$$
+
+-Nếu $n$ có dạng $n = 2k$ với $\boldsymbol{k} \in \mathbb{N}$, thì $k \geq k_1 \Rightarrow |x_n - x^*| = |x_{2k} - x^*| < \epsilon.$
+
+-Nếu $n$ có dạng $n = 2k + 1$ với $k \in \mathbb{N}$, thì $k \geq k_2 \Rightarrow |x_n - x^*| = |x_{2k+1} - x^*| < \epsilon.$ Như vậy, với mọi $n \geq n_0$, ta có $\left| x_n - x^* \right| < \epsilon$ hay $\lim_{n \to \infty} x_n = x^*.$
+
+Ví dụ 1.33. Cho dãy $(x_n)$ thỏa mãn
+
+$$
+0 \leq x_{n+m} \leq \frac{n + m}{nm}.
+$$
+
+Chứng minh rằng $\lim_{k \to \infty} x_n = 0$
+
+Thay $m = n$ ta có
+
+$$
+0 \leq x_{2n} \leq \frac{2n}{n^2} \Rightarrow \lim_{k \to \infty} x_{2n} = 0.
+$$
+
+Thay $m = n + 1$ ta có
+
+$$
+0 \leq x_{2n+1} \leq \frac{n + (n + 1)}{n(n + 1)} \Rightarrow \lim_{k \to \infty} x_{2n+1} = 0.
+$$
+
+Theo tính chất trên, $\lim_{k \to \infty} x_n = 0$
+
++ Tính chất 3 (định lý Bolzano-Weierstrass)
+
+Từ mọi dãy bị chặn ta đều có thể rút ra một dãy con hội tụ.
+
+Chứng minh (phương pháp chia đôi)
+
+Cho $( x _ { n } )$ là một dãy bị chặn. Ta sẽ xây dựng bằng quy nạp hai dãy $\mathbf{k}$ nghịch với nhau $( a _ { k } ), ( b _ { k } )$ và dãy con $( x _ { n _ { k } } )$ sao cho $x _ { n _ { k } } \in [ a _ { k } ; b _ { k } ] \forall k \ge 1 .$
+
+Vì $( x _ { n } )$ bị chặn nên tồn tại $a _ { 0 }$ và $b _ { 0 }$ sao cho $a _ { 0 } \leq x _ { n } \leq b _ { 0 } \forall n$ .
+
+Bước $I$. Chia $[ a _ { 0 } ; b _ { 0 } ]$ thành hai đoạn $\left[ a _ { 0 } ; \frac { a _ { 0 } + b _ { 0 } } { 2 } \right]$ và $\left[ \frac { a _ { 0 } + b _ { 0 } } { 2 } ; b _ { 0 } \right]$. Xảy ra hai trường hợp:
+- Nếu $\left[ a _ { 0 } ; \frac { a _ { 0 } + b _ { 0 } } { 2 } \right]$ chứa vô hạn phần tử của dãy $( x _ { n } )$, thì đặt $a _ { 1 } = a _ { 0 }, b _ { 1 } = \frac { a _ { 0 } + b _ { 0 } } { 2 }$ và chọn $x _ { n _ { 1 } } \in [ a _ { 1 } ; b _ { 1 } ]$:
+
+- Nếu $\left[ \frac { a _ { 0 } + b _ { 0 } } { 2 } ; b _ { 0 } \right]$ chứa vô hạn phần tử của dãy $( x _ { n } )$, thì đặt $a _ { 1 } = \frac { a _ { 0 } + b _ { 0 } } { 2 }, b _ { 1 } = b _ { 0 }$ và chọn $x _ { n _ { 1 } } \in [ a _ { 1 } ; b _ { 1 } ]$.
+
+Sau bước 1, ta có
+
+$$
+\left\{ \begin{array} { l l }
+{ [ a _ { 1 } ; b _ { 1 } ] \subset [ a _ { 0 } ; b _ { 0 } ] } \\
+{ b _ { 1 } - a _ { 1 } = \frac{1}{2} ( b _ { 0 } - a _ { 0 } ) } \\
+{ [ a _ { 1 } ; b _ { 1 } ] \subset \mathrm{h} \tilde{\mathrm{u}} \mathrm{~x} \hat{\mathrm{o}} \mathrm{~hán ~p} \hat{\mathrm{a}n ~t} \tilde{\mathrm{i}} \mathrm{c} \tilde{\mathrm{u}} \mathrm{~d} \tilde{\mathrm{a}} \mathrm{~d} \tilde{\mathrm{a}} \mathrm{y ~( x _ { n } ) } } \\
+{ \exists x _ { n _ { 1 } } \in [ a _ { 1 } ; b _ { 1 } ] }
+\end{array} \right.
+$$
+
+Bước $k$ Chia $[ a _ { k - 1 } ; b _ { k - 1 } ]$ thành hai $\scriptstyle { \left[ a _ { k - 1 } ; { \frac { a _ { k - 1 } + b _ { k - 1 } } { 2 } } \right] }$ và $\textstyle { \left[ { \frac { a _ { k - 1 } + b _ { k - 1 } } { 2 } } ; b _ { k - 1 } \right] }$. Xét ra hai trường hợp:
+
+- Nếu $\scriptstyle { \left[ a _ { k - 1 } ; { \frac { a _ { k - 1 } + b _ { k - 1 } } { 2 } } \right] }$ chưa vô hạn phần tử của dãy $( x _ { n } )$, thì đặt $a _ { k } = a _ { k - 1 } , b _ { k } = \frac{a_{k-1} + b_{k-1}}{2}$ và chọn $x_{n_k} ∈ [a_k; b_k]$ sao cho $n_k > n_{k-1}$.
+
+- Nếu $\textstyle { \left[ { \frac { a _ { k - 1 } + b _ { k - 1 } } { 2 } } ; b _ { k - 1 } \right] }$ chưa vô hạn phần tử của dãy $( x _ { n } )$, thì đặt $\begin{array} { r }
+{ a _ { k } = \frac { a _ { k - 1 } + b _ { k - 1 } } { 2 } }
+\end{array}$, $b _ { k } = b _ { k - 1 }$ và chọn $x _ { n _ { k } } \in [ a _ { k } ; b _ { k } ]$ sao cho $n _ { k } > n _ { k - 1 }$.

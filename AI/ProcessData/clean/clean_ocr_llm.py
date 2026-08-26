@@ -39,6 +39,8 @@ def _get_local_client() -> OpenAI:
     return OpenAI(
         api_key="sk-no-key-required",
         base_url=base_url,
+        timeout=45.0,
+        max_retries=2,
         default_headers={"ngrok-skip-browser-warning": "true"}
     )
 
@@ -120,7 +122,8 @@ def call_local_llm(text: str) -> str:
         ],
         max_tokens=4000,
         temperature=0.1,
-        stream=True
+        stream=True,
+        timeout=45.0
     )
     full_text = ""
     for chunk in response:

@@ -38,6 +38,19 @@ app.add_middleware(
 # 2. Kết nối bộ điều hướng (Router) cho các API Chat, Tài liệu và Hoạt động
 app.include_router(api_router)
 
+@app.on_event("startup")
+def auto_standardize_rag():
+    """Tự động chuẩn hóa và gộp các file giáo trình cũ thành chuong_1.txt, chuong_2.txt khi server khởi động."""
+    try:
+        from standardize_rag_files import standardize_rag_folder
+        import os
+        from core.config import settings
+        rag_base = os.path.join(settings.BASE_DIR, "data", "rag_input")
+        if os.path.exists(rag_base):
+            standardize_rag_folder(rag_base)
+    except Exception as e:
+        print(f"[RAG Auto-Standardize Warning]: {e}")
+
 @app.get("/")
 def root():
     return {

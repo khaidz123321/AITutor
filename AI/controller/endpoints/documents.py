@@ -136,11 +136,12 @@ def process_document_background(doc_id: int, file_path: str, safe_filename: str,
                 print("[BACKGROUND] Đang chạy auto_split_large_files...")
                 auto_split_large_files(subject=subject)
                 
-                base_name_no_ext = safe_filename.replace(".pdf", "")
-                generated_files = glob.glob(os.path.join(rag_input_dir, f"{base_name_no_ext}*.txt"))
+                # Lấy toàn bộ các file .txt trong thư mục môn học (gồm các file chuong_*.txt vừa tách từ auto_split)
+                generated_files = sorted([
+                    f for f in glob.glob(os.path.join(rag_input_dir, "*.txt"))
+                    if not os.path.basename(f).startswith("test_")
+                ])
                 
-                # FIX: Nếu auto_split không tách được (không có heading chương),
-                # file gốc vẫn còn nguyên với tên base_txt_filename -> cần đưa vào danh sách xử lý
                 if not generated_files:
                     print(f"[BACKGROUND] Không tìm thấy file được tách, kiểm tra file gốc: {rag_input_path}")
                     if os.path.exists(rag_input_path):

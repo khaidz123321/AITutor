@@ -23,7 +23,11 @@ public class WebMvcConfig implements WebMvcConfigurer {
             dirName = dirName.replace("../", "");
         }
         
+        // uploadPath đã là đường dẫn tuyệt đối (bắt đầu bằng "/"), nên KHÔNG được nối thêm "/" sau
+        // "file:" — nếu không URL sẽ thành "file://app/uploads/..." (2 dấu / liền nhau), khiến JVM
+        // hiểu nhầm "app" là hostname và fallback sang giao thức FTP để mở file, gây lỗi 500
+        // UnknownHostException thay vì đọc file cục bộ.
         registry.addResourceHandler("/" + dirName + "/**")
-                .addResourceLocations("file:/" + uploadPath + "/");
+                .addResourceLocations("file:" + uploadPath + "/");
     }
 }

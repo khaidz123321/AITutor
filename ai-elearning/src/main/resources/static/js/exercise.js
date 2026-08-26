@@ -7,6 +7,64 @@
     const chapterId = parseInt(params.get('chapterId'));
     const token = localStorage.getItem('ptit_token');
 
+    // -----------------------------------------------
+    // LATEX UTILITIES
+    // -----------------------------------------------
+    /**
+     * Phục hồi các ký tự backslash LaTeX bị mất do JSON serialization:
+     * - '\b' (backspace char 8) + 'egin' → '\begin'
+     * - '\t' (tab char 9)  ở đầu lệnh LaTeX → '\t...' (giữ nguyên nếu đứng đầu tên lệnh)
+     * Tiếp cận thực tế: map các chuỗi lệnh LaTeX phổ biến bị hỏng → dạng đúng
+     */
+    function fixLatexBackslashes(text) {
+        if (!text) return text;
+        // Backspace char (\x08) là '\b' trong JSON, xảy ra khi '\begin' bị serialize sai
+        const BS = '\x08'; // backspace
+        const TAB = '\x09'; // tab
+        const CR = '\x0D'; // carriage return
+        // Map các mẫu bị hỏng phổ biến → dạng đúng
+        const repairs = [
+            [BS + 'egin',    '\\begin'],
+            [BS + 'f',       '\\b'],   // \bf -> bold
+            [TAB + 'ext',    '\\text'],
+            [TAB + 'imes',   '\\times'],
+            [TAB + 'heta',   '\\theta'],
+            [TAB + 'au',     '\\tau'],
+            [TAB + 'o',      '\\to'],
+            [CR + 'ight',    '\\right'],
+            ['\\\\end',      '\\end'],
+        ];
+        for (const [bad, good] of repairs) {
+            text = text.split(bad).join(good);
+        }
+        // Xử lý chung: backspace + chuỗi chữ → '\' + chuỗi đó
+        text = text.replace(new RegExp(BS + '([a-zA-Z]+)', 'g'), (m, cmd) => '\\' + cmd);
+        text = text.replace(new RegExp(TAB + '([a-zA-Z]+\\{)', 'g'), (m, cmd) => '\\' + cmd);
+        return text;
+    }
+
+    /** Escape HTML để tránh XSS khi set innerHTML */
+    function escapeHtml(text) {
+        return text.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+    }
+
+    /** Render LaTeX vào một element (sử dụng KaTeX auto-render nếu có) */
+    function renderLatex(el, rawText) {
+        const fixed = fixLatexBackslashes(rawText || '');
+        el.innerHTML = fixed.replace(/\n/g, '<br>');
+        if (typeof renderMathInElement !== 'undefined') {
+            renderMathInElement(el, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false},
+                    {left: '\\(', right: '\\)', display: false},
+                    {left: '\\[', right: '\\]', display: true}
+                ],
+                throwOnError: false
+            });
+        }
+    }
+
     if (!token) {
         window.location.href = 'login.html';
         return;
@@ -182,7 +240,8 @@
 
         // Parse MCQ question and 4 Options
         const parsed = parseMcqOptions(activeExercise.question);
-        document.getElementById('exQuestionText').textContent = parsed.questionText;
+        const questionEl = document.getElementById('exQuestionText');
+        renderLatex(questionEl, parsed.questionText);
 
         const grid = document.getElementById('mcqOptionsGrid');
         if (grid) {

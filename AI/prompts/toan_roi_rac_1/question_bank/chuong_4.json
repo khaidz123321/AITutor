@@ -1,0 +1,83 @@
+{
+    "subject": "Toán rời rạc 1",
+    "chapter_number": "4",
+    "chapter_name": "chuong_4",
+    "questions": [
+        {
+            "id": "TRR1_C4_01",
+            "lesson_number": "4.1",
+            "lesson_name": "Giới thiệu về bài toán hàng đợi (Queueing Theory)",
+            "topic": "Ứng dụng của bài toán hàng đợi trong quản lý giao thông",
+            "theory_reference": "Bài toán hàng đợi M/M/1",
+            "difficulty": "Easy",
+            "bloom_level": "Understanding",
+            "thought_process": "1. Neo lý thuyết: Bài toán hàng đợi M/M/1. 2. Áp dụng vào tình huống thực tế.",
+            "question_text": "Một trạm xăng có một bơm xăng duy nhất và khách hàng đến theo quy luật Poisson với tốc độ trung bình là 5 người mỗi giờ, thời gian phục vụ của mỗi người cũng tuân theo phân phối exponential với tốc độ trung bình là 10 phút. Tính toán số lượng trung bình của khách hàng trong hệ thống và thời gian chờ trung bình.",
+            "full_answer": "Số lượng trung bình của khách hàng trong hệ thống: λ/μ(1-λ/μ) = 5/(6)(1-5/6) ≈ 30 người; Thời gian chờ trung bình: Wq = λ/μ^2(1-λ/μ)^2 = (5*6)/(6^2)*(1-(5/6))^2 ≈ 0.5 giờ",
+            "detailed_solution": "Số lượng trung bình của khách hàng trong hệ thống là λ/μ(1-λ/μ) = 5/(6)(1-5/6) ≈ 30 người; Thời gian chờ trung bình là Wq = λ/μ^2(1-λ/μ)^2 = (5*6)/(6^2)*(1-(5/6))^2 ≈ 0.5 giờ.",
+            "scaffolding_steps": [
+                {
+                    "step_number": 1,
+                    "hint": "Gợi ý",
+                    "step_detail": "Áp dụng công thức λ/μ(1-λ/μ) để tính số lượng trung bình của khách hàng trong hệ thống."
+                },
+                {
+                    "step_number": 2,
+                    "hint": "Gợi ý",
+                    "step_detail": "Áp dụng công thức Wq = λ/μ^2(1-λ/μ)^2 để tính thời gian chờ trung bình."
+                }
+            ],
+            "common_mistakes": []
+        },
+        {
+            "id": "TRR1_C4_02",
+            "lesson_number": "4.2",
+            "lesson_name": "Thuật toán Branch and Bound",
+            "topic": "Áp dụng thuật toán Branch and Bound để giải bài toán knapsack",
+            "theory_reference": "Thuật toán Branch and Bound",
+            "difficulty": "Hard",
+            "bloom_level": "Evaluating",
+            "thought_process": "1. Neo lý thuyết: Thuật toán Branch and Bound. 2. Áp dụng vào bài toán knapsack.",
+            "question_text": "Cho một túi có sức chứa tối đa là 5kg và các vật phẩm sau:\na) Vật phẩm A (trọng lượng 3kg, giá trị 40$)\nb) Vật phẩm B (trọng lượng 2kg, giá trị 30$)\nc) Vật phẩm C (trọng lượng 1kg, giá trị 25$)\nd) Vật phẩm D (trọng lượng 1kg, giá trị 20$)",
+            "full_answer": "5kg và tổng giá trị là 70$. b) Không thể thêm vật phẩm C hoặc D mà không vượt quá giới hạn trọng lượng",
+            "detailed_solution": "Áp dụng thuật toán Branch and Bound, ta sẽ chọn vật phẩm có tỷ lệ giá trị/ trọng lượng cao nhất. Vật phẩm A và B có tổng trọng lượng là 5kg và tổng giá trị là 70$. Không thể thêm vật phẩm C hoặc D mà không vượt quá giới hạn trọng lượng.",
+            "scaffolding_steps": [
+                {
+                    "step_number": 1,
+                    "hint": "Gợi ý",
+                    "step_detail": "Tính tỷ lệ giá trị/ trọng lượng cho mỗi vật phẩm."
+                },
+                {
+                    "step_number": 2,
+                    "hint": "Gợi ý",
+                    "step_detail": "Chọn vật phẩm có tổng trọng lượng không vượt quá giới hạn và tổng giá trị lớn nhất."
+                }
+            ],
+            "common_mistakes": []
+        },
+        {
+            "id": "TRR1_C4_03",
+            "lesson_number": "4.1",
+            "lesson_name": "Biến đổi Fourier và ứng dụng",
+            "topic": "Phân tích tín hiệu sử dụng biến đổi Fourier",
+            "difficulty": "Medium",
+            "bloom_level": "Applying",
+            "question_text": "Cho tín hiệu x(t) = 2cos(10πt) + 3sin(20πt). Sử dụng biến đổi Fourier để tìm phổ của tín hiệu này.",
+            "full_answer": "Phổ của tín hiệu là δ(f - 5) + δ(f + 5) và δ(f - 10) + δ(f + 10)",
+            "detailed_solution": "Sử dụng công thức biến đổi Fourier, ta có thể tính toán các giá trị phổ tại f = ±5 và f = ±10.",
+            "scaffolding_steps": [
+                {
+                    "step_number": 1,
+                    "hint": "Xác định hàm số tín hiệu",
+                    "step_detail": "Tín hiệu x(t) = 2cos(10πt) + 3sin(20πt)"
+                },
+                {
+                    "step_number": 2,
+                    "hint": "Áp dụng công thức biến đổi Fourier",
+                    "step_detail": "X(f) = ∫x(t)e^(-j2πft)dt"
+                }
+            ],
+            "common_mistakes": []
+        }
+    ]
+}

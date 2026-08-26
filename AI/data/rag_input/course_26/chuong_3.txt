@@ -1,0 +1,1059 @@
+# 3.1. Tích phân đường loại 1.
+
+## 3.1.1. Định nghĩa.
+
+Cho hàm hai biến số \( z = f(x, y) \) xác định trên cung \(\widetilde{AB}\).
+
+\( + \) Phân hoạch \( P \) cung \(\widetilde{AB} \) bằng \( n \) điểm
+
+$$
+A = C_0, C_1, C_2, \ldots, C_n = B.
+$$
+
+Ký hiệu \( \Delta_i \) là độ dài các cung \(\widetilde{C_{i-1}C_i}\), \(\forall i = 1, 2, \ldots, n\). \( \Delta_P = \max\{\Delta_1, \Delta_2, \ldots, \Delta_n\} \)
+
+\( + \) Chọn một điểm tùy ý \( M_i \in \widehat{C_{i-1}C_i} \)
+
+Khi đó
+
+$$
+\sigma_P = \sum_{i=1}^n f(M_i)\Delta_i
+$$
+
+được gọi là tổng tích phân đường loại I của hàm \( f(x, y) \) trên cung \(\widetilde{AB}\). Nếu giới hạn
+
+$$
+I = \lim_{\Delta_P \to 0} \sigma_P
+$$
+
+tồn tại, không phụ thuộc vào phép phân hoạch \( P \) và chọn điểm \( M_i \), thì \( I \) được gọi là tích phân đường loại I của hàm \( f(x, y) \) trên cung \(\widetilde{AB}\) (hay ta còn nói \( f(x, y) \) khả tích trên cung \(\widetilde{AB} \) và được ký hiệu là \( \int_{AB} f(x, y)\, ds\). Người ta chứng minh được rằng nếu cung \(\widetilde{AB}\) trơn từng khúc (cung xác định hàm số khả vi liên tục từng khúc) và hàm \( f(x, y) \) liên tục trên \(\widetilde{AB} \), thì hàm số \( f(x, y) \) khả tích trên \(\widetilde{AB}\).
+
+Dựa vào định nghĩa, ta có các tính chất:
+
+3.1.2 Tính chất.
+
+$\begin{array} { r } { + \underbrace { \int \ f ( x , y ) d s } = \underbrace { \int \ f ( x , y ) d s } . } \end{array}$ （204 $+ \underbrace { \int \mathrm { ~ } 1 d s } = | \widetilde { A B } |$ là độ dài của cung $\widetilde { A B }$
+
+$+ \mathrm { N } \mathrm { \hat { e } u }$ cung $\widetilde { A B }$ có khối lượng riêng $\rho ( x , y )$ thì $\begin{array} { r } { m _ { \widetilde { A B } } = \underbrace { \int \rho ( x , y ) d s } _ { A B } } \end{array}$ là khối lượng của cung $\widetilde { A B }$ 3.1.3 Công thức tính.
+
+a) Cung $\widetilde { A B }$ có dạng tổng quát
+
+Trường hợp 1: Cho cung tròn tịnh khúc $\widetilde { A B }$ có dạng $y = \varphi ( x ) x \in [ a , b ]$ và hàm số $f ( x , y )$ liên tục trên cung $\widetilde { A B }$. Khi đó
+
+$$
+\intop _ { A B } f ( x , y ) d s = \intop _ { a } ^ { b } f ( x , \varphi ( x ) ) { \sqrt { 1 + \varphi ^ { \prime 2 } ( x ) } } d x .
+$$
+
+Trường hợp 2: Cho cung tròn tịnh khúc $\widetilde { A B }$ có dạng $x = \phi ( y ) y \in [ c , d ]$ và hàm số $f ( x , y )$ liên tục trên cung $\widetilde { A B }$. Khi đó
+
+$$
+\intop _ { A B } f ( x , y ) d s = \intop _ { c } ^ { d } f ( \phi ( y ) , y ) { \sqrt { 1 + \phi ^ { \prime 2 } ( y ) } } d y .
+$$
+
+Chứng minh: Ta chứng minh cho trường hợp 1, trường hợp 2 là tương tự. Theo định nghĩa, giá trị $C_i (x_i, y_i), \Delta_{x_i} = x_i - x_{i-1}, \Delta_{y_i} = y_i - y_{i-1} \forall i = 1, 2, ..., n.$ Khi $\Delta_{x_i}$ đủ nhỏ, ta có
+
+$$
+\Delta_i \approx C_{i-1}C_i = \sqrt{(x_i - x_{i-1})^2 + (y_i - y_{i-1})^2} = \Delta_{x_i} \sqrt{1 - \frac{\Delta_{y_i}}{\Delta_{x_i}}}.
+$$
+
+Theo công thức số gia giới hạn nội suy
+
+$$
+\frac{\Delta_{y_i}}{\Delta_{x_i}} = \frac{\varphi(x_i) - \varphi(x_{i-1})}{\Delta_{x_i}} = \varphi'(\xi_i), x_{i-1} \leq \xi_i \leq x_i \forall i = 1, 2, ..., n.
+$$
+
+Khi đó
+
+$$
+\sigma_P = \sum_{i=1}^n f(M_i) \Delta_i \approx \sum_{i=1}^n f(\xi_i, \varphi(\xi_i)) \sqrt{1 - \varphi'^2(\xi_i)} \Delta_{x_i}.
+$$
+
+Đặt $\Delta_x = \max\{\Delta x_1, ..., \Delta x_n\}$ Khi đó
+
+$$
+\int _ { 4 \overline{B} } f ( x , y ) d s = \operatorname*{lim}_{\Delta_{x} \to 0} \sum _ { i = 1 } ^ { n } f ( \xi _ { i } , \varphi ( \xi _ { i } ) ) \sqrt { 1 - \varphi '^2 ( \xi _ { i } ) } \Delta _ { x _ { i } } = \int _ { a } ^ { b } f ( x , \varphi ( x ) ) \sqrt { 1 + \varphi '^2 ( x ) } d x .
+$$
+
+Ví dụ 3.1. Tính tích phân $\frac{\int_{AB} y^2 ds}{AB}$, trong đó $A(2,0), B(0,1)$.
+
+Bài giải.
+
+$+$ Phương trình đường thẳng $AB$ có dạng
+
+$$
+y = 1 - \frac{x}{2}.
+$$
+
+$+$ Theo công thức tính (3.1)
+
+$$
+\int y^2 ds = \int_{0}^{2} \left( 1 - \frac{x}{2} \right)^{2} \sqrt { 1 + \left(\frac{-1}{2}\right)^2 } dx = \int_{0}^{2} \left( 1 - \frac{x}{2} \right)^{2} \sqrt { 1 + \frac{1}{4} } dx = \frac{\sqrt{5}}{2} \int ( 1 - \frac{x}{2} )^2 dx =
+$$
+
+$+$ Cung $\widetilde{AB}$ có dạng tham số trong mặt phẳng
+
+Cho cung tròn từng khúc $\widetilde{AB}$ có dạng tham số
+
+$$
+\begin{array}{r}
+\widetilde{AB} \left\{
+\begin{array}{ll}
+x = x(t) \\
+y = y(t)
+\end{array}\right.
+\quad \alpha \leq t \leq \beta .
+\end{array}
+$$
+
+![](images/dfa80466b65583758cfe77e0fb8b0e5e8f3c6ef0538161151de584fe176e8ad6.jpg)  
+Hình 1: Hình vẽ của ví dụ 3.2
+
+và hàm số $f(x, y)$ liên tục trên cung $\widetilde{AB}$. Bằng cách thay 
+\[
+y_x' = \frac{y_t'}{x_t'}
+\]
+vào công thức (3.2), ta có
+
+$$
+\int_{AB} f(x, y) ds = \int_\alpha^\beta f\left( x(t), y(t) \right) \sqrt{x_t'^2 + y_t'^2} dt.
+$$
+
+Ví dụ 3.2. Tính tích phân $\frac{\int dz y^2 ds}{4B}$, trong đó $\widetilde{AB}$ là một nhịp của cung cycloide
+
+$$
+\widetilde{AB} \left\{ x = a(t - \sin t) \quad a > 0, 0 \leq t \leq 2\pi. \right.
+$$
+
+Bài giải.
+
+Theo công thức (3.3), ta có
+
+$$
+\begin{array} { r l } & { \displaystyle \int y ^ { 2 } d x - \sqrt { x ^ { 2 } + 1 - \cos \theta } ^ { 2 } \sqrt { x ^ { 2 } + \theta ^ { 2 } } d x } \\ & { \displaystyle = \int \int \alpha ^ { 2 } \left( 1 - \cos \theta \right) ^ { 2 } \cos y ^ { 2 } \sin ^ { 2 } x - \mathrm { cext } d x } \\ & { \quad \quad - \frac { 2 \sin \theta } { \sin x } \sqrt { \left( \frac { \sin \theta } { \sin x } \right) ^ { 2 } + \theta ^ { 2 } } d x } \\ & { \quad \quad \quad - \frac { \sin \theta } { \sin x } \sqrt { \left( \frac { \sin \theta } { \sin x } \right) ^ { 2 } + \theta ^ { 2 } } d x } \\ & { \quad \quad = \sin \theta \sqrt [ \beta ] { \sin ^ { 2 } \frac { \theta } { 2 } d x } } \\ & { \quad \quad = \frac { 2 \sin \theta } { \sin x } \sin ^ { 2 } \frac { \theta } { 2 } } \\ & { \quad \quad = \frac { 2 \sin \theta } { \sin x } . } \end{array}
+$$
+
+c) Cung $\widetilde{AB}$ có dạng tham số trong không gian $\mathbb{R}^3$
+
+Cho cung tròn từng khúc $\widetilde{AB}$ có dạng tham số
+
+$$
+\widetilde{AB} \left\{
+\begin{array}{l l}
+x = x(t) \\
+y = y(t) \\
+z = z(t)
+\end{array}
+\right. \quad \alpha \leq t \leq \beta.
+$$
+
+và hàm số $f(x, y, z)$ liên tục trên cung $\widetilde{AB}$. Bằng cách hiểu tương tự như trong trường hợp cung $\widetilde{AB}$ trong mặt phẳng, ta có
+
+$$
+\underset{\alpha}{\int} f(x, y, z) \, ds = \int_{\alpha}^{\beta} f\left( x(t), y(t), z(t) \right) \sqrt{x_t'^2 + y_t'^2 + z_t'^2} \, dt.
+$$
+
+Ví dụ 3.3. Tính $I = \underbrace{ \int (x^2 + y^2 + z^2) \, ds }_{AB}$, trong đường $\widetilde{AB}$ là đoạn xoắn có phương trình tham số?
+
+$$
+\widetilde{AB} \left\{
+\begin{array}{l}
+x = a \cos t, \\
+y = a \sin t, \\
+z = at, \quad a > 0, \quad 0 \leq t \leq 2\pi.
+\end{array}
+\right.
+$$
+
+Bài giải.
+
+Theo công thức (3.4), ta có
+
+$$
+f(x, y, z) = x^2 + y^2 + z^2 = a^2(1 + t^2)
+$$
+
+và
+
+$$
+\sqrt{x_t'^2 + y_t'^2 + z_t'^2} = a \sqrt{2}.
+$$
+
+Do đó,
+
+$$
+I = \int a^2 (1 + t^2) a \sqrt{2} \, dt 
+= a^3 \sqrt{2} \int (1 + t^2) \, dt 
+= 2\sqrt{2} a^3 \left(1 + \frac{4}{3}\pi^2 \right).
+$$
+
+d) Cung $\widetilde{AB}$ được cho dưới dạng tọa độ cực bởi phương trình
+
+$$
+r = r(\varphi), \quad \varphi_1 \leq \varphi \leq \varphi_2.
+$$
+
+Khi đó,
+
+$$
+\intop _ { A B } f ( x , y ) d s = \intop _ { \varphi _ { 1 } } ^ { \varphi _ { 2 } } f \left( r \cos \varphi , r \sin \varphi \right) \sqrt { r ^ { 2 } + \left( \frac{d r}{d \varphi} \right)^2 } d \varphi .
+$$
+
+Ví dụ 3.4. Tính độ dài đường cong xác định bởi
+
+$$
+\widetilde { O A } \left\{
+\begin{array} { l l }
+x ^ { 2 } + y ^ { 2 } = c z , \\
+\frac { y } { x } = \tan { \frac { z } { c } }, ~ \mathrm {với} ~ O ( 0 , 0 , 0 ) , A ( 2 , 2 , 4 ).
+\end{array}
+\right.
+$$
+
+Bài giải.
+
+Đặt $x = r \cos \varphi, y = r \sin \varphi$, khi đó phương trình đường cong $\widetilde { O A }$ có dạng:
+
+$$
+r ^ { 2 } = c z , \tan \varphi = \tan { \frac { z } { c } }.
+$$
+
+Từ $0 \leq z \leq 4$, suy ra rằng $0 \leq \varphi \leq \frac{4}{c}$. Do đó,
+
+$$
+\widetilde { O A } \left\{
+\begin{array} { l l }
+x = c \sqrt {\varphi} \cos \varphi, \\
+y = c \sqrt {\varphi} \sin \varphi, \\
+z = c \varphi, ~ 0 \leq \varphi \leq \frac{4}{c}.
+\end{array}
+\right.
+$$
+
+Theo công thức (3.4) và tính chất của tích phân đường loại 1, độ dài cung $\widetilde { O A }$ được tính bằng
+
+$$
+\begin{array} { r l } & { \quad \sqrt { \frac { 2 } { 4 \Delta b } } \Bigl \{ - \displaystyle \int _ { 0 } d s } \\ & { \qquad \quad \frac { \frac { 4 } { \Delta b } } { 4 \Delta b } } \\ & { \quad \quad = \displaystyle \int _ { 0 } ^ { \frac { 4 } { \Delta } } \sqrt { \displaystyle \alpha _ { \phi } ^ { 2 } + y _ { \phi } ^ { 2 } + z _ { \phi } ^ { 2 } } d \varphi } \\ & { \qquad \quad = \displaystyle \int _ { 0 } ^ { \frac { 4 } { \Delta } } c \Bigl ( \frac { 1 } { 2 \sqrt { \phi } } + \sqrt { \varphi } \Bigr ) d \varphi } \\ & { \qquad \quad = \displaystyle 2 \sqrt { c } \left( 1 + \frac { 8 } { 3 c } \right) . } \end{array}
+$$
+
+e) Tọa độ trong tâm của dây cung.
+
+Cho dây cung $\widetilde { A B }$ có khối lượng riêng xác định bằng hàm số $f ( x , y )$. Khi đó, tọa độ trong tâm $G$ của dây cung $\widetilde { A B }$ được cho bởi công thức:
+
+$$
+\left\{ \begin{array} { l l } { \displaystyle x _ { G } = \frac { 1 } { m } \int \ d x f ( x , y ) } \\ { \displaystyle y _ { G } = \frac { 1 } { m } \int \ d y f ( x , y ) d s, } \end{array} \right.
+$$
+
+trong đó, $m$ là khối lượng của dây cung $\widetilde { A B }$.
+
+Ví dụ 3.5. Xác định tọa độ trong tâm của một nhịp của đường cycloide đồng chất:
+
+$$
+\widetilde{A B} \left\{ x = a ( t - \sin t ) \qquad y = a ( 1 - \cos t ) \qquad a > 0, 0 \leq t \leq \pi . \right.
+$$
+
+Bài giải.
+
+Dây cung $\widetilde { A B }$ là đồng chất hay tác dụng giả thiết rằng $f ( x , y ) = c$ (hằng số). Theo công thức (3.6), tọa độ trong tâm $G$ của dây cung $\widetilde { A B }$ được tính bằng
+
+$$
+\left\{ \begin{array} { l } { x _ { G } = \frac { 1 } { m } \int x f ( x , y ) d s = \frac { c } { m } \int x d s = \frac { 4 a } { 3 } , } \\ { y _ { G } = \frac { 1 } { m } \int y f ( x , y ) d s = \frac { c } { m } \int y d s = \frac { 4 a } { 3 } . } \end{array} \right.
+$$
+
+# 3.2. Tích phân đường loại 2.
+
+3.2.1. Định nghĩa.
+
+Cho hàm vector $\vec { F } = ( P , Q , R )$ xác định trên cung $\widetilde { A B }$. Người ta còn viết $F$ dưới dạng $\vec { F } = P \vec { i } + Q \vec { j } + R \vec { k }$ hay
+
+$$
+F ( x , y , z ) = P ( x , y , z ) \vec { i } + Q ( x , y , z ) \vec { j } + R ( x , y , z ) \vec { k } .
+$$
+
+Phép phân hoạch $(P)$ cung $\widetilde { A B }$ bới các điểm
+
+$$
+A _ { 0 } = A , A _ { 1 } , . . . , A _ { n } = B.
+$$
+
+Chọn $M _ { i } ( x _ { i } , y _ { i } , z _ { i } ) \in \widetilde { A _ { i - 1 } A _ { i } } \subset \widetilde { A B }$ với mọi $i = 1, 2, . . . , n$. Giả sử rằng $\overrightarrow { A _ { i - 1 } A _ { i } } = ( \Delta x _ { i } , \Delta y _ { i } , \Delta z _ { i })$. Khi đó,
+
+$$
+{ \cal I } _ { n } = \sum _ { i = 1 } ^ { n } \vec { F } ( M _ { i } ) \overrightarrow { A _ { i - 1 } A _ { i } }
+$$
+
+Đường gọi là tổng tích phân đường loại 2 của hàm véc tơ $\vec{F}$ trên cung $\widetilde{AB}$ xác định bởi phép phân hoạch $(P)$. Nếu khi $n \to \infty$ sao cho max $\Delta_{x_i} : i = 1, 2, ..., n \to 0$, max $\Delta_{y_i} : i = 1, 2, ..., n \to 0$, max $\Delta_{z_i} : i = 1, 2, ..., n \to 0$, tổng tích phân $I_n$ dẫn đến giới hạn xác định $I$, không phụ thuộc vào phép phân hoạch $(P)$ và phép chọn điểm $M_i$, thì $I$ được gọi là tích phân đường loại 2 của hàm véc tơ $\vec{F}$ trên cung $\widetilde{AB}$ và ký hiệu
+
+$$
+I = \underbrace{\int_{AB} P dx + Q dy + R dz}_{\text{đường từ A đến B}}.
+$$
+
+Theo cách viết truyền thống, người ta còn viết dưới dạng
+
+$$
+\int\limits_{\overline{AB}} P(x, y, z) dx + Q(x, y, z) dy + R(x, y, z) dz.
+$$
+
+Trong trường hợp đặc biệt khi cung $\widetilde{AB}$ là đường cong khép kín, tích phân đường loại 2 trên cung $\widetilde{AB}$ được viết
+
+$$
+\oint P(x, y, z) dx + Q(x, y, z) dy + R(x, y, z) dz.
+$$
+
+3.2.2. Nhận xét.
+
+Khi cung $\widetilde{AB}$ trong mặt phẳng tọa độ $(Oxy)$, hàm véc tơ $\vec{F} = (P, Q)$, tích phân đường loại 2 của hàm $\vec{F}$ trên cung $\widetilde{AB}$ được ký hiệu bởi
+
+$$
+\int_{\overline{AB}} P(x, y) dx + Q(x, y) dy.
+$$
+
+Đặc biệt khi cung $\widetilde{AB}$ là một đoạn $[a, b]$ nào đó trên $\mathbb{R}$, hàm $f : [a, b] \to \mathbb{R}$, tích phân đường loại 2 của hàm $f$ trên $\widetilde{AB}$ trở thành tích phân xác định.
+
+3.2.3. Tích chất cơ học của tích phân đường loại 2.
+
+Để tính công sinh ra trong một điểm $M$ chuyển động độc lập theo cung $\widetilde{AB}$ từ điểm $A$ đến điểm $B$ dưới tác dụng của một lực $\vec{F} = \vec{F}(M)$, ta thực hiện phép phân hoạch $(P)$ như trong định nghĩa trên. Phép chia cung $\widetilde{AB}$ nhỏ nhất đến mức ta có thể coi cung $\widetilde{A_{i-1} A_i}$ như đoạn thẳng, lực tác dụng lên chất điểm trên cung $\widetilde{A_{i-1} A_i}$ không đổi và bằng $\vec{F}(M_i)$. Khi đó, công sinh ra trên cung $\widetilde{A_{i-1} A_i}$ xấp xỉ với tích vô hướng $\begin{array}{r}\vec{F}(M_i)\overrightarrow{A_{i-1} A_i}\end{array}$. Vậy $I_n$ xác định bởi định nghĩa trên xấp xỉ với công sinh ra trên cung $\widetilde{AB}$. Do đó, giá trị của tích phân đường loại 2 $\operatorname*{lim}_{n \to \infty} I_n$ chính là công san sinh khi chất điểm $M$ chuyển động độc lập theo quy đạo $\widetilde{AB}$ từ điểm $A$ đến điểm $B$:
+
+3.2.4. Cách tính tích phân đường loại 2.
+
+Cho cung $\widetilde{AB}$ trong và xác định bởi phương trình tham số
+
+$$
+\left\{ \begin{array} { l l } { x = x ( t ) , } \\ { y = y ( t ) , } \\ { z = z ( t ) , \ t : a \to b , A \big( x ( a ) , y ( a ) , z ( a ) \big) , B \big( x ( b ) , y ( b ) , z ( b ) \big) . } \end{array} \right.
+$$
+
+Các hàm số $P = P ( x , y , z ) , Q = Q ( x , y , z ) , R = R ( x , y , z )$ liên tục trên $\widetilde { A B }$. Khi đó
+
+$$
+\intop _ { A B } P d x + Q d y + R d z = \intop _ { a } ^ { b } \Big( P x '_{t} + Q y '_{t} + R z '_{t} \Big) d t .
+$$
+
+Chứng minh.
+
+Giả sử phân hoạch $( P )$ trong định nghĩa được xác định bởi
+
+$$
+t _ { 0 } = a < t _ { 1 } < t _ { 2 } < . . . < t _ { n } = b .
+$$
+
+sa cho
+
+$$
+\begin{array} { r } { \left\{ \begin{array} { l l } { \Delta _ { x _ { i } } = x ( t _ { i } ) - x ( t _ { i - 1 } ) = x ' ( \tau _ { i } ) \Delta _ { t _ { i } } , } \\ { \Delta _ { y _ { i } } = y ( t _ { i } ) - y ( t _ { i - 1 } ) = y ' ( \tau _ { i } ) \Delta _ { t _ { i } } , } \\ { \Delta _ { z _ { i } } = z ( t _ { i } ) - z ( t _ { i - 1 } ) = z ' ( \tau _ { i } ) \Delta _ { t _ { i } } , } \end{array} \right. } \end{array}
+$$
+
+trong đó $\Delta _ { t _ { i } } = t _ { i } - t _ { i - 1 }$. Khi đó, điểm $M _ { i } \big( x ( \tau _ { i } ) , y ( \tau _ { i } ) , z ( \tau _ { i } ) \big) \in \widetilde { A }_{i-1} \overline{A}_{i}$ và
+
+$$
+\begin{array} { l } { { \displaystyle I _ { n } = \sum _ { i = 1 } ^ { n } \vec { F } ( M _ { i } ) \overrightarrow { A _ { i - 1 } A _ { i } } } } \\ { { \displaystyle \ } } \\ { { \displaystyle \ = \sum _ { i = 1 } ^ { n } \Big ( P \big ( x ( \tau _ { i } ) , y ( \tau _ { i } ) , z ( \tau _ { i } ) \big ) x ^ { \prime } ( \tau _ { i } ) + Q \big ( x ( \tau _ { i } ) , y ( \tau _ { i } ) , z ( \tau _ { i } ) \big ) y ^ { \prime } ( \tau _ { i } ) + R \big ( x ( \tau _ { i } ) , y ( \tau _ { i } ) , z ( \tau _ { i } ) \big ) z ^ { \prime } ( \tau _ { i } ) \Big ) } } \end{array}
+$$
+
+Vé phải là tổng tích phân của hàm số
+
+$$
+P \big ( x ( t ) , y ( t ) , z ( t ) \big ) x ^ { \prime } ( t ) + Q \big ( x ( t ) , y ( t ) , z ( t ) \big ) y ^ { \prime } ( t ) + R \big ( x ( t ) , y ( t ) , z ( t ) \big ) z ^ { \prime } ( t )
+$$
+
+trên đoạn $[ a, b ]$. Đặt $\Delta _ { P } = \operatorname*{max} \{ \Delta _ { t _ { i } } : i = 1, 2, . . . , n \}$. Khi $\Delta _ { t _ { i } } \to 0$, ta có
+
+$$
+\intop _ { A B } P d x + Q d y + R d z = \intop _ { a } ^ { b } \Big ( P x _ { t } ^ { \prime } + Q y _ { t } ^ { \prime } + R z _ { t } ^ { \prime } \Big ) d t .
+$$
+
+Ví dụ 3.6. Tính $\begin{array} { r } { I = \underbrace { \int { \left( y d x + z d y + x d z \right) } } _ { A B } , } \end{array}$ trong đó $a > 0$, AB : ${x = a\cos t, y = a\sin t, z = bt, t: 0 \to 2\pi}$
+
+Bài giải.
+
+Theo công thức (3.7), ta có
+
+$$
+\begin{array} { l } { { \displaystyle I = \int _ { 0 } ^ { 2 \pi } \Big ( a \sin \ell (-a \sin t) + b \ell (a \cos t) + a \cos \ell . b \Big ) d t } } \\ { { \displaystyle \quad = \int _ { 0 } ^ { 2 \pi } \Big ( - a ^ { 2 } \sin ^ { 2 } t + ab (1 + t) \cos t \Big ) d t } } \\ { { \displaystyle \quad = - \frac { a ^ { 2 } } { 2 } \int _ { 0 } ^ { 2 \pi } (1 - \cos 2t) d t + ab \int _ { 0 } ^ { 2 \pi } (1 + t) \cos t d t } } \\ { { \displaystyle \quad = - \frac { a ^ { 2 } } { 2 } \sum _ { 0 } ^ { 2 \pi } 0 . } } \end{array}
+$$
+
+3.2.5. Chú ý.
+
+Cho cung $\widetilde{AB} \subset (Oxy)$ tròn và xác định bởi phương trình tham số
+
+$$
+\left\{
+\begin{array}{l l}
+x = x(t), \\
+y = y(t), t : a \to b.
+\end{array}
+\right.
+$$
+
+![](images/8db9a4230ac900b64895743f0932de921606f545c39711783f29e0546b78da96.jpg)
+Hình 2: Hình vẽ của ví dụ 3.7
+
+Các hàm số $P = P(x, y), Q = Q(x, y)$ liên tục trên AB. Khi đó
+
+Ví dụ 3.7. Tính
+
+$$
+\int_{AB} (x^2 dx + xy dy)
+$$
+
+trong đó $\widetilde{AB}: x = y^2, A(1, -1), B(2, \sqrt{2})$
+
+Bài giải.
+
+Theo công thức (3.8), nếu cung ${\widetilde{AB}}: x = \varphi(y), y \in [a, b]$, tích phân đường loại 2 được xác định
+
+$$
+\begin{array} { r l }
+{ \displaystyle \int P d x - Q d y = } & { \displaystyle \int \left( P ( \varphi ( y ) , y ) \xi _ { y } ^ { \prime } + Q ( \varphi ( y ) , y ) \right) d y } \\
+{ \displaystyle } & { \mathrm { ~ subs ~ } } \\
+{ \displaystyle } & { = \int _ { - 1 } ^ { \infty } ( y ^ { \prime } + 2 y ^ { \prime } ) d y } \\
+& { \displaystyle } & { \mathrm { ~ \int ~ } \left( ( y ^ { \prime } + y ^ { \prime \prime } ) ^ { 2 } + y ^ { \prime \prime } \right) d y } \\
+{ \displaystyle } & { = \int \left( ( 2 g ^ { \prime \prime } + g ^ { \prime \prime } ) d y \right. } \\
+& { \displaystyle } & { \left. - 1 \right) } \\
+{ \displaystyle } & { = \left( \frac { 3 } { 4 } \right) ^ { g } + \frac { 1 } { 4 } g ^ { \prime \prime } \right| _ { - 1 } ^ { \zeta ^ { \prime } } } \\
+& { = \left. \frac { 37 } { 12 } . }
+\end{array}
+$$
+
+Vi dụ 3.8. Tính
+
+trong đố $\begin{array} { r } { a > 0 , b > 0 , ( E ) : \frac { x ^ { 2 } } { a ^ { 2 } } + \frac { y ^ { 2 } } { b ^ { 2 } } = 1 . } \end{array}$
+
+Bài giải.
+
+Ta chuyển đường elip $(E)$ về dạng tham số. Đặt
+
+Theo công thức (3.8), ta có
+
+$$
+\begin{array} { r l } { \oint \bar { v } ^ { 2 } d x - x ^ { 2 } d y } & { = \int _ { 0 } ^ { \infty } \Big ( b ^ { 2 } \sin ^ { 2 } \bar { t } ( - a \sin \bar { t } ) - a ^ { 2 } \cos ^ { 2 } \bar { t } ( b c \cos \bar { t } ) \Big ) d \bar { t } } \\ & { \qquad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad } \\ & { = - a b \int _ { 0 } ^ { \infty } \big ( b \sin ^ { 3 } \bar { t } + a \cos ^ { 3 } \bar { t } \big ) d \bar { t } } \\ & { = - \frac { a b } { 4 } \int _ { 0 } ^ { \infty } \Big ( b ( 3 \sin \bar { t } - \sin 3 \bar { t } ) + a ( 3 \cos \bar { t } + \cos 3 \bar { t } ) \Big ) d \bar { t } } \\ & { = - \frac { a b } { 4 } \Big ( b ( - 3 \cos \bar { t } + \frac { 1 } { 3 } \cos 3 \bar { t } ) + a ( 3 \sin \bar { t } + \frac { 1 } { 3 } \sin 3 \bar { t } ) \Big ) \Big | _ { 0 } ^ { \infty } } \\ & { = 0 . } \end{array}
+$$
+
+3.2.6. Công thức Green.
+
+![](images/8e42b64df733d1e3423f36b903cdd069dc8639b3ba807c3b88ca3d76d6fb9d2e.jpg)  
+Hình 3: Hình vẽ của Trường hợp $\jmath$
+
+Cho miền $D$ trong mặt phẳng $\mathcal{R}^2$ là một miền liên thông, bị chọn và biến $\partial D$ là một hay nhiều đường cong khép kín. Các hàm số $P(x, y), Q(x, y)$ và các đạo hàm riêng của chúng liên tục trên $D \cup \partial D$. Công thức Green được phát biểu như sau:
+
+$$
+\int \displaylimits _ { ^ D } \Bigl ( \frac { \partial Q } { \partial x } - \frac { \partial P } { \partial y } \Bigr ) d x d y = \oint \mathcal{P} d x + Q d y .
+$$
+
+Chứng minh.
+
+Ta xét các trường hợp của $D$ như sau:
+
+Theo định lý Fubini, ta có
+
+$$
+\begin{array} { r l } { - \displaystyle \int \int \frac { \partial P } { \partial y } \frac { \partial z ( z ) } { \partial y } = - \displaystyle \int \int \frac { \psi } { \varepsilon ( x , y ) } \frac { \partial P } { \partial z } \psi _ { i j } } & { } \\ & { \quad - \displaystyle \int \frac { \psi } { \varepsilon ( x , y ) } \left( P ( x , y | x ) \right) ^ { \frac { 1 } { 2 } } P ( x , y | x ) \mathrm { d } x } \\ & { \quad = \displaystyle \int \int P ( x , y | y ) b + \int \int P ( x , y ) b \mathrm { d } y } \\ & { \quad \quad \le \displaystyle \int \int P ( x , y ) b \varepsilon + \int \int P ( x , y ) b \varepsilon } \\ & { \quad \quad \le \displaystyle \int \int P ( x , y ) b \varepsilon + \int \int P ( x , y ) b \varepsilon + \int \int P ( x , y ) b \varepsilon } \\ & { \quad \quad \le \displaystyle \frac { b } { \varepsilon ( x , y ) } \int \varepsilon ( x , y ) \varepsilon \mathrm { d } x } \\ & { \quad \quad \le \displaystyle \int \int P ( x , y ) \varepsilon \mathrm { d } x . } \end{array}
+$$
+
+![](images/069fd960a649bf43cadaccab5d3295efe379e1cb3c3c99c46f5e939265f9c2b0.jpg)  
+Hình 4: Hình vẽ của Trường hợp 1.
+
+Bằng cách làm tương tự, ta cũng có
+
+$$
+\iint _ { D } { \frac { \partial Q } { \partial x } } d x d y = \oint _ { \partial D } Q ( x , y ) d y .
+$$
+
+Từ (3.9) và (3.10) kéo theo công thức Green được chứng minh.
+
+Trường hợp 2. Miền $(D)$ là miền đa liên.
+
+$^+$ Ta chia miền $(D)$ thành các miền nhỏ $(D_1), (D_2), \ldots, (D_n)$ bằng các đường thẳng song song với trục $Oy$
+
+$^+$ Theo trường hợp 1, công thức Green đúng với các miền nhỏ $(D_i)$ với $i = 1, 2, \ldots, n$ hay
+
+$$
+\iint _ { D _ { i } } { \left( \frac { \partial Q } { \partial x } - \frac { \partial P } { \partial y } \right) d x d y } = \oint _ { \partial D _ { i } } P d x + Q d y \quad \forall i = 1, 2, \ldots, n.
+$$
+
+$^+$ Tích các tích phân đường của $P(x,y)d x + Q(x,y)dy$ trên cùng một đoạn theo hai chiều ngược nhau bằng không. Do đó,
+
+$$
+\begin{array} { l } 
+{ \displaystyle \iint _ D \left( \frac { \partial Q } { \partial x } - \frac { \partial P } { \partial y } \right) d x d y = \displaystyle \iint _ { D_1 } \left( \frac { \partial Q } { \partial x } - \frac { \partial P } { \partial y } \right) d x d y + . . . + \displaystyle \iint _ { D_n } \left( \frac { \partial Q } { \partial x } - \frac { \partial P } { \partial y } \right) d x d y } \\ 
+{ = \displaystyle \oint _ { \partial D_1 } P d x + Q d y + . . . + \oint _ { \partial D_n } P d x + Q d y } \\
+{ = \displaystyle \oint _ { \partial D } P d x + Q d y. }
+\end{array}
+$$
+
+Ví dụ 3.9. Dùng công thức Green để tính tích phân đường sau
+
+$$
+K = \oint_{\partial C} (xy + e^x \sin x + x + y) dx + (xy - e^{-y} + x - \sin y) dy,
+$$
+
+trong đốm $(C): x^2 + y^2 \leq 2x$
+
+Bài giải.
+
+Đặt $P(x, y) = xy + e^x \sin x + x + y$, $Q(x, y) = xy - e^{-y} + x - \sin y$. Khi đó,
+
+$$
+\frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y} = (y + 1) - (x + 1) = y - x.
+$$
+
+Theo công thức Green, ta có
+
+$$
+K = \iint_D (y - x) dx dy,
+$$
+
+với $D$ là miền tròn tâm $(1,0)$ bán kính $\sqrt{2}$. Đổi biến sang tọa độ cực:
+
+$$
+\begin{array}{l}
+x = 1 + r \cos \varphi, \\
+y = r \sin \varphi,
+\end{array}
+$$
+
+trong đó $r$ thay đổi từ $0$ đến $\sqrt{2}$ và $\varphi$ thay đổi từ $-\frac{\pi}{4}$ đến $\frac{3\pi}{4}$. Khi đó,
+
+$$
+K = \int_{-\frac{\pi}{4}}^{\frac{3\pi}{4}} d\varphi \int_0^{\sqrt{2}} (r \sin \varphi - r \cos \varphi) r dr.
+$$
+
+Sau khi tính tích phân, ta được kết quả cuối cùng.
+
+3.2.7 Định lý 4 mệnh đề tương đương.
+
+Cho các hàm số $P(x, y), Q(x, y)$ và các đạo hàm riêng liên tục trên miền đơn liên $D \subset \mathbb{R}^2$ (miền không có lỗ thủng nào). Khi đó, các mệnh đề sau tương đương:
+
+$$
+\begin{array} { r } { \frac { \partial Q } { \partial x } = \frac { \partial P } { \partial y } \forall ( x , y ) \in D . } \end{array}
+$$
+
+$$
+\begin{array} { r } { \oint _ {} ^ {} P dx + Q dy = 0 \forall D_1 \subset D . } \end{array}
+$$
+
+(iii) $\int Pdx + Qdy$ chỉ phụ thuộc vào 2 điểm $A, B$, với mọi $\widetilde{AB} \subset D$
+
+(iv) Tồn tại $u(x, y)$ xác định trên $D$ sao cho $du = P dx + Q dy$
+
+Chứng minh. $(i) \Rightarrow (ii)$ Giả sử $D_1 \subset D$, Theo công thức Green, $D$ là miền đơn liên và giả thiết $(i)$, ta có
+
+$$
+\oint_{\partial D_1} Pdx + Qdy = \int \int_{D_1} \left( \frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y} \right) dx dy = 0.
+$$
+
+$$
+\underbrace{ \oint _ { } ^ {} P d \boldsymbol{x}}_{A m B n A} + Q d \boldsymbol{y} = 0 .
+$$
+
+Khi đó
+
+$$
+\int Pdx + Qdy + \int Pdx + Qdy = 0.
+$$
+
+$$
+\int Pdx + Qdy - \underbrace{\int {P dx} + Q dy = 0.}_{A n B}
+$$
+
+Như vậy, tích phân đường của $Pdx + Qdy$ không phụ thuộc vào đường cong nội điểm $A$ với $B$:
+
+$(iii) \Rightarrow (iv)$ Giả sử $M(x, y) \in D$ bất kỳ. Đặt
+
+$$
+u(x, y) = \int_{\widetilde{AM}} Pdx + Qdy.
+$$
+
+Theo giả thiết $(iii)$, ta có
+
+$$
+\begin{array} { l } { \displaystyle \frac { \partial u } { \partial x } ( x , y ) = \operatorname* { lim } _ { \Delta _ { x } \to 0 } \frac { u ( x + \Delta _ { x } , y ) - u ( x , y ) } { \Delta _ { x } } } \\ { = \operatorname* { lim } _ { \Delta _ { x } \to 0 } \frac { 1 } { \Delta _ { x } } \Big ( \displaystyle \int _ { - \infty } P d x + Q d y - \displaystyle \int _ { A } P d x + Q d y \Big ) } \\ { = \operatorname* { lim } _ { \Delta _ { x } \to 0 } \frac { 1 } { \Delta _ { x } } \displaystyle \int _ { M \lambda _ { x } } P d x + Q d y } \\ { = \operatorname* { lim } _ { \Delta _ { x } \to 0 } \frac { 1 } { \Delta _ { x } } \displaystyle \int _ { x } ^ { x + \Delta _ { x } } P ( z , y ) d z }
+\end{array}
+$$
+
+trong domain $M_1 (x + \Delta_x, y) \in D$. Theo tính chất của tích phân xác định, tồn tại $z = x + \theta \Delta_x$, $0 < \theta < 1$ sao cho
+
+$$
+\operatorname* { lim } _ { \Delta x \to 0 } \frac { 1 } { \Delta _ { x } } \int _ { x } ^ { x + \Delta _ { x } } P ( z , y ) d z = P ( z , y ).
+$$
+
+Khi $\Delta_x \to 0$ thì $z \to x$. Theo tính liên tục của $P(x, y)$, ta cũng có $P(z, y) \to P(x, y)$ và do đó
+
+$$
+\frac { \partial u } { \partial x } ( x , y ) = P ( x , y ).
+$$
+
+Bằng cách làm tương tự, ta cũng chứng minh được rằng
+
+$$
+\frac { \partial u } { \partial y } ( x , y ) = Q ( x , y ).
+$$
+
+Như vậy, tồn tại $u(x, y)$ xác định trên $D$ sao cho $d u = P d x + Q d y$.
+
+(20 $( i v ) \Rightarrow ( i )$ Từ giả thiết tồn tại $u(x, y)$ sao cho $d u = P d x + Q d y$ và các đạo hàm riêng của $P, Q$ liên tục trên $D$. Khi đó
+
+$$
+P = { \frac { \partial u } { \partial x } } , Q = { \frac { \partial u } { \partial y } } \Rightarrow { \frac { \partial P } { \partial y } } = { \frac { \partial ^ { 2 } u } { \partial y \partial x } } , { \frac { \partial Q } { \partial x } } = { \frac { \partial ^ { 2 } u } { \partial x \partial y } } .
+$$
+
+Theo định lý Schwarz, ta có
+
+$$
+{ \frac { \partial P } { \partial y } } = { \frac { \partial ^ { 2 } u } { \partial y \partial x } } = { \frac { \partial ^ { 2 } u } { \partial x \partial y } } = { \frac { \partial Q } { \partial x } } .
+$$
+
+Ví dụ 3.10. Tính tích phân đường
+
+$$
+I = \underbrace { \int \frac { ( x + y ) d y + ( x - y ) d x } { x ^ { 2 } + y ^ { 2 } } } _ { A B } ,
+$$
+
+trong đó $A (-1, -1), B (1, 1)$.
+
+Giải.
+
+Để thir lại rằng $\frac{\partial P}{\partial y} = \frac{\partial Q}{\partial x} \forall (x, y) \in \mathbb{R}^2 \backslash \{(0, 0)\}$ Theo định lý 4 mệnh đề tương đương, tích phân đường $I$ không phụ thuộc vào đường cong nối $A$ với $B$. Ta có nhiều cách chọn đường cong nối $A$ với $B$. Dưới đây là một cách chọn
+
+$$
+(C) : x^2 + y^2 = 2.
+$$
+
+Đặt $x = \sqrt{2} \cos t, y = \sqrt{2} \sin t \quad (t: -\frac{3\pi}{4} \to \frac{\pi}{4})$. Khi đó
+
+$$
+I = \int_{-\frac{3\pi}{4}}^{\frac{\pi}{4}} \frac{2 dt}{2 (\cos^2 t + \sin^2 t)} = \pi.
+$$
+
+Hệ quả 3.11. Nếu các hàm số $P(x, y), Q(x, y)$ và các đạo hàm riêng liên tục trên miền $\mathcal{R}^2$ tồn tại $u(x, y)$ sao cho $du = P dx + Q dy$, thì
+
+$$
+u(x, y) = \int_{x_0}^{x} P(x, y_0) dx + \int_{y_0}^{y} Q(x, y) dy + C
+$$
+
+hoặc
+
+$$
+u(x, y) = \int_{y_0}^{y} P(x_0, y) dy + \int_{x_0}^{x} Q(x, y) dx + C.
+$$
+
+Ví dụ 3.12. Xác định hàm $u(x, y)$ biết
+
+$$
+du = \frac{(x + 2y) dx + y dy}{(x + y)^2}, u(0, 1) = 5.
+$$
+
+Giải:
+
+Đặt
+
+$$
+P(x, y) = \frac{x + 2y}{(x + y)^2}, Q(x, y) = \frac{y}{(x + y)^2}.
+$$
+
+Theo hệ quả 3.11, ta chọn $x_0 = 1, y_0 = 0$ và
+
+$$
+\begin{array}{c}
+u(x, y) = \int_{1}^{x} P(x, 0) dx + \int_{0}^{y} Q(x, y) dy \\
+= \ln (x + y) - \frac{y}{x + y} + C.
+\end{array}
+$$
+
+Từ $u(0, 1) = 5$, ta có
+
+$$
+\ln (0 + 1) - \frac{1}{0 + 1} + C = 5 \Rightarrow C = 6.
+$$
+
+Vậy
+
+$$
+u(x, y) = \ln (x + y) - \frac{y}{x + y} + 6.
+$$
+
+$\mathbf{H} \hat{\mathbf{e}}$ qua 3.13. Nếu các hàm số $P(x, y), Q(x, y)$ và các đạo hàm riêng liên tục trên miền $D$, ($\widetilde{AB} \subset D$) và tồn tại $u(x, y)$ sao cho $\int_{AB} Pdx + Qdy = u(B) - u(A)$.
+
+$$
+\int_{AB} Pdx + Qdy = u(B) - u(A).
+$$
+
+Ví dụ 3.14. Tính tích phân đường
+
+$$
+J = \underbrace{\int e^x \sin y dx + (e^x \cos y - 1) dy}_{AB},
+$$
+
+trong đó $A(a, 0), B(0, a)$.
+
+Giải:
+
+Đặt
+
+$$
+P(x, y) = e^x \sin y, Q(x, y) = e^x \cos y - 1.
+$$
+
+Đề thấy rằng
+
+$$
+\frac{\partial Q}{\partial x} = \frac{\partial P}{\partial y} \forall (x, y) \in \mathbb{R}^2.
+$$
+
+Theo hệ quả 3.13, ta chọn $x_0 = 0, y_0 = 0$ và
+
+$$
+u(x, y) = \int_{0}^{x} P(x, 0) dx + \int_{0}^{y} Q(x, y) dy = e^x \sin y - y + C.
+$$
+
+Do đó
+
+$$
+J = \underbrace{\int_{AB} e^x \sin y dx}_{AB} + (e^x \cos y - 1) dy = u(0, a) - u(a, 0) = \sin a - a.
+$$
+
+Ví dụ 3.15. Tính tích phân đường
+
+$$
+J = \int_{\overline{AB}} \left(2x \cos(x + y) - x^2 \sin(x + y)\right) dx - x^2 \sin(x + y) dy,
+$$
+
+trong đó $A(\pi, 0), B(0, \pi)$.
+
+Giải:
+
+Đặt
+
+$$
+P(x, y) = 2x \cos(x + y) - x^2 \sin(x + y), Q(x, y) = x^2 \sin(x + y).
+$$
+
+Dé thi lại rang
+
+$$
+\frac{\partial Q}{\partial x} = \frac{\partial P}{\partial y} \quad \forall (x, y) \in \mathcal{R}^2.
+$$
+
+Bằng cách làm tương tự như ví dụ 3.14, ta nhận được
+
+$$
+u(x, y) = x^2 \cos(x + y).
+$$
+
+Theo hệ quả 3.13
+
+$$
+J = \int e^x \sin y \, dx + (e^x \cos y - 1) \, dy = u(0, \pi) - u(\pi, 0) = \pi^2.
+$$
+
+Ví dụ 3.16. Tìm $m, n$ để tích phân sau không phụ thuộc vào đường lấy tích phân từ điểm $A (0, 0)$ đến điểm $B (1, 1)$?
+
+$$
+K = \int \frac{y(1 - x^2 + my^2) \, dx + x(1 - y^2 + nx^2) \, dy}{(1 + x^2 + y^2)^2}.
+$$
+
+Từ đó, hãy tính $K$.
+
+Giải.
+
+Đặt
+
+$$
+P(x, y) = \frac{y(1 - x^2 + my^2)}{(1 + x^2 + y^2)^2}, \quad Q(x, y) = \frac{x(1 - y^2 + nx^2)}{(1 + x^2 + y^2)^2}.
+$$
+
+Theo định lý 4 mệnh đề tương đương, ta cần tính
+
+$$
+\begin{array}{l}
+\displaystyle \frac{\partial P}{\partial y} = \frac{1 - x^4 + 3(m + 1)x^2y^2 + 3(m - 1)y^2 - my^4}{(1 + x^2 + y^2)^3}, \\
+\displaystyle \frac{\partial Q}{\partial x} = \frac{1 + 3(n - 1)x^2 - nx^4 + 3(n + 1)x^2y^2 - y^4}{(1 + x^2 + y^2)^3}.
+\end{array}
+$$
+
+Các điều kiện của 4 mệnh đề tương đương được thỏa mãn. Do đó, muốn $K$ không phụ thuộc vào đường cong nội điểm $A$ với điểm $B$, điều kiện cần và đủ là
+
+$$
+{ \frac { \partial P } { \partial y } } = { \frac { \partial Q } { \partial x } } .
+$$
+
+Để tính $K$, ta cần viết phương trình đường thẳng $AB: y = x$. Theo công thức tính tích phân đường, ta nhận được
+
+$$
+\begin{array} { l }
+{ \displaystyle K = \int _ { 0 } ^ { 1 } \frac { y ( 1 - x ^ { 2 } + y ^ { 2 } ) d x + x ( 1 - y ^ { 2 } + x ^ { 2 } ) d y } { ( 1 + x ^ { 2 } + y ^ { 2 } ) ^ { 2 } } }
+\\
+{ \displaystyle = \int _ { 0 } ^ { 1 } \frac { 2 x d x } { ( 1 + 2 x ^ { 2 } ) ^ { 2 } } }
+\\
+{ \displaystyle = - \frac { 1 } { 2 ( 1 + 2 x ^ { 2 } ) } \Big \vert _ { 0 } ^ { 1 } }
+\\
+{ \displaystyle = - \frac { 1 } { 6 } . }
+\end{array}
+$$
+
+# 3.3. Tích phân mặt loại 1.
+
+3.3.1. Các khái niệm về mặt.
+
+Một mặt cong $S$ trong $\mathcal{R}^3$ được tạo bởi một ánh xạ liên tục
+
+$$
+g : D \subset \mathcal{R} ^ {2} \rightarrow \mathcal{R} ^ {3}.
+$$
+
+Giả sử rằng $g(u, v) = (x(u, v), y(u, v), z(u, v))$. Khi đó,
+
+$+ \textbf{Một mặt } S \text{ được gọi là trơn}, nếu các đạo hàm riêng của các hàm số } x(u, v), y(u, v), z(u, v) \text{ liên tục trên miền } D$:
+
+$+ \textbf{Mặt} S \text{ được gọi là trơn từng mảnh}, nếu mặt } S \text{ có thể chia thành hữu hạn các mảnh trơn.$
+
+$+$ Véc tơ pháp tuyến của mặt trơn $S$ là $\vec{n} = (A, B, C)$, trong đó
+
+$$
+\begin{array} { r } { A = \displaystyle \frac { D ( y , z ) } { D ( u , v ) } = \frac { \partial y } { \partial u } \frac { \partial z } { \partial v } - \frac { \partial y } { \partial v } \frac { \partial z } { \partial u } } \\ { B = \displaystyle \frac { D ( z , x ) } { D ( u , v ) } = \frac { \partial z } { \partial u } \frac { \partial x } { \partial v } - \frac { \partial z } { \partial v } \frac { \partial x } { \partial u } } \\ { C = \displaystyle \frac { D ( x , y ) } { D ( u , v ) } = \frac { \partial x } { \partial u } \frac { \partial y } { \partial v } - \frac { \partial x } { \partial v } \frac { \partial y } { \partial u } . } \end{array}
+$$
+
+Trong trường hợp đặc biệt $S : z = g ( x , y ) \ ( x , y ) \in D$. Khi đó, vector pháp tuyến của mặt $S$ là
+
+$$
+\vec { n } = ( - g _ { x } ^ { \prime } , - g _ { y } ^ { \prime } , 1 ) .
+$$
+
+$^ +$ Mặt định hướng được: Mặt tròn $S$ được gọi là định hướng được, nếu với mỗi điểm $M \in S$ xác định được một vector pháp tuyến đơn vị $\vec { n } ( M )$ (góc tại điểm $M$ liên tục trên $S$).
+
+$^ +$ Diện tích mặt: Trong không gian $\mathcal { R } ^ { 3 }$, ta xét mặt $S$ có phương trình
+
+$$
+z = f ( x , y ) \ ( x , y ) \in D .
+$$
+
+trong domain D, hàm số $f$ và các đạo hàm riêng của nó liên tục trên miền $D$. Phân hoạch P chia miền $D$ thành $n$ mảnh nhỏ $D_1, D_2, ..., D_n$ có các diện tích tương ứng $\Delta S_1, \Delta S_2, ..., \Delta S_n$. Lấy một điểm tùy ý $N_i (x_i, y_i) \in D_i$. Gọi $T_i$ là một phần của mặt phẳng tiếp xúc với $S$ tại điểm $M_i (x_i, y_i, z_i) \in S$ và hình chiếu vuông góc trên $(Oxy)$ là miền $D_i$. Diện tích của mảnh $T_i$ được ký hiệu là $\Delta T_i$. Tương tự, ta cũng có các mảnh nhỏ trên mặt $S$ là $S_1, S_2, ..., S_n$ và các diện tích tương ứng là $\Delta S_1, \Delta S_2, ..., \Delta S_n$. Gọi góc tạo bởi giữa trục $Oz$ và vector pháp tuyến của $T_i$ tại điểm $M_i$ là $\alpha_i$: Khi đó, ta nhận thấy rằng
+
+$$
+\Delta D_i = \Delta T_i |\cos \alpha_i| \quad \forall i = 1, 2, ..., n.
+$$
+
+ Mặt khác, theo công thức tính vector pháp tuyến $\vec{\Phi}$ trên, ta có
+
+$$
+\vec{n} = \left( -f_x'(M_i), -f_y'(M_i), 1 \right).
+$$
+
+Do đó
+
+$$
+|\cos \alpha_i| = |\cos (\vec{n}, \vec{k})| = \frac{1}{\sqrt{1 + f_x'^2(M_i) + f_y'^2(M_i)}}.
+$$
+
+Khi đường kính của phân hoạch $P$ là $\delta_{P} = \operatorname*{max}\{d_1, d_2, . . . , d_n\}$ (trong đó $d_i$ là đường kính của $D_i\)$, ta có $\Delta S_i \approx \Delta T_i$, $i = 1, 2, . . . , n$. Khi đó diện tích $S$ được xấp xỉ bởi
+
+$$
+\sum_{i=1}^{n} \Delta S_i \approx \sum_{i=1}^{n} \Delta T_i = \sum_{i=1}^{n} \sqrt{1 + f_x^{\prime 2}(M_i) + f_y^{\prime 2}(M_i)} \Delta D_i.
+$$
+
+Đẳng thức xảy ra khi độ dài phân hoạch $\Delta P \to 0$. Khi đó, diện tích mặt $S$ được tính bằng công thức
+
+$$
+\operatorname*{lim}_{\Delta r \to 0} \sum_{i=1}^{n} \sqrt{1 + f_x^{\prime 2}(M_i) + f_y^{\prime 2}(M_i)} \Delta D_i = \int \int \sqrt{1 + f_x^{\prime 2} + f_y^{\prime 2}} dx dy.
+$$
+
+Khi đó, biểu thức
+
+$$
+dS = \sqrt{1 + f_x^{\prime 2} + f_y^{\prime 2}} dxdy
+$$
+
+được gọi là vi phân diện tích.
+
+Nếu mặt tròn $S$ được cho dưới dạng phương trình tham số
+
+$$
+S: x = x(u, v), y = y(u, v), z = z(u, v), (u, v) \in D,
+$$
+
+bằng cách làm tương tự, ta có $dS = \sqrt{AC - B^2} dudv$ và diện tích mặt cong được cho bởi công thức
+
+$$
+dt(S) = \int \int_D \sqrt{AC - B^2} du dv,
+$$
+
+trong đó
+
+$$
+\begin{array} { l } { \displaystyle { A = \left( \frac { \partial x } { \partial u } \right) ^ { 2 } + \left( \frac { \partial y } { \partial u } \right) ^ { 2 } + \left( \frac { \partial z } { \partial u } \right) ^ { 2 } } , } \\ { \displaystyle { B = \frac { \partial x } { \partial u } \frac { \partial x } { \partial v } + \frac { \partial y } { \partial u } \frac { \partial y } { \partial v } + \frac { \partial z } { \partial u } \frac { \partial z } { \partial v } } , } \\ { \displaystyle { C = \left( \frac { \partial x } { \partial v } \right) ^ { 2 } + \left( \frac { \partial y } { \partial v } \right) ^ { 2 } + \left( \frac { \partial z } { \partial v } \right) ^ { 2 } } . } \end{array}
+$$
+
+3.3.2. Định nghĩa.
+
+Trong không gian $\mathcal{R}^3$, cho mặt $S$ và một hàm $f(x, y, z)$ xác định trên mặt $S$:
+
+$+$ Một phân hoạch $P$ chia mặt $S$ thành các mảnh nhỏ $S_1, S_2, \ldots, S_n$ có diện tích tương ứng $\Delta S_1, \Delta S_2, \ldots, \Delta S_n$ và đường kính $\delta_1, \delta_2, \ldots, \delta_n$. Khi đó, $\delta_P = \max\{\delta_1, \delta_2, \ldots, \delta_n\}$ gọi là đường kính của phân hoạch $P$:
+
+$+$ Chọn một điểm bất kỳ $M_i(x_i, y_i, z_i) \in S_i$. Khi đó tổng
+
+$$
+\sigma_n = \sum_{i=1}^n f(M_i) \Delta S_i
+$$
+
+Độ giác gọi là tổng tích phân mặt loại $\jmath$ của hàm $\hat{\boldsymbol{f}}$ ứng với phân hoạch $P$ và phép chọn các điểm $M_i$: Xét giới hạn 1
+
+$$
+\mathcal{I} = \lim_{\delta_P \to 0} \sigma_n.
+$$
+
+Nếu $I$ tồn tại không phụ thuộc vào phép phân hoạch $P$ và phép chọn các điểm $M_i$, thì $I$ được gọi là tích phân mặt loại 1 của hàm $f$ trên mặt $S$ và được ký hiệu là
+
+$$
+\iint_{(S)} f(x, y, z) \, dS.
+$$
+
+Người ta chứng minh được rằng: Nếu mặt $(S)$ tròn và hàm số $f$ liên tục trên $S$, thì tồn tại tích phân mặt $I$: 
+
+3.3.3.Cách tính.
+
+（24 $(i)$ Nếu mặt $(S)$ cho bởi phương trình tổng quát
+
+$$
+(S): z = z(x, y) \quad (x, y) \in D,
+$$
+
+trong đó hàm số $z$ và các đạo hàm riêng liên tục trên tập compact $D$. Theo định lý giá trị trung bình và công thức (3.12), tồn tại $(x_i, y_i) \in D_i$ sao cho
+
+$$
+\begin{array}{c}
+\Delta S_i = \iint_{D_i} \sqrt{1 + z_x'^2(x_i, y_i) + z_y'^2(x_i, y_i)} \, dx \, dy \\
+= \sqrt{1 + z_x'^2(x_i, y_i) + z_y'^2(x_i, y_i)} \Delta D_i.
+\end{array}
+$$
+
+Theo (3.15), ta có
+
+$$
+\sigma_{n} = \sum_{i=1}^{n} f(M_{i}) \Delta S_{i} = \sum_{i=1}^{n} f(M_{i}) \sqrt{1 + z_{x}'^2(x_{i}, y_{i}) + z_{y}'^2(x_{i}, y_{i})} \Delta D_{i}
+$$
+
+và do đó
+
+$$
+\begin{array}{l}
+\displaystyle \iint f(x, y, z) dS = \lim_{\Delta P \to 0} \sigma_{n} \\
+\displaystyle \qquad = \iint f\left( x, y, z(x, y) \right) \sqrt{1 + z_{x}'^2 + z_{y}'^2} dx dy. \\
+\displaystyle \qquad D
+\end{array}
+$$
+
+Ví dụ 3.17. Tính
+
+$$
+J = \iint_{S} (6x + 4y + 3z) dS,
+$$
+
+Giải.
+
+Phương trình mặt phẳng $(ABC)$ có dạng $x + 2y + 3z - 6 = 0$. Đặt công thức (3.16) được $\begin{array}{r} z = \frac{1}{3}(6 - x - 2y), z_{x}' = -\frac{1}{3}, z_{y}' = -\frac{2}{3} \end{array}$ $D = \triangle OAB$ $\triangle ABC$ nằm trong mặt phẳng $(Oxy)$. Khi đó
+
+$$
+{ \begin{array} { l } { \displaystyle J = \iint \int \left( 6x + 4y + 3 . \frac{1}{3} (6 - x - 2y) \right) \sqrt{1 + \left(-\frac{1}{3}\right)^{2} + \left(-\frac{2}{3}\right)^{2}} dxdy } \\ { \displaystyle - \frac{\sqrt{14}}{3} \iint (5x + 2y + 6) dxdy } \\ { \displaystyle - \frac{\sqrt{14}}{3} \int\limits_{0}^{3} dy \int (5x + 2y + 6) dx } \\ { \displaystyle - 54\sqrt{14}. } \end{array} }
+$$
+
+$(ii)$ Nếu mặt $S$ cho bởi phương trình tham số
+
+$$
+S : x = x(u, v), y = y(u, v), z = z(u, v), (u, v) \in D \subset \mathcal{R}^2,
+$$
+
+trong đó các hàm số $x, y, z$ và các đạo hàm riêng liên tục trên tập compac $D$, hàm số $f(x, y, z)$
+cũng liên tục trên $S$. Từ các công thức (3.13) và (3.15), ta cũng có
+
+$$
+\iint_{S} f(x, y, z)dS = \iint_{D} f\left( x(u, v), y(u, v), z(u, v) \right) \sqrt{AC - B^2} dudv,
+$$
+
+trong đó $A, B, C$ xác định bởi (3.13).
+
+Ví dụ 3.18. Tính tích phân
+
+$$
+K = \int_{S}\int z^{2}dS,
+$$
+
+trong đó $S$ là phần mặt cầu $x^2 + y^2 + z^2 = R^2$ nằm phía góc phần tư thứ nhất.
+
+Giải.
+
+Sử dụng phép đổi biến sang tọa độ cầu
+
+$$
+x = R \sin \theta \cos \varphi, y = R \sin \theta \sin \varphi, z = R \cos \theta, 0 \leq \theta \leq { \frac { \pi } { 2 } }, 0 \leq \varphi \leq { \frac { \pi } { 2 } }.
+$$
+
+Theo công thức (3.17), ta có
+
+$$
+{ \sqrt { A C - B ^ { 2 } } } = R ^ { 2 } \sin \theta .
+$$
+
+Khi đó
+
+$$
+K = \int \int z ^ { 2 } d S = \int _ { 0 } ^ { 2 \pi } d \varphi \intop _ { 0 } ^ { \frac { \pi } { 2 } } R ^ { 4 } \cos ^ { 2 } \theta \sin \theta d \theta = \frac { \pi R ^ { 4 } } { 6 } .
+$$
+
+3.3.4.Tính chất cơ học của tích phân mặt loại 1
+
+Cho mặt $S$ có khối lượng riêng tại điểm $M \in S$ là $\rho ( M )$. Khi đó
+
+$( i )$ Khối lượng riêng của $S$ là
+
+$$
+m = \underset { S } { \iint } \rho ( x , y , z ) d S .
+$$
+
+$( ii )$ Tọa độ trọng tâm của mặt $S$ là $G ( x _ { G } , y _ { G } , z _ { G })$ xác định bởi
+
+$$
+\begin{array} { c }
+x _ { G } = \frac { 1 } { m } \iint x \rho ( x , y , z ) d S ,
+y _ { G } = \frac { 1 } { m } \iint y \rho ( x , y , z ) d S ,
+z _ { G } = \frac { 1 } { m } \iint z \rho ( x , y , z ) d S .
+\end{array}
+$$
+
+$( ii )$ Momen quán tính
+
+$+$ đối với gốc tọa độ là
+
+$$
+I _ { 0 } = \underset { S } { \iint } ( x ^ { 2 } + y ^ { 2 } + z ^ { 2 } ) \rho ( x , y , z ) d S .
+$$
+
+$+$ đối với trục $O x$ là
+
+$$
+I _ { x } = \int _ { S } \int ( y ^ { 2 } + z ^ { 2 } ) \rho ( x , y , z ) d S .
+$$
+
+$+$ đối với trục $O y$ là
+
+$$
+I_{y} = \int\displaylimits_{S} \int (x^{2} + z^{2}) \rho(x, y, z) dS.
+$$
+
+$^+$ đối với trục $Oz$ là
+
+$$
+I_{z} = \int\displaylimits_{S} \int (x^{2} + y^{2}) \rho(x, y, z) dS.
+$$
+
+# 3.4. Tích phân mặt loại 2.
+
+3.4.1. Định nghĩa.
+
+Cho mặt tròn $S$ được định hướng bởi vector $\vec{n}(M)$ (với $M \in S$) biến thiên liên tục. Hàm vector $\vec{F} = (P(M), Q(M), R(M))$ liên tục trên mặt $S$: 
+
+$^+$ Phân hoạch $P$ chia mặt $S$ thành $n$ mảnh nhỏ $S_{1}, S_{2}, \ldots, S_{n}$ có diện tích tương ứng $\Delta S_{1}, \Delta S_{2}, \ldots, \Delta S_{n}$ và có đường kính là $d_{i}$. Ký hiệu $\Delta_{P} = \max\{ d_{i}: i = 1, 2, \ldots, n \}.$
+
+$^+$ Trên mỗi mảnh $S_{i}$, chọn một điểm bất kỳ $M_{i} \in S_{i}$. Gọi $\alpha_{i}, \beta_{i}, \gamma_{i}$ là góc tạo bởi vector pháp tuyến đơn vị định hướng $\vec{n}(M_{i})$ của mặt $(S)$ với các trục tọa độ $Ox, Oy, Oz$ tương ứng. Khi đó
+
+$$
+\sigma_{P} = \sum_{i=1}^{n} \left( P(M_{i}) \cos \alpha_{i} + Q(M_{i}) \cos \beta_{i} + R(M_{i}) \cos \gamma_{i} \right) \Delta S_{i}
+$$
+
+được gọi là tổng tích phân mặt loại 2 của hàm vector $\vec{F}$ ứng với phân hoạch $P$ và phép chọn $M_{i}$: Nếu tồn tại giới hạn

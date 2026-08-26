@@ -1,0 +1,688 @@
+# 4.1. GIỚI THIỆU BÀI TOÁN
+
+Trong nhiều bài toán thực tế cấu hình tối hợp còn được gán một giá trị bằng số đánh giá giá trị sử dụng của cấu hình với một mục đích sử dụng cụ thể nào đó. Khi đó xuất hiện bài toán: Hay lựa chọn cấu hình có giá trị sử dụng tốt nhất. Các bài toán như vậy được gọi là bài toán tối ưu tổ hợp. Chúng ta có thể phát biểu bài toán tối ưu tổ hợp dưới dạng tổng quát như sau:
+
+Tim cực tiểu (hay cực đại) của phiếm hàm $f(x) = \min(\max)$ với điều kiện $x \in D$, trong đó $D$ là tập hợp hạn chế các phần tử.
+
+· Tập $D$ gọi là tập các phương án của bài toán.   
+Mỗi phần tử $x \in D$ được gọi là một phương án. Hàm $f(x)$ được gọi là hàm mục tiêu của bài toán.   
+Phương án $x^{*} \in D$ đem lại giá trị nhỏ nhất (lớn nhất) cho hàm mục tiêu được gọi là phương án tối ưu. Giá trị $f^{*} = f(x^{*})$ được gọi là giá trị tối ưu của bài toán.
+
+Dưới đây là một số bài toán tối ưu típ điển. Các bài toán này là những mô hình có nhiều ứng dụng thực tế và đóng vai trò quan trọng trong việc nghiên cứu và phát triển lý thuyết tối ưu hóa típ điển.
+
+Bài toán cái túi. Một nhà tham hiến cần đếm theo một cái túi có trong lồng không quá $b$. Có $n$ đồ vật có thể đếm theo. Đồ vật thứ $j$ có trong lồng $a_j$ và giá trị sử dụng $c_j \ (j = 1, 2, \ldots, n)$. Hỏi nhà tham hiến cần đếm theo những đồ vật nào để cho tổng giá trị sử dụng là lớn nhất?
+
+Gọi $A = (a_1, a_2, ..., a_n)$ và $C = (c_1, c_2, ..., c_n)$ tương ứng với vector trong lồng và giá trị sử dụng các đồ vật. Khi đó ta có thể xác định được tập các phương án và hàm mục tiêu của bài toán như sau:
+
+Tập các phương án của bài toán: Một phương án của nhà tham dự có thể biểu diễn như một vector nhị phân dài $n \colon X = (x_1, x_2, \ldots, x_n)$, trong đó $x_i = 1$ nghĩa là đồ vật thứ $i$ được đếm theo, $x_i = 0$ nghĩa là đồ vật thứ $i$ không được đếm theo. Tập các xâu nhị phân $X = (x_1, \ldots, x_n)$ còn phải thỏa mãn điều kiện tổng trong lượng không vượt qua $b$. Nói cách khác, tập phương án $D$ của bài toán được xác định như công thức dưới đây.
+
+$$
+D = \left\{ X = (x_1, x_2, \ldots, x_n) \colon \sum_{i=1}^n a_i x_i \leq b \right\}
+$$
+
+Hàm mục tiêu của bài toán: Với mỗi phương án $X \in D$, giá trị số lượng các đồ vật đếm theo là $f(X) = \sum_{i=1}^n c_i x_i$ trong khi tổng trọng lượng được biểu diễn bởi $\textstyle g(X) = \sum_{i=1}^n a_i x_i$. Như vậy bài toán cải túi được phát biểu dưới dạng bài toán tối ưu hợp sau:
+
+Trong số các vector nhị phân dài $n$ thỏa mãn điều kiện $g(X) \leq b$, hãy tìm vector $X^*$ để hàm mục tiêu $f(X)$ đạt giá trị lớn nhất. Nói cách khác,
+
+$$
+\text{tìm} \ : \operatorname*{max} \{ f(X) : X \in D, g(X) \leq b \}
+$$
+
+Bài toán Ngữ liệu du lịch. Một người du lịch muốn đi thăm quan $n$ thành phố $T_{1}, T_{2}, \ldots, T_{n}$. Xuất phát từ một thành phố nào đó, người du lịch muốn đi qua tất cả các thành phố còn lại, mỗi thành phố đi qua dùng một lần, rồi quay trở lại thành phố xuất phát. Biết $c_{ij}$ là chi phí di chuyển từ thành phố $T_{i}$ đến thành phố $T_{j}$ $(i, j = 1, 2, \ldots, n)$, hãy tìm hành trình với tổng chi phí là nhỏ nhất cho người du lịch (một hành trình là một cách đi thỏa mãn điều kiện).
+
+Không hạn chế tính tổng quát của bài toán ta giả sử người du lịch luôn xuất phát tại một thành phố có định (giả sử là thành phố số 1). Khi đó, tập phương án và hàm mục tiêu của bài toán được xác định như sau.
+
+Tập phương án của bài toán: Rõ ràng, mỗi hành trình của người du lịch có dạng $X = (x_{1}, x_{2}, \ldots, x_{n}, x_{1})$ với $X = (x_{1}, x_{2}, \ldots, x_{n})$ là hoán vị của 1, 2, ..., n và $x_{1} = 1$. Vì người du lịch xuất phát từ thành phố số 1 và sau đó phải trở lại điểm xuất phát. Như vậy, ta chỉ có $(n-1)!$ hành trình thực sự. Vậy, tập phương án của bài toán là
+
+$$
+D = \left\{ X = \left( x _ { 1 } , x _ { 2 } , \ldots , x _ { n } \right) \colon x _ { 1 } = 1 ; x _ { i } \neq x _ { j } : \forall i \neq j ; i , j = 2 , 3 , \ldots , n \right\} .
+$$
+
+Hàm mục tiêu của bài toán: Chi phí của mỗi hành trình tăng với mỗi $X \in D$ là tổng chi phí đi từ thành phố $i$ đến thành phố $j$. Do đó, hàm mục tiêu của bài toán là:
+
+$$
+f ( X ) = \sum _ { i = 1 } ^ { n - 1 } C [ X [ i ] ] [ X [ i + 1 ] ] + C [ X [ n ] ] [ X [ 1 ] ]
+$$
+
+Như vậy, bài toán người du lịch có thể phát biểu dưới dạng bài toán tối ưu hợp sau:
+
+Bài toán cho thuê máy. Một ông chủ có một cái máy để cho thuê. Đầu tháng ông ta nhận được yêu cầu thuê máy của m khách hàng. Mỗi khách hàng $i$ sẽ cho biết tập $N _ { i }$ các ngày trong tháng cần sử dụng máy $\mathit{i} = \{ 1, 2, ..., m \}$. Ông chủ chỉ có quyền hoặc từ chối yêu cầu của khách hàng $i$, hay nếu nhận thì phải bảo trì máy phục vụ khách hàng $i$ đúng những ngày mà khách hàng này yêu cầu. Hỏi ông chủ phải tiếp nhận các yêu cầu của khách thế nào để cho tổng số ngày sử dụng máy là lớn nhất.
+
+Tập phương án của bài toán. Ký hiệu, $\underline{I} = \left\{ 1, 2, ..., m \right\}$ là tập chỉ số khách hàng, $S$ là tập hợp các tập con của $I$. Khi đó, tập hợp tất cả các phương án cho thuê máy là
+
+$$
+D = \big \{ J \subset S : N _ { k } \cap N _ { p } = \emptyset , \forall k \neq p \in J \ \big \} .
+$$
+
+Hàm mục tiêu của bài toán. Với mỗi phương án $\mathbf{J} \in \mathbf{D}$, mô hình phương án cho thuê máy là tổng số ngày sử dụng máy theo phương án đó. Do vậy, hàm mục tiêu của bài toán là $f ( J ) = \sum _ { j \in J } | N _ { j } |$. Khi đó, bài toán có thể phát biểu dưới dạng bài toán tối ưu tập hợp sau:
+
+$$
+\operatorname*{max} \left\{ f ( J ) : J \in D \right\}.
+$$
+
+Bài toán phân công công việc cho $n$ công nhân và $n$ công việc. Biết $c_{ij}$ là chi phí cần trả để công nhân $i$ hoàn thành công việc thứ $j ( i, j = 1, 2, ..., n )$. Cần thuê công nhân sao cho các công việc đều được hoàn thành và mỗi công nhân chỉ thực hiện một công việc, mỗi công việc chỉ do một công nhân thực hiện. Hãy tìm cách phân công $n$ công nhân sao cho tổng chi phí thuê công nhân là nhỏ nhất.
+
+Tập phương án của bài toán. Rõ ràng, mỗi phương án biểu thị công nhân thực hiện các công việc tương ứng với hoán vị $\pi = (\pi(1), \pi(2), ..., \pi(n))$. Do vậy, tập tất cả các phương án của bài toán là tập hợp các hoán vị của $1, 2, ..., n$.
+
+Hàm mục tiêu của bài toán. Đối với mỗi phương án, chi phí theo phương án đó là
+
+$$
+f(\pi) = C_{\pi(1), 1} + C_{\pi(2), 2} + \cdots + C_{\pi(n), n}.
+$$
+
+![](images/5c1333b2b1c7c4f3c99fe1c34d9a1315616050f0efa0cfcf42eaad9f96affb29.jpg)
+
+![](images/105de8467317ca1ca87abd39327e152cb4ed573888ab7d1e4d4444f859193c14.jpg)
+
+Bài toán đặt ra được dẫn đến bài toán tối ưu hóa: $\operatorname*{min}\left\{ f(\pi) : \pi \in \Pi \right\}$
+
+Bài toán lập lịch. Mới mốt chi tiết trong số $n$ chi tiết $D _ { 1 } , D _ { 2 } ,$ ... $D _ { n }$ cần phải lần lượt được gia công trên máy $M _ { 1 } , M _ { 2 } ,$ ... $M _ { m }$. Thời gian gia công chi tiết $D _ { i }$ trên máy $M _ { j }$ là $t _ { ij }$. Hay tìm lịch (trình tự gia công) các chi tiết trên các máy sao cho việc hoàn thành gia công tất cả các chi tiết là sớm nhất có thể được. Biết rằng, các chi tiết cần gia công một cách liên tục, nghĩa là quá trình gia công của mỗi một chi tiết phải được tiến hành một cách liên tục hết máy này sang máy khác không cho phép có khoảng thời gian đứt khi chuyển từ máy này sang máy khác.
+
+Tập phương án của bài toán. Rõ ràng, mỗi một lịch gia công các chi tiết trên các máy sẽ tương ứng với một hoán vị $\pi = ( \pi(1), \pi(2), ..., \pi(n) )$ của $n$ số tự nhiên 1, 2..., n.
+
+Hàm mục tiêu của bài toán. Thời gian hoàn thành theo các lịch trên được xác định bởi hàm số
+
+$$
+\begin{array}{l}
+\displaystyle f(\boldsymbol{\pi}) = \sum_{j=1}^{n-1} C_{\boldsymbol{\pi}(j), \boldsymbol{\pi}(j+1)} + \sum_{k=1}^{m} t_{k, \boldsymbol{\pi}(n)}, \text{ trong } c_{ij} = S_j - S_i, \text{ } S_j \text{ là thời gian chìa khóa công việc } j. \\
+\displaystyle \hat{e_c} \text{ giá công chi tiết } c_j(i, j=1, 2, ..., n). \check{\mathrm{~Y}} \text{ nghĩa là } s_{ij} \text{ có thể tính theo công thức:}
+I_{c_i} = \max_{1 \leq k \leq m} \sum_{l=1}^{k-1} t_l + t_k.
+\end{array}
+$$
+
+Hiện vi giải thích như sau: $n$ là tổng thời gian gia công đoạn (được tính từ khi bắt đầu gia công chi tiết $i$ gây ra bởi chi tiết $j$ khi nó được gia công sau chi tiết $i$ trong lịch gia công. Vì vậy, $c_{ij}$ có thể tính theo công thức:
+
+$$
+I_c = \max_{1 \leq k \leq m} \sum_{l=1}^{k-1} t_l + t_k.
+$$
+
+Vì vậy bài toán đặt ra là bài toán tối ưu tổ hợp sau:
+
+$$
+\operatorname{min}\{\mathrm{~f(\pi) : \pi \in \Pi ~}\}.
+$$
+
+Trong thực tế, lịch gia công con phải thỏa mãn thêm nhiều điều kiện khác nhưu vậy. Vì nhiệm irng dụng quan trọng của những bài toán loại này mà trong tối ưu hóa tó hợp đa hình thành một lĩnh vực lý thuyết riêng về các bài toán lập lịch gọi là lý thuyết lập lịch hay quy hoạch lịch.
+
+# 4.2 Phương pháp duyệt toàn bộ
+
+Mặc trong những phương pháp hiện nhiên có thể giải bài toán tối ưu tó hợp là duyệt tất cả các phương án của bài toán. Ung với mỗi phương án, ta đều tính được giá trị của hàm mục tiêu cho phương án đó, sau dó so sánh giá trị của hàm mục tiéu tại tất cả các phương án đã được liệt kê để tìm ra phương án tối ưu. Phương pháp xây dựng theo nguyên tắc như trên được gọi là phương pháp duyệt toàn bộ. Thuật toán tổng quát thực hiện theo phương pháp duyệt toàn bộ được thể hiện trong Hình 4.1.
+
+Hạn chế của phương pháp duyệt toàn bộ là sự bùng nổ n của các cấu hình tối hợp. Chẳng hạn để duyệt được 15! = 1 307 674 368 00 cấu hình trên máy có tốc độ 1 tỷ phép tính/giây, nếu mỗi hoán vị cần liệt kê mất khoảng 100 phép tính, thì ta cần khoảng thời gian là 130767 giây (lớn hơn 36 tiếng đồng hồ). Vì vậy, cần phải có biện pháp hạn chế việc kiểm tra hoặc tìm kiếm trên các cấu hình tối hợp thì mới có hy vọng giải được các bài toán tối ưu phức tạp thực tế. Tất nhiên, để đưa ra được một thuật toán cần nghiên cứu kỹ tính chất của mỗi bài toán tối ưu cụ thể. Chính nhờ những nghiên cứu đó, trong một số trường hợp cụ thể ta có thể xây dựng được thuật toán hiệu quả để giải quyết bài toán đặt ra. Tuy vậy, cũng cần phải chú ý rằng nhiều bài toán tối ưu hiện nay vẫn chưa tìm ra được phương pháp hữu hiệu nào ngoài phương pháp duyệt toàn bộ đã được đề cập ở trên.
+
+#
+
+Thuật toán duyệt toàn bộ:  
+Buoc 1 (Khởi tạo): $\tt XOPT = \emptyset$ ; //Khởi tạo phương án tối ưu ban đầu FOPT= -∞ $(+\infty)$ ;//Khởi tạo giá trị tối ưu ban đầu  
+Buoc 2 (Lặp): ? for each $\mathbf{X} \in \mathbf{D}$ do {  
+$\quad\quad$ //Lấy mỗi phần tử trong tập phương án  
+$\quad\quad S = f(X) ;$ //Tính giá trị hàm mục tiêu cho phương án X  
+$\quad\quad$ if (FOPT < S) {  
+$\quad\quad\quad$ //Cập nhật phương án tối ưu  
+$\quad\quad\quad FOPT = S;$ //Giá trị tối ưu mới được xác lập  
+$\quad\quad\quad XOPT = X;$/l Phương án tối ưu mới  
+}  
+Buoc 3 (Trả kết quả): Return(XOPT, FOPT);
+
+Ghi chú. Tại Bước 1 của thuật toán, ta khởi tạo giá trị của hàm mục tiêu $\mathrm{FOP}T = -\infty$ với bài toán tìm max, khởi tạo giá trị của hàm mục tiêu $\mathrm{FOP}T = +\infty$ với bài toán tìm min.
+
+Ví dụ 1. Giải bài toán cài túi dưới đây bằng phương pháp duyệt toàn $b \hat{\varrho}$.
+
+$$
+\begin{array}{c}
+\begin{array}{rl}
+& { F(X) = 4x_{1} + 6x_{2} + 3x_{3} + 5x_{4} + 2x_{5}, } \\
+& { 9x_{1} + 8x_{2} + 5x_{3} + 3x_{4} + 2x_{5} \leq 21, } \\
+& { x_{j} \in \{0, 1\}, j = 1, 2, 3, 4, 5. }
+\end{array}
+$$
+
+Lời giải. Gọi $A = (a_{1}, a_{2}, ..., a_{n})$, $C = (c_{1}, c_{2}, ..., c_{n})$ tương ứng với vector trong lượng và giá trị sử dụng các đồ vật. Như đã phân tích trong Mục 4.1, ta có:
+
+Tổng cực đại $D = \left\{ X = (x_{1}, x_{2}, ..., x_{n}) : \sum_{i=1}^{n} a_{i} x_{i} \leq b \right\}$.
+
+Hàm mục tiêu của bài toán: $f(X) = \sum_{i=1}^{n} c_{i} x_{i}$
+
+Nhiệm vụ của chúng ta là tìm phương án tối ưu XOPT và giá trị tối ưu FOPT. Kết quả thực theo thuật toán duyệt toàn bộ được hiển thị theo Bảng 4.1 dưới đây.
+
+![](images/7f5d9c00ac413abee4f809e57ed6fd845db25d8abebd9219a0fcf714203c0d7c.jpg)
+
+![](images/5921311e6a6c479e62a1e32a3c0017ec68765a2564bae349731bcca8dd344660.jpg)
+
+# 4.3. Thuật toán nhanh cân
+
+Giả sử chung ta cần giải quyết bài toán tối ưu tổng quát như sau:
+
+$$
+\mathrm{Tim~min} \big\{ f(x) : x \in D \big\}.
+$$
+
+Trong đó $D$ là tập hợp hạn phẩn. Ta giả thiết $D$ được mô tả như sau:
+
+$D = \big\{ x = (x_1, x_2, ..., x_n) \in A_1 \times A_2 \times ... \times A_n ; x$ thỏa mãn tính chất $\textit{P} \}$, với $A_1 \times A_2 \times ... \times A_n$ là các tập hợp hạn, $P$ là tính chất cho trước trên tích Cartesian $A_1 \times A_2 \times ... \times A_n$.
+
+Như vậy, các bài toán chung ta sẽ trình bày $\dot{\sigma}$ trên đều có thể dùng để mô tả dưới dạng trên. Với giả thiết $\mathbf{v} \cdot \hat{\mathbf{e}}$ tập $D$ như trên, chúng ta có thể sử dụng thuật toán quay lui để liệt kê các phương án của bài toán. Trong quá trình liệt kê theo thuật toán quay lui, ta sẽ xây dựng dần các thành phần của phương án. Ta gọi bộ phần $\mathrm{g} \cdot \mathsf{o m} k$ thành phần $(a_1, a_2, \ldots, a_k)$ xuất hiện trong quá trình thực hiện thuật toán sẽ được gọi là phương án bộ phận cấp $k$:
+
+Thuật toán nhanh có thể được áp dụng giải bài toán đặt ra nếu như có thể tìm được một hàm $g$ xác định trên tập tất cả các phương án bộ phận của bài toán thỏa mãn bất đẳng thức sau:
+
+$$
+g(a_1, a_2, \ldots, a_k) \leq \min\big\{ f(x) : x \in D, x_i = a_i, i = 1, 2, \ldots, k \big\}
+$$
+
+với mỗi lời giải bộ phận $(a_1, a_2, \ldots, a_k)$, và với mọi $k = l, 2, \ldots$
+
+Bất đẳng thức $(^*)$ có nghĩa là giá trị của hàm tại phương án bộ phận $(a_1, a_2, \ldots, a_k)$ không vượt qua giá trị nhỏ nhất của hàm mục tiêu bài toán trên tập con các phương án.
+
+$$
+D(a_{1}, a_{2}, \ldots, a_{k}) = \{ x \in D : x_i = a_i, i = 1, 2, \ldots, k \},
+$$
+
+như cách khác, $g(a_1, a_2, \ldots, a_k)$ là cận dưới của tập $D(a_1, a_2, \ldots, a_k)$. Do đó có thể đồng nhất tập $D(a_1, a_2, \ldots, a_k)$ với phương án bao phân $(a_1, a_2, \ldots, a_k).$ Nên ta cũng gọi giá trị $g(a_1, a_2, \ldots, a_k)$ là cận dưới của phương án bao phân $(a_1, a_2, \ldots, a_k).$
+
+Giả sử ta đã có được hàm $g$. Ta xét cách sử dụng hàm này để hạn chế lượng duyệt trong quá trình duyệt tất cả các phương án theo thuật toán quay lui. Trong quá trình liệt kê các phương án có thể đã thu được một số phương án của bài toán. Gọi $\Pi_x^-$ là giá trị hàm mục tiêu nhỏ nhất trong số các phương án đã duyệt, ký hiệu $f(\overline{x}) = \overline{f}$. Ta gọi $\Pi_x^-$ là phương án tốt nhất hiện có, còn $\overline{f}$ là cận dưới. Giả sử ta có được $\overline{f}$, khi đó nếu
+
+$g(a_1, a_2, \ldots, a_k) > \overline{f}$ thì từ bất đẳng thức $(*)$ ta suy ra
+
+(204 $\overline{f} < g(a_1, a_2, \ldots, a_k) \leq \min\left\{\frac{f(x)}{x \in D}, x_i = a_i \text{ với } i = 1, 2, \ldots, k\right\}$, vì thế tập con các phương án của bài toán $D(a_1, a_2, \ldots, a_k)$ chắc chắn không chứa phương án tối ưu. Trong trường hợp này ta không cần phát triển phương án b@ phân $(a_1, a_2, \ldots, a_k)$, nói cách khác là ta có thể loại bỏ các phương án trong tập $D(a_1, a_2, \ldots, a_n)$ khỏi quá trình tìm kiếm.
+
+Thuật toán quay lui liệt kê các phương án cần sửa đổi như Hình 4.2:
+
+Hình 4.2. Thuật toán quay lui dựa trên hàm đánh giá cần.
+
+Khi đó, thuật toán nhanh cần được thực hiện như Hình 4.3.
+
+Procedure Nhanh_Can( )
+
+![](images/60f0f27528d228339b872a6a55e23140b53f889bee29a70e24540f258d102d26.jpg)  
+Hình 4.3. Thuật toán nhanh cần.
+
+$f = +\infty$; /* Nếu biết một phương án $\Pi_x^{-}$ nào đó thì có thể đặt $\overline{f} = f(\overline{x})$ */ Try(1); //Thực hiện thuật toán quay lui trong Hình 4.2 $i f(\overline{f} \leq +\infty)$ (204 < f là giá trị tối ưu, x là phương án tối ưu >)  
+else < bài toán không có phương án>;
+
+Chú ý rằng nếu trong thủ tục Try ta thay thế câu lệnh if(k == n)< cập nhật kỳ luc >
+
+bởi
+
+$$
+\begin{array} { l } { \text{if (k == n)} } \\ { \text{< cap n hà t k í y lu c >;} } \\ { \text{else Try(k + l);} } \end{array}
+$$
+
+thí thu thuật Try sẽ liệt kê $\mathrm{k}$ tất cả các phương án của bài toán. Việc xây dựng hàm $g$ phụ thuộc vào tính chất bài toán tối ưu nhất. Nhưng chúng ta có gắng xây dựng sao cho đạt được những điều kiện dưới đây:
+
+Việc tính giá trị của $g$ phải đơn giản hơn việc giải bài toán tổng hợp trong vế phải của $( ^{*} )$: □ Giá trị của $g ( a _{1}, a_{2}, . . . , a_{k})$ phải sát với giá trị vế phải của $( ^{*} )$，
+
+Rất tiếc, hai yêu cầu này trong thực tế thường đối lập nhau.
+
+Ví dụ 1. Bài toán cái túi. Chúng ta sẽ xét bài toán cái túi tổng quát hơn mô hình đã được trình bày trong mục 4.1. Thay vì có $n$ đồ vật, δ giả thiết rằng có $n$ loại đồ vật và số lượng đồ vật mỗi loại là không hạn chế. Khi đó, ta có mô hình bài toán cái túi biến nguyên sau đây: Có $n$ loại đồ vật, đồ vật thứ $j$ có trọng lượng $a_{j}$ và giá trị sử dụng $c_{j} \ ( j = 1, 2, . . . , n )$. Cần chọn các đồ vật này vào một cái túi có trọng lượng là $b$ sao cho tổng giá trị sử dụng của các đồ vật dùng trong túi là lớn nhất.
+
+Mô hình toán học của bài toán có dạng sau:
+
+$$
+f^{*} = \operatorname{max} \left\{ f(x) = \sum_{j=1}^{n} c_j x_j : \sum_{j=1}^{n} a_j x_j \leq b, x_j \in Z_+, j = 1, 2, ..., n \right\}, (1).
+$$
+
+Trong đố $Z^+$ là tập các số nguyên không âm.
+
+Ký hiệu $D$ là tập các phương án của bài toán $(1)$
+
+$$
+D = \left\{ x = (x_1, x_2, \cdots, x_n) : \sum_{j=1}^{n} a_j x_j \leq b, x_j \in Z_+, j = 1, 2, \cdots, n \right\}.
+$$
+
+Không giảm tính tổng quát ta giả thiết rằng, các đồ vật được đánh $\mathbf{s}$ sao cho bất đẳng thức sau được thỏa mãn
+
+$$
+\frac{c_1}{a_1} \geq \frac{c_2}{a_2} \geq \cdots \geq \frac{c_n}{a_n}
+$$
+
+Để xây dựng hàm tính cận đồi, cùng với bài toán cái túi $(1)$ ta xét bài toán cái túi biến liên tục sau: Tìm
+
+$$
+g^{*} = \operatorname{max} \left\{ \sum_{j=1}^{n} c_j x_j : \sum_{j=1}^{n} a_j x_j \leq b, x_j \geq 0, j = 1, 2, \cdots, n \right\}.
+$$
+
+Mệnh đề. Phương án tối ưu của bài toán (3) là vector $\overline{x} = (\overline{x_1}, \overline{x_2}, ..., \overline{x_n})$ với các thành phần được xác định bằng công thức:
+
+$$
+\overline{x_1} = \frac{b}{a_1}, \overline{x_2} = \overline{x_3} = \cdots = \overline{x_n} = 0 \text{ và giá trị tối ưu } u_{\theta} \text{ là } g^* = \frac{c_1 b_1}{a_1}.
+$$
+
+Chứng minh. Thật vậy, xét $x = (\triangle x_I, \triangle x_2, \ldots, \triangle x_n)$ là một phương án tuỳ ý $\boldsymbol{\mathrm{y}}$ của bài toán (3). Khi đó từ bất đẳng thức thực (3) và do $x_j \ge 0$, ta suy ra
+
+$$
+c_j x_j \geq \left( \frac{c_1}{a_1} \right) a_j x_j, j = 1, 2, \ldots n.
+$$
+
+suy ra:
+
+$$
+\sum_{j=1}^{n} c_j x_j \leq \sum_{j=1}^{n} \left( \frac{c_1}{a_1} \right) a_j x_j = \left( \frac{c_1}{a_1} \right) \sum_{j=1}^{n} a_j x_j \leq \frac{c_1}{a_1} b = g^*.
+$$
+
+Bây giờ ta giả sử có phương án bổ sung cấp k: $(u_1, u_2, \ldots, u_k)$. Khi đó giá trị thực dụng của các đồ vật đang có trong túi là
+
+$\widehat{\mathcal{O}}_{k} = c_{1} u_{1} + c_{2} u_{2} + \cdots + c_{k} u_{k}$, và trong lượng còn lại của túi là $b_{k} = b - (c_{1} u_{1} + c_{2} u_{2} + \cdots + c_{k} u_{k})$,
+
+ta có
+
+$$
+\begin{array}{rl}
+&{\operatorname*{max}\left\{ f(x) : x \in D, x_{j} = u_{j}, j = 1, 2, \cdots n \right\}} \\
+&{= \operatorname*{max}\Biggl\{ \hat{\sigma}_{k} + \displaystyle \sum_{j=k+1}^{n} c_{j} x_{j} : \sum_{j=k+1}^{n} a_{j} x_{j} \leq b_{k}, x_{j} \in Z_{+}, j = k+1, k+2, \cdots, n \Biggr\}} \\
+&{\leq \hat{\sigma}_{k} + \operatorname*{max}\left\{ \displaystyle \sum_{j=k+1}^{n} c_{j} x_{j} : \sum_{j=k+1}^{n} a_{j} x_{j} \leq b_{k}, x_{j} \geq 0, j = k+1, k+2, \cdots, n \right\}} \\
+&{\quad = \hat{\sigma}_{k} + \displaystyle \frac{c_{k+1} b_{k}}{a_{k+1}}}
+\end{array}
+$$
+
+Vậy ta có thể tính cận trên cho phương án phần $(u_{1}, u_{2}, ..., u_{k})$ theo công thức
+
+$$
+g(u_{1}, u_{2}, \cdots, u_{k}) = \hat{\sigma}_{k} + \frac{c_{k+1} b_{k}}{a_{k+1}}
+$$
+
+Chú ý: Khi tiếp tục xây dựng thành phần thứ $k + 1$ của lời giải, các giá trị được chọn cho $x_{k+1}$ sẽ là $0, 1, ..., \left\lfloor \frac{b_k}{a_{k+1}} \right\rfloor$. Do kết quả của mệnh đề, khi chọn giá trị cho $x_{k+1}$ ta sẽ duyệt các giá trị được chọn theo thứ tự giảm dần. Thuật toán nhanh cần giải bài toán cái túi được mô tả như Hình 4.4 dưới đây.
+
+# Thuật toán Branch_and_Bound (i) {
+
+$t = \frac{(b - b_i)}{A[i]};$ //Khởi tạo số lượng đồ vật thứ i   
+$\texttt{for } j = t; j \geq 0; j-- \}$ $x[i] = j;$ //Lựa chọn $x[i]$ là $j$;
+$b_{i} = b_{i} + a_{i} x_{i};$ // Trọng lượng túi cho bài toán bó phần thứ i.
+$\sigma_{i} = \sigma_{i} + c_{i} x_{i};$ // Giá trị sử dụng cho bài toán bó phần thứ i
+$\texttt{if } (k == n)$ //Cập nhật ký hiệu;
+$\texttt{else if } (\delta_k + \frac{(c_{k+1} * b_k)}{a_{k+1}} > FOPT)$ //Nhấn Branch_and_Bound $(k + 1)$
+$b_i = b_i - a_i x_i;$ $\sigma = \sigma - c_i x_i;$
+}
+
+Hình 4.4. Thuật toán nhanh cần giải bài toán cái túi
+
+Ví dụ. Giải bài toán cái túi sau theo thuật toán nhanh trình bày trên.
+
+$$
+\begin{array}{rl}
+& f(x) = 10x_1 + 5x_2 + 3x_3 + 6x_4 \quad \text{max} \\
+& 5x_1 + 3x_2 + 2x_3 + 4x_4 \leq 8 \\
+& x_j \in Z_{+}, j = 1, 2, 3, 4.
+\end{array}
+$$
+
+Lời giải. Quá trình giải bài toán được mô tả trong cây tìm kiếm trong Hình 4.4. Thông tin về phương án bỏ phân trên cây được ghi trong các ô trên hình vẽ tương ứng theo thứ tự sau:
+
+· Đầu tiên là các thành phần của phương án bỏ phân thứ i: $X = (x_1, x_2, \ldots, x_i)$
+· Tiếp đến là giá trị của các đồ vật theo phương án bỏ phân thứ i;
+· Kế tiếp là $w$ tương ứng với trọng lượng còn lại của túi;
+· Cuối cùng là căn trên g.
+
+Kết thúc thuật toán, ta thu được phương án tối ưu là $\mathbf{x}^* = (1, 1, 0, 1)$, giá trị tối ưu $\mathrm{f}^* = 15$,
+
+![](images/d9332e8baab5ba1d8ff29fc23df798ef89b8e8db14c77b7074b593678a0c9f47.jpg)
+Hình 4.4. Lời giải bài toán cái túi theo thuật toán nhanh **can**
+
+Chương trình giải bài toán cái túi theo thuật toán nhanh được thể hiện như sau:
+
+```cpp
+#include <iostream.h>  
+#include <stdio.h>  
+#include <conio.h>  
+#define MAX 100  
+int A[MAX], C[MAX], F[MAX][MAX];  
+int XOPT[MAX], X[MAX];  
+int n, b, ind;  
+float W, FOPT = -32000, cost, weight = 0;
+
+FILE *fp;
+
+void Init(void){
+```
+
+fp $\mathbf{\Sigma} = \mathbf{\Sigma}$ fopen("caitui1.in", "r");   
+fscanf(fp, "%d%d", &n, &b);   
+cout << "\n Số lượng đồ vật:" << n;   
+cout << "\n Trong lượng túi:" << b;   
+for (int $\mathrm{i} = 1$; $\scriptstyle{\dot{1}} \leq {\mathsf{n}}$; $\dot{\bar{\perp}} + + \dot{\bar{\iota}},$ fscanf(fp, "%d%d", &A[i], &C[i]);   
+cout << "\n Vector trong lượng:";   
+for (int $\mathrm{i} = 1$; $\scriptstyle{\dot{1}} \leq {\mathtt{n}}$; i++) cout << A[i] << " ";   
+cout << "\n Vector giá trị sử dụng:";   
+for (int $\mathrm{i} = 1$; $\scriptstyle{\dot{1}} \leq {\mathtt{n}}$; $\mathrm{\dot{2}++}$ cout << C[i] << " ";   
+fclose(fp);
+
+}
+
+void Update_Kỳ_luc(void) { if (cost > FOPT) { FOPT = cost; for (int $\mathrm{i} = 1$; $\scriptstyle{\dot{\frac{1}{2}}} \leq {\bmod{\frac{}{1}}}$ 1 + XOPT[i] $\mathbf{\Sigma} = \mathbf{\Sigma}$ 
+
+}
+
+void Result(void) { cout << "\n e E OPT"; cout << "\n Ph" << for (int $\dot{1} = 1$; $\scriptstyle{\dot{1}} \leq {\mathtt{n}}$; cout << XOPT[i];
+
+void AndBound(int i) {
+    ir $\mathbf{\Sigma} = \mathbf{\Sigma}$ (b - right)/A[i];
+    for ($j = \mathtt{t}$; j--){X[i] = j;
+        $\mathbf{\Sigma} =$ weight + A[i]*X[i]; 
+        cost = cost + C[i]*X[i];
+        if (cost == FOPT) Update_Kyluc();
+        else if (cost + C[i+1]*(b - weight)/A[i+1] > FOPT)
+            Branch_And_Bound(i + 1); 
+        weight -= A[i]*X[i]; 
+        cost -= C[i]*X[i];
+    }
+
+void main(void) {
+    Init(); 
+    Branch_And_Bound(1);
+    Result();
+}
+
+Ví dụ 2. Bài toán Người du lịch. Một người du lịch muốn đi thăm quan n thành phố $T_1, T_2,$ ..., $T_n$. Xuất phát từ một thành phố nào đó, người du lịch muốn đi qua tất cả các thành phố còn lại, mỗi thành phố đi qua đúng một lần, rồi quay trở lại thành phố xuất phát. Biết $(c_{ij})$ là chi phí đi từ thành phố $T_i$ đến thành phố $T_j (i = 1, 2, ..., n)$, hay tìm hành trình với tổng chi phí là nhỏ nhất (một hành trình là một cách đi thỏa mãn điều kiện).
+
+Giải. Đặt thành phố xuất phát là $T_1$. Bài toán Người du lịch được đưa về bài toán: Tìm cực tiểu của phiếm hàm:
+
+$$
+\sum_{i=1}^{n-1} c_{i, i+1} + c_{n, 1}
+$$
+
+$$
+f ( x _ { 1 } , x _ { 2 } , \cdots , x _ { n } ) = c [ 1 , x _ { 2 } ] + c [ x _ { 2 } , x _ { 3 } ] + \cdots + c [ x _ { n - 1 } , x _ { n } ] + c [ x _ { n } , x _ { 1 } ] \operatorname*{min} {\cal M} _ { n }
+$$
+
+với điều kiện
+
+$c _{\operatorname*{min}} = \operatorname*{min}{\left\{ c [ i , j ] , i , j = 1 , 2 , \cdots , n ; i \neq j \right\}}$ là chi phí đi lại giữa các thành phố.
+
+$( u _ { 1 } , u _ { 2 } , . . . , u _ { k } )$. Phương án tương ứng với hành trình bao phủ $k$ thành phố:
+
+$$
+T _ { 1 } \to T ( u _ { 2 } ) \to \cdots \to T ( u _ { k - 1 } ) \to T ( u _ { k } )
+$$
+
+Vì vậy, chi phí phải trả theo hành trình bao phủ này sẽ là tổng các chi phí theo đường đi giữa các thành phố trong hành trình bao phủ. 
+
+$$
+\hat{\mathcal{O}} = c [ 1 , u _ { 2 } ] + c [ u _ { 2 } , u _ { 3 } ] + \cdots + c [ u _ { k - 1 } , u _ { k } ]
+$$
+
+$\mathbf{\vec{p}}$ $\mathbf{\vec{\hat{e}}}$ phát triển hành trình b@ phân này thành hành trình đầy đủ, ta còn phải đi qua $n-k+1$ đoạn đường nữa rồi quay trở về thanh phó $T_I$. Trong $n-k+l$ đoạn đường còn lại, chi phí phải trả cho việc đi qua mỗi trong $n-k+l$ đoạn đường còn lại đều không nhiều hơn ${\bf c}_{\mathrm{min}}.$, nên có thể tính cho phương án bộ phân $(\mathbf{u}_1, \mathbf{u}_2, ..., \mathbf{u}_k)$ theo công thức
+
+$$
+g(\mathbf{u}_1, \mathbf{u}_2, \dots, \mathbf{u}_{\mathrm{k}}) = \widehat{\boldsymbol{\sigma}} + (n - k + 1) c_{\mathrm{min}}.
+$$
+
+Chẳng hạn ta giải bài toán ngõ du lịch với ma trận chi phí như sau
+
+$$
+C = \left| \begin{array}{ccccc}
+0 & 3 & 14 & 18 & 15 \\
+3 & 0 & 4 & 22 & 20 \\
+17 & 9 & 0 & 16 & 4 \\
+6 & 2 & 7 & 0 & 12 \\
+9 & 15 & 11 & 5 & 0
+\end{array} \right|
+$$
+
+Ta có ${ \bf c } _ { \mathrm { min } } = 2$. Quá trình thực hiện thuật toán được mô tả bằng cây tìm kiếm lời giải như hình 4.2.
+
+Thông tin về phương án bên phải trên cây được ghi trong các ô tương ứng theo thứ tự sau:
+
+□ đầu tiên là các thành phần của phương án.
+
+□ tiếp đến là chi phí theo hành trình bộ phận.
+
+Kết thúc thuật toán, ta thu được phương án tối ưu (1,2,3,5, 4,1) tương ứng với phương án tối ưu với hành trình
+
+![](images/33eb497453f32d774f1125f2087f9f1282d5069e4bc513a27d87c90c739f4a05.jpg)
+
+Hình 4.5. Cây tìm kiếm lời giải bài toán người du lịch.
+
+Chương trình giải bài toán theo thuật toán nhanh cần được thể hiện như sau:
+```cpp
+#include <stdio.h>
+#include <stdlib.h>
+#include <conio.h>
+#include <io.h>
+#define MAX 20
+int n, P[MAX], B[MAX], C[20][20], count = 0;
+int A[MAX], XOPT[MAX];
+```
+
+int can, cmin, fopt;
+void Read_Data(void){
+    int i, j;
+    FILE *fp;
+    fp = fopen("dulich.in", "r");
+    fscanf(fp, "%d", &n);
+    printf("^ { \\prime } \\mathsf { \\Delta } \\mathsf { u } Số thành phố: %d", n);
+    printf("\\Omega ^ { \\prime } \\hat { \\Omega } \\mathsf { u } Ma trận chi phí: ");
+    for (i = 1; i <= n; i++) {
+        for (j = 1; j <= n; j++) {
+            fscanf(fp, "%d", &C[i][j]);
+            printf("%5d ", C[i][j]);
+        }
+        printf("\n");
+    }
+
+int Min_Matrix(void){
+    int min = INT_MAX, i, j;
+    for (i = 1; i <= n; i++) {
+        for(j = 1; j <= n; j++) {
+            if (i != j) {
+                c = C[i][j];
+                if (c < min) min = c;
+            }
+    return min;
+}
+
+void Init(void){
+    int i;
+    cmin = Min_Matrix();
+    fopt = 32000;
+    can = 0;
+    for (i = 1; i <= n; i++) {
+        XOPT[i] = i;
+    }
+
+void Result(void){
+    int i;
+    printf("^ { \\prime } \\mathsf { \\Delta } \\mathsf { u } Hành trình tối ưu %d:", fopt);
+    printf("\nHành trình:");
+    for (i = 1; i <= n; i++) {
+        printf("%3d->", XOPT[i]);
+    }
+    printf("%d\n", 1);
+}
+
+void Swap(void){
+    int i;
+    for (i = 1; i <= n; i++) {
+```
+
+```c
+}
+
+XOPT[i]=A[i];   
+7   
+void Update_Kỹ_lúc(void){ int sum; sum=can+C[A[n]][A[1]]; if(sum<fopt) { Swap(); $fopt = sum;$ ： }   
+1   
+void Try(int i) { int j; $for (j = 2 ; j <= n ; j++)$ if(B[j]) { A[i] = j; B[j] = 0; can=can+C[A[i-1]][A[i]]; if(i == n) Update_Kỹ_lúc(); else if(can + (n-i+1)*cmin< fopt) count++; $Try(i + 1);$ ：  
+void main(void) { clrscr(); Read_Data(); Init(); Try(2); Result(); getch(); }  
+
+# 4.4. Kỹ thuật rút gọn giải quyết bài toán người du lịch
+
+Thuật toán nhánh và cắt là phương pháp chú ý để giải các bài toán tối ưu tổ hợp. Từ tương quan cơ bản của thuật toán là trong quá trình tìm kiếm lời giải, ta sẽ phân hoạch tập các phương án của bài toán thành hai hay nhiều tập con biểu diễn như một nút của cây tìm kiếm và cố gắng bằng phép đánh giá cận các nút, tìm cách loại bỏ những nhánh cây (những tập con các phương án của bài toán) mà ta biết chắc chắn không có phương án tối ưu. Mặc dù trong trường hợp tồi nhất thuật toán sẽ trở thành duyệt toàn bộ, nhưng trong nhiều trường hợp cụ thể nó có thể rút ngắn đáng $\mathrm { k } \acute{e}$ thời gian tìm kiếm. Mục này sẽ thể hiện các tu tương của thuật toán nhánh và cắt vào việc giải quyết bài toán người du lịch.
+
+Xét bài toán người du lịch như đã đề cập trước đó. Gọi 
+\[
+C = \{ c_{ij} \colon i, j = 1, 2, ..., n \}
+\]
+là ma trận chi phí. Mỗi hành trình của người du lịch
+
+$$
+(\pi(1), \pi(2), \pi(3), \ldots, \pi(n-1), \pi(n), \pi(1))
+$$
+
+Khi tiến hành tìm kiếm lời giải bài toán người du lịch, chúng ta phân tập các hành trình thành 2 tập con: tập gồm những hành trình chứa cặp cạnh $(i,j)$ nào đó và tập kia gồm những hành trình không chứa cạnh này. Ta gọi việc làm đó là sự phân nhánh, mỗi tập con như vậy được gọi là một nhánh hay một node của cây tìm kiếm. Quá trình phân nhánh được minh hoạ bằng cây tìm kiếm như trong Hình 4.6.
+
+![](images/b9ec3386d483b34bc4b524d65611ecea8905f9b7451f5398fe0d74012c61ff4f.jpg)  
+(Hình 4.6)
+
+Việc phân nhánh sẽ được thực hiện dựa trên một qui tắc heuristic nào đó cho phép rút ngắn quá trình tìm kiếm phương án tối ưu. Sau khi phân nhánh và tính cận dưới giá trị hàm mục tiêu trên mỗi tập con, việc tìm kiếm sẽ tiếp tục trên tập con có giá trị cận dưới nhỏ hơn. Thuật này được tiếp tục đến khi ta nhận được một mảng đầy đủ tức là một phương án của bài toán. Khi đó ta chỉ cần xét những tập con các phương án nào có cận dưới nhỏ hơn giá trị của hàm mục tiêu tại phương án đã tìm được. Quá trình phân nhánh và tính cận trên tập các phương án của bài toán thông thường cho phép rút ngắn mạch cách $\mathrm {k}\acute{e}$ qua trình tìm kiếm do ta loại bỏ rất nhiều tập con chắc chắn không chứa phương án tối ưu.
+
+# 4.4.1.Thuật Tục Rút Gọn
+
+Rõ ràng tổng chi phí của một hành trình của người du lịch sẽ chia đều một phần tỷ lệ của mỗi dòng và một phần tỷ lệ của mỗi cột trong ma trận chi phí C. Do đó, nếu ta cộng hay trừ bớt mỗi phần tỷ lệ của mỗi dòng (hay cột) của ma trận C đi một số $\alpha$ thì độ dài của tất cả các hành trình đều giảm đi α vì thế hành trình tối ưu cũng sẽ không bị thay đổi. Vì vậy, nếu ta tiến hành trừ đi các phần tỷ lệ của mỗi dòng và mỗi cột đi một hàng số sao cho ta thu được một ma trận gồm các phần tỷ lệ không âm mà trên mỗi dòng, mỗi cột đều có ít nhất một số 0, thì tổng các số trừ đó cho ta biết chi phí tối thiểu của mỗi hành trình. Thủ tục trừ này được gọi là thủ tục rút gọn, các hàng số trừ đó trên mỗi dòng (cột) sẽ được gọi là hàng số rút gọn theo dòng(cột), ma trận thu được sẽ được gọi là ma trận rút gọn. Thủ tục sau cho phép rút gọn ma trận một ma trận A kích thước $k \times k$ dòng đồng thời tính tổng các hàng số rút gọn.
+
+$$
+\text{float Reduce(float A[k][max], int k) : } \\
+\quad \sum = 0; \\
+\quad \text{for (i = l ; i < k ; i++)} \\
+\quad \quad r[i] = \text{phan tu nho nhat cua dong $i$;} \\
+\quad \quad \text{if(r[i] >0)} \\
+\quad \quad \quad \text{Bot moi phan tu cua dong i di r[i];} \\
+\quad \quad \sum = \sum + r [i]; \\
+\quad \text{for (j = l ; j <= k ; j++)} \\
+\quad \quad s[j] := \text{phan tu nho nhat cua cot $j$;} \\
+\quad \quad \text{if(s[j] >0)} \\
+\quad \quad \sum = \sum + S[j]; \\
+\quad \text{return(sum);} 
+$$
+
+Vi dụ. Giả sử ta có ma trận chi phí với $\mathrm{n} = 6$ thành phố sau:
+
+Đầu tiên trù bỏ môt phần tích của các dòng 1, 2, 3, 4, 5, 6 cho các hàng số rút gọn tương ứng là (3, 4, 16, 7, 25, 3), sau đó trong ma trận thu được ta tìm được phần tích nhỏ khác O của cột 3 và 4 tương ứng là (15, 8). Thực hiện rút gọn theo cột ta nhận được ma trận sau:
+
+Tổng các hàng số rút gọn là 81, vì vậy cân dưới cho tất cả các hành trình là 81 (không thể có hành trình có chi phí nhỏ hơn 81).
+
+Bây giờ ta xét cách phân tập các phương án ra thành hai tập. Giả sử ta chọn cạnh (6, 3) để phân nhánh. Khi đó tập các hành trình được phân thành hai tập con, một tập là các hành trình chia cạnh (6, 3), còn tập kia là các hành trình không chia cạnh (6, 3). Vì biết cạnh (6, 3) không tham gia vào hành trình nên cần hành trình đi qua cạnh này bằng cách đặt $\mathrm{C}[6, 3] = \infty$. Ma trận thu được sẽ có thể rút gọn bằng cách bỏ đi mỗi phần tích của cột 3 đi 48 (hàng 6 giữ nguyên). Như vậy ta được cân dưới của hành trình không chia cạnh (6, 3) là $81 + 48 = 129$. Đối với chia cạnh (6, 3) ta phải loại dòng 6, cột 3 khỏi ma trận tương ứng vì đã đi theo cạnh (6, 3) thì không thể đi từ 6 sang bất cứ nơi nào khác và cũng không được phép đi bắt đầu từ 3. Kết quả nhận được là ma trận với bậc giảm đi.
+
+Ngoài ra, do đi theo cạnh (6, 3) nên không thể đi từ 3 đến 6 nữa, vậy cần chặn di chuyển theo cạnh (3, 6) bằng cách đặt C(3, $6) = \infty$. Cây tìm kiếm lúc này có dạng như trong hình 4.7.
+
+![](images/b452897c6bb6f7fe14207061e9ab833cf4a39ae91d04c4563317bda79c7b1d2b.jpg)  
+(Hình 4.7)   
+Cân đáy $\scriptstyle = 81$   
+Cân đáy $\ O = 129$
+
+Canh (6,3) được chọn để phân hoạch vì phân hoạch theo nó ta thu được cân đáy của nhánh bên phải là lớn nhất so với việc phân hoạch theo các cạnh khác. Quy tắc này sẽ được áp dụng để phân hoạch mỗi đỉnh của cây tìm kiếm. Trong quá trình tìm kiếm chung ta luôn đi theo nhánh bên trái trước. Nhánh bên trái sẽ có ma trận rút gọn với bậc giảm đi 1. Trong ma trận của nhánh bên phải ta thấy một số vị trí bằng 0, và có thể rút gọn thêm được ma trận này khi tính lại các hàng số rút gọn theo phân hoạch, nhưng kích thước của ma trận vẫn
+
+Do chọn cạnh để phân hoạch phải là cạnh làm tăng cân đáy của nhánh bên phải lên nhiều nhất, nên để tìm nó ta sẽ chọn số không nào trong ma trận mà khi thay nó bằng 0 sẽ cho ta tổng hàng số rút gọn theo dòng và có giá trị lớn nhất. Thuật toán đó có thể được mô tả như sau để chọn cạnh phân hoạch (r, c). 
+
+# 4.4.2.Thuật Tục Chọn Cạnh Phân Hoạch (r,c)
+
+void BestEdge(A, k, r, c, beta)
+
+■ Đầu vào: Ma trận rút gọn A kích thước $k \times k$.  
+Kết quả ra: Cần phần nhânh $(r, c)$ và tổng hàng số rút gọn theo dòng r cột   
+c là beta.   
+{ $beta = -\infty;$  
+$for (i = 1; i \leq k; i++)$  
+$for (j = 1; j \leq k; j++)$  
+$if (A[i, j] == 0)$  
+$\min_r = \text{phần tử nhánh nhỏ nhất trên dòng } i \text{ khác với } A[i,j];$  
+$\min_c = \text{phần tử nhỏ nhất trên cột } j \text{ khác với } A[i,j];$  
+$total = \min_r + \min_c;$  
+$if (total > beta)$  
+$beta = total;$  
+$r = i; \ N = chi_sô \dot{\delta} dòng t\dot{\delta}nh \dot{\hat{a}}t^* /$  
+$c = j; \ N = chi_sô \dot{\delta} c\hat{o}tt\dot{\delta}tnh \dot{\hat{a}}t^*/$  
+
+Trong ma trận rút gọn $5 \times 5$ của nhánh bên trái hình 5.4, số không ở vị trí (4, 6) sẽ cho tổng hàng số rút gọn là 32 (theo dòng 4 là 32, cột 6 là 0). Đây là hệ số rút gọn có giá trị lớn nhất đối với các số không của ma trận này. Việc phân nhánh tiếp tục sẽ dựa vào cạnh (4, 6). Khi đó, cân dưới của nhánh bên phải tương ứng với tập hành trình đi qua cạnh (6,3) nhưng không đi qua cạnh (4, 6) sẽ là $81 + 32 = 113.$ Còn nhánh bên trái sẽ tương ứng với $4 \times 4$. Tình huống phân nhánh này được mô tả trong Hình 4.7.
+
+Nhận thấy rằng vi cạnh (4, 6) và (6, 3) nằm trong hành trình nén cạnh (3, 4) không thể đi qua được (nếu đi qua ta sẽ có một hành trình con khác nhưng thành phố này). Để ngăn chặn việc tạo thành các hành trình con ta sẽ gán cho phần tử đó vị trí (3,4) giá trị $\infty$:
+
+![](images/822f448cfd391006453ba61de1f104addb49168b82e20265ea46ef3cbc1b4ece.jpg)  
+(Hình 4.8)
+
+# Ngăn chặn tạo thành hành trình con:
+
+Tổng quát hơn, khi phần nhanh đưa vào cạnh $(i_u, i_v)$ ta phải thêm cạnh này vào danh sách các cạnh của node bên trái nhất. Nếu $i_u$ là đỉnh cuối cùng của một đường đi $(i_1, i_2, \ldots, i_u)$ và $j_v$ là đỉnh đầu tiên của đường đi $(j_1, j_2, \ldots, j_k)$ thì để ngăn chặn khả năng tạo thành hành trình con ta phải ngăn chặn khả năng tạo thành hành trình con ta phải cân nhắc canh $(j_k, i_1)$. Để tìm $i_1$ ta đi ngược lại, để tìm $j_k$ ta đi xuôi theo $j_1$ theo danh sách các cạnh đã được kết nối vào hành trình.
+
+![](images/6247366b3391155d48ac6ab0aef6adeec7fec07d58c4f4bb7710081e9f5625a8.jpg)  
+Hình 4.9 mô tả quá trình tìm kiếm giải pháp tối ưu
+
+Tiếp tục phân nhánh tại đỉnh bên trái bằng cách sử dụng cạnh (2,1) vì số không có vị trí này có hàng số rút gọn lớn nhất là $17 + 3 = 20$ (theo dòng 2 là 17, theo cột 1 là 3). Sau khi phân nhánh theo cạnh (2, 1), ma trận của nhánh bên trái có kích thước là $3 \times 3$. Vì đã đi qua (2, 1) nên ta cần chặn cạnh (2, 1) bằng cách đặt $\mathrm{C}[1, 2] = \infty$, ta thu được ma trận sau:
+
+$$
+\begin{array}{c} 
+\begin{array} { c c c c c c } 
+{} & {} & {2} & {} & {4} & {} & {5} \\ 
+{1} & {} & {\infty} & {2} & {} & {30} \\ 
+{3} & {} & {1} & {\infty} & {} & {0} \\ 
+{5} & {} & {21} & {0} & {} & {\infty} 
+\end{array} \bigg |  
+\end{array}
+$$
+
+Ma trận này có thể rút gọn được bằng cách bỏ 1 tại cột 1 và bỏ 2 đi ở dòng 1 để nhận được ma trận cấp 3:
+
+$$
+\begin{array}{c} 
+\begin{array} { c c c c c } 
+{} & {} & {2} & {4} & {5} \\ 
+{1} & {} & {\infty} & {0} & {28} \\ 
+{3} & {} & {0} & {\infty} & {0} \\ 
+{5} & {} & {20} & {0} & {\infty} 
+\end{array} \bigg |  
+\end{array}
+$$
+
+Ta có lượng dư của nhánh tương ứng $\mathrm{l_i} 81 + 1 + 2 = 84$. Cây tìm kiếm cho đến bước này được thể hiện trong hình 5.5.
+
+Chú ý rằng, sau khi chap nhận n-2 cạnh vào hành trình thì ma trận còn lại sẽ có kích thước là $2 \times 2$. Hai cạnh còn lại của hành trình sẽ không cần lựa chọn nữa mà được kết nối ngay vào chu trình (vì nó chỉ còn duy nhất một lựa chọn). Trong ví dụ trên sau khi đã có các cạnh (6, 3), (4,6),(2,1), (1,4) ma trận của nhánh bên trái nhất có dạng:
+
+Vậy ta kết nối các cạnh (3,5), (5, 2) vào chu trình và thu được hành trình: 1, 4, 6, 3, 5, 2, 1 với chi phí là 104.
+
+Trong quá trình tìm kiếm, mỗi nút của cây tìm kiếm sẽ tương ứng với ma trận chi phí A. Ở bước đầu tiên, ma trận chi phí tương ứng với $\mathrm{góc}$ chính là ma trận C. Khi chuyển động từ góc xuông xuống nhánh bên trái xuống phía dưới, kích thước của các ma trận chi phí A sẽ giảm dần. Cuối cùng khi ma trận A có kích thước $2 \times 2$ thì ta chấm dứt việc phân nhánh và kết nối hai cạnh còn lại để thu được hành trình của người du lịch. Để nhận thấy ma trận cuối cùng rút gọn chỉ có thể là một trong hai dạng sau:
+
+Trong đó u, v, x, y có thể là 4 đỉnh khác nhau hoặc 3 đỉnh khác nhau. Để xác định xem hai cạnh nào cần được nối vào chu trình ta chỉ cần xét một phần tử của ma trận A:
+
+if A[1,1] = oo then kết nối cạnh $(u, x), (\nu, w)$
+
+else
+
+$$
+\text{kết nối cạnh } (u, w), (\nu, x);
+$$
+
+Bây giờ tất cả các node có cân độ lớn hơn 104 có thể bị loại bỏ vì chúng không chứa hành trình ngắn hơn 104. Trên hình 5.4, chúng ta thấy chỉ có node có cân độ là $1 \ 0 \ 1 < 104$ là cần phải xét tiếp. Node này chứa các cạnh (6, 3), (4, 6) và không chứa cạnh (2, 1). Ma trận chi phí tương ứng với đỉnh này có dạng: 
+
+Việc phân nhánh sẽ dựa vào cạnh (5, 1) với tổng số rút gọn là 26. Quá trình phân nhánh tiếp theo được chỉ ra như trong hình 5.6.
+
+Hình 5.6. Duyệt hành trình có cân độ là 101.
+
+![](images/848701566429708def268a870b47229ffd1be7f2bd7cc7358aa1c412645cf552.jpg)
+
+Hành trình 1, 4, 6, 3, 2, 5, 1; Đài dài 104.
+
+Như vậy chúng ta thu được hai hành trình tối ưu với chi phí là 104. Ví dụ trên cho thấy bài toán người du lịch có thể có nhiều phương án tối ưu. Trong ví dụ này, hành trình đầu tiên nhận được đã là tối ưu, tuy nhiên điều này không thể mong đợi đối với những trường hợp tổng quát. Trong ví dụ trên, chúng ta chỉ cần xét đến 13 node, trong khi tổng số hành trình của người du lịch là 120.
+
+# 4.4.3.Thuật toán nhanh giải bài toán người du lịch
+
+Các bước chính của thuật toán nhanh giải bài toán người du lịch được thể hiện trong thủ tục TSP. Thủ tục TSP xét hành trình bắt đầu với Edges là cạnh đã được chọn và tiến hành tìm kiếm tiếp theo. Các biến droc sử dụng trong thủ tục này là:
+
+Edges - Sóc cánh trong hành trình bo pháp;  
+A - Ma trận chi phí tương ứng với kích thước (n-edges, n-edges); cost - Chi phí của hành trình bo pháp.   
+MinCost - Chi phí của hành trình tốt nhất đã tìm được.   
+Hàm Reduce(A, k), BestEdge(A,k, r, c,beta) đã được xây dựng ở trên.  
+void TSP(Edges, cost, A) {  
+cost = cost + Reduce(A, n-Edges);  
+if(cost < MinCost && edges < n - 2){  
+BestEdge(A, n-edges, r, c, beta);  
+LowerBound $\mathbf{\tau} = \mathbf{\tau}$ Cost + beta;  
+Tạo thành hành trình con;  
+$NewA = A$ loại bỏ dòng $r$ và cột $c$;  
+TSP(edges + 1, cost, NewA); /* đi theo nhánh trái */  
+Khôi phục ma trận $A$ bằng cách bù lại dòng $r$ và cột $c$;  
+if(LowerBound < MinCost){  
+/* di theo nhánh phải */  
+
+$A[r][c] = \infty;$  
+TSP(edges, cost, A);  
+$A[r][c] = 0;$ /* khôi phục ma trận $A$ */  
+}  
+# 4.5. Những điểm cần ghi nhớ
+
+Bản đọc cần ghi nhớ một số nội dung quan trọng sau đây:
+
+√ Thế nào là bài toán tối ưu? Ý nghĩa của bài toán tối ưu trong các mô hình thực tế.
+
+√ Phân tích ưu điểm, nhược điểm của phương pháp liệt kê.
+
+√ Hiểu phương pháp nhanh nhất. Phương pháp xây dựng và những vấn đề liên quan.
+
+$\checkmark$ Hiểu phương pháp rút gọn ma trận trong giải quyết bài toán người du lịch.

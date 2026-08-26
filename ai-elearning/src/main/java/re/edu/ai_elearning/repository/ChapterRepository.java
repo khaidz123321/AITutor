@@ -32,4 +32,7 @@ public interface ChapterRepository extends JpaRepository<Chapter, Long> {
 
     @Query("SELECT COUNT(ch) FROM Chapter ch WHERE ch.course.id = :courseId")
     long countByCourseId(@Param("courseId") Long courseId);
+
+    @Query("SELECT ch FROM Chapter ch JOIN FETCH ch.course WHERE ch.id = :id")
+    Optional<Chapter> findByIdWithCourse(@Param("id") Long id);
 }

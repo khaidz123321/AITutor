@@ -28,11 +28,11 @@ class Settings(BaseSettings):
     MODEL_NAME: str = os.getenv("MODEL_NAME", "gemini-2.5-flash")
     TEMPERATURE: float = float(os.getenv("TEMPERATURE", 0.1))
 
-    # 4. Cấu hình AI Model cho Chẩn đoán (Agent 1) - Groq/OpenRouter
+    # 4. Cấu hình AI Model cho Chẩn đoán (Agent 1) - Groq (qwen3.6-27b siêu tốc)
     GROQ_API_KEY: str = os.getenv("GROQ_API_KEY", "")
-    DIAGNOSE_MODEL_NAME: str = os.getenv("DIAGNOSE_MODEL_NAME", "qwen/qwen3-32b")
+    DIAGNOSE_MODEL_NAME: str = os.getenv("DIAGNOSE_MODEL_NAME", "qwen/qwen3.6-27b")
 
-    # 5. Cấu hình AI Model dự phòng (Fallback) - Qwen qua OpenRouter / Groq
+    # 5. Cấu hình AI Model dự phòng (Fallback) - Groq
     OPENROUTER_API_KEY: str = os.getenv("OPENROUTER_API_KEY", "")
     FALLBACK_MODEL_NAME_GROQ: str = os.getenv("FALLBACK_MODEL_NAME_GROQ", "qwen/qwen3.6-27b")
     FALLBACK_MODEL_NAME: str = os.getenv("FALLBACK_MODEL_NAME", "qwen/qwen3-next-80b-a3b-instruct:free")

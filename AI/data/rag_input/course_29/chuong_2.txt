@@ -1,0 +1,874 @@
+# 2.1. NHỮNG NGUYÊN LÝ ĐẾM CƠ BẢN
+
+# 2.1.1. NGUYÊN LÝ TỔ HỢP
+
+Giả sử có hai công việc. Công việc thứ nhất có thể tiến hành bằng ${ \mathfrak { n } } _ { 1 }$ cách, công việc thứ hai có thể tiến hành bằng ${ \mathfrak { n } } _ { 2 }$ cách và nếu hai công việc này không thể tiến hành đồng thời. Khi đó sẽ có $ { \mathtt { n } } _ { 1 } +  { \mathtt { n } } _ { 2 }$ cách để giải quyết một trong hai công việc trên.
+
+Chúng ta có thể mở rộng qui tắc cộng cho trường hợp nhiều hơn hai công việc. Giả sử các việc $\mathrm{T}_1$, $\mathrm{T}_2, \dotsc$, $\mathrm{T}_m$ có thể làm tương ứng bằng ${\mathfrak{n}}_1$, ${\boldsymbol{\mathrm{n}}}_2$, ..., $\mathtt{n_m}$ cách và giả sử không có hai việc $\mathrm{T_i}, \mathrm{T_j}$ nào làm việc đồng thời $(i, j = 1, 2, . . , m; i \neq j)$. Khi đó, có ${\mathfrak{n}}_1 + {\boldsymbol{\mathrm{n}}}_2 + ... + \mathrm{n_m}$ cách thực hiện một trong các công việc $\mathrm{T}_1, \mathrm{T}_2, ..., \mathrm{T}_m$.
+
+Qui tắc cộng được phát biểu dưới dạng của ngôn ngữ tập hợp như sau:
+
+□ Nếu A và B là hai tập rời nhau $(\mathbf{A} \cap \mathbf{B} = \boldsymbol{\phi})$, thì: $\mathbf{N}(\mathbf{A} \cup \mathbf{B}) = \mathbf{N}(\mathbf{A}) + \mathbf{N}(\mathbf{B}).$
+
+□ Nếu $\mathbf{A}_1, \mathbf{A}_2, ..., \mathbf{A}_n$ là những tập hợp rời nhau thì: $\mathbf{N}(\mathbf{A}_1 \cup \mathbf{A}_2 \cup ... \cup \mathbf{A}_n) = \mathbf{N}(\mathbf{A}_1) + \mathbf{N}(\mathbf{A}_2) + ... + \mathbf{N}(\mathbf{A}_n).$
+
+Ví dụ 1. Giả sử cần chọn một cán bộ hoặc một sinh viên tham gia một hội đồng của một trường đại học. Hỏi có bao nhiêu cách chọn vị đại biểu này nếu như có 37 cán bộ và 63 sinh viên.
+
+Lời giải: Gọi việc thứ nhất là chọn một cán bộ từ tập cán bộ ta có 37 cách. Gọi việc thứ hai là chọn một sinh viên từ tập sinh viên ta có 63 cách. Vì tập cán bộ và tập sinh viên là rời nhau, theo nguyên lý cộng ta có tổng số cách chọn vị đại biểu này là $37 + 63 = 100$ cách chọn.
+
+Ví dụ 2. Một đoàn văn động viên gồm mơn bổ sung và bồi dưỡng cử đi thi đấu ở nước ngoài. Số văn động viên nam là 10 người. Số văn động viên nữ tham gia bổ sung $\mathrm{k}$ cả nam và nữ là 14 người. Số nữ văn động viên tham gia bồi dưỡng bằng số nam văn động viên tham gia bổ sung. Hỏi đoàn có bao nhiêu người.
+
+Lời giải: Chia đoàn thành hai tập, tập các văn động viên nam và tập các văn động viên nữ. Ta nhận thấy tập nữ lại được chia thành hai: thi bổ sung và thi bồi dưỡng. Thấy số nữ tham gia bồi dưỡng bằng số nam tham gia bổ sung, ta được số nữ bằng tổng số văn động viên tham gia bổ sung. Từ đó theo nguyên lý cộng toàn đoàn có $14 + 10 = 24$ người.
+
+Ví dụ 3. Giá trị của biến k sẽ bằng bao nhiêu sau khi thực hiện đoạn chương trình sau:
+
+$\mathbf{k} := 0$
+
+for $\mathrm{i}_1 := 1 \text{ to } \mathrm{n}_1$  
+$\mathbf{k} := \mathbf{k} + 1$
+
+for $\mathrm{i}_2 := 1 \text{ to } \mathrm{n}_2$  
+$\mathbf{k} := \mathbf{k} + 1$
+
+for $\dot{\mathbf{i}}_m := 1 \text{ to } \mathtt{n_m}$  
+$\mathbf{k} := \mathbf{k} + 1$
+
+Lời giải. Coi mỗi vòng for là một công việc, do đó ta có $m$ công việc $\mathrm{T}_1$, $\mathrm{T}_2, ..., \mathrm{T}_{\mathrm{m}}$. Trong đó $\Delta T_i$ thực hiện bởi $\mathbf{n}_i$ cách $(\mathrm{i} = 1, 2, ..., \mathrm{m})$. Vì các vòng for không chồng chéo nhau hay các công việc không thực hiện đồng thời nên theo nguyên lý cộng tổng tất cả các cách để hoàn thành $T_1, T_2, ..., T_m$ là $k = n_1 + n_2 + ... + n_m$
+
+# 2.1.2. Nguyên lý nhân
+
+Giả sử một nhiệm vụ nào đó được tách ra hai công việc. Việc thứ nhất được thực hiện bằng $\mathbf{n}_1$ cách, việc thứ hai được thực hiện bằng $\mathbf{n}_2$ cách sau khi việc thứ nhất đã được làm, khi đó sẽ có $\mathbf{n}_1 . \mathbf{n}_2$ cách thực hiện nhiệm vụ này. Nguyên lý nhân có thể được phát biểu tổng quát bằng ngôn ngữ tập hợp như sau:
+
+Nếu $\mathbf{A}_1$, $\mathbf{A}_2$, …, $\mathbf{A}_{\mathrm{m}}$ là những tập hợp hữu hạn, khi đó số phần tử của tích
+
+Nếu $\mathbf{A}_1$, $\mathbf{A}_2$, …, $\mathbf{A}_{\mathrm{m}}$ là những tập hợp hữu hạn, khi đó số phần tử của tích
+
+Nếu $\mathbf{A}_1$, $\mathbf{A}_2$, …, $\mathbf{A}_{\mathrm{m}}$ là những tập hợp hữu hạn, khi đó số phần tử của tích
+
+Nếu $\mathbf{A}_1$, $\mathbf{A}_2$, …, $\mathbf{A}_{\mathrm{m}}$ là những tập hợp hữu hạn, khi đó số phần tử của tích
+
+Nếu $\mathbf{A}_1$, $\mathbf{A}_2$, …, $\mathbf{A}_{\mathrm{m}}$ là những tập hợp hữu hạn, khi đó số phần tử của tích
+
+Nếu $\mathbf{A}_1$, $\mathbf{A}_2$, …, $\mathbf{A}_{\mathrm{m}}$ là những tập hợp hữu hạn, khi đó số phần tử của tích
+
+Nếu $\mathbf{A}_1$, $\mathbf{A}_2$, …, $\mathbf{A}_{\mathrm{m}}$ là những tập hợp hữu hạn, khi đó số phần tử của tích
+
+Nếu $\mathbf{A}_1$, $\mathbf{A}_2$, …, $\mathbf{A}_{\mathrm{m}}$ là những tập hợp hữu hạn, khi đó số phần tử của tích
+
+Nếu $\mathbf{A}_1$, $\mathbf{A}_2$, …, $\mathbf{A}_{\mathrm{m}}$ là những tập hợp hữu hạn, khi đó số phần tử của tích
+
+Nếu $\mathbf{A}_1$, $\mathbf{A}_2$, …, $\mathbf{A}_{\mathrm{m}}$ là những tập hợp hữu hạn, khi đó số phần tử của tích
+
+Nếu $\mathbf{A}_1$, $\mathbf{A}_2$, …, $\mathbf{A}_{\mathrm{m}}$ là những tập hợp hữu hạn, khi đó số phần tử của tích
+
+Nếu $\mathbf{A}_1$, $\mathbf{A}_2$, …, $\mathbf{A}_{\mathrm{m}}$ là những tập hợp hữu hạn, khi đó số phần tử của tích
+
+Nếu $\mathbf{A}_1$, $\mathbf{A}_2$, …, $\mathbf{A}_{\mathrm{m}}$ là những tập hợp hữu hạn, khi đó số phần tử của tích
+
+Nếu $\mathbf{A}_1$, $\mathbf{A}_2$, …, $\mathbf{A}_{\mathrm{m}}$ là những tập hợp hữu hạn, khi đó số phần tử của tích
+
+Nếu $\mathbf{A}_1$, $\mathbf{A}_2$, …, $\mathbf{A}_{\mathrm{m}}$ là những tập hợp hữu hạn, khi đó số phần tử của tích
+
+Nếu $\mathbf{A}_1$, $\mathbf{A}_2$, …, $\mathbf{A}_{\mathrm{m}}$ là những tập hợp hữu hạn, khi đó số phần tử của tích
+
+Nếu $\mathbf{A}_1$, $\mathbf{A}_2$, …, $\mathbf{A}_{\mathrm{m}}$ là những tập hợp hữu hạn, khi đó số phần tử của tích
+
+Nếu $\mathbf{A}_1$, $\mathbf{A}_2$, …, $\mathbf{A}_{\mathrm{m}}$ là những tập hợp hữu hạn, khi đó số phần tử của tích
+
+Nếu $\mathbf{A}_1$, $\mathbf{A}_2$, …, $\mathbf{A}_{\mathrm{m}}$ là những tập hợp hữu hạn, khi đó số phần tử của tích
+
+Nếu $\mathbf{A}_1$, $\mathbf{A}_2$, …, $\mathbf{A}_{\mathrm{m}}$ là những tập hợp hữu hạn, khi đó số phần tử của tích
+
+Nếu $\mathbf{A}_1$, $\mathbf{A}_2$, …, $\mathbf{A}_{\mathrm{m}}$ là những tập hợp hữu hạn, khi đó số phần tử của tích
+
+Nếu $\mathbf{A}_1$, $\mathbf{A}_2$, …, $\mathbf{A}_{\mathrm{m}}$ là những tập hợp hữu hạn, khi đó số phần tử của tích
+
+Nếu $\mathbf{A}_1$, $\mathbf{A}_2$, …, $\mathbf{A}_{\mathrm{m}}$ là những tập hợp hữu hạn, khi đó số phần tử của tích
+
+Nếu $\mathbf{A}_1$, $\mathbf{A}_2$, …, $\mathbf{A}_{\mathrm{m}}$ là những tập hợp hữu hạn, khi đó số phần tử của tích
+
+Nếu $\mathbf{A}_1$, $\mathbf{A}_2$, …, $\mathbf{A}_{\mathrm{m}}$ là những tập hợp hữu hạn, khi đó số phần tử của tích
+
+Nếu $\mathbf{A}_1$, $\mathbf{A}_2$, …, $\mathbf{A}_{\mathrm{m}}$ là những tập hợp hữu hạn, khi đó số phần tử của tích
+
+Nếu $\mathbf{A}_1$, $\mathbf{A}_2$, …, $\mathbf{A}_{\mathrm{m}}$ là những tập hợp hữu hạn, khi đó số phần tử của tích
+
+Nếu $\mathbf{A}_1$, $\mathbf{A}_2$, …, $\mathbf{A}_{\mathrm{m}}$ là những tập hợp hữu hạn, khi đó số phần tử của tích
+
+Nếu $\mathbf{A}_1$, $\mathbf{A}_2$, …, $\mathbf{A}_{\mathrm{m}}$ là những tập hợp hữu hạn, khi đó số phần tử của tích
+
+Nếu $\mathbf{A}_1$, $\mathbf{A}_2$, …, $\mathbf{A}_{\mathrm{m}}$ là những tập hợp hữu hạn, khi đó số phần tử của tích
+
+Nếu $\mathbf{A}_1$, $\mathbf{A}_2$, …, $\mathbf{A}_{\mathrm{m}}$ là những tập hợp hữu hạn, khi đó số phần tử của tích
+
+Nếu $\mathbf{A}_1$, $\mathbf{A}_2$, …, $\mathbf{A}_{\mathrm{m}}$ là những tập hợp hữu hạn, khi đó số phần tử của tích
+
+Nếu $\mathbf{A}_1$, $\mathbf{A}_2$, …, $\mathbf{A}_{\mathrm{m}}$ là những tập hợp hữu hạn, khi đó số phần tử của tích
+
+Nếu $\mathbf{A}_1$, $\mathbf{A}_2$, …, $\mathbf{A}_{\mathrm{m}}$ là những tập hợp hữu hạn, khi đó số phần tử của tích
+
+Nếu $\mathbf{A}_1$, $\mathbf{A}_2$, …, $\mathbf{A}_{\mathrm{m}}$ là những tập hợp hữu hạn, khi đó số phần tử của tích
+
+Nếu $\mathbf{A}_1$, $\mathbf{A}_2$, …, $\mathbf{A}_{\mathrm{m}}$ là những tập hợp hữu hạn, khi đó số phần tử của tích
+
+Nếu $\mathbf{A}_1$, $\mathbf{A}_2$, …, $\mathbf{A}_{\mathrm{m}}$ là những tập hợp hữu hạn, khi đó số phần tử của tích
+
+Nếu $\mathbf{A}_1$, $\mathbf{A}_2$, …, $\mathbf{A}_{\mathrm{m}}$ là những tập hợp hữu hạn, khi đó số phần tử của tích
+
+Nếu $\mathbf{A}_1$, $\mathbf{A}_2$, …, $\mathbf{A}_{\mathrm{m}}$ là những tập hợp hữu hạn, khi đó số phần tử của tích
+
+Nếu $\mathbf{A}_1$, $\mathbf{A}_2$, …, $\mathbf{A}_{\mathrm{m}}$ là những tập hợp hữu hạn, khi đó số phần tử của tích
+
+Nếu $\mathbf{A}_1$, $\mathbf{A}_2$, …, $\mathbf{A}_{\mathrm{m}}$ là những tập hợp hữu hạn, khi đó số phần tử của tích
+
+Nếu $\mathbf{A}_1$, $\mathbf{A}_2$, …, $\mathbf{A}_{\mathrm{m}}$ là những tập hợp hữu hạn, khi đó số phần tử của tích
+
+Nếu $\mathbf{A}_1$, $\mathbf{A}_2$, …, $\mathbf{A}_{\mathrm{m}}$ là những tập hợp hữu hạn, khi đó số phần tử của tích
+
+Nếu $\mathbf{A}_1$, $\mathbf{A}_2$, …, $\mathbf{A}_{\mathrm{m}}$ là những tập hợp hữu hạn, khi đó số phần tử của tích
+
+Nếu $\mathbf{A}_1$, $\mathbf{A}_2$, …, $\mathbf{A}_{\mathrm{m}}$ là những tập hợp hữu hạn, khi đó số phần tử của tích
+
+Nếu $\mathbf{A}_1$, $\mathbf{A}_2$, …, $\mathbf{A}_{\mathrm{m}}$ là những tập hợp hữu hạn, khi đó số phần tử của tích
+
+Nếu $\mathbf{A}_1$, $\mathbf{A}_2$, …, $\mathbf{A}_{\mathrm{m}}$ là những tập hợp hữu hạn, khi đó số phần tử của tích
+
+Nếu $\mathbf{A}_1$, $\mathbf{A}_2$, …, $\mathbf{A}_{\mathrm{m}}$ là những tập hợp hữu hạn, khi đó số phần tử của tích
+
+Nếu $\mathbf{A}_1$, $\mathbf{A}_2$, …, $\mathbf{A}_{\mathrm{m}}$ là những tập hợp hữu hạn, khi đó số phần tử của tích
+
+Nếu $\mathbf{A}_1$, $\mathbf{A}_2$, …, $\mathbf{A}_{\mathrm{m}}$ là những tập hợp hữu hạn, khi đó số phần tử của tích
+
+Nếu $\mathbf{A}_1$, $\mathbf{A}_2$, …, $\mathbf{A}_{\mathrm{m}}$ là những tập hợp hữu hạn, khi đó số phần tử của tích
+
+Ví dụ 2. Người ta có thể ghi nhận cho chiếc ghế của một giang đường bằng mặt chữ cái và sau đó là mặt số nguyên nhỏ hơn 100. Bằng cách như vậy hỏi có nhiều nhất bao nhiêu chiếc ghế có thể ghi nhận khác nhau.
+
+Lời giải: Có nhiều nhất là $26 \times 100 = 2600$ ghế được ghi nhận. Vì ký tự gán nhận đầu tiên là mặt chữ cái vậy có 26 cách chọn các chữ cái khác nhau để ghi ký tự đầu tiên, tiếp theo sau là mặt số nguyên nhỏ hơn 100 do vậy có 100 cách chọn các số nguyên để gán tiếp sau của mặt nhận. Theo qui tắc nhân ta nhận được $26 \times 100 = 2600$ nhận khác nhau.
+
+Ví dụ 3. Có bao nhiêu xâu nhị phân có độ dài 7?
+
+Lời giải: Một xâu nhị phân có độ dài $7 ~ \mathrm{g} \dot{o} \mathrm{m} ~ 7$ bit, mỗi bit có hai cách chọn (hoặc giá trị 0 hoặc giá trị 1), theo qui tắc nhân ta $\cot \bar{2}.2.2.2.2.2.2 = 2^7 = 128$ xâu nhị phân độ dài 7.
+
+Ví dụ 4. Có bao nhiêu hàm đơn ánh xác định từ tập A có m phần tử sang tập B có n phần tử?
+
+Lời giải. Trước tiên ta nhận thấy, nếu $\mathrm {m} > \mathrm{n}$ thì tồn tại ít nhất hai phần tử khác nhau của A cùng nhận một giá trị trong B, vậy với $\mathrm{m} > \mathrm{n}$ thì số các hàm đơn ánh từ tập A sang tập B là 0. Nếu $\scriptstyle \mathrm { m <= n }$, khi đó phần tử đầu tiên của A có n cách chọn, phần tử thứ hai có n-1 cách chọn,..., phần tử thứ k có n-k+1 cách chọn. Theo qui tắc nhân ta có $n(n-1)(n-2) \ldots (\mathrm{n - m + 1})$ hàm đơn ánh từ tập A sang tập B.
+
+Ví dụ 5. Đánh dấu của số điện thoại ở Mỹ được quy định như sau: số điện thoại $\mathrm{gồm} 10$ chữ số được tách ra thành một nhóm mã vùng gồm 3 chữ số, nhóm mã chi nhánh gồm 3 chữ số và nhóm mã máy gồm 4 chữ số. Vì những nguyên nhân kỹ thuật nén có một số hạn chế đối với một số con số. Ta giả sử, X biểu thị một số có thể nhận các giá trị từ 0..9, N là số có thể nhận các chữ số từ 2..9, Y là các số có thể nhận các chữ số 0 hoặc 1. Hỏi theo hai dãy số NYX NNX XXXX và NXX NXX XXXX có bao nhiêu số điện thoại được đánh dấu khác nhau ở Mỹ?
+
+Lời giải: Danh số theo dự án NYX NNX XXXX được nhiều nhất là: $\mathrm{~8~x~2~x~10~x~8~x~8~x~10~x~10~x~10~x~10~x~10~x~10~} = \mathrm{~2~x~8~}^3\mathrm{~x~10~}^6 = \mathrm{~1~024.~10^{6}}$. Danh số theo dự án NXX NXX XXXX được nhiều nhất là: $8\mathrm{~x~}10\mathrm{~x~}10\mathrm{~x~}8\mathrm{~x~}10\mathrm{~x~}10\mathrm{~x~}10\mathrm{~x~}10\mathrm{~x~}10\mathrm{~x~}10 = 8^2\mathrm{~x~}10^8 = 64.\mathrm{~}10^{8}$
+
+Ví dụ 6. Dùng qui tắc nhận hay chỉ ra rằng số tập con của một tập S hữu hạn là $2 ^ { \mathrm{N(S)} }$.
+
+Lời giải: ta liệt kê các phần tử của tập S là $\mathbf{s}_1$, $\mathbf{s}_2$, ..., $\mathbf{s}_{\mathrm{N(S)}}$. Xây dựng một xâu bit nhị phân dài N(S) bit, trong đó nếu bit thứ i có giá trị 0 thì phần tử $\mathbf{s}_i \notin S$, nếu bit thứ i có giá trị 1 thì phần tử $\mathbf{s}_i \in S$ $(\mathrm{i} = 1, 2, ..., \mathrm{N(S)})$. Như vậy, theo nguyên lý nhận, số tập con của tập hợp S chính là số xâu bit nhị phân có độ dài N(S). Do đó, chúng ta có $2 ^ { \mathrm{N(S)} }$ xâu bit nhị phân độ dài N(S).
+
+# 2.2. Nguyên lý bù trừ
+
+Trong một số bài toán đề phức tạp. Nếu không có giả thiết gì về sự rời rạc giữa hai tập A và B thì $\mathrm { N } ( \mathrm { A } \cup \mathrm { B } ) = \mathrm { N } ( \mathrm { A } ) + \mathrm { N } ( \mathrm { B } ) - \mathrm { N } ( \mathrm { A } \cap \mathrm { B } )$
+
+Ví dụ 1: Lớp toán học rời rạc có 25 sinh viên giỏi tin học, 13 sinh viên giỏi toán và 8 sinh viên giỏi cả toán và tin học. Hỏi lớp có bao nhiêu sinh viên nếu mỗi sinh viên học giỏi toán hoặc học giỏi tin học hoặc giỏi cả hai môn?
+
+Lời giải. Gọi A là tập các sinh viên giỏi Tin học, B là tập các sinh viên giỏi Toán. Khi đó $A \cap B$ là tập sinh viên giỏi cả Toán và Tin học. Vì mỗi sinh viên trong lớp học giỏi Toán, hoặc học giỏi Tin học hoặc giỏi cả hai nên ta có tổng số sinh viên trong lớp là $\mathbf { N } ( \mathbf { A } \cup \mathbf { B } )$. Do đó ta có:
+
+$$
+\mathrm { N } ( \mathrm { A } \cup \mathrm { B } ) = \mathrm { N } ( \mathrm { A } ) + \mathrm { N } ( \mathrm { B } ) - \mathrm { N } ( \mathrm { A } \cap \mathrm { B } ) = 25 + 13 - 8 = 30.
+$$
+
+Ví dụ 2: Có bao nhiêu số nguyên không lớn hơn 1000 chia hết cho 7 hoặc 11.
+
+Lời giải. Gọi A là tập các số nguyên không lớn hơn 1000 chia hết cho 7, B là tập các số nguyên không lớn hơn 1000 chia hết cho 11. Khi đó tập số nguyên không lớn hơn $1000$ chia hết cho 7 hoặc chia hết cho 11 là $\mathrm { N } ( \mathrm { A } \cup \mathrm { B } )$. Theo công thức 1 ta có:
+
+$$
+\begin{array} { r l } & { \mathrm { N } ( \mathrm { A } \cup \mathrm { B } ) = \mathrm { N } ( \mathrm { A } ) + \mathrm { N } ( \mathrm { B } ) - \mathrm { N } ( \mathrm { A } \cap \mathrm { B } ) = \left\lfloor 1000 / 7 \right\rfloor + \left\lfloor 1000 / 11 \right\rfloor - \left\lfloor 1000 / 7 \cdot 11 \right\rfloor } \\ & { \quad \quad \quad = 142 + 90 - 12 = 220 . } \end{array}
+$$
+
+Trước khi đưa ra công thức tổng quát cho n tập hợp hữu hạn, chúng ta đưa ra công thức tính số phần tử của hợp 3 tập A, B, C.
+
+Ta nhận thấy $\mathrm { N } ( \mathrm { A } ) + \mathrm { N } ( \mathrm { B } ) + \mathrm { N } ( \mathrm { C } )$ đếm một lần những phần tử chỉ thuộc mỗi trong ba tập hợp. Như vậy, số phần tử của $A \cap B$, $\mathbf { N } ( \mathbf { A } \cap \mathbf { C } )$, $\mathrm { N } ( \mathrm { B } \cap \mathrm { C } )$ được đếm hai lần và những phần tử thuộc cả ba tập hợp được đếm ba lần. Như vậy, biểu thức:
+
+$$
+\mathrm { N ( A \cup B \cup C ) - N ( A \cap B ) - N ( A \cap C ) - N ( B \cap C ) }
+$$
+
+chỉ đếm các phần tử chỉ thuộc mỗi trong ba tập hợp và loại bỏ đi những phần tử được đếm hai lần. Như vậy, số phần tử được đếm ba lần chưa được đếm, nên ta phải cộng thêm với giao của cả ba tập hợp. Từ đó ta có công thức đối với 3 tập không rời nhau:
+
+$$
+\mathrm { v(A \cup B \cup C) } = \mathrm { N(A) } + \mathrm { N(B) } + \mathrm { N(C) } - \mathrm { N(A \cap B) } - \mathrm { N(A \cap C) } - \mathrm { N(B \cap C) } + \mathrm { N(A \cap B \cap C) }
+$$
+
+Định lý. Nguyên lý bù trừ. Giả sử $\mathbf{A}_1$, $\mathbf{A}_2$, ..., $\mathbf{A}_m$ là các tập hợp hữu hạn. Khi đó
+
+$$
+\mathbf{N}(\mathbf{A}_1 \cup \mathbf{A}_2 \cup ... \cup \mathbf{A}_m) = \sum_{k=1}^{m} (-1)^{k-1} N_k,
+$$
+
+trong đó $\mathrm{N_k}$ là tổng phần tử của tất cả các giao của $k$ tập lấy từ $m$ tập đã cho. (nói riêng $\mathrm{N_1 = N(A_1) + N(A_2) + ... + N(A_m), N_m = N(A_1 \cap A_2 \cap ... \cap A_m)}$). Nói cách khác:
+
+$$
+\begin{array}{rl}
+& { } \\
+& {\displaystyle N(A_1 \cup A_2 \cup ... \cup A_n) = \sum_{1 \leq i \leq n} N(A_i) - \sum_{1 \leq i < j \leq n} N(A_i \cap A_j) + \sum_{1 \leq i < j < k \leq n} N(A_i \cap A_j \cap A_k)} \\
+& { } \\
+& {\quad - ... + (-1)^{n+1} N(A_1 \cap A_2 \cap ... \cap A_n)}
+\end{array}
+$$
+
+Định lý được chứng minh bằng cách chỉ ra mọi phần tử của hợp n tập hợp được đếm đúng một lần. Bạn đọc có thể tham khảo cách chứng minh trong tài liệu [1].
+
+Ví dụ 3. Tìm công thức tính số phần tử của 4 tập hợp.
+
+Lời giải. Theo nguyên lý bù trừ ta có
+
+$$
+\begin{array} { r } { \begin{array} { r } { \mathbf { A } _ { 1 } \cup \mathbf { A } _ { 2 } \cup \mathbf { A } _ { 3 } \cup \mathbf { A } _ { 4 } ) = \mathbf { N } ( \mathbf { A } _ { 1 } ) + \mathbf { N } ( \mathbf { A } _ { 2 } ) + \mathbf { N } ( \mathbf { A } _ { 3 } ) + \mathbf { N } ( \mathbf { A } _ { 4 } ) - \mathbf { N } ( \mathbf { A } _ { 1 } \cap \mathbf { A } _ { 2 } ) -  } \\ {  \mathbf { N } ( \mathbf { A } _ { 1 } \cap \mathbf { A } _ { 3 } ) - \mathbf { N } ( \mathbf { A } _ { 1 } \cap \mathbf { A } _ { 4 } ) - \mathbf { N } ( \mathbf { A } _ { 2 } \cap \mathbf { A } _ { 3 } ) - \mathbf { N } ( \mathbf { A } _ { 2 } \cap \mathbf { A } _ { 4 } )  } \\ {  \mathbf { N } ( \mathbf { A } _ { 3 } \cap \mathbf { A } _ { 4 } ) ~ + ~ \mathbf { N } ( \mathbf { A } _ { 1 } \cap \mathbf { A } _ { 2 } \cap \mathbf { A } _ { 3 } ) ~ + ~ \mathbf { N } ( \mathbf { A } _ { 1 } \cap \mathbf { A } _ { 2 } \cap \mathbf { A } _ { 4 } )  } \\ {  \mathbf { N } ( \mathbf { A } _ { 1 } \cap \mathbf { A } _ { 3 } \cap \mathbf { A } _ { 4 } ) + \mathbf { N } ( \mathbf { A } _ { 2 } \cap \mathbf { A } _ { 3 } \cap \mathbf { A } _ { 4 } ) - \mathbf { N } ( \mathbf { A } _ { 1 } \cap \mathbf { A } _ { 2 } \cap \mathbf { A } _ { 3 } \cap \mathbf { A } _ { 4 } )  } \end{array} } \end{array}
+$$
+
+Ví dụ 4. Hỏi trong tập $\mathrm { X } = \{ 1, 2, ..., 10000 \}$ có bao nhiêu số không chia hết cho bất kỳ số nào trong các số 3, 4, 7?
+
+Lời giải. Gọi A là tập các số nhỏ hơn 10000 chia hết cho 3, B là tập các số nhỏ hơn 10000 chia hết cho 4, C là tập các số nhỏ hơn 10000 chia hết cho 7. Theo nguyên lý bù trừ ta có:
+
+I ${ \begin{array} { r l } { V ( A \cup B \cup C ) = N ( A ) + N ( B ) + N ( C ) - N ( A \cap B ) - N ( A \cap C ) - N ( B \cap C ) + N ( A \cap B \cap C ) } \end{array} }$ trong đó:
+
+$$
+{ \begin{array} { r l } { N ( A ) + N ( B ) + N ( C ) \quad \quad } & { = [ 10000 / 3 ] + [ 10000 / 4 ] + [ 10000 / 7 ] } \\ & { = 3333 + 2500 + 1428 = 7261 } \end{array} }
+$$
+
+$$
+N ( A \cap B ) = N ( A ) + N ( B ) - N ( A \cap B ) = 3333 + 2500 - [ 10000 / 3 \times 4 ] = 833
+$$
+
+$$
+\mathrm{N}(A \cap C) = \mathrm{N}(A) + \mathrm{N}(C) - \mathrm{N}(A \cap C) = 3333 + 1428 - \left[\frac{10000}{3x7}\right] = 476
+$$
+
+$\mathrm{N}(B \cap C) = \mathrm{N}(B) + \mathrm{N}(C) - \mathrm{N}(B \cap C) = 2500 + 1428 - \left[\frac{10000}{4x7}\right] = 357$   
+$\mathrm{N}(A \cap B) + \mathrm{N}(A \cap C) + \mathrm{N}(B \cap C) = 833 + 476 + 357 = 1666$   
+$\mathrm{N}(A \cap B \cap C) = \left[\frac{10000}{3x4x7}\right] = 119.$ (20   
+$\mathrm{=>} S_0$ các số nhỏ hơn 10000 cần đếm là: $1000 - \mathrm{\bf ~ N}(A \cup B \cup C) = 7261 - 1666 + 119 = 4286.$ Ví dụ 5. Có bao nhiêu xâu nhị phân độ dài 10 bắt đầu chia hết cho 10 hoặc kết thúc bằng 11.
+
+Lời giải. Gọi A là số xâu nhị phân độ dài 10 bắt đầu bằng 000, B là tập số xâu nhị phân độ dài $10$ thực bắt đầu bằng 11. Đễ nhận thấy, $\mathrm{N}(A) = \mathrm{N}(B) = 256$, $\mathrm{N}(A \cap B) = 2^6 = 64$. Theo nguyên lý bù trừ ta có:
+
+$$
+\begin{array}{rl}
+{\mathbf{N}(\mathbf{A} \cup \mathbf{B})} & {= \mathbf{N}(\mathbf{A}) + \mathbf{N}(\mathbf{B}) - \mathbf{N}(\mathbf{A} \cap \mathbf{B})} \\
+& {= 256 + 256 - 64 = 448.}
+\end{array}
+$$
+
+Ví dụ 6. Bài toán bó thư. Có n là thư và n phong bì ghi sẵn địa chỉ. Bỏ ngẫu nhiên các lá thư vào các phong bì. Hỏi xác suất để xảy ra không một lá thư nào bỏ đúng địa chỉ là bao nhiêu?
+
+Lời giải: Có tất cả $n!$ cách bỏ thư. Vậy đặt ra là đếm số cách bỏ thư sao cho không có lá thư nào đúng địa chỉ. Gọi X là tập các cách bỏ thư và $\mathbf{A}_k$ là tính chất lá thư k bỏ đúng địa chỉ. Khi đó theo nguyên lý bù trừ ta có:
+
+$$
+N = N - N_1 + N_2 - \ldots + (-1)^n N_n
+$$
+
+Trong đồ thị $\overline{N}$ là số cần tìm, $\mathbf{N} = \mathbf{n}!$, $N_k$ là số tất cả các cách bố trí sao cho có k lá thư được đặt đúng địa chỉ. Nhận xét rằng, $N_k$ là mỗi cách lấy k lá thư từ n lá, với mỗi cách lấy k lá thư đó, có $(n-k)$ cách bố trí để k lá thư này được đặt đúng địa chỉ, từ đó ta nhận được:
+
+$$
+N_k = C(n, k)(n - k)! = \frac{n!}{k!(n - k)!} = \overline{N} = n!\left(1 - \frac{1}{1!} + \frac{1}{2!} - \cdots + \frac{(-1)^n}{n!}\right)
+$$
+
+Từ đó ta có xác suất cần tìm là:
+
+$$
+1 - \frac{1}{1!} + \frac{1}{2!} - \cdots + \frac{(-1)^n}{n!} = e^{-1}
+$$
+
+Số được tính như trên được gọi là số derangement và được ký hiệu là $D_n$. Dưới đây là một vài giá trị của $D_n$, sự tăng nhanh của $D_n$ cho ta thấy rõ sự bùng nổ khi n càng lớn.
+
+![](images/ed9e2701d710c3c090f91bd51edf7292e34831e08ee12ae67c836045b161eaed.jpg)
+
+# 2.3. Đếm các hoán vị và tổ hợp
+
+# 2.3.1. Tổ hợp lặp
+
+Định nghĩa: Một tổ hợp lặp chọn k phần tử từ n phần tử là cách lấy k phần tử từ tập đã cho, với mỗi phần tử có thể được lấy nhiều lần.
+
+Như vậy, mặt chính hợp lặp chap k của n phần tử có thể xem là phần tử của tích các $\mathbf{A}^{\mathrm{k}}$ với A là tập đã cho. Theo nguyên lý nhân, số tất cả các chính hợp lặp chap k của n sẽ là $n^k$.
+
+Ví dụ 1. Tính số hàm từ tập có k phần tử vào tập có n phần tử?
+
+Lời giải: Biểu diễn mỗi hàm bằng một mặt bát k thành phần, trong đó thành phần thứ i là ảnh của phần tử thứ i $(1 \leq i \leq k)$. Mỗi thành phần được lấy ra từ một trong n giá trị. Từ đó suy ra hàm là số bộ k thành phần lấy từ tập hợp bằng ${\mathfrak{n}}^k$.
+
+Ví dụ 2. Tùy chọn chữ cái tiếng Anh có thể tạo ra được bao nhiêu xâu có độ dài n?
+
+Lời giải: Bảng chữ cái tiếng Anh gồm 26 ký tự $[A, Z]$, số các xâu có độ dài n được chọn từ 26 chữ cái chính là chính hợp lặp n của 26 phần tử và bằng $26^n$.
+
+Ví dụ 3. Tính xác suất lấy ra liên tiếp đúng 3 quả bóng đỏ ra khỏi bình chứa 5 quả đỏ, 7 quả xanh nếu sau mỗi lần múc ra một quả bóng lại bỏ nó vào bình?
+
+Lời giải: Số kết quả có lợi để ta lấy ra liên tiếp 3 quả bóng đỏ là $5^3$ vì có 5 quả đỏ ta phải lấy 3 quả (chú ý vì có hoán vị). Tổng số kết quả có thể để lấy ra ba quả bóng bất kỳ trong 12 quả bóng là $12^3$. Như vậy, xác suất để có thể lấy ra 3 quả bóng đỏ liên tiếp là $\frac{5^3}{12^3}$.
+
+# 2.3.2. Chính hợp không lặp
+
+Định nghĩa 2. Chính hợp không lặp chap k của n phần tử là bộ chọn gồm k thành phần lấy ra từ n phần tử đã cho. Các phần tử không được lặp lại.
+
+Để xây dựng một chính hợp không lặp, ta xây dựng từng thành phần đầu tiên. Thành phần này có n khả năng chọn. Mỗi thành phần tiếp theo những khả năng chọn giảm đi 1 (vì không được lấy lặp lại). Tới thành phần thứ $k$ khả năng chọn còn lại là $n - k + 1$. Theo nguyên lý nhân ta có số chính hợp không lặp chap $k$ của tập hợp n phần tử ký hiệu là $P(n, k)$ được tính theo công thức:
+
+$$
+P ( n , k ) = n ( n - 1 ) \ldots ( n - k + 1 ) = { \frac { n ! } { ( n - k ) ! } }
+$$
+
+Ví dụ 1. Tìm số hàm đơn ánh có thể xây dựng được từ tập k phần tử sang tập n phần tử?
+
+Lời giải: Số hàm đơn ánh từ tập k phần tử sang tập n phần tử chính là $P(n,k)$.
+
+Ví dụ 2. Giả sử có tam vần đăng viên chạy thi. Người về nhất sẽ được nhận huy chương vàng, người về nhì nhận huy chương bạc, người về ba nhận huy chương đồng. Hỏi có bao nhiêu cách trao huy chương nếu tất cả các kết quả đều có thể xảy ra?
+
+Lời giải: Số cách trao huy chương chính là số chính hợp chap 3 của tập hợp 8 phần tử. Vì vậy $P(8, 3) = 8 \cdot 7 \cdot 6 = 336$ cách trao huy chương.
+
+Ví dụ 3. Có bao nhiêu cách chọn 4 cầu thủ khác nhau trong đội bóng $\mathrm{g} \dot{\mathrm{o}} \mathrm{m} 10$ cầu thủ để tham gia các trận đấu đơn.
+
+Lời giải. $\mathrm{C}_{10}^{4}=10 . 9 . 8 . 7=5040$ cách chọn.
+
+# 2.3.3. Hoán vị
+
+Định nghĩa 3. Ta gọi các hoán vị của $n$ phần tử là một cách xếp có thứ tự tất cả các phần tử đó. Số các hoán vị của tập $n$ phần tử có thể coi là trường hợp riêng biệt của tổ hợp không lặp với ${\bf k} = {\bf n}$.
+
+Ta cũng có thể đồng nhất mỗi hoán vị với một song ảnh từ tập $n$ phần tử lên chính nó. Như vậy, số hoán vị của tập gồm $n$ phần tử là $\operatorname{P}(n,n)=n!$:
+
+Ví dụ 1. Có 6 người xếp thành hàng (chụp ảnh). Hỏi có thể chụp được bao nhiêu kiểu khác nhau?
+
+Lời giải. Mỗi kiểu ảnh là một hoán vị của 6 người. Do đó có $6!=720$ kiểu ảnh khác nhau có thể chụp.
+
+Ví dụ 2. Cần bố trí thực hiện $n$ chương trình trên máy tính. Hỏi có bao nhiêu cách bố trí khác nhau?
+
+Lời giải. Các chương trình được đánh số từ 1, 2,..., n. Như vậy, số chương trình cần thực hiện trên một máy tính là số hoán vị của 1, 2, ..., n.
+
+Ví dụ 3. Một thương nhân đi bán hàng tại các trạm ở phố. Chỉ ta có thể bắt đầu hành trình của mình tại một trạm nào đó nhưng phải qua 7 trạm kia theo bất kỳ thứ tự nào mà chỉ ta muốn. Hỏi có bao nhiêu lộ trình khác nhau mà chỉ ta có thể đi?
+
+Lời giải. Vì thành phố xuất phát đã được xác định. Do vậy thương nhân có thể chọn tùy ý, 7 thành phố còn lại để hành trình. Như vậy, tất cả số hành trình của thương nhân có thể đi qua là $7! = 5040$ cách.
+
+# 2.3.4. Tổ hợp
+
+Định nghĩa 4. Một tổ hợp chập k của n phần tử là một bảng không chứa $\mathrm{k}$ phần tử khác nhau lấy từ n phần tử đã cho. Nói cách khác, ta có thể coi một tổ hợp chập k của n phần tử là một tập con k phần tử lấy trong n phần tử. Số tổ hợp chập k của n phần tử ký hiệu là C(n,k).
+
+Ta có thể tính trực tiếp số các tổ hợp chập k của tập n phần tử thông qua chỉnh hợp không lặp của k phần tử. Xét tập hợp tất cả các chỉnh hợp không lặp chập k của n phần tử. Sắp xếp chúng thành những lớp sao cho hai chỉnh hợp thuộc cùng một lớp chỉ khác nhau về thứ tự. Rõ ràng mỗi lớp như vậy là một tổ hợp chập k của n $(\mathrm{P}(n, k))$. Số chỉnh hợp trong mỗi lớp đều bằng nhau và bằng $\mathbf{k!}$ (số hoán vị k phần tử: $\mathrm{P(k,k)}$). Số các lớp bằng số tổ hợp chập k của n $(\mathrm{P(n,k)})$. Từ đó ta có:
+
+$$
+P(n, k) = C(n, k) . P(k, k) \Rightarrow C(n, k) = \frac{P(n, k)}{k!} = \frac{n!}{k!(n - k)!}
+$$
+
+Ví dụ 1. Cho ${\bf S} = \{\mathrm{a, b, c, d}\}$ tìm $C(4,2)$?
+
+Lời giải. Rõ ràng ${\mathrm{C}}(4,2) = 6$ tương ứng với 6 tập con $\{a, b\}$, $\{a, c\}$, $\{a,d\}$, $\{b,c\}$, $\{b,d\}$, $\{c,d\}$.
+
+Ví dụ 2. Có $n$ đội bóng thi đấu vòng tròn. Hỏi phải tổ chức bao nhiêu trận đấu.
+
+Lời giải: Cứ hai đội bóng thì có một trận. Từ đó suy ra số trận đấu sẽ bằng số cách chọn 2 trong $n$ đội, nghĩa là bằng ${\mathrm{C}}(n, 2) = \frac{n!}{2!(n-2)!} = \frac{n(n-1)}{2}$ trận đấu.
+
+Ví dụ 3. Chứng minh a) $\mathbf{C}(n,k) = \mathbf{C}(n,n-k)$ b) $\mathbf{C}(n,0) = \mathbf{C}(n,n) = 1$ c) $\mathbf{C}(n,k) = \mathbf{C}(n-1,k-1) + \mathbf{C}(n-1,k)$
+
+# Lời giải
+
+a. $\mathrm{C(n, n - k) = \frac{n!}{(n - k)! (n - n + k)!} = \frac{n!}{k!(n - k)!} = C(n, k).}$
+
+b) Chú ý hiển nhiên đúng $0! = 1 \Rightarrow 6$
+
+c) $\operatorname{C}(n, k) = \operatorname{C}(n - 1, k - 1) + \operatorname{C}(n - 1, k)$
+
+\[
+\begin{array}{rl}
+& C(n - 1, k - 1) + C(n - 1, k) = \frac{(n - 1)!}{(k - 1)!(n - 1 - k + 1)!} + \frac{(n - 1)!}{k!(n - k - 1)!} \\
+& = \frac{(n - 1)!}{(k - 1)!(n - k - 1)!} \left(\frac{1}{n - k} + \frac{1}{k}\right) = \frac{n!}{k!(n - k)!} = C(n, k)
+\end{array}
+\]
+
+Từ tính chất trên, ta có thể tính tất cả các hệ số tổ hợp chỉ bằng phép cộng. Các hệ số này được tính và viết lần lượt theo dòng, trên mỗi dòng ta tính và thực hiện theo cách. Bảng có dạng tam giác chính là tam giác Pascal.
+
+Các hệ số tổ hợp có liên quan chất chệt tới việc khai triển lũy thừa của mặt nhị thức. Thật vậy, trong tích
+
+$(x + y)^n = (x + y)(x + y)$: Hệ số của $x^k y^{n-k}$ sẽ là số cách chọn k phần tử từ $(x + y)$ mà trong đó lấy ra x và đồng thời $(n-k)$ lần lấy ra y, nghĩa là:
+
+$$
+(x + y)^n = C(n, 0)x^n + C(n, 1)x^{n-1}y + \ldots + C(n, n-1)xy^{n-1} + C(n, n)y^n = \sum_{k=0}^n C(n, k)x^{n-k}y^k
+$$
+
+Công thức trên còn được gọi là khai triển nhị thức Newton, các hệ số tổ hợp còn được gọi là hệ số nhị thức. Chẳng hạn lũy thừa bậc 8 của nhị thức $(x + y)^8$ được khai triển như sau:
+
+$$
+(x + y)^8 = x^8 + 8x^7y + 28x^6y^2 + 56x^5y^3 + 70x^4y^4 + 56x^3y^5 + 28x^2y^6 + 8xy^7 + y^8
+$$
+
+Trong trường hợp $\mathbf{y} = 1$, từ khai triển $(x + 1)^n$ ta có:
+
+$$
+(x + 1)^n = C(n, 0)x^n + C(n, 1)x^{n-1} + \ldots + C(n, n-1)x + C(n, n)
+$$
+
+Hoặc dạng thức sau sẽ được rút ra từ khai triển nhị thức Newton:
+
+$$
+2 ^ { n } = ( 1 + 1 ) ^ { n } = C(n,0) + C(n,1) + . . . + C(n,n-1) + C(n,n)
+$$
+
+Có thể nói rất nhiều dạng thức về số tổ hợp sẽ được suy ra. Như tính các tập hợp, đạo hàm.
+
+# 2.3.5. Tổ hợp lặp
+
+Từ Định nghĩa tổ hợp, ta có thể tính toán được số tổ hợp lặp chap k từ tập n phần tử bằng $C(n + k - 1, k)$:
+
+Ví dụ 1. Phương trình $x _ { 1 } + x _ { 2 } + x _ { 3 } = 11$ có bao nhiêu nghiệm nguyên không âm?
+
+Lời giải. Mỗi nghiệm nguyên không âm của phương trình ứng với một cách chọn 11 phần tử từ tập có 5 3 loại, sao cho có $x _ { 1 }$ phần tử loại 1 được chọn, $x _ { 2 }$ phần tử loại 2 được chọn, $x _ { 3 }$ phần tử loại 3 được chọn. Số này chính bằng số tổ hợp lặp chap 11 từ tập có 3 phần tử.Vậy, số nghiệm nguyên không âm của phương trình là:
+
+$$
+C(3 + 11 - 1, 11) = C\left(13, 11\right) = \frac{13 \cdot 12}{2} = 78.
+$$
+
+Ví dụ 2. Phương trình $x _ { 1 } + x _ { 2 } + x _ { 3 } = 11$ có bao nhiêu nghiệm nguyên không âm thỏa mãn $x _ { 1 } \geq 1$, $x _ { 2 } \geq 2$, $x _ { 3 } \geq 3$?
+
+Lời giải. Mỗi nghiệm nguyên không âm của phương trình tương ứng với một cách chọn 11 phần tử từ một tập có 3 loại, sao cho có $x _ { 1 }$ phần tử loại 1 được chọn, $x _ { 2 }$ phần tử loại 2 được chọn, $x _ { 3 }$ phần tử loại 3 được chọn. Trong đó, có ít nhất một phần tử loại 1, hai phần tử loại 2 và ba phần tử loại 3. Vì vậy ta chọn một phần tử loại 1, hai phần tử loại 2, ba phần tử loại 3 sau đó chọn thêm 5 phần tử nữa. Số này chính bằng số tổ hợp lặp chập 5 từ tập có 3 phần tử. Vậy, số nghiệm nguyên không âm của phương trình là:
+
+$$
+\mathrm { C } ( 3 + 5 - 1 , 5 ) = \mathrm { C } \left( 7 , 5 \right) = \frac{7 . 6}{2} = 21 .
+$$
+
+Ví dụ 3. Phương trình $x _ { 1 } + x _ { 2 } + x _ { 3 } = 11$ có bao nhiêu nghiệm nguyên không âm thỏa mãn $1 \leq x _ { 1 } \leq 3 ?$
+
+Lời giải. Ta nhận thấy, số nghiệm nguyên không âm của phương trình thỏa mãn $1 \leq x _ { 1 } \leq 3$ chính bằng số nghiệm nguyên không âm của phương trình thỏa mãn $x _ { 1 } \geq 1$ sau đó trừ bớt đi những nghiệm $x _ { 1 } \geq 4$. Từ Ví dụ 1 ta tính được số nghiệm nguyên không âm của phương trình thỏa mãn $1 \leq x _ { 1 } \leq 3$ là
+
+$$
+\mathbf { C } ( 3 + 10 - 1 , 10 ) - \mathbf { C } ( 3 + 7 - 1 , 7 ) = \mathbf { C } ( 12 , 10 ) - \mathbf { C } ( 9 , 7 ).
+$$
+
+# 2.4. Hệ thống truy hồi
+
+Thường người ta thường quan tâm đến những bài toán đệ trong đó kết quả đệ phụ thuộc vào một tham số đầu vào (mà ta ký hiệu là n), chẳng hạn như các số ma trận $\mathrm{D}_n$. Việc biểu diễn kết quả này như mặt hàm của n bằng cách sử dụng các phép toán không phải là đơn giản. Trong nhiều trường hợp, việc tìm ra một công thức trực tiếp giữa kết quả đệ và n là rất khó khăn và nhiều khi không giải quyết được, trong khi đó công thức liên hệ giữa kết quả đệ với giá trị n với các kết quả bé hơn n lại đơn giản và dễ tìm. Thông qua công thức này và một vài giá trị ban đầu, ta có thể tính mọi giá trị còn lại khác. Công thức đó gọi là công thức truy hồi đệ qui. Đặc biệt, công thức truy hồi rất thích hợp với lập trình vì cho phép giảm dần độ phức tạp cũng như gia tăng độ chính xác của câu toán.
+
+# 2.4.1. Định nghĩa và ví dụ
+
+Định nghĩa 1. Hệ thức truy hồi đối với dãy số $\{ \mathfrak{a}_n \}$ là công thức biểu diễn $\mathbf{a}_n$ qua một hay nhiều số hạng trước đó của dãy, cụ thể là ${\bf a}_1$, $a_2$, ..., $\mathbf{a}_{n-1}$ với mọi $n \geq n_0$ nguyên dương. Dãy số được gọi là lời giải hay nghiệm của hệ thức truy hồi nếu các số hạng của nó thỏa mãn hệ thức truy hồi.
+
+Vi dụ 1. Lãi kép. Giả sử một người gửi 10,000 đô la vào tài khoản của mình tại một ngân hàng với lãi suất kép $1\%$ mỗi năm. Hỏi sau 30 năm anh ta có bao nhiêu tiền trong tài khoản của mình.
+
+Lời giải. Gọi $\mathbf{P_n}$ là tổng số tiền có trong tài khoản sau $n$ năm. Vì số tiền có trong tài khoản sau $n$ năm bằng số tiền được trong $n-1$ năm cộng với lãi suất năm thứ $n$. Vậy $\{\mathrm{P_n}\}$ thỏa mãn hệ thức truy hồi:
+
+$$
+\mathrm{P_n} = \mathrm{P_{n-1}} + 0.01 \cdot \mathrm{P_{n-1}} = 1.01 \cdot \mathrm{P_{n-1}}
+$$
+
+Chúng ta có thể dùng phương pháp lặp để tìm công thức trên cho $\mathbf{P_n}$. Đặt nhận thấy rằng:
+
+\[
+\begin{array}{l}
+\mathrm{P_0} = 10,000 \\
+\mathrm{P_1} = 1.01 \cdot \mathrm{P_0} \\
+\mathrm{P_2} = 1.01 \cdot \mathrm{P_1} = (1.01)^2 \cdot \mathrm{P_0}
+\end{array}
+\]
+
+Và chung ta có thể chứng minh tính đúng đắn của công thức truy hồi bằng qui nạp.
+
+Thay $\mathrm{P_0} = 10,000$ và $n = 30$, ta được: $\mathrm{P_{30}} = (1.01)^{30} \cdot 10,000 = 22,892.297\ S$
+
+Ví dụ 2. Hòn nhà thơ và số Fibonacci. Một cặp thỏ sinh đôi (một con đực và một con cái) được thả lên một hòn đảo. Giả sử rằng cặp thỏ sẽ chưa sinh sản được trước khi đến hai tháng tuổi. Từ khi chúng đạt hai tháng tuổi, mỗi tháng chúng sinh thêm được một cặp thỏ. Tìm công thức truy hồi tính số cặp thỏ trên đảo sau n tháng với giả sử các cặp thỏ là trưởng thành.
+
+![](images/6c1c5653261b47481cc95b0ae87325022cb021c8ded1e290db572f0052cf8721.jpg)
+
+Lời giải: Giả sử $\mathbf{f_n}$ là số cặp thỏ sau n tháng. Ta sẽ chỉ ra rằng $\mathbf{f_1}, \mathbf{f_2}, ..., \mathbf{f_n} (n = 1, 2, ..., n)$ là các số của dãy Fibonacci.
+
+Cuối tháng thứ nhất số cặp thỏ trên đảo là $\mathbf{f_1} = 1$. Vì tháng thứ hai cặp thỏ vẫn chưa đến tuổi sinh sản nên trong tháng thứ hai $\mathbf{f_2} = 1$. Vì mỗi cặp thỏ chỉ sinh sản sau ít nhất hai tháng tuổi, nên ta tìm số cặp thỏ sau tháng thứ n bằng cách cộng số cặp thỏ sau tháng $n-2$ và tháng $n-1$, hay $\mathrm{f_n} = \mathrm{f_{n-1}} + \mathrm{f_{n-2}}$. Do vậy, dãy $\{\mathbf{f_n}\}$ thỏa mãn hệ thức truy hồi
+
+$$
+\mathrm{f_n = f_{n-1} + f_{n-2} \quad với \quad n \geq 3 \quad và \quad f_1 = 1, f_2 = 1.}
+$$
+
+Ví dụ 3. Tính số mặt thu $\mathrm{D_n}$
+
+Lời giải: Danh sách thư và phong bì từ 1 đến n (thư i ghi đúng địa chỉ nếu bỏ vào phong bì i). Một cách bó thư được đồng nhất với hoán vị $( \mathbf { a } _ { 1 } , \mathbf { a } _ { 2 } , . . . , \mathbf { a } _ { n } )$ của $\{ 1, 2, ..., n \}$. Mặt khác thư được định nghĩa là mặt hoán vị $( \mathbf { a } _ { 1 } , \mathbf { a } _ { 2 } , \ldots , \mathbf { a } _ { n } )$ sao cho $\mathrm {a_i} \neq i$ với mọi $i$. Thành phần ${\bf a}_1$ có thể chấp nhận mỗi giá trị ngoại trừ 1. Với mỗi giá trị $k ( k \neq 1)$ của ${\bf a}_1$, xét hai trường hợp:
+
+1. $\mathbf {a_k} = 1$, khi đó các thành phần còn lại được xác định như một mặt thư tự của $n-2$ phần tử, tức là số mặt thư tự loại này bằng $\mathrm{D}_{n - 2}$.
+2. $\mathrm{a_k} \neq 1$, khi đó các thành phần từ 2 đến n được xác định như một mặt thư tự của $n-1$ phần tử còn lại, tức là số mặt thư tự này thuộc loại $\mathrm{D}_{n - 1}$.
+
+Từ đây ta nhận được công thức
+
+$$
+D _ { \mathrm { n } } = ( \mathrm { n } - 1 ) ( \mathrm { D } _ { \mathrm { n } - 1 } + \mathrm { D } _ { \mathrm { n } - 2 } ), \quad \mathrm{với} \quad \mathrm {D}_1 = 0, \quad \mathrm{D}_2 = 1.
+$$
+
+Mỗi giá trị còn lại được tính đơn giản nhờ luật $\mathrm{k}\hat{\mathrm{e}}$ thura.
+
+$$
+\begin{array}{rlrl}
+& \mathbf{D}_{3}=(3-1)(0+1) & & =2 \\
+& \mathbf{D}_{4}=(4-1)(1+2) & & =9 \\
+& \mathbf{D}_{5}=(5-1)(9+2) & & =44 \\
+& \mathbf{D}_{6}=(6-1)(9+44) & & =265 \\
+& \mathbf{D}_{7}=(7-1)(44+265) & & =1854 \\
+& \mathbf{D}_{8}=(8-1)(265+1854) & & =14833
+\end{array}
+$$
+
+$\mathbf{\vec{p}} \mathbf{\vec{\hat{e}}}$ công thức đúng với $\mathfrak{n} = 2$, ta có $D_0 = 1$. Cho thấy được ma trận thuần tuý qua công thức truy hồi trên:
+
+$D_n = (n - 1)(D_{n-1} + D_{n-2}) \Rightarrow D_n - nD_{n-1} = -(D_{n-1} - (n - 1)D_{n-2})$
+
+Đặt $V_n = D_n - nD_{n-1}$ ta có:
+
+$D_n - nD_{n-1} = V_n = -V_{n-1} = \cdots = (-1)^{n-1}V_1 = (-1)^n$. Hay ta có thể viết:
+
+$\frac{D_n}{n!} - \frac{D_{n-1}}{(n-1)!} = \frac{(-1)^n}{n!}$
+
+Cộng tổng công thức trên với $n = 1, 2, ..., n$ ta được:
+
+$\frac{D_n}{n!} = 1 - \frac{1}{1!} + \frac{1}{2!} - \cdots + \frac{(-1)^n}{n!}$
+
+Từ đó dùng công thức cũ:
+
+$D_n = n!(1 - \frac{1}{1!} + \frac{1}{2!} - \cdots + \frac{(-1)^n}{n!})$
+
+Ví dụ 3. Tính hệ số tổ hợp $C(n,k)$.
+
+Lời giải. Chọn phần tử có định a trong n phần tử đang xét. Chia số cách chọn tập con $\mathbf{k}$ phần tử này thành hai lớp (lớp chứa a và lớp không chứa a). Nếu a được chọn thì ta cần chọn $k-1$ phần tử từ $n-1$ phần tử còn lại, theo định lý cộng ta có $C(n-1, k-1)$ cách. Nếu a không được chọn, thì ta phải chọn $k$ phần tử từ $n-1$ phần tử còn lại, theo lớp không chứa a $\mathrm{g \dot{o} m C ( n - 1 , k )}$ cách. Theo nguyên lý cộng ta được công thức truy hồi:
+
+$\mathbf{C}(n,k) = \mathbf{C}(n-1,k-1) + \mathbf{C}(n-1,k)$ với các giá trị biến dùng suy ra trực tiếp:
+
+$$
+\mathrm{{ C }( n , 0 ) = \mathrm{{ C }( n , n ) = 1 . }}
+$$
+
+Phương pháp này được gọi là phương pháp khử. Không phải lúc nào cũng dễ dàng khử được công thức truy hồi để đưa về công thức trực tiếp. Tuy nhiên, trong một số trường hợp đặc biệt ta có thể đưa ra phương pháp tổng quát để giải công thức truy hồi.
+
+# 2.4.2. Giải công thức truy hồi tuyến tính thuận nhất với hệ số hàng số
+
+Định nghĩa 1. Một hệ thức truy hồi tuyến tính thuận nhất bậc $\mathbf{k}$ với hệ số hàng số là hệ thức truy hồi có dạng:
+
+$$
+a _ { n } = c _ { 1 } a _ { n - 1 } + c _ { 2 } a _ { n - 2 } + \cdots + c _ { k } a _ { n - k }
+$$
+
+Ta cần tìm công thức trực tiếp cho $\mathbf{s} \acute{\boldsymbol{\hat{0}}}$ hàng $\mathbf{a}_n$ của dãy số $\{\mathfrak{a}_{\mathfrak{n}}\}$ thỏa mãn công thức (1). Theo nguyên lý thứ hai của qui nạp toán học thì dãy số thỏa mãn định nghĩa trên được xác định duy nhất nếu nó thỏa mãn $\mathbf{k}$ điều kiện đầu:
+
+Ví dụ $1.$ Hé thức truy hồi $\mathrm{P}_n = 1.11 \mathrm{P}_{n-1}$ là hệ thức truy hồi tuyến tính thuận nhất bậc 1. Hệ thức truy hồi $\mathrm{f}_n = \mathrm{f}_{n-1} + \mathrm{f}_{n-2}$ là hệ thức truy hồi tuyến tính thuận nhất bậc 2. Hệ thức truy hồi ${\sf a}_n = {\sf a}_{n-5}$ là hệ thức truy hồi tuyến tính thuận nhất bậc 5. Hệ thức truy hồi $\scriptstyle \mathbf{B}_n = n \mathbf{B}_{n-1}$ không phải là hệ thức truy hồi tuyến tính thuận nhất vì nó không có hệ số hàng số.
+
+Phương pháp cơ bản để giải hệ thức truy hồi tuyến tính thuận nhất là tìm nghiệm dưới dạng $\mathbf{a}_n = \mathbf{r}^n$, trong đó $r$ là hạng số ngẫu nhiên, và $\boldsymbol{\mathcal{A}}_n = \boldsymbol{r}^n$ là nghiệm của hệ thức truy hồi $\mathrm{a_n = c_1 a_{n-1} + c_2 a_{n-2} + ... + c_k a_{n-k}}$. Và nếu
+
+$\mathrm{a_n = c_1 r^{n-1} + c_2 r^{n-2} + ... + c_k r^{n-k}.}$ Chia cả hai vế cho $r^n$ ta nhận được:
+
+$$\mathbf{r^k - c_1 r^{k-1} - c_2 r^{k-2} - \ldots - c_{k-1} r - c_k = 0}$$
+
+Vậy $\{\mathbf{a}_n\}$ với $\mathbf{a_n = r^n}$ là nghiệm nếu và chỉ nếu $r$ là nghiệm của (2). Phương trình (2) còn được gọi là phương trình đặc trưng của hệ thức truy hồi, nghiệm của nó là nghiệm đặc trưng của hệ thức truy hồi. Nghiệm của phương trình đặc trưng dùng để biểu diễn công thức tổng quát các nghiệm của hệ thức truy hồi.
+
+Chúng ta sẽ trình bày các kết quả với giả thuyết thực truy hồi tuyến tính thuận nhất bậc hai. Sau đó ta sẽ nêu ra những kết quả tương tự cho trường hợp tổng quát khi bậc lớn hơn hai.
+
+Định lý 1. Cho $c _ { I } , \ c _ { 2 }$ là các hàng số thực. Giả sử $r ^ { 2 } - c _ { I } r + c _ { 2 } = 0$ có hai nghiệm phân biệt $r _ { I } , r _ { 2 }$. Khi đó $\{ a _ { n } \}$ là nghiệm của hệ thức truy hồi $a _ { n } = c _ { I } a _ { n - I } + c _ { 2 } a _ { n - 2 }$ khi và chỉ khi $a _ { n } = \alpha _ { I } { r _ { I } } ^ { n } + \alpha _ { 2 } { r _ { 2 } } ^ { n }$ với $n = l , 2 , . . .$, $\mathrm {\alpha _ { 1 } }, \mathrm {\alpha _ { 2 }}$ là các hàng số.
+
+Chứng minh: Để chứng minh định lý này ta cần thực hiện hai việc. Đầu tiên ta cần chỉ ra rằng nếu $r _ { I } , r _ { 2 }$ là hai nghiệm của phương trình đặc trưng và $\alpha _ { I } , \alpha _ { 2 }$ là hai hàng số thì dãy $\{ a _ { n } \}$ với $a _ { n } = \alpha _ { 1 } r _ { 1 } ^ { n } + \alpha _ { 2 } r _ { 2 } ^ { n }$ là nghiệm của hệ thức truy hồi. Ngược lại, cần phải chứng minh rằng nếu $\{ a _ { n } \}$ là nghiệm thì $a _ { n } = \alpha _ { 1 } r _ { 1 } ^ { n } + \alpha _ { 2 } r _ { 2 } ^ { n }$ với $\alpha _ { I }, \alpha _ { 2 }$ là các hàng số nào đó.
+
+$( \Rightarrow )$: Giả sử $\mathbf{r}_1$ và $\mathbf{r}_2$ là hai nghiệm phân biệt của $r^2 - c_1 r + c_2 = 0$, khi đó ta có:
+$$
+\begin{array}{rl}
+c_1 a_{n-1} + c_2 a_{n-2} &= c_1 (\alpha_1 r_1^{n-1} + \alpha_2 r_2^{n-2}) + c_2 (\alpha_1 r_1^{n-2} + \alpha_2 r_2^{n-2}) \\
+&= \alpha_1 r_1^{n-1}(c_1 r_1 + c_2) + \alpha_2 r_2^{n-2}(c_1 r_2 + c_2) \\
+&= \alpha_1 r_1^{n-2} r_1^2 + \alpha_2 r_2^{n-2} r_2^2 \\
+&= \alpha_1 r_1^n + \alpha_2 r_2^n = a_n
+\end{array}
+$$
+
+Điều này chứng tỏ dãy $\{a_n\}$ với $a_n = \alpha_1 r_1^n + \alpha_2 r_2^n$ là nghiệm của hệ thức truy hồi đã cho.
+
+(2.4 $(\Leftarrow)$: Để chứng minh ngược lại, ta giả sử dãy $\{a_n\}$ là một nghiệm bất kỳ của hệ thức truy hồi. Ta chọn $\alpha_1, \alpha_2$ sao cho dãy $\{a_n\}$ với $a_n = \alpha_1 r_1^n + \alpha_2 r_2^n$ thỏa mãn các điều kiện đầu $a_0 = C_0$, $a_1 = C_1$. Thực vậy,
+
+$$
+\begin{array}{l}
+a_{0} = C_{0} = \alpha_{1} + \alpha_{2} \\
+a_{1} = C_{1} = \alpha_{1} r_{1} + \alpha_{2} r_{2}
+\end{array}
+$$
+
+Từ phương trình đầu ta có $\alpha_2 = C_0 - \alpha_1$. Thay vào phương trình thứ hai ta có:
+
+$C_1 = \alpha_1 r_1 + (C_0 - \alpha_1) r_2 = \alpha_1 (r_1 - r_2) + C_0 - r_2;$ Từ đây suy ra: $\alpha_1 = \frac{(C_1 - C_0 r_2)}{r_1 - r_2}; \alpha_2 = C_0 - \alpha_1 = C_0 - \frac{(C_1 - C_0 r_2)}{r_1 - r_2} = \frac{(C_0 r_1 - C_1)}{r_1 - r_2}.$
+
+Như vậy, khi chọn những giá trị trên cho $\alpha_{I}, \alpha_{2}$, dãy $\{a_{n}\}$ với $a_{n} = \alpha_{1} r_{1}^{n} + \alpha_{2} r_{2}^{n}$ thỏa mãn các điều kiện đầu. Vì hệ thức truy hồi và các điều kiện đầu được xác định duy nhất nên $a_{n} = \alpha_{1} r_{1}^{n} + \alpha_{2} r_{2}^{n}$. Định lý được chứng minh.
+
+Ví dụ 1. Tìm nghiệm của hệ thức truy hồi $a_{\mathrm{n}} = a_{\mathrm{n-1}} + 2a_{\mathrm{n-2}}$ với $a_{0} = 2, a_{1} = 7.$
+
+Lời giải Phương trình đặc trưng của hệ thức truy hồi có dạng $\mathbf{r}^{2} - \mathbf{r} - 2 = 0$. Nghiệm của nó là $r_1 = 2$ và $r_2 = -1$. Theo định lý 1, dãy $\left\{\mathbf{a}_{n}\right\}$ là nghiệm của hệ thức truy hồi nếu và chỉ nếu:
+
+$a_{\mathrm{n}} = a_{1} 2^{\mathrm{n}} + a_{2} (-1)^{\mathrm{n}}$ với $a_1, a_2$ là các hạng số nào đó. Từ các điều kiện đầu suy ra:
+\[
+\begin{array}{l}
+a_{0} = 2 = a_{1} + a_{2} \\
+a_{1} = 7 = a_{1} \cdot 2 + a_{2} (-1)
+\end{array}
+\]
+
+Giải ra ta được $a_1 = 3$, $\Delta a_2 = -1$. Vậy nghiệm của biểu thức truy hồi với điều kiện đầu là dãy $\{a_n\}$ với $a_n = 3 \cdot 2^n - (-1)^n$.
+
+Ví dụ 2. Tìm công thức hiện của các số Fibonacci.
+
+Giải: Các số Fibonacci thỏa mãn hệ thức $f_n = f_{n-1} + f_{n-2}$ và các điều kiện đầu $f_0 = 0$, $f_1 = 1$. Các nghiệm của phương trình đặc trưng là:
+
+$r_1 = \left( \frac{1 + \sqrt{5}}{2} \right); \quad r_2 = \left( \frac{1 - \sqrt{5}}{2} \right)$ thì thực sau:
+
+$f_n = \alpha_1 \left( \frac{1 + \sqrt{5}}{2} \right)^n + \alpha_2 \left( \frac{1 - \sqrt{5}}{2} \right)^n$ với $\alpha_1, \alpha_2$ là hai hạng số. Các điều kiện đầu $f_0 = 0$, $f_1 = 1$ được dùng để xác định các hằng số $\alpha_1$, $\alpha_2$.
+
+$$
+\begin{array} { l } { f _ { 0 } = \alpha _ { 1 } + \alpha _ { 2 } = 0 } \\ { f _ { 1 } = \alpha _ { 1 } \left( \frac { 1 + \sqrt { 5 } } { 2 } \right) + \alpha _ { 2 } \left( \frac { 1 - \sqrt { 5 } } { 2 } \right) = 1 } \end{array}
+$$
+
+Từ hai phương trình này ta suy ra $\alpha _ { 1 } = \frac { 1 } { \sqrt { 5 } } ; \alpha _ { 2 } = - \frac { 1 } { \sqrt { 5 } }$ do đó các số Fibonacci được cho bằng công thức dạng hiện như sau:
+
+$$
+f _ { n } = \cfrac { 1 } { \sqrt { 5 } } \left( \cfrac { 1 + \sqrt { 5 } } { 2 } \right) ^ { n } - \cfrac { 1 } { \sqrt { 5 } } \left( \cfrac { 1 - \sqrt { 5 } } { 2 } \right) ^ { n }
+$$
+
+Định lý 1 không dùng được trong trường hợp nghiệm của phương trình đặc trưng là nghiệm bội. Khi phương trình đặc trưng có nghiệm bội ta sử dụng định lý sau.
+
+Định lý 2. Cho $c _ { I } , c _ { 2 }$ là các hằng số thực, với $c _ { 2 } \neq 0$. Giả sử $r ^ { 2 } - c _ { I } r - c _ { 2 } = 0$ chỉ có một nghiệm $r _ { 0 }$. Đặt $\{ a _ { n } \}$ là nghiệm của hệ thức truy hồi $a _ { n } = c _ { I } a _ { n - I } + c _ { 2 } a _ { n - 2 }$ khi và chỉ khi $a _ { n } = \alpha _ { 1 } r _ { 0 } ^ { n } + \alpha _ { 2 } n r _ { 0 } ^ { n }$, với $n = I , 2, ...$. Trong đó $\alpha _ { I } , \alpha _ { 2 }$ là các hằng số.
+
+Vi dụ 3. Tìm nghiệm của công thức truy hồi $a_{n} = 6 a_{n-1} - 9 a_{n-2}$ với các điều kiện đầu $\mathrm{a}_{0} = 1$, $\mathrm{a}_{1} = 6$,
+
+Giải: Phương trình đặc trưng $\boldsymbol{\mathrm{r}}^{2} - 6 \boldsymbol{\mathrm{r}} + 9 = 0$ có nghiệm kép $\scriptstyle\mathbf{r} = 3$. Do đó nghiệm của hệ thức truy hồi có dạng:
+
+$a_{n} = \alpha_{1} 3^n + \alpha_{2} n 3^n$ với $\alpha_{1}$, $\alpha_{2}$ là các hằng số nào đó. Từ các điều kiện đầu ta suy ra:
+
+$$
+\mathrm{a}_{0} = 1 = \alpha_{1}
+$$
+
+$$
+6 = \mathrm{a}_{1} = \alpha_{1} 3 + \alpha_{2} 3 \Rightarrow \alpha_{1} = 1, \alpha_{2} = 1
+$$
+
+Vậy nghiệm của hệ thức truy hồi và các điều kiện đầu đã cho là:
+
+$$
+a_{n} = 3^n + n 3^n
+$$
+
+Định lý 1, Định lý 2 không dùng được trong trường hợp nghiệm của phương trình đặc trưng là nghiệm phức. Khi phương trình đặc trưng có nghiệm phức ta sử dụng định lý sau.
+
+Định lý 3. Cho $c_{1}, c_{2}$ là các hằng số thực, $c_{2} \neq 0$. Giả sử $r^{2} - c_{1} r + c_{2} = 0$ có hai nghiệm phức liên hợp
+
+$$
+\begin{array}{l}
+r_{1} = r (\cos(\theta) + i . \sin(\theta)) \\
+r_{2} = r (\cos(\theta) - i . \sin(\theta))
+\end{array}
+$$
+
+Khi đó, dãy $\{ a _ { n } \}$ là nghiệm của hệ thức truy hồi $a _ { n } = c _ { 1 } a _ { n - 1 } + c _ { 2 } a _ { n - 2 }$ khi và chỉ khi 
+$$
+a _ { n } = r ^ { n } \big ( \alpha _ { 1 } \cos ( n \theta ) + \alpha _ { 2 } \sin ( n \theta ) \big )
+$$
+với $n = 1, 2, ...$ trong đó $\alpha _ { 1 }, \alpha _ { 2 }$ là nghiệm của phương trình đặc trưng.
+
+Ví dụ. Tìm nghiệm của hệ thức truy hồi sau $a _ { n } = 2 a _ { n - 1 } - 4 a _ { n - 2 }$ với $a _ { 0 } = 4$, $a _ { 1 } = 4$.
+
+# Lời giải.
+
+Bước 1. Tìm nghiệm của phương trình đặc trưng:
+
+$$
+r ^ { 2 } + 2 r + 4 = 0 \Longleftrightarrow \left\{ 
+\begin{array}{l}
+r _ { 1 } = -1 + i \sqrt{3} \\
+r _ { 2 } = -1 - i \sqrt{3}
+\end{array}
+\right.
+$$
+
+Bước 2. Xây dựng công thức tổng quát cho $a _ { n }$
+
+$$
+a _ { n } = r ^ { n } \bigl( c _ { 1 } \cos ( n \theta ) + c _ { 2 } \sin ( n \theta ) \bigr) = (-1)^n \left( c _ { 1 } \cos \left( \frac{n\pi}{3} \right) + c _ { 2 } \sin \left( \frac{n\pi}{3} \right) \right)
+$$
+
+Bước 3. Tìm các hạng số thông qua điều kiện đầu:
+
+$$
+\begin{array}{c} 
+\left\{ 
+\begin{array} { l l } 
+{ \displaystyle 2 \bigg ( \frac { 1 } { 2 } c _ { _ 1 } + \frac { \sqrt { 3 } } { 2 } c _ { _ 2 } \bigg ) = 4 } \\ 
+{ \displaystyle 4 \bigg ( - \frac { 1 } { 2 } c _ { _ 1 } + \frac { \sqrt { 3 } } { 2 } c _ { _ 2 } \bigg ) = 4 } 
+\end{array} 
+\right. 
+\Leftrightarrow \alpha _ { _ 1 } = 1 ; \alpha _ { _ 2 } = \sqrt { 3 }  
+\end{array}
+$$
+
+Bước 4. Hoàn chỉnh công thức cho an.
+
+$$
+a _ { n } = 2 ^ { n } \left( \cos ( n \pi / 3 ) + \sqrt { 3 } \sin ( n \pi / 3 ) \right) 
+\qquad 
+$$
+
+Bây giờ ta phát biểu kết quả tổng quát về nghiệm các hệ thức truy hồi tuyến tính thuần nhất với các hệ số hàng số.
+
+Định lý 4. Cho $c _ { I }$, $c _ { 2 }$, ..., $c _ { k }$ là các số thực. Giả sử phương trình đặc trưng
+
+$r^k - c_1 r^{k-1} - \cdots - c_k = 0$
+
+có $k$ nghiệm phân biệt $r _ { I } , r _ { 2 } , \ldots , r _ { k }$. Khi đó dãy $\{ a _ { n } \}$ là nghiệm của hệ thức truy hồi 
+
+$a _ { n } = c _ { 1 } a _ { n - 1 } + c _ { 2 } a _ { n - 2 } + \cdots + c _ { k } a _ { n - k }$
+
+khi và chỉ khi $a _ { n } = \alpha _ { 1 } r _ { 1 } ^ { n } + \alpha _ { 2 } r _ { 2 } ^ { n } + \cdots + \alpha _ { k } r _ { k } ^ { n }$ 
+
+trong đó $\alpha _ { I } , \alpha _ { 2 } ,$ ..., $\alpha _ { k }$ là các hệ số.
+
+Vi dụ 4. Tìm nghiệm của hệ thức truy hồi $\mathrm{a_n} = 6\mathrm{a_{n-1}} - 11\mathrm{a_{n-2}} + 6\mathrm{a_{n-3}}$ với điều kiện đầu $\mathrm{a_0} = 2$, $\mathrm{a_1} = 5$, $a_2 = 15$:
+
+Giải: Đa thức đặc trưng của hệ thức truy hồi là:
+$$
+r^3 - 6r^2 + 11r - 6
+$$
+có các nghiệm là $r_1 = 1$, $r_2 = 2$, $r_3 = 3$. Do vậy, nghiệm của hệ thức truy hồi có dạng:
+$$
+a_n = \alpha_1 1^n + \alpha_2 2^n + \alpha_3 3^n
+$$
+
+Để tìm các hằng số $\alpha_1, \alpha_2, \alpha_3$ ta đặt vào những điều kiện ban đầu:
+
+\[
+\begin{array}{l}
+a_0 = 2 = \alpha_1 + \alpha_2 + \alpha_3 \\
+a_1 = 5 = \alpha_1 + \alpha_2 2 + \alpha_3 3 \\
+a_2 = 15 = \alpha_1 + \alpha_2 4 + \alpha_3 9
+\end{array}
+\]
+
+Giải hệ phương trình này ta nhận được $\alpha_1 = 1$, $\alpha_2 = -1$, $\alpha_3 = 2$. Vậy nghiệm duy nhất của hệ thức truy hồi và các điều kiện đã cho là dãy $\{\mathrm{a_n}\}$ với:
+
+$$
+a_n = 1 - 2^n + 2 \cdot 3^n
+$$
+
+# 2.5. Qui tắc các bài toán đơn giản
+
+Một trong những phương pháp giải quyết bài toán phức tạp là qui bài toán dạng xét về những bài toán nhỏ hơn. Sự phân chia này được thực hiện một cách liên tiếp cho đến khi nhận được lời giải của bài toán nhỏ một cách dễ dàng. Tuy nhiên điều này không phải lúc nào cũng thực hiện được vì nó đòi hỏi một sự phân tích sâu sắc cấu hình cần giải. ▲
+
+Giả sử rằng có một thuật toán phân chia bài toán có n thành a bài toán nhỏ, trong đó mỗi bài toán nhỏ có n/b (đơn giản ta giả sử n chia hết cho b); trong thực tế các bài toán nhỏ thường có số nguyên gần nhất với n/b. Giả sử tổng các phép toán thêm vào khi thực hiện phân chia bài toán có n thành các bài toán có nhỏ hơn là g(n). Khi đó nếu f(n) là số các phép toán cần thiết để giải bài toán đã cho thì f thỏa mãn hệ thức truy hồi sau:
+
+Vi dụ 1. Xét thuật toán nhân hai số nguyên kích cỡ 2n bit. Kỹ thuật này gọi là thuật toán nhân nhanh có dùng kỹ thuật chia dư tri.
+
+Giải: Giả sử a và b là các số nguyên có biểu diễn nhị phân là 2n bit (có thể thêm các bit 0 vào đầu để chúng có độ dài bằng nhau).
+
+$$
+a = ( a _ { _ { 2 n - 1 } } a _ { _ { 2 n - 2 } } \cdots a _ { 1 } a _ { 0 } ) _ { 2 } \\
+b = ( b _ { _ { 2 n - 1 } } b _ { _ { 2 n - 2 } } \cdots b _ { 1 } b _ { 0 } ) _ { 2 }
+$$
+
+trong đó
+
+$$
+\begin{array} { l } { A _ { 1 } = ( a _ { 2 n - 1 } a _ { 2 n - 2 } \cdots a _ { n - 1 } a _ { n } ) _ { 2 } ; A _ { 0 } = ( a _ { n - 1 } a _ { n - 2 } \cdots a _ { 1 } a _ { 0 } ) _ { 2 } } \\ { B _ { 1 } = ( b _ { 2 n - 1 } b _ { 2 n - 2 } \cdots b _ { n - 1 } b _ { n } ) _ { 2 } ; B _ { 0 } = ( b _ { n - 1 } b _ { n - 2 } \cdots b _ { 1 } b _ { 0 } ) _ { 2 } } \end{array}
+$$
+
+Thuật toán nhân nhanh được dựa trên dạng thức:
+
+$$
+a b = ( 2 ^ { 2 ^ { n } } + 2 ^ { n } ) A _ { 1 } B _ { 1 } + 2 ^ { n } ( A _ { 1 } - A _ { 0 } ) ( B _ { 0 } - B _ { 1 } ) + ( 2 ^ { n } + 1 ) A _ { 0 } B _ { 0 }
+$$
+
+Điều này chỉ ra rằng phép nhân hai số nguyên $2n$ bit có thể thực hiện bằng cách sử dụng 3 phép nhân các số nguyên $n$ bit và các phép cộng, trừ, dịch chuyển. Như vậy, nếu $f(n)$ là tổng các phép toán nhị phân cần thiết để nhân hai số $n$ bit thì
+
+$$
+f ( 2 n ) = 3 f ( n ) + C n
+$$
+
+Ba phép nhân các số nguyên $n$ bit cần $3 f ( n )$ phép toán nhị phân. Mỗi một phép cộng, trừ, dịch chuyển dùng mặt hàng số nhân với $n$ lần chính là $Cn$.
+
+Ví dụ 2. Bài toán xếp khách của Lucas. Có một bàn tròn, xung quanh có $2n$ ghế. Cần sắp xếp cho $n$ cặp vợ chồng sao cho các ông ngồi xen kẽ các bà và không có hai cặp vợ chồng nào ngồi cạnh nhau. Hỏi có tất cả bao nhiêu cách xếp?
+
+Lời giải. Gọi số phức cần tìm là $\mathbf{M}_{\mathrm{n}}$. Xếp cho các bà trước (cứ xếp một ghế thì một ông đến ngồi), số cách xếp cho các bà là $2n!$ cách. Gọi số cách xếp cho các ông tương ứng với mỗi cách xếp các bà là $\mathrm{U}_n$, ta dùng số cách xếp còn lại để tính $\mathrm{S}^0\mathrm{U}_{\mathrm{n}}$
+
+Danh sách các bà (đã xếp) từ 1 đến n, danh số các ông tương ứng với các bà (ông i là chồng bà i), sau đó danh số các ghế trống theo ngay ghế số i nằm giữa bà i và bà $i + 1$ (các phép cộng dưoc hiệu lấy modulo n nghĩa là $\mathbf{n} + \mathbf{1} = 1$. Mỗi cách xếp các ông được biểu diễn bằng mặt phép thế $\boldsymbol{\Phi}$ trên tập $\{1, 2, ..., \mathrm{n}\}$ với điều kiện $\boldsymbol{\Phi}(i) = j$ có nghĩa là ghế i được xếp cho ông j. Theo giả thiết $\boldsymbol{\Phi}$ phải
+
+$$
+\Phi(i) \neq i \quad \text{và} \quad \Phi(i) \neq i + 1
+$$
+
+Như vậy, $\mathrm{U}_n$ là số tất cả các phép thế $\boldsymbol{\Phi}$ thỏa mãn điều kiện $(^{*})$. Trong toán học gọi $\mathbf{U}_{\mathrm{n}}$ là số phân bố.
+
+Xét tập hợp tất cả các phép thế $\vdots_{\varphi \text{cia} \{1, 2, \ldots, n\}}$. Trong tập này ta gọi $\mathrm{\mathbf{P}_i}$ là tính chất $\boldsymbol{\Phi}(i) = i$ và $\Delta \mathrm{Q_i}$ là tính chất $\Phi(i) = i + 1$. Đặt $\mathbf{P}_{n+i} = \mathbf{Q}_i.$ Theo nguyên lý bù trừ tương ứng với $2n$ tính chất $\mathrm{\mathbf{P}_i}$ ta có:
+
+$U_{n} = \overline{N} = n! - N_{1} + N_{2} + \ldots$ trong đồ $\mathrm{N}_{k}$ là tổng số tất cả các phép thử thỏa mãn $k$ tính chất lấy từ $2n$ tính chất đang xét. Cần chú ý rằng, không thể xảy ra đồng thời thỏa mãn $\mathrm{P}_{i}$ và $\mathrm{Q}_{i}$. Do đó trong các phép lấy ra $\mathbf{k}$ tính chất từ $2n$ tính chất đang xét cần thêm vào điều kiện: $\mathrm{P}_{i}$ và $\mathrm{Q}_{i}$ hoặc $\mathrm{P}_{i+1}$ và $\Delta Q_{i}$ không được đồng thời có mặt. Gọi số các cách này là $\mathrm{g}(2n, k)$ (nhất định $\mathrm{g}(2n, k) = 0$ khi $k > n$). Với mỗi cách lấy ra $\mathbf{k}$ tính chất như vậy $(\mathbf{k} \leqslant \mathbf{n})$ ta có $(n-k)!$ phép thử thỏa mãn chung. Từ đó ta nhận được $\mathrm{N}_{k} = g(2n, k)(n - k)!$ và
+
+$$
+U_{n} = n! - g(2n, 1)(n-1)! + g(2n, 2)(n-2)! \cdots (-1)^{n}g(2n, n)
+$$
+
+Bây giờ chúng ta phải tính các hệ số $\mathrm{g}(2n, k), k = 1, 2, \ldots, n.$
+
+Xếp 2n tính chất đang xét trên công thức theo thứ tự $\mathrm{P_1, Q_1, P_2, Q_2, \ldots, P_n, Q_n}$ ta thấy rằng $\mathrm{g}(2n, k)$ chính là số cách lấy $k$ phần tử trong 2n phần tử xếp thành vòng tròn sao cho không có hai phần tử nào kế nhau cùng được lấy ra. Để tính $\mathrm{g}(2n, k)$ ta giải hai bài toán con sau:
+
+Bài toán 1. Có bao nhiêu cách lấy $k$ phần tử trong $n$ phần tử xếp trên đường thẳng sao cho không có hai phần tử nào kế nhau cùng được lấy ra.
+
+Lời Giải. Khi lấy $k$ phần tử, ta còn $n-k$ phần tử. Giữa $n-k$ phần tử còn lại ($\scriptstyle{\mathrm{n - k + 1}}$ khoảng trong) mỗi cách lấy $k$ khoảng từ các khoảng này sẽ tương ứng với một cách chọn $k$ phần tử thỏa mãn yêu cầu đã nêu. Vậy số cách chọn cần tìm là $\mathbf{C}(\mathbf{n - k + 1}, \mathbf{k})$:
+
+Bài toán 2. Giống như bài toán 1 nhưng $n$ phần tử xếp trên vòng tròn.
+
+Lời giải. Có định phần tử a được chọn chia các cách lấy thành 2 loại
+
+1- Các cách mà a được chọn khi đó b không được chọn và phải lấy k-1 phần tử từ n-3 phần tử còn lại. Các phần tử này xem như kết quả của bài toán 1. Theo bài toán 1, số cách thu được lớp kiểu này là C(n-k-1, k-1).
+
+2- Các cách mà a không được chọn, khi đó b đi và bài toán trở về bài toán 1 chọn k phần tử từ n-1 phần tử xếp trên đường thẳng. Theo bài toán 1, số cách xếp kiểu này là C(n-k,k).
+
+Vậy theo nguyên lý cộng số cách cần tìm là :
+
+$$
+C ( n - k - 1 , k - 1 ) + C ( n - k , k ) = \frac { n } { n - k } C ( n - k , k )
+$$
+
+Từ kết quả của hai bài toán trên ta nhận được:
+
+$$
+g ( 2n, k ) = \frac { 2n } { 2n - k } C ( 2n - k , k ) \quad \text{và} \quad p h a n \ b o \ U _ { n } \ d u c t i n h \ b a n g
+$$
+
+$$
+T _ { n } = n ! - \frac { 2n } { 2n - 1 } C ( 2n - 1 , 1 ) ( n - 1 ) ! + \frac { 2n } { 2n - 2 } C ( 2n - 2 , 2 ) ( n - 2 ) ! \cdots \cdots + (-1)^{n} \frac { 2n } { n } C ( 2n - k , k ) ( n - k ) !
+$$
+
+Dưới đây là một số giá trị của $\mathrm{{ U } _ { n }}$, một lần nữa chúng ta lại được quan sát hiện tượng bổng nó tóm hợp.
+
+![](images/4c694ac5799c0c47ca0b55bcf2868a1af4ddf6c734dc62f34ff70f58ea3b48bb.jpg)
+
+# 2.6 Phương pháp liệt kê
+
+Việc tìm một công thức cho kết quả đúng ngay cả trong trường hợp công thức truy hồi không phải là đơn giản và lúc nào cũng thực hiện được. Cho đến nay còn nhiều bài toán đếm chưa có lời giải dưới dạng một công thức. Đối với những bài toán như vậy, người ta chỉ còn cách chỉ ra một phương pháp liệt kê, theo đó có thể đi qua được tất cả các cấu hình cần đếm. Rõ ràng bản thân phương pháp liệt kê không chỉ ra được một kết quả cụ thể nào nhưng qua đó người ta có thể lập trình cho máy tính điện tử đếm hộ.
+
+Để minh họa cho phương pháp liệt kê, ta xét một cấu hình thô nổi tiếng đó là các hình chữ nhật la tinh.
+
+Giả sử S là tập gồm n phần tử. Không mất tính tổng quát ta giả sử $\mathbf{S} = \{1, 2, \ldots, n\}$. Một hình chữ nhật la tinh trên S là một bảng gồm p dòng, q cột sao cho mỗi dòng của nó là một chỉnh hợp không lặp chap q của S và mỗi cột của nó là một chỉnh hợp không lặp chap p của S.
+
+Theo định nghĩa ta có $p \leq n$, $q \leq n$. Đặc biệt trong trường hợp $\mathfrak{q} = \mathfrak{n}$, mỗi dòng của hình chữ nhật la tinh là một hoán vị của S, sao cho không có cột nào chứa hai phần tử lặp lại. Hình chữ nhật la tinh dạng này được gọi là chuẩn nếu dòng đầu tiên của nó là hoán vị 1, 2, ..., n.
+
+Ví dụ. Hình là hình chữ nhật la tinh chuẩn trên tập $\mathrm{S} = \{1, 2, 3, 4, 5, 6, 7\}$
+
+![](images/e13051c9aa011cbd698fd91b5beff556908bc686c925dc2cabc34436506f35c6.jpg)
+
+Gọi $L(p,n)$ là số hình chữ nhật là tinh $p \times n$, còn $K(p,n)$ là số hình chữ nhật là tinh chuẩn $p \times n$ ta có:
+
+$$
+\operatorname{L}(\mathfrak{p}, \mathbf{n}) = \mathbf{n}! \operatorname{K}(\mathfrak{p}, \mathbf{n})
+$$
+
+Để nhận thấy rằng, số mặt $\mathrm{D}_n$ là số hình là tinh chuẩn $2 \times n$, số phần bù $\mathrm{U}_n$ là số hình chữ nhật là tinh chuẩn $3 \Delta x n$ với hai dòng đầu là:
+
+Riordan J(1946) đã chứng minh công thức:
+
+$$
+K(3, n) = \sum_{k=0}^{m} C(n, k) D_{n-k} D_k U_{n-2k}
+$$
+
+trong đó $m=\left[\frac{n}{2}\right]$, $U_0 = 1$.
+
+Bài toán với số dòng nhiều hơn đến nay vẫn chưa được giải quyết. Người ta chỉ đưa ra được một vài dạng tiềm năng của $\operatorname{L}(\mathfrak{p}, \mathfrak{n})$
+
+Nếu $p=q=n$, thì hình chữ nhật là tinh được gọi là hình vuông là tinh. Một hình vuông là tinh cấp $n$ được gọi là chuẩn nếu có dòng đầu và cột đầu là hoán vị 1, 2,..., n. Thí dụ mặt một hình vuông là tinh chuẩn cấp 7.
+
+![](images/71853e2cb175a874a358e13dac4c2a2c6c9c4656450d15626e3bfe99514d00bd.jpg)
+
+7 1 2 3 4 5 6
+
+Gọi $\mathrm{l}_n$ là số các hình vuông như thế trong $L(n, n) = n! (n-1)! \mathrm{l}_n$
+
+Việc tìm một công thức cho $\boldsymbol { \mathrm { l } } _ { \mathrm { n } }$ đến nay vẫn bở ngõ. Tuy nhiên ta có thể nhớ máy tính liệt kê tất cả các hình vuông chuẩn cấp $n$. Dưới đây là một vài giá trị tính được.
+
+![](images/9e5f4327d4ac6b67a42db9c643524d4b0ccead1e0506f2c760726501cf9cff74.jpg)

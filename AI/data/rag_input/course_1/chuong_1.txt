@@ -1,5 +1,3 @@
-# CHƯƠNG 1: SỐ PHỨC VÀ GIỚI HẠN CỦA DÃY SỐ
-
 ## 1.1 TẬP SỐ PHỨC VÀ CÁC PHÉP TOÁN CƠ BẢN
 
 ### 1.1.1 Khái niệm số phức

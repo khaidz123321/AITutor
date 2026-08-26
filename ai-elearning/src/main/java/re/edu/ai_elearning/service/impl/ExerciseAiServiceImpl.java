@@ -35,6 +35,8 @@ import re.edu.ai_elearning.entity.enums.Difficulty;
 import re.edu.ai_elearning.entity.enums.BloomLevel;
 import java.util.Map;
 import java.util.ArrayList;
+import java.util.concurrent.CompletableFuture;
+import org.springframework.scheduling.annotation.Async;
 
 @Slf4j
 @Service
@@ -229,6 +231,22 @@ public class ExerciseAiServiceImpl implements ExerciseAiService {
     public void deleteExercise(Long id) {
         ExerciseAi exercise = exerciseAiRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Không tìm thấy bài tập AI"));
+
+        // Xóa luôn trong file question_bank JSON của ai_api — nguồn dữ liệu module AI Chat đọc trực
+        // tiếp, KHÔNG đồng bộ tự động với Postgres. Không mount chung volume /app/prompts nên phải
+        // gọi HTTP sang ai_api để nhờ xóa hộ. Lỗi ở bước này chỉ log cảnh báo, không chặn việc xóa
+        // bản ghi Postgres — tránh admin bị kẹt không xóa được chỉ vì AI service tạm thời gián đoạn.
+        try {
+            Chapter chapter = exercise.getChapter();
+            String subjectCode = "course_" + chapter.getCourse().getId();
+            String chapterCode = "chuong_" + chapter.getChapterNumber();
+            String url = aiServiceUrl + "/v1/exercises/question-bank/" + subjectCode + "/" + chapterCode
+                    + "/" + exercise.getExerciseCode();
+            restTemplate.exchange(url, org.springframework.http.HttpMethod.DELETE, null, Map.class);
+        } catch (Exception e) {
+            log.warn("Không xóa được câu hỏi khỏi question_bank JSON của AI service cho exercise id={}: {}", id, e.getMessage());
+        }
+
         exerciseAiRepository.delete(exercise);
     }
 
@@ -381,9 +399,16 @@ public class ExerciseAiServiceImpl implements ExerciseAiService {
     }
 
     @Override
+    @Transactional
     public List<ExerciseAiResponse> generateAutoExercises(Long chapterId) {
-        Chapter chapter = chapterRepository.findById(chapterId)
+        // Dùng JOIN FETCH để load Course cùng lúc, tránh lỗi lazy loading "no Session"
+        Chapter chapter = chapterRepository.findByIdWithCourse(chapterId)
                 .orElseThrow(() -> new ResourceNotFoundException("Không tìm thấy chương học"));
+
+        // Lấy thông tin cần thiết ngay khi entity đã được load đầy đủ
+        String subjectCode = "course_" + chapter.getCourse().getId();
+        String chapterCode = "chuong_" + chapter.getChapterNumber();
+        String courseTitle = chapter.getCourse().getTitle();
 
         List<Map<String, Object>> rawExercises = null;
 
@@ -393,8 +418,12 @@ public class ExerciseAiServiceImpl implements ExerciseAiService {
             headers.set("Authorization", "Bearer " + aiApiKey);
 
             Map<String, Object> requestBody = new java.util.HashMap<>();
-            requestBody.put("subject", "course_" + chapter.getCourse().getId());
-            requestBody.put("chapter", "chuong_" + chapter.getChapterNumber());
+            requestBody.put("subject", subjectCode);
+            requestBody.put("chapter", chapterCode);
+            requestBody.put("course_name", courseTitle); // Tên thật từ DB → FastAPI không cần dò
+            // Tên chương thật từ DB → giúp AI service khớp đúng nội dung chương theo ngữ nghĩa
+            // khi số thứ tự file lý thuyết trên đĩa bị lệch so với số chương thật (VD do OCR gộp/tách sai).
+            requestBody.put("chapter_title", chapter.getChapterName());
 
             HttpEntity<Map<String, Object>> entity = new HttpEntity<>(requestBody, headers);
             String url = aiServiceUrl + "/v1/exercises/generate-from-theory";
@@ -482,6 +511,19 @@ public class ExerciseAiServiceImpl implements ExerciseAiService {
     }
 
     @Override
+    @Async("aiTaskExecutor")
+    public CompletableFuture<Void> generateAutoExercisesAsync(Long chapterId) {
+        try {
+            log.info("[AsyncAI] Bat dau sinh bai tap ngam cho chapterId={}", chapterId);
+            generateAutoExercises(chapterId);
+            log.info("[AsyncAI] Sinh bai tap ngam THANH CONG cho chapterId={}", chapterId);
+        } catch (Exception e) {
+            log.error("[AsyncAI] Loi khi sinh bai tap ngam cho chapterId={}: {}", chapterId, e.getMessage());
+        }
+        return CompletableFuture.completedFuture(null);
+    }
+
+    @Override
     @Transactional(readOnly = true)
     public void syncExercisesToAITutor(Long chapterId) {
         Chapter chapter = chapterRepository.findById(chapterId)
@@ -526,3 +568,4 @@ public class ExerciseAiServiceImpl implements ExerciseAiService {
         }
     }
 }
+

@@ -57,7 +57,9 @@ def run_test():
                 print(f"Đang trích xuất: {pdf_file}...")
                 
                 # Gọi hàm đọc (sẽ tự động dùng cache hoặc gửi lên Colab/PyMuPDF)
-                content = reader.extract_file(pdf_path, subject)
+                # extract_file() trả về tuple (text, needs_llm) — BẮT BUỘC unpack, nếu không
+                # content.startswith(...) bên dưới sẽ crash AttributeError vì content là tuple.
+                content, _needs_llm = reader.extract_file(pdf_path, subject)
                 if content.startswith("LỖI"):
                     print(f"⚠️ ĐÃ BỎ QUA FILE {pdf_file} DO: {content}")
                     continue

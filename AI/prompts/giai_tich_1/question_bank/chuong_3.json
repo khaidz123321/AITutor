@@ -1,0 +1,85 @@
+{
+    "subject": "Giải tích 1",
+    "chapter_number": "3",
+    "chapter_name": "chuong_3",
+    "questions": [
+        {
+            "id": "GT1_C3_01",
+            "lesson_number": "3.1",
+            "lesson_name": "Định lý về tích phân không xác định",
+            "topic": "Tích phân không xác định và ứng dụng",
+            "theory_reference": "Định lý về tích phân không xác định",
+            "difficulty": "Easy",
+            "bloom_level": "Understanding",
+            "thought_process": "1. Neo lý thuyết: Định lý về tích phân không xác định. 2. Áp dụng công thức cơ bản của tích phân.",
+            "question_text": "Tính tích phân sau: $\\int \\frac{dx}{x^2 + 4}$",
+            "full_answer": "$\\frac{1}{2}\\arctan(\\frac{x}{2})+C$",
+            "detailed_solution": "Áp dụng công thức tích phân $\\int \\frac{dx}{a^2+x^2} = \\frac{1}{a}\\arctan(\\frac{x}{a}) + C$. Trong trường hợp này, $a=2$, nên ta có: $\\int \\frac{dx}{x^2+4} = \\frac{1}{2}\\arctan(\\frac{x}{2}) + C$.",
+            "scaffolding_steps": [
+                {
+                    "step_number": 1,
+                    "hint": "Xác định công thức tích phân phù hợp",
+                    "step_detail": "Công thức cần sử dụng là $\\\\int \\\\frac{dx}{a^2+x^2} = \\\\frac{1}{a}\\arctan(\\\\frac{x}{a}) + C$."
+                }
+            ],
+            "common_mistakes": []
+        },
+        {
+            "id": "GT1_C3_02",
+            "lesson_number": "3.2",
+            "lesson_name": "Định lý về tích phân xác định",
+            "topic": "Tích phân xác định và ứng dụng",
+            "theory_reference": "Định lý về tích phân xác định",
+            "difficulty": "Medium",
+            "bloom_level": "Applying",
+            "thought_process": "1. Neo lý thuyết: Định lý về tích phân xác định. 2. Áp dụng công thức cơ bản của tích phân và tính toán.",
+            "question_text": "Tính tích phân sau: $\\int_{0}^{1} x^3 dx$",
+            "full_answer": "$\\frac{1}{4}$",
+            "detailed_solution": "Áp dụng công thức tích phân xác định, ta có: $\\int_{a}^{b} f(x)dx = F(b)-F(a)$, trong đó $F'(x)=f(x)$. Trong trường hợp này, $F(x) = \\frac{x^4}{4}$ nên $\\int_{0}^{1} x^3 dx = \\left[\\frac{x^4}{4}\\right]_0^1 = \\frac{1}{4}-0=\\frac{1}{4}$.",
+            "scaffolding_steps": [
+                {
+                    "step_number": 1,
+                    "hint": "Xác định công thức tích phân xác định",
+                    "step_detail": "Công thức cần sử dụng là $\\int_{a}^{b} f(x)dx = F(b)-F(a)$."
+                },
+                {
+                    "step_number": 2,
+                    "hint": "Tính toán cụ thể",
+                    "step_detail": "Thay giá trị giới hạn vào công thức và tính toán."
+                }
+            ],
+            "common_mistakes": []
+        },
+        {
+            "id": "GT1_C3_04",
+            "lesson_number": "3.3",
+            "lesson_name": "Định lý về tích phân xác định (tiếp theo)",
+            "topic": "Tích phân xác định và ứng dụng tiếp theo",
+            "theory_reference": "Định lý về tích phân xác định",
+            "difficulty": "Hard",
+            "bloom_level": "Evaluating",
+            "thought_process": "1. Neo lý thuyết: Định lý về tích phân xác định. 2. Áp dụng công thức cơ bản của tích phân và tính toán.",
+            "question_text": "Tính diện tích hình phẳng giới hạn bởi các đường $y=x^2$ và $y=4-x^2$.",
+            "full_answer": "$\\frac{16}{3}$",
+            "detailed_solution": "Để tìm diện tích, ta cần xác định điểm giao của hai đường đã cho. Giải phương trình $x^2 = 4 - x^2$ ta được $x=\\pm \\sqrt{2}$. Diện tích hình phẳng giới hạn bởi các đường này là: $A = \\int_{-\\sqrt{2}}^{\\sqrt{2}} (4-x^2-x^2)dx = \\left[ 4x - \\frac{2}{3}x^3 \\right]_{-\\sqrt{2}}^{\\sqrt{2}}=\\frac{16}{3}$.",
+            "scaffolding_steps": [
+                {
+                    "step_number": 1,
+                    "hint": "Xác định điểm giao của hai đường",
+                    "step_detail": "Giải phương trình $x^2 = 4 - x^2$ để tìm các giá trị giới hạn."
+                },
+                {
+                    "step_number": 2,
+                    "hint": "Áp dụng công thức tích phân xác định",
+                    "step_detail": "Công thức cần sử dụng là $\\int_{a}^{b} f(x)dx = F(b)-F(a)$."
+                },
+                {
+                    "step_number": 3,
+                    "hint": "Tính toán cụ thể",
+                    "step_detail": "Thay giá trị giới hạn vào công thức và tính toán."
+                }
+            ],
+            "common_mistakes": []
+        }
+    ]
+}

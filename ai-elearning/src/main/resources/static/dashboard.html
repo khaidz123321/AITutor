@@ -572,8 +572,9 @@
                 <div class="form-group">
                     <label for="mcPdfFile">Tài liệu học tập (PDF)</label>
                     <input type="file" id="mcPdfFile" class="form-control" accept=".pdf">
-                    <small class="form-text text-muted" id="mcPdfLinkContainer" style="display:none; margin-top:8px;">
-                        Tài liệu hiện tại: <a href="#" id="mcPdfLink" target="_blank" style="color:#10b981; font-weight:600; text-decoration:none;">Xem/Tải PDF</a>
+                    <small class="form-text text-muted" style="display:block; margin-top:4px; color:var(--text-3);">Chỉ chọn file khi muốn THAY THẾ giáo trình hiện tại — để trống nếu không muốn thay đổi.</small>
+                    <small class="form-text text-muted" id="mcPdfLinkContainer" style="display:block; margin-top:8px;">
+                        Tài liệu hiện tại: <a href="#" id="mcPdfLink" target="_blank" style="color:#10b981; font-weight:600; text-decoration:none; display:none;">Xem/Tải PDF</a><span id="mcPdfNone" style="color:var(--text-3);">Chưa có</span>
                     </small>
                     <!-- Loading indicator & message for Course PDF Upload -->
                     <div id="coursePdfUploadProgress" style="display:none; margin-top:16px; margin-bottom:8px;">

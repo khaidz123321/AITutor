@@ -1,0 +1,89 @@
+{
+    "subject": "Vật lý 1",
+    "chapter_number": "1",
+    "chapter_name": "chuong_1",
+    "questions": [
+        {
+            "id": "VL1_C1_01",
+            "lesson_number": "1.1",
+            "lesson_name": "Động học một chiều",
+            "topic": "Tốc độ và gia tốc trong chuyển động thẳng đều",
+            "difficulty": "Easy",
+            "bloom_level": "Understanding",
+            "question_text": "Một vật chuyển động thẳng đều với vận tốc 5 m/s. Tính khoảng cách mà vật di chuyển được sau 10 giây.",
+            "full_answer": "Khoảng cách là 50 mét",
+            "detailed_solution": "Sử dụng công thức s = vt, ta có: s = 5 m/s * 10s = 50m",
+            "scaffolding_steps": [
+                {
+                    "step_number": 1,
+                    "hint": "Xác định công thức cần sử dụng",
+                    "step_detail": "Công thức cho chuyển động thẳng đều là s = vt"
+                },
+                {
+                    "step_number": 2,
+                    "hint": "Thay số vào công thức",
+                    "step_detail": "s = 5 m/s * 10s"
+                }
+            ],
+            "common_mistakes": []
+        },
+        {
+            "id": "VL1_C1_04",
+            "lesson_number": "1.3",
+            "lesson_name": "Động học một chiều cuối cùng",
+            "topic": "Chuyển động thẳng biến đổi đều (chuyên đề)",
+            "difficulty": "Medium",
+            "bloom_level": "Applying",
+            "question_text": "Một vật chuyển động thẳng biến đổi đều từ trạng thái nghỉ với gia tốc 4 m/s^2. Tính khoảng cách mà vật di chuyển được sau khi đạt vận tốc 30 m/s.\na) Tính thời gian cần thiết để vật đạt vận tốc 30 m/s\nb) Tính khoảng cách mà vật di chuyển được trong thời gian này",
+            "full_answer": "a) Thời gian là 7.5 giây; b) Khoảng cách là 112.5 mét.",
+            "detailed_solution": "a) Sử dụng công thức v = u + at, ta có: t = (v - u)/a = (30 m/s - 0)/(4 m/s^2) = 7.5s\nb) Sử dụng công thức s = ut + ½at², ta có: s = 0 * 7.5s + ½(4 m/s^2)(7.5s)^2 = 112.5m",
+            "scaffolding_steps": [
+                {
+                    "step_number": 1,
+                    "hint": "Xác định công thức cần sử dụng cho phần a",
+                    "step_detail": "Công thức v = u + at"
+                },
+                {
+                    "step_number": 2,
+                    "hint": "Thay số vào công thức cho phần b",
+                    "step_detail": "s = ut + ½at²"
+                }
+            ],
+            "common_mistakes": []
+        },
+        {
+            "id": "VL1_C1_03",
+            "lesson_number": "1.3",
+            "lesson_name": "Động lực học nâng cao",
+            "topic": "Phân tích chuyển động phức tạp và định luật bảo toàn năng lượng",
+            "difficulty": "Hard",
+            "bloom_level": "Evaluating",
+            "question_text": "Một vật có khối lượng m = 2 kg chuyển động theo phương thẳng với vận tốc ban đầu v0 = 10 m/s. Sau khi tác dụng một lực F trong thời gian t = 5 giây, vận tốc của nó tăng lên v = 20 m/s.\na) Tính gia tốc a và lực F tác dụng lên vật.\nb) Xác định công W mà lực F đã làm trên vật.\nc) Chứng minh rằng năng lượng cơ học của vật được bảo toàn.",
+            "full_answer": "a) Gia tốc của vật là 2 m/s^2; Lực F tác dụng lên vật là 4 N; b) Công W = 150 J; c) Năng lượng cơ học được bảo toàn",
+            "detailed_solution": "Theo công thức tính gia tốc a = (v - v0) / t, ta có: a = (20 - 10) / 5 = 2 m/s^2. Theo định luật Newton F = ma, ta có: F = 2 * 2 = 4 N. Công W = F * s = 4 * 37.5 = 150 J. Chứng minh năng lượng cơ học được bảo toàn thông qua việc tính toán và so sánh năng lượng trước và sau khi tác dụng lực.",
+            "scaffolding_steps": [
+                {
+                    "step_number": 1,
+                    "hint": "Tính gia tốc",
+                    "step_detail": "Sử dụng a = (v - v0) / t"
+                },
+                {
+                    "step_number": 2,
+                    "hint": "Áp dụng định luật Newton",
+                    "step_detail": "F = ma"
+                },
+                {
+                    "step_number": 3,
+                    "hint": "Xác định công W",
+                    "step_detail": "W = F * s"
+                },
+                {
+                    "step_number": 4,
+                    "hint": "Chứng minh bảo toàn năng lượng cơ học",
+                    "step_detail": "So sánh năng lượng trước và sau khi tác dụng lực"
+                }
+            ],
+            "common_mistakes": []
+        }
+    ]
+}

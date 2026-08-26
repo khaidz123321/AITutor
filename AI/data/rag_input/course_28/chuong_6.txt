@@ -1,0 +1,1903 @@
+# 6.1. DẠNG SONG TUYẾN TÍNH
+
+## 6.1.1. Định nghĩa dạng song tuyễn tinh
+
+Định nghĩa 6.1: Một dạng song tuyến tính trên không gian vector $V$ là một ánh xạ
+
+$$
+\begin{array} { r l } { \eta \colon V \times V } & { \to \mathbb { R } } \\ { ( u , v ) } & { \mapsto \eta ( u , v ) } \end{array}
+$$
+
+sao cho khi cố định mỗi biến thì nó trở thành ánh xạ tuyến tính đối với biến kia.
+
+Nghĩa là, với mọi $\alpha _ { 1 } , \alpha _ { 2 } , \beta _ { 1 } , \beta _ { 2 } \in \mathbb { R }$, với mọi $u _ { 1 } , u _ { 2 }, v; u, v _ { 1 } , v _ { 2 } \in V$ thì
+
+$$
+\begin{array} { r } { \eta ( \alpha _ { 1 } u _ { 1 } + \alpha _ { 2 } u _ { 2 } , v ) = \alpha _ { 1 } \eta ( u _ { 1 } , v ) + \alpha _ { 2 } \eta ( u _ { 2 } , v ), } \\ { \eta ( u, \beta _ { 1 } v _ { 1 } + \beta _ { 2 } v _ { 2 } ) = \beta _ { 1 } \eta ( u, v _ { 1 } ) + \beta _ { 2 } \eta ( u, v _ { 2 } ). } \end{array}
+$$
+
+Định nghĩa 6.2: Dạng song tuyến tính $\eta$ được gọi là có tính:
+
+ii) Không âm: Nếu $\eta ( u , u ) \geq 0$ với mọi $u \in V$,
+
+ii) Không dương: Nếu $\eta ( u, u ) \leq 0$ với mọi $u \in V$,
+
+iv) Xác định: Nếu $\eta ( u, u ) = 0$ khi và chỉ khi $u = \mathbf { 0 }$.
+
+Đẳng thức tuyến tính xác định và không âm được gọi là xác định dương. Ta thấy rằng $\eta$ xác định dương khi và chỉ khi $\eta ( u , u ) > 0$ với mọi $u \neq \mathbf { 0 }$:
+
+Một đẳng thức tuyến tính đối xứng xác định dương được gọi là tích vô hướng. Ta thường ký hiệu tích vô hướng của $u$ và $\nu$ là $\left. u , \nu \right.$ thay cho $\eta ( u , \nu )$:
+
+Ví dụ 6.1: Anh xa $\eta : \mathbb { R } ^ { 2 } \times \mathbb { R } ^ { 2 } \to \mathbb { R }$ xác định như sau: $u = ( x _ { 1 } , x _ { 2 } ) , \nu = ( y _ { 1 } , y _ { 2 } )$
+
+$$
+\eta ( u , \nu ) = 2 x _ { 1 } y _ { 1 } - 5 x _ { 1 } y _ { 2 } + x _ { 2 } y _ { 1 } + 7 x _ { 2 } y _ { 2 }.
+$$
+
+Khi cố định $\boldsymbol { u } = ( x _ { 1 } , x _ { 2 } )$ thì $\eta ( u , \nu ) = 2 x _ { 1 } y _ { 1 } - 5 x _ { 1 } y _ { 2 } + x _ { 2 } y _ { 1 } + 7 x _ { 2 } y _ { 2 }$ tuyến tính đối với $( y _ { 1 } , y _ { 2 } )$, nghĩa là tuyến tính đối với biến $\nu$:
+
+Tương tự khi cố định biến $\nu$ thì $\eta ( u , \nu )$ tuyến tính đối với biến $u$:
+
+Vậy $\eta ( u , \nu )$ là một đẳng thức tuyến tính.
+
+Ngoài ra, $\eta ( u , \nu ) \neq \eta ( \nu , u )$ và $\eta ( u , u ) = 2 x _ { 1 } ^ { 2 } - 4 x _ { 1 } x _ { 2 } + 7 x _ { 2 } ^ { 2 } = 2 ( x _ { 1 } - x _ { 2 } ) ^ { 2 } + 5 x _ { 2 } ^ { 2 } > 0$, với mọi $u = ( x _ { 1 } , x _ { 2 } ) \neq \mathbf { 0 }$. Do đó $\eta ( u , \nu )$ là một đẳng thức tuyến tính xác định dương nhưng không đối xứng.
+
+# 6.1.2. Ma trận và biểu thức tọa độ của dạng song tuyến tính
+
+Giả sử $\eta : V \times V \to \mathbb{R}$ là một dạng song tuyến tính trên không gian véc tơ $V$. Cho $\mathcal{B} = \left\{ e_1, . . . , e_n \right\}$ là một cơ sở của $V$. Ma trận vuông cấp $n$ có phần tử ở hàng $i$, cột $j$ là $\eta(e_i, e_j)$ được gọi là ma trận của dạng song tuyến tính $\eta$ trong cơ sở $\mathcal{B}$:
+
+$$
+A = \left[ \eta \right]_{\mathcal{B}} = \left[ a_{ij} \right]_{n \times n}, a_{ij} = \eta(e_i, e_j)
+$$
+
+được gọi là ma trận của dạng song tuyến tính $\eta$ trong cơ sở $\mathcal{B}$:
+
+$$
+\forall u, v \in V; u = x_1e_1 + . . . + x_ne_n, v = y_1e_1 + . . . + y_ne_n,
+$$
+
+$$
+\eta(u, v) = \eta(x_1e_1 + . . . + x_ne_n, y_1e_1 + . . . + y_ne_n) = \sum_{i,j=1}^{n} \eta(e_i, e_j)x_iy_j = \sum_{i,j=1}^{n} a_{ij}x_iy_j
+$$
+
+Công thức (6.7) được gọi là biểu thức tọa độ của dạng song tuyến tính $\eta$ trong cơ sở $\mathcal{B}$.
+
+Nếu đồng nhất ma trận mặt hàng với chính phần tử $a$, thì biểu thức tọa độ (6.7) có thể viết lại dưới dạng ma trận như sau:
+
+$$
+\eta ( u , \nu ) = \big [ \boldsymbol { u } \big ] _ { \mathcal { B } } ^ { t } \big [ \eta \big ] _ { \mathcal { B } } \big [ \nu \big ] _ { \mathcal { B } } .
+$$
+
+Ngược lại ta có thể chứng minh được rằng ánh xạ $\eta : V \times V \to \mathbb{R}$ có biểu thức xác định bởi (6.7) hoặc (6.8) là một dạng song tuyến tính có ma trận thỏa mãn (6.6).
+
+Ví dụ 6.2: Xét $\eta : \mathbb{R} ^ {3} \times \mathbb{R} ^ {3} \to \mathbb{R}$ xác định như sau: $\forall u = ( x _ {1}, x _ {2}, x _ {3}), \nu = ( y _ {1}, y _ {2}, y _ {3})$
+
+$$
+\eta ( u , \nu ) = 3 x _ {1} y _ {1} - 2 x _ {1} y _ {2} + 5 x _ {2} y _ {1} + 7 x _ {2} y _ {2} - 8 x _ {2} y _ {3} + 4 x _ {3} y _ {2} - x _ {3} y _ {3}.
+$$
+
+$\mathcal{B} = \left\{ e _ {1}, e _ {2}, e _ {3} \right\}$ là cơ sở chính tắc của $\mathbb{R} ^ {3}$. Ta có: $\eta ( e _ {1}, e _ {1}) = 3, \eta ( e _ {1}, e _ {2}) = - 2, \eta ( e _ {1}, e _ {3}) = 0, \ldots$ Do đó ma trận của $\eta$ trong cơ sở chính tắc:
+
+$$
+A = \left[ \begin{array} { l l l } { 3 } & { - 2 } & { 0 } \\ { 5 } & { 7 } & { - 8 } \\ { 0 } & { 4 } & { - 1 } \end{array} \right] .
+$$
+
+Nhận xét 6.1: Bằng cách tính toán theo công thức (6.6) và trong trường ví dụ trên ta nhận thấy rằng ma trận của dạng song tuyến tính $\eta : \mathbb{R}^n \times \mathbb{R}^n \to \mathbb{R}$ với công thức xác định $\forall u = (x_1, x_2, ..., x_n), v = (y_1, y_2, ..., y_n); \eta(u, v) = \sum_{j=1}^{n} \sum_{i=1}^{n} a_{ij} x_i y_j$ trong cơ sở chính tắc là $\left[ \eta \right]_{\mathcal{B}} = \left[a_{ij}\right]_{n \times n}$. Phần tử $a_{ij}$ ở hàng $i$ cột $j$ là hệ số tương ứng của số hạng $a_{ij} x_i y_j$.
+
+Chẳng hạn, ma trận của dạng song tuyến tính trong ví dụ 6.2 trong cơ sở chính tắc:
+
+$$
+A = \left[ { \begin{array}{rrr}
+y_1 & y_2 & y_3 \\
+3 & -2 & 0 \\
+5 & 7 & -8 \\
+0 & 4 & -1 
+\end{array} } \right] x_2
+$$
+
+# 6.1.3 Biểu thức tọa độ của dạng song tuyến tính trong các cơ sở khác nhau
+
+Giả sử $\eta$ là một dạng song tuyến tính trong không gian véc-tơ $V$, $A = \left[ a_{ij} \right] = [\eta]_{\mathcal{B}}$; $A' = \left[ a'_{ij} \right] = [\eta]_{\mathcal{B}'}$. là hai ma trận của $\eta$ trong hai cơ sở tương ương $\mathcal{B} = \left\{ e_1, . . . , e_n \right\}$, $\mathcal{B}' = \left\{ e'_1, . . . , e'_n \right\}$ của $V$: $a_{ij} = \eta(e_i, e_j)$, $a'_{ij} = \eta(e'_i, e'_j)$.
+
+Gọi $\begin{array}{r} T = \Big[ t_{ij} \Big]_{\mathcal{B}}^{\mathcal{B}'}, \end{array}$ là ma trận chuyển từ cơ sở $\mathcal{B}$ sang $\mathcal{B}'$: $e'_j = \sum_{i=1}^{n} t_{ij} e_i$.
+
+$$
+a'_{ij} = \eta(e'_i, e'_j) = \eta\left(\sum_{k=1}^n t_{ki} e_k, \sum_{l=1}^n t_{lj} e_l\right) = \sum_{k=1}^n t_{ki}\left( \sum_{l=1}^n \eta(e_k, e_l) t_{lj} \right) = \sum_{k=1}^n t_{ki}\left( \sum_{l=1}^n a_{kl} t_{lj} \right).
+$$
+
+$$
+A' = T^t A T.
+$$
+
+Công thức này cũng được suy ra từ (6.8) như sau:
+
+$$
+\left[ \boldsymbol{u} \right]_{\mathcal{B}} = T \left[ \boldsymbol{u} \right]_{\mathcal{B}} ; \quad \left[ \boldsymbol{\nu} \right]_{\mathcal{B}} = T \left[ \boldsymbol{\nu} \right]_{\mathcal{B}} ;
+$$
+
+$$
+\begin{array}{c}
+\begin{array}{r}
+\left\{
+\eta(u, \nu) = \left[u\right]_{\mathcal{B}}^t \left[\eta\right]_{\mathcal{B}} \left[\nu\right]_{\mathcal{B}} = \left[u\right]_{\mathcal{B}}^t T^t \left[\eta\right]_{\mathcal{B}} T \left[\nu\right]_{\mathcal{B}},
+\right.
+\\
+\eta(u, \nu) = \left[u\right]_{\mathcal{B}}^t \left[\eta\right]_{\mathcal{B}} \left[\nu\right]_{\mathcal{B}}
+\end{array}
+$$
+
+$$
+\Rightarrow \left[ \eta \right]_{\mathcal{B}'} = T^t \big [ \eta \big ]_{\mathcal{B}} T.
+$$
+
+(6.10)
+
+Ví dụ 6.3: Xét dạng song tuyến tính $\dot{\sigma}$ ví dụ 6.2. Xét cơ sở $\mathcal{B}' = \left\{ e_1', e_2', e_3' \right\}$ của $\mathbb{R}^3 \colon e_1' = (1, 3, 4), e_2' = (2, 0, 3), e_3' = (3, 1, 2).$
+
+$$
+\mathrm{Má trận chuyển tịnh $s \dot{\sigma}$ từ $\mathcal{B}$ sang $\mathcal{B}^{\prime}$: } T = \left[ \begin{array}{lll}
+1 & 2 & 3 \\
+3 & 0 & 1 \\
+4 & 3 & 2
+\end{array} \right].
+$$
+
+Áp dụng công thức (6.9) ta có ma trận của $\eta$ trong cơ sở ${\mathcal{B}}^{\prime}$:
+
+$$
+A^{\prime} = T^{t} A T = \left[ \begin{array}{ccc}
+11 & -48 & 33 \\
+18 & 3 & 20 \\
+1 & -2 & 31
+\end{array} \right].
+$$
+
+Hoặc có thể tính trực tiếp: $\eta(e_{1}^{\prime}, e_{1}^{\prime}) = 11, \eta(e_{1}^{\prime}, e_{2}^{\prime}) = -48, \eta(e_{1}^{\prime}, e_{3}^{\prime}) = 33, \ldots$
+
+# 6.2. ĐẲNG THỨC PHƯƠNG TRÌNH
+
+## 6.2.1. Định nghĩa đẳng thức phương trình
+
+Định nghĩa 6.3: Giả sử $\eta : V \times V \to \mathbb{R}$ là đẳng thức song tuyến tính xác định trên không gian vector $V$. Ánh xạ $\scriptstyle Q : V \to \mathbb{R}$ xác định bởi $Q(\nu) = \eta(\nu, \nu)$ được gọi là một đẳng thức phương trình trên $V$:
+
+Giả sử $\mathcal{B} = \left\{ e_{1}, . . . , e_{n} \right\}$ là một cơ sở của $V$: $\forall \nu \in V$, $\nu = x_{1} e_{1} + . . . + x_{n} e_{n}$ theo công thức (6.7) và định nghĩa đẳng thức phương trình ta có biểu thức tọa độ:
+
+$$
+Q ( \nu ) = \eta ( \nu , \nu ) = \sum _ { i , j = 1 } ^ { n } \eta ( e _ { i } , e _ { j } ) x _ { i } x _ { j } = \sum _ { i , j = 1 } ^ { n } a _ { i j } x _ { i } x _ { j } .
+$$
+
+Như vậy dạng toàn phương biểu diễn tọa độ là một đa thức dạng cấp bậc hai.
+
+Ngược lại ảnh xạ $Q : V \to \mathbb{R}$ có biểu diễn tọa độ $\hat{\mathrm{d}}\hat{\mathrm{0}}$ trong cơ sở $\mathcal{B}$ nào đó là một đa thức dạng cấp bậc hai có dạng
+
+$$
+Q ( \nu ) = \sum _ { i , j = 1 } ^ { n } a _ { i j } x _ { i } x _ { j } \ , \mathrm{với} \ \nu = \sum _ { i = 1 } ^ { n } x _ { i } e _ { i } \ .
+$$
+
+thì $Q$ là một dạng toàn phương ịđạng song tuyến tính $\eta ~ \text{cót} \ \eta ( e _ { i } , e _ { j } ) = a _ { i j }$
+
+Ví dụ 6.4: Xét dạng song tuyến tính $\sigma$ ví dụ 6.1 với $\eta : \mathbb{R} ^ { 2 } \times \mathbb{R} ^ { 2 } \to \mathbb{R}$ xác định như sau: $u = ( x _ { 1 } , x _ { 2 } ) , v = ( y _ { 1 } , y _ { 2 } ) ; \eta ( u , v ) = 2 x _ { 1 } y _ { 1 } - 5 x _ { 1 } y _ { 2 } + x _ { 2 } y _ { 1 } + 7 x _ { 2 } y _ { 2 } .$ Dạng toàn phương trên $\mathbb{R} ^ { 2 }$ tương ứng là $Q ( u ) = \eta ( u , u ) = 2 x _ { 1 } ^ { 2 } - 4 x _ { 1 } x _ { 2 } + 7 x _ { 2 } ^ { 2 }$
+
+Ta có thể xây dựng các dạng song tuyến tính khác nhau xác định cùng một dạng toàn phương, chẳng hạn:
+
+Xét các ánh $\begin{array} { r } { x a } \eta _ { 1 } : \mathbb { R } ^ { 2 } \times \mathbb { R } ^ { 2 } \to \mathbb { R } ; \eta _ { 1 } ( u , \nu ) = 2 x _ { 1 } y _ { 1 } - 2 x _ { 1 } y _ { 2 } - 2 x _ { 2 } y _ { 1 } + 7 x _ { 2 } y _ { 2 } ; \end{array}$
+
+$$
+\begin{array} { r l } & { \eta _ { 2 } : \mathbb { R } ^ { 2 } \times \mathbb { R } ^ { 2 } \to \mathbb { R } ; \eta _ { 2 } ( u , \nu ) = 2 x _ { 1 } y _ { 1 } + 2 x _ { 1 } y _ { 2 } - 6 x _ { 2 } y _ { 1 } + 7 x _ { 2 } y _ { 2 } ; } \\ & { \eta _ { 3 } : \mathbb { R } ^ { 2 } \times \mathbb { R } ^ { 2 } \to \mathbb { R } ; \eta _ { 3 } ( u , \nu ) = 2 x _ { 1 } y _ { 1 } - 4 x _ { 2 } y _ { 1 } + 7 x _ { 2 } y _ { 2 } ; } \end{array}
+$$
+
+là các dạng song tuyến tính và
+
+$$
+\eta _ { 1 } ( u , u ) = \eta _ { 2 } ( u , u ) = \eta _ { 3 } ( u , u ) = \ldots = \eta ( u , u ) = Q ( u ) .
+$$
+
+# 6.2.2. Dạng cực của dạng toàn phương
+
+Ví dụ trên chứng tỏ rằng một dạng toàn phương $\boldsymbol{Q}$ có nhiều dạng song tuyến tính $\eta$ sao cho $Q(\nu) = \eta(\nu, \nu)$. Tuy nhiên chỉ có duy nhất một dạng song tuyến tính đối xứng $\eta$ thỏa mãn $Q(\nu) = \eta(\nu, \nu)$. Dạng song tuyến tính đối xứng $\eta$ này được gọi là dạng cực của $\boldsymbol{Q}$:
+
+Dạng cực của $\boldsymbol{Q}$ được xác định bằng công thức:
+
+$$
+\eta ( u , \nu ) = { \frac { 1 } { 2 } } { \big( } Q ( u + \nu ) - Q ( u ) - Q ( \nu ) { \big) } .
+$$
+
+# 6.2.3. Ma trận và biểu thức tọa độ của dạng toàn phương
+
+Ma trận của dạng cực của $\boldsymbol{Q}$ trong cơ sở $\mathcal{B}$ cũng được gọi là ma trận của dạng toàn phương $\boldsymbol{Q}$ trong cơ sở $\mathcal{B}$. Như vậy, ma trận của dạng toàn phương là ma trận đối xứng.
+
+Ma trận trong cơ sở $\mathcal{B} = \left\{ e_1, . . . , e_n \right\}$ của dạng toàn phương $\boldsymbol{Q}$ với dạng cực $\eta$, ký hiệu $A = \left[ Q \right]_{\mathcal{B}}$, được xác định như sau
+
+$$
+A = \left[ a_{ij} \right]_{n \times n}, a_{ij} = \eta(e_i, e_j) = \eta(e_j, e_i) = a_{ji}.
+$$
+
+Biểu thức tọa độ (6.11) có thể viết lại dưới dạng ma trận
+
+$$
+Q(\nu) = \left[ \nu \right]_{\mathcal{B}}^t \left[ Q \right]_{\mathcal{B}} \left[ \nu \right]_{\mathcal{B}}.
+$$
+
+Vi dụ 6.5: Đẳng thức tuyến tính $\eta _ { 1 }$ là đẳng cực của đẳng thức toàn phương $\boldsymbol{Q}$ của Vi dụ 6.4. Do đó ma trận của đẳng thức toàn phương $\boldsymbol{Q}$ trong cơ sở chính tắc là $A = \left[ \begin{array} { l l } { 2 } & { - 2 } \\ { - 2 } & { 7 } \end{array} \right] .$ Nhận xét 6.2: Theo Nhận xét 6.1 ta có thể tìm ma trận $A$ trong cơ sở chính tắc của đẳng thức toàn phương $Q : \mathbb{R} ^ { n } \to \mathbb{R}, \ \forall \nu = ( x _ { 1 }, x _ { 2 }, . . . , x _ { n }) ; \ Q (\nu) = \sum _ { j = 1 } ^ { n } \sum _ { i = 1 } ^ { n } a _ { ij } x _ { i } x _ { j } \cdot$ như sau: $A$ là ma trận đối xứng có các phần tử trên đường chéo chính là các hệ số $a_{ii}$, phần tử hàng $i$ cột $j$ bằng $\frac{1}{2} a_{ij}$.
+
+Vi dụ 6.6: Tìm ma trận của đẳng thức toàn phương $\boldsymbol{Q}$ có biểu thức toán $\hat{\mathrm{d}}\hat{\mathrm{0}}$ trong cơ sở chính tắc của $\mathbb{R}^3$ xác định như sau: $\forall \nu = (x_1, x_2, x_3) = x_1e_1 + x_2e_2 + x_3e_3$.
+
+$$
+\begin{array} { c } { Q ( \nu ) = x _ { 1 } ^ { 2 } - 2 x _ { 1 } x _ { 2 } + x _ { 2 } ^ { 2 } + 4 x _ { 1 } x _ { 3 } + 4 x _ { 3 } ^ { 2 } + 2 x _ { 2 } x _ { 3 } . } \\ { \eta ( u , \nu ) = x _ { 1 } y _ { 1 } - x _ { 1 } y _ { 2 } - x _ { 2 } y _ { 1 } + x _ { 2 } y _ { 2 } + 2 x _ { 1 } y _ { 3 } + 4 x _ { 3 } y _ { 1 } . + 4 x _ { 3 } y _ { 3 } + x _ { 2 } y _ { 3 } + x _ { 3 } y _ { 2 } . } \\ { \text{Do vì ma trận } A = [ \begin{array} { l l l } { 1 } & { - 1 } & { 2 } \\ { - 1 } & { 1 } & { 1 } \\ { 2 } & { 1 } & { 4 } \end{array} ] . } 
+\end{array}
+$$
+
+# 6.2.4. Biểu thức tọa độ dạng chính tắc của một dạng toàn phương
+
+Biểu thức tọa độ của dạng toàn phương trên $Q$ trong cơ sở $\mathbf{s} \alpha$ nào đó của $V$ có dạng
+
+$$
+Q ( \nu ) = \lambda _ { 1 } x _ { 1 } ^ { 2 } + \lambda _ { 2 } x _ { 2 } ^ { 2 } + . . . + \lambda _ { n } x _ { n } ^ { 2 }
+$$
+
+đặc trưng gọi là biểu thức toán tử dạng chính tắc của $\boldsymbol{Q}$:
+
+Trong các mục tiếp theo chúng ta xét một vài phương pháp tìm cơ sở để biểu thức tọa độ của dạng toàn phương trong cơ sở này có dạng chính tắc.
+
+# 6.2.5. Đưa về dạng chính tắc theo phương pháp Lagrange
+
+Giả sử trong cơ sở $\mathcal{B} = \left\{ e_1, \ldots, e_n \right\}$ của không gian véc tơ $V$ biểu thức tọa độ của dạng toàn phương $\boldsymbol{Q}$ có dạng:
+
+$$
+Q(\nu) = \sum_{i,j=1}^{n} a_{ij} x_i x_j \quad , \quad a_{ij} = a_{ji} \quad , \quad \nu = \sum_{i=1}^{n} x_i e_i.
+$$
+
+Ta thực hiện các phép đổi tọa độ $\hat{\mathrm{d}}\hat{\mathrm{0}}$ sau:
+
+$\bullet$ Trường hợp 1: Giả sử có $a_{ii} \neq 0$, chẳng hạn $a_{11} \neq 0$, ta có thể sắp xếp lại:
+
+$$
+\begin{array} { l } { \displaystyle Q ( \nu ) = a _ { 1 1 } \Biggl ( x _ { 1 } ^ { 2 } + 2 x _ { 1 } \sum _ { i = 2 } ^ { n } \frac { a _ { 1 i } } { a _ { 1 1 } } x _ { i } \Biggr ) + \sum _ { i , j = 2 } ^ { n } a _ { i j } x _ { i } x _ { j } } \\ { \displaystyle \qquad = a _ { 1 1 } \Biggl ( x _ { 1 } + \sum _ { i = 2 } ^ { n } \frac { a _ { 1 i } } { a _ { 1 1 } } x _ { i } \Biggr ) ^ { 2 } + \sum _ { i , j = 2 } ^ { n } a _ { i j } x _ { i } x _ { j } - a _ { 1 1 } \Biggl ( \sum _ { i = 2 } ^ { n } \frac { a _ { 1 i } } { a _ { 1 1 } } x _ { i } \Biggr ) ^ { 2 } } \\ { \displaystyle \qquad = a _ { 1 1 } \Biggl ( x _ { 1 } + \sum _ { i = 2 } ^ { n } \frac { a _ { 1 i } } { a _ { 1 1 } } x _ { i } \Biggr ) ^ { 2 } + \sum _ { i , j = 2 } ^ { n } a _ { i j } ^ { \prime } x _ { i } x _ { j } . } \end{array}
+$$
+
+Đặt
+
+$$
+\left\{ \begin{array} { l l } { \displaystyle y _ { 1 } = x _ { 1 } + \sum _ { i = 2 } ^ { n } \frac { a _ { 1 i } } { a _ { 1 1 } } x _ { i } } \\ { \displaystyle y _ { j } = x _ { j } ; ~ j = 2 , . . . , n } \end{array} \right.
+$$
+
+ta có $Q ( \nu ) = a _ { 1 1 } { y _ { 1 } } ^ { 2 } + \sum _ { i , j = 2 } ^ { n } a _ { i j } ^ { \prime } y _ { i } y _ { j } .$
+
+Tiếp tục quá trình này với biểu thức $\sum _ { i , j = 2 } ^ { n } a _ { i j } ^ { \prime } y _ { i } y _ { j } .$
+
+$\bullet$ Trong hợp 2: Nếu mọi $a _ { i i } = 0$ và tồn tại $a _ { i j } \neq 0$, chẳng hạn $a _ { 1 2 } \neq 0$:
+
+Đặt
+
+$$
+\left\{ 
+\begin{array} { l }
+x _ { 1 } = y _ { 1 } + y _ { 2 } \\
+x _ { 2 } = y _ { 1 } - y _ { 2 } \\
+x _ { j } = y _ { j } ~ ; ~ j = 3 , \ldots , n 
+\end{array} 
+\right.
+$$
+
+$$
+Q ( \nu ) = \sum _ { i , j = 1 } ^ { n } a _ { i j } x _ { i } x _ { j } = \sum _ { i , j = 1 } ^ { n } a ' _ { i j } y _ { i } y _ { j } \ : .
+$$
+
+Có $a '_{11} = a_{12} \neq 0$, vì vậy ta có thể đưa về trường hợp 1.
+
+Tiếp tục quá trình trên, giả sử cuối cùng ta nhận được:
+
+$$
+\left[ 
+\begin{array} { l }
+x _ { 1 } \\
+\vdots \\
+x _ { n } 
+\end{array}
+\right]
+= \left[
+\begin{array} { l l l l }
+a _ { 11 } & \cdots & a _ { 1n } \\
+\vdots & \vdots & \vdots \\
+a _ { n1 } & \cdots & a _ { nn } 
+\end{array}
+\right]
+\left[
+\begin{array} { l }
+z _ { 1 } \\
+\vdots \\
+z _ { n } 
+\end{array}
+\right] ~ và ~ Q ( \nu ) = \lambda _ { 1 } z _ { 1 } ^ { 2 } + \lambda _ { 2 } z _ { 2 } ^ { 2 } + \ldots + \lambda _ { n } z _ { n } ^ { 2 } .
+$$
+
+Xét hệ vec tơ có toạ độ là các cột của ma trận trên:
+
+$$
+e '_{1} = ( a _ { 11 } , \ldots , a _ { n1 } ) , \ldots , e '_{n} = ( a _ { 1n } , \ldots , a _ { nn } ) .
+$$
+
+Khi đó với mỗi vec tơ $\nu \in V : \nu = x _ { 1 } e _ { 1 } + \dots + x _ { n } e _ { n } = z _ { 1 } e '_{1} + \dots + z _ { n } e '_{n} ~ và ~ a
+
+$$
+Q (\nu) = {\lambda_1} z_1^2 + {\lambda_2} z_2^2 + \ldots + {\lambda_n} z_n^2.
+$$
+
+Nói cách khác $\left\{ e_1', . . . , e_n' \right\}$ là cơ sở cần tìm để biểu thị toạ độ $\hat{\mathrm{d}}\hat{\mathrm{0}}$ của $Q$ trong cơ sở này có dạng chính tắc.
+
+Ví dụ 6.7: Cho dạng toán phương $Q$ của $\mathbb{R}^3$ có biểu thức toạ $\hat{\mathbf{d}}\hat{\mathbf{0}}$ trong cơ sở chính tắc $Q (\nu) = x_1^2 + 4x_2^2 + x_3^2 + 4x_1x_2 + 2x_1x_3 + 2x_2x_3.$
+
+$$
+\begin{array}{rl}
+{\mathrm{Tác 6}} & {Q (\nu) = x_1^2 + 2x_1 (2x_2 + x_3) + 4x_2^2 + x_3^2 + 2x_2x_3} \\
+& {= (x_1 + 2x_2 + x_3)^2 - (2x_2 + x_3)^2 + 4x_2^2 + x_3^2 + 2x_2x_3} \\
+& {= (x_1 + 2x_2 + x_3)^2 - 2x_2x_3.}
+\end{array}
+$$
+
+$$
+\begin{array} { r } { \check{\mathfrak{a}}\mathfrak{t} \left\{ \begin{array} { l l } { y _ { 1 } = x _ { 1 } + 2 x _ { 2 } + x _ { 3 } } \\ { \mathfrak{z}\mathfrak{z} } \end{array} \right. \Rightarrow \left\{ \begin{array} { l l } { x _ { 1 } = y _ { 1 } - 2 y _ { 2 } - y _ { 3 } } \\ { x _ { 2 } = y _ { 2 } } \\ { x _ { 3 } = y _ { 3 } } \end{array} \right. \Rightarrow \left[ \begin{array} { l l l } { x _ { 1 } } \\ { x _ { 2 } } \\ { x _ { 3 } } \end{array} \right] = \left[ \begin{array} { l l l } { 1 } & { - 2 } & { - 1 } \\ { 0 } & { 1 } & { 0 } \\ { 0 } & { 0 } & { 1 } \end{array} \right] \left[ \begin{array} { l } { y _ { 1 } } \\ { y _ { 2 } } \\ { y _ { 3 } } \end{array} \right] } \end{array}
+$$
+
+Khi đố $Q ( \nu ) = { y _ { 1 } } ^ { 2 } - 2 y _ { 2 } y _ { 3 }$
+
+$$
+\left\{ \begin{array} { l } { y _ { 1 } = z _ { 1 } } \\ { y _ { 2 } = z _ { 2 } + z _ { 3 } } \Longrightarrow [ \begin{array} { l } { y _ { 1 } } \\ { y _ { 2 } } \\ { y _ { 3 } } \end{array} ] = [ \begin{array} { l l l } { 1 } & { 0 } & { 0 } \\ { 0 } & { 1 } & { 1 } \\ { 0 } & { 1 } & { - 1 } \end{array} ] [ \begin{array} { l } { z _ { 1 } } \\ { z _ { 2 } } \\ { z _ { 3 } } \end{array} ] \text{ thì } Q ( \nu ) = z _ { 1 } ^ { 2 } - 2 { z _ { 2 } } ^ { 2 } + 2 { z _ { 3 } } ^ { 2 } . \end{array}
+$$
+
+$$
+{ \left[ \begin{array} { l } { x _ { 1 } } \\ { x _ { 2 } } \\ { x _ { 3 } } \end{array} \right] } = { \left[ \begin{array} { l l l } { 1 } & { - 2 } & { - 1 } \\ { 0 } & { 1 } & { 0 } \\ { 0 } & { 0 } & { 1 } \end{array} \right] } { \left[ \begin{array} { l l l } { 1 } & { 0 } & { 0 } \\ { 0 } & { 1 } & { 1 } \\ { 0 } & { 1 } & { - 1 } \end{array} \right] } { \left[ \begin{array} { l } { z _ { 1 } } \\ { z _ { 2 } } \\ { z _ { 3 } } \end{array} \right] } = { \left[ \begin{array} { l l l } { 1 } & { - 3 } & { - 1 } \\ { 0 } & { 1 } & { 1 } \\ { 0 } & { 1 } & { - 1 } \end{array} \right] } { \left[ \begin{array} { l } { z _ { 1 } } \\ { z _ { 2 } } \\ { z _ { 3 } } \end{array} \right] } .
+$$
+
+Vậy trong cơ sở mới $e_{1}' = (1, 0, 0), e_{2}' = (-3, 1, 1), e_{3}' = (-1, 1, -1);$ 
+
+$$
+\forall \nu \in \mathbb{R}^{3} \colon \nu = (x_{1}, x_{2}, x_{3}) = z_{1}e_{1}' + z_{2}e_{2}' + z_{3}e_{3}' \quad \text{thì} \quad Q(\nu) = {z_{1}}^{2} - 2{z_{2}}^{2} + 2{z_{3}}^{2}.
+$$
+
+Ví dụ 6.8: Cho dạng toán phương $\boldsymbol{Q}$ có biểu thức toạ $\hat{\mathbf{d}}\hat{\mathbf{0}}$ trong cơ sở chính tắc của $P_2; \psi = a_0 + a_1 t + a_2 t^2, Q(\nu) = {a_0}^2 - 2a_0a_1 + 2{a_1}^2 + 4a_0a_2 + 4{a_2}^2 + 2a_1a_2.$
+
+$$
+\begin{array}{c}
+Q(\nu) = {a_0}^2 + 2a_0(-a_1 + 2a_2) + 2{a_1}^2 + 4{a_2}^2 + 2a_1a_2 \\
+= (a_0 - a_1 + 2a_2)^2 - (-a_1 + 2a_2)^2 + 2{a_1}^2 + 4{a_2}^2 + 2a_1a_2 \\
+= (a_0 - a_1 + 2a_2)^2 + {a_1}^2 + 6a_1a_2 \\
+= (a_0 - a_1 + 2a_2)^2 + (a_1 + 3a_2)^2 - 9{a_2}^2.
+\end{array}
+$$
+
+$$
+\left\{
+\begin{array}{ll}
+b_0 = a_0 - a_1 + 2a_2 \\
+b_1 = a_1 + 3a_2 \quad \Rightarrow \left\{ 
+\begin{array}{l}
+a_1 = b_1 - 3b_2 \\
+a_2 = b_2
+\end{array} \right. \quad \Rightarrow Q(\nu) = {b_0}^2 + {b_1}^2 - 9{b_2}^2.
+\end{array}
+\right.
+$$
+
+$$
+{ \left[ \begin{array} { l } { a _ { 0 } } \\ { a _ { 1 } } \\ { a _ { 2 } } \end{array} \right] } = { \left[ \begin{array} { l l l } { 1 } & { 1 } & { - 5 } \\ { 0 } & { 1 } & { - 3 } \\ { 0 } & { 0 } & { 1 } \end{array} \right] } { \left[ \begin{array} { l } { b _ { 0 } } \\ { b _ { 1 } } \\ { b _ { 2 } } \end{array} \right] } \Rightarrow \text{ma trận chuẩn chuy} \hat{\mathrm{e}} \text{n cos} \hat{\mathrm{e}} T = { \left[ \begin{array} { l l l } { 1 } & { 1 } & { - 5 } \\ { 0 } & { 1 } & { - 3 } \\ { 0 } & { 0 } & { 1 } \end{array} \right] } .
+$$
+
+Vậy trong cơ sở mới $e _ { 1 } ^ { \prime } = 1, e _ { 2 } ^ { \prime } = 1 + t, e _ { 3 } ^ { \prime } = -5 - 3t + t ^ { 2 };$
+
+$$
+\forall \nu \in \mathbf{P} _ { 2 }: \nu = a _ { 0 } + a _ { 1 } t + a _ { 2 } t ^ { 2 } = b _ { 0 } + b _ { 1 }(1 + t) + b _ { 2 }(-5 - 3t + t ^ { 2 }); Q(\nu) = {b _ { 0 }} ^ { 2 } + {b _ { 1 }} ^ { 2 } - 9{b _ { 2 }} ^ { 2 }.
+$$
+
+# 6.2.6. Đưa về dạng chính tắc theo phương pháp Jacobi
+
+Cho dạng toàn phương $\boldsymbol{Q}$ trong không gian véc tơ $V$ với dạng cực trị tương ứng (17), có ma trận trong cơ sở $\mathcal{B} = \left\{ e _ { 1 }, . . . , e _ { n } \right\}$ là $A = \Big [ a _ { i j } \Big ]: a _ { i j } = \eta (e _ { i }, e _ { j }); i, j = 1, . . . , n.$
+
+Giả sử các định thức con chính của $A$ đều khác không.
+
+$$
+D _ { 1 } = a _ { 11 } \neq 0 , D _ { 2 } = \left| \begin{array}{cc} a _ { 11 } & a _ { 12 } \\ a _ { 21 } & a _ { 22 } \end{array} \right| \neq 0 , \ldots , D _ { n } = \left| \begin{array}{ccc} a _ { 11 } & \cdots & a _ { 1n } \\ \vdots & \ddots & \vdots \\ a _ { n1 } & \cdots & a _ { nn } \end{array} \right| \neq 0 .
+$$
+
+Khi đặt với mỗi $j = 1 , . . . , n ;$ hệ phương trình
+
+$$
+\left\{ \begin{array}{l}
+a _ { 11 } x _ { 1 } + a _ { 12 } x _ { 2 } + \ldots + a _ { 1j } x _ { j } = 0 \\
+a _ { 21 } x _ { 1 } + a _ { 22 } x _ { 2 } + \ldots + a _ { 2j } x _ { j } = 0 \\
+\vdots \\
+a _ { j1 } x _ { 1 } + a _ { j2 } x _ { 2 } + \ldots + a _ { jj } x _ { j } = 1 
+\end{array} \right.
+$$
+
+là hệ Cramer độc lập duy nhất nghiệm, ký hiệu là $( \alpha _ { 1j } , \alpha _ { 2j } , . . . , \alpha _ { jj } )$:
+
+Từ điều kiện (6.19) và nghiệm của hệ (6.20) ta có:
+
+$$
+\alpha _ { jj } = \frac { D _ { j - 1 } } { D _ { j } } \neq 0 \forall j = 1 , . . . , n .
+$$
+
+Xét hệ vector
+
+$$
+\left\{ \begin{array} { l l } { f _ { 1 } = \displaystyle \alpha _ { 1 1 } e _ { 1 } = \frac { 1 } { a _ { 1 1 } } e _ { 1 } } \\ { f _ { 2 } = \displaystyle \alpha _ { 1 2 } e _ { 1 } + \alpha _ { 2 2 } e _ { 2 } } \\ { \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad } \\ { f _ { n } = \displaystyle \alpha _ { 1 n } e _ { 1 } + \alpha _ { 2 n } e _ { 2 } + . . . + \alpha _ { n n } e _ { n } } \end{array} \right. .
+$$
+
+Ta sẽ chứng minh rằng véc tơ $\mathcal { B } ^ { \prime } = \left\{ f _ { 1 } , . . . , f _ { n } \right\}$ là một cơ sở của $V$ mà biểu thức tọa độ của $\boldsymbol { Q }$ trong cơ sở này có dạng chính tắc.
+
+Định nghĩa của hệ $\mathcal { B } ^ { \prime } = \left\{ f _ { 1 } , . . . , f _ { n } \right\}$ trong cơ sở $\left\{ \boldsymbol { e } _ { 1 } , . . . , \boldsymbol { e } _ { n } \right\}$ là $\alpha _ { 1 1 } \alpha _ { 2 2 } . . . \alpha _ { n n } \neq 0$ nên hệ ${ \mathcal { B } } ^ { \prime }$ độc lập tuyến tính vì vậy là một cơ sở của $V$:
+
+Từ (6.20) và (6.21) suy ra:
+
+$$
+\left\{ \begin{array} { l } { \eta ( f _ { j } , e _ { i } ) = a _ { i 1 } \alpha _ { 1 j } + a _ { i 2 } \alpha _ { 2 j } + . . . + a _ { i j } \alpha _ { j j } = 0 ; \forall i = 1 , . . . , j - 1 } \\ { \eta ( f _ { j } , e _ { j } ) = a _ { j 1 } \alpha _ { 1 j } + a _ { j 2 } \alpha _ { 2 j } + . . . + a _ { j j } \alpha _ { j j } = 1 } \end{array} \right. .
+$$
+
+Do đó ta có:
+
+$$
+\left\{ \begin{array}{l l}
+\eta(f_j, f_i) = 0 ; \forall i < j \\
+\eta(f_j, f_j) = \eta(f_j, \alpha_{1j} e_1 + . . . + \alpha_{jj} e_j) = \alpha_{jj} \eta(f_j, e_j) = \alpha_{jj}
+\end{array} \right. .
+$$
+
+Mặt khác dạng song tuyến tính $\eta$ đối xứng nên $\eta(f_j, f_i) = 0$ với mọi $i > j$. Vậy
+
+$$
+\eta(f_i, f_j) = \left\{ \begin{array}{l l}
+0 & \text{nếu } i \neq j \\
+\displaystyle \frac{D_{j-1}}{D_j} & \text{nếu } i = j 
+\end{array} \right. ; \text{với mọi } i, j = 1, . . . , n.
+$$
+
+Gọi $A'$ là ma trận của $\boldsymbol{Q}$ trong cơ sở $\mathcal{B}$. Nếu $T$ là ma trận chuyển từ cơ sở $\mathcal{B}$ sang ${\mathcal{B}}'$ thì:
+
+$$
+T = \left[ \begin{array}{c c c c}
+\alpha_{11} & \alpha_{12} & . . . & \alpha_{1n} \\
+& \alpha_{22} & . . . & \alpha_{2n} \\
+& & \ddots & \vdots \\
+& & & \alpha_{nn}
+\end{array} \right] ; T^t A T = A' = \left[ \eta(f_i, f_j) \right] = \left[ \begin{array}{c c c c}
+\alpha_{11} & 0 & . . . & 0 \\
+0 & \ddots & . . . & 0 \\
+. . . & . . . & \alpha_{nn} & 0
+\end{array} \right] .
+$$
+
+Vậy biểu thức tọa độ của $\boldsymbol{Q}$ trong cơ sở ${\mathcal{B}'}$ có dạng chính tắc:
+
+$$
+\nu = y_1 f_1 + \ldots + y_n f_n \Longrightarrow Q(\nu) = \frac{1}{D_1} {y_1}^2 + \frac{D_1}{D_2} {y_2}^2 + \ldots + \frac{D_{n-1}}{D_n} {y_n}^2.
+$$
+
+Ví dụ 6.9: Cho dạng toàn phương $\boldsymbol{Q}$ của $\mathbb{R}^3$ có biểu thức tọa độ trong cơ sở chính tắc:
+
+$$
+Q(\nu) = x_1^2 - 4x_2^2 + x_3^2 - 4x_1x_2 + 2x_1x_3 + 2x_2x_3.
+$$
+
+Ma trận của $Q$ trong cơ sở chính tắc là:
+
+$$
+A = \left[ \begin{array}{ccc}
+1 & -2 & 1 \\
+-2 & -4 & 1 \\
+1 & 1 & 1
+\end{array} \right].
+$$
+
+Các định thức con chính:
+
+$$
+D_1 = 1, D_2 = \left| \begin{array}{cc}
+1 & -2 \\
+-2 & -4
+\end{array} \right| = -8, D_3 = |A| = -9.
+$$
+
+Xét các hệ phương trình (6.20):
+
+$\cdot$ $j = 1$: $\tan \alpha_{11} = \frac{1}{D_1} = 1;$
+
+$\cdot$ $j = 2$: Hệ phương trình (6.20) có dạng
+
+$$
+\left\{ \begin{array} { l } { \displaystyle x _ { 1 } - 2 x _ { 2 } + x _ { 3 } = 0 } \\ { - 2 x _ { 1 } - 4 x _ { 2 } + x _ { 3 } = 0 \Longrightarrow x _ { 1 } = - \displaystyle \frac { 2 } { 9 } , ~ x _ { 2 } = \displaystyle \frac { 1 } { 3 } , ~ x _ { 3 } = \displaystyle \frac { 8 } { 9 } . } \\ { \displaystyle x _ { 1 } + x _ { 2 } + x _ { 3 } = 1 } \end{array} \right.
+$$
+
+Ta chọn cơ sở dạng (6.21):
+
+$$
+\begin{array} { r l }
+& { \mapsto J _ { 1 } = e _ { 1 } = \left( 1 , 0 , 0 \right) , } \\
+& { \mapsto f _ { 2 } = - \frac{1}{4} e _ { 1 } - \frac{1}{8} e _ { 2 } = \left( - \frac{1}{4} , - \frac{1}{8} , 0 \right) , } \\
+& { \mapsto J _ { 3 } = - \frac{2}{9} e _ { 1 } + \frac{1}{3} e _ { 2 } + \frac{8}{9} e _ { 3 } = ( - \frac{2}{9} , \frac{1}{3} , \frac{8}{9} ) . }
+\end{array}
+$$
+
+Trong cơ sở mới biểu thức toạ độ $\hat{\mathrm{d}}\hat{\mathrm{o}}$ của $\boldsymbol{Q}$ có dạng:
+
+$$
+\begin{array} { c } { \forall \nu = ( x _ { 1 } , x _ { 2 } , x _ { 3 } ) = x _ { 1 } e _ { 1 } + x _ { 2 } e _ { 2 } + x _ { 3 } e _ { 3 } = y _ { 1 } f _ { 1 } + y _ { 2 } f _ { 2 } + y _ { 3 } f _ { 3 } ~ , } \\ { Q ( \nu ) = \displaystyle { \frac { 1 } { D _ { 1 } } } { y _ { 1 } } ^ { 2 } + \displaystyle { \frac { D _ { 1 } } { D _ { 2 } } } { y _ { 2 } } ^ { 2 } + \displaystyle { \frac { D _ { 2 } } { D _ { 3 } } } { y _ { 3 } } ^ { 2 } = { y _ { 1 } } ^ { 2 } - \displaystyle { \frac { 1 } { 8 } } { y _ { 2 } } ^ { 2 } + \displaystyle { \frac { 8 } { 9 } } { y _ { 3 } } ^ { 2 } ~ . } \end{array}
+$$
+
+Ví dụ 6.10: (Xem Ví dụ 6.8) Cho dạng toán phương $\boldsymbol{Q}$ có biểu thức tại $\hat{\mathrm{d}}\hat{\mathrm{0}}$ trong cơ sở chính tắc của $\mathbf{P}_2$, $\nu = a_0 + a_1 t + a_2 t^2$
+
+$$
+Q(\nu) = {a_0}^2 - 2a_0a_1 + 2{a_1}^2 + 4a_0a_2 + 4{a_2}^2 + 2a_1a_2.
+$$
+
+Ma trận của $\boldsymbol{Q}$ trong cơ sở chính tắc $A = \left[ { \begin{array}{ccc}
+1 & -1 & 2 \\
+-1 & 2 & 1 \\
+2 & 1 & 4
+\end{array} } \right]$ có các định thức con chính: $D_1 = 1, D_2 = \left| -1 \ \right. \ \mathrm{\Lambda}^{-1} \ \mathrm{\Lambda}^{ } = 1, D_3 = \left| { \cal A } \right| = -9.$
+
+Xét các hệ phương trình (6.20):
+
+$\cdot$ $j = 2 \colon \mathrm{H}\hat{\mathsf{e}}$ phương trình (6.20) có dạng
+
+$$
+\left\{ \begin{array} { l l } { x _ { 1 } - x _ { 2 } = 0 } \\ { - x _ { 1 } + 2 x _ { 2 } = 1 } \end{array} \right. \Longrightarrow \mathrm{nghiệm} x _ { 1 } = x _ { 2 } = 1 ;
+$$
+
+$\cdot$ $j = 3 \colon \mathrm{H}\hat{\mathsf{e}}$ phương trình (6.20) có dạng
+
+$$
+\left\{ \begin{array} { l l } { x _ { 1 } - x _ { 2 } + 2 x _ { 3 } = 0 } \\ { - x _ { 1 } + 2 x _ { 2 } + x _ { 3 } = 0 \Rightarrow x _ { 1 } = \frac { 5 } { 9 } , ~ x _ { 2 } = \frac { 1 } { 3 } , ~ x _ { 3 } = - \frac { 1 } { 9 } . } \\ { 2 x _ { 1 } + x _ { 2 } + 4 x _ { 3 } = 1 } \end{array} \right.
+$$
+
+Ta chọn cơ sở dạng (6.21) :
+
+$$
+( 6 . 2 7 ) \Rightarrow f _ { 1 } = 1 ; ( 6 . 2 8 ) \Rightarrow f _ { 2 } = 1 + t ; ( 6 . 2 9 ) \Rightarrow f _ { 3 } = \frac { 5 } { 9 } + \frac { 1 } { 3 } t - \frac { 1 } { 9 } t ^ { 2 } .
+$$
+
+Trong cơ sở mới biểu thức toạ độ $\hat{\mathrm{d}}\hat{\mathrm{o}}$ của $\boldsymbol{Q}$ có dạng:
+
+$\nu = a _ { 0 } + a _ { 1 } t + a _ { 2 } t ^ { 2 } = b _ { 0 } + b _ { 1 } ( 1 + t ) + b _ { 2 } \left( \frac { 5 } { 9 } + \frac { 1 } { 3 } t - \frac { 1 } { 9 } t ^ { 2 } \right) ;$ $Q ( \nu ) = \frac { 1 } { D _ { 1 } } b _ { 0 } ^ { 2 } + \frac { D _ { 1 } } { D _ { 2 } } b _ { 1 } ^ { 2 } + \frac { D _ { 2 } } { D _ { 3 } } b _ { 2 } ^ { 2 } = b _ { 0 } ^ { 2 } + b _ { 1 } ^ { 2 } - \frac { 1 } { 9 } b _ { 2 } ^ { 2 } .$
+
+# Nhận xét 6.3:
+
+1) Mỗi dạng toán phương luôn có thể đưa về dạng chính tắc theo phương pháp Lagrange. Tuy nhiên chưa chắc có thể đưa $\mathbf{v} \hat{\mathbf{e}}$ về dạng chính tắc theo phương pháp Jacobi, vì chỉ đưa được về dạng chính tắc theo phương pháp Jacobi khi mỗi định thức con góc bên trái $D _ { k } \neq 0 , \forall k = 1 , 2 ,$ ... Chẳng hạn dạng toán phương $\boldsymbol{Q}$ của $\mathbb{R} ^ { 3 }$ (xem Ví dụ 6.7) có biểu thức toạ độ trong cơ sở chính tắc
+
+$$
+Q ( \nu ) = x _ { 1 } ^ { 2 } + 4 x _ { 2 } ^ { 2 } + x _ { 3 } ^ { 2 } + 4 x _ { 1 } x _ { 2 } + 2 x _ { 1 } x _ { 3 } + 2 x _ { 2 } x _ { 3 }
+$$
+
+không sử dụng phương pháp Jacobi được vì $D _ { 2 } = \left| \begin{array} { l l } { 1 } & { 2 } \\ { 2 } & { 4 } \end{array} \right| = 0$
+
+2) Các ví dụ 6.8, 6.10 cho thấy rằng cùng một dạng toán phương ta có thể đưa về các dạng chính tắc với các hệ số khác nhau. Tuy nhiên số các hệ số dương và hệ số âm là như nhau. Ta sẽ chứng minh điều này qua luật quan tính.
+
+# 6.2.7. Luật quan tính
+
+Giả sử $A = \left[ a_{ij} \right] = [Q]_{\mathcal{B}}$ và $A' = \Big[a'_{ij}\Big] = [Q]_{\mathcal{B}'}$ là hai ma trận của $\boldsymbol{Q}$ trong hai cơ sở $\mathcal{B} = \left\{e_1, ..., e_n\right\}$ và $\mathcal{B}' = \left\{e'_1, ..., e'_n\right\}$ của $V$. Gọi $T = \Big[t_{ij}\Big]^\mathcal{B}_{\mathcal{B}'}$ là ma trận chuyển từ cơ sở $\mathcal{B}$ sang $\mathcal{B}'$, theo công thức (6.9), (6.10) ta có $A' = T^t A T$.
+
+Theo tính chất hàng của ma trận ta có $r(A') = r(T^t A T) \leq r(A)$. Mặt khác, $T$ khả nghịch nên $A = \left(T^t\right)^{-1} A' T^{-1} \Rightarrow r(A) \leq r(A')$. Vậy $r(A) = r(A')$.
+
+Do đó ta có thể định nghĩa hạng của dạng toàn phương $\boldsymbol{Q}$ là hạng của ma trận của nó trong một cơ sở nào đó.
+
+Định lý 6.1 (Sylvester - Jacobi): Số các hệ số dương và số các hệ số âm trong biểu thức tọa độ dạng chính tắc của một dạng toàn phương $\boldsymbol{Q}$ là không biến đổi của dạng đó (tức là không phụ thuộc vào việc lựa chọn cơ sở).
+
+Chứng minh: Giá trị trong cơ sở $\mathcal{B} = \left\{ e_1, \ldots, e_n \right\}$ biểu thức tọa độ của dạng toàn phương $\boldsymbol{Q}$ có dạng:
+
+$$
+Q(\nu) = \sum_{i,j=1}^{n} a_{ij} x_i x_j \ ; \quad a_{ij} = a_{ji}, \quad \forall \quad \nu = \sum_{i=1}^{n} x_i e_i \ .
+$$
+
+Giả sử $\mathcal{B}' = \left\{ e_1', \ldots, e_n' \right\}$ và $\mathcal{B}'' = \left\{ e_1'', \ldots, e_n'' \right\}$ là hai cơ sở sao cho biểu thức tọa độ của $\boldsymbol{Q}$ có dạng chính tắc: 
+$$
+\nu = \sum_{i=1}^{n} x_i e_i = \sum_{i=1}^{n} y_i e_i' = \sum_{i=1}^{n} z_i e_i'' \ ;
+$$
+
+$$
+\begin{array}{rl}
+& {\cal Q}(\nu) = k_1 y_1^2 + \ldots + k_p y_p^2 - k_{p+1} y_{p+1}^2 - \ldots - k_r y_r^2, \\
+& {\cal Q}(\nu) = l_1 z_1^2 + \ldots + l_q z_q^2 - l_{q+1} z_{q+1}^2 - \ldots - l_r z_r^2,
+\end{array}
+$$
+
+với $r = r(A)$ là hạng của $A$, các hệ số $k_1, \ldots, k_r; l_1, \ldots, l_r > 0$.
+
+Ta chứng minh \( p = q \) bằng phương pháp phản chứng.
+
+Giả sử \( p < q \) (trường hợp \( q < p \) được chứng minh hoàn toàn tương tự). Theo công thức đổi tọa độ ta có
+
+$$
+\begin{array}{c} 
+\left\{ 
+\begin{array} { l } 
+{ y _ { 1 } = b _ { 1 1 } x _ { 1 } + \ldots + b _ { 1 n } x _ { n } } \\ 
+{ . . . . . . . . . . . . . . . . . . . . . . . } \\ 
+{ y _ { n } = b _ { n 1 } x _ { 1 } + \ldots + b _ { n n } x _ { n } } 
+\end{array} 
+\right. , 
+\begin{array} { l } 
+{ z _ { 1 } = c _ { 1 1 } x _ { 1 } + \ldots + c _ { 1 n } x _ { n } } \\ 
+{ . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . } \\ 
+{ z _ { n } = c _ { n 1 } x _ { 1 } + \ldots + c _ { n n } x _ { n } } 
+\end{array} 
+.  
+\end{array}
+$$
+
+(6.30) và (6.31) \(\Rightarrow\)
+
+\( k _ { 1 } y _ { 1 } ^ { 2 } + \ldots + k _ { p } y _ { p } ^ { 2 } + l _ { q + 1 } z _ { q + 1 } ^ { 2 } + \ldots + l _ { r } z _ { r } ^ { 2 } = l _ { 1 } z _ { 1 } ^ { 2 } + \ldots + l _ { q } z _ { q } ^ { 2 } + k _ { p + 1 } y _ { p + 1 } ^ { 2 } + \ldots + k _ { r } y _ { r } ^ { 2 } . \) (6.33)
+
+Ta sẽ chứng minh rằng tồn tại một véc tơ \(\nu \in V\) :
+
+$$
+\nu = \sum _ { i = 1 } ^ { n } x _ { i } e _ { i } = \sum _ { i = 1 } ^ { n } y _ { i } e '_{i} = \sum _ { i = 1 } ^ { n } z _ { i } e ''_{i} \neq \mathbf { 0 }
+$$
+
+thỏa mãn điều kiện:
+
+$$
+\left\{ \begin{array} { l l } { y _ { 1 } = . . . = y _ { p } = 0 } \\ { \qquad \quad z _ { q + 1 } = . . . = z _ { r } = z _ { r + 1 } = . . . = z _ { n } = 0 } \end{array} \right. .
+$$
+
+Thế vậy, các điều kiện (6.34) kết hợp với (6.32) xác định một hệ (20 $n - q + p < n$ phương trình tuyến tính thuần nhất $n$ ẩn $x _ { 1 } , x _ { 2 } , . . . , x _ { n }$. Vì số phương trình ít hơn số ẩn nên tồn tại nghiệm $x _ { 1 } ^ { 0 } , . . . , x _ { n } ^ { 0 }$ không đồng thời bằng 0.
+
+$$
+\mathrm{Xét} \mathrm{véc} \mathrm{tơ} \nu _ { 0 } = \sum _ { i = 1 } ^ { n } x _ { i } ^ { 0 } e _ { i } \neq {\bf 0}.
+$$
+
+Mặt khác từ (6.33) và $(6.34) \Rightarrow z _ { 1 } = . . . = z _ { q } = z _ { q + 1 } = . . . = z _ { n } = 0.$
+
+$\Rightarrow \nu _ { 0 } = \sum _ { i = 1 } ^ { n } z _ { i } e '' _ { i } = {\bf 0}$, mâu thuẫn. Vậy $p = q$.
+
+Ví dụ 6.11: Xét dạng toán phương $\boldsymbol{Q}$ của $\mathbb{R}^3$ (xem Ví dụ 6.9) có biểu thức tọa độ trong cơ sở chính tắc $Q(\nu) = x _ { 1 } ^ { 2 } - 4 x _ { 2 } ^ { 2 } + x _ { 3 } ^ { 2 } - 4 x _ { 1 } x _ { 2 } + 2 x _ { 1 } x _ { 3 } + 2 x _ { 2 } x _ { 3 }$. Sử dụng phương pháp Jacobi ta được cơ sở
+
+$$
+f _ { 1 } = ( 1 , 0 , 0 ) ; f _ { 2 } = \left( - 1 / 4 , - 1 / 8 , 0 \right) ; f _ { 3 } = \left( - 2 / 9 , 1 / 3 , 8 / 9 \right).
+$$
+
+Trong cơ sở mới này biểu thức toán $\hat{\mathbf{d}}\hat{\mathbf{0}}$ của $\boldsymbol{Q}$ có dạng:
+
+$$
+\forall \nu = (x_1, x_2, x_3) = x_1 e_1 + x_2 e_2 + x_3 e_3 = y_1 f_1 + y_2 f_2 + y_3 f_3,
+$$
+
+$$
+Q(\nu) = \frac{1}{D_1} {y_1}^2 + \frac{D_1}{D_2} {y_2}^2 + \frac{D_2}{D_3} {y_3}^2 = {y_1}^2 - \frac{1}{8} {y_2}^2 + \frac{8}{9} {y_3}^2.
+$$
+
+Sử dụng phương pháp Lagrange:
+
+$$
+\begin{array}{rl}
+&= {x_1}^2 - 4{x_2}^2 + {x_3}^2 - 4 x_1 x_2 + 2 x_1 x_3 + 2 x_2 x_3 \\
+&= ({x_1} - 2 x_2 + x_3)^2 - 8 {x_2}^2 + 6 x_2 x_3 = ({x_1} - 2 x_2 + x_3)^2 - 2 (2 x_2 - \frac{3}{4} x_3)^2 + \frac{9}{2} {x_3}^2.
+\end{array}
+$$
+
+Biểu thức toán dạng chính tắc của dạng toàn phương trong hai trường hợp trên đều có hai hệ số dương và một hệ số âm.
+
+Định nghĩa 6.4: Số các hệ số dương được gọi là chỉ số quan trọng dương và số các hệ số âm được gọi là chỉ số quan trọng âm của dạng toàn phương.
+
+Giao ứ trị $( p, q )$ là cặp chỉ số quan tâm dương và âm của dạng toán phương $\boldsymbol{Q}$ trong không gian $n$ chiều $V$ khi đố $p + q = r$ (hạng của $\boldsymbol{Q}$).
+
+· Trường hợp $r = n \colon Q$ được gọi là không suy biến;  
+Trường hợp $p = n \colon Q$ được gọi là xác định dương;   
+· Trường hợp $q = n \colon Q$ được gọi là xác định âm.
+
+Rõ ràng
+
+$\boldsymbol{Q}$ xác định dương khi và chỉ khi $Q(\nu) > 0$, với mọi $\nu \neq \mathbf{0}$;
+
+$\boldsymbol{Q}$ xác định âm khi và chỉ khi $Q(\nu) < 0$, với mọi $\nu \neq \mathbf{0}$:
+
+Nếu $\eta$ là dạng cực của dạng toán phương $\boldsymbol{Q}$ thì:
+
+$\boldsymbol{Q}$ xác định dương khi và chỉ khi $\eta$ xác định dương;   
+$\boldsymbol{Q}$ xác định âm khi và chỉ khi $\eta$ xác định âm;   
+$\boldsymbol{Q}$ không suy biến khi và chỉ khi $\eta$ xác định.
+
+Ví dụ 6.12: Dạng toán phương $Q$ ở Ví dụ 6.7, 6.8, 6.9 có chỉ số quan tâm dương là 2 và chỉ số quan tâm âm là 1. Vậy $\boldsymbol{Q}$ là dạng toán phương không suy biến.
+
+Định lý 6.2 (Sylvester): Giả sử dạng toán phương $\boldsymbol{Q}$ có ma trận là $A$ trong một cơ sở nào đó của $V$. Khi đó:
+
+(i) $\boldsymbol{Q}$ xác định dương khi và chỉ khi các định thức con góc trái của $A$ luôn dương.
+
+(ii) $\boldsymbol{Q}$ xác định âm khi và chỉ khi các định thức con góc trái cấp chẵn là dương và cấp lẻ là âm.
+
+Chứng minh: (i) Giả sử $A = \left[ a _ { i j } \right]$ là ma trận của dạng phương $\boldsymbol{Q}$ trong cơ sở $\mathcal{B} = \left\{ e_1, . . . , e_n \right\}$. Xét $V_k = \operatorname{span}\left\{ e_1, . . . , e_k \right\}$ và dạng phương thu hẹp vào không gian véc tơ con $V_k$, $Q|_{V_k} : V_k \to \mathbb{R}$ có ma trận trong cơ sở $\mathcal{B}_k = \left\{ e_1, . . . , e_k \right\}$ là ma trận con $A_k$ cấp $k$ nằm trên đường chéo trái của ma trận $A$. Nếu $\boldsymbol{Q}$ xác định dương thì $Q|_{V_k}$ cũng xác định dương. Mặt khác theo luật quan hệ ta suy ra rằng các giá trị trên đường chéo của ma trận dạng chính tắc của dạng phương xác định dương là luôn luôn dương nên định thức của nó cùng dương. Vậy $\det A_k > 0$, với mọi $k = 1, . . . , n$.
+
+Ngược lại, giả sử $D_k = \operatorname*{det} A_k > 0$, với mọi $k = 1, . . . , n$. Theo phương pháp Jacobi (Mục 6.26) tồn tại cơ sở $\mathcal{B}' = \left\{ f_1, . . . , f_n \right\}$ sao cho biểu thức toán của $\boldsymbol{Q}$ trong cơ sở ${\mathcal{B}}'$ có dạng chính tắc:
+
+$$
+\nu = y _ { 1 } f _ { 1 } + \ldots + y _ { n } f _ { n } \Longrightarrow Q ( \nu ) = \frac { 1 } { {\cal D} _ { 1 } } { y _ { 1 } } ^ { 2 } + \frac { {\cal D} _ { 1 } } { {\cal D} _ { 2 } } { y _ { 2 } } ^ { 2 } + \ldots + \frac { {\cal D} _ { n - 1 } } { {\cal D} _ { n } } { y _ { n } } ^ { 2 } .
+$$
+
+Vậy $\boldsymbol{Q}$ xác định dương.
+
+Trường hợp (ii) được chứng minh tương tự.
+
+# 6.3. Tích vô hướng và không gian vector Euclide 6.3.1. Định nghĩa và tính chất của tích vô hướng
+
+Định nghĩa 6.5: Một dạng song tuyến tính đối xứng xác định dương được gọi là tích vô hướng.
+
+Một không gian vector có tích vô hướng được gọi là không gian vector Euclide.
+
+Ví dụ 6.12: Xét không gian vector $\mathbb{R} ^ { n } = \left\{ ( x _ { 1 } , . . . , x _ { n } ) | x _ { i } \in \mathbb{R}; i = 1, . . . , n \right\}$
+
+Với $\boldsymbol{x} = ( x _ { 1 } , . . . , x _ { n } )$, $y = ( y _ { 1 } , . . . , y _ { n } ) \in \mathbb{R} ^ { n }$, ta định nghĩa:
+
+$$
+\left. x, y \right. = x _ { 1 } y _ { 1 } + . . . + x _ { n } y _ { n }.
+$$
+
+Có thể kiểm tra được công thức (6.35) xác định một dạng song tuyến tính đối xứng xác định dương. Vậy $\left( \mathbb{R} ^ { n }, \left. ~, ~ \right. \right)$ là một không gian vector Euclide.
+
+Ví dụ 6.13: Tích vô hướng có trong $s^\sigma$ của không gian vector $\mathbb{R}^n$ với các hàng số dương $\textstyle \boldsymbol{c}_1, . . . , \boldsymbol{c}_n$ được định nghĩa
+
+với $x = ( x_1, . . . , x_n ), y = ( y_1, . . . , y_n ) \in \mathbb{R}^n.$
+
+$$
+\begin{array}{c}
+(x, y) = c_1 x_1 y_1 + . . . + c_n x_n y_n. \\
+\\
+\mathrm{trong} \ u = (u_1, u_2), \nu = (\nu_1, \nu_2).
+\end{array}
+$$
+
+Chẳng hạn
+
+$$
+(u, \nu) = 2 u_1 \nu_1 + 5 u_2 \nu_2, \mathrm{trong} \ u = (u_1, u_2), \nu = (\nu_1, \nu_2)
+$$
+
+là một tích vô hướng có trong số của $\mathbb{R}^2$:
+
+Các hàng số $c_i > 0$ là các trọng số, trọng số $c_i$ lớn thì hạng thứ $i$ trong tích vô hướng cũng lớn theo. Tích vô hướng có trong số được sử dụng trong thông kê và vật lý học, khi ta muốn nhấn mạnh một thành phần nào đó so với các thành phần khác.
+
+Ví dụ 6.14: Xét không gian vector $C_{[a,b]}^0$ của các hàm liên tục trên $\left[a; b\right]$. Tích phân
+
+$$
+(f, g) = \int_a^b f(t)g(t)dt.
+$$
+
+Xác định một tích vô hướng của không gian vector $C_{[a,b]}^0$
+
+Định nghĩa 6.6: Giả sử $(V, (\ , ))$ là một không gian vector Euclid.
+
+Với mỗi vector $\nu \in V$ ta định nghĩa và ký hiệu chuẩn hay modulus của vector $\nu$ qua biểu thức
+
+$$
+\left\| \nu \right\| = { \sqrt { \left. \nu , \nu \right. } } .
+$$
+
+Nếu $\| \nu \| = 1$ thì $\nu$ được gọi là vector đơn vị.
+
+Ví dụ 6.16: $x = ( x _ { 1 } , . . . , x _ { n } ) \in \mathbb { R } ^ { n } , \left\| x \right\| = { \sqrt { x _ { 1 } ^ { 2 } + \cdots + x _ { n } ^ { 2 } } } ,$ 
+
+$$
+\nu = ( 1 , - 2 , 3 ) \in \mathbb { R } ^ { 3 } \Longrightarrow \left\| \nu \right\| = \sqrt { 1 ^ { 2 } + ( - 2 ) ^ { 2 } + 3 ^ { 2 } } = \sqrt { 14 } ,
+$$
+
+$$
+f ( x ) \in C _{ [ a , b ] } ^ { 0 } \Rightarrow \left\| f ( x ) \right\| = { \sqrt { \int _ { a } ^ { b } \left| f ( x ) \right| ^ { 2 } d x } } .
+$$
+
+# Tính chất 6.3: Bất đẳng thức Cauchy-Schwarz
+
+Với mỗi $u , \nu \in V$ , luôn có
+
+$$
+\left| \left. u , \nu \right. \right| \leq \left\| u \right\| \cdot \left\| \nu \right\| \mathrm { hoăc } \left| \left. u , \nu \right. \right| ^ { 2 } \leq \left. u , u \right. \cdot \left. \nu , \nu \right. .
+$$
+
+Đẳng thức xảy ra khi và chỉ khi $u , \nu$ phụ thuộc tuyến tính.
+
+Chứng minh: Nếu một trong hai vector bằng O thì cả hai vế của bất đẳng thức trên đều bằng O, do đó bất đẳng thức nghiệm đúng.
+
+Giả sử $\nu \neq 0$ , với mỗi $t \in \mathbb { R }$ ta có: $\left. u + t \nu , u + t \nu \right. \geq 0$
+
+Mặt khác $F(t) = u + t\nu, \langle u + t\nu, u + t\nu \rangle = t^2 \|\nu\|^2 + 2t \langle \nu, u \rangle + \|u\|^2$ là một tam thức bậc hai đối với $t$ và luôn luôn không âm. Vì vậy $\Delta_F' = |\langle \nu, u \rangle|^2 - \|\nu\|^2 \|u\|^2 \leq 0$. Từ đó suy ra bất đẳng thức Cauchy-Schwarz.
+
+Khi $u, \nu$ phụ thuộc thì $u = k\nu$ (hoặc $\nu = k u$).
+
+$$
+|\langle u, \nu \rangle| = |\langle k\nu, \nu \rangle| = |k| \cdot \|\nu\|^2 = \|k\nu\| \cdot \|\nu\| = \|u\| \cdot \|\nu\|.
+$$
+
+Ngược lại nếu $|\langle u, \nu \rangle| = \|u\| \cdot \|\nu\|$ thì $\Delta_F' = 0$:
+
+Do đó tồn tại $t_0 \in \mathbb{R}$ sao cho $\langle u + t_0\nu, u + t_0\nu \rangle = 0 \Longrightarrow u = -t_0\nu.$
+
+Áp dụng bất đẳng thức Cauchy-Schwarz vào không gian $\mathbb{R}^n$ với tích vô hướng (6.35) ta có bất đẳng thức Bunhiacopsky:
+
+$$
+(x_1 y_1 + \ldots + x_n y_n)^2 \leq (x_1^2 + \ldots + x_n^2)(y_1^2 + \ldots + y_n^2).
+$$
+
+Đẳng thức xảy ra khi và chỉ khi các thành phần của $(x_1, ..., x_n)$ và $(y_1, ..., y_n)$ tỉ lệ.
+
+# 6.3.2. Trục giao - trục chuẩn hóa Gram-Schmidt
+
+Định nghĩa 6.7: Hai vec tơ $u, v \in V$ gọi là trục giao nhau, ký hiệu $u \perp v$, nếu $\left<u, v\right> = 0$:
+
+Hệ các vec tơ $S = \{\nu_1, ..., \nu_n\}$ của $V$ được gọi là hệ trục giao nếu hai vec tơ bất kỳ của hệ $S$ đều trục giao nhau.
+
+Hệ trục giao các vec tơ đơn vị được gọi là hệ trục chuẩn.
+
+Định lý 6.4: Mọi hệ trục giao các vec tơ khác O là hệ độc lập tuyến tính.
+
+Chứng minh: Giả sử hệ $S = \{\nu_1, ..., \nu_n\}$ trục giao các véc tơ khác O, khi đó nếu 
+$$
+x_1\nu_1 + ... + x_n\nu_n = \mathbf{0} 
+$$
+thì
+
+$$
+x_i\left<\nu_i, \nu_i\right> = \left<x_1\nu_1 + ... + x_n\nu_n, \nu_i\right> = 0 \Rightarrow x_i = 0 ~ \forall i = 1, ..., n.
+$$
+
+Do đó $S$ độc lập tuyến tính.
+
+Định lý 6.5: Giả sử $S = \{u_1, ..., u_n\}$ là một hệ các vec tơ độc lập tuyến tính của không gian Euclid $V$. Khi đó ta có thể tìm được hệ trục chuẩn $S' = \{\nu_1, ..., \nu_n\}$ sao cho
+
+$$
+\operatorname{span}\{\nu_1, \ldots, \nu_k\} = \operatorname{span}\{u_1, \ldots, u_k\}; \quad \forall k = 1, \ldots, n.
+$$
+
+Chứng minh: Ta xây dựng hệ trực chuẩn $S'$ theo các bước quy nạp sau đây và gọi là quá trình trực chuẩn hóa Gram-Schmidt.
+
+●) $k=1$: Vì hệ $S$ được lập nên $u_1 \neq 0$. Đặt $\nu_1 = \frac{u_1}{\|u_1\|}$
+
+$\cdot)$ $k=2$: Xét $\overline{\nu_2} = u_2 - \langle u_2, \nu_1 \rangle \nu_1$, ta có $\overline{\nu_2} \neq 0$ (vì nếu $\overline{\nu_2} = 0$ thì $u_2 = k\nu_1$, điều này trái với giả thiết hệ $S$ độc lập). Đặt $\nu_2 = \frac{\overline{\nu_2}}{\|\overline{\nu_2}\|}$, ta có $\left\{ \nu_1, \nu_2 \right\}$ trực chuẩn
+
+$$
+\operatorname{span}\{\nu_1, \nu_2\} = \operatorname{span}\{u_1, u_2\}.
+$$
+
+$\cdot)$ Giả sử đã xây dựng được đến $k-1$. Nghĩa là tồn tại $\left\{ \nu_1, \ldots, \nu_{k-1} \right\}$ trực chuẩn sao cho span $\left\{ \nu_1, \ldots, \nu_{k-1} \right\} = \operatorname{span}\left\{ u_1, \ldots, u_{k-1} \right\}$. Tương tự trên ta xét
+
+$$
+\overline{\nu_{k}} = - \sum_{i=1}^{k-1} \langle u_k, \nu_i \rangle \nu_i + u_k
+$$
+
+Ta cũng có $\overline{\nu_{k}} \neq \mathbf{0}$ (vì nếu $\overline{\nu_{k}} = \mathbf{0}$ thì $u_k$ là tổ hợp tuyến tính của $\nu_1, . . . , \nu_{k-1}$, do đó là tổ hợp tuyến tính của $u_1, . . . , u_{k-1}$, điều này mâu thuẫn với giả thiết hệ $S$ độc lập). Đặt
+
+$$
+\nu_k = \frac{\overline{\nu_{k}}}{\left\| \overline{\nu_{k}} \right\|}
+$$
+
+thì $\nu_k \perp \nu_i ; i = 1, . . . , k - 1$. Vậy: $\{ \nu_1, . . . , \nu_k \}$ trực chuẩn và
+
+$$
+\operatorname{span} \left\{ \nu_1, . . . , \nu_k \right\} = \operatorname{span} \left\{ \nu_1, . . . , \nu_{k-1}, {\overline{\nu_{k}}} \right\} = \operatorname{span} \left\{ u_1, . . . , u_{k-1}, u_k \right\}.
+$$
+
+Ví dụ 6.15: Trong $\mathbb{R}^3$, xét 3 vector độc lập: 
+$$
+u_1 = (1, 1, 1), u_2 = (-1, 1, 1), u_3 = (1, 2, 1).
+$$
+Hãy trực chuẩn hóa hệ $S = \{ u_1, u_2, u_3 \}$.
+
+$$
+\overline{\nu_{2}} = \frac{2}{3} (-2, 1, 1) \Rightarrow \nu_{2} = \left( -\frac{2}{\sqrt{6}}, \frac{1}{\sqrt{6}}, \frac{1}{\sqrt{6}} \right).
+$$
+
+Bước 3: $\overline{\nu_{3}} = -\langle u_{3}, \nu_{1} \rangle \nu_{1} - \langle u_{3}, \nu_{2} \rangle \nu_{2} + u_{3}$
+
+$$
+\begin{array}{l}
+= -\frac{4}{\sqrt{3}} \left( \frac{1}{\sqrt{3}}, \frac{1}{\sqrt{3}}, \frac{1}{\sqrt{3}} \right) - \frac{1}{\sqrt{6}} \left( -\frac{2}{\sqrt{6}}, \frac{1}{\sqrt{6}}, \frac{1}{\sqrt{6}} \right) + (1, 2, 1) = \left( 0, \frac{1}{2}, -\frac{1}{2} \right). \\
+\overline{\nu_{3}} = \frac{1}{2} (0, 1, -1) \Longrightarrow \nu_{3} = \left( 0, \frac{1}{\sqrt{2}}, -\frac{1}{\sqrt{2}} \right).
+\end{array}
+$$
+
+$\{\nu_{1}, \nu_{2}, \nu_{3}\}$ là hệ vector trực chuẩn hóa của hệ $\{u_{1}, u_{2}, u_{3}\}$
+
+Ví dụ 6.16: Trong không gian véc tơ $\mathbf{P}_{2}$ các đa thức bậc $\leq 2$ với tích vô hướng xác định theo công thức (6.37),
+
+$$
+\langle p, q \rangle = \int_{0}^{1} p(t) q(t) dt
+$$
+
+cơ sở chính tắc $1, t, t^2$ không phải là một cơ sở trực chuẩn. Thật vậy,
+
+$$
+\left. 1, t \right. = \int_{0}^{1} t dt = \frac{1}{2}, \qquad \left. 1, {t^2} \right. = \int_{0}^{1} {t^2 dt} = \frac{1}{3}, \quad \left. t, {t^2} \right. = \int_{0}^{1} {t^3 dt} = \frac{1}{4}
+$$
+
+Trước chuẩn hóa Gram-Schmidt cơ sở này ta được hệ trực chuẩn
+
+$$
+u_1(t) = 1, u_2(t) = \sqrt{3}(2t - 1), u_3(t) = \sqrt{5}(6t^2 - 6t + 1).
+$$
+
+# 6.3.3. Cơ sở trực chuẩn
+
+Định nghĩa 6.8: Một cơ sở của không gian vector $V$ đồng thời là hệ trực chuẩn được gọi là một cơ sở trực chuẩn.
+
+Ví dụ 6.17: Cơ sở chính tắc của không gian $\mathbb{R}^n$ là cơ sở trực chuẩn.
+
+Định lý 6.6: Mỗi hệ trực chuẩn của $V$ đều có thể bổ sung thêm để trở thành cơ sở trực chuẩn.
+
+Chứng minh: Hệ gồm $k$ vector trực chuẩn $S$ là hệ độc lập tuyến tính nên ta có thể bổ sung thêm để được một cơ sở của $V$. Trực chuẩn hóa Gram-Schmidt cơ sở này sẽ được một cơ sở trực chuẩn của $V$. Trong quá trình trực chuẩn hóa $k$ vector của hệ $S$ không thay đổi vị trí vì vậy thực chất ta đã bổ sung vào hệ $S$ để có cơ sở trực chuẩn của $V$:
+
+Hệ quả 6.7: Mỗi không gian vector Euclide đều tồn tại cơ sở trực chuẩn.
+
+Định lý 6.8: Giả sử $\left\{ e_1, \ldots, e_n \right\}$ là một cơ sở trực chuẩn của $V$, với mọi $u, v \in V$ ta có
+
+$$
+\begin{array} { r l }
+& { \nu = \left. \nu , e _ { 1 } \right. e _ { 1 } + \ldots + \left. \nu , e _ { n } \right. e _ { n } . } \\
+& { \left. u , \nu \right. = \left. u , e _ { 1 } \right. \left. \nu , e _ { 1 } \right. + \ldots + \left. u , e _ { n } \right. \left. \nu , e _ { n } \right. . } \\
+& { \left. \nu \right. ^ { 2 } = \left. \nu , e _ { 1 } \right. ^ { 2 } + \ldots + \left. \nu , e _ { n } \right. ^ { 2 } }
+\end{array}
+$$
+
+Chứng minh: Các dạng thức trên được suy ra từ các khẳng định sau:
+
+$$
+\nu = x _ { 1 } e _ { 1 } + . . . + x _ { n } e _ { n } , u = y _ { 1 } e _ { 1 } + . . . + y _ { n } e _ { n }
+$$
+
+$$
+\left. \nu , u \right. = \left. x _ { 1 } e _ { 1 } + . . . + x _ { n } e _ { n } , y _ { 1 } e _ { 1 } + . . . + y _ { n } e _ { n } \right. = x _ { 1 } y _ { 1 } + . . . + x _ { n } y _ { n } .
+$$
+
+Nhận xét 6.4: Trong không gian với hệ trục tọa độ $\hat{\mathbf{d}}\hat{\mathbf{0}}$ chuẩn Oxyz có các véc-tơ đơn vị trên các trục tương ứng là $\vec{i}, \vec{j}, \vec{k}$. Véc-tơ đơn vị $\stackrel{\rightarrow}{n} = x\vec{i} + y\vec{j} + z\vec{k}$ bất kỳ có $x = n.\vec{i}=\cos\alpha$, $y=n.\vec{j}=\cos\beta$, $z=\stackrel{\rightarrow}{n}.\vec{k}=\cos\gamma$; nghĩa là $\stackrel{\rightarrow}{n}=(\cos\alpha, \cos\beta, \cos\gamma)$, trong đó $\alpha, \beta, \gamma$ lần lượt là góc của véc-tơ $\vec{n}$ với các trục tọa độ $\hat{d}\hat{0}$.
+
+# 6.3.4. Không gian con trực giao, phần bù trực giao
+
+Định nghĩa 6.9: Véc-tơ $\nu \in V$ trực giao với tập con $S \subset V$, ký hiệu $\nu \perp S$, nếu $\nu$ trực giao với mọi véc-tơ của $S$. 
+
+$$
+\nu \perp S \Longleftrightarrow (\nu, u) = 0, \forall u \in S.
+$$
+
+Tập con $S_1$ trực giao với tập con $S_2$, ký hiệu $S_1 \perp S_2$, nếu mọi véc-tơ của $S_1$ đều trực giao với mọi véc-tơ của $S_2$. 
+
+$$
+S_1 \perp S_2 \Leftrightarrow (\nu, u) = 0; \forall \nu \in S_1, \forall u \in S_2.
+$$
+
+# Định lý 6.9:
+
+$$
+1) \nu \perp S \Leftrightarrow \nu \perp \operatorname{span}S.
+$$
+
+Nói riêng nếu $\left\{ \boldsymbol{e}_{1}, \ldots, \boldsymbol{e}_{k} \right\}$ là một hệ sinh của $W$, khi đó:
+
+$$
+\nu \perp W \Leftrightarrow \nu \perp e_{i}; \forall i = 1, \ldots, k.
+$$
+
+2) Với mỗi tập con $S \subset V$. Ký hiệu
+
+$$
+S^{\perp} = \left\{ \nu \in V \mid \nu \perp u, \forall u \in S \right\}.
+$$
+
+Ta có:
+
+$$
+\begin{array}{l}
+S^{\perp} = (\mathrm{span} S)^{\perp}, \\
+V = (\mathrm{span} S) \oplus S^{\perp}, \\
+(S^{\perp})^{\perp} = \mathrm{span} S.
+\end{array}
+$$
+
+3) Với mỗi không gian con $W$ của $V$. Ta có:
+
+$$
+V = W \stackrel{\perp}{\oplus} W^{\perp}, (W^{\perp})^{\perp} = W.
+$$
+
+Hai không gian con $W, W^{\perp}$ được gọi là phần bù trực giao của nhau.
+
+4) Nếu hệ vector $\left\{ \boldsymbol{e}_{1}, \ldots, \boldsymbol{e}_{k} \right\}$ là một cơ sở trực chuẩn của $W$ và $\{ e_{k+1}, \ldots, e_{k+m} \}$ là một cơ sở trực chuẩn của $W^{\perp}$ thì $\left\{ \boldsymbol{e}_{1}, \ldots, \boldsymbol{e}_{k}, \boldsymbol{e}_{k+1}, \ldots, \boldsymbol{e}_{k+m} \right\}$ là cơ sở trực chuẩn của $V$:
+
+5) Trong không gian vector Euclid $\mathbb{R}^{n}$ với tích vô hướng (6.35), xét hệ vector: $u_{1} = (a_{11}, \ldots, a_{1n}), \ldots, u_{m} = (a_{m1}, \ldots, a_{mn})$:
+
+Đặt \( S = \{ u _ { 1 } , . . . , u _ { m } \} \), khi đó:
+
+\[
+S ^ { \perp } \text{ là không gian trực giao với span(S):}
+\quad \left\{
+\begin{array}{l}
+a_{11} x_1 + \cdots + a_{1n} x_n = 0 \\
+\vdots \\
+a_{m1} x_1 + \cdots + a_{mn} x_n = 0
+\end{array}
+\right.
+.
+
+Chứng minh:
+1) Với mỗi \( u \in \text{span}(S), u = x _ { 1 } u _ { 1 } + . . . + x _ { k } u _ { k }, u _ { 1 } , . . . , u _ { k } \in S \)
+
+\[
+\Rightarrow (\nu, u) = (\nu, x_1 u_1 + . . . + x_k u_k) = x_1 (\nu, u_1) + . . . + x_k (\nu, u_k) = 0.
+\]
+
+2) \( \mathbf{0} \in S ^ { \perp } \Rightarrow S ^ { \perp } \neq \emptyset \). Với mỗi \( \nu _ { 1 } , \nu _ { 2 } \in S ^ { \perp }, \alpha, \beta \in \mathbb{R}, u \in S: \)
+
+\[
+(\alpha \nu_1 + \beta \nu_2, u) = \alpha (\nu_1, u) + \beta (\nu_2, u) = 0 \Rightarrow \alpha \nu _ { 1 } + \beta \nu _ { 2 } \in S ^ { \perp }.
+\]
+
+Vậy \( S ^ { \bot } \) là không gian vector con của \( V \)
+
+\[
+1 ) \Rightarrow S ^ { \perp } = (\text{span}(S)) ^ { \perp } .
+\]
+
+Giả sử $\{\boldsymbol{e}_1, \ldots, \boldsymbol{e}_k\}$ là một cơ sở chuẩn của span $S$:
+
+$$
+(\nu - u, e_i) = 0, \forall i = 1, \ldots, k \Rightarrow \nu - u \in (\operatorname{span} S)^\perp = S^\perp.
+$$
+
+【 $\stackrel{\wedge}{\underset{\cdot}{\operatorname{\{ay}\}}} V = (\operatorname{span} S) + S^\perp$
+
+Ngoài ra, $\forall u \in (\operatorname{span} S) \cap S^\perp$ thì $(u, u) = 0 \Longrightarrow u = 0$, do đó $V = (\operatorname{span} S) \oplus S^\perp$. Theo công thức (6.49), ta có $S \subset (S^\bot)^\bot \Rightarrow \operatorname{span} S \subset (S^\bot)^\bot.$
+
+Ngược lại, với mỗi $\nu \in (S^\perp)^\perp \subset V$, theo công thức (6.52), ta có $\nu = u_1 + u_2, u_1 \in \operatorname{span} S, u_2 \in S^\perp$
+
+$$
+\Rightarrow 0 = (\nu, u_2) = (u_1 + u_2, u_2) = (u_1, u_2) + (u_2, u_2) = (u_2, u_2).
+$$
+
+$$
+\Rightarrow u_{2} = \mathbf{0} \Rightarrow \nu = u_{1} \in \mathrm{span} S \Rightarrow \left(S^{\perp}\right)^{\perp} \subset \mathrm{span} S. \mathrm{Vậy} \left(S^{\perp}\right)^{\perp} = \mathrm{span} S.
+$$
+
+3) Công thức (6.54) suy ra thuật (6.51), (6.52) và $W = \operatorname{span} W$ nếu W là không gian véc tơ con.
+
+Ví dụ 6.18: Xét $W = \left\{(0, 0, z) \big| z \in \mathbb{R}\right\}$. Ta có
+
+$$
+W^{\perp} = \left\{(x, y, 0) \middle| x, y \in \mathbb{R}\right\} \mathrm{~và~} \mathbb{R}^{3} = W \overset{\perp}{\oplus} W^{\perp}.
+$$
+
+Nhận xét 6.5: Gọi $W$ là không gian nghiệm của phương trình thuận nhất dưới dạng tổng quát
+
+$$
+\left\{
+\begin{array}{rccccccc}
+a_{11} x_{1} & + & a_{12} x_{2} & + & \cdots & + & a_{1n} x_{n} & = 0 \\
+a_{21} x_{1} & + & a_{22} x_{2} & + & \cdots & + & a_{2n} x_{n} & = 0 \\
+\vdots & & \vdots & & \ddots & & \vdots & \\
+a_{m1} x_{1} & + & a_{m2} x_{2} & + & \cdots & + & a_{mn} x_{n} & = 0
+\end{array}
+\right.
+$$
+
+hoặc viết dưới dạng ma trận $A X = 0$ ：
+
+Trong chương 5, theo công thức (5.28) ta có thể xem W là nhân của ánh xạ tuyến tính có ma trận trong cơ sở chính tắc là $A$. Mặt khác, theo công thức (6.55) ta cũng có thể xem W là tập tất cả các véc-tơ trực giao với mọi véc-tơ hàng của $A$, do đó W là phần bù trực giao của không gian véc-tơ sinh bởi các véc-tơ hàng của $A$.
+
+Theo (6.52), (6.55) ta có $\mathrm{dim} W = n - r(A)$. Kết quả này cho một cách chứng minh khác của Định lý 4.5 và công thức (5.13).
+
+# 6.4. MA TRẬN TRỰC GIAO VÀ ÁNH XA TUYẾN TÍNH TRỰC GIAO
+
+## 6.4.1. Ma trận trực giao
+
+Định nghĩa 6.10: Ma trận vuông $A$ được gọi là ma trận trực giao nếu $A^t A = I$. Như vậy, ma trận trực giao $A$ là khả nghịch và có $\boldsymbol{A}^{-1} = \boldsymbol{A}^t$.
+
+Ma trận $A = [a_{ij}]$ là ma trận trực giao khi
+
+$$
+\sum_{i=1}^{n} a_{ij} a_{ik} = \delta_{jk} =
+\begin{cases}
+  1 & \text{nếu } j = k \\
+  0 & \text{nếu } j \neq k
+\end{cases};
+$$
+
+$\delta_{jk}$ là ký hiệu Kronecker.
+
+Vậy ma trận $A$ trực giao khi và chỉ khi các véc-tơ cột tạo thành hệ trục chuẩn. Mặt khác, vì $A^{-1} = A^t \Rightarrow AA^t = I$, do đó các véc-tơ hàng của $A$ cũng tạo thành hệ trục chuẩn.
+
+$$
+\operatorname*{det} \Bigl( A^t A \Bigr) = \operatorname*{det} I = 1 \Rightarrow \operatorname*{det} A = \pm 1.
+$$
+
+Ví dụ 6.19: Ma trận 
+$\begin{array}{c}
+\begin{array}{rl}
+A &= [ \frac{1}{\sqrt{3}} \quad -\frac{2}{\sqrt{6}} \qquad 0 ] \\
+& \quad \frac{1}{\sqrt{3}} \quad \frac{1}{\sqrt{6}} \qquad \frac{1}{\sqrt{2}} \\
+& \quad \frac{1}{\sqrt{3}} \quad \frac{1}{\sqrt{6}} \quad -\frac{1}{\sqrt{2}}
+\end{array}
+\right]$
+có các cot bù chính tắc.
+
+(xem Ví dụ 6.15), do đó $A$ là ma trận trực giao.
+
+Ví dụ 6.20: Mọi ma trận vuông cấp 2 trực giao đều có dạng
+
+$$
+A = \left[ \begin{array}{ll}
+\cos \varphi & \sin \varphi \\
+- \sin \varphi & \cos \varphi 
+\end{array} \right]
+\quad \text{hoặc} \quad A = \left[ \begin{array}{ll}
+\cos \varphi & \sin \varphi \\
+\sin \varphi & -\cos \varphi
+\end{array} \right].
+$$
+
+Thật vậy, ta dễ dàng kiểm chứng hai ma trận $A$ trên thỏa mãn $A^t A = I$.
+
+$$
+\mathrm{Nghịch cụ lân_{4}i n}_{\hat{\mathsf{e}} \setminus A}^{\hat{\mathsf{e}}} \mathsf{\Pi} A = \left[ \begin{array}{ll}
+a & b \\
+c & d
+\end{array} \right] \mathrm{và} \hat{\mathsf{a}} A^{t} A = I \Rightarrow \left[ \begin{array}{ll}
+a & c \\
+b & d
+\end{array} \right] \left[ \begin{array}{ll}
+a & b \\
+c & d
+\end{array} \right] = \left[ \begin{array}{ll}
+1 & 0 \\
+0 & 1
+\end{array} \right].
+$$
+
+$$
+\left\{
+\begin{array}{l}
+a^{2} + c^{2} = 1 \\
+ab + cd = 0 \\
+b^{2} + d^{2} = 1
+\end{array}
+\right.
+$$
+
+Từ $(6.57) \Rightarrow \operatorname*{det} A = \pm 1$ và (2) & (3) suy ra $b, d$ là nghiệm duy nhất của hệ phương trình Cramer $\left\{
+\begin{array}{ll}
+a x + c y = 0 \\
+b x + d y = 1
+\end{array} \right. \Rightarrow b = -\frac{c}{\operatorname*{det} A}, \ d = \frac{a}{\operatorname*{det} A}.$
+
+) Nếu det $A = 1$ thì $A = { \left[ \begin{array} { l l } { a } & { b } \\ { - b } & { a } \end{array} \right] } \operatorname { v } { \dot { \mathbf { a } } } \ a ^ { 2 } + b ^ { 2 } = 1 { \Rightarrow } A = { \left[ \begin{array} { l l } { \cos \varphi } & { \sin \varphi } \\ { - \sin \varphi } & { \cos \varphi } \end{array} \right] } .$
+
+) Nếu det $A = -1$ thì $A = { \left[ \begin{array} { l l } { a } & { b } \\ { b } & { - a } \end{array} \right] } \mathrm { ~ v { \dot { a } } ~ } a ^ { 2 } + b ^ { 2 } = 1 { \Rightarrow } A = { \left[ \begin{array} { l l } { \cos \varphi } & { \sin \varphi } \\ { \sin \varphi } & { - \cos \varphi } \end{array} \right] } .$
+
+Định lý 6.10: Ma trận của một cơ sở trục chuẩn viết trong cơ sở trục chuẩn là ma trận trực giao. Như vậy mỗi ma trận chuyển từ cơ sở trục chuẩn sang cơ sở trục chuẩn là ma trận trực giao.
+
+Chứng minh: Gọi $A = \left[ a _ { i j } \right]$ là ma trận của cơ sở trục chuẩn $\left\{ \nu _ { 1 } , . . . , \nu _ { n } \right\}$ viết trong cơ sở trục chuẩn $\mathcal { B } = \left\{ e _ { 1 } , . . . , e _ { n } \right\}$:
+
+Theo công thức 6-4.b, $\nu _ { j } = \sum _ { i = 1 } ^ { n } a _ { i j } e _ { i } = \sum _ { i = 1 } ^ { n } \Bigl < e _ { i } , \nu _ { j } \Bigr > e _ { i } .$
+
+Từ (6.43) và giả thiết $\left\{ \nu _ { 1 } , . . . , \nu _ { n } \right\}$ là cơ sở trục chuẩn ta có:
+
+$$
+\sum _ { i = 1 } ^ { n } a _ { i j } a _ { i k } = \left. { \langle e _ { i } , \nu _ { j } \rangle, \langle e _ { i }, \nu _ { k } \rangle } \right. = \delta _ { j k } .
+$$
+
+Vậy $A$ là ma trận trực giao.
+
+# 6.4.2. Ánh xạ tuyến tính trực giao
+
+Định nghĩa 6.11: Giả sử $\Big ( V , \big < \ , \big > _ { V } \Big )$ và $\Big ( V ^ { \prime } , \big < \ , \big > _ { V ^ { \prime } } \Big )$ là hai không gian vector Euclid. Ánh xạ tuyến tính $f : V \to V ^ { \prime }$ được gọi là ánh xạ trực giao nếu với mọi $u, v \in V$:
+
+$$
+\big < f ( u ) , f ( v ) \big > _ { V ^ { \prime } } = \big < u , v \big > _ { V } .
+$$
+
+Nếu $f ( u ) = \mathbf{0}$ thì $0 = \left< f ( u ) , f ( u ) \right>_{V'} = \left< u, u \right>_V \Rightarrow u = 0$, do đó mỗi ánh xạ tuyến tính trực giao đều đơn cấu. Vì vậy mỗi tự đồng cấu tuyến tính trực giao là đẳng cấu.
+
+Định lý sau chỉ ra rằng, nếu điều kiện (6.59) thỏa mãn đối với mọi vector của một cơ sở trực chuẩn nào đó thì $f$ cũng là ánh xạ tuyến tính trực giao.
+
+Định lý 6.11: Giả sử $f$ là tự đồng cấu tuyến tính của không gian vector Euclid $V$: $\mathcal{B} = \left\{ e _ { 1 } , . . . , e _ { n } \right\}$ là một cơ sở trực chuẩn của $V$. Khi đó $f$ trực giao khi và chỉ khi $\left\{ f ( e _ { 1 } ) , . . . , f ( e _ { n } ) \right\}$ là một cơ sở trực chuẩn của $V$. Nói cách khác:
+
+$$
+\begin{array} { r } { \left\{ \begin{array} { l l } { \left. f ( u ) , f ( v ) \right| _ { V ^ { * } } = \left. u , v \right| _ { V } } & { \iff \left\{ \left. f ( e _ { i } ) , f ( e _ { j } ) \right| _ { V ^ { * } } = \left. e _ { i } , e _ { j } \right| _ { V } \right\} } \\ { \forall u , v \in V } \end{array} \right. } \end{array}
+$$
+
+Chứng minh: $( \Rightarrow )$ : Hiển nhiên vì $e _ { i } , e _ { j } \in V$
+
+$( \Longleftarrow )$ : Giả sử $\left\{ f ( e _ { 1 } ) , . . . , f ( e _ { n } ) \right\}$ là cơ sở trực chuẩn thì với mọi $u , v \in V$:
+
+$$
+v = x _ { 1 } e _ { 1 } + . . . + x _ { n } e _ { n } , u = y _ { 1 } e _ { 1 } + . . . + y _ { n } e _ { n } .
+$$
+
+$$
+\begin{array} { l } { \left. f ( v ) , f ( u ) \right| = \left. x _ { 1 } f ( e _ { 1 } ) + . . . + x _ { n } f ( e _ { n } ) , y _ { 1 } f ( e _ { 1 } ) + . . . + y _ { n } f ( e _ { n } ) \right| } \\ { = x _ { 1 } y _ { 1 } + . . . + x _ { n } y _ { n } = \left. v , u \right|. } \end{array}
+$$
+
+# 6.4.3. Ma trận của tu dạng cầu chuẩn giao*
+
+Giả sử $A = \left[ a _ { i j } \right]$ là ma trận của tu dạng cầu $f$ trong không gian Euclid V với cơ sở trực chuẩn $\mathcal{B} = \left\{ e _ { 1 } , . . . , e _ { n } \right\}$ . Theo định lý 6.10 và định lý 6.11 thì tu dạng cầu $f$ là trực giao khi và chỉ khi $A$ là một ma trận trực giao.
+
+Vậy ma trận của tự dạng cấu trúc giao trong một cơ sở trục chuẩn là một ma trận trực giao. Ngược lại, nếu $A$ là ma trận trực giao và $f$ là ánh xạ tuyến tính có ma trận trong cơ sở trục chuẩn là $A$ thì $f$ là ánh xạ trực giao.
+
+Ví dụ 6.21: Phép quay xung quanh trục z một góc quay $\theta$:
+
+$f : \mathbb{R}^3 \to \mathbb{R}^3$ xác định bởi $f(x, y, z) = (x\cos \theta - y\sin \theta, x\sin \theta + y\cos \theta, z)$ có ma trận trong cơ sở chính tắc
+
+$$
+A = \left[ \begin{array}{ccc}
+\cos \theta & -\sin \theta & 0 \\
+\sin \theta & \cos \theta & 0 \\
+0 & 0 & 1 
+\end{array} \right]
+$$
+
+$A$ là ma trận trực giao do đó $f$ là ánh xạ trực giao.
+
+Định lý 6.12: Mọi ma trận trực giao chỉ có các giá trị riêng là $-1$ hay $1$.
+
+Chứng minh: Giả sử $f$ là tự dạng cấu trúc giao có ma trận trong một cơ sở trục chuẩn nào đó là $A$:
+
+Giả sử $\nu \neq \mathbf{0}$ là một véc tơ riêng giá trị riêng $\lambda$. Khi đó
+
+Mặt khác $\begin{array} { c } { { \left. f ( \nu ) , f ( \nu ) \right. = \left. \lambda \nu , \lambda \nu \right. = \lambda ^ { 2 } \left. \nu , \nu \right. . } } \\ { { { } } } \\ { { \left. f ( \nu ) , f ( \nu ) \right. = \left. \nu , \nu \right. \Rightarrow \lambda ^ { 2 } \left. \nu , \nu \right. = \left. \nu , \nu \right. . } } \\ { { { } } } \\ { { \left. \nu , \nu \right. \neq 0 \Rightarrow \lambda ^ { 2 } = 1 . \nabla \hat{a} \mathbf{y} \quad \lambda = \pm 1 . } } \end{array}$ Vì
+
+# 6.5. CHEO HÓA TRỤC GIAO, TỰ ĐỘNG CẦU ĐỐI XỨNG 6.5.1. Bài toán cheo hóa trục giao
+
+Cho ma trận A tìm ma trận trục giao $T$ sao cho $T ^ { t } A T$ là ma trận chéo.
+
+Định lý 6.13 (điều kiện cần): Nếu A cheo hóa trục giao được thì A là ma trận đối xứng.
+
+Chứng minh: Nếu $T ^ { t } A T$ là ma trận chéo thì $\left( T ^ { t } A T \right) ^ { t } = T ^ { t } A T$
+
+Mặt khác $\left( T ^ { t } A T \right) ^ { t } = T ^ { t } A ^ { t } T$ , do đó $T ^ { t } A ^ { t } T = T ^ { t } A T$ . Ngoài ra, $T$ khả nghịch nên $A ^ { t } = A$ .
+
+Ngược lại, ta sẽ chứng minh nếu $A$ đối xứng thì cheo hóa trục giao được thông qua tự động cầu đối xứng sau.
+
+# 6.5.2. Tự động cầu đối xứng
+
+Định nghĩa 6.12: Tự động cầu $f : V \to V$ được gọi là đối xứng nếu:
+
+$$
+\forall u , v \in V ; \left. f ( u ) , v \right. = \left. u , f ( v ) \right. .
+$$
+
+Định lý 6.14: Giả sử $\mathcal{B} = \left\{ e_{1}, \ldots, e_{n} \right\}$ là một cơ sở của $V$, khi đó tự đồng cấu $f$ là đối xứng khi và chỉ khi với mọi $i, j = 1, \ldots, n$,
+
+$$
+\Big \langle f(e_{i}), e_{j} \Big \rangle = \Big \langle e_{i}, f(e_{j}) \Big \rangle ; \forall i, j = 1, \ldots, n.
+$$
+
+Chứng minh: Nếu $f$ thỏa mãn (6.61) thì đương nhiên thỏa mãn (6.62).
+
+Ngược lại, giả sử $f$ thỏa mãn (6.62): $\forall \nu = x_{1} e_{1} + \ldots + x_{n} e_{n}, u = y_{1} e_{1} + \ldots + y_{n} e_{n}$:
+
+$$
+\begin{array}{l}
+\left. f(\nu), u \right. = \left. x_{1} f(e_{1}) + \ldots + x_{n} f(e_{n}), y_{1} e_{1} + \ldots + y_{n} e_{n} \right. \\
+\qquad = \sum_{i=1}^{n} \sum_{j=1}^{n} x_{i} y_{j} \left. f(e_{i}), e_{j} \right. = \sum_{i=1}^{n} \sum_{j=1}^{n} x_{i} y_{j} \left. e_{i}, f(e_{j}) \right. = \left. \nu, f(u) \right..
+\end{array}
+$$
+
+Như vậy ta chứng minh một tự đồng cấu là đối xứng thì thay vì chứng minh công thức (6.61) đúng với mọi $\nu, u \in V$ ta chỉ cần chứng minh công thức (6.62) đúng với một cơ sở nào đó.
+
+# 6.5.3. Ma trận của một tự đồng cấu đối xứng trong một cơ sở trực chuẩn
+
+Giả sử $A = \left[ a_{ij} \right]$ là ma trận của tu động cầu $f$ trong một cơ sở trực chuẩn $\mathcal{B} = \left\{ e_1, . . . , e_n \right\}$. Theo công thức (6.42) ta có:
+
+$$
+f(e_j) = \sum_{i=1}^n a_{ij} e_i = \sum_{i=1}^n \langle f(e_j), e_i \rangle e_i.
+$$
+
+Vậy với mọi $i, j = 1, . . . , n$: $a_{ij} = \langle f(e_j), e_i \rangle$.
+
+Theo định lý 6.14 và công thức (6.63) ta có kết quả sau.
+
+Định lý 6.15: $f$ đối xứng khi và chỉ khi ma trận $A$ của $f$ trong một cơ sở trực chuẩn nào đó là ma trận đối xứng.
+
+Ví dụ 6.22: Ánh xạ $f : \mathbb{R}^3 \to \mathbb{R}^3$ xác định bởi
+
+$$
+f(x, y, z) = (x - y + 2z, -x + 2y + z, 2x + y + 4z)
+$$
+
+Ma trận trong cơ sở chính tắc: $A = \left[ { \begin{array}{ccc} 1 & -1 & 2 \\ -1 & 2 & 1 \\ 2 & 1 & 4 \end{array}} \right]$
+
+là ma trận đối xứng nên $f$ là một tu động cầu đối xứng.
+
+Ta cũng có thể kiểm tra lại điều kiện (6.62) như sau:
+
+$$
+f(e_1) = (1, -1, 2), f(e_2) = (-1, 2, 1), f(e_3) = (2, 1, 4);
+$$
+
+$$
+\langle f(e_1), e_2 \rangle = -1 = \langle e_1, f(e_2) \rangle; \langle f(e_1), e_3 \rangle = 2 = \langle e_1, f(e_3) \rangle;
+$$
+
+$$
+\left. f(e_2), e_3 \right. = 1 = \left. e_2, f(e_3) \right.
+$$
+
+Định lý 6.16: Các giá trị riêng của một ma trận đối xứng là các số thực. Nói cách khác, đa thức đặc trưng của ma trận đối xứng vuông cấp $n$ có đúng $n$ nghiệm thực.
+
+Chứng minh: Giả sử $f$ là tự đồng cấu đối xứng có ma trận trong một cơ sở trực chuẩn nào đó là ma trận đối xứng $A$ cấp $n$. Giả sử $\lambda = a + i b$ là nghiệm của đa thức đặc trưng $\mathscr{P}(\lambda) = \left| A - \lambda I \right|$. Khi đó theo Định lý 5.17, công thức 5.37 tồn tại hai vector được lập tuyến tính $u, v \in V$ sao cho 
+$$
+\begin{cases}
+f(v) = a v - b u \\
+f(u) = b v + a u
+\end{cases}.
+$$
+
+Do đó $\left. f(v), u \right. = a \left. v, u \right. - b \left. u, u \right.$, $\left. v, f(u) \right. = a \left. v, u \right. + b \left. v, v \right.$. Vì $f$ đối xứng suy ra $-b \langle u, u \rangle = b \langle v, v \rangle \geq 0 \implies b = 0$
+
+Vậy mỗi nghiệm của đa thức đặc trưng là nghiệm thực.
+
+Định lý 6.17: Hai vector riêng ứng với hai giá trị riêng khác nhau của một tự đồng cấu đối xứng là trực giao nhau.
+
+Chứng minh: Giả sử $f(\nu_1) = \lambda_1 \nu_1$, $f(\nu_2) = \lambda_2 \nu_2$; $\nu_1, \nu_2 \neq 0$; $\lambda_1 \neq \lambda_2$, khi đó
+
+$$
+\lambda _ { 1 } \left. \nu _ { 1 } , \nu _ { 2 } \right. = \left. f ( \nu _ { 1 } ) , \nu _ { 2 } \right. = \left. \nu _ { 1 } , f ( \nu _ { 2 } ) \right. = \lambda _ { 2 } \left. \nu _ { 1 } , \nu _ { 2 } \right.
+$$
+
+$$
+\Rightarrow ( \lambda _ { 1 } - \lambda _ { 2 } ) \big \langle \nu _ { 1 } , \nu _ { 2 } \big \rangle = 0 \Longrightarrow \big \langle \nu _ { 1 } , \nu _ { 2 } \big \rangle = 0 .
+$$
+
+Định lý 6.18: Với mỗi tự đồng cấu đổi hình $f$ trong $V$ đều tồn tại một cơ sở trực chuẩn của $V$ gồm các vector riêng của $f$. Nói cách khác, mỗi tự đồng cấu đổi hình đều chéo hóa được.
+
+Chứng minh: Theo Định lý 6.16, $f$ có vector riêng $u _ { 1 }$ ứng với giá trị riêng $\lambda _ { 1 } \in \mathbb{R}$, $\left\| u _ { 1 } \right\| = 1$. Đặt $W _ { 1 } = \left\{ \lambda u _ { 1 } \vert \lambda \in \mathbb{R} \right\} = \operatorname{span}\left\{ u _ { 1 } \right\}$.
+
+$$
+\forall \nu \in W _ { 1 } ^ { \perp }, \left. f ( \nu ) , u _ { 1 } \right. = \left. \nu , f ( u _ { 1 } ) \right. = \left. \nu , \lambda _ { 1 } u _ { 1 } \right. = 0 \Longrightarrow f ( \nu ) \in W _ { 1 } ^ { \perp }.
+$$
+
+Vậy $W _ { 1 } ^ { \perp }$ bất biến đối với $f$ và $V = W _ { 1 } \oplus W _ { 1 } ^ { \perp}$ nên ta có thể xét:
+
+$$
+f _ { 1 } = f \big|_{W _ { 1 } ^ { \perp }} : W _ { 1 } ^ { \perp } \to W _ { 1 } ^ { \perp }, \ \dim W _ { 1 } ^ { \perp } = \dim V - 1.
+$$
+
+Quy tắc theo số chiều của không gian thì có số trực chuẩn $\left\{ u_{2}, \ldots, u_{n} \right\}$ của $W_{1}^{\perp}$ gồm các vector riêng của $f_{1}$. Do đó $\left\{ u_{1}, u_{2}, \ldots, u_{n} \right\}$ là cơ sở trực chuẩn của $V$ gồm các vector riêng của $f$.
+
+Hệ quả 6.19: Mọi ma trận đối xứng đều chéo hóa được.
+
+Chứng minh: Giả sử $f$ là tự đồng cấu đối xứng có ma trận $A$ trong cơ sở trực chuẩn $\mathcal{B} = \left\{ e_{1}, \ldots, e_{n} \right\}$. Theo Định lý 6.18 tồn tại cơ sở trực chuẩn $\mathcal{B'} = \left\{ e'_{1}, \ldots, e'_{n} \right\}$ gồm các vector riêng của $f$. Gọi $T$ là ma trận chuyển từ cơ sở $\mathcal{B}$ sang $\mathcal{B}'$ thì $T$ chính giao và
+
+$$
+T^{t} A T = \left[ \begin{array}{ccc}
+\lambda_{1} &  & \\
+ & \ddots & \\
+ &  & \lambda_{n}
+\end{array} \right],
+$$
+
+trong đó $\lambda_{1}, \ldots, \lambda_{n}$ là các giá trị riêng của $A$.
+
+# 6.5.4. Thuật toán chéo hóa ma trận đối xứng
+
+Để chéo hóa ma trận đối xứng $A$, nghĩa là tìm ma trận trực giao $T$ sao cho $T^{t} A T$ có dạng chéo, ta thực hiện các bước sau:
+
+Bước 1: Tìm các giá trị riêng của $A$ (nghiem của đa thức đặc trưng).
+
+Bước 2: Với mỗi giá trị riêng tìm được ở bước 1, tìm một cơ sở của không gian riêng trong V và trực chuẩn hóa Gram-Schmidt cơ sở này.
+
+Bước 3: Gộp các cơ sở đã trực chuẩn hóa $\dot{\sigma}$ từ bước 2 ta có mặt cơ sở trực chuẩn của $V$ gồm các vector riêng của $A$. Ma trận các vector của cơ sở này là ma trận trực giao $T$ cần tìm.
+
+Ví dụ 6.23: Chéo hóa trực giao ma trận đối xứng $A = \left[ \begin{array} { l l l } { 0 } & { 2 } & { 2 } \\ { 2 } & { 3 } & { -1 } \\ { 2 } & { -1 } & { 3 } \end{array} \right] .$
+
+Đa thức đặc trưng
+
+$$
+\Big| A - \lambda I \Big| = \left| \begin{array} { l l l } { - \lambda } & { 2 } & { 2 } \\ { 2 } & { 3 - \lambda } & { -1 } \\ { 2 } & { -1 } & { 3 - \lambda } \end{array} \right| = \left| \begin{array} { l l l } { 4 - \lambda } & { 2 } & { 2 } \\ { 4 - \lambda } & { 3 - \lambda } & { -1 } \\ { 4 - \lambda } & { -1 } & { 3 - \lambda } \end{array} \right| = \left| \begin{array} { l l l } { ( 4 - \lambda ) } & { 2 } & { 2 } \\ { 0 } & { 1 - \lambda } & { -3 } \\ { 0 } & { -3 } & { 1 - \lambda } \end{array} \right|
+$$
+
+$$
+\mathbf{\Lambda} = \left| \begin{array} { c c c } { ( 4 - \lambda ) } & { 4 } & { 2 } \\ { 0 } & { -2 - \lambda } & { -3 } \\ { 0 } & { -2 - \lambda } & { 1 - \lambda } \end{array} \right| = \left| \begin{array} { c c c } { ( 4 - \lambda ) } & { 4 } & { 2 } \\ { 0 } & { -2 - \lambda } & { -3 } \\ { 0 } & { 0 } & { 4 - \lambda } \end{array} \right| = - ( 4 - \lambda ) ^ { 2 } ( \lambda + 2 ).
+$$
+
+Véc-tơ riêng $\nu = (x, y, z) \neq \mathbf{0}$ ứng với giá trị riêng $\lambda_1 = 4$ (nghiệm kép) là nghiệm khác không của hệ phương trình:
+
+$$
+\begin{array}{r}
+\left[ \begin{array}{ccc}
+-4 & 2 & 2 \\
+2 & -1 & -1 \\
+2 & -1 & -1
+\end{array} \right]
+\left[ \begin{array}{c}
+x \\
+y \\
+z
+\end{array} \right] = 
+\left[ \begin{array}{c}
+0 \\
+0
+\end{array} \right].
+\end{array}
+$$
+
+Hệ phương trình trên tương đương với phương trình $2x - y - z = 0$:
+
+Do đó $\nu = (x, y, z) \in V_{\lambda_1} \Leftrightarrow \nu = \left( \frac{y}{2} + \frac{z}{2}, y, z \right) = y \left( \frac{1}{2}, 1, 0 \right) + z \left( \frac{1}{2}, 0, 1 \right).$ Chọn $u_1 = (1, 2, 0)$, $u_2 = (1, 0, 2)$:
+
+Trục chuẩn hóa hai véc-tơ này ta có
+
+$$
+\nu_1 = \left( \frac{1}{\sqrt{5}}, \frac{2}{\sqrt{5}}, 0 \right), \quad \nu_2 = \left( \frac{2}{\sqrt{30}}, -\frac{1}{\sqrt{30}}, \frac{5}{\sqrt{30}} \right).
+$$
+
+$\bullet$ Véc-tơ riêng $\nu = (x, y, z) \neq \mathbf{0}$ ứng với giá trị riêng $\lambda_2 = -2$ là nghiệm khác không của hệ phương trình:
+
+$$
+{ \left[ \begin{array} { l l l } { 2 } & { 2 } & { 2 } \\ { 2 } & { 5 } & { - 1 } \\ { 2 } & { - 1 } & { 5 } \end{array} \right] } { \left[ \begin{array} { l } { x } \\ { y } \\ { z } \end{array} \right] } = { \left[ \begin{array} { l } { 0 } \\ { 0 } \\ { 0 } \end{array} \right] } .
+$$
+
+$$
+\mathrm{Tác \dot{G}} [ \begin{array} { l l l } { 2 } & { 2 } & { 2 } \\ { 2 } & { 5 } & { - 1 } \\ { 2 } & { - 1 } & { 5 } \end{array} ] [ \begin{array} { l l l } { 1 } & { 1 } & { 1 } \\ { 0 } & { 3 } & { - 3 } \\ { 0 } & { - 3 } & { 3 } \end{array} ] [ \begin{array} { l l l } { 1 } & { 1 } & { 1 } \\ { 0 } & { 1 } & { - 1 } \\ { 0 } & { 0 } & { 0 } \end{array} ] [ \begin{array} { l l l } { 1 } & { 2 } & { 0 } \\ { 0 } & { 1 } & { - 1 } \\ { 0 } & { 0 } & { 0 } \end{array} ] .
+$$
+
+$\mathrm{Hệ phương trình trên tương đương với hệ}$
+
+$$
+\left\{ \begin{array} { c c } { x + 2 y = 0 } \\ { y - z = 0 } \end{array} \right. \mathtt{c \dot{o}} \mathrm{nghĩa m}\hat{\mathbf{e}} \left\{ \begin{array} { l l } { x = - 2 y } \\ { z = y } \end{array} \right. .
+$$
+
+Do đó $\nu = (x, y, z) \in V_{\lambda_2} \Leftrightarrow \nu = (-2y, y, y) = y(-2, 1, 1)$ chọn $u_3 = (-2, 1, 1)$:
+
+Trước chuẩn hóa được $\nu_3 = (-2 / \sqrt{6}, 1 / \sqrt{6}, 1 / \sqrt{6})$
+
+$$
+T = \left[ \begin{array} { l l l } { 1 / { \sqrt { 5 } } } & { 2 / { \sqrt { 30 } } } & { - 2 / { \sqrt { 6 } } } \\ { 2 / { \sqrt { 5 } } } & { - 1 / { \sqrt { 30 } } } & { 1 / { \sqrt { 6 } } } \\ { 0 } & { 5 / { \sqrt { 30 } } } & { 1 / { \sqrt { 6 } } } \end{array} \right] \quad \text{và} \quad T ^ { t } A T = \left[ \begin{array} { l l l } { 4 } & { 0 } & { 0 } \\ { 0 } & { 4 } & { 0 } \\ { 0 } & { 0 } & { - 2 } \end{array} \right] .
+$$
+
+# 6.5.5. Đưa biểu thức toán phương về dạng chính tắc bằng cách hóa trục giao
+
+Giả sử $\boldsymbol{Q}$ là dạng toàn phương trong không gian Euclid $V$ với cơ sở chuẩn $\mathcal{B} = \left\{ e _ { 1 } , . . . , e _ { n } \right\}$ có ma trận $A = \left[ a _ { i j } \right]$ (ma trận đối xứng). Theo định lý H, ta có thể hóa chéo trục giao ma trận $A = \left[ a _ { i j } \right]$, nghĩa là ta tìm được ma trận trục giao $T$ để $T ^ { t } A T$ là ma trận chéo. $T$ là ma trận chuyển cơ sở $\mathcal{B}$ sang cơ sở chuẩn $\mathcal{B}'$ gồm các vector riêng của $A$. Vì vậy biểu thức (6.11) trong cơ sở $\mathcal{B}'$ có dạng chính tắc (6.15).
+
+Ví dụ 6.24: Cho dạng toàn phương $Q : \mathbb { R } ^ { 3 } \rightarrow \mathbb { R }$ xác định như sau:
+
+Với mọi $\nu = ( x_1, x_2, x_3 ) \in \mathbb{R}^3 \colon Q(\nu) = 3x_2^2 + 3x_3^2 + 4x_1x_2 + 4x_1x_3 - 2x_2x_3.$
+
+Ma trận của $\boldsymbol{Q}$ theo cơ sở chính tắc của $\mathbb{R}^3$ là: 
+\[ A = \left[ \begin{array}{ccc}
+0 & 2 & 2 \\
+2 & 3 & -1 \\
+2 & -1 & 3
+\end{array} \right]. \]
+
+Theo Ví dụ 6.23, tồn tại cơ sở $\mathcal{B}' = \left\{ e_1', e_2', e_3' \right\}$:
+\[ \boldsymbol{e}_1' = \left( \frac{1}{\sqrt{5}}, \frac{2}{\sqrt{5}}, 0 \right), \quad \boldsymbol{e}_2' = \left( \frac{2}{\sqrt{30}}, -\frac{1}{\sqrt{30}}, \frac{5}{\sqrt{30}} \right), \quad \boldsymbol{e}_3' = \left( -\frac{2}{\sqrt{6}}, \frac{1}{\sqrt{6}}, \frac{1}{\sqrt{6}} \right). \]
+
+$\nu = (x_1, x_2, x_3) = x'_1 e'_1 + x'_2 e'_2 + x'_3 e'_3; Q(\nu) = 4{x'}_1^2 + 4{x'}_2^2 - 2{x'}_3^2.$
+
+Nhận xét 6.2: Khi sử dụng phương pháp Lagrange và phương pháp Jacobi thì ma trận $T$ nhận được thông thường không phải là ma trận trực giao, các cơ sở $\left\{ e'_1, e'_2, e'_3 \right\}$.
+
+Hàm $f\}$ của ví dụ 6.7, 6.9 không phải là cơ sở trực chuẩn.
+
+# 6.6. ĐƯỜNG BẬC 2 TRONG MẶT PHẲNG VÀ MẶT BẬC 2 TRONG KHÔNG GIAN*
+
+## 6.6.1. Hệ tọa độ trục chuẩn trong mặt phẳng và các đường bậc 2
+
+### 6.6.1.1. Tọa độ của một vector, tọa độ của một điểm trong mặt phẳng
+
+Trong mặt phẳng ta xét hai trục vuông góc $x' O x$ và $y' O y$ cắt nhau tại $O$. Hai trục này theo chiều dương tạo nên hệ trục tọa độ vuông góc Descartes (Décartes) trong mặt phẳng. Trên $Ox$, $Oy$ ta chọn hai vector đơn vị lần lượt là $\overrightarrow{i}$ và $\overrightarrow{j}$. Tập $\left\{ \overrightarrow{i}, \overrightarrow{j} \right\}$ là mặt cơ sở trục chuẩn.
+
+Cặp $(\nu_x, \nu_y)$ được gọi là tọa độ của vector $\vec{\nu}$ nếu $\nu_x$, $\nu_y$ là hình chiếu của $\nu$ xuống hai trục $Ox$, $Oy$, nghĩa là $\nu = \nu_x \overrightarrow{i} + \nu_y \overrightarrow{j}$:
+
+Theo các phép toán cộng vector, phép nhân một số với một vector và tính tích vô hướng của hai vector $\vec{u}, \vec{\nu} = |\vec{u}| \cdot |\vec{\nu}| \cos (\vec{u}, \vec{\nu})$ thì
+
+$$
+\vec{\nu} = \nu_x \hat{i} + \nu_y \hat{j} = (\nu, \hat{i}) \hat{i} + (\nu, \hat{j}) \hat{j}.
+$$
+
+Nếu $\overrightarrow{OM} = x \overrightarrow{i} + y \overrightarrow{j}$ thì $(x, y)$ được gọi là tọa độ của điểm $M$, ký hiệu $M(x, y)$. Nội dung khác, tọa độ của véc-tơ $\overrightarrow{OM}$ là tọa độ của điểm $M$:
+
+Hai điểm $A, B$ có tọa độ lần lượt là $(x_A, y_A); (x_B, y_B)$ thì véc-tơ $\overrightarrow{AB}$ có tọa độ $(x_B - x_A, y_B - y_A).$
+
+![](images/54e0b7e13f47343fe324913f74ff01981ef1b161f25974ee7740ed35729586be.jpg)
+
+# 6.6.1.2. Các đường bậc 2 dạng chính tắc trong mặt phẳng
+
+Trong mặt phẳng, ta xét 3 đường bậc 2 sau:
+
+## a) Đường Ellipse (Elip)
+
+Cho $F_1, F_2$ là điểm cố định. Đường ellipse nhận tiêu điểm $F_1, F_2$ với độ dài trục lớn $a$ là tập hợp:
+$$
+(E) = \left\{ M \mid MF_1 + MF_2 = 2a \right\}; a > c \text{ và } F_1F_2 = 2c.
+$$
+
+Nếu $F_1(-c, 0), F_2(c, 0)$ thì phương trình của ellipse $(E)$ có dạng:
+
+$$
+{ \frac { x ^ { 2 } } { a ^ { 2 } } } + { \frac { y ^ { 2 } } { b ^ { 2 } } } = 1 { \mathrm { ~với~} } a ^ { 2 } = b ^ { 2 } + c ^ { 2 } .
+$$
+
+(6.65)
+
+$a$ là độ dài trục lớn, $b$ là độ dài trục bé.
+
+Khi $a = b \Rightarrow c = 0$: elip $( E )$ trở thành đường tròn tâm $O$ bán kính $a$：
+
+# b) Hyperbol
+
+Đường hyperbol nhận tiêu điểm $F _ { 1 } , F _ { 2 }$ với độ dài trục lớn $a$ là tập hợp:
+
+$$
+( H ) = \left\{ M { \big | } \left| M F _ { 1 } - M F _ { 2 } \right| = 2 a \right\} , a < c \mathrm { ~với~} F _ { 1 } F _ { 2 } = 2 c .
+$$
+
+Nếu $F _ { 1 } ( - c , 0 ) , F _ { 2 } ( c , 0 )$ thì phương trình của hyperbol $( H )$ có dạng:
+
+$$
+{ \frac { x ^ { 2 } } { a ^ { 2 } } } - { \frac { y ^ { 2 } } { b ^ { 2 } } } = 1 { \mathrm { ~với~} } b ^ { 2 } = c ^ { 2 } - a ^ { 2 } .
+$$
+
+# c) Parabol:
+
+Cho đường thẳng $( \Delta )$ và điểm $F$. Parabol có tiêu điểm $F$ và đường chuẩn $( \Delta )$ là tập hợp:
+
+$$
+\left( P \right) = \left\{ M \left| M F = d ( M , \Delta ) \right. \right\} ,
+$$
+
+trong đó $d ( M , \Delta )$ là khoảng cách từ $M$ đến đường thẳng $( \Delta )$：
+
+Nếu $F ( p / 2 , 0 )$, $( \Delta ) : x = - p / 2$ thì $( P )$ có phương trình:
+
+$$
+y ^ { 2 } = 2 p x .
+$$
+
+(6.67)
+
+(6.65), (6.66), (6.67) là phương trình chính tắc của 3 đường conic
+
+![](images/d7e84332c2a770a998cfa64eea46e143412d812b458f3555d7aaf79b6e4a574.jpg)  
+Ellipse
+
+![](images/9b35bcfa5062c4ab8af893963e20ac82a866ea27c4795bfec26acf31ac95574f.jpg)  
+Hyperbol
+
+# CHUƠNG 6
+
+$$
+\eta ( A , B ) = \mathrm { tr } ( A ^ { \ t } B ) = \mathrm { tr } ( A ^ { \ t } B ) ^ { \ t } = \mathrm { tr } ( B ^ { \ t } A ) = \eta ( B , A ) ;
+$$
+
+$$
+\eta ( A , A ) = \mathrm { tr } A ^ { \prime } A = \sum _ { i = 1 } ^ { m } \sum _ { j = 1 } ^ { n } a _ { i j } ^ { 2 } \geq 0 ; \eta ( A , A ) = 0 \Leftrightarrow a _ { i j } ^ { 2 } = 0 \Leftrightarrow A = 0 .
+$$
+
+6.2. b) $\eta ( e _ { 1 } , e _ { 1 } ) = 1$, đặt $\nu _ { 1 } = e _ { 1 } = ( 1 , 0 )$:
+
+$\overline { \nu } _ { 2 } = - \eta ( e _ { 2 } , e _ { 1 } ) \nu _ { 1 } + e _ { 2 } = 2 e _ { 1 } + e _ { 2 } = ( 2 , 1 ) ;$ $\eta ( \overline { \nu } _ { 2 } , \overline { \nu } _ { 2 } ) = 1 \Rightarrow \nu _ { 2 } = ( 2 , 1 ) . \mathrm { H } \hat{ \in } \left\{ \nu _ { 1 } , \nu _ { 2 } \right\}$ trục chuẩn đối với $\eta$:
+
+$$
+k > 9 ~ \mathrm { c } ) ~ a > 0 , ~ d > 0 , ~ a d - b c > 0 .
+$$
+
+6.6. Suy ra bất đẳng thức hình bình hành:
+
+$2 \left( \| u - w \| ^{2} + \| v - w \| ^{2} \right) = \| u - v \| ^{2} + \| u - 2w + v \| ^{2} \geq \| u - v \| ^{2}$
+
+（20$\begin{array}{r}
+\| u - v \|^{2} \leq \| u - w \|^{2} + \| v - w \|^{2} + 2 \| u - w \| \| v - w \| \leq 2 \left( \| u - w \| ^{2} + \| v - w \| ^{2} \right).
+\end{array}$
+
+6.7. a) $x_{1}\nu_{1} + . . . + x_{n}\nu_{n} = {\bf 0} \Longrightarrow x_{k} = u_{k}, x_{1}\nu_{1} + . . . + x_{n}\nu_{n} = 0.$
+
+b) Với mỗi $k$, xét $W_{k} = \mathrm{span} \left( \{ e_{1}, . . . , e_{n} \} \backslash \{ e_{k} \} \right); V = W_{k} \oplus W_{k}^{\perp}.$ $\dim W_{k} = n - 1 \Longrightarrow \dim W_{k}^{\perp} = 1 \Longrightarrow e_{k} = u_{k} + \overline{\nu}_{k}; \overline{\nu}_{k} \neq {\bf 0}.$ （20）
+
+Đặt $\nu_k = \overline{\nu}_k / \| \overline{\nu}_k \|^2 \in W_k^\perp$ thì $\{ \nu_1, . . . , \nu_n \}$ là cơ sở trực giao duy nhất với $\left\{ e_1, . . . , e_n \right\}$. Do đó, giả sử có $\nu'_k$ sao cho $\left. \nu_k', e_i \right. = \delta_{ki}$.
+
+$$
+\begin{array}{r}
+\Rightarrow \nu' _ k = \alpha \nu_k \quad \text{và} \quad \left. \nu' _ k, e_i \right. = \left. \alpha \nu_k, e_i \right. = \delta_{ki} \Rightarrow \alpha = 1.
+\end{array}
+$$
+
+6.8. Nếu $\nu \in W$ chọn $u_0 = \nu$
+
+Nếu $\nu \not\in W$ thì $\nu = u_0 + u_1; u_0 \in W, u_1 \in W^\perp \Rightarrow \| \nu - u_0 \| = \| u_1 \|$.
+
+$\forall u \in W : \| \nu - u \| = \| u - u_0 \| + \| u_1 \| \geq \| \nu - u_0 \| = \| u_1 \|.$
+
+Nếu có $u'_0$ sao cho $\| \nu - u_0 \| = \| \nu - u'_0 \|$ thì $\| u_0 - u'_0 \| = 0 \Rightarrow u'_0 = u_0$.
+
+6.9. $m _ { 1 } = \dim W _ { 1 }$, $\langle {\cal N} _ { 1 } \rangle, m _ { 2 } = \mathrm{dim} W _ { 2 } \Rightarrow \mathrm{dim} W _ { 1 } ^ { \perp } = n - m _ { 1 } \Rightarrow W _ { 1 } ^ { \perp } \cap W _ { 2 } \neq \left\{ \mathbf{0} \right\}.$ Ngược lại, $\dim ( W _ { 1 } ^ { \perp } + W _ { 2 } ) = \dim W _ { 1 } ^ { \perp } + \dim W _ { 2 } = n - m _ { 1 } + m _ { 2 } > n.$ $\Rightarrow \exists \nu \in W _ { 1 } ^ { \bot } \cap W _ { 2 }$ là vector cần tìm.
+
+6.10 $\scriptstyle \cdot \left[ \begin{array} { l l l l } { 1 } & { 0 } & { 4 } & { 0 } \\ { 0 } & { 1 } & { 0 } & { 4 } \\ { 3 } & { 0 } & { 4 } & { 0 } \\ { 0 } & { 3 } & { 0 } & { 4 } \end{array} \right] .$
+
+$$
+A = \left[ \begin{array} { l l } { 2 } & { - 1 } \\ { 2 } & { 0 } \end{array} \right]; B = \left[ \begin{array} { l l } { 3 } & { 9 } \\ { 0 } & { 6 } \end{array} \right]; P = \left[ \begin{array} { l l } { 1 } & { 2 } \\ { 1 } & { - 1 } \end{array} \right], P ^ { t } A P = B.
+$$
+
+$$
+P = \left[ \begin{array} { l l l } { 1 / \sqrt { 3 } } & { 0 } & { 2 / \sqrt { 6 } } \\ { 1 / \sqrt { 3 } } & { 1 / \sqrt { 2 } } & { - 1 / \sqrt { 6 } } \\ { - 1 / \sqrt { 3 } } & { 1 / \sqrt { 2 } } & { 1 / \sqrt { 6 } } \end{array} \right] , P ^ { - 1 } A P = \left[ \begin{array} { l l l } { 3 } & { 0 } & { 0 } \\ { 0 } & { 5 } & { 0 } \\ { 0 } & { 0 } & { 9 } \end{array} \right] .
+$$
+
+$$
+P = \left[ \begin{array} { c c c } { - 2 / \sqrt { 6 } } & { 0 } & { 1 / \sqrt { 3 } } \\ { 1 / \sqrt { 6 } } & { 1 / \sqrt { 2 } } & { 1 / \sqrt { 3 } } \\ { - 1 / \sqrt { 6 } } & { - 1 / \sqrt { 2 } } & { 1 / \sqrt { 3 } } \end{array} \right] , P ^ { - 1 } A P = \left[ \begin{array} { c c c } { - 2 } & { 0 } & { 0 } \\ { 0 } & { 4 } & { 0 } \\ { 0 } & { 0 } & { 4 } \end{array} \right] .
+$$
+
+$$
+P = \left[ \begin{array} { l l l } { \frac{1}{\sqrt{6}} } & { \frac{1}{\sqrt{2}} } & { \frac{1}{\sqrt{3}} } \\ { \frac{1}{\sqrt{6}} } & { -\frac{1}{\sqrt{2}} } & { \frac{1}{\sqrt{3}} } \\ { -\frac{2}{\sqrt{6}} } & { 0 } & { \frac{1}{\sqrt{3}} } \end{array} \right] , P ^ { - 1 } A P = \left[ \begin{array} { l l l } { 0 } & { 0 } & { 0 } \\ { 0 } & { 6 } & { 0 } \\ { 0 } & { 0 } & { 6 } \end{array} \right] .
+$$
+
+$$
+P = \left[ \begin{array}{ccc}
+\frac{1}{\sqrt{3}} & \frac{1}{\sqrt{2}} & \frac{1}{\sqrt{6}} \\
+\frac{1}{\sqrt{3}} & -\frac{1}{\sqrt{2}} & \frac{1}{\sqrt{6}} \\
+\frac{1}{\sqrt{3}} & 0 & -\frac{2}{\sqrt{6}}
+\end{array} \right] , P ^ { - 1 } A P = \left[ \begin{array} { l l l } { 0 } & { 0 } & { 0 } \\ { 0 } & { 3 } & { 0 } \\ { 0 } & { 0 } & { 3 } \end{array} \right] .
+$$
+
+6.13. Tồn tại $P = \left[ \begin{array} { l l } { \cos \varphi } & { \sin \varphi } \\ { -\sin \varphi } & { \cos \varphi } \end{array} \right] \text{ sao cho } P ^ { t } A P = \left[ \begin{array} { l l } { \alpha } & { 0 } \\ { 0 } & { \beta } \end{array} \right] .$
+
+$$
+\Rightarrow a _ { 12 } = a _ { 21 } = \frac{\sin \varphi}{2} ( \beta - \alpha ) \Rightarrow - \left| \beta - \alpha \right| \leq a _ { 12 } \leq \left| \beta - \alpha \right| .
+$$
+
+6.16. $\left\{ \nu _ { 1 } = ( 1 , 2 , 1 , 0 ) , \nu _ { 2 } = ( 4 , 4 , 0 , 1 ) \right\}$:
+
+6.17. $W ^ {\perp}$ là không gian nghiệm của hệ phương trình thuần nhất:
+$$
+\left\{ 
+\begin{array}{l}
+x + 2 y + 3 z - s + 2 t = 0 \\
+2 x + 4 y + 7 z + 2 s - t = 0 
+\end{array} 
+\right.
+$$
+có một cơ sở là $e _ { 1 } ^ {\prime} = ( 2 , - 1 , 0 , 0 , 0 )$, $e _ { 2 } ^ {\prime} = ( 13 , 0 , - 4 , 1 , 0 )$, $e _ { 3 } ^ {\prime} = ( - 17 , 0 , 5 , 0 , 1 )$.
+
+6.18. b) $\left\{ p _ { 1 } ( t ) = 7 t ^ { 2 } - 5 t , p _ { 2 } ( t ) = 12 t ^ { 2 } - 5 \right\}$,
+$$
+\left\{ e _ { 1 } ( t ) = 1 , e _ { 2 } ( t ) = \frac{( 2 t - 1 )}{\sqrt{2}} , e _ { 3 } ( t ) = \frac{( 6 t ^ { 2 } - 6 t + 1 )}{\sqrt{5}} \right\} .
+$$
+
+6.10 b) $\left\{ 
+\left[ 
+\begin{array}{ll}
+0 & 1 \\
+0 & 0
+\end{array} 
+\right] , 
+\left[
+\begin{array}{ll}
+0 & 0 \\
+1 & 0
+\end{array} 
+\right]
+\right\}$ (ii) $\left\{
+\left[ 
+\begin{array}{ll}
+0 & -1 \\
+1 & 0
+\end{array} 
+\right] 
+\right\}.$
+
+6.20. Áp dụng phương pháp biến đổi Lagrange ta được:
+
+$$
+\begin{array} { r } { \mathbf{a}) \left[ \begin{array} { c } { x _ { 1 } } \\ { x _ { 2 } } \\ { x _ { 3 } } \end{array} \right] = \left[ \begin{array} { c c c } { 1 } & { - 1 } & { \frac{5}{2} } \\ { 0 } & { 1 } & { - \frac{1}{2} } \\ { 0 } & { 0 } & { 1 } \end{array} \right] \left[ \begin{array} { c } { y _ { 1 } } \\ { y _ { 2 } } \\ { y _ { 3 } } \end{array} \right]; Q = y _ { 1 } ^ { 2 } + 4 y _ { 2 } ^ { 2 } - 9 y _ { 3 } ^ { 2 }. } \end{array}
+$$
+
+$$
+\begin{array}{c} \mathbf{b}) \left[ \begin{array} { c } { x _ { 1 } } \\ { x _ { 2 } } \\ { x _ { 3 } } \end{array} \right] = \left[ \begin{array} { l l l } { \frac{1}{2} } & { 0 } & { 1 } \\ { 0 } & { 1 } & { 1 } \\ { 0 } & { 1 } & { - 1 } \end{array} \right] \left[ \begin{array} { c } { y _ { 1 } } \\ { y _ { 2 } } \\ { y _ { 3 } } \end{array} \right]; Q = y _ { 1 } ^ { 2 } - y _ { 2 } ^ { 2 } + y _ { 3 } ^ { 2 }. \end{array}
+$$
+
+$$
+\mathrm{c}) \left[ x _ { 1 } \right] = \left[ \begin{array} { c c c } { 1 } & { 1 } & { - 1 } \\ { 1 } & { - 1 } & { - 1 } \\ { 0 } & { 0 } & { 1 } \end{array} \right] \left[ y _ { 1 } \right]; Q = y _ { 1 } ^ { 2 } - y _ { 2 } ^ { 2 } - y _ { 3 } ^ { 2 }. 
+$$
+
+$$
+\mathrm{d}) \left[ \begin{array} { c } { x _ { 1 } } \\ { x _ { 2 } } \\ { x _ { 3 } } \\ { x _ { 4 } } \end{array} \right] = \left[ \begin{array} { c c c c } { 1 } & { - 1 / 3 } & { 0 } & { 0 } \\ { 0 } & { 1 } & { 0 } & { 0 } \\ { 0 } & { - 2 } & { 1 } & { 0 } \\ { 0 } & { - 1 / 2 } & { 0 } & { 1 } \end{array} \right] \left[ \begin{array} { c } { y _ { 1 } } \\ { y _ { 2 } } \\ { y _ { 3 } } \\ { y _ { 4 } } \end{array} \right] ; \ Q = 3 y _ { 1 } ^ { 2 } + \frac { 7 } { 6 } y _ { 2 } ^ { 2 } - y _ { 3 } ^ { 2 } - 2 y _ { 4 } ^ { 2 } .
+$$
+
+$$
+\boldsymbol{\mathsf{e})} \left[ \begin{array} { l } { x _ { 1 } } \\ { x _ { 2 } } \\ { x _ { 3 } } \end{array} \right] = \left[ \begin{array} { l l l } { 1 } & { 0 } & { - 2 } \\ { 0 } & { 1 } & { 0 } \\ { 0 } & { 1 / 4 } & { 1 } \end{array} \right] \left[ \begin{array} { l } { y _ { 1 } } \\ { y _ { 2 } } \\ { y _ { 3 } } \end{array} \right] ; \ Q = 2 y _ { 1 } ^ { 2 } + \frac { 21 } { 8 } y _ { 2 } ^ { 2 } - 2 y _ { 3 } ^ { 2 } .
+$$
+
+$$
+\mathrm{f}) \left[ \begin{array} { l } { x _ { 1 } } \\ { x _ { 2 } } \\ { x _ { 3 } } \end{array} \right] = \left[ \begin{array} { l l l } { 1 } & { 0 } & { 0 } \\ { 9 / 10 } & { 1 } & { - 1 / 3 } \\ { 1 / 5 } & { 0 } & { 1 } \end{array} \right] \left[ \begin{array} { l } { y _ { 1 } } \\ { y _ { 2 } } \\ { y _ { 3 } } \end{array} \right] ; \ Q = \frac { 49 } { 10 } y _ { 1 } ^ { 2 } - 2 y _ { 2 } ^ { 2 } + \frac { 5 } { 2 } y _ { 3 } ^ { 2 } .
+$$
+
+6.21. Ứng dụng phương pháp chéo hóa trước giảo ma trận chính tắc ta được:
+
+(2 ${\bf a)} \left[ \begin{array}{c} {x} \\ {y} \\ {z} \end{array} \right] = \left[ \begin{array}{ccc} {\frac{2}{3}} & {\frac{1}{3}} & {\frac{2}{3}} \\ {\frac{2}{3}} & {-\frac{2}{3}} & {-\frac{1}{3}} \\ {-\frac{1}{3}} & {-\frac{2}{3}} & {\frac{2}{3}} \end{array} \right] \left[ \begin{array}{c} {X} \\ {Y} \\ {Z} \end{array} \right]; Q = 3 X^2 + 6 Y^2 + 9 Z^2.$
+
+(2 $\mathbf{b)} \left[ \begin{array}{c} {x} \\ {y} \\ {z} \end{array} \right] = \left[ \begin{array}{ccc} {\frac{1}{\sqrt{2}}} & {\frac{1}{\sqrt{3}}} & {\frac{1}{\sqrt{6}}} \\ {\frac{1}{\sqrt{2}}} & {-\frac{1}{\sqrt{3}}} & {\frac{1}{\sqrt{6}}} \\ {0} & {\frac{1}{\sqrt{3}}} & {-\frac{2}{\sqrt{6}}} \end{array} \right] \left[ \begin{array}{c} {X} \\ {Y} \\ {Z} \end{array} \right]; Q = -2 X^2 + 3 Y^2 + 6 Z^2.$
+
+(2 $\mathbf{c)} \left[ \begin{array}{c} {x} \\ {y} \\ {z} \end{array} \right] = \left[ \begin{array}{ccc} {\frac{1}{\sqrt{3}}} & {\frac{1}{\sqrt{2}}} & {\frac{1}{\sqrt{6}}} \\ {\frac{1}{\sqrt{3}}} & {-\frac{1}{\sqrt{2}}} & {\frac{1}{\sqrt{6}}} \\ {\frac{1}{\sqrt{3}}} & {0} & {-\frac{2}{\sqrt{6}}} \end{array} \right] \left[ \begin{array}{c} {X} \\ {Y} \\ {Z} \end{array} \right]; Q = 5 X^2 - Y^2 - Z^2.$
+
+(2 $\mathbf{d)} \left[ \begin{array}{c} {x} \\ {y} \\ {z} \end{array} \right] = \left[ \begin{array}{ccc} {\frac{1}{\sqrt{3}}} & {-\frac{1}{\sqrt{2}}} & {\frac{1}{\sqrt{6}}} \\ {\frac{1}{\sqrt{3}}} & {\frac{1}{\sqrt{2}}} & {\frac{1}{\sqrt{6}}} \\ {0} & {0} & {-\frac{\sqrt{2}}{\sqrt{3}}} \end{array} \right] \left[ \begin{array}{c} {X} \\ {Y} \\ {Z} \end{array} \right]; Q = X^2 - Y^2 + 6 Z^2.$
+
+$\left[ \begin{array}{c} y \\ z \end{array} \right] = \left[ \begin{array}{ccc} \frac{1}{3} & 0 & -\frac{4}{\sqrt{18}} \\ \frac{2}{3} & \frac{1}{\sqrt{2}} & \frac{1}{\sqrt{18}} \\ \frac{2}{3} & -\frac{1}{\sqrt{2}} & \frac{1}{\sqrt{18}} \end{array} \right] \left[ \begin{array}{c} X \\ Y \\ Z \end{array} \right]; \boldsymbol{Q} = 9X^2 + 18Y^2 + 18Z^2.$
+
+$\mathbf{e}) \left[ \begin{array}{c} y \\ z \end{array} \right] = \left[ \begin{array}{ccc} \frac{1}{\sqrt{2}} & \frac{2}{3} & \frac{1}{\sqrt{18}} \\ 0 & \frac{1}{3} & -\frac{4}{\sqrt{18}} \\ -\frac{1}{\sqrt{2}} & \frac{2}{3} & \frac{1}{\sqrt{18}} \end{array} \right] \left[ \begin{array}{c} X \\ Y \\ Z \end{array} \right]; ~ \boldsymbol{Q} = 3Y^2 - 6Z^2.$
+
+$$
+\lambda > 2. \quad \big| \lambda \big| < \sqrt{\frac{5}{3}}. \quad -4/5 < \lambda < 0. \quad \big| \lambda \big| < 2.
+$$
+
+$$
+\left. \begin{array} { l } 
+\left[ \begin{array} { c }
+x \\
+y
+\end{array} \right] = \left[ \begin{array} { c c }
+\frac{1}{\sqrt{5}} & \frac{2}{\sqrt{5}} \\
+-\frac{2}{\sqrt{5}} & \frac{1}{\sqrt{5}}
+\end{array} \right]
+\left[ \begin{array} { c }
+X \\
+Y
+\end{array} \right] ; 
+\quad \frac{X^2}{36} - \frac{Y^2}{36} = 1 : \text{Hình hypebol.}
+\end{array} \right.
+$$
+
+x] = [1/√5, 2/5][x]; x² + y² = 1: Elipse.  
+b) y'] = [-2/√5, 1/√5][γ]'16+  
+C $: ) \left[ { \begin{array} { l } { x } \\ { y } \end{array} } \right] = \left[ { \begin{array} { c c } { 1 / \sqrt { 10 } } & { 3 / \sqrt { 10 } } \\ { - 3 / \sqrt { 10 } } & { 1 / \sqrt { 10 } } \end{array} } \right] \left[ { \begin{array} { l } { X } \\ { Y } \end{array} } \right]; \qquad \frac { 5 \left( { X + 2 / \sqrt { 10 } } \right) ^ { 2 } } { 26 } - \frac { 20 \left( { Y + 8 / \sqrt { 10 } } \right) ^ { 2 } } { 26 } = 1 : \mathrm{Hyperbol.}$   
+$\mathrm{d}) \binom{x}{y} = \left[ { \begin{array} { c c } { 1 / \sqrt { 10 } } & { 3 / \sqrt { 10 } } \\ { - 3 / \sqrt { 10 } } & { 1 / \sqrt { 10 } } \end{array} } \right] \left[ { \begin{array} { l } { X } \\ { Y } \end{array} } \right]; \frac{\left( X + 1 / \sqrt { 10 } \right) ^ { 2 } } { 4 } + \frac{\left( Y + 3 / \sqrt { 10 } \right) ^ { 2 } } { 2 } = 1.$   
+e $): \left[ { \begin{array} { l } { x } \\ { y } \end{array} } \right] = \left[ { \begin{array} { c c } { 3 / \sqrt { 13 } } & { 2 / \sqrt { 13 } } \\ { - 2 / \sqrt { 13 } } & { 3 / \sqrt { 13 } } \end{array} } \right] \left[ { \begin{array} { l } { X } \\ { Y } \end{array} } \right]; 13Y^2 + \frac{10}{\sqrt{13}}Y - \frac{24}{\sqrt{13}}X + 1 = 0 : \mathrm{Parabol.}$
+
+{ x } \\ { y } \\ { z } \end{array} \right] } = { \left[ \begin{array} { l l l } { - 1 / { \sqrt { 6 } } } & { 1 / { \sqrt { 2 } } } & { 1 / { \sqrt { 3 } } } \\ { 1 / { \sqrt { 6 } } } & { 1 / { \sqrt { 2 } } } & { - 1 / { \sqrt { 3 } } } \\ { 2 / { \sqrt { 6 } } } & { 0 } & { 1 / { \sqrt { 3 } } } \end{array} \right] } { \left[ \begin{array} { l } { X } \\ { Y } \\ { Z } \end{array} \right] } ; { \frac { \left( X + { \sqrt { 6 } } \right) ^ { 2 } } { 17 } } + { \frac { Y ^ { 2 } } { 34 } } + { \frac { \left( Z + { \sqrt { 3 } } \right) ^ { 2 } } { 34 } } = 1 :$ Ellipsoid.
+
+$$
+\mathbf{b}) \left[ \begin{array} { l } { x } \\ { y } \\ { z } \end{array} \right] = \left[ \begin{array} { l l l } { 0 } & { 1 / \sqrt{2} } & { 1 / \sqrt{2} } \\ { 0 } & { 1 / \sqrt{2} } & { -1 / \sqrt{2} } \\ { 1 } & { 0 } & { 0 } \end{array} \right] \left[ \begin{array} { l } { X } \\ { Y } \\ { Z } \end{array} \right] ;
+$$
+
+$$
+\mathbf{c}) \left[ \begin{array} { c } { x } \\ { y } \\ { z } \end{array} \right] = \left[ \begin{array} { c c c } { -2 / \sqrt{6} } & { 0 } & { 1 / \sqrt{3} } \\ { 1 / \sqrt{6} } & { 1 / \sqrt{2} } & { 1 / \sqrt{3} } \\ { 1 / \sqrt{6} } & { -1 / \sqrt{2} } & { 1 / \sqrt{3} } \end{array} \right] \left[ \begin{array} { c } { X } \\ { Y } \\ { Z } \end{array} \right] ;
+$$
+
+$$
+- \frac{X^2}{6} + \frac{Y^2}{3} + \frac{(Z + \sqrt{3})^2}{3} = 1 : \text{Hình học siêuboloid loại 1}.
+$$
+
+$$
+\mathrm{d}) \left[ \begin{array} { l l l } { x } \\ { y } \\ { z } \end{array} \right] = \left[ \begin{array} { l l l } { 1 / { \sqrt { 3 } } } & { ~ 1 / { \sqrt { 2 } } ~ } & { ~ 1 / { \sqrt { 6 } } } \\ { 1 / { \sqrt { 3 } } } & { - 1 / { \sqrt { 2 } } ~ } & { ~ 1 / { \sqrt { 6 } } } \\ { 1 / { \sqrt { 3 } } } & { ~ 0 ~ } & { - 2 / { \sqrt { 6 } } } \end{array} \right] \left[ \begin{array} { l } { X } \\ { Y } \\ { Z } \end{array} \right] ; \frac { X ^ { 2 } } { 1 6 } + \frac { Y ^ { 2 } } { 8 } + \frac { Z ^ { 2 } } { 4 } = 1 : \mathrm{Elli}_{\mathrm{l}}
+$$
+
+$$
+\mathbf{e}) \left[ \begin{array} { l } { x } \\ { y } \\ { z } \end{array} \right] = \left[ \begin{array} { l l l } { 1 / { \sqrt { 3 } } } & { ~ 1 / { \sqrt { 2 } } } & { ~ 1 / { \sqrt { 6 } } } \\ { 1 / { \sqrt { 3 } } } & { - 1 / { \sqrt { 2 } } } & { ~ 1 / { \sqrt { 6 } } } \\ { 1 / { \sqrt { 3 } } } & { ~ 0 } & { - 2 / { \sqrt { 6 } } } \end{array} \right] \left[ \begin{array} { l } { X } \\ { Y } \\ { Z } \end{array} \right] ;
+$$
+
+$$
+\frac { \left( X - 2 { \sqrt { 3 } } \right) ^ { 2 } } { 9 } - \frac { Y ^ { 2 } } { 1 8 } - \frac { \left( Z - { \sqrt { 6 } } \right) ^ { 2 } } { 1 8 } = 1 : \mathrm{Hypert}ang.
+$$
+
+${ \bf f } ) \left[ \begin{array} { c c c c } { x } \\ { y } \\ { z } \end{array} \right] = \left[ \begin{array} { c c c c } { 1 / \sqrt{2} } & { 2 / 3 } & { 1 / \sqrt{18} } \\ { 0 } & { 1 / 3 } & { -4 / \sqrt{18} } \\ { -1 / \sqrt{2} } & { 2 / 3 } & { 1 / \sqrt{18} } \end{array} \right] \left[ \begin{array} { c c c c } { X } \\ { Y } \\ { Z } \end{array} \right] ;$ $3 ( Y + 4 ) ^ { 2 } - 6 ( Z - \sqrt{18} / 6 ) ^ { 2 } = 0 : {\mathrm{C}}{\check{\mathrm{a}}}{\check{\mathrm{p}}}{\check{\mathrm{m~p}}}{\check{\mathrm{h}}}{\check{\mathrm{a}}}{\check{\mathrm{n}}}{\check{\mathrm{g}}}.$
+
+$6.25.1) \Longrightarrow 2): \left. f(u) + f(\nu), u + \nu \right. = 0 \Longrightarrow \left. f(u), \nu \right. = -\left. f(\nu), u \right.$
+
+$2) \Rightarrow 3)$: Giả sử $A = [a_{ij}]$ là ma trận của $f$ trong cơ sở trực chuẩn $\{e_1, ..., e_n\}$ ($\Rightarrow f(e_i) = \sum_{j=1}^n a_{ji} e_j \Rightarrow a_{ji} = \left. f(e_i), e_j \right. = -\left. f(e_j), e_i \right. = -a_{ij} \Rightarrow A = -A^t$).
+
+$\begin{array}{c}
+3) \Rightarrow 1): \quad \nu = \sum_{i=1}^n x_i e_i; f(\nu) = \sum_{j=1}^n y_j e_j \Rightarrow 
+\left[ \begin{array}{l}
+y_1 \\
+\cdots \\
+y_n
+\end{array} \right] = [a_{ij}] 
+\left[ \begin{array}{l}
+x_1 \\
+\cdots \\
+x_n
+\end{array} \right].
+\end{array}$
+
+$\left. f(\nu), \nu \right. = \sum_{j=1}^n y_j x_j = (x_1, ..., x_n) A^t 
+\left[ \begin{array}{l}
+x_1 \\
+... \\
+x_n
+\end{array} \right] = - (x_1, ..., x_n) A 
+\left[ \begin{array}{l}
+x_1 \\
+... \\
+x_n
+\end{array} \right] = - \left. \nu, f(\nu) \right.$
+
+6.26. a) $\Rightarrow$: Với mọi $\scriptstyle X \in \mathbb{R}^n ; (X A - X B) Y^t = \mathbf{0}, \forall Y \in \mathbb{R}^n$ $\Rightarrow X A - X B = \mathbf{0} \Rightarrow A - B = \mathbf{0}.$
+
+b) Sử dụng giả thiết cho $X, Y, X + Y \Rightarrow Y A X^t + X A Y^t = Y B X^t + X B Y^t$ (2). Mắc khuyết $A, B$ đối xứng = $YAX' = (XAY') = XAY^t$ $\Rightarrow X A Y^t = X B Y^t, \forall X, Y \Rightarrow A = B.$
+
+c) Áp dụng bài 14).
+
+6.27. Giả sử $f$ là tuân đòng cáu tuyến tính của $\mathbb{R}^n$ có ma trận trong cơ sở chính tắc là $A$ thì $f$ là ánh xạ trực giao. Xét $\nu = (1, \ldots, 1) \in \mathbb{R}^n$, ta có:
+
+$$
+\begin{array}{l}
+\displaystyle \Big \langle f(\nu), \nu \Big \rangle = \sum_{j=1}^{n} \sum_{i=1}^{n} \Big \langle f(e_i), e_j \Big \rangle = \sum_{i,j=1}^{n} a_{ij}; \Big \langle f(\nu), f(\nu) \Big \rangle = \Big \langle \nu, \nu \Big \rangle = n \\
+\displaystyle \Rightarrow \left| \sum_{i,j=1}^{n} a_{ij} \right|^2 = \left| \big \langle f(\nu), \nu \big \rangle \right|^2 \leq \Big \langle f(\nu), f(\nu) \Big \rangle \Big \langle \nu, \nu \Big \rangle = n^2.
+\end{array}
+$$
+
+Đẳng thức xảy ra khi $f(\nu) = k\nu$. Mặt khác $f$ trực giao $\Rightarrow k = \pm 1$.
+
+Vậy dạng thực có được khi và chỉ khi 
+\[
+\left[ \begin{array} { l } { \displaystyle \sum _ { j = 1 } ^ { n } a _ { i j } = 1 \forall i = 1 , . . . , n } \\ { \displaystyle \sum _ { j = 1 } ^ { n } a _ { i j } = - 1 \forall i = 1 , . . . , n } \end{array} \right]
+\]
+
+6.28. · Nếu $\left\{ \nu _ { 1 } , . . . , \nu _ { n } \right\}$ phụ thuộc tuyến tính thì vế trái bằng 0.
+
+·Nếu $\left\{ \nu _ { 1 } , . . . , \nu _ { n } \right\}$ được lập thành trực chuẩn hóa Gram-Schmidt:
+
+$$
+\overline{u}_k = - \sum_{i=1}^{n} \frac{\langle \nu_k, u_i \rangle}{\| u_i \|} u_i + \nu_k; \quad u_k = \frac{\overline{u}_k}{\|\overline{u}_k\|}
+$$
+
+$\mathrm{H} \boldsymbol{\hat{e}} \cdot \boldsymbol{\mathcal{B}'} = \left\{ \overline{u}_1, . . . , \overline{u}_n \right\}$ trực giao và hệ $\mathcal{B}" = \left\{ u_1, . . . , u_n \right\}$ trực chuẩn. Theo hệ thức Chasles (3.1) ta có:
+
+$$
+\begin{array}{rl}
+& \operatorname{det}_{\mathcal{B}} \left\{ \nu_1, . . . , \nu_n \right\} = \operatorname{det}_{\mathcal{B}} \left\{ u_1, . . . , u_n \right\} \operatorname{det}_{\mathcal{B}^{\nu}} \left\{ \overline{u}_1, . . . , \overline{u}_n \right\} \operatorname{det}_{\mathcal{B}^{\nu}} \left\{ \nu_1, . . . , \nu_n \right\}. \\
+& \operatorname{det}_{\mathcal{B}} \left\{ u_1, . . . , u_n \right\} = \operatorname{det}_{\mathcal{B}^{\nu}} \left\{ \nu_1, . . . , \nu_n \right\} = 1, \operatorname{det}_{\mathcal{B}^{\nu}} \left\{ \overline{u}_1, . . . , \overline{u}_n \right\} = \| \overline{u}_1 \| ... \| \overline{u}_n \|.
+\end{array}
+$$
+
+Một khía cạnh khác $\| \nu_k \| = \| \overline{u}_k \| + \| \sum_{i=1}^{k-1} \langle \nu_k, u_i \rangle u_i \| \geq \| \overline{u}_k \|$
+
+} } _ { k } \Rightarrow \operatorname*{det}_{\mathcal{B}} \left\{ u_{1}, \ldots, u_{n} \right\} \leq \| u_{1} \| \ldots \| u_{n} \| .$
+
+Đẳng thức xảy ra khi $\left\| \nu_{k} \right\| = \left\| \overline{u}_{k} \right\|$ với mọi $k = 1, . . . , n \Longrightarrow \left\{ \nu_{1}, . . . , \nu_{n} \right\}$ là một hệ trực giao hay tồn tại một véc tơ $\nu_{i} = \mathbf{0}$:
+
+6.29. a) Đặt $D_{k} = \left| \left. \nu_{i}, \nu_{j} \right|_{i, j=1,k}$. Nếu $\left\{ \nu_{1}, . . . , \nu_{k} \right\}$ phụ thuộc tuyến tính thì $D_{k} = 0$. Nếu $\left\{ \nu_{1}, . . . , \nu_{k} \right\}$ độc lập tuyến tính thì nó là một cơ sở của không gian con $W_{k} = \operatorname{span}\left\{\nu_{1}, . . . , \nu_{k}\right\}$ và $D_{k}$ là định thức của dạng song tuyến tính xác định dương thu hẹp vào $W_{k}$ nên $D_{k} > 0$.
+
+b) Với mọi $\nu \in V$
+
+$$
+\begin{array}{c}
+| \nu, \nu \quad \nu, e_{1} \quad \ldots \quad \nu, e_{k} | \\
+| 0 \quad e_{1}, e_{1} \quad \ldots \quad e_{1}, e_{k} | + | e_{1}, \nu \quad e_{1}, e_{1} \quad \ldots \quad e_{1}, e_{k} | \geq 0 \\
+\ldots \quad \ldots \quad \ldots \quad \ldots \quad \ldots \\
+| 0 \quad e_{k}, e_{1} \quad \ldots \quad e_{k}, e_{k} | + | e_{k}, \nu \quad e_{k}, e_{1} \quad \ldots \quad e_{k}, e_{k} |
+\end{array}
+$$
+
+$$
+\Rightarrow \left| \nu, \nu \right| \left| { \begin{array} { c c c } { e _ { 1 } , e _ { 1 } } & { \ldots } & { e _ { 1 } , e _ { k } } \\ { \ldots } & { \ldots } & { \ldots } \\ { e _ { k } , e _ { 1 } } & { \ldots } & { e _ { k } , e _ { k } } \end{array} } \right| \geq - \left| \begin{array} { c c c c } { 0 } & { b _ { 1 } } & { \ldots } & { b _ { k } } \\ { b _ { 1 } } & { e _ { 1 } , e _ { 1 } } & { \ldots } & { e _ { 1 } , e _ { k } } \\ { \ldots } & { \ldots } & { \ldots } & { \ldots } \\ { b _ { k } } & { e _ { k } , e _ { 1 } } & { \ldots } & { e _ { k } , e _ { k } } \end{array} \right| .
+$$
+
+Đẳng thức xảy ra khi và chỉ khi $\nu$ là một tổ hợp tuyến tính của $e_{1}, . . ., e_{k}$.
+
+Ngược lại, cho $b_{1}, . . ., b_{k}$; Muốn có đẳng thức thì $\nu = x_{1} e_{1} + . . . + x_{k} e_{k}$
+
+$$
+b _ { i } = \left. \nu , e _ { i } \right. \Leftrightarrow x _ { 1 } \left. e _ { 1 } , e _ { i } \right. + . . . + x _ { k } \left. e _ { k } , e _ { i } \right. = b _ { i } .
+$$
+
+Vì $D_{k} \neq 0$ nên hệ phương trình $\sum _ { j = 1 } ^ { k } x _ { j } \left. e _ { j } , e _ { i } \right. = b _ { i }; i = 1, . . ., k$ là hệ Cramer độc đáo tồn tại duy nhất nghiệm. Vậy tồn tại duy nhất $\nu$:
+
+c) Giả sử $\langle , \rangle$ là dạng cầu chính phương xác định cho $A = [e_i, e_j]_{n \times n}$ theo b) $\forall (x_1, ..., x_n); Q(x_1, ..., x_n) = -\langle \nu, \nu \rangle \mathrm{det} [\langle e_i, e_j \rangle], \nu = \sum_{j=1}^{n} \alpha_j e_j.$
+
+$$
+\nu = 0 \Leftrightarrow \sum_{j=1}^{n} \alpha_j \langle e_j, e_i \rangle = \langle \nu, e_i \rangle = x_i, i = 1, ..., n \Rightarrow Q(x_1, ..., x_n) < 0, \forall (x_1, ..., x_n) \neq 0.
+$$
+
+6.30. Giả sử $\{e_1, ..., e_n\}$ là một cơ sở trực chuẩn của $V$ đối với tích vô hướng $\eta$: $\eta(e_i, e_j) = 0 \Rightarrow \varphi(e_i, e_j) = 0, \forall i \neq j.$ $\eta(e_i + e_j, e_i - e_j) = 0 \Longrightarrow 0 = \varphi(e_i + e_j, e_i - e_j) = \varphi(e_i, e_i) - \varphi(e_j, e_j).$ Đặt $k = \varphi(e_1, e_1) = ... = \varphi(e_n, e_n)$ thì $\forall u, v \in V: \varphi(u, v) = k \eta(u, v).$
+
+6.31. Gia sưy $\left\{ \boldsymbol { e } _ { 1 } , . . . , \boldsymbol { e } _ { p } , \boldsymbol { e } _ { p + 1 } , . . . , \boldsymbol { e } _ { p + q } , . . . , \boldsymbol { e } _ { n } \right\}$ là một cơ sở biểu thị toạ $\hat { \mathrm { d } } \hat { \boldsymbol { 0 } }$ của $\boldsymbol { Q }$. Trong cơ sở này có dạng chính tắc: $Q ( \nu ) = x _ { 1 } ^ { 2 } + . . . + x _ { p } ^ { 2 } - x _ { p + 1 } ^ { 2 } - . . . - x _ { p + q } ^ { 2 }.$ Đặt $W _ { 1 } = \mathrm { s p a n } \big \{ e _ { 1 } , . . . , e _ { p } \big \} , W _ { 2 } = \mathrm { s p a n } \big \{ e _ { p + 1 } , . . . , e _ { p + q } \big \} .$
+
+a $\forall \nu \in W$ $\nu \neq \mathbf { 0 } \implies Q ( \nu ) > 0 \Rightarrow W \cap W _ { 1 } ^ { \perp } = \big \{ \mathbf { 0 } \big \} \implies \mathrm { dim } W \leq p .$
+
+b $\forall \nu \in W , \nu \not = \mathbf { 0 } \Rightarrow Q ( \nu ) < 0 \Rightarrow W \cap W _ { 2 } ^ { \perp } = \left\{ \mathbf { 0 } \right\} \Rightarrow \mathrm { dim } W \leq q .$
+
+c $\mathrm { N }ếu \mathrm { dim } W > M a x ( p , q ) \implies \exists u , \nu \in W \backslash \left\{ \mathbf { 0 } \right\} : Q ( u ) \leq 0 , ~ Q ( \nu ) \geq 0 .$
+
+Giả sử $Q ( u ) < 0 , Q ( \nu ) > 0$
+
+$$
+\begin{array} { c } { f ( t ) = Q \big( t u + ( 1 - t ) \nu \big) = \langle t u + ( 1 - t ) \nu , t u + ( 1 - t ) \nu \rangle } \\ { = t ^ { 2 } Q ( u ) + 2 t ( 1 - t ) \langle u , \nu \rangle + ( 1 - t ) ^ { 2 } Q ( \nu ) . } \end{array}
+$$
+
+(20 $f(t)$ là hàm số liên tục có $f(0) > 0, f(1) < 0 \Rightarrow \exists t_0, 0 < t_0 < 1$ sao cho $f(t_0) = Q\big(t_0 u + (1 - t_0) \nu\big) = 0 \implies t_0 u + (1 - t_0) \nu \in W \setminus \{\mathbf{0}\} \qquad$
+
+# SỐ PHỨC
+
+Ta biết rằng bình phương của một số thực không âm, vì vậy trong trường số thực phương trình $x^2 + 1 = 0$ vô nghiệm. Tuy nhiên nếu ta đưa vào số ảo $i$ sao cho $i^2 = -1$ thì phương trình trên trở thành $x^2 - i^2 = (x - i)(x + i) = 0$. Do đó phương trình có hai nghiệm $\boldsymbol{x} = \pm \boldsymbol{i}$. Tổng quát hơn ta có thể mở rộng trường số thực lên một trường số phức để mỗi phương trình bậc hai đều có nghiệm.

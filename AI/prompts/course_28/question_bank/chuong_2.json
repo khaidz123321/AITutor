@@ -1,0 +1,79 @@
+{
+    "subject": "Đại số",
+    "chapter_number": "2",
+    "chapter_name": "chuong_2",
+    "questions": [
+        {
+            "id": "DS_C2_01",
+            "lesson_number": "2.1",
+            "lesson_name": "Định nghĩa và tính chất của ma trận",
+            "topic": "Ma trận vuông và định thức",
+            "difficulty": "Easy",
+            "bloom_level": "Understanding",
+            "question_text": "Cho ma trận vuông A = \\begin{pmatrix} 2 & -1 \\\\ 3 & 4 \\end{pmatrix}. Tính định thức của ma trận A.",
+            "full_answer": "\\det(A) = 11",
+            "detailed_solution": "Định thức của một ma trận vuông cấp 2 được tính theo công thức: det(A) = ad - bc, với a, b, c, d là các phần tử của ma trận. Trong trường hợp này, det(A) = (2)(4) - (-1)(3) = 8 + 3 = 11.",
+            "scaffolding_steps": [
+                {
+                    "step_number": 1,
+                    "hint": "Xác định vị trí các phần tử trong công thức",
+                    "step_detail": "a=2, b=-1, c=3, d=4"
+                },
+                {
+                    "step_number": 2,
+                    "hint": "Thực hiện phép tính theo công thức",
+                    "step_detail": "(2)(4) - (-1)(3)"
+                }
+            ],
+            "common_mistakes": []
+        },
+        {
+            "id": "DS_C2_02",
+            "lesson_number": "2.2",
+            "lesson_name": "Hệ phương trình tuyến tính và ma trận",
+            "topic": "Giải hệ phương trình bằng phương pháp ma trận",
+            "difficulty": "Hard",
+            "bloom_level": "Evaluating",
+            "question_text": "Xét hệ phương trình: \\begin{cases} 2x + y = 5 \\\\ x - 3y = -4 \\end{cases}. Viết hệ phương trình này dưới dạng ma trận và giải hệ phương trình bằng cách sử dụng định thức.",
+            "full_answer": "a) Ma trận tương ứng là A = \\begin{pmatrix} 2 & 1 \\\\ 1 & -3 \\end{pmatrix}, B = \\begin{pmatrix} 5 \\\\ -4 \\end{pmatrix}; b) Giải hệ phương trình: x=1, y=3",
+            "detailed_solution": "Viết hệ phương trình dưới dạng ma trận A = \\begin{pmatrix} 2 & 1 \\\\ 1 & -3 \\end{pmatrix}, B = \\begin{pmatrix} 5 \\\\ -4 \\end{pmatrix}. Tính định thức của A: det(A) = (2)(-3) - (1)(1) = -7. Sử dụng công thức Cramer để tìm x và y.",
+            "scaffolding_steps": [
+                {
+                    "step_number": 1,
+                    "hint": "Viết hệ phương trình dưới dạng ma trận",
+                    "step_detail": "A = \\begin{pmatrix} 2 & 1 \\\\ 1 & -3 \\end{pmatrix}, B = \\begin{pmatrix} 5 \\\\ -4 \\end{pmatrix}"
+                },
+                {
+                    "step_number": 2,
+                    "hint": "Tính định thức của ma trận A",
+                    "step_detail": "(2)(-3) - (1)(1)"
+                }
+            ],
+            "common_mistakes": []
+        },
+        {
+            "id": "DS_C2_03",
+            "lesson_number": "2.1",
+            "lesson_name": "Không gian vectơ và các khái niệm cơ bản",
+            "topic": "Định nghĩa không gian vectơ",
+            "difficulty": "Medium",
+            "bloom_level": "Applying",
+            "question_text": "Cho tập hợp V = {v1, v2,., vn} với n là số nguyên dương. Hãy chứng minh rằng V là một không gian vectơ nếu nó thỏa mãn các điều kiện sau: a) Tính chất đóng dưới phép cộng và phép nhân với số thực;\nb) Có tồn tại phần tử trung hòa và mỗi phần tử có phần tử đối lập.",
+            "full_answer": "V thỏa mãn tất cả các điều kiện của định nghĩa không gian vectơ",
+            "detailed_solution": "Để chứng minh V là một không gian vectơ, ta cần kiểm tra từng điều kiện: a) Tính chất đóng dưới phép cộng và phép nhân với số thực; b) Có tồn tại phần tử trung hòa và mỗi phần tử có phần tử đối lập.",
+            "scaffolding_steps": [
+                {
+                    "step_number": 1,
+                    "hint": "Xác định các điều kiện cần thiết",
+                    "step_detail": "Điều kiện đóng dưới phép cộng và phép nhân với số thực"
+                },
+                {
+                    "step_number": 2,
+                    "hint": "Kiểm tra phần tử trung hòa",
+                    "step_detail": "Phần tử trung hòa là vectơ không (0) thỏa mãn v + 0 = v"
+                }
+            ],
+            "common_mistakes": []
+        }
+    ]
+}

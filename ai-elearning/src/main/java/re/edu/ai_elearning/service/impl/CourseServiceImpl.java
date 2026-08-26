@@ -270,7 +270,12 @@ public class CourseServiceImpl implements CourseService {
         course.setDescription(request.getDescription());
         course.setLevel(request.getLevel());
         course.setThumbnailUrl(request.getThumbnailUrl());
-        course.setLecturePdf(request.getLecturePdf());
+        // Chỉ ghi đè lecturePdf khi request thực sự gửi giá trị mới — form sửa thông tin cơ bản
+        // (tiêu đề/mô tả...) không gửi kèm trường này, nếu ghi đè vô điều kiện sẽ xóa mất liên kết
+        // giáo trình đã upload trước đó dù người dùng không hề động vào phần tài liệu.
+        if (request.getLecturePdf() != null && !request.getLecturePdf().isBlank()) {
+            course.setLecturePdf(request.getLecturePdf());
+        }
         course.setAiPersona(request.getAiPersona());
         if (request.getIsVisible() != null) {
             course.setIsVisible(request.getIsVisible());
@@ -286,6 +291,23 @@ public class CourseServiceImpl implements CourseService {
         Course course = courseRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Không tìm thấy khóa học"));
         courseRepository.delete(course);
+
+        // Gọi sang AI Service để dọn sạch thư mục môn cũ
+        try {
+            org.springframework.http.HttpHeaders headers = new org.springframework.http.HttpHeaders();
+            headers.setContentType(org.springframework.http.MediaType.APPLICATION_JSON);
+
+            java.util.Map<String, Object> requestBody = new java.util.HashMap<>();
+            requestBody.put("courseCode", "course_" + id);
+
+            org.springframework.http.HttpEntity<java.util.Map<String, Object>> entity = new org.springframework.http.HttpEntity<>(requestBody, headers);
+            String url = aiServiceUrl + "/v1/courses/delete-folder";
+
+            restTemplate.postForEntity(url, entity, java.util.Map.class);
+            log.info("Đã yêu cầu AI Service xóa thư mục dữ liệu môn: course_{}", id);
+        } catch (Exception e) {
+            log.warn("Không thể xóa thư mục trên AI Service cho môn ID {}: {}", id, e.getMessage());
+        }
     }
 
     @Override

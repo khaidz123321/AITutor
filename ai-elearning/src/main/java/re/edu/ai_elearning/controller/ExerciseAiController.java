@@ -2,6 +2,7 @@ package re.edu.ai_elearning.controller;
 
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
@@ -14,6 +15,7 @@ import re.edu.ai_elearning.dto.response.ExerciseAiResultResponse;
 import re.edu.ai_elearning.dto.response.ExerciseAiStatsResponse;
 import re.edu.ai_elearning.security.UserPrincipal;
 import re.edu.ai_elearning.service.ExerciseAiService;
+import re.edu.ai_elearning.service.impl.ExerciseAiAsyncRunner;
 
 import java.util.List;
 
@@ -23,6 +25,7 @@ import java.util.List;
 public class ExerciseAiController {
 
     private final ExerciseAiService exerciseAiService;
+    private final ExerciseAiAsyncRunner exerciseAiAsyncRunner;
 
     @GetMapping("/exercises-ai/{id}")
     public ResponseEntity<ApiResponse<ExerciseAiResponse>> getExerciseById(
@@ -97,12 +100,17 @@ public class ExerciseAiController {
         List<ExerciseAiResponse> response = exerciseAiService.importExercisesFromPdf(chapterId, file);
         return ResponseEntity.ok(ApiResponse.success("AI dịch và tạo câu hỏi từ file PDF thành công", response));
     }
+
     @PostMapping("/chapters/{chapterId}/exercises-ai/generate-auto")
     @PreAuthorize("hasAnyRole('ADMIN', 'TEACHER')")
-    public ResponseEntity<ApiResponse<List<ExerciseAiResponse>>> generateAutoExercises(
+    public ResponseEntity<ApiResponse<String>> generateAutoExercises(
             @PathVariable Long chapterId) {
-        List<ExerciseAiResponse> response = exerciseAiService.generateAutoExercises(chapterId);
-        return ResponseEntity.ok(ApiResponse.success("Tự động sinh bài tập bằng AI thành công", response));
+        // Dùng ExerciseAiAsyncRunner (bean riêng) để tránh Spring AOP self-invocation bypass.
+        // @Async sẽ hoạt động đúng vì gọi qua Spring proxy của bean khác.
+        // Trả 202 ngay, frontend sẽ polling kết quả.
+        exerciseAiAsyncRunner.runGenerateAutoExercises(chapterId);
+        return ResponseEntity.status(HttpStatus.ACCEPTED)
+                .body(ApiResponse.success("AI đang sinh bài tập trong nền, vui lòng chờ...", "PROCESSING"));
     }
 
     @PostMapping("/chapters/{chapterId}/exercises-ai/sync")

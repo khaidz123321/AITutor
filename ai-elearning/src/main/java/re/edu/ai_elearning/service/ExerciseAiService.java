@@ -7,6 +7,7 @@ import re.edu.ai_elearning.dto.response.ExerciseAiResultResponse;
 import re.edu.ai_elearning.dto.response.ExerciseAiStatsResponse;
 
 import java.util.List;
+import java.util.concurrent.CompletableFuture;
 
 public interface ExerciseAiService {
     ExerciseAiResponse getExerciseById(Long userId, Long id);
@@ -21,5 +22,6 @@ public interface ExerciseAiService {
     ExerciseAiStatsResponse getExerciseStats(Long id);
     List<ExerciseAiResponse> importExercisesFromPdf(Long chapterId, org.springframework.web.multipart.MultipartFile file);
     List<ExerciseAiResponse> generateAutoExercises(Long chapterId);
+    CompletableFuture<Void> generateAutoExercisesAsync(Long chapterId);
     void syncExercisesToAITutor(Long chapterId);
 }

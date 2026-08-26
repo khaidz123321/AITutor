@@ -1,0 +1,75 @@
+{
+    "subject": "Toán rời rạc",
+    "chapter_number": "3",
+    "chapter_name": "chuong_3",
+    "questions": [
+        {
+            "id": "TRR_C3_01",
+            "lesson_number": "3.2",
+            "lesson_name": "Thuật toán tìm số lớn nhất trong mảng",
+            "topic": "Tìm kiếm và sắp xếp",
+            "theory_reference": "Thuật toán tìm số lớn nhất trong mảng",
+            "difficulty": "Easy",
+            "bloom_level": "Understanding",
+            "thought_process": "1. Neo lý thuyết: Thuật toán tìm số lớn nhất trong mảng.\n2. Áp dụng thuật toán để giải quyết bài toán.",
+            "question_text": "Cho một mảng A = [3, 5, 7, 8, 6] và kích thước của mảng n = 5. Hãy viết thuật toán tìm số lớn nhất trong mảng này.",
+            "full_answer": "Số lớn nhất trong mảng là 8",
+            "detailed_solution": "Bước 1: Khởi tạo biến max với giá trị đầu tiên của mảng.\nBước 2: Duyệt qua các phần tử còn lại của mảng, nếu gặp số lớn hơn max thì cập nhật max.\nKết quả sau khi chạy thuật toán là số lớn nhất trong mảng A là 8.",
+            "scaffolding_steps": [
+                {
+                    "step_number": 1,
+                    "hint": "Khởi tạo biến max",
+                    "step_detail": "max = A[0]"
+                },
+                {
+                    "step_number": 2,
+                    "hint": "Duyệt qua các phần tử còn lại của mảng",
+                    "step_detail": "for i in range(1,n): if(A[i]>max) then max=A[i]"
+                }
+            ],
+            "common_mistakes": []
+        },
+        {
+            "id": "TRR_C3_02",
+            "lesson_number": "3.1",
+            "lesson_name": "chuong_3: Thuật toán và số phức tập tin",
+            "topic": "GIỚI THIỆU BÀI TOÁN",
+            "difficulty": "Medium",
+            "bloom_level": "Applying",
+            "question_text": "Dựa trên kiến thức về chuyên đề 'GIỚI THIỆU BÀI TOÁN' trong giáo trình môn Toán rời rạc:\nBài toán đưa ra danh sách tất cả các cấu hình tối hợp có thể được gọi là bài toán liệt kê tối hợp. Khác với bài toán đếm là tìm kiếm một công thức cho lời giải, bài toán liệt kê lại cần xác định một t.\nHãy phân tích bản chất lý thuyết, chứng minh hoặc trình bày phương pháp giải quyết cho nội dung trên.",
+            "full_answer": "Lời giải và phân tích bản chất cho chuyên đề GIỚI THIỆU BÀI TOÁN: Bài toán đưa ra danh sách tất cả các cấu hình tối hợp có thể được gọi là bài toán liệt kê tối hợp. Khác với bài toán đếm là tìm kiếm một công thức cho lời giải, bài toán liệt kê lạ.",
+            "detailed_solution": "Lời giải chi tiết dựa trên giáo trình:\nBài toán đưa ra danh sách tất cả các cấu hình tối hợp có thể được gọi là bài toán liệt kê tối hợp. Khác với bài toán đếm là tìm kiếm một công thức cho lời giải, bài toán liệt kê lại cần xác định một thuật toán để theo đó có thể dựng lần lượt tất cả các cấu hình cần quan tâm. Một thuật toán liệt kê phải đảm bảo hai nguyên tắc:\n\nKhông được lặp lại bất kỳ một cấu hình nào.\nKhông được bỏ sót bất kỳ",
+            "scaffolding_steps": [
+                {
+                    "step_number": 1,
+                    "hint": "Đọc kỹ định nghĩa trong mục",
+                    "step_detail": "Trình bày luận điểm"
+                }
+            ],
+            "common_mistakes": [
+                "Nắm chưa vững định nghĩa"
+            ]
+        },
+        {
+            "id": "TRR_C3_03",
+            "lesson_number": "3.2",
+            "lesson_name": "chuong_3: Thuật toán và số phức tập tin",
+            "topic": "Và Định nghĩa",
+            "difficulty": "Hard",
+            "bloom_level": "Evaluating",
+            "question_text": "Dựa trên kiến thức về chuyên đề 'Và Định nghĩa' trong giáo trình môn Toán rời rạc:\nĐịnh nghĩa. Dãy hữu hạn các thao tác số cặp $F = F_1, F_2, \\ldots, F_n(\\text{Input})$ $$\\r\\rightarrow Output$$ được gọi là mặt thuật toán trên tập thông tin vào Input để có được luồng ra Output. Dãy các.\nHãy phân tích bản chất lý thuyết, chứng minh hoặc trình bày phương pháp giải quyết cho nội dung trên.",
+            "full_answer": "Lời giải và phân tích bản chất cho chuyên đề Và Định nghĩa: Định nghĩa. Dãy hữu hạn các thao tác số cặp $F = F_1, F_2, \\ldots, F_n(\\text{Input})$ $$\\r\\rightarrow Output$$ được gọi là mặt thuật toán trên tập thông tin vào Input để có được luồn.",
+            "detailed_solution": "Lời giải chi tiết dựa trên giáo trình:\nĐịnh nghĩa. Dãy hữu hạn các thao tác số cặp $F = F_1, F_2, \\ldots, F_n(\\text{Input})$ $$\\r\\rightarrow Output$$ được gọi là mặt thuật toán trên tập thông tin vào Input để có được luồng ra Output. Dãy các thao tác số cặp ở đây được hiểu là các phép toán số học, các phép logic, các phép toán so sánh. Mặt thuật toán cần thỏa mãn các tính chất dưới đây:\n\nTính đơn định. Ở mỗi bước của thuật toán, các thao",
+            "scaffolding_steps": [
+                {
+                    "step_number": 1,
+                    "hint": "Đọc kỹ định nghĩa trong mục",
+                    "step_detail": "Trình bày luận điểm"
+                }
+            ],
+            "common_mistakes": [
+                "Nắm chưa vững định nghĩa"
+            ]
+        }
+    ]
+}

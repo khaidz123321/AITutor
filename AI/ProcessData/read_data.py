@@ -1,4 +1,7 @@
-import fitz 
+try:
+    import fitz 
+except ImportError:
+    fitz = None
 import os 
 import re 
 from .mineru_service import MinerU
@@ -53,9 +56,9 @@ class DataReader:
             file_path = os.path.join(folder_path, file_name)
             print(f"Đang xử lý: {file_name}")
             
-            # Gọi hàm xử lý file đơn lẻ
-            text = self.extract_file(file_path, subject)
-            
+            # Gọi hàm xử lý file đơn lẻ (extract_file trả về tuple (text, needs_llm), phải unpack)
+            text, _needs_llm = self.extract_file(file_path, subject)
+
             # Gắn thêm tiêu đề để phân biệt dữ liệu giữa các chương
             all_text += f"\n\n{'='*40}\n--- NGUỒN: {file_name} ---\n{'='*40}\n\n"
             all_text += text
@@ -66,15 +69,31 @@ class DataReader:
         """
         Hàm điều phối trích xuất chính.
         Đồng nhất sử dụng MinerU + Ollama cho tất cả các loại tài liệu (không tách chữ/toán nữa).
+        Fallback sang PyMuPDF (fitz) nếu MinerU GPU server gặp sự cố mạng hoặc timeout.
         Returns: tuple (text: str, needs_llm: bool)
             - needs_llm=True  → Cần Ollama LLM khôi phục dấu sau OCR
         """
         file_name = os.path.basename(pdf_path)
 
-        # ĐỒNG NHẤT: Luôn dùng MinerU + Ollama cho mọi môn học
+        # 1. Thử dùng MinerU GPU Server trước
         raw_text = self.mineru_svc.process(pdf_path)
+        
+        # 2. Nếu MinerU lỗi (mạng, timeout, server tắt), tự động Fallback sang PyMuPDF (fitz) tại local
         if raw_text.startswith("LỖI"):
-            return raw_text, False
+            print(f"[FALLBACK FITZ] MinerU gặp sự cố ({raw_text}). Đang trích xuất trực tiếp bằng PyMuPDF...")
+            try:
+                doc = fitz.open(pdf_path)
+                text_pages = []
+                for page in doc:
+                    text_pages.append(page.get_text())
+                doc.close()
+                raw_text = "\n\n".join(text_pages)
+                if not raw_text.strip():
+                    return "LỖI: File PDF rỗng hoặc không thể trích xuất văn bản.", False
+                print(f"[FALLBACK FITZ] Trích xuất thành công {len(raw_text)} ký tự bằng PyMuPDF.")
+            except Exception as e:
+                print(f"[FALLBACK FITZ] Lỗi khi đọc file bằng PyMuPDF: {e}")
+                return f"LỖI: Không thể đọc file PDF: {e}", False
             
         clean_text = self._normalize_mineru_output(raw_text, file_name)
         return clean_text, True   # Luôn cần Ollama LLM khôi phục dấu

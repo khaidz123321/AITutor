@@ -7,3 +7,29 @@ AI/.env
 .env
 *.env
 !*.env.example
+
+# Large archive & backup files
+*.tar
+*.tar.gz
+*.zip
+*.rar
+*.7z
+*.iso
+
+# Logs & crash reports
+*.log
+crash.log
+AI/crash.log
+
+# Python cache & virtual environments
+__pycache__/
+**/*/__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Scratch & temporary test files
+AI/scratch/
+test_*.py
+test.txt
+AI/test_results.txt

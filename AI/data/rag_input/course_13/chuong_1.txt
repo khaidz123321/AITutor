@@ -1,0 +1,29 @@
+# CHƯƠNG 1: ĐỘNG HỌC CHẤT ĐIỂM
+
+## 1.1 CÁC KHÁI NIỆM MỞ ĐẦU VỀ CHUYỂN ĐỘNG
+Chất điểm là một vật có kích thước rất nhỏ so với khoảng cách và kích thước đang khảo sát.
+Vị trí của một chất điểm trong không gian được xác định bằng bán kính vectơ vị trí $\vec{r}(t) = x(t)\vec{i} + y(t)\vec{j} + z(t)\vec{k}$.
+Phương trình chuyển động là quy luật xác định vị trí của chất điểm theo thời gian $t$.
+Phương trình quỹ đạo là đường mà chất điểm vạch ra trong không gian, nhận được bằng cách khử thời gian $t$ từ các phương trình tọa độ.
+
+## 1.2 VẬN TỐC VÀ GIA TỐC CỦA CHẤT ĐIỂM
+Vectơ vận tốc tức thời xác định bằng đạo hàm của bán kính vectơ vị trí theo thời gian:
+$$\vec{v} = \frac{d\vec{r}}{dt} = \dot{x}\vec{i} + \dot{y}\vec{j} + \dot{z}\vec{k}$$
+Độ lớn của vận tốc: $v = \sqrt{v_x^2 + v_y^2 + v_z^2} = \sqrt{\dot{x}^2 + \dot{y}^2 + \dot{z}^2}$.
+Vectơ gia tốc biểu diễn sự biến thiên của vectơ vận tốc theo thời gian:
+$$\vec{a} = \frac{d\vec{v}}{dt} = \frac{d^2\vec{r}}{dt^2} = \ddot{x}\vec{i} + \ddot{y}\vec{j} + \ddot{z}\vec{k}$$
+
+## 1.3 GIA TỐC TIẾP TUYẾN VÀ GIA TỐC PHÁP TUYẾN
+Trong hệ tọa độ tự nhiên, vectơ gia tốc $\vec{a}$ được phân tích thành 2 thành phần:
+$$\vec{a} = \vec{a}_t + \vec{a}_n = a_t \vec{\tau} + a_n \vec{n}$$
+- Gia tốc tiếp tuyến $a_t = \frac{dv}{dt}$ đặc trưng cho sự biến đổi về độ lớn của vận tốc.
+- Gia tốc pháp tuyến $a_n = \frac{v^2}{R}$ đặc trưng cho sự biến đổi về phương của vận tốc, trong đó $R$ là bán kính cong của quỹ đạo tại điểm đang xét.
+- Gia tốc toàn phần: $a = \sqrt{a_t^2 + a_n^2} = \sqrt{\left(\frac{dv}{dt}\right)^2 + \left(\frac{v^2}{R}\right)^2}$.
+- Bán kính cong quỹ đạo: $R = \frac{v^2}{a_n} = \frac{v^3}{|\vec{v} \times \vec{a}|}$.
+
+## 1.4 CHUYỂN ĐỘNG TRÒN
+Trong chuyển động tròn bán kính $R$:
+- Vận tốc góc: $\omega = \frac{d\theta}{dt}$.
+- Gia tốc góc: $\beta = \frac{d\omega}{dt} = \frac{d^2\theta}{dt^2}$.
+- Mối liên hệ giữa đại lượng dài và đại lượng góc:
+  $v = \omega R$, $a_t = \beta R$, $a_n = \omega^2 R = \frac{v^2}{R}$.

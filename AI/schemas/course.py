@@ -11,3 +11,11 @@ class InitFolderResponse(BaseModel):
     success: bool
     message: str
     folderPath: Optional[str] = None
+
+class DeleteFolderRequest(BaseModel):
+    courseCode: str
+
+class DeleteFolderResponse(BaseModel):
+    success: bool
+    message: str
+

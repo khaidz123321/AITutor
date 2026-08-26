@@ -35,23 +35,25 @@ class AItutor:
             temperature = settings.TEMPERATURE,
             max_output_tokens = 1500
         )
-        # Agent 1 (Diagnose): dùng benchmark_model nếu có (để test), còn lại dùng production model
+        # Agent 1 (Diagnose): dùng Groq (qwen/qwen3.6-27b) cho tốc độ siêu nhanh (0.3s), không tốn credit
         diagnose_model = benchmark_model or settings.DIAGNOSE_MODEL_NAME
-        if "/" in diagnose_model or "qwen" in diagnose_model.lower():
+        if settings.GROQ_API_KEY and ("qwen" in diagnose_model.lower() or "llama" in diagnose_model.lower() or "gpt" in diagnose_model.lower()):
+            self.diagnose_llm = ChatGroq(
+                api_key = settings.GROQ_API_KEY,
+                model = diagnose_model if "qwen" in diagnose_model.lower() else "qwen/qwen3.6-27b",
+                temperature = settings.TEMPERATURE,
+                max_tokens = 1200
+            )
+        elif settings.OPENROUTER_API_KEY:
             self.diagnose_llm = ChatOpenAI(
                 base_url = "https://openrouter.ai/api/v1",
                 api_key = settings.OPENROUTER_API_KEY,
                 model = diagnose_model,
                 temperature = settings.TEMPERATURE,
-                max_tokens = 1200
+                max_tokens = 800
             )
         else:
-            self.diagnose_llm = ChatGroq(
-                api_key = settings.GROQ_API_KEY,
-                model = diagnose_model,
-                temperature = settings.TEMPERATURE,
-                max_tokens = 1200
-            )
+            self.diagnose_llm = self.llm
         if benchmark_model:
             print(f"[BENCHMARK MODE] diagnose_llm = {diagnose_model} (override)")
         # LLM dự phòng cho sinh văn bản khi Gemini lỗi (Agent 2 Fallback)
@@ -296,17 +298,28 @@ class AItutor:
         ])
         
         try:
-            # Sử dụng Groq (diagnose_llm) cho Diagnose
-            llm_json = self.diagnose_llm.bind(response_format={'type': 'json_object'})
-            chain = chat_prompt | llm_json | parser
-            
-            eval_dict = chain.invoke({
+            # Gọi LLM chẩn đoán
+            chain = chat_prompt | self.diagnose_llm
+            res = chain.invoke({
                 "json_context": json_context,
                 "subject_scope": subject_scope,
                 "chat_history": trimmed_history,
                 "user_input": user_message,
                 "format_instructions": parser.get_format_instructions()
             })
+            raw_text = res.content if hasattr(res, 'content') else str(res)
+            
+            # Xử lý loại bỏ thẻ <think> nếu có từ Qwen / DeepSeek
+            import re
+            clean_text = re.sub(r'<think>.*?</think>', '', raw_text, flags=re.DOTALL).strip()
+            
+            # Tìm và parse JSON payload bằng raw_decode (tự động bỏ qua văn bản thừa phía sau)
+            idx = clean_text.find('{')
+            if idx != -1:
+                eval_dict, _ = json.JSONDecoder().raw_decode(clean_text[idx:])
+                return DiagnoseResult(**eval_dict)
+            
+            eval_dict = parser.parse(clean_text)
             return DiagnoseResult(**eval_dict)
         except Exception as e:
             print(f"[DIAGNOSE ERROR] {e}. Falling back to default states.")

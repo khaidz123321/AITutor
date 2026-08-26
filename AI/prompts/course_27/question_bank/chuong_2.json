@@ -1,0 +1,84 @@
+{
+    "subject": "Triết học Mác - Lênin",
+    "chapter_number": "2",
+    "chapter_name": "chuong_2",
+    "questions": [
+        {
+            "id": "THML_C2_01",
+            "lesson_number": "2.1",
+            "lesson_name": "Vật chất là cơ bản, tinh thần phụ thuộc vật chất",
+            "topic": "Đặc điểm của vật chất và vai trò quyết định của nó đối với tinh thần",
+            "difficulty": "Easy",
+            "bloom_level": "Understanding",
+            "question_text": "Phân tích đặc điểm cơ bản của vật chất và giải thích tại sao tinh thần phụ thuộc vào vật chất?",
+            "full_answer": "Vật chất có những đặc điểm như tồn tại khách quan, độc lập với ý thức con người. Tinh thần là phản ánh của vật chất trong não bộ, do đó phụ thuộc hoàn toàn vào vật chất",
+            "detailed_solution": "Đặc điểm cơ bản của vật chất bao gồm sự tồn tại khách quan và độc lập với ý thức con người. Vật chất có thể được cảm nhận thông qua giác quan và nghiên cứu khoa học. Tinh thần, như tư duy, tình cảm, và ý chí, là phản ánh của thế giới vật chất trong não bộ, do đó phụ thuộc vào vật chất.",
+            "scaffolding_steps": [
+                {
+                    "step_number": 1,
+                    "hint": "Xác định đặc điểm cơ bản của vật chất",
+                    "step_detail": "Vật chất tồn tại khách quan và độc lập với ý thức."
+                },
+                {
+                    "step_number": 2,
+                    "hint": "Giải thích mối liên hệ giữa tinh thần và vật chất",
+                    "step_detail": "Tinh thần là phản ánh của thế giới vật chất trong não bộ."
+                }
+            ],
+            "common_mistakes": []
+        },
+        {
+            "id": "THML_C2_02",
+            "lesson_number": "2.2",
+            "lesson_name": "Quá trình sản xuất và phát triển kinh tế xã hội",
+            "topic": "Tác động của quá trình sản xuất đến sự phát triển kinh tế-xã hội",
+            "difficulty": "Medium",
+            "bloom_level": "Applying",
+            "question_text": "Mô tả tình huống một doanh nghiệp gặp khó khăn về tài chính và cần tìm giải pháp.\na) Chẩn đoán nguyên nhân theo nguyên lý vật chất quyết định tinh thần\nb) Đề xuất giải pháp cụ thể để cải thiện tình hình tài chính của doanh nghiệp",
+            "full_answer": "Do thiếu vốn đầu tư, dẫn đến năng suất lao động thấp và giảm lợi nhuận. b) Giải pháp: Tăng cường huy động vốn từ các nguồn khác nhau như ngân hàng, cổ đông, và cải thiện hiệu quả sản xuất",
+            "detailed_solution": "Nguyên nhân chính của tình trạng khó khăn tài chính là do thiếu vốn đầu tư dẫn đến năng suất lao động thấp và giảm lợi nhuận. Để giải quyết vấn đề này, cần tăng cường huy động vốn từ các nguồn khác nhau như ngân hàng, cổ đông, và cải thiện hiệu quả sản xuất.",
+            "scaffolding_steps": [
+                {
+                    "step_number": 1,
+                    "hint": "Xác định nguyên nhân khó khăn tài chính",
+                    "step_detail": "Thiếu vốn đầu tư dẫn đến năng suất lao động thấp."
+                },
+                {
+                    "step_number": 2,
+                    "hint": "Đề xuất giải pháp cải thiện tình hình tài chính",
+                    "step_detail": "Tăng cường huy động vốn và cải thiện hiệu quả sản xuất."
+                }
+            ],
+            "common_mistakes": []
+        },
+        {
+            "id": "THML_C2_03",
+            "lesson_number": "2.3",
+            "lesson_name": "Quan hệ biện chứng giữa vật chất và tinh thần",
+            "topic": "Phản biện quan điểm phiến diện về mối quan hệ giữa vật chất và tinh thần",
+            "difficulty": "Hard",
+            "bloom_level": "Evaluating",
+            "question_text": "Một số người cho rằng tinh thần có thể tồn tại độc lập với vật chất.\na) Giải phẫu mâu thuẫn biện chứng giữa quan điểm này và quan điểm chính thống\nb) Phản biện quan điểm phiến diện về mối quan hệ giữa vật chất và tinh thần\nc) Đề xuất định hướng chiến lược dài hạn để giải quyết vấn đề",
+            "full_answer": "a) Mâu thuẫn là do quan điểm này không xem xét sự phụ thuộc của tinh thần vào vật chất. b) Quan điểm phiến diện bỏ qua vai trò quyết định của vật chất đối với tinh thần. c) Cần tập trung nghiên cứu và giáo dục về mối quan hệ biện chứng giữa vật chất và tinh thần.",
+            "detailed_solution": "Quan điểm cho rằng tinh thần có thể tồn tại độc lập với vật chất bỏ qua vai trò quyết định của vật chất đối với tinh thần. Để giải quyết vấn đề này, cần tập trung nghiên cứu và giáo dục về mối quan hệ biện chứng giữa vật chất và tinh thần.",
+            "scaffolding_steps": [
+                {
+                    "step_number": 1,
+                    "hint": "Giải phẫu mâu thuẫn biện chứng",
+                    "step_detail": "Quan điểm phiến diện bỏ qua vai trò quyết định của vật chất."
+                },
+                {
+                    "step_number": 2,
+                    "hint": "Phản biện quan điểm phiến diện",
+                    "step_detail": "Bỏ qua mối liên hệ giữa vật chất và tinh thần."
+                },
+                {
+                    "step_number": 3,
+                    "hint": "Đề xuất định hướng chiến lược dài hạn",
+                    "step_detail": "Nghiên cứu và giáo dục về mối quan hệ biện chứng."
+                }
+            ],
+            "common_mistakes": []
+        }
+    ]
+}
